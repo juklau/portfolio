@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+
+        <!-- CSS de Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+        <!-- AOS CSS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head> 
+    <body class="fs-5 overflow-x-hidden">
+        <header id="header" class="border-bottom border-secondary" >
+            <nav class="navbar navbar-expand-md bg-dark p-4" data-bs-theme="dark">
+                <div class="container d-flex justify-content-between">
+                    <a class="navbar-brand" href="#">Klaudia Juhasz</a>
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="text-white" id="menu-btn"><i class="bi bi-list"></i></span>
+                    </button>
+                   
+                    <div class="offcanvas offcanvas-start menu-ouvert" tabindex="-1" id="navbarSupportedContent" 
+                    aria-labelledby="navbarSupportedContentLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title text-white" id="navbarSupportedContentLabel">Menu</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+
+                        <div class="offcanvas-body navbarmenu" >
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" aria-current="page" href="accueil.html">Accueil</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="formation.html">Formation</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-white" href="projets.html" role="button" aria-expanded="false"> Projets</a>
+                                    <ul class="dropdown-menu border-0 ">
+                                        <li><a class="dropdown-item text-white" href="projets.html">Compétences</a></li>
+                                        <li><a class="dropdown-item text-white" href="page-error.html">Application de gestion des contacts</a></li>
+                                        <li><a class="dropdown-item text-white" href="page-error.html">Application CHAT</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link text-white" href="veille.html">La veille</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-white" href="GPI.html" role="button" aria-expanded="false"> GPI </a>
+                                    <ul class="dropdown-menu border-0">
+                                        <li><a class="dropdown-item text-white" href="GPI.html">GLPI</a></li>
+                                        <li><a class="dropdown-item text-white" href="GPI.html#OCS-Inventory">OCS Inventory</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>  
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="bg-dark py-5">
+
+             <div class="container py-5">
+                <h1 class="display-1 text-white text-center py-5">Gestion du patrimoine informatique</h1>
+            </div>
+
+            <section class="container section light-background py-5">
+                <div class="container section-title text-white py-5" data-aos="zoom-in-up" data-aos-delay="500">
+                   <h2 class="text-white h1 py-4">Qu'est-ce que le patrimoine informatique ?</h2>  
+                </div>
+                <div class="container text-white d-flex justify-item-between GPI-details" data-aos="fade-up" data-aos-delay="600">
+                    <div class="row align-item-center">
+                        <div class="col-lg-5 d-flex justify-content-center image-container position-relative d-inline-block mb-5 mb-lg-0">
+                            <img src="/assets/images/GPI.jpg" class="img-fluid rounded-5" id="GPI" alt="GPI">
+                            <span class="image-source text-black bg-body-secondary rounded-2 p-1">https://0xstarlight.github.io/</span>
+                        </div>
+                        <div class="col-lg-6 my-auto mx-auto container-strong-GPI">
+                            <p>
+                                <strong class="fst-italic text-decoration-underline">Le patrimoine informatique</strong> désigne l'ensemble des ressources numériques et matérielles 
+                                d'une organisation, incluant les serveurs, logiciels, bases de données, réseaux et équipements informatiques. 
+                                Il joue un rôle essentiel dans la gestion des infrastructures technologiques et la continuité des activités numériques
+                            </p>  
+                            <p>
+                                Il peut aussi englober le patrimoine numérique, qui concerne la conservation 
+                                des données et documents numériques pour assurer leur pérennité
+                            </p>
+                        </div>   
+                    </div>
+                </div>
+            </section>
+
+            <div class="container py-5" data-aos="zoom-in-up" data-aos-delay="500">
+                <p class="text-white text-center fst-italic pt-5 pb-3">
+                    Pendant notre formation, grâce à des outils comme GLPI, OCS inventory, on a pu 
+                    découvrir la gestion des ressources matérielles d'un parc informatique.
+                </p>
+            </div>
+
+            <!-- Gestion Libre de Parc Informatique avec le gestion des tickets -->
+            <section id="GLPI" class="container section light-background py-5">
+                <div class="container section-title text-white py-5" data-aos="fade-up" data-aos-delay="700">
+                   <h2 class="text-white h2">Gestion Libre de Parc Informatique</h2>  
+                </div>
+                <div class="container text-white d-flex justify-item-between" data-aos="fade-up" data-aos-delay="900">
+                    <div class="row align-item-center GPI-details">
+                        <div class="col-lg-5 d-flex justify-content-center image-container position-relative d-inline-block mb-5 mb-lg-0">
+                            <img src="/assets/images/Gestion des tickets.avif" class="img-fluid rounded-5" id="gestion-tickets" alt="Gestion des tickets">
+                            <span class="image-source text-black bg-body-secondary rounded-2 p-1">https://www.softwareadvice.fr/software/419465/glpi</span>
+                        </div>
+                        <div class="col-lg-6 my-auto mx-auto">
+                            <p>
+                                GLPI est une solution open source sous licence GPL, conçue pour la gestion des services IT et 
+                                des infrastructures informatiques. Il permet de centraliser et organiser les ressources 
+                                d'une entreprise en intégrant l'inventaire des équipements matériels et logiciels, 
+                                la gestion administrative et financière, ainsi que le suivi des licences et des tickets d'assistance.
+                            </p>  
+                            <p class="container-strong-GPI">
+                                <strong class="fst-italic text-decoration-underline">Les systèmes de gestion des tickets</strong> sont désormais incontournables pour les grandes 
+                                organisations qui doivent traiter un grand nombre de demandes tout en maîtrisant leur charge de travail.
+                                Ils facilitent l'organisation et permettent aux équipes d'améliorer leur efficacité en optimisant 
+                                la gestion des tâches
+                            </p>
+                        </div>   
+                    </div>
+                </div>
+            </section>
+
+            <!-- Configuration Management Database -->
+            <section class="container section light-background py-5">
+                <div class="container section-title text-white py-5" data-aos="fade-up" data-aos-delay="700">
+                   <h2 class="text-white h2">CMDB (Configuration Management Database)</h2>  
+                </div>
+                <div class="container text-white d-flex justify-item-between" data-aos="fade-up" data-aos-delay="900">
+                    <div class="row align-item-center GPI-details">
+                        
+                        <div class="col-lg-6 my-auto mx-auto container-strong-GPI">
+                            <p>
+                                <strong class="fst-italic text-decoration-underline">La CMDB (Configuration Management Database)</strong> 
+                                est une base de données qui centralise les éléments de 
+                                configuration d'un système informatique, leurs relations et leurs évolutions, 
+                                afin d'assurer la cohérence et l'optimisation de la gestion IT.
+                            </p> 
+                            <p>
+                                GLPI peut intégrer une CMDB grâce à un plugin dédié, permettant aux entreprises de structurer et visualiser 
+                                les dépendances entre les équipements, de suivre les modifications et d'améliorer la gestion des actifs 
+                                informatiques.
+                            </p> 
+                        </div>  
+                        <div class="col-lg-5 d-flex justify-content-center image-container position-relative d-inline-block mb-5 mb-lg-0">
+                            <img src="/assets/images/plugin-CMDB_GLPI.png" class="img-fluid rounded-5" id="plugin-CMDB" alt="Plugin CMDB">
+                            <span class="image-source text-black bg-body-secondary rounded-2 p-1">https://github.com/InfotelGLPI/cmdb</span>
+                        </div> 
+                    </div>
+                </div>
+            </section>
+
+            <!-- OCS Inventory -->
+            <section id="OCS-Inventory" class="container section light-background py-5">
+                <div class="container section-title text-white py-5" data-aos="fade-up" data-aos-delay="700">
+                   <h2 class="text-white h2">OCS Inventory (Open Computers and Software Inventory)</h2>  
+                </div>
+                <div class="container text-white d-flex justify-item-between" data-aos="fade-up" data-aos-delay="900">
+                    <div class="row aliggn-item-center GPI-details">
+                        <div class="col-lg-5 d-flex justify-content-center image-container position-relative d-inline-block mb-5 mb-lg-0">
+                            <img src="/assets/images/plugin-OCS-Inventory_GLPI.png" class="img-fluid rounded-5" id="plugin-OCS-Inventroy" alt="Plugin OCS Inventory">
+                            <span class="image-source text-black bg-body-secondary rounded-2 p-1">https://fr.wikipedia.org/wiki/Fichier:Glpi_screenshot.png</span>
+                        </div>
+                        <div class="col-lg-6 my-auto mx-auto container-strong-GPI">
+                            <p>
+                                <strong class="fst-italic text-decoration-underline">OCS Inventory</strong> est un logiciel open source permettant d'automatiser l'inventaire des équipements 
+                                informatiques d'un réseau, incluant matériels, logiciels et périphériques. 
+                            </p> 
+                            <p>
+                                Il facilite la gestion du parc informatique et peut être intégré à GLPI via un plugin dédié, 
+                                permettant de synchroniser les équipements, importer les données d'inventaire et centraliser 
+                                l'administration des actifs informatiques.
+                            </p> 
+                        </div>   
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- script de AOS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <!-- scripts -->
+        <script src="/assets/js/portfolio.js"></script>
+
+        <!-- script de Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    </body>
+
+    <!-- Footer -->
+    <footer class="footer container-fluid text-center text-white bg-dark p-0 pt-5" >
+        <div class="container-fluid border-top border-secondary">
+            <section class="pt-3 ">
+
+                <!-- Première colonne -->
+                <div class="row g-0 pt-5 col-12 justify-content-center">
+                    <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
+                        <div class="col-12 col-md-auto pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="accueil.html" class="text-white text-decoration-none">Accueil</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="formation.html" class="text-white text-decoration-none">Formation</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class=" font-weight-bold mx-2">
+                                <a href="projets.html" class="text-white text-decoration-none">Projets</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class=" font-weight-bold mx-2">
+                                <a href="veille.html" class="text-white text-decoration-none">La veille</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="GPI.html" class="text-white text-decoration-none">GPI</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class=" font-weight-bold mx-2">
+                                <a href="contact.html" class="text-white text-decoration-none">Contact</a>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deuxième colonne -->
+                <div class="row g-0 py-4 col-12 justify-content-center">
+                     <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
+                        <div class="col-12 col-md-auto pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="mentions-légals.html" class="text-white text-decoration-none">Mentions légales</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="plan-du-site.html" class="text-white text-decoration-none">Plan du site</a>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <hr class="my-3" />
+
+            <section class="py-4">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                        <p><strong>Designed by Klaudia Juhasz</strong></p>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="container-fluid text-center pb-5">
+                <a href="https://www.linkedin.com/in/klaudia-juhasz-a165002bb/" class="text-white me-4" target="_blank"><i class="fab fa-linkedin fa-2xl"></i></a>
+                <a href="https://www.figma.com/design/QMpU6uu0tGXpdInYixZ798/Mon_portfolio?node-id=1-2&p=f&t=4kfGd9vv8Z0PAOW0-0" class="text-white me-4" target="_blank"><img src="/assets/images/figma-logo.webp" class="rounded-circle" id="figma-logo" alt="logo Figma"></a>
+                <a href="https://github.com/juklau" class="text-white me-4" target="_blank"><i class="fab fa-github fa-2xl"></i></a>
+            </section>
+        </div>
+        <div class="text-center py-5 bg-black" > © 2025 Copyright</div>
+
+        <!-- Scroll Top -->
+        <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    </footer>
+</html>

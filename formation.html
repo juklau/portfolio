@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+
+        <!-- CSS de Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+        <!-- AOS CSS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head> 
+    <body class="fs-5 overflow-x-hidden bg-dark">
+        <header id="header" class="border-bottom border-secondary" >
+            <nav class="navbar navbar-expand-md bg-dark p-4" data-bs-theme="dark">
+                <div class="container d-flex justify-content-between">
+                    <a class="navbar-brand" href="#">Klaudia Juhasz</a>
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="text-white" id="menu-btn"><i class="bi bi-list"></i></span>
+                    </button>
+                   
+                    <div class="offcanvas offcanvas-start menu-ouvert" tabindex="-1" id="navbarSupportedContent" 
+                    aria-labelledby="navbarSupportedContentLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title text-white" id="navbarSupportedContentLabel">Menu</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+
+                        <div class="offcanvas-body navbarmenu" >
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" aria-current="page" href="accueil.html">Accueil</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="formation.html">Formation</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-white" href="projets.html" role="button" aria-expanded="false"> Projets</a>
+                                    <ul class="dropdown-menu border-0 ">
+                                        <li><a class="dropdown-item text-white" href="projets.html">Compétences</a></li>
+                                        <li><a class="dropdown-item text-white" href="page-error.html">Application de gestion des contacts</a></li>
+                                        <li><a class="dropdown-item text-white" href="page-error.html">Application CHAT</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link text-white" href="veille.html">La veille</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-white" href="GPI.html" role="button" aria-expanded="false"> GPI </a>
+                                    <ul class="dropdown-menu border-0">
+                                        <li><a class="dropdown-item text-white" href="GPI.html">GLPI</a></li>
+                                        <li><a class="dropdown-item text-white" href="GPI.html#OCS-Inventory">OCS Inventory</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>  
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="bg-dark py-5">
+
+            <div class="container py-5">
+                <h1 class="display-1 text-white text-center py-5">Formation</h1>
+            </div>
+
+            <section class="container section mt-5">
+                <div class="row container mx-auto text-white" data-aos="fade-up-left" data-aos-delay="600">
+                    <span class="px-2 alcim text-uppercase fw-bolder">Présentation de ma formation</span>
+                    <div class="container-fluid row">
+                        <div class="col-md-8 formation-details mt-3" data-aos="fade-up-left" data-aos-delay="800">
+                            <div class="px-2 pt-3 pb-2" >
+                                <h2 class="h1" id="BTS-SIO">Qu'est ce que le BTS SIO ?</h2>
+                                <p class="my-4">
+                                    Le Brevet de Technicien Supérieur aux Services Informatiques aux Organisations,
+                                    s'adresse à ceux qui souhaitent se former en deux ans aux métiers d'administrateur 
+                                    réseau ou de développeur. 
+                                    Pour par la suite intégrer directement le marché du travail ou continuer des études, 
+                                    dans le domaine de l'informatique.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid row justify-content-end">
+                        <div class="col-md-8 formation-details mt-5 container-option-BTS-SIO" data-aos="fade-up-right" data-aos-delay="900">
+                            <h2 class="px-2 h3 pt-3">Il y a deux options entre lesquelles on peut choisir:</h2>
+                            <p class="px-2 my-4">
+                                <strong class="fst-italic text-decoration-underline">L'option SISR (Solutions d'infrastructure, systèmes et réseaux)</strong> qui est destinée 
+                                aux étudiants qui s'orientent vers les métiers liés à la conception et la maintenance d'infrastructures réseaux.
+                            </p>
+                            <p class="px-2 my-2 pb-3">
+                                <strong class="fst-italic text-decoration-underline">L'option SLAM (Solutions Logicielles et Applications Métier)</strong> qui est destinée 
+                                aux étudiants qui s'orientent vers les métiers liés à la conception et la maintenance 
+                                de programmes applicatifs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-2 py-5 my-5 text-center" data-aos="zoom-in-up" data-aos-delay="1000">
+                    <span class="introduce fst-italic">Je me spécialise en SLAM, une filière que j’aimerais vous présenter plus en détail</span>
+                    <img class="rounded-circle border-black ms-2" id="smile" src="/assets/images/smiley_1.jpg" alt="smiley">
+                </div>
+            </section>
+
+            <section class="container section">
+                <div class="container text-white" data-aos="fade-up-right" data-aos-delay="900">
+                    <div class="formation-details d-flex flex-column flex-md-row gap-4 align-items-center position-relative">
+                        <div class="px-2 py-3" data-aos="fade-up-left" data-aos-delay="800">
+                            
+                            <div class="d-flex justify-content-between mt-3">
+                                <h2 class="h1">Qu'est ce que le BTS SIO SLAM ?</h2>
+                                <img class="rounded-circle border-black me-5 mb-3 d-none d-md-block" id="logo-onisep" src="/assets/images/logo_onisep.jpg" alt="onisep">
+                                
+                             </div>
+                                <p class="my-3">
+                                    En option SLAM du BTS SIO, on a des cours de conception et développement 
+                                    d'applications de maintenance et de gestion de système informatique, 
+                                    de cybersécurité des services informatiques, de développement web et objet 
+                                    ainsi que de l'analyse data. On apprend aussi la maintenance corrective ou évolutive 
+                                    d'une solution applicative, la création d'applications et d'interfaces pour 
+                                    les professionnels.
+                                </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container d-flex justify-content-center py-5" data-aos="zoom-in" data-aos-delay="900">
+                    <a href="https://www.onisep.fr/ressources/univers-formation/formations/post-bac/bts-services-informatiques-aux-organisations-option-b-solutions-logicielles-et-applications-metiers" 
+                    target="_blank" class="btn btn-outline-secondary btn-lg border border-2 rounded mb-5 portfolio-btn" id="BTS-SIO-SLAM-btn">En savoir plus</a>
+                </div>
+            </section>
+
+            <section class="container section">
+                <div class="text-white" data-aos="fade-up-left" data-aos-delay="1000">
+                    <span class="px-2 alcim text-uppercase fw-bolder">Présentation de l'IRIS MediaSchool Nice</span>
+                    <img id="IRIS" src="/assets/images/IRIS nice.png" class="rounded-pill py-5 mx-auto d-block my-5" alt="IRIS MediaSchool Nice" data-aos="flip-left" data-aos-delay="1100">
+                    <div class="container-fluid row">
+                        <div class="col-md-8 formation-details mt-3 mt-5" data-aos="fade-up-left" data-aos-delay="1100">
+                            <div class="px-2 pt-3 pb-2">
+                                <h2 class="h1">IRIS MediaSchool Nice</h2>
+                                <p class="my-4">
+                                    L'IRIS Nice est une école de l'informatique, du numérique et du développement web 
+                                    affiliée au groupe MediaSchool, un leader français de l'enseignement supérieur. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid row justify-content-end">
+                        <div class="col-md-8 formation-details mt-5 pb-3" data-aos="fade-up-right" data-aos-delay="1000">
+                            <p class="px-2 pt-3">
+                                L'école se consacre à la formation des futurs professionnels de l'informatique 
+                                et du numérique. Les programmes de formation, allant du BTS au Mastère, 
+                                sont conçus pour s'adapter aux évolutions et aux exigences du secteur informatique, 
+                                dans le but de favoriser l'employabilité de nos étudiants.                        
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <p class="px-2 my-5 pb-3 text-center" data-aos="fade-up" data-aos-delay="1100">
+                            Si vous souhaitez en savoir plus sur l'école ou découvrir les formations proposées, 
+                            cliquez sur le bouton ci-dessous
+                    </p>
+                    <div class="container d-flex justify-content-center py-5" data-aos="zoom-in" data-aos-delay="1000">
+                        <a href="https://ecoleiris.fr/nice/bts-sio-slam" target="_blank" class="btn btn-outline-secondary btn-lg border border-2 rounded mb-5 portfolio-btn" id="IRIS-btn">En savoir plus</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mes stages -->
+             <section class="container section" data-aos="fade-up-left" data-aos-delay="1000">
+                <span class="alcim text-uppercase fw-bolder my-5">Expériences professionnelles au cours de ma formation</span>
+                <div class="container-fluid">
+                    <div class="container">
+                        <div class="row d-md-flex justify-content-around pt-5">
+                            <!-- stage de 1ière année -->
+                            <div class="col-12 col-md-4 mb-3" data-aos="zoom-in-left" data-aos-delay="1100">
+                                <div class="card bg-dark text-white formation-details">
+                                    <div class="card-body d-flex flex-column justify-content-center text-center ">
+                                        <h4 class="card-title pt-5 pb-2">Stage de première année</h4>
+                                        <div class="image-container position-relative d-inline-block">
+                                            <img class="card-img rounded-5 mx-auto mt-4 mb-5 img-fluid" id="CRM" src="/assets/images/stage-reussi.avif" alt="CRM">
+                                            <span class="image-source text-black bg-body-secondary rounded-2 p-1">https://fr.freepik.com/photos/emoji-ordinateur</span>
+                                        </div>
+                                        <p class="card-text pt-4 pb-2"><strong class="fs-5">Lieu:</strong> Nice, Alpes Maritimes</p>
+                                        <p class="card-text py-2"><strong class="fs-5">Date:</strong> 15 Juillet - 14 Août 2025</p>
+                                        <p class="card-text py-2 fst-italic">Afin de pouvoir valider ma première année</p>
+                                        <a href="page-error.html" class="btn btn-outline-secondary btn-lg border border-2 rounded mb-5 portfolio-btn" id="stage1-btn">En savoir plus</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- stage de 2ieme année -->
+                            <div class="col-12 col-md-4 mb-3" data-aos="zoom-in-right" data-aos-delay="1200">
+                                <div class="card bg-dark text-white formation-details">
+                                    <div class="card-body d-flex flex-column justify-content-center text-center ">
+                                        <h4 class="card-title pt-5 pb-2">Stage de deuxième année</h4>
+                                        <div class="image-container position-relative d-inline-block">
+                                            <img class="card-img rounded-5 mx-auto my-4 img-fluid" id="chat-jeu" src="/assets/images/stage-recherche.png" alt="T'chat">
+                                            <span class="image-source text-black bg-body-secondary rounded-2 p-1">https://lyc-kandinsky-neuilly.ac-versailles.fr/tag/decouverte/</span>
+                                        </div>
+                                        <p class="card-text pt-4 pb-2"><strong class="fs-5">Lieu:</strong> Nice, Alpes Maritimes</p>
+                                        <p class="card-text py-2"><strong class="fs-5">Date:</strong> 15 Juillet - 14 Août 2025</p>
+                                        <p class="card-text py-4 fst-italic">Toujours en exploration...</p>
+                                        <a href="page-error.html" class="btn btn-outline-secondary btn-lg border border-2 rounded mb-5 portfolio-btn" id="stage2-btn">En savoir plus</a>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>                   
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- script de AOS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <!-- scripts -->
+        <script src="/assets/js/portfolio.js"></script>
+
+        <!-- script de Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+
+    </body>
+
+    <!-- Footer -->
+    <footer class="footer container-fluid text-center text-white bg-dark p-0 pt-5" >
+        <div class="container-fluid border-top border-secondary">
+            <section class="pt-3 ">
+
+                <!-- Première colonne -->
+                <div class="row g-0 pt-5 col-12 justify-content-center">
+                    <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
+                        <div class="col-12 col-md-auto pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="accueil.html" class="text-white text-decoration-none">Accueil</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="formation.html" class="text-white text-decoration-none">Formation</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class=" font-weight-bold mx-2">
+                                <a href="projets.html" class="text-white text-decoration-none">Projets</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class=" font-weight-bold mx-2">
+                                <a href="veille.html" class="text-white text-decoration-none">La veille</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="GPI.html" class="text-white text-decoration-none">GPI</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class=" font-weight-bold mx-2">
+                                <a href="contact.html" class="text-white text-decoration-none">Contact</a>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deuxième colonne -->
+                <div class="row g-0 py-4 col-12 justify-content-center">
+                     <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
+                        <div class="col-12 col-md-auto pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="mentions-légals.html" class="text-white text-decoration-none">Mentions légales</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="plan-du-site.html" class="text-white text-decoration-none">Plan du site</a>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <hr class="my-3" />
+
+            <section class="py-4">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                        <p><strong>Designed by Klaudia Juhasz</strong></p>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="container-fluid text-center pb-5">
+                <a href="https://www.linkedin.com/in/klaudia-juhasz-a165002bb/" class="text-white me-4" target="_blank"><i class="fab fa-linkedin fa-2xl"></i></a>
+                <a href="https://www.figma.com/design/QMpU6uu0tGXpdInYixZ798/Mon_portfolio?node-id=1-2&p=f&t=4kfGd9vv8Z0PAOW0-0" class="text-white me-4" target="_blank"><img src="/assets/images/figma-logo.webp" class="rounded-circle" id="figma-logo" alt="logo Figma"></a>
+                <a href="https://github.com/juklau" class="text-white me-4" target="_blank"><i class="fab fa-github fa-2xl"></i></a>
+            </section>
+        </div>
+        <div class="text-center py-5 bg-black" > © 2025 Copyright</div>
+
+        <!-- Scroll Top -->
+        <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    </footer>
+</html>

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+
+        <!-- CSS de Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+        <!-- link SwiperJS CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+        <!-- AOS CSS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head> 
+    <body class="fs-5 overflow-x-hidden bg-dark">
+        <header id="header" class="border-bottom border-secondary" >
+            <nav class="navbar navbar-expand-md bg-dark p-4" data-bs-theme="dark">
+                <div class="container d-flex justify-content-between">
+                    <a class="navbar-brand" href="#">Klaudia Juhasz</a>
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="text-white" id="menu-btn"><i class="bi bi-list"></i></span>
+                    </button>
+                   
+                    <div class="offcanvas offcanvas-start menu-ouvert" tabindex="-1" id="navbarSupportedContent" 
+                    aria-labelledby="navbarSupportedContentLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title text-white" id="navbarSupportedContentLabel">Menu</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+
+                        <div class="offcanvas-body navbarmenu" >
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" aria-current="page" href="accueil.html">Accueil</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="formation.html">Formation</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-white" href="projets.html" role="button" aria-expanded="false"> Projets</a>
+                                    <ul class="dropdown-menu border-0 ">
+                                        <li><a class="dropdown-item text-white" href="projets.html">Compétences</a></li>
+                                        <li><a class="dropdown-item text-white" href="page-error.html">Application de gestion des contacts</a></li>
+                                        <li><a class="dropdown-item text-white" href="page-error.html">Application CHAT</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link text-white" href="veille.html">La veille</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-white" href="GPI.html" role="button" aria-expanded="false"> GPI </a>
+                                    <ul class="dropdown-menu border-0">
+                                        <li><a class="dropdown-item text-white" href="GPI.html">GLPI</a></li>
+                                        <li><a class="dropdown-item text-white" href="GPI.html#OCS-Inventory">OCS Inventory</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>  
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="bg-dark py-5">
+            <div class="container py-5">
+                <h1 class="display-1 text-white text-center py-5 my-5">Mes réalisations professionnelles</h1>
+            </div>
+
+            <section class="container section">
+                <div data-aos="fade-down-left" data-aos-delay="600">
+                    <div class="position-relative">
+                        <span class="alcim text-uppercase fw-bolder mt-5">Mes compétences</span>
+                        <div class="py-3 competences-details my-4" data-aos="fade-down-right" data-aos-delay="700">
+                            <p class="px-2 text-white">
+                                Les connaissances que j'ai acquises au cours de ces formations m'ont permis de développer 
+                                mes compétences en informatique. Parallèlement, j'obtiens des certifications supplémentaires qui me 
+                                permettent d'approfondir mes connaissances et de renforcer mon expertise.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Langages pratiqués -->
+            <section class="container section d-flex flex-column pb-4" >
+                <div data-aos="fade-down-left" data-aos-delay="800">
+                    <div class="position-relative">
+                        <div class="pt-3 pb-5 text-center">
+                            <h2 class="langage h1 fst-italic mt-5">Langages Pratiqués</h2>
+                            <p class="mt-5 text-white fst-italic" data-aos="fade-down-right" data-aos-delay="900">
+                                Les langages que j'ai appris à travers mes expériences professionnelles et 
+                                académiques incluent les langages web, les langages de programmation généralistes, les bases 
+                                de données ainsi que les langages de script dédiés à l'automatisation
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container carousel swiper swiper-container d-flex justify-content-center" data-aos="zoom-in-down" data-aos-delay="1000">
+                    <div class="slider-wrapper text-white pb-5 px-1 ">
+                        <ul class="outil-liste swiper-wrapper list-unstyled">
+                          <li class="IDE-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border rounded-2">
+                                        <h4 class="card-title text-center py-3 ">HTML 5</h4>
+                                        <img class="card-img rounded-circle outil-image mx-auto my-2 " src="/assets/images/HTML5.png" alt="HTML 5">
+                                    </div>
+                                </div> 
+                            </li>
+                           <li class="IDE-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="card language col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border rounded-2">
+                                        <h4 class="card-title text-center py-3 ">CSS 3</h4>
+                                        <img class="card-img rounded-circle outil-image mx-auto my-2" src="/assets/images/CSS.png" alt="CSS 3">
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="IDE-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="card language col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border rounded-2">
+                                        <h4 class="card-title text-center py-3 ">JavaScript</h4>
+                                         <img class="card-img rounded-circle outil-image mx-auto my-2" src="/assets/images/js4.png" alt="JavaScript">
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="IDE-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="card language col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border rounded-2">
+                                        <h4 class="card-title text-center py-3 mt-5">Python</h4>
+                                        <img class="card-img rounded-circle outil-image mx-auto my-2" src="/assets/images/python.png" alt="Python"> 
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="IDE-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="card language col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border rounded-2">
+                                        <h4 class="card-title text-center py-3">Bash</h4>
+                                        <img class="card-img rounded-circle outil-image mx-auto my-2" src="/assets/images/bash2.png" alt="Bash">
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="IDE-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="card language col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border rounded-2">
+                                        <h4 class="card-title text-center py-3 mt-5">Powershell</h4>
+                                        <img class="card-img rounded-circle outil-image mx-auto my-2" src="/assets/images/powershell.jpg" alt="Powershell">
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="IDE-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="card language col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border rounded-2">
+                                        <h4 class="card-title text-center py-3 ">SQL</h4>
+                                        <img class="card-img rounded-circle outil-image mx-auto my-2" src="/assets/images/sql langage2.png" alt="SQL">
+                                    </div>
+                                </div> 
+                            </li>
+                        </ul>
+
+                        <!-- pour la pagination = a lapozashoz -->
+                        <div class="swiper-pagination pt-2"></div>
+
+                        <!-- les boutons de navigation -->
+                        <div class="swiper-slide-button swiper-button-prev d-none d-sm-block"></div>
+                        <div class="swiper-slide-button swiper-button-next d-none d-sm-block"></div>
+                    </div>  
+                </div>
+            </section>
+
+            <!-- outils/logiciels utilisé -->
+            <section class="container section d-flex flex-column mt-5" >
+                <div data-aos="fade-down-right" data-aos-delay="800">
+                    <div class="position-relative">
+                        <div class=" pt-3 pb-2 text-center">
+                            <h2 class="langage text-white h1 fst-italic mt-5">Outils/ Logiciels utilisés</h2>
+                            <p class="my-5 text-white fst-italic" data-aos="fade-down-left" data-aos-delay="900">
+                                Les divers outils et logiciels que j'ai découverts et utilisés au cours de ma formation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container carousel swiper swiper-container d-flex justify-content-center" data-aos="zoom-in-down" data-aos-delay="1000">
+                    <div class="slider-wrapper text-white py-2 px-1 ">
+                        <ul class="outil-liste swiper-wrapper list-unstyled">
+                          <li class="IDE-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="card col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border">
+                                        <h4 class="card-title text-center py-2 ">Eclipse</h4>
+                                        <img class="card-img rounded-circle outil-image mx-auto my-2" src="/assets/images/eclipse.jpg" alt="Eclipse">
+                                        <div class="card-body mt-1">
+                                            <p class="card-text fw-normal text-center">
+                                                Java Eclipse est un environnement de développement 
+                                                intégré ouvert pour le langage de programmation Java.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </li>
+                           <li class="IDE-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="card col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border">
+                                        <h4 class="card-title text-center py-2 ">Figma</h4>
+                                        <img class="card-img rounded-circle outil-image mx-auto my-2" src="/assets/images/Figma.jpg" alt="Figma">
+                                        <div class="card-body mt-1">
+                                            <p class="card-text fw-normal text-center">
+                                                Figma est un outil qui aide les équipes de conception et de développement à concevoir et affiner en 
+                                                collaboration des produits exceptionnels dans un seul fichier de conception partagé.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="IDE-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="card col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border">
+                                        <h4 class="card-title text-center py-2 ">Filius</h4>
+                                        <img class="card-img rounded-circle outil-image mx-auto " src="/assets/images/filius.jpeg" alt="Filius">
+                                        <div class="card-body">
+                                            <p class="card-text fw-normal text-center">
+                                                Filius est un logiciel de simulation de réseaux informatiques 
+                                                qui permet de créer son propre réseau, de le configurer, de 
+                                                simuler et de visualiser les échanges d'informations.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="IDE-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="card col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border">
+                                        <h4 class="card-title text-center py-2">Git Bash</h4>
+                                        <img class="card-img rounded-circle outil-image mx-auto my-2" src="/assets/images/git bash.jpg" alt="Git Bash">
+                                        <div class="card-body mt-1">
+                                            <p class="card-text fw-normal text-center">
+                                                Git Bash est une application pour les environnements Microsoft 
+                                                Window qui fournit une couche d'émulation pour une expérience 
+                                                de ligne de commende Git.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="IDE-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="card col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border">
+                                        <h4 class="card-title text-center py-2">GitHub</h4>
+                                        <img class="card-img rounded-circle outil-image mx-auto my-2" src="/assets/images/github.jpg" alt="GitHub">
+                                        <div class="card-body mt-1">
+                                            <p class="card-text fw-normal text-center">
+                                                GitHub est une entreprise de développement et services logiciels. 
+                                                Il facilite la collaboration à une échelle mondiale sur les projet.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="IDE-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="card col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border">
+                                        <h4 class="card-title text-center py-2">MAMP</h4>
+                                        <img class="card-img rounded-circle outil-image mx-auto my-2" src="/assets/images/mamp.png" alt="MAMP">
+                                        <div class="card-body mt-1">
+                                            <p class="card-text fw-normal text-center">
+                                                Un MAMP est une pile de logiciels qui permet l'utilisation d'un serveur Web local.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="IDE-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="card col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border">
+                                        <h4 class="card-title text-center py-2 ">MySQL</h4>
+                                        <img class="card-img rounded-circle outil-image mx-auto my-2" src="/assets/images/mysql2.png" alt="MySQL">
+                                        <div class="card-body mt-1">
+                                            <p class="card-text fw-normal text-center">
+                                                MySQL est un système de gestion de bases de données relationnelles.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="IDE-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="card col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border">
+                                        <h4 class="card-title text-center py-2 ">PhpStorm</h4>
+                                        <img class="card-img rounded-circle outil-image mx-auto my-2" src="/assets/images/phpStorm.png" alt="PhpStorm">
+                                        <div class="card-body mt-1">
+                                            <p class="card-text fw-normal text-center">
+                                                PhpStorm est un éditeur pour PHP, HTML, SCC et JavaScript, édité par JetBrains.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="IDE-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="card col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border">
+                                        <h4 class="card-title text-center py-2">Thonny</h4>
+                                        <img class="card-img rounded-circle outil-image mx-auto my-2" src="/assets/images/thonny.jpg" alt="Thonny">
+                                        <div class="card-body mt-1">
+                                            <p class="card-text fw-normal text-center">
+                                                Thonny est un logiciel libre et gratuit permettant l'écriture 
+                                                 et l'exécution de programmes écrits en Python.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="IDE-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="card col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border">
+                                        <h4 class="card-title text-center py-2">Visual Studio Code</h4>
+                                        <img class="card-img rounded-circle outil-image mx-auto my-2" src="/assets/images/visual studio code.png" alt="Visual Studio Code">
+                                        <div class="card-body mt-1">
+                                            <p class="card-text fw-normal text-center">
+                                                Visual Studio Code (VSCode) est un éditeur de code source 
+                                                et un environnement de développement intégré (IDE) de Microsoft.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </li>
+                        </ul>
+
+                        <!-- pour la pagination = a lapozashoz -->
+                        <div class="swiper-pagination pt-5"></div>
+
+                        <!-- les boutons de navigation -->
+                        <div class="swiper-slide-button swiper-button-prev d-none d-sm-block"></div>
+                        <div class="swiper-slide-button swiper-button-next d-none d-sm-block"></div>
+                    </div>  
+                </div>
+            </section>
+
+            <div class="container d-flex justify-content-center py-5 mt-5" data-aos="zoom-in" data-aos-delay="1000">
+                <!-- <a href="#" download="Tableau de competence" class="btn btn-outline-secondary btn-lg border border-2 rounded" type="button" id="competence-btn">Tableau de compétences</a> -->
+                <button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn" type="button" id="competence-btn">Tableau de compétences</button>
+            </div>
+
+            <!-- PPE -->
+            <section class="container-fluid section d-flex flex-column mt-5">
+                <div class="container text-white" data-aos="fade-down-left" data-aos-delay="700">
+                    <div class="position-relative">
+                        <span class="alcim text-uppercase fw-bolder">Projets Personnalisés Encadrés</span>
+                        <div class="py-3 my-5 projet-details" data-aos="fade-down-right" data-aos-delay="800">
+                            <h2 class="h1 px-2">Qu'est ce qu'un projet personnel encadré ?</h2>
+                            <p class="px-2 mt-4">
+                                Dans le cadre de mon parcours, le Projet Personnalisé Encadré (PPE) a été une expérience 
+                                enrichissante qui m'a permis de relier l'apprentissage théorique à la pratique 
+                                professionnelle. À travers les différents thèmes abordés, j'ai développé des compétences 
+                                techniques et comportementales essentielles, en affinant mon sens de 
+                                la collaboration et de la communication interpersonnelle. 
+                                Ce projet m'a aidée à mieux comprendre les exigences du secteur, tout en renforçant 
+                                mon aptitude à fournir des solutions adaptées aux besoins professionnels.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mes PPEs -->
+            <section id="" class="container section">
+                <div class="container-fluid">
+                    <div class="container">
+                        <div class="row d-md-flex justify-content-around">
+                            
+                            <!-- Mini CRM -->
+                             <!-- METTRE EN LIGNE SUR GITHUB AVANT ORAL ET METTRE LE LIEN DEDANS!! -->
+                            <div class="col-12 col-md-5 mb-5" data-aos="fade-down-left" data-aos-delay="900">
+                                <div class="flip-card my-5">
+                                    <div class="flip-card-inner position-relative projet-details rounded-4">
+                                        <!-- partie recto -->
+                                        <div class="flip-card-front card bg-dark text-white position-absolute ">
+                                            <div class="card-body d-flex flex-column justify-content-center text-center ">
+                                                <h5 class="card-title pt-3 pb-2 h3">Mini CRM avec Airtable</h5>
+                                                <h4 class="card-subtitle py-5">Gestion de contact</h4>
+                                                <div class="image-container position-relative d-inline-block">
+                                                    <img class="card-img rounded-5 mx-auto my-4 img-fluid" id="CRM" src="/assets/images/logo CRM2.jpg" alt="CRM">
+                                                    <!-- <span class="image-source text-black bg-body-secondary rounded-2 p-1">Source: http://imaginland.centerblog.net/3124719-Salon-de-t-chat-amities</span> -->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- partie verso -->
+                                         <div class="flip-card-back card bg-secondary text-white position-absolute">
+                                            <div class="card-body d-flex flex-column justify-content-center text-center">
+                                                <p class="card-text py-3">
+                                                    C'est une application web Mini CRM en HTML/CSS/JS, connectée 
+                                                    à Airtable via son API REST, pour gérer des contacts professionnels. 
+                                                    Elle permet d'ajouter, modifier, supprimer et filtrer les fiches de contact, 
+                                                    tout en stockant temporairement les données via localStorage
+                                                </p>
+                                                <a href="page-error.html" class="btn btn-outline-secondary btn border border-2 rounded mb-3 portfolio-btn" id="Mini-CRM-btn">Plongez dans le projet</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-center mt-md-4">
+                                        <a href="#" download="Fiche descriptive de Mini-CRM"><button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn" type="button" id="fiche-CRM-btn">Fiche descriptive</button></a>
+                                    </div>
+                                </div>
+                            </div>  
+
+                            <!-- Application de Chat -->
+                            <div class="col-12 col-md-5 mb-5" data-aos="fade-down-right" data-aos-delay="1100">
+                                <div class="flip-card my-5">
+                                    <div class="flip-card-inner position-relative projet-details rounded-4">
+                                        <!-- partie recto -->
+                                        <div class="flip-card-front card bg-dark text-white position-absolute">
+                                            <div class="card-body d-flex flex-column justify-content-center text-center ">
+                                                <h5 class="card-title pt-3 pb-2 h3">Application de Chat en Temps Réel</h5>
+                                                <h4 class="card-subtitle py-4">Communication Instantanée et Collaborative</h4>
+                                                <div class="image-container position-relative d-inline-block">
+                                                    <img class="card-img rounded-5 mx-auto mt-4 mb-3 img-fluid" id="chat-jeu" src="/assets/images/chat-jeu.jpg" alt="T'chat">
+                                                    <span class="image-source text-black bg-body-secondary rounded-2 p-1">Source: http://imaginland.centerblog.net/3124719-Salon-de-t-chat-amities</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- partie verso -->
+                                         <div class="flip-card-back card bg-secondary text-white position-absolute">
+                                            <div class="card-body d-flex flex-column justify-content-center text-center">
+                                                <p class="card-text pt-3 pb-2">
+                                                    C'est une application de chat qui permets aux utilisateurs de discuter simultanément,
+                                                    en temps réel, avec plusieurs personnes. Grâce à une interface intuitive, 
+                                                    les messages sont envoyés au serveur, qui les redistribue instantanément à tous 
+                                                    les participants pour assurer une conversation fluide et synchronisée.
+                                                </p>
+                                                <a href="https://github.com/juklau/classcord-client2.git" class="btn btn-outline-secondary btn border border-2 rounded mb-3 portfolio-btn" id="Chat-btn" target="_blank">Plongez dans le projet</a>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-center mt-md-4">
+                                        <a href="#" download="Fiche descriptive de l'application Chat"><button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn" type="button" id="fiche-chat-btn">Fiche descriptive</button></a>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>                   
+                    </div>
+                </div>
+            </section>
+       
+        </main>
+
+        <!-- script de AOS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <!-- script de Link SwiperJS-->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="/assets/js/carousel.js"></script>
+        <script src="/assets/js/portfolio.js"></script>
+
+        <!-- script de Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    </body>
+
+    <!-- Footer -->
+    <footer class="footer container-fluid text-center text-white bg-dark p-0 pt-5" >
+        <div class="container-fluid border-top border-secondary">
+            <section class="pt-3 ">
+
+                <!-- Première colonne -->
+                <div class="row g-0 pt-5 col-12 justify-content-center">
+                    <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
+                        <div class="col-12 col-md-auto pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="accueil.html" class="text-white text-decoration-none">Accueil</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="formation.html" class="text-white text-decoration-none">Formation</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class=" font-weight-bold mx-2">
+                                <a href="projets.html" class="text-white text-decoration-none">Projets</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class=" font-weight-bold mx-2">
+                                <a href="veille.html" class="text-white text-decoration-none">La veille</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="GPI.html" class="text-white text-decoration-none">GPI</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class=" font-weight-bold mx-2">
+                                <a href="contact.html" class="text-white text-decoration-none">Contact</a>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deuxième colonne -->
+                <div class="row g-0 py-4 col-12 justify-content-center">
+                     <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
+                        <div class="col-12 col-md-auto pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="mentions-légals.html" class="text-white text-decoration-none">Mentions légales</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="plan-du-site.html" class="text-white text-decoration-none">Plan du site</a>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <hr class="my-3" />
+
+            <section class="py-4">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                        <p><strong>Designed by Klaudia Juhasz</strong></p>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="container-fluid text-center pb-5">
+                <a href="https://www.linkedin.com/in/klaudia-juhasz-a165002bb/" class="text-white me-4" target="_blank"><i class="fab fa-linkedin fa-2xl"></i></a>
+                <a href="https://www.figma.com/design/QMpU6uu0tGXpdInYixZ798/Mon_portfolio?node-id=1-2&p=f&t=4kfGd9vv8Z0PAOW0-0" class="text-white me-4" target="_blank"><img src="/assets/images/figma-logo.webp" class="rounded-circle" id="figma-logo" alt="logo Figma"></a>
+                <a href="https://github.com/juklau" class="text-white me-4" target="_blank"><i class="fab fa-github fa-2xl"></i></a>
+            </section>
+        </div>
+        <div class="text-center py-5 bg-black" > © 2025 Copyright</div>
+
+        <!-- Scroll Top -->
+        <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    </footer>
+</html>
