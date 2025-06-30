@@ -147,11 +147,22 @@
     color: var(--main-color) !important;
 }
 
-.introduce-details,
-.formation-details{
-    /* box-shadow: 0 0 10px rgba(149, 131, 60, 0.3); */
-    box-shadow: 5px 5px 15px var(--shadow-color);
-    /* box-shadow: 5px 5px 10px var(--main-color) !important; */
+.box-shadow{
+    box-shadow: 1px 0.5px 0px var(--main-color); 
+    -webkit-box-shadow: 1px 0.5px 0px var(--main-color); 
+    -moz-box-shadow: 1px 0.1px 0px var(--main-color); 
+}
+
+.box-shadow-left{
+    box-shadow: -2px 0px 0px var(--main-color); 
+    -webkit-box-shadow: -2px 0px 0px var(--main-color); 
+    -moz-box-shadow: -2px 0px 0px var(--main-color); 
+}
+
+.box-shadow-right{
+    box-shadow: 2px 0px 0px var(--main-color); 
+    -webkit-box-shadow: 2px 0px 0px var(--main-color); 
+    -moz-box-shadow: 2px 0px 0px var(--main-color); 
 }
 
 /* afficher les sources des images sur la page formation et projets */
@@ -195,7 +206,7 @@
 **********************************************************************************************/
 
 .alcim {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     margin-bottom: 2rem;
     color: var(--main-color);
 }
@@ -287,7 +298,8 @@
 }
 
 #IRIS{
-    width: 50%;
+    width: 30%;
+    min-width: 200px;
 }
 
 
@@ -320,12 +332,13 @@
     width: 300px;
     max-width: 300px;
     height: 440px;
-    background-color: transparent;  
-}
-
-.IDE-container .card:hover{
+    background-color: transparent;
     border-color: var(--nav-hover-color) !important;
 }
+
+/* .IDE-container .card:hover{
+    border-color: var(--nav-hover-color) !important;
+} */
 
 .card.language{
     height: 350px;
@@ -336,10 +349,10 @@
                         Page projets -partie Projets Personnalisés Encadrés 
 **********************************************************************************************/
 
-.competences-details,
+/* .competences-details,
 .projet-details{
     box-shadow: 5px 5px 15px var(--shadow-color);
-}
+} */
 
 #CRM{
     width: 75%;
@@ -376,7 +389,8 @@
     height: 550px;
     backface-visibility: hidden;
     border-radius: 1rem;
-    border:1px solid var(--shadow-color);
+    /* border:1px solid var(--main-color); */
+    border: 1px solid color-mix(in srgb, var(--main-color) 50%, transparent);
 }
 
 .flip-card-back{
@@ -440,7 +454,7 @@
 
 .veille-title:hover > h2{
     color: var(--main-color) !important;
-    font-style: italic;
+    /* font-style: italic; */
 }
 
 .img-outils{
@@ -538,9 +552,7 @@
      color: var(--main-color) !important;
 }
 
-.GPI-details{
-    box-shadow: 5px 5px 15px var(--shadow-color);
-}
+
 
 
 /*********************************************************************************************
@@ -574,11 +586,6 @@ input, textarea {
     outline-offset: 0.2rem;
 }
 
-.formulaire{
-    /* x-tengely vers la droite; y-tengely vers le bas; pour le flou  */
-    box-shadow: 5px 5px 15px var(--main-color) !important;
-}
-
 .costum-check:hover a{
     color: var(--main-color) !important;
 }
@@ -592,13 +599,15 @@ input, textarea {
 
 #egyetertes + label::before{
     content: "";
-    display: block;
-    width: 1rem; /* 8px */
-    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem; /* 8px */
+    height: 1.5rem;
     background-color: var(--white-color);
-    margin-right: 0.5rem;
-    line-height: 1rem;
-    text-align: center;
+    margin-right: 1rem;
+    /* line-height: 1rem; */
+    /* text-align: center; */
     font-weight: 700;
      /* il ne faut pas border, car le background exterieur est noir! */
 }
@@ -681,11 +690,10 @@ input, textarea {
     color: var(--main-color) !important;
 }
 
-.mentions-details{
-    box-shadow: 5px 5px 15px var(--shadow-color);
-}
-
-
+/* .text-decoration-underline {
+    text-decoration: underline !important;
+    text-decoration-color: var(--main-color) !important;
+} */
 
 /* =============================================================================================== */
 /*                                      📱 RESPONSIVE DESIGN */

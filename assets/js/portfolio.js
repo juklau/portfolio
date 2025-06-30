@@ -92,11 +92,11 @@ window.addEventListener("scroll", function(){
 
 //if pour éviter que ça soit null ==> sans ça il ne fonctionne pas!!!
 //btn vers mon tableau de compétence que je n'ai pas encore
-if((document.getElementById("competence-btn")) !== null) {
-    document.getElementById("competence-btn").onclick = function(){
-            window.location.href = "page-error.html";
-    };
-};
+// if((document.getElementById("competence-btn")) !== null) {
+//     document.getElementById("competence-btn").onclick = function(){
+//             window.location.href = "page-error.html";
+//     };
+// };
 
 
 /* ======================================================================================== */
