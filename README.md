@@ -42,7 +42,7 @@ Ce portfolio interactif a été maquetté sous Figma en suivant une approche **M
 
 - [Site ONISEP](https://www.onisep.fr) – Découverte du BTS SIO SLAM
 - [École IRIS MediaSchool Nice](https://ecoleiris.fr/nice/ecole)
-- [Mon GitHub]([https://github.com/...](https://github.com/juklau)) – Référencement de mes projets
+- [Mon GitHub](https://github.com/juklau)  – Référencement de mes projets
 - [Mon LinkedIn](https://www.linkedin.com/in/klaudia-juhasz-a165002bb/) – Mon parcours professionnel
 - [Prototype Figma](https://www.figma.com/design/QMpU6uu0tGXpdInYixZ798/Mon_portfolio?node-id=1-2&p=f&t=4kfGd9vv8Z0PAOW0-0) – Présentation interactive
 
