@@ -4,7 +4,7 @@ Bienvenue sur mon portfolio numérique réalisé dans le cadre de l’épreuve E
 
 Ce portfolio interactif a été maquetté sous Figma en suivant une approche **Mobile First**, avec une interface moderne, intuitive et responsive. Il présente l'ensemble de mon parcours, mes projets, mes compétences ainsi que ma veille technologique.
 
-Vous pouvez accéder à mon portfolio sur https://juklau.github.io/portfolio/accueil.html 
+Vous pouvez accéder à mon portfolio sur https://juklau.github.io/portfolio/index.html 
 
 ---
 
