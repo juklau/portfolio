@@ -636,6 +636,7 @@ input, textarea {
 #main-error,
 #main-plan-site{
     background-color: var(--background-error-color);
+    height: 100%;
 }
 
 #error-cible,
