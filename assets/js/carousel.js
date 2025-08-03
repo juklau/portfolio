@@ -2,6 +2,19 @@
 // /*                       Carousel sur la page de Projets*/
 // /* ======================================================================================== */
 
+const pageActuelle = window.location.pathname.includes("ppe-gestion_contacts.html");
+const breakpointsConfig = {
+    0: {
+        slidesPerView: 1
+    },
+    900: {
+        slidesPerView: 2
+    },
+    1200: {
+        slidesPerView: pageActuelle ? 2 : 3
+    }
+};
+
 new Swiper('.slider-wrapper', {
    
     loop: true,
@@ -22,18 +35,8 @@ new Swiper('.slider-wrapper', {
       prevEl: '.swiper-button-prev',
     },
 
+    
     //responsive breakpoints
     //selon la taille d'écran combien outil-item va s'afficher
-    breakpoints: {
-        0: {
-            slidesPerView: 1
-        },
-        900: {
-            slidesPerView: 2
-           
-        },
-        1200: {
-            slidesPerView: 3
-        },
-    } 
+    breakpoints: breakpointsConfig
 });

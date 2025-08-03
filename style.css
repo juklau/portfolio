@@ -1,21 +1,14 @@
-/* Fonts */
+
 :root {
-    --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    
-    --heading-font: "Nunito Sans",  sans-serif;
-    --nav-font: "Raleway",  sans-serif;
     --default-font: 'Arial', sans-serif;
-}
 
-
-/* Couleurs principales*/
-:root {
     --nav-hover-color: #e3a127; /* Pour navmenu/footer/page d'accueil */
     --main-color: #e3a127;
     --shadow-color: rgba(208, 179, 62, 0.3);
     --white-color: rgb(255, 255, 255);
     --white-opal-color: rgba(255, 255, 255, 0.8);  
     
+    --CRM-color: rgb(123, 176, 98);
     --succes-color: rgb(23, 161, 23);
     --danger-color: rgb(185, 26, 26);
    
@@ -24,7 +17,6 @@
     --surface-color: #1b262c;
     --black-color: rgb(12, 11, 11);
     --background-error-color: rgba(25, 158, 157, 1);
-   
   }
 
 
@@ -80,11 +72,9 @@
     display: block;
 }
 
-
 /*********************************************************************************************
                                         Footer
 **********************************************************************************************/
-
 .row {
     gap: 1px; /* Ajuste la valeur selon l'espacement souhaité */
 }
@@ -98,11 +88,9 @@
     height: auto;
 }
 
-
 /*********************************************************************************************
                                         Scroll Top Button
 **********************************************************************************************/
-
 .scroll-top {
     position: fixed;
     visibility: hidden;
@@ -138,11 +126,9 @@
     /* bottom: 15px; */
 }
 
-
 /*********************************************************************************************
                                     Page accueil et formation
 **********************************************************************************************/
-
 #moi{
     max-width: 40%;
     max-height: 40%;
@@ -195,8 +181,6 @@
     color: var(--main-color) !important;
 }
 
-
-
 .container-option-BTS-SIO p > strong{
     color: var(--main-color) !important;
 }
@@ -205,11 +189,9 @@
     height: 100px;
 }
 
-
 /*********************************************************************************************
                                     Page accueil TIMELINE
 **********************************************************************************************/
-
 .alcim {
     font-size: 1.6rem;
     margin-bottom: 2rem;
@@ -228,7 +210,6 @@
     transform: translateX(-50%);
     z-index: 0;
 }
-
 
 .timeline-item {
     width: 90%;
@@ -281,14 +262,11 @@
     transform: translateX(0);
 }
 
-
 /*********************************** les boutons **********************************************/
-
 .portfolio-btn{
     color: var(--nav-hover-color);
     border-color: var(--nav-hover-color) !important;
 }
-
 
 .portfolio-btn:hover{
     background-color: var(--nav-hover-color);
@@ -307,11 +285,9 @@
     min-width: 200px;
 }
 
-
 /*********************************************************************************************
                                     Page projets -partie compétences
 **********************************************************************************************/
-
 .langage{
     color: var(--main-color) !important;
 }
@@ -349,11 +325,9 @@
     height: 350px;
 }
 
-
 /*********************************************************************************************
-                        Page projets -partie Projets Personnalisés Encadrés 
+                        Page projets -partie Réalisations Professionnelles
 **********************************************************************************************/
-
 /* .competences-details,
 .projet-details{
     box-shadow: 5px 5px 15px var(--shadow-color);
@@ -363,11 +337,9 @@
     width: 75%;
 }
 
-
 /*********************************************************************************************
                                     Projets-card à flipper
 **********************************************************************************************/
-
 .flip-card{
     width: 100%;
     height: 550px; /* Hauteur fixe pour éviter que le flip dépasse */
@@ -403,7 +375,6 @@
     background: var(--dark-gray-color) !important;
 }
 
-
 /* ********************************************************************************************* */
 /*              Carousel des outils/logiciels utilisés et langages pratiqués   */
 /* ********************************************************************************************* */
@@ -415,7 +386,6 @@
 }
 
 /******************************* bullets en-sous de la carousel *************************************/
-
 .slider-wrapper .swiper-pagination-bullet {
     background: var(--white-opal-color);
     height: 15px;
@@ -426,7 +396,6 @@
 .slider-wrapper .swiper-pagination-bullet-active{
     opacity: 1;
 }
-
 
 /************************************** carousel boutons *******************************************/
 
@@ -446,6 +415,51 @@
 
 .swiper-button-prev{
     margin-left: 30px;
+}
+
+/*********************************************************************************************
+                                     Page RP Mini-CRM
+**********************************************************************************************/
+.images-crm{
+    max-width: 30%;
+    height: auto;
+    object-fit: contain;
+}
+
+.CRM-container .card{
+    width: 350px;
+    max-width: 350px;
+    height: 600px;
+    background-color: transparent;
+    border-color: var(--CRM-color) !important;
+}
+
+.CRM-image{
+    max-width: 100%;
+    height: auto;
+    cursor: zoom-in;
+}
+
+/* Modale */
+#imageModal {
+  display: none;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 50vw;
+  height: 50vh;
+}
+
+#imageModal img {
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 0 20px #fff;
+  border-radius: 10px;
+  cursor: zoom-out;
+}
+
+.slider-wrapper .swiper-slide-button.CRM:hover{
+    color: var(--CRM-color) !important;
 }
 
 
