@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 });
 
-
 /* ======================================================================================== */
 /*                         Affichage "timeline" page: accueil
 /* ======================================================================================== */
@@ -60,8 +59,6 @@ function revealOnScroll() {
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
 
-
-
 /* ======================================================================================== */
 /*                          Activation du bouton "scroll top"*/
 /* ======================================================================================== */
@@ -75,13 +72,6 @@ window.addEventListener("scroll", function(){
         scrollTopBtn.classList.remove("active");
     }
 });
-
-/* ======================================================================================== */
-/*                         Initialisation de 
-/* ======================================================================================== */
-
- AOS.init();
-
 
 /* ======================================================================================== */
 /*                          Activation "flip" des cards 
@@ -98,11 +88,9 @@ window.addEventListener("scroll", function(){
 //     };
 // };
 
-
 /* ======================================================================================== */
 /*                          Activation "flip" des cards 
 /* ======================================================================================== */
-
 
 document.querySelectorAll(".flip-card").forEach(card => {
     // card.addEventListener("mouseenter", function(){
@@ -118,11 +106,9 @@ document.querySelectorAll(".flip-card").forEach(card => {
     })
 });
 
-
 /* ======================================================================================== */
 /*                          Activation effet JUSTE une fois
 /* ======================================================================================== */
-
 
 AOS.init({
     // fonctionnement l'effet que pendant le chargement et il ne se répéte pas

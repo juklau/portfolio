@@ -77,7 +77,8 @@
             <section class="container d-flex justify-content-center align-items-center py-5">
                 <div class="col-lg-8 col-md-10">
                     <div class="card box-shadow bg-secondary bg-opacity-10 border-0 rounded-1 p-4">
-                        <form action="https://formspree.io/f/xaneaygb" method="POST" id="contact-form" class="text-white ">
+                        <!-- action="https://formspree.io/f/xaneaygb" method="POST" -->
+                        <form id="contact-form" class="text-white ">
                             <div class="row g-4">
                                 <div class="row mt-3 d-md-flex justify-content-md-around">
                                     <div class="col-12 col-md-5 mt-4">
@@ -109,7 +110,9 @@
                                 <div class="mt-5">
                                     <p>* Champ Obligatoire</p>
                                 </div>
-
+                                 <div id="form-confirmation" class="mb-5 text-center fst-italic hidden fs-4" >
+                                    <p> Le formulaire a bien été envoyé.</p>
+                                </div>
                                 <div class="costum-check">
                                     <input class="d-none " type="checkbox" id="egyetertes" name="egyetertes">
                                     <label class="position-relative d-flex align-items-center justify-content-center ms-2 mx-auto" for="egyetertes" id="check-label">J'accepte que mes données servent uniquement à me recontacter.</label>

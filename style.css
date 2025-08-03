@@ -595,6 +595,13 @@ input, textarea {
     color: var(--main-color) !important;
 }
 
+.hidden{
+    display: none;
+}
+.visible{
+    display: block;
+    color: var(--succes-color);
+}
 /******************************************** Checkbox **********************************************/
 
 .costum-check label {
