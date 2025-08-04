@@ -17,6 +17,16 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     });
 
+    // si un page "ppe-" est active => dans le menu "projets.html" sera active
+    if(window.location.href.includes("ppe")){
+        navLinks.forEach(link => {
+            if(link.href.includes("projets.html")){
+                link.classList.add("active")
+            }
+        })
+    }
+
+    // si un "dropdown" est active => dans le menu "son parent" sera active
     dropdownItems.forEach(item => {
         item.addEventListener("click", function(){
             if(item.href.split("#")[0] === currentUrl){
@@ -124,17 +134,16 @@ AOS.init({
 /*                          ZOOM Image
 /* ======================================================================================== */
 
-const images = document.querySelectorAll('.CRM-image');
-const modal = document.getElementById('imageModal');
-const modalImg = document.getElementById('modalImg');
+document.querySelectorAll(".CRM-image").forEach(img =>{
+    img.addEventListener("click", function(){
+        const isZoomed = img.classList.contains("zoomed");
 
-images.forEach(img => {
-  img.addEventListener('click', () => {
-    modal.style.display = 'flex';
-    modalImg.src = img.src;
-  });
-});
+        document.querySelectorAll(".CRM-image.zoomed").forEach(el =>{
+            el.classList.remove("zoomed");
+        });
 
-modal.addEventListener('click', () => {
-  modal.style.display = 'none';
+        if(!isZoomed){
+            img.classList.add("zoomed");
+        }
+    });
 });
