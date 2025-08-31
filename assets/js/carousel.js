@@ -2,7 +2,7 @@
 // /*                       Carousel sur la page de Projets*/
 // /* ======================================================================================== */
 
-const pageActuelle = window.location.pathname.includes("ppe-gestion_contacts.html");
+const pageActuelle = window.location.pathname.includes("ppe-gestion_contacts.html") || window.location.pathname.includes("ppe-chat.html");
 const breakpointsConfig = {
     0: {
         slidesPerView: 1

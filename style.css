@@ -357,7 +357,7 @@
 }
 
 /*********************************************************************************************
-                                     Page RP Mini-CRM
+                                     Page RP Mini-CRM, 
 **********************************************************************************************/
 #image-crm{
     width: 250px;
@@ -371,25 +371,56 @@
     background-color: transparent;
     /* border-color: var(--CRM-color) !important; */
 }
+.Chat-container .card{
+    height: 500px;
+    width: auto;
+    background-color: transparent;
+}
+#user-list{
+    height: 400px;
+    width: auto;
+}
 .slider-wrapper .swiper-slide-button.CRM:hover,
 .CRM-container:hover .card-title{
     color: var(--CRM-color) !important;
 }
-.CRM-image{ /*image à "zoomer"  */
+.slider-wrapper .swiper-slide-button.Chat:hover,
+.Chat-container:hover .card-title{
+    color: var(--main-color) !important;
+}
+.CRM-image,
+.Chat-image{ /*image à "zoomer"  */
     max-width: 100%;
     height: auto;
     cursor: zoom-in;
     transition: transform 0.3s ease;
+    display: block;
+    z-index: 100;
 }
 .zoomed{        /*image "zoomé"  */
-    position: relative;
+    /* position: relative;
     z-index: 10;
     cursor: zoom-out;
     box-shadow: 0 0 10px var(--white-opal-color);
     border-radius: 10px;
-    transform: scale(1.5);
+    transform: scale(1.5); */
+    position: relative;
+    cursor: zoom-out;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%) scale(1.5);
+    object-fit: contain;
+    z-index: 1000;
+    max-height: 90vh;
+    max-width: 90vw;
+    height: 60%;
+    width: auto;
+    box-shadow: 0 0 10px var(--white-opal-color);
+    border-radius: 10px;
 }
-.fst-italic.CRM{
+.fst-italic.CRM,
+.fst-italic.Chat,
+.jours{
     color: var(--main-color) !important;
 }
 

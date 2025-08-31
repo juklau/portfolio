@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
+   <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
@@ -9,12 +9,17 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
+        <!-- link SwiperJS CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+        <!-- AOS CSS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" href="style.css">
-    </head> 
-    <body>
-        <header id="header" class="border-bottom border-secondary" >
+    </head>   
+    <body class="overflow-x-hidden fs-5 overflow-x-hidden bg-dark">
+         <header id="header" class="border-bottom border-secondary" >
             <nav class="navbar navbar-expand-md bg-dark p-4" data-bs-theme="dark">
                 <div class="container d-flex justify-content-between">
                     <a class="navbar-brand" href="#">Klaudia Juhasz</a>
@@ -40,8 +45,9 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle text-white" href="projets.html" role="button" aria-expanded="false"> Projets</a>
                                     <ul class="dropdown-menu border-0 ">
+                                        <li><a class="dropdown-item text-white" href="projets.html">Compétences</a></li>
                                         <li><a class="dropdown-item text-white" href="ppe-gestion_contacts.html">Application de gestion des contacts</a></li>
-                                        <li><a class="dropdown-item text-white" href="#">Application CHAT</a></li>
+                                        <li><a class="dropdown-item text-white" href="ppe-chat.html">Application CHAT</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item ">
@@ -50,7 +56,7 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle text-white" href="GPI.html" role="button" aria-expanded="false"> GPI </a>
                                     <ul class="dropdown-menu border-0">
-                                        <li><a class="dropdown-item text-white" href="GPI.html#GLPI">GLPI</a></li>
+                                        <li><a class="dropdown-item text-white" href="GPI.html">GLPI</a></li>
                                         <li><a class="dropdown-item text-white" href="GPI.html#OCS-Inventory">OCS Inventory</a></li>
                                     </ul>
                                 </li>
@@ -63,38 +69,355 @@
                 </div>
             </nav>
         </header>
+        <main class="bg-dark py-5 text-white">
+            <div class="container text-center py-5 mb-5">
+                <h1 class="display-1 text-white pt-5 pb-3 my-5">ClassCord Client</h1>
+                <h3 class="pb-5">Application de Chat en Java</h3>
+            </div>
+            <section class="presentation container">
+                <div class="row mx-auto mt-5" data-aos="fade-up-left" data-aos-delay="600">
+                    <span class="alcim text-uppercase fw-bolder">Contexte</span>
+                    <div class="container-fluid pt-2 pb-4 px-3 row">
+                        <div class="col-md-8 mb-3">
+                            <p class="mt-1">
+                                Dans le cadre du cours de SLAM (Solutions Logicielles et Applications Métiers), 
+                                le projet ClassCord Client a été conçu comme une application de chat en Java.
+                            </p>
+                            <p>
+                                L'objectif était de mettre en pratique la programmation orientée objet, 
+                                la communication réseau via sockets TCP, la gestion de dépendances avec Maven, 
+                                et la conception d'interfaces graphiques avec Swing. Le projet a été mené 
+                                en plusieurs étapes, documentées jour après jour.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="container-fluid row justify-content-end py-4 px-3 mt-2">
+                    <div class="col-md-8 mt-5" data-aos="fade-up-right" data-aos-delay="700">
+                        <span class="alcim text-uppercase fw-bolder">Besoin</span>
+                        <p class="px-2 my-4">
+                            L'application devait permettre à un utilisateur de :
+                            <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mt-4">
+                                <li>◈ Se connecter à un serveur de chat via IP et port.</li>
+                                <li>◈ Choisir son mode d'accès (invité ou authentifié).</li>
+                                <li>◈ Communiquer en temps réel avec d'autres utilisateurs.</li>
+                                <li>◈ Envoyer des messages globaux visibles par tous ou des messages privés à un utilisateur ciblé.</li>
+                                <li>◈ Gérer et afficher dynamiquement la liste des utilisateurs connectés avec leur statut (en ligne, absent, invisible).</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <div class="container-fluid row py-4 mt-2 justify-content-center" >
+                    <div class="col-md-11 mt-5" data-aos="fade-up-left" data-aos-delay="800">
+                        <span class="alcim text-uppercase fw-bolder">Environnement technologique</span>
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mt-4">
+                            <li>◈ Langage: Java 11+</li>
+                            <li>◈ IDE: VSCode et IntelliJ IDEA</li>
+                            <li>◈ Gestionnaire de dépendances: Maven</li>
+                            <li>◈ Bibliothèque externe: org.json (pour la manipulation des messages JSON)</li>
+                            <li>◈ Interface graphique: Java Swing</li>
+                            <li>◈ Architecture: Modèle MVC (séparation UI, contrôleur, modèle)</li>
+                            <li>◈ Gestion de version: Git/GitHub</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container-fluid row justify-content-end py-4 px-3">
+                    <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="900">
+                        <span class="alcim text-uppercase fw-bolder">Réalisation</span>
+                        <p class="px-2 my-4">
+                            Le développement s'est déroulé sur plusieurs jours:
+                            <ul class="list-unstyled lh-lg">
+                                <li><strong class="text-decoration-underline jours fst-italic">Jour 1:</strong> Mise en place du projet Maven, création des classes de base 
+                                    (User, Message) et organisation en packages.</li>
+                                <li><strong class="text-decoration-underline mt-2 jours fst-italic">Jour 2:</strong> Connexion au serveur via socket TCP, envoi/réception de messages en mode invité.</li>
+                                <li><strong class="text-decoration-underline mt-2 jours fst-italic">Jour 3:</strong> Mise en place de l'authentification (inscription et connexion).</li>
+                                <li><strong class="text-decoration-underline mt-2 jours fst-italic">Jour 4:</strong> Ajout des messages privés et de la liste dynamique des utilisateurs connectés.</li>
+                                <li><strong class="text-decoration-underline mt-2 jours fst-italic">Jour 5:</strong> Gestion des statuts, finalisation graphique et corrections de bugs.</li>
+                                <li><strong class="text-decoration-underline mt-2 jours fst-italic">Jour EXTRA:</strong> Réorganisation complète en respect strict du modèle MVC (controllers, models, UI).</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </section>
 
+            <section class="fonctionnalites container">
+                <div class="mt-5" data-aos="zoom-in-down" data-aos-delay="900">
+                    <span class="px-2 alcim text-uppercase fw-bolder">Fonctionnalités</span>
+                </div>
+                <div class="container carousel swiper swiper-container d-flex justify-content-center mt-2" data-aos="zoom-in-down" data-aos-delay="1000">
+                    <div class="slider-wrapper text-white px-1 ">
+                        <ul class="outil-liste swiper-wrapper list-unstyled mb-2 pb-2">
+                            <li class="Chat-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto bg-dark text-white">
+                                        <h4 class="card-title text-center pt-5">Connexion au serveur</h4>
+                                        <br>
+                                        <img class="card-img Chat-image m-auto" src="assets/images/app_chat/ConnectToServeur.png" alt="Connexion au serveur">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="Chat-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto bg-dark text-white">
+                                        <h4 class="card-title text-center pt-5">Authentification</h4>
+                                        <br>
+                                        <img class="card-img Chat-image m-auto" src="assets/images/app_chat/LoginUI.png" alt="authentification">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="Chat-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto bg-dark text-white">
+                                        <h4 class="card-title text-center pt-5">Connexion en mode invité</h4>
+                                        <br>
+                                        <img class="card-img Chat-image m-auto" src="assets/images/app_chat/GuestUI.png" alt="authentification">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="Chat-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto bg-dark text-white">
+                                        <h4 class="card-title text-center pt-5">Envoi et réception des messages globaux et privés</h4>
+                                        <img class="card-img Chat-image m-auto" src="assets/images/app_chat/Gestion des messages.png" alt="Gestion des messages">
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="Chat-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto bg-dark text-white">
+                                        <h4 class="card-title text-center pt-5">Liste dynamique des utilisateurs connectés</h4>
+                                        <img class="card-img Chat-image m-auto" id="user-list" src="assets/images/app_chat/liste d'utilisateur.png" alt="Liste des utilisateurs">
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="Chat-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto bg-dark text-white">
+                                        <h4 class="card-title text-center pt-5">Gestion des status utilisateurs</h4>
+                                        <br>
+                                        <!-- <p>(en ligne, absent, invisible, indisponible)</p> -->
+                                        <img class="card-img Chat-image m-auto" src="assets/images/app_chat/Gestion des status.png" alt="Gestion des status">
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="Chat-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto bg-dark text-white">
+                                        <h4 class="card-title text-center pt-5">Interface Swing ergonomique</h4>
+                                        <br>
+                                        <!-- <p>Couleurs par utilisateur, icônes de statut, interface finale soignée</p> -->
+                                         <img class="card-img Chat-image m-auto" src="assets/images/app_chat/Interface Swing final.png" alt="Interface">
+                                    </div>
+                                </div> 
+                            </li>
+                        </ul>
 
+                        <!-- pour la pagination = a lapozashoz -->
+                        <div class="swiper-pagination pt-2"></div>
 
-        <!-- Système de Chat Synchronisé
-Cette fonctionnalité permet aux utilisateurs de communiquer en temps réel dans l’application. Les messages sont envoyés au serveur lors de la validation, qui les distribue à tous les clients pour garantir une conversation fluide et synchronisée. La méthode ajoutChat dans la classe Arene est responsable de la mise à jour de l'affichage des messages reçus. De plus, la zone de saisie est masquée côté serveur, assurant une gestion centralisée des interactions. -->
+                        <!-- les boutons de navigation -->
+                        <div class="swiper-slide-button Chat swiper-button-prev d-none d-sm-block"></div>
+                        <div class="swiper-slide-button Chat swiper-button-next d-none d-sm-block"></div>
+                    </div>  
+                </div>
+            </section>
 
-        <!-- Application de Chat en Temps Réel : Communication Instantanée et Collaborative
-J’ai développé une application de chat en temps réel permettant aux utilisateurs de discuter simultanément avec plusieurs personnes. Grâce à une interface intuitive, les messages sont envoyés au serveur, qui les redistribue instantanément à tous les participants pour assurer une conversation fluide et synchronisée.
+            <section class="container">
+                <div class="container-fluid row pt-4 mt-5 text-white" >
+                    <div class="col-md-10 mt-5 justify-content-end" data-aos="fade-up-left" data-aos-delay="700">
+                        <span class="alcim text-uppercase fw-bolder">Bilan</span>
+                        <p class="mt-4 px-2">
+                            Ce projet m'a permis de renforcer mes compétences en <strong class="fst-italic">Java</strong>, en particulier dans la <strong class="fst-italic">programmation 
+                            orientée objet</strong> et la <strong class="fst-italic">gestion des sockets TCP</strong>. 
+                            La mise en place d'une <strong class="fst-italic">architecture MVC</strong> a amélioré la structure et la maintenabilité du code. 
+                            L'utilisation de <strong class="fst-italic">Swing</strong> pour l'interface graphique a été un défi, mais a abouti à une application 
+                            fonctionnelle et ergonomique.
+                            La gestion des utilisateurs et des messages en temps réel a également été une expérience précieuse, tant sur le plan technique
+                            que méthodologique.
+                        </p>
+                        <p class="px-2">
+                            Globalement, ce projet a été une excellente opportunité d'appliquer mes connaissances théoriques 
+                            à un cas pratique, tout en développant de nouvelles compétences.
+                            Il reste à tester l'application en conditions réelles avec un serveur opérationnel et plusieurs clients connectés 
+                            simultanément.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="container-fluid mt-4 py-4 px-3 row justify-content-end">
+                    <div class="col-md-10" data-aos="fade-up-right" data-aos-delay="800">
+                        <span class="alcim text-uppercase fw-bolder">Productions associées</span>
+                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5 mt-4">
+                            <li class="lien-intern">◈ Le code source de l'application disponible sur GitHub <a class="text-white" href="https://github.com/juklau/classcord-client2.git" target="_blank"><strong class="fw-medium fst-italic">en cliquant sur ce lien</strong></a>.</li>
+                            <li class="lien-intern">◈ Une documentation technique détaillée <a class="text-white" href="https://github.com/juklau/classcord-client2/blob/main/README.md" target="_blank"><strong class="fw-medium fst-italic">(README.md)</strong></a> disponible sur GitHub.</li>                    
+                            <li>◈ Des commentaires intégrés dans le code pour faciliter la compréhension.</li>
+                            <li>◈ Des interfaces Swing illustrées (connexion, chat, login, statuts).</li>                 
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="container">
+                <div class="container-fluid mt-4 py-4 px-3 row">
+                    <div class="col-md-10" data-aos="fade-up-right" data-aos-delay="900">
+                        <span class="alcim text-uppercase fw-bolder">Perspectives</span>
+                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5 mt-4">
+                            <li>◈ Améliorer l'expérience utilisateur avec des notifications sonores/visuelles.</li>
+                            <li>◈ Développer une version JavaFX plus moderne et réactive.</li>                
+                            <li>◈ Étendre la compatibilité multi-clients pour une utilisation à plus grande échelle.</li>
+                            <li>◈ Ajouter la persistance des conversations, l'historique du chat.</li>                 
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="container mt-5">
+                <div class="container-fluid mt-4 py-4 px-3">
+                    <span class="alcim text-uppercase fw-bolder">Compétences</span>
+                </div>
+                <div class="container-fluid box-shadow-left">
+                    <div data-aos="fade-left" data-aos-delay="800">
+                        <p class="mt-3 fst-italic Chat">1. Gérer le patrimoine informatique</p>
+                        <ul class="list-unstyled lh-lg ps-4">
+                            <li>1.1. Recenser et identifier les ressources numériques</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai identifié et utilisé différentes ressources nécessaires au développement comme Java 11, Maven,
+                                    les dépendances JSON, les IDE...
+                                </small>
+                            <li>1.2. Exploiter des référentiels, normes et standards adoptés par le prestataire informatique</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai respecté le standard de structuration du code, l'architecture MVC et 
+                                    le standard d'interopérabilité (l'utilisation du format JSON pour les échanges client-serveur).
+                                </small>
+                            <li>1.3. Mettre en place et vérifier les niveaux d'habilitation associés à un service</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">Gestion de la connexion par login/mot de passe pendant l'authentification.
+                                </small>
+                            <li>1.4. Vérifier les conditions de continuité d'un service informatique</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai travaillé sur la stabilité de la connexion TCP en gérant les erreurs et la reconnexion.
+                                </small>
+                            <li>1.6 Vérifier le respect des règles d'utilisation des ressources numériques</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">L'application respecte les règles de communication réseau, gestion de statuts et des identifiants.
+                                </small>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="900">
+                        <p class="fst-italic Chat">2. Répondre aux incidents et aux demandes d'assistance et d'évolution</p>
+                        <ul class="list-unstyled lh-lg ps-4">
+                            <li>2.1. Collecter, suivre et orienter des demandes</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai mis en place une interface de connexion et d'authentification, qui 
+                                    demande à l'utilisateur de fournir une adresse IP, un port, un login/mot de passe.
+                                </small>
+                                <br>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai conçu des mécanismes de retour d'information comme message de 
+                                    bienvenue, messages d'erreur, statuts des utilisateurs qui permettent d'orienter l'utilisateur.
+                                </small>
+                            <li>2.2. Traiter des demandes concernant les services réseau et système, applicatifs</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai travaillé sur la connexion réseau via sockets TCP et j'ai géré 
+                                    les erreurs de connexion tels que le port invalide, IP incorrecte ou la perte de socket tout en 
+                                    assurant la continuité du service (fermeture propre de la connexion, écoute asynchrone des messages).
+                                </small>
+                            <li>2.3. Traiter des demandes concernant les applications</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai conçu et corrigé l'interface Swing afin que l'application soit utilisable
+                                    (chat, liste d'utilisateurs, statuts).
+                                </small>
+                                <br>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai géré les messages applicatifs conformément au protocole serveur (messages 
+                                    JSON: inscription, login, conversation global ou privée, changement de statut).
+                                </small>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="1000">
+                        <p class="fst-italic Chat">4. Travailler en mode projet</p>
+                        <ul class="list-unstyled lh-lg ps-4">
+                            <li> 4.1. Analyser les objectifs et les modalités d'organisation d'un projet</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic"> L'analyse du cahier des charges m'a permis de comprendre les objectifs et de 
+                                    planifier les différentes étapes du projet en fonction des contraintes définies.
+                                </small>
+                                <br>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai choisi une architecture MVC afin d'améliorer la structure et la 
+                                    maintenabilité du code, et j'ai analysé les modalités techniques: Maven, choix des IDE (VSCode et IntelliJ), format JSON. 
+                                </small>
+                            <li> 4.2. Planifier les activités</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai structuré ce projet en journées de développement afin d'avoir
+                                    chaque jour des tâches précises comme le Jour 3: implémentation de l'authentification...
+                                </small>
+                            <li> 4.3. Évaluer les indicateurs de suivi d'un projet et analyser les écarts</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic"> Cette compétence est acquise partiellement, car j'ai fait un suivi 
+                                    qualitatif tels que l'icône de chargement n'est pas totalement fonctionnelle et j'ai aussi rédigé des
+                                    bilans quotidiens en listant ce qui fonctionnait et ce qui restait à corriger comme le bug du statut
+                                    qui repassait en "online". En revanche je n'ai pas fait encore une évaluation formalisée avec des indicateurs
+                                    (temps prévu vs temps passé...)
+                                </small>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="1100">
+                        <p class="fst-italic Chat">5. Mettre à disposition des utilisateurs un service informatique</p>
+                        <ul class="list-unstyled lh-lg ps-4">
+                            <li>5.1. Réaliser les tests d'intégration et d'acceptation d'un service</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai testé mon application au fur et à mesure du développement (compilation avec
+                                    Maven, affichage console, connexion au serveur, envoi/réception de messages).
+                                </small>
+                                <br>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">Il reste à réaliser des tests formels d'acceptation avec plusieurs utilisateurs 
+                                    sur un serveur de production.
+                                </small>
+                            <li>5.2. Déployer un service</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai déployé un service applicatif côté client en mettant en place une 
+                                    application prête à l'emploi.
+                                </small>
+                            <li>5.3. Accompagner les utilisateurs dans la mise en place d'un service</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai préparé une documentation technique (README.md) pour aider les utilisateurs 
+                                    à installer, configurer et lancer le projet.
+                                </small>
+                                <br>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai également integré des messages d'aide et d'erreur dans l'interface et 
+                                    ajouté des éléments ergonomiques comme messages de bienvenue, pseudo mémorisé...
+                                </small>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="1200">
+                        <p class="fst-italic Chat">6. Organiser son développement professionnel</p>
+                        <ul class="list-unstyled lh-lg ps-4">
+                            <li>6.1. Mettre en place son environnement d'apprentissage personnel</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai installé et configuré Java 11, Maven, deux IDE (VSCode + IntelliJ IDEA) et utilisé Git/GitHub.
+                                </small>
+                            <li>6.2. Mettre en œuvre des outils et stratégies de veille informationnelle</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai utilisé Internet et la documentation pour progresser et 
+                                    résoudre des difficultés techniques.
+                                </small>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="1300">
+                        <ul class="list-unstyled lh-lg ps-4">
+                            <li>6.3. Gérer son identité professionnelle</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">Je valorise mon projet en le présentant sur mon portfolio 
+                                    en ligne ainsi que sur GitHub.
+                                </small>
+                            <li>6.4. Développer son projet professionnel</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic"> Ce projet m'a permis de découvrir et d'approfondir des domaines clés comme Java, 
+                                    sockets TCP, MVC, UI Swing et de confirmer mon intérêt pour le développement d'applications.
+                                </small>                        
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <div class="d-flex justify-content-center mt-5 pt-4" data-aos="zoom-in" data-aos-delay="700">
+                <a href="assets/documents/Epreuve E5 - Tchat_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn" type="button" id="fiche-CRM-btn">Fiche descriptive</button></a>
+            </div>
 
-Les principales fonctionnalités incluent :
+        </main>
 
-Envoi et réception de messages en direct, avec mise à jour automatique de l’affichage,
+        <!-- script de AOS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-Gestion des utilisateurs et des groupes, permettant des discussions privées ou en équipe,
-
-Stockage temporaire des conversations, pour conserver l’historique même après actualisation,
-
-Déploiement sur un serveur local, assurant un accès sécurisé et optimisé.
-
-Ce projet m’a permis de renforcer mes compétences en développement web, gestion des données en temps réel et optimisation des échanges via API. -->
-
-
-        <!-- scripts -->
-         <script src="assets/js/portfolio.js"></script>
+        <!-- script de Link SwiperJS-->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="assets/js/carousel.js"></script>
+        <script src="assets/js/portfolio.js"></script>
 
         <!-- script de Bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     </body>
 
-    <!-- Footer -->
-    <footer class="footer container-fluid text-center text-white bg-dark p-0" >
+   <!-- Footer -->
+    <footer class="footer container-fluid text-center text-white bg-dark p-0 pt-5" >
         <div class="container-fluid border-top border-secondary">
             <section class="pt-3">
 

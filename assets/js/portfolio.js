@@ -134,11 +134,11 @@ AOS.init({
 /*                          ZOOM Image
 /* ======================================================================================== */
 
-document.querySelectorAll(".CRM-image").forEach(img =>{
+document.querySelectorAll(".CRM-image, .Chat-image").forEach(img =>{
     img.addEventListener("click", function(){
         const isZoomed = img.classList.contains("zoomed");
 
-        document.querySelectorAll(".CRM-image.zoomed").forEach(el =>{
+        document.querySelectorAll(".CRM-image.zoomed, .Chat-image.zoomed").forEach(el =>{
             el.classList.remove("zoomed");
         });
 

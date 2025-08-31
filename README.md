@@ -21,7 +21,7 @@ Vous pouvez accéder à mon portfolio sur https://juklau.github.io/portfolio/ind
 1. **Page d'accueil** – Présentation rapide avec photo, titre, bouton d’appel à l’action, timeline de mon parcours et accès à mon CV
 2. **Page de la formation** – Présentation du BTS SIO, de l’option SLAM, de l’école IRIS MediaSchool Nice et aperçu de mes stages réalisés
 3. **Page de mes projets** – Aperçu de mes compétences et de tous les projets réalisés, via un système de cartes interactives
-4. **Détail d’un PPE** – Zoom sur un projet avec visuels, technologies utilisées et compétences mobilisées *(section en cours de construction)*
+4. **Détail d’un RP** – Zoom sur un projet avec visuels, technologies utilisées et compétences mobilisées *(section en cours de construction)*
 5. **Veille technologique** – Sujets IT que je suis régulièrement
 6. **Gestion du patrimoine informatique** – Méthodes, outils et bonnes pratiques apprises pendant ma formation
 7. **Page de contact** – Formulaire dynamique pour me contacter facilement
@@ -35,7 +35,7 @@ Vous pouvez accéder à mon portfolio sur https://juklau.github.io/portfolio/ind
 
 - **CV** (disponible sur la page d’accueil)
 - **Tableau de synthèse des compétences** (page Projets)
-- **Fiche descriptive du projet Mini CRM – gestion des contacts** (page Projets)
+- **Fiche descriptive du projet Mini CRM – gestion des contacts** (page Projets et Application de gestion des contacts)
 - **Fiche descriptive du projet Application de Chat en Temps Réel** (page Projets)
 
 ---
@@ -79,6 +79,7 @@ la fonctionnalité des liens et la fluidité de navigation sur toutes les pages.
 ## Lien vers le prototype
 
 https://www.figma.com/design/QMpU6uu0tGXpdInYixZ798/Mon_portfolio?node-id=1-2&p=f&t=zml3t7JLvRiWZTKa-0
+(Cette maquette a connu plusieurs améliorations depuis sa conception.)
 
 
 ---
