@@ -9,12 +9,17 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
+        <!-- link SwiperJS CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+        <!-- AOS CSS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" href="style.css">
-    </head> 
-    <body>
-        <header id="header" class="border-bottom border-secondary" >
+    </head>   
+    <body class="overflow-x-hidden fs-5 overflow-x-hidden bg-dark">
+         <header id="header" class="border-bottom border-secondary" >
             <nav class="navbar navbar-expand-md bg-dark p-4" data-bs-theme="dark">
                 <div class="container d-flex justify-content-between">
                     <a class="navbar-brand" href="#">Klaudia Juhasz</a>
@@ -64,6 +69,129 @@
                 </div>
             </nav>
         </header>
+        <main class="bg-dark py-5 text-white">
+            <div class="container text-center py-5 mb-5">
+                <h1 class="display-1 text-white pt-5 pb-3 my-5">Stage au Sein de l'entreprise OPS IMPERIUM</h1>
+                <h3 class="pb-5"> </h3>
+            </div>
+
+
+            <section class="container mt-5">
+                <div class="container-fluid mt-4 py-4 px-3">
+                    <span class="alcim text-uppercase fw-bolder">Compétences</span>
+                </div>
+                <div class="container-fluid box-shadow-left">
+                    <div data-aos="fade-left" data-aos-delay="800">
+                        <p class="mt-3 fst-italic Chat">1. Gérer le patrimoine informatique</p>
+                        <ul class="list-unstyled lh-lg ps-4">
+                            <li>1.1. Recenser et identifier les ressources numériques</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai recensé les différentes ressources à mettre en place, comme
+                                    API Unipile, base Supabase, workflows n8n, aplication Streamlit, ainsi que les tables.
+                                </small>
+                            <li>1.2. Exploiter des référentiels, normes et standards adoptés par le prestataire informatique</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai respecté les standards imposé par Supabae/PostgreSQL (clés
+                                    primaires, clés étrangères) et par l'API Inipile (endpoints /chats et /messages, format JSON, webhooks).
+                                </small>
+                            <li>1.4. Vérifier les conditions de continuité d'un service informatique</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai intégré des webhooks et automatisé le flux de données
+                                    via n8n pour garantir la mise à jour continue de la base.
+                                </small>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="900">
+                        <p class="fst-italic Chat">2. Répondre aux incidents et aux demandes d'assistance et d'évolution</p>
+                        <ul class="list-unstyled lh-lg ps-4">
+                            <li>2.1. Collecter, suivre et orienter des demandes</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai recuilli les besoins liés à l'application et ensuite
+                                    j'ai conçu des spécifications fonctionnelles pour répondre à ces besoins(n8n pour l'automatisation,
+                                    Supabase pour la base de données, Streamlit pour l'interface utilisateur).
+                                </small>
+                            <li>2.2. Traiter des demandes concernant les services réseau et système, applicatifs</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai mis en place des workflows n8n pour automatiser la
+                                    synchronisation des données entre l'API Unipile et la base Supabase, assurant ainsi la continuité du service.
+                                </small>
+                            <li>2.3. Traiter des demandes concernant les applications</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai développé une application Streamlit qui permet de consulter et exploiter
+                                    les données en intégrant les workflows automatisés et les requêtes SQL pour répondre aux besoins d'utilisation et
+                                    de visualisation des conversations.
+                                </small>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="900">
+                        <p class="fst-italic Chat">3. Développer la présence en ligne de l'organisation</p>
+                        <ul class="list-unstyled lh-lg ps-4">
+                            <li>3.3. Participer à l'évolution d'un site Web exploitant les données de l'organisation.</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai conçu et fait évoluer une interface web qui 
+                                    exploite les données stockées dans Supabase, en utilisant Streamlit pour afficher les conversations et les messages. 
+                                </small>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="1000">
+                        <p class="fst-italic Chat">4. Travailler en mode projet</p>
+                        <ul class="list-unstyled lh-lg ps-4">
+                            <li> 4.1. Analyser les objectifs et les modalités d'organisation d'un projet</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai identifié les objectifs du projet (automatiser la
+                                    récupération des conversations LinkedIn, stocker les données dans Supabase, afficher les informations avec Streamlit).
+                                </small>
+                                <br>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai défini les modalités d'organisation en choisissant les technologies
+                                    appropriées (n8n pour l'automatisation, Supabase pour la base de données, Streamlit pour l'interface utilisateur).
+                                </small>
+                            <li> 4.2. Planifier les activités</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai planifié les activités en définissant des tâches spécifiques 
+                                    pour chaque journée de développement (recensement des données, mise en place des workflows n8n,
+                                     implémentation de l'authentification, etc.).
+                                </small>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="1100">
+                        <p class="fst-italic Chat">5. Mettre à disposition des utilisateurs un service informatique</p>
+                        <ul class="list-unstyled lh-lg ps-4">
+                            <li>5.1. Réaliser les tests d'intégration et d'acceptation d'un service</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai testé l'intégration des différents composants comme
+                                    récupération des données via l'API Unipile, insertion dans Supabase, déclenchement des workflows
+                                    n8n, affichage dans l'application Streamlit, lesquels m'ont permis de valider le bon fonctionnement du service.
+                                </small>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="1200">
+                        <p class="fst-italic Chat">6. Organiser son développement professionnel</p>
+                        <ul class="list-unstyled lh-lg ps-4">
+                            <li>6.1. Mettre en place son environnement d'apprentissage personnel</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai configuré un environnement de travail adapté (Docker,
+                                    VS Code, n8n, Supabase, Streamlit), organisé les outils afin d'apprendre rapidement les technologies inconnu au départ.
+                                </small>
+                            <li>6.2. Mettre en œuvre des outils et stratégies de veille informationnelle</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai consulté régulièrement la documentation officielle de n8n, Supabase et Streamlit,
+                                    ainsi que des tutoriels en ligne et des forums pour rester à jour sur les meilleures pratiques et les nouvelles fonctionnalités.
+                                </small>
+                            <li> 6.4. Développer son projet professionnel</li>
+                            <small class="ps-md-3 ps-lg-5 fst-italic">Ce stage m'a permis de découvrir concrètement des domaines
+                                et de mieux orienter mon projet professionnel vers des compétences en automatisation, gestion de bases de données 
+                                et développement d'applications web. 
+                            </small>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="1300">
+                        <ul class="list-unstyled lh-lg ps-4">
+                            <li>6.3. Gérer son identité professionnelle</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">Je valorise mon projet en le présentant sur mon portfolio 
+                                    en ligne ainsi que sur GitHub.
+                                </small>
+                            <li>6.4. Développer son projet professionnel</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic"> Ce projet m'a permis de découvrir et d'approfondir des domaines clés comme Java, 
+                                    sockets TCP, MVC, UI Swing et de confirmer mon intérêt pour le développement d'applications.
+                                </small>                        
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <div class="d-flex justify-content-center mt-5 pt-4" data-aos="zoom-in" data-aos-delay="700">
+                <a href="" target="_blank"><button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn" type="button" id="fiche-CRM-btn">Fiche descriptive</button></a>
+            </div>
+
+        </main>
+
 
 
 
@@ -77,8 +205,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     </body>
 
-    <!-- Footer -->
-    <footer class="footer container-fluid text-center text-white bg-dark p-0" >
+      <!-- Footer -->
+    <footer class="footer container-fluid text-center text-white bg-dark p-0 pt-5" >
         <div class="container-fluid border-top border-secondary">
             <section class="pt-3">
 
@@ -87,7 +215,7 @@
                     <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
                         <div class="col-12 col-md-auto pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="index.html" class="text-white text-decoration-none fs-5">Accueil</a>
+                                <a href="accueil.html" class="text-white text-decoration-none fs-5">Accueil</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
