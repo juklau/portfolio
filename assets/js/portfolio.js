@@ -26,6 +26,15 @@ document.addEventListener("DOMContentLoaded", function(){
         })
     }
 
+    // si un page "type_veille" est active => dans le menu "veille.html" sera active
+    if(window.location.href.includes("veille")){
+        navLinks.forEach(link => {
+            if(link.href.includes("veille.html")){
+                link.classList.add("active")
+            }
+        })
+    }
+
     // si un "dropdown" est active => dans le menu "son parent" sera active
     dropdownItems.forEach(item => {
         item.addEventListener("click", function(){
@@ -123,6 +132,7 @@ document.querySelectorAll(".flip-card").forEach(card => {
 AOS.init({
     // fonctionnement l'effet que pendant le chargement et il ne se répéte pas
     once: true,
+    duration: 1500, 
 
     // désactiver l'effet sur mobil
     disable: function() {

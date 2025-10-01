@@ -9,13 +9,16 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
+        <!-- link SwiperJS CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
         <!-- AOS CSS -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" href="style.css">
     </head> 
-    <body>
+    <body class="fs-5 overflow-x-hidden bg-dark">
         <header id="header" class="border-bottom border-secondary">
             <nav class="navbar navbar-expand-md bg-dark p-4" data-bs-theme="dark">
                 <div class="container d-flex justify-content-between">
@@ -47,8 +50,13 @@
                                         <li><a class="dropdown-item text-white" href="ppe-chat.html">Application CHAT</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link text-white" href="veille.html">La veille</a>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-white" href="veille.html" role="button" aria-expanded="false">La veille</a>
+                                    <ul class="dropdown-menu border-0 ">
+                                        <li><a class="dropdown-item text-white" href="veille-sourds.html">IA & surdité</a></li>
+                                        <li><a class="dropdown-item text-white" href="page-error.html">IA & vision</a></li>
+                                        <li><a class="dropdown-item text-white" href="page-error.html">IA & mobilit</a></li>
+                                    </ul>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle text-white" href="GPI.html" role="button" aria-expanded="false"> GPI </a>
@@ -73,268 +81,403 @@
                     des sourds et malentendants
                 </h1>
             </div>
-            <section class="container text-white">
-                 <div >
-                    <h3>C'est quoi le handicap auditif ?</h3>
-                    <p>
-                        Le handicap auditif englobe l'ensemble des troubles de l'audition, allant d'une perte légère 
-                        à une surdité totale. Les personnes concernées peuvent rencontrer des difficultés à percevoir 
-                        les sons, comprendre la parole ou communiquer efficacement. Cette déficience peut être congénitale 
-                        ou acquise et impacte profondément la vie quotidienne, l'éducation, les interactions sociales et 
-                        l'accès à l'information..
-                    </p>
-                    <p>
-                        La communication est un outil essentiel chez les êtres humains car elle rend possible les échanges et les interactions. 
-                        Cependant, combien de fois avez-vous été en face d'une personne touchée par la surdité sans parvenir à comprendre 
-                        ce qu'elle disait, etinversement ?
-                    </p>
-                    <p>
-                        Selon une étude européenne récente, près de <a href="https://www.vivason.fr/actualites/le-nombre-de-deficients-auditifs-en-europe-a-augmente-de-6">
-                        16 % des citoyens adultes de l'Union européenne </a> souffrent de troubles auditifs - soit environ 55 millions de personnes âgées 
-                        de 18 à 80 ans présentant une perte auditive supérieure à 25 dB, seuil fixé par l'Organisation mondiale de la santé (OMS) pour définir une déficience auditive. 
-                        Lors d'une précédente étude, ce chiffre n'était que de 10 %, ce qui traduit une augmentation préoccupante liée 
-                        aux mauvaises habitudes auditives (écoute prolongée et volume élevé) et au vieillissement de la population.
-                    </p>
-                
+             <!-- "definition" du handicap auditif -->
+            <section class="container text-white section pt-5 pb-4">
+
+                <div class="container-fluid row mx-auto mt-5" data-aos="fade-up-left" data-aos-delay="300">
+                    <div class="col-md-10 mb-3">
+                        <span class="alcim text-uppercase fw-bolder">C'est quoi le handicap auditif ?</span>
+                        <div class="pt-2 pb-4 row">
+                            <p class="my-4">
+                                Le handicap auditif englobe l'ensemble des troubles de l'audition, allant d'une perte légère 
+                                à une surdité totale. Les personnes concernées peuvent rencontrer des difficultés à percevoir 
+                                les sons, comprendre la parole ou communiquer efficacement. Cette déficience peut être congénitale 
+                                ou acquise et impacte profondément la vie quotidienne, l'éducation, les interactions sociales et 
+                                l'accès à l'information..
+                            </p>
+                            <p  class="my-4">
+                                La communication est un outil essentiel chez les êtres humains car elle rend possible les échanges et les interactions. 
+                                Cependant, combien de fois avez-vous été en face d'une personne touchée par la surdité sans parvenir à comprendre 
+                                ce qu'elle disait, et inversement ?
+                            </p>
+                            <p  class="my-4 references">
+                                Selon une étude européenne récente, près de <a class="text-white" target="_blank" href="https://www.vivason.fr/actualites/le-nombre-de-deficients-auditifs-en-europe-a-augmente-de-6">
+                                <strong class="fw-medium fst-italic">16 % des citoyens adultes de l'Union européenne </strong></a> souffrent de troubles auditifs - soit environ 55 millions de personnes âgées 
+                                de 18 à 80 ans présentant une perte auditive supérieure à 25 dB, seuil fixé par l'Organisation mondiale de la santé (OMS) pour définir une déficience auditive. 
+                                Lors d'une précédente étude, ce chiffre n'était que de 10 %, ce qui traduit une augmentation préoccupante liée 
+                                aux mauvaises habitudes auditives (écoute prolongée et volume élevé) et au vieillissement de la population.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </section>
-            <section class="container text-white py-5">
-                <div >
-                    <h3>Evolution de la technologie pour les sourds et malentendants</h3>
-                    <p>Au fil des années, les innovations technologiques ont considérablement transformé le quotidien des personnes sourdes et malentendantes:</p>
-                    <ul>
-                        <li>Appareils auditifs de plus en plus performants.</li>
-                        <li>Implants cochléaires, adaptés à certaines formes de surdité sévère.</li>
-                        <li>Applications de transcription en temps réel (reconnaissance vocale, sous-titrage automatique), 
-                            dont la précision varie selon les accents, le bruit de fond et la langue.</li>
-                        <li>Outils de communication visuelle: Langue des Signes Française (LSF), 
-                            avatars numériques, applications de traduction.</li>
-                        <li>Interfaces connectées accessibles : smartphones, montres, sonnettes intelligentes, assistants vocaux.</li>
-                        <li>Réalité augmentée et capteurs innovants: lunettes intelligentes, gants connectés, IA de lecture labiable</li>
-                    </ul>
+
+                <div class="container-fluid row justify-content-end py-4 px-3 mt-2">
+                    <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="350">
+                        <span class="alcim text-uppercase fw-bolder">Evolution de la technologie pour les sourds et malentendants</span>
+                        <p class="my-4">
+                            Au fil des années, les innovations technologiques ont considérablement transformé le quotidien des personnes sourdes et malentendantes:
+                        </p>
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mt-4">
+                            <li>◈ Appareils auditifs de plus en plus performants.</li>
+                            <li>◈ Implants cochléaires, adaptés à certaines formes de surdité sévère.</li>
+                            <li>◈ Applications de transcription en temps réel (reconnaissance vocale, sous-titrage automatique), 
+                                dont la précision varie selon les accents, le bruit de fond et la langue.</li>
+                            <li>◈ Outils de communication visuelle: Langue des Signes Française (LSF), 
+                                avatars numériques, applications de traduction.</li>
+                            <li>◈ Interfaces connectées accessibles : smartphones, montres, sonnettes intelligentes, assistants vocaux.</li>
+                            <li>◈ Réalité augmentée et capteurs innovants: lunettes intelligentes, gants connectés, IA de lecture labiable (déchiffrage des lèvres pour comprendre la parole).</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
 
-            <div class="container text-white py-5">
-                <h2>Résultats de la veille technologique</h2>
+            <div class="container text-white pt-5 pb-3">
+                <h2 class="text-center display-6 py-5 text-decoration-underline">Résultats de la veille technologique</h2>
             </div>
+            
+            <section class="container text-white section pt-5 pb-4">
+                <div class="container-fluid mx-auto mt-5" data-aos="fade-up-left" data-aos-delay="300">
+                    <span class="alcim text-uppercase fw-bolder">Les opportunités offertes par l'IA</span>
+                    <div class="pt-2 pb-4">
+                        <p class="my-4">
+                            L'intelligence artificielle ouvre des nouvelles opportunités pour améliorer l'accessibilité, l'autonomie 
+                            et la communication des personnes sourds et malentendantes. Les innovations se déclinent en plusieurs catégories 
+                            d'outils et de services, allant de la transcription en temps réel à la création d'avatars numériques.
+                        </p>
+                        <p class="my-4">
+                            Afin de rendre cette veille plus lisible et de mettre en évidence la diversité des solutions, j'ai choisi de 
+                            classer mes résultats en sept catégories principales, chacune correspondant à un champ d'application 
+                            spécifique de l'IA dans ce domaine :
+                        </p>
 
-            <section class="container text-white py-5">
-                <div >
-                    <h3>Les opportunités offertes par l'IA</h3>
-                    <p>L'intelligence artificielle ouvre des nouvelles opportunités pour améliorer l'accessibilité, l'autonomie 
-                        et la communication des personnes sourds et malentendantes. Les innovations se déclinent en plusieurs catégories 
-                        d'outils et de services, allant de la transcription en temps réel à la création d'avatars numériques.
-                    </p>
+                        <div class="container carousel swiper swiper-container d-flex justify-content-center" data-aos="zoom-in-down" data-aos-delay="1000">
+                            <div class="slider-wrapper text-white pb-5 px-1 ">
+                                <ul class="categorie-liste swiper-wrapper list-unstyled">
+                                <!-- 1 -->
+                                <li class="categorie-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                        <div class="categorie-item p-1 mt-5 mb-3">
+                                            <!-- stretched-link nécessite un parent position-relative!!!! -->
+                                            <div class="card language col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border position-relative">
+                                                <h4 class="card-title text-center py-3 px-2">1.Transcription automatique de la parole en temps réel:</h4>
+                                                <p class="card-text fw-normal text-center">
+                                                    rendre les échanges oraux accessibles instantanément.
+                                                </p>
+                                                <img class="card-img my-auto veille-image mx-auto my-2 " src="assets/images/veilles/AVA.webp" alt="L'application AVA">
+                                                <span class="image-source text-black bg-body-secondary rounded-2 p-1">https://fr.ava.me/</span>
+                                                <a href="#categorie-1" class="stretched-link" aria-label="Aller à la section 1 : Transcription automatique de la parole en temps réel"></a>
+                                            </div>
+                                        </div> 
+                                    </li>
+                                    <li class="categorie-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                        <div class="categorie-item p-1 mt-5 mb-3">
+                                            <div class="card language col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border position-relative">
+                                                <h4 class="card-title text-center py-3 px-2">2. Traduction entre parole et langue des signes :</h4>
+                                                <p class="card-text fw-normal text-center mt-4">
+                                                    faciliter la communication entre personnes sourdes et entendantes.
+                                                </p>
+                                                <img class="card-img my-auto veille-image mx-auto" src="assets/images/veilles/SignAll.webp" alt="SignAll">
+                                                <span class="image-source text-black bg-body-secondary rounded-2 p-1">https://techcrunch.com/2018/02/14/signall-is-slowly-but-surely-building-a-sign-language-translation-platform/</span>
+                                                <a href="#categorie-2" class="stretched-link" aria-label="Aller à la section 2 : Traduction entre parole et langue des signes"></a>
+                                            </div>
+                                        </div> 
+                                    </li>
+                                    <li class="categorie-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                        <div class="categorie-item p-1 mt-5 mb-3">
+                                            <div class="card language col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border position-relative">
+                                                <h4 class="card-title text-center py-3 ">3. Interfaces accessibles intelligentes :</h4>
+                                                <p class="card-text fw-normal text-center mt-4">
+                                                    améliorer l'interaction avec les outils numériques.
+                                                </p>
+                                                <img class="card-img my-auto mx-auto my-2" src="assets/images/veilles/TapSOS.webp" alt="L'application TapSOS">
+                                                <span class="image-source text-black bg-body-secondary rounded-2 p-1">https://x.com/Tap_SOS/status/1430087830395572229</span>
+                                                <a href="#categorie-3" class="stretched-link" aria-label="Aller à la section 3 : Interfaces accessibles intelligentes"></a>
+                                            </div>
+                                        </div> 
+                                    </li>
+                                    <li class="categorie-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                        <div class="categorie-item p-1 mt-5 mb-3">
+                                            <div class="card language col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border position-relative">
+                                                <h4 class="card-title text-center py-3">4. Reconnaissance sonore par IA :</h4>
+                                                <p class="card-text fw-normal text-center mt-4">
+                                                    alerter sur des sons importants du quotidien (alarme, klaxon, etc.).
+                                                </p>
+                                                <img class="card-img my-auto veille-image mx-auto my-2" src="assets/images/veilles/sonnette intelligente.webp" alt="Sonette intelligente"> 
+                                                <span class="image-source text-black bg-body-secondary rounded-2 p-1">https://www.lifeboxsecurity.fr/carillon-sonnette-interphone/2386-sonnette-intelligente-avec-batterie-rechargeable-wi-fi-video-2k-et-vision-nocturne-carillon-arlo-193108146753.html?srsltid=AfmBOoqRtZlEZE0hf-Q0t085lmU5zejC6urNbRxuYxSVR-tFRmXcevzl</span>
+                                                <a href="#categorie-4" class="stretched-link" aria-label="Aller à la section 4 :  Reconnaissance sonore par IA"></a>
+                                            </div>
+                                        </div> 
+                                    </li>
+                                    <li class="categorie-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                        <div class="categorie-item p-1 mt-5 mb-3">
+                                            <div class="card language col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border position-relative">
+                                                <h4 class="card-title text-center py-3">5. Accessibilité en éducation grâce à l'IA :</h4>
+                                                <p class="card-text fw-normal text-center mt-4">
+                                                    favoriser l'apprentissage inclusif.
+                                                </p>
+                                                <img class="card-img my-auto veille-image mx-auto my-2" src="assets/images/veilles/GnoSys.webp" alt="L'application GnoSys"> 
+                                                <span class="image-source text-black bg-body-secondary rounded-2 p-1">https://newzhook.com/story/20387/</span>
+                                                <a href="#categorie-5" class="stretched-link" aria-label="Aller à la section 5 :  Accessibilité en éducation grâce à l'IA"></a>
+                                            </div>
+                                        </div> 
+                                    </li>
+                                    <li class="categorie-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                        <div class="categorie-item p-1 mt-5 mb-3">
+                                            <div class="card language col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border position-relative">
+                                                <h4 class="card-title text-center py-3">6. Avatars IA en langues des signes :</h4>
+                                                <p class="card-text fw-normal text-center mt-4">
+                                                    proposer des interprètes virtuels disponibles à tout moment.
+                                                </p>
+                                                <img class="card-img my-auto veille-image mx-auto my-2" src="assets/images/veilles/IRIS.webp" alt="Avatar IRIS">
+                                                <span class="image-source text-black bg-body-secondary rounded-2 p-1">https://www.ibm.com/fr-fr/case-studies/ives</span>
+                                                <a href="#categorie-6" class="stretched-link" aria-label="Aller à la section 6 :  Avatars IA en langues des signes"></a>
+                                            </div>
+                                        </div> 
+                                    </li>
+                                    <li class="categorie-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                        <div class="categorie-item p-1 mt-5 mb-3">
+                                            <div class="card language col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border position-relative">
+                                                <h4 class="card-title text-center py-3">7. Technologies expérimentales et innovantes :</h4>
+                                                <p class="card-text fw-normal text-center">
+                                                    explorer les pistes émergentes, comme la lecture labiable par IA ou la réalité augmentée.
+                                                </p>
+                                                <img id="image-veille-gant" class="card-img my-auto veille-image mx-auto my-2" src="assets/images/veilles/gant-traducteur.webp" alt="Gant traducteur">
+                                                <!-- <span class="image-source text-black bg-body-secondary rounded-2 p-1">https://www.lemonde.fr/sciences/article/2024/03/21/un-gant-traducteur-qui-transforme-la-langue-des-signes-en-voix_6223197_1650684.html</span> -->
+                                                <a href="#categorie-7" class="stretched-link" aria-label="Aller à la section 7 :  Technologies expérimentales et innovantes"></a>
+                                            </div>
+                                        </div> 
+                                    </li>
+                                </ul>
+
+                                <!-- pour la pagination = a lapozashoz -->
+                                <div class="swiper-pagination pt-2"></div>
+
+                                <!-- les boutons de navigation -->
+                                <div class="swiper-slide-button swiper-button-prev d-none d-sm-block"></div>
+                                <div class="swiper-slide-button swiper-button-next d-none d-sm-block"></div>
+                            </div>  
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h4>1. Transcription automatique de la parole en temps réel</h4>
-                    <div>
-                        <p>Les avancées en matière de traitement du langage naturel permettent de développer des outils de transcription 
+
+                <div id="categorie-1" class="container-fluid mx-auto mt-5" data-aos="zoom-in-up" data-aos-delay="400">
+                    <span class="alcim-veille text-uppercase fw-bolder">1. Transcription automatique de la parole en temps réel</span>
+                    <div class="pt-2 pb-4">
+                        <p class="my-4">
+                            Les avancées en matière de traitement du langage naturel permettent de développer des outils de transcription 
                             automatique de la parole en texte grâce à l'IA, facilitant ainsi l'accès à l'information pour les personnes sourdes et 
                             malentendantes lors d'une réunion, d'un cours ou d'une conversation.
                             Cette technologie est appelée reconnaissance vocale (Speech-to-Text), combinée à des algorithmes d'IA linguistique.
                         </p>
                     </div>
-                    <div>
-                        <p>Exemples d'outils</p>
-                        <table class="table table-dark table-striped text-white">
+                    <div class="pt-2 pb-4">
+                        <p class="fst-italic">Exemples d'outils :</p>
+                        <table class="table table-dark table-striped text-white fs-6 box-shadow-IA">
                             <thead>
-                                <tr>
-                                    <th scope="col">Outil</th>
+                                <tr class="align-middle fs-5">
+                                    <th scope="col" >Outil</th>
                                     <th scope="col">Description</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row"></th>
                                     <td></td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">Google Live Transcription</th>
                                     <td>application Android, disponible en plus de 80 langues, mais 
                                         nécessitant une connexion Internet et un choix limité à une langue à la fois.</td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">Otter.ai</th>
                                     <td>outil intégré à Zoom, Google Meet et Teams, capable de produire résumés et notes (limité principalement à l'anglais).</td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">Fireflies.ai</th>
                                     <td>solution multilingue compatible avec la plupart des plateformes de visioconférence, 
                                         mais dont la précision varie selon le contexte sonore.</td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">AVA</th>
                                     <td>application collaborative qui identifie les locuteurs par code couleur pour faciliter les échanges de groupe.</td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">Youtube Subtitles</th>
                                     <td>génération automatique de sous-titres pour les vidéos, avec une précision variable selon accents et dialectes.</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div>
-                        <p>Ces technologies permettent aux personnes sourdes ou malentendantes de suivre un cours magistral, 
+                    <div class="pt-2 pb-4">
+                        <p class="my-4">
+                            Ces technologies permettent aux personnes sourdes ou malentendantes de suivre un cours magistral, 
                             d'assister à une réunion ou encore de regarder une vidéo sans le son. Elles favorisent une 
                             communication fluide avec les personnes entendantes, même dans des environnements bruyants.
                         </p>
                     </div>
                 </div>
-                <div>
-                    <h4>2. Traduction entre parole et langue des signes</h4>
-                    <div>
-                        <p>L'IA rend possible la traduction en temps réel entre la parole ou le texte et la langue des signes, 
+                <div id="categorie-2" class="container-fluid mx-auto mt-5" data-aos="zoom-in-up" data-aos-delay="400">
+                    <span class="alcim-veille text-uppercase fw-bolder">2. Traduction entre parole et langue des signes</span>
+                    <div class="pt-2 pb-4">
+                        <p class="my-4">
+                            L'IA rend possible la traduction en temps réel entre la parole ou le texte et la langue des signes, 
                             et inversement. Elle facilite ainsi la communication bidirectionnelle entre une personne 
                             sourde et une personne entendante, sans avoir recours à un interprète humain.
                         </p>
                     </div>
-                    <div>
-                        <p>Exemples d'outils</p>
-                        <table class="table table-dark table-striped text-white">
+                    <div class="pt-2 pb-4">
+                        <p class="fst-italic">Exemples d'outils :</p>
+                        <table class="table table-dark table-striped text-white fs-6 box-shadow-IA">
                             <thead>
-                                <tr>
+                                <tr class="align-middle fs-5">
                                     <th scope="col">Outil</th>
                                     <th scope="col">Description</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row"></th>
                                     <td></td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">SignAll</th>
-                                    <td>traduit l'ASL grâce à des caméras et capteurs de mouvement, utilisé 
+                                    <td>traduit l'ASL (American Sign Language) grâce à des caméras et capteurs de mouvement, utilisé 
                                         notamment dans l'éducation et les services publics.</td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">Hand Talk App</th>
-                                    <td>application proposant un avatar 3D traduisant en ASL et en langue des signes brésilienne.</td>
+                                    <td>application proposant un avatar 3D traduisant en ASL et en langue des signes brésilienne (Libras-LSB).</td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">KinTrans</th>
                                     <td>logiciel qui analyse les mouvements de la main et du visage pour les convertir en texte ou voix, 
                                         utilisé dans des hôpitaux et entreprises.</td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">CORDIUS (projet européen)</th>
                                     <td>Avatar 3D générant de la LSF à partir d'un texte, intégré sur smartphone et tablette.</td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">SignAvatar</th>
-                                    <td>projet en développement basé sur des corpus linguistiques, pour traduire texte et parole en LSF ou ASL..</td>
+                                    <td>projet en développement basé sur des corpus linguistiques, pour traduire texte et parole en LSB (Langue des Signes Serbe) en ASL ou en LSF ..</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div>
-                        <p>Ces solutions facilitent la communication dans les salles de classe ou les réunions, améliorent 
+                    <div class="pt-2 pb-4">
+                        <p class="my-4">
+                            Ces solutions facilitent la communication dans les salles de classe ou les réunions, améliorent 
                             l'accessibilité aux services publics comme les administrations ou les hôpitaux, et permettent 
                             la traduction en langue des signes de contenus web ou audiovisuels.
                         </p>
                     </div>
                 </div>
-                <div>
-                    <h4>3. Interfaces accessibles intelligentes</h4>
-                    <div>
-                        <p>L'IA améliore aussi les interfaces du quotidien pour les rendre accessibles sans recourir à l'audition. Cela permet 
+
+                <div id="categorie-3" class="container-fluid mx-auto mt-5" data-aos="zoom-in-up" data-aos-delay="400">
+                    <span class="alcim-veille text-uppercase fw-bolder">3. Interfaces accessibles intelligentes</span>
+                    <div class="pt-2 pb-4">
+                        <p class="my-4">
+                            L'IA améliore aussi les interfaces du quotidien pour les rendre accessibles sans recourir à l'audition. Cela permet 
                             aux personnes sourdes ou malentendantes d'interagir avec la technologie et de recevoir des alertes de manière adaptée
                         </p>
-                     
                     </div>
-                    <div>
-                        <p>Exemples d'outils</p>
-                        <table class="table table-dark table-striped text-white">
+                    <div class="pt-2 pb-4">
+                        <p class="fst-italic">Exemples d'outils :</p>
+                        <table class="table table-dark table-striped text-white fs-6 box-shadow-IA">
                             <thead>
-                                <tr>
+                                <tr class="align-middle fs-5">
                                     <th scope="col">Outil</th>
                                     <th scope="col">Description</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row"></th>
                                     <td></td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">Amazon Echo avec Alexa</th>
                                     <td>peut afficher les réponses sur un écran pour une interaction textuelle.</td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">TapSOS</th>
                                     <td>application permettant de contacter les services d'urgence via des messages texte préenregistrés.</td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">Notifications visuelles (Android/iOS)</th>
                                     <td>alertes par vibration ou lumière clignotante pour les appels, alarmes ou pleurs de bébé.</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div>
-                        <p>Ces technologies offrent la possibilité d'utiliser un assistant vocal par le biais d'interfaces 
+                    <div class="pt-2 pb-4">
+                        <p class="my-4">
+                            Ces technologies offrent la possibilité d'utiliser un assistant vocal par le biais d'interfaces 
                             textuelles, et garantissent la réception d'alertes visuelles ou tactiles pour des sons importants 
                             de l'environnement. Elles améliorent ainsi la sécurité et l'autonomie au quotidien.
                         </p>
                     </div>
                 </div>
-                <div>
-                    <h4>4. Reconnaissance sonore par IA</h4>
-                    <div>
-                        <p>L'intelligence artificielle permet aujourd'hui à un appareil (smartphone, enceinte connecté, montre ou assistant vocal) 
+
+                <div >
+                <div id="categorie-4" class="container-fluid mx-auto mt-5" data-aos="zoom-in-up" data-aos-delay="400">
+                    <span class="alcim-veille text-uppercase fw-bolder">4. Reconnaissance sonore par IA</span>
+                    <div class="pt-2 pb-4">
+                        <p class="my-4">
+                            L'intelligence artificielle permet aujourd'hui à un appareil (smartphone, enceinte connecté, montre ou assistant vocal) 
                            d'écouter l'environnement sonore et de prévenir l'utilisateur lorsqu'un son important est détecté.
                         </p>
-                        
                     </div>
-                    <div>
-                        <p>Exemples d'outils</p>
-                        <table class="table table-dark table-striped text-white">
+                    <div class="pt-2 pb-4">
+                        <p class="fst-italic">Exemples d'outils :</p>
+                        <table class="table table-dark table-striped text-white fs-6 box-shadow-IA"">
                             <thead>
-                                <tr>
+                                <tr class="align-middle fs-5">
                                     <th scope="col">Outil</th>
                                     <th scope="col">Description</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row"></th>
                                     <td></td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">Sonnettes intelligentes <br> (Ring, Nest Hello)</th>
                                     <td>notification visuelle lors d'une sonnerie.</td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">Détecteurs de fumée connectés<br> (Nest Protect, Bellman Visit)</th>
                                     <td>flash lumineux ou vibration en cas d'alarme.</td>
                                 </tr>
-                                <tr>
-                                    <th scope="row">Smartphones et montres <br>(Android Sound Notifications, Apple iOS)</th>
+                                <tr class="align-middle">
+                                    <th scope="row">Smartphones et montres <br>(Android Sound Notifications, Apple iOS, Reeflect)</th>
                                     <td>détection de sons comme alarmes, cris, pleurs ou sonnettes.</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div>
-                        <p>Ces technologies renforcent la sécurité à domicile, l'autonomie dans les déplacements et permettent 
+                    <div class="pt-2 pb-4">
+                        <p class="my-4">
+                            Ces technologies renforcent la sécurité à domicile, l'autonomie dans les déplacements et permettent 
                             une meilleure interaction avec l'environnement sonore. Toutefois, elles nécessitent souvent une écoute 
                             continue, ce qui peut affecter la batterie des appareils et générer des erreurs (par exemple, confondre 
-                            un cri avec une musique forte).</p>
+                            un cri avec une musique forte).
+                        </p>
                     </div>
                 </div>
-                <div>
-                    <h4>5. Accessibilité en éducation grâce à l'IA</h4>
-                    <div>
-                        <p>L'intelligence artificielle permet aujourd'hui d'adapter les cours, présentations, et contenus 
+                <div id="categorie-5" class="container-fluid mx-auto mt-5" data-aos="zoom-in-up" data-aos-delay="400">
+                    <span class="alcim-veille text-uppercase fw-bolder">5. Accessibilité en éducation grâce à l'IA</span>
+                    <div class="pt-2 pb-4">
+                        <p class="my-4">
+                            L'intelligence artificielle permet aujourd'hui d'adapter les cours, présentations, et contenus 
                             pédagogiques pour les rendre accessibles aux élèves ou étudiants sourds et malentendants.
                             Cela favorise une inclusion scolaire plus équitable, notamment dans les classes ordinaires.
                         </p>
                     </div>
-                    <div>
-                        <p>Exemples d'outils</p>
-                        <table class="table table-dark table-striped text-white">
+                    <div class="pt-2 pb-4">
+                        <p class="fst-italic">Exemples d'outils :</p>
+                        <table class="table table-dark table-striped text-white fs-6 box-shadow-IA">
                             <thead>
                                 <tr>
                                     <th scope="col">Outil</th>
@@ -342,284 +485,310 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr class="align-middle fs-5">
                                     <th scope="row"></th>
                                     <td></td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">Google Live Transcribe, Otter.ai </th>
                                     <td>transcription des cours en temps réel pour suivre les explications de l'enseignant.</td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">GnoSys </th>
                                     <td>service français de transcription directe adapté aux lycées et universités.</td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">Avatars signants <br> (SignAll, SignOn,HandTalk)</th>
                                     <td>traduction de contenus pédagogiques en langue des signes.</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div>
-                        <p>Ces outils permettent de suivre un cours magistral ou une visioconférence, d'accéder à des vidéos 
+                    <div class="pt-2 pb-4">
+                        <p class="my-4">
+                            Ces outils permettent de suivre un cours magistral ou une visioconférence, d'accéder à des vidéos 
                             éducatives sous-titrées ou traduites en LSF, et d'améliorer l'interaction entre enseignants 
-                            et étudiants dans les classes inclusives.</p>
+                            et étudiants dans les classes inclusives.
+                        </p>
                     </div>
                 </div>
-                <div>
-                    <h4>6. Avatars IA en langues des signes</h4>
-                    <div>
-                        <p>
+
+                <div id="categorie-6" class="container-fluid mx-auto mt-5" data-aos="zoom-in-up" data-aos-delay="400">
+                    <span class="alcim-veille text-uppercase fw-bolder">6. Avatars IA en langues des signes</span>
+                    <div class="pt-2 pb-4">
+                        <p class="my-4">
                             Les avatars numériques constituent une innovation prometteuse : 
                             ils traduisent du texte ou de la parole en LSF ou ASL sous forme d'animations 3D.
                         </p>
                     </div>
-                    <div>
-                        <p>Exemples d'outils</p>
-                        <table class="table table-dark table-striped text-white">
+                    <div class="pt-2 pb-4">
+                        <p class="fst-italic">Exemples d'outils :</p>
+                        <table class="table table-dark table-striped text-white fs-6 box-shadow-IA">
                             <thead>
-                                <tr>
+                                <tr class="align-middle fs-5">
                                     <th scope="col">Outil</th>
                                     <th scope="col">Description</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row"></th>
                                     <td></td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">Signly </th>
                                     <td> permet d'intégrer des vidéos en LSF dans des sites web.</td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">Meta AI </th>
                                     <td>projet de recherche sur un avatar 3D capable de signer en temps réel.</td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">eSignes (Elix.fr)</th>
                                     <td>dictionnaire en ligne avec projets d'avatars intégrés.</td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">IRIS </th>
                                     <td>premier assistant conversationnel en LSF développé en France.</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div>
-                        <p>Ces solutions rendent accessibles les sites web, les musées ou les transports, et facilitent les échanges dans les services publics. 
+                    <div class="pt-2 pb-4">
+                        <p class="my-4">
+                            Ces solutions rendent accessibles les sites web, les musées ou les transports, et facilitent les échanges dans les services publics. 
                             Elles représentent une étape importante vers une accessibilité universelle.
                         </p>
                     </div>
                 </div>
-                <div>
-                    <h4>7. Technologies expérimentales et innovantes</h4>
-                    <div>
-                        <p>Des projets en développement cherchent à repousser les limites de l'accessibilité grâce aux 
+                <div id="categorie-7" class="container-fluid mx-auto mt-5" data-aos="zoom-in-up" data-aos-delay="400">
+                    <span class="alcim-veille text-uppercase fw-bolder">7. Technologies expérimentales et innovantes</span>
+                    <div class="pt-2 pb-4">
+                        <p class="my-4">
+                            Des projets en développement cherchent à repousser les limites de l'accessibilité grâce aux 
                             technologies de pointe, souvent issues de laboratoires de recherche ou de startups.
                         </p>
                     </div>
-                    <div>
-                        <p>Exemples d'outils</p>
-                        <table class="table table-dark table-striped text-white">
+                    <div class="pt-2 pb-4">
+                        <p class="fst-italic">Exemples d'outils :</p>
+                        <table class="table table-dark table-striped text-white fs-6 box-shadow-IA">
                             <thead>
-                                <tr>
+                                <tr class="align-middle fs-5">
                                     <th scope="col">Outil</th>
                                     <th scope="col">Description</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row"></th>
                                     <td></td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">XRAI Glass </th>
                                     <td>lunettes de réalité augmentée affichant en direct des sous-titres dans le champ de vision.</td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">Gants de traduction (ex : BrightSign Glove)</th>
                                     <td>capteurs qui interprètent la langue des signes en texte ou voix.</td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">LipNet </th>
-                                    <td>IA de lecture labiale atteignant un taux de réussite de 93 %.</td>
+                                    <td>IA de lecture labiale atteignant un taux de réussite de 93 % (en 2017: 46,9% de réussite).</td>
                                 </tr>
-                                <tr>
+                                <tr class="align-middle">
                                     <th scope="row">Bijoux intelligents </th>
                                     <td>dispositifs connectés traduisant certains gestes en texte ou voix.</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div>
-                        <p>Ces technologies ouvrent la voie à une communication fluide dans les lieux publics, à une traduction 
+                    <div class="pt-2 pb-4">
+                        <p class="my-4">
+                            Ces technologies ouvrent la voie à une communication fluide dans les lieux publics, à une traduction 
                             instantanée des gestes et à une autonomie renforcée. Bien qu'encore expérimentales, elles 
-                            témoignent du potentiel immense de l'IA pour l'accessibilité auditive de demain.</p>
+                            témoignent du potentiel immense de l'IA pour l'accessibilité auditive de demain.
+                        </p>
                     </div>
                 </div>
             </section>
 
             <section class="container text-white py-5">
 
-                <div>
-                    <h3>Défis actuels</h3>
-                    <p>Malgré les avancées impressionnantes de l'intelligence artificielle dans le domaine de l'accessibilité 
-                        auditive, plusieurs obstacles freinent encore une adoption universelle. Ces défis concernent à la 
-                        fois la performance technologique, la diversité linguistique et les questions d'éthique:
-                    </p>
-                    <ul>
-                        <li><strong>Précision limitée :</strong> les outils de reconnaissance vocale ou de lecture labiale 
-                            restent sensibles au bruit de fond, aux accents, aux dialectes et aux expressions 
-                            faciales, ce qui réduit leur efficacité dans certaines situations.</li>
-                        <li><strong>Diversité linguistique :</strong> la majorité des projets d'IA en langue des signes sont 
-                            entraînés sur l'ASL (American Sign Language), laissant de côté la LSF (Langue des Signes Française) 
-                            et d'autres langues locales.</li>
-                        <li><strong>Accessibilité financière :</strong> certains dispositifs innovants (lunettes AR, gants 
-                            connectés, implants) coûtent cher et ne sont pas accessibles à l'ensemble des personnes concernées.</li>
-                        <li><strong>Éthique et vie privée :</strong> l'enregistrement permanent de conversations ou de sons 
-                            soulève des questions liées à la protection des données personnelles et à la surveillance.</li>
-                    </ul>
+                <div class="container-fluid row mt-3" data-aos="fade-up-left" data-aos-delay="300">
+                    <div class="col-md-10 mb-3 defis">
+                        <span class="alcim text-uppercase fw-bolder">Défis actuels</span>
+                        <div class="pb-4 row">
+                            <p class="my-4">
+                                Malgré les avancées impressionnantes de l'intelligence artificielle dans le domaine de l'accessibilité 
+                                auditive, plusieurs obstacles freinent encore une adoption universelle. Ces défis concernent à la 
+                                fois la performance technologique, la diversité linguistique et les questions d'éthique:
+                            </p>
+                            <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                <li>◈ <strong class="fst-italic text-decoration-underline">Précision limitée :</strong> les outils de reconnaissance vocale ou de lecture labiale 
+                                    restent sensibles au bruit de fond, aux accents, aux dialectes et aux expressions 
+                                    faciales, ce qui réduit leur efficacité dans certaines situations.</li>
+                                <li>◈ <strong class="fst-italic text-decoration-underline">Diversité linguistique :</strong> la majorité des projets d'IA en langue des signes sont 
+                                    entraînés sur l'ASL (American Sign Language), laissant de côté la LSF (Langue des Signes Française) 
+                                    et d'autres langues locales.</li>
+                                <li>◈ <strong class="fst-italic text-decoration-underline">Accessibilité financière :</strong> certains dispositifs innovants (lunettes AR, gants 
+                                    connectés, implants) coûtent cher et ne sont pas accessibles à l'ensemble des personnes concernées.</li>
+                                <li>◈ <strong class="fst-italic text-decoration-underline">Éthique et vie privée :</strong> l'enregistrement permanent de conversations ou de sons 
+                                    soulève des questions liées à la protection des données personnelles et à la surveillance.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
-                <div>
-                    <h3>Perspectives d'avenir</h3>
-                    <p>L'avenir des technologies d'accessibilité repose sur des solutions plus précises, inclusives et universelles. 
-                        L'intelligence artificielle, associée aux nouvelles interfaces numériques, ouvre la voie à 
-                        des innovations capables de transformer profondément le quotidien des personnes sourdes et malentendantes:
-                    </p>
-                    <ul>
-                        <li><strong>Avatars signants réalistes :</strong> intégration dans les services publics, sites web et 
-                            médias, avec un rendu plus naturel (expressions faciales, rythme et fluidité du signe).</li>
-                        <li><strong>Réalité augmentée :</strong> lunettes comme XRAI Glass ou TranscribeGlass, qui 
-                            affichent en temps réel la transcription ou la traduction des conversations.</li>
-                        <li><strong>Éducation inclusive :</strong> développement d'outils de transcription instantanée en français 
-                            (par ex. GnoSys) et d'avatars éducatifs capables de signer les cours et supports pédagogiques.</li>
-                        <li><strong>Multimodalité :</strong> combiner voix, texte, signes et expressions faciales 
-                            pour une communication plus fluide et naturelle.</li>
-                        <li><strong>Standardisation :</strong> adoption de normes internationales afin de rendre ces solutions 
-                            interopérables et accessibles partout.</li>
-                    </ul>
+                <div class="container-fluid row justify-content-end py-4 mt-2" data-aos="fade-up-right" data-aos-delay="400">
+                    <div class="col-md-10 mb-3 defis">
+                        <span class="alcim text-uppercase fw-bolder">Perspectives d'avenir</span>
+                        <div class="pb-4 row">
+                            <p class="my-4">
+                                L'avenir des technologies d'accessibilité repose sur des solutions plus précises, inclusives et universelles. 
+                                L'intelligence artificielle, associée aux nouvelles interfaces numériques, ouvre la voie à 
+                                des innovations capables de transformer profondément le quotidien des personnes sourdes et malentendantes:
+                            </p>
+                            <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                <li>◈ <strong class="fst-italic text-decoration-underline">Avatars signants réalistes :</strong> intégration dans les services publics, sites web et 
+                                    médias, avec un rendu plus naturel (expressions faciales, rythme et fluidité du signe).</li>
+                                <li>◈ <strong class="fst-italic text-decoration-underline">Réalité augmentée :</strong> lunettes comme XRAI Glass ou TranscribeGlass, qui 
+                                    affichent en temps réel la transcription ou la traduction des conversations.</li>
+                                <li>◈ <strong class="fst-italic text-decoration-underline">Éducation inclusive :</strong> développement d'outils de transcription instantanée en français 
+                                    (par ex. GnoSys) et d'avatars éducatifs capables de signer les cours et supports pédagogiques.</li>
+                                <li>◈ <strong class="fst-italic text-decoration-underline">Multimodalité :</strong> combiner voix, texte, signes et expressions faciales 
+                                    pour une communication plus fluide et naturelle.</li>
+                                <li>◈ <strong class="fst-italic text-decoration-underline">Standardisation :</strong> adoption de normes internationales afin de rendre ces solutions 
+                                    interopérables et accessibles partout.</li>
+                            </ul>
+                        </div>
+                    </div>  
                 </div>
 
-                <div>
-                    <h3>Accessibilité et inclusion</h3>
-                    <p>Au-delà des aspects techniques, l'intelligence artificielle doit contribuer à construire une société plus équitable. 
-                        L'accessibilité numérique et technologique ne se limite pas à compenser une déficience : 
-                        elle doit favoriser la pleine participation des personnes sourdes et malentendantes à la vie collective.
-                    </p>
-                    <ul>
-                        <li><strong>Autonomie :</strong> donner la possibilité aux personnes sourdes ou malentendantes de 
-                            participer à la vie sociale, scolaire et professionnelle sans intermédiaire.</li>
-                        <li><strong>Égalité d'accès à l'information :</strong> garantir que les contenus numériques, audiovisuels 
-                            et pédagogiques soient accessibles à tous, indépendamment de leur handicap auditif.</li>
-                        <li><strong>Participation citoyenne :</strong> faciliter l'accès aux services publics (administration, justice, hôpitaux) 
-                            grâce aux outils de traduction en LSF et aux solutions de transcription automatique.</li>
-                        <li><strong>Conception universelle :</strong> promouvoir des technologies conçues dès l'origine pour inclure les 
-                            personnes en situation de handicap auditif, et non comme une adaptation secondaire.</li>
-                    </ul>
+                <div class="container-fluid row py-4 mt-2" data-aos="fade-up-left" data-aos-delay="400">
+                    <div class="col-md-10 mb-3 defis">
+                        <span class="alcim text-uppercase fw-bolder">Accessibilité et inclusion</span>
+                        <div class="pb-4 row">
+                            <p class="my-4">
+                                Au-delà des aspects techniques, l'intelligence artificielle doit contribuer à construire une société plus équitable. 
+                                L'accessibilité numérique et technologique ne se limite pas à compenser une déficience,
+                                elle doit favoriser la pleine participation des personnes sourdes et malentendantes à la vie collective :
+                            </p>
+                            <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                <li>◈ <strong class="fst-italic text-decoration-underline">Autonomie :</strong> donner la possibilité aux personnes sourdes ou malentendantes de 
+                                    participer à la vie sociale, scolaire et professionnelle sans intermédiaire.</li>
+                                <li>◈ <strong class="fst-italic text-decoration-underline">Égalité d'accès à l'information :</strong> garantir que les contenus numériques, audiovisuels 
+                                    et pédagogiques soient accessibles à tous, indépendamment de leur handicap auditif.</li>
+                                <li>◈ <strong class="fst-italic text-decoration-underline">Participation citoyenne :</strong> faciliter l'accès aux services publics (administration, justice, hôpitaux) 
+                                    grâce aux outils de traduction en LSF et aux solutions de transcription automatique.</li>
+                                <li>◈ <strong class="fst-italic text-decoration-underline">Conception universelle :</strong> promouvoir des technologies conçues dès l'origine pour inclure les 
+                                    personnes en situation de handicap auditif, et non comme une adaptation secondaire.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
-
-
-                <div>
-                    <h3>Conclusion</h3>
-                    <p>L'intelligence artificielle transforme progressivement l'accessibilité pour les personnes sourdes et 
-                        malentendantes. Des outils de transcription vocale aux avatars en langue des signes, en passant par la 
-                        reconnaissance sonore ou la réalité augmentée, ces innovations ouvrent la voie à une société 
-                        plus inclusive et connectée.
-                    </p>
-                    <p>
-                        Toutefois, des défis majeurs subsistent : fiabilité technique, diversité linguistique, coût et respect 
-                        de la vie privée. L'avenir dépendra de la capacité à développer des technologies plus précises, 
-                        universelles et accessibles, capables de renforcer l'autonomie, de favoriser une éducation 
-                        véritablement inclusive et d'assurer une pleine participation sociale aux personnes concernées.
-                    </p>
-                    
+                <div class="container-fluid row justify-content-end py-4 mt-2" data-aos="fade-up-right" data-aos-delay="400">
+                    <div class="col-md-10 mb-3 defis">
+                        <span class="alcim text-uppercase fw-bolder">Conclusion</span>
+                        <div class="pb-4 row">
+                            <p class="mt-4 mb-2">L'intelligence artificielle transforme progressivement l'accessibilité pour les personnes sourdes et 
+                                malentendantes. Des outils de transcription vocale aux avatars en langue des signes, en passant par la 
+                                reconnaissance sonore ou la réalité augmentée, ces innovations ouvrent la voie à une société 
+                                plus inclusive et connectée.
+                            </p>
+                            <p class="my-2">
+                                Toutefois, des défis majeurs subsistent : fiabilité technique, diversité linguistique, coût et respect 
+                                de la vie privée. L'avenir dépendra de la capacité à développer des technologies plus précises, 
+                                universelles et accessibles, capables de renforcer l'autonomie, de favoriser une éducation 
+                                véritablement inclusive et d'assurer une pleine participation sociale aux personnes concernées.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
-                <div>
-                    <h3>Bibliographie</h3>
-                    <!-- atnezni!!!!! -->
-                     <ul>
-                        <li>INJS: "Nouvelles technologies et accessibilité pour les sourds et malentendants" [PDF]</li>
-                        <li>INJS: "4 technologies qui facilitent la vie des sourds et malentendants" [PDF]</li>
-                        <li>CORDIS - Commission européenne. Solutions d'IA pour les sourds et malentendants (Projet aiD - Résultats en bref H2020). [PDF].</li>
-                        <li>Sophie Drouvroy. « Dis Siri » et la surdité 2020 [en ligne] <a href="https://www.sophie-drouvroy.com/vis-ma-vie-de-sourde/dis-siri-et-la-surdite/">URL</a> [consulté le 20 mai 2025].</li>
-                        <li>Handitech Trophy. Reeflect - Révolution numérique pour les sourds et malentendants. [PDF].</li>
-                        <li>Université Bretagne Sud. Apprendre la langue des signes grâce à l'IA générative et aux avatars 3D. [PDF].</li>
-                        <li>Francosourd. KinTrans - Un logiciel qui traduit la Langue des Signes. [Blog/rapport].</li>
-                        <li>France Inter. Une intelligence artificielle permet aux personnes malentendantes d'échanger en langue des signes. [Article].</li>
-                        <li>IvèS, Sopra Steria, IBM. IRIS - Assistant conversationnel en LSF [Alerte-média] 25 avril 2024 [en ligne] <a href="https://fr.newsroom.ibm.com/IVeS,-Sopra-Steria-et-IBM-sassocient-pour-creer-le-premier-assistant-conversationnel-en-langue-des-signes-au-monde#:~:text=Paris%2C%20le%2025%20avril%202024,des%20sourds%20et%20des%20malentendants.">URL</a> [consulté le 23 mars 2025].</li>
-                        <li>ROGERET, C. "IA: une avancée fulgurante pour l'inclusion des sourds?" 13 mars 2025 [en ligne] <a href="https://informations.handicap.fr/a-ia-une-avancee-fulgurante-pour-l-inclusion-des-sourds-37841.php">URL</a> [consulté le 23 mars 2025].</li>
-                        </ul>
-                </div>
+                <div class="container-fluid row justify-content-end py-4 mt-2 references-liens" data-aos="fade-up-right" data-aos-delay="400">
+                    <div class="accordion accordion-flush bg-dark" id="accordionFlushReferences">
+                        <div class="accordion-item bg-dark">
+                            <h2 class="accordion-header">
+                                <span class="alcim text-uppercase fw-bolder accordion-button collapsed bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Bibliographie</span>
+                                <!-- sources éditoriales : articles de presse, billets signés, publications/rapports -->
+                            </h2>
 
-                <div>
-                    <h3>Sitographie</h3>
-                    <ul>
-                        <li>Google Live Transcribe. Google Play Store. <a href="https://play.google.com/store/apps/details?id=com.google.audio.hearing.visualization.accessibility.scribe">URL</a> [consulté en mars 2025].</li>
-                        <li>Google Live Transcribe (Wikipedia en anglais). <a href="https://en.wikipedia.org/wiki/Live_Transcribe">URL</a> [consulté en mars 2025].</li>
-                        <li>Otter.ai (en anglais) <a href="https://otter.ai/">URL</a> [consulté en mars 2025].</li>
-                        <li>Blog du Modérateur. Outils de transcription et productivité (Otter.ai, Fireflies.ai, Rask.ai). <a href="https://www.blogdumoderateur.com/tools/">URL</a> [consulté en mai 2025].</li>
-                        <li>Fireflies.ai. <a href="https://www.blogdumoderateur.com/tools/fireflies-ai/">URL</a>
- [consulté en mai 2025].</li>
-                        <li>Rask.ai. <a href="https://www.blogdumoderateur.com/tools/rask-ai/">URL</a>
- [consulté en mai 2025].</li>
-                        <li>YouTube Support. Sous-titres automatiques. <a href="https://support.google.com/youtube/answer/6373554?hl=fr">URL</a>
- [consulté en mai 2025].</li>
-                        <li>AVA. <a href="https://fr.ava.me">URL</a>
- [consulté en mai 2025].</li>
-                        <li>Ava – Notion. <a href="https://ava.notion.site/">URL</a>
- [consulté en mai 2025].</li>
-                        <li>SignAll. <a href="https://signall.world/">URL</a>
- [consulté en mai 2025].</li>
-                        <li>Signapse (AI Sign Language Translator). <a href="https://www.signapse.ai/">URL</a>
- [consulté en mai 2025].</li>
-                        <li>Hand Talk App. <a href="https://www.handtalk.me/en/app/">URL</a>
- [consulté en mai 2025].</li>
-                        <li>Google Project Relate. <a href="https://sites.research.google/relate/">URL</a>
- [consulté en mai 2025].</li>
-                        <li>KinTrans. <a href="https://www.francosourd.com/profiles/blogs/kintrans-un-logiciel-qui-traduit-la-langue-des-signes">URL</a>
- [consulté en mai 2025].</li>
-                        <li>CORDIS – AI solutions for the deaf and hard of hearing. <a href="https://cordis.europa.eu/article/id/450232-ai-solutions-for-the-deaf-and-hard-of-hearing/fr">URL</a>
- [consulté en mai 2025].</li>
-                        <li>Signly. <a href="https://signly.co/">URL</a>
- [consulté en mai 2025].</li>
-                        <li>SignAvatar. <a href="https://www.signavatar.org/">URL</a> 
- [consulté en mai 2025].</li>
-                        <li>Dico Elix (LSF). <a href="https://dico.elix-lsf.fr/">URL</a>
- [consulté en mai 2025].</li>
-                        <li>Android Accessibility. <a href="https://www.android.com/accessibility/">URL</a>
- [consulté en mai 2025].</li>
-                        <li>Google Accessibility Support. <a href="https://support.google.com/accessibility/android/answer/9350862">URL</a>
- [consulté en mai 2025].</li>
-                        <li>Ring Video Doorbell (Amazon). <a href="https://fr-fr.ring.com/">URL</a> 
- [consulté en mai 2025].</li>
-                        <li>Google Nest Doorbell. <a href="https://store.google.com/fr/product/nest_doorbell_battery">URL</a> 
- [consulté en mai 2025].</li>
-                        <li>Google Nest Protect. <a href="https://store.google.com/fr/product/nest_protect_2nd_gen">URL</a> 
- [consulté en mai 2025].</li>
-                        <li>Audition Confort – Bellman Visit Smoke Alarm. <a href="https://www.auditionconfort.com/fr/equipement-de-la-maison-pour-sourds-et-malentendants/154-detecteur-de-fume-emetteur-bellman-visit-868-be1481-7331646001483.html">URL</a>
- [consulté en mai 2025].</li>
-                        <li>XRAI Glass. <a href="https://xrai.glass/fr/">URL</a> 
- [consulté en mai 2025].</li>
-                        <li>XRAI Glass. <a href="https://xrai.glass/fr/">URL</a>
- [consulté en mai 2025].</li>
-                        <li>BrightSign Glove. <a href="https://www.brightsignglove.com/">URL</a> 
- [consulté en mai 2025].</li>
-                        <li>Actuia. LipNet – IA capable de lire sur les lèvres. <a href="https://www.actuia.com/actualite/lipnet-va-au-dela-des-logiciels-de-reconnaissance-vocale/">URL</a> 
- [consulté en mai 2025]</li>
-                        <li>Handicap-Job. Bijoux pour traduire la langue des signes. <a href="https://actu.handicap-job.com/2014/02/17/bijoux-pour-traduire-la-langue-des-signes/">URL</a>
- [consulté en mai 2025].</li>
-                        <li>HAL Science. Langue des signes et intelligence artificielle (moteur de recherche scientifique). <a href="https://hal.science/search/index?q=langue+des+signes+et+intelligence+artificielle">URL</a>
- [consulté en mai 2025].</li>
-                        <li>Francosourd. <a href="https://www.francosourd.com/">URL</a>
- [consulté en mai 2025].</li>
-                    </ul>
-                </div>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse bg-dark" data-bs-parent="#accordionFlushReferences">
+                                <div class="accordion-body text-white ">
+                                    <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                        <li>◈ DEFER, A.: "Les IA générativespeuvent-elles être utilesaux personnes sourdes etmalentendantes ?", <span class="fst-italic">Le Monde</span>, 31 juillet 2024. [en ligne] <a href="https://www.lemonde.fr/pixels/article/2024/07/31/les-ia-generatives-peuvent-elles-etre-utiles-aux-personnes-sourdes-et-malentendantes_6263205_4408996.html" target="_blank">URL</a>[consulté le 25 mars 2025].</li>
+                                        <li>◈ CHABLAOUI, M.: "L'IA au service des personnes sourdes et malentendantes", <span class="fst-italic">Ava Blog</span>, [en ligne] <a href="https://fr.ava.me/fr-blog/lia-au-service-des-personnes-sourdes-et-malentendantes" target="_blank">URL</a> [consulté le 23 mars 2025].</li>
+                                        <li>◈ INJS-Bordeaux: "Nouvelles technologies et accessibilité pour les sourds et malentendants", [en ligne] <a href="https://injs-bordeaux.org/nouvelles-technologies/" target="_blank">URL</a> [consulté le 23 mars 2025].</li>
+                                        <li>◈ CORDIS - Commission européenne: "Solutions d'IA pour les sourds et malentendants", <span class="fst-italic">Projet aiD - Résultats en bref H2020</span>, 29 mars 2024 [en ligne] <a href="https://cordis.europa.eu/article/id/450232-ai-solutions-for-the-deaf-and-hard-of-hearing/fr" target="_blank">URL</a>[consulté le 23 mars 2025].</li>
+                                        <li>◈ CORDIS - Commission européenne: "Le premier système de traduction automatique de la langue des signes", <span class="fst-italic">Projet SIGNALL - Résultats en bref H2020</span>, 29 Novembre 2019 [en ligne] <a href="https://cordis.europa.eu/article/id/411590-first-system-to-automatically-translate-sign-language/fr" target="_blank">URL</a> [consulté le 27 mars 2025].</li>
+                                        <li>◈ ZDNET: "Google lance deux applications pour aider les sourds et malentendants", 5 février 2019 [en ligne] <a href="https://www.zdnet.fr/actualites/google-lance-deux-applications-pour-aider-les-sourds-et-malentendants-39880191.htm" target="_blank">URL</a> [consulté le 23 mars 2025].</li>
+                                        <li>◈ High-tech: "4 technologies qui facilitent la vie des sourds et malentendants", 3 mars 2023 [en ligne] <a href="https://hitek.fr/actualite/4-technologies-facilitent-vie-handicapes-sourds-malentendants_40759" target="_blank">URL </a>[consulté le 27 mars 2025].</li>
+                                        <li>◈ PIERRET, B.: "LipNet, une intelligence artificielle capable de lire sur les lèvres avec 93% de réussite", 11 novembre 2016 [en ligne] <a href="https://www.rtl.fr/actu/sciences-tech/lipnet-une-intelligence-artificielle-qui-lit-sur-les-levres-mieux-que-les-humains-7785711732" target="_blank"> URL</a> [consulté le 23 mars 2025].</li>
+                                        <li>◈ BARLOT, S.: "Pour la première fois en France, l'IA au service de la langue des signes dans une école", <span class="fst-italic">France3</span>, 27 mars 2024 [en ligne] <a href="https://france3-regions.franceinfo.fr/auvergne-rhone-alpes/haute-loire/pour-la-premiere-fois-en-france-l-ia-au-service-de-la-langue-des-signes-dans-une-ecole-2945874.html" target="_blank">URL</a> [consulté le 23 mars 2025].</li>
+                                        <li>◈ Handitech Trophy: "Reeflect - Révolution numérique pour les sourds et malentendants", 23 janvier 2025 [en ligne] <a href="https://www.handitech-trophy.fr/reeflect-revolutionne-numerique-sourds-malentendants/" target="_blank">URL</a>[consulté le 24 mars 2025].</li>
+                                        <li>◈ GIBET, S.: "Apprendre la langue des signes grâce à l'IA générative et aux avatars 3D", 21 mars 2024 [en ligne] <a href="https://theconversation.com/apprendre-la-langue-des-signes-grace-a-lia-generative-et-aux-avatars-en-3d-225229" target="_blank">URL</a> [consulté le 23 mars 2025].</li>
+                                        <li>◈ DROUVROY, S.: "« Dis Siri » et la surdité", 2020 [en ligne] <a href="https://www.sophie-drouvroy.com/vis-ma-vie-de-sourde/dis-siri-et-la-surdite/" target="_blank">URL</a> [consulté le 20 mai 2025].</li>
+                                        <li>◈ Francosourd: "KinTrans - Un logiciel qui traduit la Langue des Signes", 26 janvier 2017 [en ligne] <a href="https://www.francosourd.com/profiles/blogs/kintrans-un-logiciel-qui-traduit-la-langue-des-signes" target="_blank">URL</a> [consulté le 15 mai 2025].</li>
+                                        <li>◈ IvèS, Sopra Steria, IBM: "IRIS - Assistant conversationnel en LSF"," 25 avril 2024 [en ligne] <a href="https://fr.newsroom.ibm.com/IVeS,-Sopra-Steria-et-IBM-sassocient-pour-creer-le-premier-assistant-conversationnel-en-langue-des-signes-au-monde#:~:text=Paris%2C%20le%2025%20avril%202024,des%20sourds%20et%20des%20malentendants." target="_blank">URL</a> [consulté le 26 mars 2025].</li>
+                                        <li>◈ ROGERET, C.: "IA: une avancée fulgurante pour l'inclusion des sourds ?", 13 mars 2025 [en ligne] <a href="https://informations.handicap.fr/a-ia-une-avancee-fulgurante-pour-l-inclusion-des-sourds-37841.php" target="_blank">URL</a> [consulté le 23 mars 2025].</li>
+                                        <li>◈ DIAZ, J.: "LipNet va au-delà des logiciels de reconnaissance vocale", 12 avril 2017 [en ligne] <a href="https://www.actuia.com/actualite/lipnet-va-au-dela-des-logiciels-de-reconnaissance-vocale/" target="_blank">URL</a> [consulté le 15 avril 2025].</li>
+                                        <li>◈ smarthealth.live: "Google Project Relate" (en anglais) [en ligne] <a href="https://smarthealth.live/fr/2021/11/15/project-relate-un-outil-de-communication-pour-les-personnes-souffrant-de-troubles-de-la-parole/" target="_blank">URL</a> [consulté le 25 septembre 2025].</li>
+                                        <li>◈ Céline, Handicap-Job.: "Bijoux pour traduire la langue des signes", 17 février 2014 [en ligne] <a href="https://actu.handicap-job.com/2014/02/17/bijoux-pour-traduire-la-langue-des-signes/" target="_blank">URL</a> [consulté le 22 mai 2025].</li>
+                                        <li>◈ Magazine Forbes Serbie: "SignAvatar" (en serbe), 29 septembre 2024 [en ligne] <a href="https://forbes.n1info.rs/biznis/srpski-startap-signavatar-koji-pomaze-gluvim-osobama-od-oktobra-krece-u-osvajanje-trzista-sad-video/" target="_blank">URL</a> [consulté le 26 septembre 2025].</li>
+                                        <li>◈ Blog du Modérateur: "Outils de transcription et productivité (Otter.ai, Fireflies.ai, Rask.ai)", [en ligne] <a href="https://www.blogdumoderateur.com/tools/" target="_blank">URL</a> [consulté en mai 2025].</li>
+                                        <li>◈ BELOT, L. & LAGADEC, A.: "Surdité : un gant traducteur qui transforme la langue des signes en voix", <span class="fst-italic">Le Monde</span>, 21 mars 2024 [en ligne] <a href="https://www.lemonde.fr/sciences/article/2024/03/21/un-gant-traducteur-qui-transforme-la-langue-des-signes-en-voix_6223197_1650684.html" target="_blank">URL</a> [consulté le 2 mai 2025]</li>
+                                        <li>◈ IBM: "IVèS relève le défi de l'accessibilité pour les sourds et les malentendants avec son signbot " [en ligne] <a href="https://www.ibm.com/fr-fr/case-studies/ives" target="_blank">URL</a> [consulté le 5 mai 2025]</li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <div class="accordion-item bg-dark mt-4">
+                            <h2 class="accordion-header">
+                                <span class="alcim text-uppercase fw-bolder accordion-button collapsed bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">Sitographie</span>
+                                <!-- pages d’outils, fiches produit, docs d’aide, Wikipédia, stores -->
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse bg-dark" data-bs-parent="#accordionFlushReferences">
+                                <div class="accordion-body text-white">
+                                    <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                        <li>◈ Google Glass (<span class="fst-italic">Wikipédia</span>) <a href="https://fr.wikipedia.org/wiki/Google_Glass" target="_blank">URL</a> [consulté en avril 2025]</li>
+                                        <li>◈ Google Live Transcribe (<span class="fst-italic">Google Play Store</span>). <a href="https://play.google.com/store/apps/details?id=com.google.audio.hearing.visualization.accessibility.scribe" target="_blank">URL</a> [consulté en mars 2025].</li>
+                                        <li>◈ Google Live Transcribe (<span class="fst-italic">Wikipedia</span> en anglais). <a href="https://en.wikipedia.org/wiki/Live_Transcribe" target="_blank">URL</a> [consulté en mars 2025].</li>
+                                        <li>◈ Google Accessibility Support. <a href="https://support.google.com/accessibility/android/answer/9350862" target="_blank">URL</a> [consulté en mars 2025].</li>
+                                        <li>◈ Otter.ai (site officiel, en anglais) <a href="https://otter.ai/" target="_blank">URL</a> [consulté en mars 2025].</li>
+                                        <li>◈ Fireflies.ai (site officiel) <a href="https://www.blogdumoderateur.com/tools/fireflies-ai/" target="_blank">URL</a> [consulté en mars 2025].</li>
+                                        <li>◈ Rask.ai. (site officiel) <a href="https://www.blogdumoderateur.com/tools/rask-ai/" target="_blank">URL</a> [consulté en mars 2025].</li>
+                                        <li>◈ YouTube Support - Sous-titres automatiques. <a href="https://support.google.com/youtube/answer/6373554?hl=fr" target="_blank">URL</a> [consulté en mars 2025].</li>
+                                        <li>◈ AVA (site officiel) <a href="https://fr.ava.me" target="_blank">URL</a> [consulté le 24 mars 2025].</li>
+                                        <li>◈ Ava - Notion (documentation, en anglais) <a href="https://ava.notion.site/" target="_blank">URL</a> [consulté le 24 mars 2025].</li>
+                                        <li>◈ Ivès (site de l'entreprise) <a href="https://ives.fr/index.php/nos-solutions/" target="_blank">URL</a> [consulté le 26 mars 2025].</li>
+                                        <li>◈ Signapse (AI Sign Language Translator) - site (en anglais) <a href="https://www.signapse.ai/" target="_blank">URL</a> [consulté le 13 avril 2025].</li>
+                                        <li>◈ Reeflect (site officiel) <a href="https://www.reeflect.fr/" target="_blank">URL</a> [consulté en mars 2025]</li>
+                                        <li>◈ Hand Talk App (site/ application, en anglais) <a href="https://www.handtalk.me/en/app/" target="_blank">URL</a> [consulté le 25 mars 2025].</li>
+                                        <li>◈ BrightSign Glove (site, en anglais) <a href="https://www.brightsignglove.com/" target="_blank">URL</a> [consulté le 14 avril 2025].</li>
+                                        <li>◈ Google Project Relate (site Google, en anglais) <a href="https://sites.research.google/relate/" target="_blank">URL</a> [consulté le 25 septembre 2025].</li>
+                                        <li>◈ Francosourd (site) <a href="https://www.francosourd.com/" target="_blank">URL</a> [consulté le 22 septembre 2025].</li>
+                                        <li>◈ Signly (site, en anglais) <a href="https://signly.co/" target="_blank">URL</a> [consulté le 22 septembre 2025].</li>
+                                        <li>◈ SignAvatar (site, en anglais) <a href="https://www.signavatar.org/" target="_blank">URL</a> [consulté le 27 mars 2025].</li>
+                                        <li>◈ Dico Elix (dictionnaire LSF) <a href="https://dico.elix-lsf.fr/" target="_blank">URL</a> [consulté le 17 avril 2025].</li>
+                                        <li>◈ Android Accessibility (site) <a href="https://www.android.com/accessibility/" target="_blank">URL</a> [consulté le 26 septembre 2025].</li>
+                                        <li>◈ Ring Video Doorbell (<span class="fst-italic">Amazon</span> - fiche produit) <a href="https://fr-fr.ring.com/" target="_blank">URL</a> [consulté le 27 mars 2025].</li>
+                                        <li>◈ Google Nest Doorbell (fiche produit) <a href="https://store.google.com/fr/product/nest_doorbell_battery" target="_blank">URL</a> [consulté le 27 mars 2025].</li>
+                                        <li>◈ Google Nest Protect (fiche produit) <a href="https://store.google.com/fr/product/nest_protect_2nd_gen" target="_blank">URL</a> [consulté le 27 mars 2025].</li>
+                                        <li>◈ Audition Confort - Bellman Visit Smoke Alarm (fiche produit) <a href="https://www.auditionconfort.com/fr/equipement-de-la-maison-pour-sourds-et-malentendants/154-detecteur-de-fume-emetteur-bellman-visit-868-be1481-7331646001483.html" target="_blank">URL</a> [consulté le 27 mars 2025].</li>
+                                        <li>◈ XRAI Glass (site, en anglais) <a href="https://xrai.glass" target="_blank">URL</a> [consulté le 14 avril 2025].</li>
+                                        
+                                        <li>◈ HAL Science - Langue des signes et intelligence artificielle (<span class="fst-italic">moteur de recherche scientifique</span>). <a href="https://hal.science/search/index?q=langue+des+signes+et+intelligence+artificielle" target="_blank">URL</a>
+                    [consulté en mai 2025].</li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
             </section>
             
         </main>
@@ -627,7 +796,9 @@
         <!-- script de AOS -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-        <!-- scripts -->
+        <!-- script de Link SwiperJS-->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="assets/js/carousel.js"></script>
         <script src="assets/js/portfolio.js"></script>
 
         <!-- script de Bootstrap -->

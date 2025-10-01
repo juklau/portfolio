@@ -10,7 +10,8 @@
     --CRM-color: rgb(123, 176, 98);
     --succes-color: rgb(23, 161, 23);
     --danger-color: rgb(185, 26, 26);
-   
+
+    --border-table:rgb(160, 160, 160);
     --gray-color: rgb(128, 128, 128);
     --dark-gray-color:rgb(72, 72, 72) ;
     --surface-color: #1b262c;
@@ -112,7 +113,7 @@
 }
 
 /*********************************************************************************************
-                                    Page accueil et formation
+                                    Page accueil (index) et formation
 **********************************************************************************************/
 #moi{
     max-width: 40%;
@@ -146,6 +147,7 @@
     transform: translateY(-150px);
     white-space: nowrap;
 }
+.categorie-container:hover .image-source,
 .image-container:hover .image-source {
     display: block;
 }
@@ -168,6 +170,11 @@
 .alcim {
     font-size: 1.6rem;
     margin-bottom: 2rem;
+    color: var(--main-color);
+}
+
+.alcim-veille{
+    font-size: 1.2rem;
     color: var(--main-color);
 }
 
@@ -249,7 +256,7 @@
 }
 
 /*********************************************************************************************
-                                Page projets -partie compétences
+                                Page projets -partie compétences // veille sourds
 **********************************************************************************************/
 .langage{
     color: var(--main-color) !important;
@@ -261,13 +268,24 @@
     border: 3px solid var(--white-opal-color);
     padding: 4px;
 }
-.outil-liste .outil-item{ /*projets et mini-crm  */
+.veille-image{ /*veille sourde */ 
+    max-width: 90%;
+    height: auto;
+    object-fit: contain;
+}
+#image-veille-gant{  /*veille sourde */ 
+    max-width: 75%
+}
+.outil-liste .outil-item, /*projets et mini-crm  */
+.categorie-liste .categorie-item{ /*veille sourde  */
     user-select: none;
     cursor: pointer;
 }
-.outil-liste .outil-item:active{
+.outil-liste .outil-item:active,
+.categorie-liste .categorie-item:active{ /*veille sourde  */
     cursor: grabbing;
 }
+.categorie-container .card, /*veille sourde */ 
 .IDE-container .card{
     width: 300px;
     max-width: 300px;
@@ -275,8 +293,14 @@
     background-color: transparent;
     border-color: var(--nav-hover-color) !important;
 }
+.categorie-container .card{ /*veille sourde */ 
+    height: 600px;
+}
 .card.language{
     height: 350px;
+}
+.categorie-container .card.language{ /*veille sourde */
+    height: 600px;
 }
 
 /*********************************************************************************************
@@ -513,22 +537,80 @@
                                         Page veille: IA et sourds
 **********************************************************************************************/
 
+.references a:hover,
+.defis .text-decoration-underline{
+    text-decoration-color: var(--main-color) !important;
+    text-decoration-thickness: 5px !important;
+}
 table {
     border-collapse: collapse;
-    border: 2px solid rgb(140 140 140);
-    font-family: sans-serif;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
+    border: var(--border-table);
+    /* letter-spacing: 1px; */
 }
 
-
+.table tbody tr:nth-of-type(even) > *{
+    color: var(--main-color) !important;
+}
 
 th,
 td {
-    border: 1px solid rgb(160 160 160);
+    border: 1px solid var(--border-table);
     padding: 8px 10px;
     text-align: center;
+    font-style: italic;
 }
+
+.box-shadow-IA{
+    box-shadow: 2px 2px 0px var(--main-color); 
+    -webkit-box-shadow: 2px 2px 0px var(--main-color); 
+    -moz-box-shadow: 2px 2px 0px var(--main-color); 
+}
+
+.references-liens ul li>a{
+    color: var(--white-color);
+    font-style: italic;
+}
+.references-liens ul li>a:hover{
+    color: var(--main-color);
+}
+
+/* Style quand l'accordéon est ouvert => mot reste jaune! */
+.accordion-button:not(.collapsed) {
+    color: var(--main-color) !important; 
+    background-color: transparent; /* Garder le fond sombre */
+    box-shadow: none; /* Supprimer l'effet de bordure Bootstrap */
+}
+
+/* Supprime la flèche par défaut */
+.accordion-button::after {
+    background-image: none !important;
+}
+
+/* Ajoute une flèche personnalisée en jaune */
+.accordion-button::after {
+    content: "⯈"; 
+    color: var(--main-color);
+    font-size: 1.2rem;
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Quand l'accordéon est ouvert => pivoter la flèche */
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(90deg);
+}
+
+/* pour lier le caroussel et les inscriptions */
+/* Défilement fluide des ancres */
+html { 
+    scroll-behavior: smooth; 
+}
+
+/* Marge sous la navbar quand on arrive sur une ancre #categorie-* */
+[id^="categorie-"] { 
+    scroll-margin-top: 180px; 
+}
+
 
 
 
