@@ -169,7 +169,7 @@
 **********************************************************************************************/
 .alcim {
     font-size: 1.6rem;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
     color: var(--main-color);
 }
 
@@ -306,7 +306,8 @@
 /*********************************************************************************************
                         Page projets -partie Réalisations Professionnelles
 **********************************************************************************************/
-#CRM{
+#CRM,
+#mediastock{
     width: 75%;
 }
 
@@ -381,16 +382,17 @@
 }
 
 /*********************************************************************************************
-                                     Page RP Mini-CRM, Chat
+                                     Page RP Mini-CRM, Chat, MediaStock
 **********************************************************************************************/
-#image-crm{
-    width: 250px;
+#image-crm,
+#image-mediastock{
+    width: 270px;
     height: auto;
     object-fit: contain;
 }
 .CRM-container .card{
-    width: 350px;
-    max-width: 350px;
+    width: 340px;
+    max-width: 340px;
     height: 600px;
     background-color: transparent;
     /* border-color: var(--CRM-color) !important; */
@@ -442,9 +444,10 @@
     border-radius: 10px;
 }
 .fst-italic.CRM,
-.fst-italic.Chat, /* page Chat */
+.fst-italic.Chat,   /* page Chat */
 .jours,
-.Chat{
+.Chat,              /* page Chat */ 
+.mediastock{        /* page MediaStock */
     color: var(--main-color) !important;
 }
 
