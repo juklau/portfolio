@@ -381,7 +381,7 @@
 }
 
 /*********************************************************************************************
-                                     Page RP Mini-CRM, 
+                                     Page RP Mini-CRM, Chat
 **********************************************************************************************/
 #image-crm{
     width: 250px;
@@ -412,8 +412,7 @@
 .Chat-container:hover .card-title{
     color: var(--main-color) !important;
 }
-.CRM-image,
-.Chat-image{ /*image à "zoomer"  */
+.CRM-image{ /*image à "zoomer"  */
     max-width: 100%;
     height: auto;
     cursor: zoom-in;
@@ -443,8 +442,9 @@
     border-radius: 10px;
 }
 .fst-italic.CRM,
-.fst-italic.Chat,
-.jours{
+.fst-italic.Chat, /* page Chat */
+.jours,
+.Chat{
     color: var(--main-color) !important;
 }
 

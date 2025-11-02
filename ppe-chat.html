@@ -85,14 +85,17 @@
                     <div class="container-fluid pt-2 pb-4 px-3 row">
                         <div class="col-md-8 mb-3">
                             <p class="mt-1">
-                                Dans le cadre du cours de SLAM (Solutions Logicielles et Applications Métiers), 
-                                le projet ClassCord Client a été conçu comme une application de chat en Java.
+                                Dans le cadre de la semaine intensive SLAM du BTS SIO, j'ai développé ClassCord 
+                                Client, une application de messagerie instantanée en Java destinée à fonctionner 
+                                en réseau local. Ce projet m'a permis de mobiliser mes compétences en programmation 
+                                orientée objet, communication réseau via sockets TCP, gestion de dépendances avec Maven, 
+                                et conception d'interfaces graphiques avec Swing.
                             </p>
                             <p>
-                                L'objectif était de mettre en pratique la programmation orientée objet, 
-                                la communication réseau via sockets TCP, la gestion de dépendances avec Maven, 
-                                et la conception d'interfaces graphiques avec Swing. Le projet a été mené 
-                                en plusieurs étapes, documentées jour après jour.
+                                L'objectif était de concevoir un client capable de se connecter à un serveur de tchat 
+                                (géré par les étudiants SISR), d'échanger des messages en temps réel, et d'offrir une 
+                                interface fluide, réactive et sécurisée. Le projet a été mené en autonomie, avec un 
+                                accompagnement pédagogique, et documenté étape par étape.
                             </p>
                         </div>
                     </div>
@@ -102,14 +105,16 @@
                     <div class="col-md-8 mt-5" data-aos="fade-up-right" data-aos-delay="700">
                         <span class="alcim text-uppercase fw-bolder">Besoin</span>
                         <p class="px-2 my-4">
-                            L'application devait permettre à un utilisateur de :
+                            L'application devait répondre aux besoins suivants :
                         </p>
                         <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mt-4">
-                            <li>◈ Se connecter à un serveur de chat via IP et port.</li>
-                            <li>◈ Choisir son mode d'accès (invité ou authentifié).</li>
-                            <li>◈ Communiquer en temps réel avec d'autres utilisateurs.</li>
-                            <li>◈ Envoyer des messages globaux visibles par tous ou des messages privés à un utilisateur ciblé.</li>
-                            <li>◈ Gérer et afficher dynamiquement la liste des utilisateurs connectés avec leur statut (en ligne, absent, invisible).</li>
+                            <li>◈ Connexion à un serveur distant via IP et port</li>
+                            <li>◈ Choix du mode d'accès : invité ou authentifié (login/mot de passe)</li>
+                            <li>◈ Communication en temps réel avec les autres utilisateurs</li>
+                            <li>◈ Envoi des messages globaux visibles par tous ou des messages privés à un utilisateur ciblé</li>
+                            <li>◈ Affichage dynamique de la liste des utilisateurs connectés avec leur statut (en ligne, absent, invisible)</li>
+                            <li>◈ Mise à jour en temps réel des statuts et des utilisateurs</li>
+                            <li>◈ Interface fluide et intuitive avec gestion des erreurs</li>
                         </ul>
                     </div>
                 </div>
@@ -117,13 +122,40 @@
                     <div class="col-md-11 mt-5" data-aos="fade-up-left" data-aos-delay="800">
                         <span class="alcim text-uppercase fw-bolder">Environnement technologique</span>
                         <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mt-4">
-                            <li>◈ Langage: Java 11+</li>
-                            <li>◈ IDE: VSCode et IntelliJ IDEA</li>
-                            <li>◈ Gestionnaire de dépendances: Maven</li>
-                            <li>◈ Bibliothèque externe: org.json (pour la manipulation des messages JSON)</li>
-                            <li>◈ Interface graphique: Java Swing</li>
-                            <li>◈ Architecture: Modèle MVC (séparation UI, contrôleur, modèle)</li>
-                            <li>◈ Gestion de version: Git/GitHub</li>
+                            <li class="Chat">◈ Langage: Java 11+</li>
+                            <span class="fst-italic fs-5 ms-4">
+                                Utilisé pour développer l'ensemble de l'application grâce à sa robustesse, 
+                                sa portabilité et sa prise en charge de la programmation orientée objet.
+                            </span>
+                            <li class="Chat">◈ IDE: VSCode et IntelliJ IDEA</li>
+                            <span class="fst-italic fs-5 ms-4">
+                                VSCode a été utilisé pour une configuration rapide et légère, tandis qu'IntelliJ 
+                                IDEA a facilité le débogage, la navigation dans le code et la gestion avancée du projet.
+                            </span>
+                            <li class="Chat">◈ Gestionnaire de dépendances: Maven</li>
+                            <span class="fst-italic fs-5 ms-4">
+                                Employé pour automatiser la gestion des bibliothèques externes, structurer le projet 
+                                et simplifier le processus de compilation.
+                            </span>
+                            <li class="Chat">◈ Bibliothèque externe: org.json</li>
+                            <span class="fst-italic fs-5 ms-4">
+                                Intégrée pour créer, envoyer et lire les messages au format JSON entre le client et le serveur via les sockets TCP.
+                            </span>
+                            <li class="Chat">◈ Interface graphique: Java Swing</li>
+                            <span class="fst-italic fs-5 ms-4">
+                                Utilisée pour concevoir une interface utilisateur interactive, fluide et personnalisée, 
+                                avec des composants comme les zones de texte, boutons et listes.
+                            </span>
+                            <li class="Chat">◈ Architecture: Modèle MVC</li>
+                            <span class="fst-italic fs-5 ms-4">
+                                Adoptée pour séparer clairement la logique métier, l'interface utilisateur et le contrôle des 
+                                interactions, ce qui améliore la lisibilité et la maintenabilité du code.
+                            </span>
+                            <li class="Chat">◈ Gestion de version: Git/GitHub</li>
+                            <span class="fst-italic fs-5 ms-4">
+                                Git a permis de suivre l'évolution du projet avec des commits réguliers, et 
+                                GitHub a servi de plateforme de partage et de documentation du code.
+                            </span>
                         </ul>
                     </div>
                 </div>
@@ -131,15 +163,26 @@
                     <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="900">
                         <span class="alcim text-uppercase fw-bolder">Réalisation</span>
                         <p class="px-2 my-4">
-                            Le développement s'est déroulé sur plusieurs jours:
+                            Le développement s'est déroulé sur cinq journées intensives :
                             <ul class="list-unstyled lh-lg">
-                                <li><strong class="text-decoration-underline jours fst-italic">Jour 1:</strong> Mise en place du projet Maven, création des classes de base 
-                                    (User, Message) et organisation en packages.</li>
-                                <li><strong class="text-decoration-underline mt-2 jours fst-italic">Jour 2:</strong> Connexion au serveur via socket TCP, envoi/réception de messages en mode invité.</li>
-                                <li><strong class="text-decoration-underline mt-2 jours fst-italic">Jour 3:</strong> Mise en place de l'authentification (inscription et connexion).</li>
-                                <li><strong class="text-decoration-underline mt-2 jours fst-italic">Jour 4:</strong> Ajout des messages privés et de la liste dynamique des utilisateurs connectés.</li>
-                                <li><strong class="text-decoration-underline mt-2 jours fst-italic">Jour 5:</strong> Gestion des statuts, finalisation graphique et corrections de bugs.</li>
-                                <li><strong class="text-decoration-underline mt-2 jours fst-italic">Jour EXTRA:</strong> Réorganisation complète en respect strict du modèle MVC (controllers, models, UI).</li>
+                                <li><strong class="text-decoration-underline jours fst-italic">
+                                    Jour 1:</strong> Initialisation du projet Maven, création des classes User et Message, structuration en packages MVC.
+                                </li>
+                                <li><strong class="text-decoration-underline mt-2 jours fst-italic">
+                                    Jour 2:</strong> Connexion au serveur via socket TCP, envoi/réception de messages en mode invité, affichage console et Swing.
+                                </li>
+                                <li><strong class="text-decoration-underline mt-2 jours fst-italic">
+                                    Jour 3:</strong> Authentification complète (inscription + connexion), gestion des identifiants, navigation fluide entre interfaces.
+                                </li>
+                                <li><strong class="text-decoration-underline mt-2 jours fst-italic">
+                                    Jour 4:</strong> Ajout des messages privés, affichage dynamique de la liste des utilisateurs connectés, différenciation visuelle des messages.
+                                </li>
+                                <li><strong class="text-decoration-underline mt-2 jours fst-italic">
+                                    Jour 5:</strong> Gestion des statuts (disponible, absent, invisible), amélioration graphique, tests croisés, finalisation du projet.
+                                </li>
+                                <li><strong class="text-decoration-underline mt-2 jours fst-italic">
+                                    Jour EXTRA:</strong> Réorganisation complète du code selon le modèle MVC (controllers, models, UI).
+                                </li>
                             </ul>
                         </p>
                     </div>
@@ -233,20 +276,31 @@
                     <div class="col-md-10 mt-5 justify-content-end" data-aos="fade-up-left" data-aos-delay="700">
                         <span class="alcim text-uppercase fw-bolder">Bilan</span>
                         <p class="mt-4 px-2">
-                            Ce projet m'a permis de renforcer mes compétences en <strong class="fst-italic">Java</strong>, en particulier dans la <strong class="fst-italic">programmation 
-                            orientée objet</strong> et la <strong class="fst-italic">gestion des sockets TCP</strong>. 
-                            La mise en place d'une <strong class="fst-italic">architecture MVC</strong> a amélioré la structure et la maintenabilité du code. 
-                            L'utilisation de <strong class="fst-italic">Swing</strong> pour l'interface graphique a été un défi, mais a abouti à une application 
-                            fonctionnelle et ergonomique.
+                            Ce projet m'a permis de renforcer mes compétences en <strong class="fst-italic">Java</strong>, en particulier dans 
+                            la <strong class="fst-italic">programmation orientée objet</strong> et la <strong class="fst-italic">gestion des 
+                            communications réseau via sockets TCP</strong>. 
+                            En structurant l'application selon le <strong class="fst-italic">modèle MVC</strong>, j'ai pu améliorer la clarté, 
+                            la modularité et la maintenabilité du code. 
+                            La conception d'une interface graphique avec <strong class="fst-italic">Swing</strong>, bien que complexe, m'a offert l'opportunité 
+                            de créer une expérience utilisateur fluide et intuitive.
                             La gestion des utilisateurs et des messages en temps réel a également été une expérience précieuse, tant sur le plan technique
                             que méthodologique.
                         </p>
-                        <p class="px-2">
-                            Globalement, ce projet a été une excellente opportunité d'appliquer mes connaissances théoriques 
-                            à un cas pratique, tout en développant de nouvelles compétences.
-                            Il reste à tester l'application en conditions réelles avec un serveur opérationnel et plusieurs clients connectés 
-                            simultanément.
-                        </p>
+                    </div>
+                    <div class="container-fluid row justify-content-center">
+                        <div class="col-md-10" data-aos="fade-up-left" data-aos-delay="700">
+                            <p class="px-2">
+                                J'ai également appris à gérer les échanges réseau en temps réel entre plusieurs clients, tout en assurant une bonne 
+                                distinction entre les messages globaux et privés. 
+                                Chaque étape du développement a été soigneusement documentée, que ce soit dans le README, 
+                                les commentaires du code ou les captures d'écran illustrant les interfaces.
+                            </p>
+                            <p class="px-2">
+                                Au final, cette réalisation m'a offert une expérience complète, mêlant conception, développement, tests et documentation.
+                                Il reste à tester l'application en conditions réelles, avec plusieurs clients connectés simultanément à un serveur 
+                                opérationnel, pour valider pleinement sa robustesse et son interopérabilité.
+                            </p>
+                        </div>
                     </div>
                 </div>
                 
@@ -257,7 +311,7 @@
                             <li class="lien-intern">◈ Le code source de l'application disponible sur GitHub <a class="text-white" href="https://github.com/juklau/classcord-client2.git" target="_blank"><strong class="fw-medium fst-italic">en cliquant sur ce lien</strong></a>.</li>
                             <li class="lien-intern">◈ Une documentation technique détaillée <a class="text-white" href="https://github.com/juklau/classcord-client2/blob/main/README.md" target="_blank"><strong class="fw-medium fst-italic">(README.md)</strong></a> disponible sur GitHub.</li>                    
                             <li>◈ Des commentaires intégrés dans le code pour faciliter la compréhension.</li>
-                            <li>◈ Des interfaces Swing illustrées (connexion, chat, login, statuts).</li>                 
+                            <li>◈ Des interfaces Swing illustrées (connexion, chat, login, statuts, choix du mode).</li>                 
                         </ul>
                     </div>
                 </div>
@@ -267,10 +321,11 @@
                     <div class="col-md-10" data-aos="fade-up-right" data-aos-delay="900">
                         <span class="alcim text-uppercase fw-bolder">Perspectives</span>
                         <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5 mt-4">
-                            <li>◈ Améliorer l'expérience utilisateur avec des notifications sonores/visuelles.</li>
+                            <li>◈ Ajouter des notifications sonores et visuelles pour les nouveaux messages.</li>
                             <li>◈ Développer une version JavaFX plus moderne et réactive.</li>                
                             <li>◈ Étendre la compatibilité multi-clients pour une utilisation à plus grande échelle.</li>
-                            <li>◈ Ajouter la persistance des conversations, l'historique du chat.</li>                 
+                            <li>◈ Intégrer une persistance des conversations (historique local ou base de données).</li>
+                            <li>◈ Ajouter des rôles utilisateurs (admin, modérateur) pour enrichir les fonctionnalités.</li>               
                         </ul>
                     </div>
                 </div>

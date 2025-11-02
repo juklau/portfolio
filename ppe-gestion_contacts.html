@@ -88,8 +88,17 @@
                     <div class="container-fluid py-3 px-3 row">
                         <div class="col-md-8 my-3">
                             <p class="mt-3">
-                                 Ce projet a été réalisé dans le cadre de ma formation. Il s'agit de concevoir une application web 
-                                 permettant de gérer facilement les contacts professionnels (clients, prospects, partenaires).
+                                Le projet Mini-CRM a été développé dans le cadre de ma formation en BTS SIO, 
+                                option SLAM (Solutions Logicielles et Applications Métiers). 
+                                L'objectif était de concevoir une application web de gestion de contacts 
+                                professionnels adaptée aux besoins d'un freelance ou d'une petite structure. 
+                                Réalisée en autonomie à partir d'un cahier des charges fictif, cette solution 
+                                repose sur une architecture 100 % front-end utilisant HTML, CSS et JavaScript.
+                                L'application peut être installée sur un seul ordinateur pour un usage 
+                                individuel, car le système d'authentification n'est pas encore finalisé. 
+                                Ce projet m'a permis de mettre en œuvre mes compétences en conception 
+                                d'interface, développement web et intégration d'API REST, tout en suivant 
+                                une démarche professionnelle inspirée du modèle de développement logiciel.
                             </p>
                         </div>
                         <div class="col-md-3 my-auto mx-lg-auto">
@@ -101,32 +110,59 @@
                     <div class="col-md-8 mt-5" data-aos="fade-up-right" data-aos-delay="700">
                         <span class="alcim text-uppercase fw-bolder">Besoin</span>
                         <p class="px-2 my-4">
-                            L'objectif est de simplifier la gestion des contacts via une interface claire et des fonctionnalités 
-                            essentielles : ajout, modification, suppression, recherche, favoris, classement, etc.
+                            Le besoin exprimé est celui d'un outil simple, intuitif et accessible permettant 
+                            à un utilisateur unique de centraliser la gestion de ses contacts. De nombreux 
+                            indépendants n'ont pas les moyens ou le besoin d'utiliser un CRM complexe; 
+                            Mini-CRM répond donc à cette problématique en proposant une interface claire 
+                            regroupant les fonctionnalités essentielles : ajout, modification, suppression, 
+                            recherche multicritère, classement alphabétique et mise en favoris. L'objectif 
+                            est de simplifier le suivi client (relances, statuts, notes) tout en offrant une 
+                            solution légère, locale et personnalisable qui ne nécessite ni installation 
+                            complexe ni base de données lourde.
                         </p>
                     </div>
                 </div>
                 <div class="container-fluid row py-4 mt-2 justify-content-center" >
                     <div class="col-md-11 mt-5" data-aos="fade-up-left" data-aos-delay="800">
                         <span class="alcim text-uppercase fw-bolder">Environnement technologique</span>
+                        <p class="mt-4">Le projet s'appuie sur un environnement moderne et modulable, combinant plusieurs outils complémentaires:</p>
                         <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mt-4">
-                            <li>◈ HTML5 / CSS3 / JavaScript</li>
-                            <li>◈ Bootstrap pour le responsive design</li>
-                            <li>◈ API Airtable (base de données)</li>
-                            <li>◈ API Cloudinary (hébergement d'images)</li>
-                            <li>◈ Postman pour tester les requêtes</li>
-                            <li>◈ Font Awesome pour les icônes</li>
-                            <li>◈ Assistance IA pour le code et la documentation</li>
+                            <li>◈ HTML5 / CSS3 / JavaScript - Langages de base pour la structure, le style et la logique applicative.</li>
+                            <li>◈ Bootstrap - Pour la mise en page responsive et le design adaptatif.</li>
+                            <li>◈ API Airtable - Pour la gestion et le stockage distant des données de contact.</li>
+                            <li>◈ API Cloudinary - Pour l'hébergement et la gestion des images de profil</li>
+                            <li>◈ Postman - Pour tester et valider les requêtes HTTP (GET, POST, PATCH, DELETE).</li>
+                            <li>◈ Font Awesome - Pour les icônes de navigation et d'interaction.</li>
+                            <li>◈ Assistance IA - Pour l'aide à la rédaction de documentation et à l'optimisation du code.</li>
+                            <li>◈ GitHub - Pour la gestion de version et l'hébergement du code source.</li>
                         </ul>
+                        <p>Ces technologies m'ont permis de créer une application fonctionnelle, responsive et maintenable, 
+                            en respectant les bonnes pratiques du développement web</p>
                     </div>
                 </div>
                 <div class="container-fluid row justify-content-end py-4 px-3">
                     <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="900">
                         <span class="alcim text-uppercase fw-bolder">Réalisation</span>
-                        <p class="px-2 my-4">
-                            L'application est composée de plusieurs pages (accueil, ajout, recherche, contact...) et repose sur une 
-                            architecture modulaire JS. 
-                            Elle interagit avec Airtable via des appels API sécurisés pour lire, ajouter ou modifier les données.
+                        <p class="px-2 mt-4 mb-2">
+                           L'application est composée de plusieurs pages principales : Accueil, Ajout de contact, Recherche, À propos et Contact.
+                        </p>
+                        <p class="px-2">
+                            La structure repose sur une architecture JavaScript modulaire, facilitant la maintenance et 
+                            l'évolution du code. Les interactions avec la base Airtable se font via des appels API sécurisés :
+                        </p>
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mt-2">
+                            <li>◈ GET pour l'affichage dynamique des contacts;</li>
+                            <li>◈ POST pour l'ajout;</li>
+                            <li>◈ PATCH pour la modification;</li>
+                            <li>◈ DELETE pour la suppression.</li>
+                        </ul>
+                        <p class="px-2">
+                            Une partie du projet a également été pensée pour le déploiement local (SISR), avec la possibilité 
+                            d'héberger l'application sur un serveur Apache ou Nginx et de la rendre accessible via une 
+                            adresse IP interne.
+                            <br>
+                            La maquette Figma a servi de référence pour la conception visuelle : elle présente une interface 
+                            cohérente, ergonomique et responsive.
                         </p>
                     </div>
                 </div>
@@ -253,12 +289,12 @@
          
             <section class="container">
                 <div class="container-fluid row pt-4 mt-5" >
-                    <div class="col-md-8 mt-5 justify-content-end" data-aos="fade-up-left" data-aos-delay="700">
+                    <div class="col-md-8 mt-5" data-aos="fade-up-left" data-aos-delay="700">
                         <span class="alcim text-uppercase fw-bolder">Bilan</span>
                         <p class="mt-4 px-2">
-                            Ce projet a été particulièrement enrichissant, car il m'a permis de consolider mes compétences en 
-                            développement front-end (HTML, CSS, JavaScript) ainsi qu'en interaction avec des APIs tierces comme 
-                            Airtable et Cloudinary.
+                            Ce projet a été particulièrement formateur. Il m'a permis de consolider mes compétences en 
+                            développement front-end (HTML, CSS, JavaScript), en gestion d'API (Airtable, Cloudinary) 
+                            et en architecture modulaire.
                         </p>
                     </div>
                 </div>
@@ -267,14 +303,23 @@
                         <p>
                             Initialement mené en binôme — avec une répartition des tâches entre le développement (SLAM) et la 
                             configuration de l'environnement serveur local (SISR) — j'ai finalement poursuivi et finalisé seule 
-                            l'ensemble du projet, suite au départ de mon binôme.
-                            La prochaine étape consistera à implémenter un véritable système d'authentification utilisateur 
-                            afin de renforcer la sécurité et la personnalisation de l'application.                    
+                            l'ensemble du projet, suite au départ de mon binôme.                 
+                        </p>
+                    </div>
+                </div>
+                <div class="container-fluid row justify-content-end">
+                    <div class="col-md-10" data-aos="fade-up-left" data-aos-delay="700">
+                        <p>
+                            Cette expérience m'a aussi appris à travailler en autonomie, à documenter efficacement mon 
+                            code et à tester mes fonctionnalités à l'aide d'outils comme Postman.                   
+                        </p>
+                        <p> Les prochaines évolutions envisagées concernent la mise en place d'un système d'authentification complet
+                            et la gestion multi-utilisateurs.
                         </p>
                     </div>
                 </div>
                 <div class="container-fluid mt-4 py-4 px-3 row justify-content-end">
-                    <div class="col-md-10" data-aos="fade-up-right" data-aos-delay="800">
+                    <div class="col-md-8" data-aos="fade-up-right" data-aos-delay="800">
                         <span class="alcim text-uppercase fw-bolder">Productions associées</span>
                         <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5 mt-4">
                             <li class="lien-intern">◈ Le code source de l'application disponible sur GitHub <a class="text-white" href="https://github.com/juklau/Mini_CRM/tree/master" target="_blank"><strong class="fw-medium fst-italic">en cliquant sur ce lien</strong></a></li>
