@@ -41,9 +41,10 @@
                                     <a class="nav-link dropdown-toggle text-white" href="projets.html" role="button" aria-expanded="false"> Projets</a>
                                     <ul class="dropdown-menu border-0 ">
                                         <li><a class="dropdown-item text-white" href="projets.html">Compétences</a></li>
-                                        <li><a class="dropdown-item text-white" href="ppe-gestion_contacts.html">Application de gestion des contacts</a></li>
-                                        <li><a class="dropdown-item text-white" href="ppe-chat.html">Application CHAT</a></li>
+                                        <li><a class="dropdown-item text-white" href="ppe-gestion_contacts.html">Mini-CRM</a></li>
+                                        <li><a class="dropdown-item text-white" href="ppe-chat.html">ClassCord Client</a></li>
                                         <li><a class="dropdown-item text-white" href="ppe-mediastock.html">MediaStock</a></li>
+                                        <li><a class="dropdown-item text-white" href="stage1.html">LinkStream (stage 2025)</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -106,7 +107,7 @@
                 </div>
                 <div class="container-fluid row justify-content-end py-4 px-3 mt-2">
                     <div class="col-md-8 mt-5" data-aos="fade-up-right" data-aos-delay="700">
-                        <span class="alcim text-uppercase fw-bolder">Besoin</span>
+                        <span class="alcim text-uppercase fw-bolder">Besoins</span>
                         <p class=" mt-4 mb-1">
                             L'objectif principal du projet est de simplifier et automatiser la gestion des prêts 
                             et retours de matériel au sein de l'école.
@@ -214,9 +215,120 @@
                 </p>
                 <!-- à remplir quand l'application va être finalisé avec des photos!!!!!!! -->
 
-             </section>
+            </section>
 
 
+            <section class="container">
+                <div class=" row pt-4 mt-5 text-white" >
+                    <div class="col-md-10 mt-5 justify-content-end" data-aos="fade-up-left" data-aos-delay="700">
+                        <span class="alcim text-uppercase fw-bolder">Bilan</span>
+                        <p class="mt-4">
+                            Le projet MediaStock a permis de concevoir une application web mobile-first dédiée à la gestion des 
+                            prêts de matériel dans un établissement scolaire. 
+                            <br>
+                            Partant d'un système entièrement manuel basé sur des fiches papier, le projet a introduit une solution numérique complète, sécurisée et ergonomique, 
+                            capable de gérer l'inventaire, les prêts, les restitutions, et les retards.
+                        </p>
+                    </div>
+                    <div class=" row justify-content-center">
+                        <div class="col-md-10" data-aos="fade-up-left" data-aos-delay="700">
+                            <!-- px-2 -->
+                            <p class="">
+                                Grâce à une architecture trois-tiers (frontend, backend, base de données), conteneurisée avec Docker, 
+                                et à une approche itérative du développement, chaque fonctionnalité a été pensée pour répondre 
+                                aux besoins réels de l'équipe administrative. 
+                                <br>
+                                Le système de QR codes intégré a considérablement 
+                                simplifié les opérations terrain, tout en garantissant une traçabilité complète.
+                            </p>
+                        </div>
+                    </div>
+                    <div class=" row justify-content-center">
+                        <div class="col-md-8" data-aos="fade-up-left" data-aos-delay="700">
+                            <!-- px-2 -->
+                            <p class="">
+                                Ce projet m'a permis de mobiliser mes compétences en conception d'architecture, développement 
+                                PHP/MySQL, sécurité web, gestion de projet agile, et prototypage d'interface avec Figma. 
+                                Il représente une solution robuste, évolutive et directement exploitable en contexte réel.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" mt-4 py-4 row justify-content-end">
+                    <div class="col-md-10" data-aos="fade-up-right" data-aos-delay="800">
+                        <span class="alcim text-uppercase fw-bolder">Productions associées</span>
+                        <p class="mt-4">
+                            Les livrables du projet comprennent plusieurs ensembles cohérents :
+                        </p>
+
+                        <p class="mt-4 fst-italic mediastock text-decoration-underline">Documentation technique et fonctionnelle</p>
+                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                            <li>◈ Cahier des charges complet décrivant les objectifs, les besoins fonctionnels et techniques.</li>
+                            <li>◈ Maquettes Figma des interfaces mobile, tablette et desktop.</li>
+                            <li>◈ Schémas MCD et MLD de la base de données (présentés dans les annexes du cahier des charges, page 19).</li>  
+                        </ul>
+
+                        <p class="mt-4 fst-italic mediastock text-decoration-underline">Code source et environnement</p>
+                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                            <li>◈ Application développée en PHP/ MySQL/ HTML/ CSS/ JavaScript/ Bootstrap 5.</li>
+                            <li>◈ Déploiement conteneurisé avec Docker Compose (fichiers docker-compose.yml, Dockerfile, .env).</li>
+                            <li>◈ Système d'authentification et gestion des QR codes via bibliothèques PHP et JS.</li>
+                            <li class="lien-intern">◈ Le code source de l'application disponible sur GitHub 
+                                <a class="text-white" href="https://github.com/juklau/MediaStock.git" target="_blank"><strong class="fw-medium fst-italic">en cliquant sur ce lien</strong></a>.</li>
+                        </ul>
+
+                        <p class="mt-4 fst-italic mediastock text-decoration-underline">Outils de gestion et tests</p>
+                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                            <li>◈ Diagrammes de Gantt et Kanban (page 21 du cahier des charges) pour le suivi du développement.</li>
+                            <li>◈ Plan de tests détaillant les scénarios d'authentification, de prêt/restitution et de sécurité 
+                                (page 12 du cahier des charges).</li>
+                            <li>◈ Documentation utilisateur et guides de déploiement remis à l'établissement.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="container">
+                <div class="mt-4 py-4  row">
+                    <div class="col-md-10" data-aos="fade-up-right" data-aos-delay="900">
+                        <span class="alcim text-uppercase fw-bolder">Perspectives</span>
+                        <p class="mt-4">
+                            Plusieurs pistes d'amélioration ont été identifiées pour une version ultérieure de l'application :
+                        </p>
+
+                        <p class="mt-4 fst-italic mediastock text-decoration-underline">Évolutions fonctionnelles</p>
+                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                            <li>◈ Ajout d'un module statistique pour visualiser le taux d'utilisation du matériel
+                                 et la durée moyenne des prêts.
+                            </li>
+                            <li>◈ Intégration d'une gestion multi-comptes avec journal d'audit pour tracer les actions des administrateurs.</li>
+                            <li>◈ Création d'un mode inventaire permettant de comparer le stock physique et 
+                                théorique par scan successif des QR codes.
+                            </li>  
+                        </ul>
+
+                        <p class="mt-4 fst-italic mediastock text-decoration-underline">Améliorations techniques</p>
+                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                            <li>◈ Migration progressive vers un framework PHP moderne (Laravel) ou JavaScript 
+                                (React/Node.js) pour une meilleure extensibilité.
+                            </li>
+                            <li>◈ Mise en place d'un hébergement cloud sécurisé (AWS, Azure ou GCP).</li>
+                            <li>◈ Intégration d'API externes pour la synchronisation avec la base de données de l'établissement.</li>
+                            <!-- p.ex. savoir si un étudiant est autorisé à emprunter ou le archiver automatiquement s'il a quitté l'école -->
+                        </ul>
+                        
+                        <p class="mt-4 fst-italic mediastock text-decoration-underline">Pérennisation du projet</p>
+                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                            <li>◈ Documentation continue et formation des utilisateurs internes.</li>
+                            <li>◈ Automatisation de la sauvegarde et de la supervision (monitoring système, alertes de panne).</li>
+                            <li>◈ Ouverture potentielle du projet en open-source éducatif pour favoriser la 
+                                collaboration entre établissements.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
 
 
@@ -227,7 +339,7 @@
                 </div>
                 <div class="container-fluid box-shadow-left">
                     <div data-aos="fade-left" data-aos-delay="800">
-                        <p class="mt-3 fst-italic CRM">1. Gérer le patrimoine informatique</p>
+                        <p class="mt-3 fst-italic MediaStock">1. Gérer le patrimoine informatique</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li>1.1. Recenser et identifier les ressources numériques</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">Dans le cadre du projet MédiaStock, j'ai recensé et configuré l'ensemble 
@@ -247,7 +359,7 @@
                         </ul>
                     </div>
                     <div data-aos="fade-left" data-aos-delay="850">
-                        <p class="fst-italic CRM">2. Répondre aux incidents et aux demandes d'assistance et d'évolution</p>
+                        <p class="fst-italic MediaStock">2. Répondre aux incidents et aux demandes d'assistance et d'évolution</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li>2.3. Traiter des demandes concernant les applications</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai assuré la maintenance corrective et évolutive de l'application en 
@@ -256,7 +368,7 @@
                         </ul>
                     </div>
                     <div data-aos="fade-left" data-aos-delay="900">
-                        <p class="fst-italic CRM">3. Développer la présence en ligne de l'organisation</p>
+                        <p class="fst-italic MediaStock">3. Développer la présence en ligne de l'organisation</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li>3.3. Participer à l'évolution d'un site Web exploitant les données de l'organisation</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">J'ai participé au développement et à l'évolution d'une 
@@ -265,7 +377,7 @@
                         </ul>
                     </div>
                     <div data-aos="fade-left" data-aos-delay="950">
-                        <p class="fst-italic CRM">4. Travailler en mode projet</p>
+                        <p class="fst-italic MediaStock">4. Travailler en mode projet</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li> 4.1. Analyser les objectifs et les modalités d'organisation d'un projet</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">J'ai analysé le cahier des charges pour identifier les objectifs, 
@@ -281,7 +393,7 @@
                         </ul>
                     </div>
                     <div data-aos="fade-left" data-aos-delay="1000">
-                        <p class="fst-italic CRM">5. Mettre à disposition des utilisateurs un service informatique</p>
+                        <p class="fst-italic MediaStock">5. Mettre à disposition des utilisateurs un service informatique</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li>5.1. Réaliser les tests d'intégration et d'acceptation d'un service</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">J'ai réalisé des tests d'intégration pour vérifier la 
@@ -296,7 +408,7 @@
                         </ul>
                     </div>
                     <div data-aos="fade-left" data-aos-delay="1150">
-                        <p class="fst-italic CRM">6. Organiser son développement professionnel</p>
+                        <p class="fst-italic MediaStock">6. Organiser son développement professionnel</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li>6.1. Mettre en place son environnement d'apprentissage personnel</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">J'ai configuré un environnement d'apprentissage complet (VS Code, Docker, 

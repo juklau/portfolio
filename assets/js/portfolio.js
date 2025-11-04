@@ -141,20 +141,35 @@ AOS.init({
 });
 
 /* ======================================================================================== */
-/*                          ZOOM Image
+/*                          ZOOM Image en plein d'écran
 /* ======================================================================================== */
 
-// j'ai enlevé le ".Chat-image" et ".Chat-image.zoomed"
-document.querySelectorAll(".CRM-image").forEach(img =>{
-    img.addEventListener("click", function(){
-        const isZoomed = img.classList.contains("zoomed");
 
-        document.querySelectorAll(".CRM-image.zoomed").forEach(el =>{
-            el.classList.remove("zoomed");
-        });
+// j'ai enlevé le ".Chat-image"
+document.querySelectorAll(".CRM-image, .linkstream-image").forEach(img => {
+  img.addEventListener("click", function () {
 
-        if(!isZoomed){
-            img.classList.add("zoomed");
-        }
+    // Supprimer l'overlay existant s'il y en a un
+    document.querySelector(".zoom-overlay")?.remove();
+
+    // Créer l'overlay
+    const overlay = document.createElement("div");
+    overlay.classList.add("zoom-overlay");
+
+    // Cloner l'image
+    const zoomedImg = img.cloneNode(true);
+    zoomedImg.classList.add("zoomed");
+
+    // Ajouter l'image dans l'overlay
+    overlay.appendChild(zoomedImg);
+
+    // Ajoute l'overlay au body
+    document.body.appendChild(overlay);
+
+    // Ajoute le comportement de fermeture
+    overlay.addEventListener("click", function () {
+      overlay.remove();
     });
+  });
 });
+

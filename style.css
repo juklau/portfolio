@@ -16,6 +16,7 @@
     --dark-gray-color:rgb(72, 72, 72) ;
     --surface-color: #1b262c;
     --black-color: rgb(12, 11, 11);
+    --black-color2:  rgba(0, 0, 0, 0.6);
     --background-error-color: rgba(25, 158, 157, 1);
   }
 
@@ -277,12 +278,15 @@
     max-width: 75%
 }
 .outil-liste .outil-item, /*projets et mini-crm  */
-.categorie-liste .categorie-item{ /*veille sourde  */
+.categorie-liste .categorie-item, /*veille sourde  */
+.fonctionnalites-liste .fonctionnalites-item{  /*Linkstream  */
+    cursor: grabbing;
     user-select: none;
     cursor: pointer;
 }
 .outil-liste .outil-item:active,
-.categorie-liste .categorie-item:active{ /*veille sourde  */
+.categorie-liste .categorie-item:active, /*veille sourde  */
+.fonctionnalites-liste .fonctionnalites-item{  /*Linkstream  */
     cursor: grabbing;
 }
 .categorie-container .card, /*veille sourde */ 
@@ -382,7 +386,7 @@
 }
 
 /*********************************************************************************************
-                                     Page RP Mini-CRM, Chat, MediaStock
+                                     Page RP Mini-CRM, Chat, MediaStock, Linkstream
 **********************************************************************************************/
 #image-crm,
 #image-mediastock{
@@ -390,6 +394,8 @@
     height: auto;
     object-fit: contain;
 }
+
+/* leellenörizniii!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .CRM-container .card{
     width: 340px;
     max-width: 340px;
@@ -397,8 +403,10 @@
     background-color: transparent;
     /* border-color: var(--CRM-color) !important; */
 }
-.Chat-container .card{
-    height: 500px;
+.Chat-container .card,
+.linkstream-container .card{
+    height: 550px;
+    max-width: 340px;
     width: auto;
     background-color: transparent;
 }
@@ -411,7 +419,8 @@
     color: var(--CRM-color) !important;
 }
 .slider-wrapper .swiper-slide-button.Chat:hover,
-.Chat-container:hover .card-title{
+.Chat-container:hover .card-title,
+.linkstream-container:hover .card-title{
     color: var(--main-color) !important;
 }
 .CRM-image{ /*image à "zoomer"  */
@@ -422,34 +431,43 @@
     display: block;
     z-index: 100;
 }
-.zoomed{        /*image "zoomé"  */
-    /* position: relative;
-    z-index: 10;
-    cursor: zoom-out;
-    box-shadow: 0 0 10px var(--white-opal-color);
-    border-radius: 10px;
-    transform: scale(1.5); */
-    position: relative;
-    cursor: zoom-out;
-    top: 40%;
-    left: 40%;
-    transform: translate(-50%, -50%) scale(1.5);
-    object-fit: contain;
-    z-index: 1000;
-    max-height: 90vh;
-    max-width: 90vw;
-    height: 60%;
-    width: auto;
-    box-shadow: 0 0 10px var(--white-opal-color);
-    border-radius: 10px;
+ /*image "zoomé" en plein d'écran */
+
+.zoom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--black-color2);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.zoomed {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  box-shadow: 0 0 10px var(--white-opal-color);
+  border-radius: 10px;
+  background-color: var(--dark-gray-color);
+  cursor: zoom-out;
+  z-index: 1000;
+}
+
 .fst-italic.CRM,
-.fst-italic.Chat,   /* page Chat */
-.jours,
-.Chat,              /* page Chat */ 
-.mediastock{        /* page MediaStock */
+.mini-crm,
+.fst-italic.Chat,           /* page Chat */
+.jours,                     /* page Chat */
+.Chat,                      /* page Chat */ 
+.fst-italic.MediaStock,     /* page MediaStock */  
+.mediastock,                /* page MediaStock */
+.fst-italic.LinkStream{        
     color: var(--main-color) !important;
 }
+
 
 
 /*********************************************************************************************
