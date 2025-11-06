@@ -561,7 +561,7 @@
 .references a:hover,
 .defis .text-decoration-underline{
     text-decoration-color: var(--main-color) !important;
-    text-decoration-thickness: 5px !important;
+    text-decoration-thickness: 2px !important;
 }
 table {
     border-collapse: collapse;
