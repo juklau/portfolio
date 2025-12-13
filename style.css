@@ -11,6 +11,8 @@
     --succes-color: rgb(23, 161, 23);
     --danger-color: rgb(185, 26, 26);
 
+    --coral: #ff9994;
+
     --border-table:rgb(160, 160, 160);
     --gray-color: rgb(128, 128, 128);
     --dark-gray-color:rgb(72, 72, 72) ;
@@ -311,7 +313,8 @@
                         Page projets -partie Réalisations Professionnelles
 **********************************************************************************************/
 #CRM,
-#mediastock{
+#mediastock,
+#cryptovault{
     width: 75%;
 }
 
@@ -350,7 +353,7 @@
 }
 
 /* ********************************************************************************************* */
-/*              Carousel des outils/logiciels utilisés; langages pratiqués et Mini-CRM   */
+/*   Carousel des outils/logiciels utilisés; langages pratiqués et Mini-CRM, Tchat, MediaStock   */
 /* ********************************************************************************************* */
 .slider-wrapper{
     overflow: hidden;
@@ -396,7 +399,8 @@
 }
 
 /* leellenörizniii!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-.CRM-container .card{
+.CRM-container .card,
+.MediaStock-container .card{
     width: 340px;
     max-width: 340px;
     height: 600px;
@@ -418,18 +422,27 @@
 .CRM-container:hover .card-title{
     color: var(--CRM-color) !important;
 }
+.slider-wrapper .swiper-slide-button.MediaStock:hover,
+.MediaStock-container:hover .card-title{
+    color: var(--coral) !important;
+}
 .slider-wrapper .swiper-slide-button.Chat:hover,
 .Chat-container:hover .card-title,
 .linkstream-container:hover .card-title{
     color: var(--main-color) !important;
 }
-.CRM-image{ /*image à "zoomer"  */
+.CRM-image,
+.MediaStock-image{ /*image à "zoomer"  */
     max-width: 100%;
     height: auto;
     cursor: zoom-in;
     transition: transform 0.3s ease;
     display: block;
     z-index: 100;
+}
+
+.MediaStock-image{
+    max-width: 60%;
 }
  /*image "zoomé" en plein d'écran */
 

@@ -1,5 +1,5 @@
 // /* ======================================================================================== */
-// /*                       Carousel sur la page de Projets*/
+// /*                       Carousel sur les pages de Projets*/
 // /* ======================================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Pagination bullets
         //pagination = tourner la page
         pagination: {
-        el: '.swiper-pagination',
+        el: '.slider-wrapper .swiper-pagination',
         clickable: true,
         //afin d'avoir quelques puces visible "dynamiquement"
         dynamicBullets: true,
@@ -60,8 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
         // Navigation arrows
         navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.slider-wrapper .swiper-button-next',
+        prevEl: '.slider-wrapper .swiper-button-prev',
         },
 
         

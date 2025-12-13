@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
     // si un page "ppe-" est active => dans le menu "projets.html" sera active
-    if(window.location.href.includes("ppe")){
+    if(window.location.href.includes("ppe") || window.location.href.includes("stage")){
         navLinks.forEach(link => {
             if(link.href.includes("projets.html")){
                 link.classList.add("active")
@@ -146,7 +146,7 @@ AOS.init({
 
 
 // j'ai enlevé le ".Chat-image"
-document.querySelectorAll(".CRM-image, .linkstream-image").forEach(img => {
+document.querySelectorAll(".CRM-image, .linkstream-image, .MediaStock-image").forEach(img => {
   img.addEventListener("click", function () {
 
     // Supprimer l'overlay existant s'il y en a un
