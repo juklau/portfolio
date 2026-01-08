@@ -1,4 +1,58 @@
 /* ======================================================================================== */
+/*                    Gestion des dropdowns dans l'offcanvas mobile
+/* ======================================================================================== */
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Détection mobile
+    const isMobile = window.innerWidth < 768;
+    
+    if (isMobile) {
+        // Récupérer tous les liens dropdown
+        const dropdownToggles = document.querySelectorAll('.offcanvas .dropdown-toggle');
+        
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+
+                // Empêcher la navigation
+                e.preventDefault(); 
+
+                // Empêcher la propagation
+                e.stopPropagation(); 
+                
+                // Toggle le dropdown
+                const parent = this.closest('.dropdown');
+                const menu = parent.querySelector('.dropdown-menu');
+                
+                // Fermer les autres dropdowns ouverts
+                document.querySelectorAll('.offcanvas .dropdown-menu.show').forEach(openMenu => {
+                    if (openMenu !== menu) {
+                        openMenu.classList.remove('show');
+                    }
+                });
+                
+                // Toggle le menu actuel
+                menu.classList.toggle('show');
+            });
+        });
+        
+        // Fermer le dropdown quand on clique sur un item
+        const dropdownItems = document.querySelectorAll('.offcanvas .dropdown-item');
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', function() {
+                
+                // Fermer l'offcanvas après un court délai
+                setTimeout(() => {
+                    const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('navbarSupportedContent'));
+                    if (offcanvas) {
+                        offcanvas.hide();
+                    }
+                }, 200);
+            });
+        });
+    }
+});
+
+/* ======================================================================================== */
 /*                          Affichage de fênetre "active"
 /* ======================================================================================== */
 

@@ -9,12 +9,17 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
+        <!-- link SwiperJS CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+        <!-- AOS CSS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" href="style.css">
     </head> 
-    <body>
-        <header id="header" class="border-bottom border-secondary" >
+    <body class="fs-5 overflow-x-hidden">
+        <header id="header" class="border-bottom border-secondary">
             <nav class="navbar navbar-expand-md bg-dark p-4" data-bs-theme="dark">
                 <div class="container d-flex justify-content-between">
                     <a class="navbar-brand" href="#">Klaudia Juhasz</a>
@@ -46,14 +51,14 @@
                                         <li><a class="dropdown-item text-white" href="ppe-mediastock.html">MediaStock</a></li>
                                         <li><a class="dropdown-item text-white" href="page-error.html">CryptoVault</a></li>
                                         <li><a class="dropdown-item text-white" href="stage1.html">LinkStream (stage 2025)</a></li>
+                                        <li><a class="dropdown-item text-white" href="page-error.html">Swantrad (stage 2026)</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle text-white" href="veille.html" role="button" aria-expanded="false">La veille</a>
                                     <ul class="dropdown-menu border-0 ">
                                         <li><a class="dropdown-item text-white" href="veille-sourds.html">IA & surdité</a></li>
-                                        <li><a class="dropdown-item text-white" href="page-error.html">IA & vision</a></li>
-                                        <li><a class="dropdown-item text-white" href="page-error.html">IA & mobilité</a></li>
+                                        <li><a class="dropdown-item text-white" href="veille-aveugle.html">IA & vision</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -73,13 +78,1308 @@
             </nav>
         </header>
 
+        <main class="bg-dark py-5">
+             <div class="container py-5">
+                <h1 class="display-1 text-white text-center py-5 mt-5"> 
+                    L'intelligence artificielle au service des personnes aveugles et malvoyantes
+                </h1>
+            </div>
+               <!-- Introduction -->
+            <section class="container-fluid text-white section pt-5 pb-4">
+                <div class=" row mx-auto mt-5" data-aos="fade-up-left" data-aos-delay="300">
+                    <div class="col-md-12 mb-3 box-shadow">
+                        <span class="alcim text-uppercase fw-bolder">Introduction</span>
+                        <div class="pt-2 row">
+                            <div class="col-md-12">
+                                <p class="mt-4 references">
+                                    Dans un monde où l'information visuelle domine notre quotidien, les personnes 
+                                    aveugles et malvoyantes font face à des défis constants pour accéder à l'autonomie, 
+                                    à l'information et à la pleine participation sociale. Selon l'Organisation mondiale 
+                                    de la santé (OMS), <a class="text-white fst-italic" target="_blank" href="https://www.guide-vue.fr/news-detail/deficiences-visuelles-etat-lieux-l-echelle-mondiale">au moins 2,2 milliards de personnes</a> 
+                                    dans le monde vivent avec une déficience visuelle, et pour au moins 1 milliard d'entre elles, 
+                                    cette situation aurait pu être évitée ou n'est pas prise en charge.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <p class="mt-1 references">
+                                   En France, l'étude Homère (2023) estime <a class="text-white fst-italic" target="_blank" href="https://www.sciencesetavenir.fr/sante/ophtalmo/malvoyance-quelles-solutions-pour-le-deficit-visuel-en-2040_189307">1,7 million de personnes </a> 
+                                   sont atteintes d'une déficience visuelle, dont 200 000 sont aveugles ou malvoyantes profondes (sans aucune perception de lumière). 
+                                   Ces chiffres sont amenés à augmenter dans les années à venir, en raison du vieillissement de la population et des maladies qui 
+                                   en découlent (glaucome, DMLA, diabète...).
+                               </p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-end">
+                            <div class="col-md-10">
+                                 <p class="mt-1 mb-4 ">
+                                    Face à ces enjeux, l'intelligence artificielle émerge comme une force transformatrice, capable de convertir 
+                                    l'information visuelle en formats accessibles et de redonner aux personnes déficientes visuelles une autonomie 
+                                    qu'elles n'avaient jamais connue auparavant. Des lunettes connectées qui décrivent l'environnement aux 
+                                    applications qui lisent instantanément n'importe quel texte, l'IA ouvre aujourd'hui des portes vers un 
+                                    monde plus inclusif.
+                                </p>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row  py-4 mx-auto mt-2">
+                    <div class="col-md-10 mt-5 " data-aos="fade-up-right" data-aos-delay="350">
+                        <span class="alcim text-uppercase fw-bolder">Les principaux obstacles rencontrés par les personnes aveugles et malvoyantes</span>
+                        <div class="row justify-content-start mt-4">
+                            <div class="col-md-12 mt-4">
+                                <p class="h4 fst-italic aveugle">Un environnement physique pensé avant tout pour les voyants</p>
+                                <p>
+                                    Malgré les avancées en matière d'accessibilité, l'espace public reste majoritairement conçu pour les 
+                                    personnes voyantes, rendant les déplacements quotidiens complexes et parfois dangereux.
+                                </p>
+                                <div class="mt-1 mb-4 ">
+                                    <p class="mt-4 mb-2 fst-italic text-decoration-underline">Signalétique et repérage</p>
+                                    <p>
+                                        La majorité des informations de repérage repose exclusivement sur le visuel : 
+                                        panneaux, enseignes, affichages dynamiques ou plans urbains. L'absence de repères 
+                                        tactiles ou sonores dans de nombreux espaces publics complique fortement l'orientation. 
+                                        À cela s'ajoutent des obstacles imprévisibles — travaux, mobilier urbain mal positionné,
+                                         véhicules mal garés — qui transforment chaque déplacement en parcours semé d'incertitudes, 
+                                         en particulier dans des lieux inconnus.
+                                    </p>
+                                </div>
+                                <div class="mt-1 mb-4 ">
+                                    <p class="mt-4 mb-2 fst-italic text-decoration-underline">Sécurité et mobilité</p>
+                                    <p>
+                                        La question de la sécurité est centrale. De nombreuses traversées de rue restent 
+                                        dépourvues de feux sonores, exposant les personnes déficientes visuelles à 
+                                        des risques accrus. Les quais de métro et les gares manquent encore trop 
+                                        souvent de dispositifs de guidage adaptés, tandis que les escaliers, trottoirs 
+                                        et dénivelés sont insuffisamment signalés, augmentant le risque de chutes 
+                                        et d'accidents.
+                                    </p>
+                                </div>                               
+                            </div>
+                        </div>
+                        <div class="row justify-content-md-end mt-4">
+                            <div class="col-md-10 mt-4">
+                                <p class="h4 fst-italic aveugle">Un environnement numérique encore largement excluant</p>
+                                <p>
+                                    Paradoxalement, alors que le numérique pourrait être un puissant levier d'inclusion, il demeure 
+                                    une source majeure d'exclusion pour les personnes aveugles et malvoyantes.
+                                </p>
+                                <div class="mt-1 mb-4 ">
+                                    <p class="mt-4 mb-2 fst-italic text-decoration-underline">Statistiques alarmantes :</p>
+                                    <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mt-2">
+                                        <li>◈ Seulement <a class="text-white fst-italic" target="_blank" href="https://www.sciencesetavenir.fr/sante/ophtalmo/malvoyance-quelles-solutions-pour-le-deficit-visuel-en-2040_189307">10% des sites internet</a> 
+                                            sont réellement accessibles aux personnes aveugles et malvoyantes</li>
+                                        <li>◈ Nombreux sites ne respectent pas les normes WCAG (Web Content Accessibility Guidelines)</li>
+                                        <li>◈ PDF scannés, images sans description, formulaires incompatibles avec les lecteurs d'écran</li>
+                                    </ul>
+                                </div>
+                                <div class="mt-1 mb-4 ">
+                                    <p class="mt-4 mb-2 fst-italic text-decoration-underline">Des conséquences concrètes au quotidien</p>
+                                    <p>
+                                        <!-- VoiceOver est un lecteur d'écran intégré qui décrit à haute voix les éléments qui apparaissent sur l'écran de votre ordinateur  -->
+                                        Même équipées de technologies d'assistance performantes telles que <strong class="fst-italic">VoiceOver</strong> (Apple) ou <strong class="fst-italic">TalkBack</strong> 
+                                        (Android), les personnes aveugles se heurtent à des interfaces mal conçues. L'expérience 
+                                        numérique devient alors laborieuse, frustrante, voire totalement inaccessible, limitant 
+                                        l'autonomie dans les démarches en ligne essentielles.
+                                    </p>
+                                </div>                               
+                            </div>
+                        <div class="row justify-content-md-center mt-4">
+                            <div class="col-md-10 mt-4">
+                                <p class="h4 fst-italic aveugle">Accès à l'information et à la culture : une fracture persistante</p>
+                                <div class="mt-1 mb-4 ">
+                                    <p class="references mb-2"><a class="text-white fst-italic" target="_blank" href="https://www.sciencesetavenir.fr/sante/ophtalmo/malvoyance-quelles-solutions-pour-le-deficit-visuel-en-2040_189307">L'accès à la culture et à l'information</a> 
+                                        reste profondément inégalitaire, révélant une exclusion encore trop souvent invisibilisée.</p>
+                                    <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mt-2">
+                                        <li>◈ Seulement 6% des livres sont adaptés en formats accessibles</li>
+                                        <li>◈ Environ 100 films sur 500 sortant chaque année bénéficient d'une audiodescription</li>
+                                        <li>◈ À peine 4 % des émissions de télévision proposent une audiodescription</li>
+                                        <li>◈ Les documents administratifs, courriers et factures sont rarement fournis dans des formats adaptés.</li>
+                                    </ul>
+                                </div>
+                                <div class="mt-1 mb-4 ">
+                                    <p>Cette situation se traduit par une autonomie fortement réduite dans les transports, les démarches 
+                                        administratives, l'accès à l'emploi et à la culture. Elle entraîne une dépendance accrue à 
+                                        l'entourage ou aux professionnels, freinant durablement l'inclusion sociale et l'égalité 
+                                        des chances.</p>
+                                </div>                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row py-4 mt-2">
+                    <div class="col-md-12 mt-5" data-aos="fade-up-right" data-aos-delay="350">
+                        <span class="alcim text-uppercase fw-bolder">Le déclin du braille face à l'audio : un enjeu crucial pour l'autonomie</span>
+                        <p class="my-5">
+                            Un phénomène préoccupant traverse aujourd'hui la communauté des personnes aveugles et malvoyantes : 
+                            la pratique du braille est en net recul. En France, seules 15 % des personnes aveugles ou malvoyantes 
+                            maîtrisent le braille, selon <strong class="fst-italic">Bruno Gendron,</strong>, président de la Fédération des aveugles de France. Cette 
+                            réalité soulève une question essentielle : peut-on réellement compenser l'abandon du braille par 
+                            l'audio et les technologies vocales ?
+                        </p>
+                        <div class="row justify-content-end mt-3"> 
+                            <div class=" col-md-10 mt-4">
+                                <p class="h4 fst-italic aveugle">Les causes d'un recul progressif du braille</p>
+                                <ul class="list-unstyled ms-1">
+                                    <li>
+                                        <div>
+                                            <p class="mt-4 mb-2 fst-italic text-decoration-underline">1. La cécité tardive</p>
+                                            <p>
+                                                La majorité des personnes concernées perdent la vue au cours de leur vie, à la suite d'un accident, 
+                                                d'une maladie ou du vieillissement. N'ayant pas appris le braille durant l'enfance, beaucoup 
+                                                rencontrent des difficultés à s'approprier ce mode de lecture à l'âge adulte, souvent perçu 
+                                                comme complexe et chronophage.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <p class="mt-4 mb-2 fst-italic text-decoration-underline">2. L'attrait du numérique et de l'audio</p>
+                                            <p>
+                                                Les nouvelles générations, baignées dans l'univers numérique, se tournent naturellement vers 
+                                                des solutions vocales jugées plus rapides et intuitives : synthèses vocales, livres audio, 
+                                                podcasts ou assistants vocaux. Ces outils offrent un accès immédiat à l'information et donnent 
+                                                l'image d'une alternative moderne au braille.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <p class="mt-4 fst-italic text-decoration-underline">3. La multiplication des solutions technologiques</p>
+                                            <p>
+                                                Smartphones, applications de lecture automatique, objets connectés et assistants vocaux renforcent 
+                                                l'idée que le braille serait devenu secondaire, voire obsolète. L'accessibilité semble désormais 
+                                                pouvoir se passer du tactile au profit du tout-audio.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-start mt-3">
+                            <div class="col-md-10 ">    
+                        
+                                <p class="h4 fst-italic aveugle mt-5">Pourquoi le braille reste pourtant irremplaçable ?</p>
+                                <p class="mt-4">
+                                    Malgré l'essor des technologies vocales et de l'audio, les experts et les 
+                                    professionnels de l'éducation s'accordent sur un point essentiel : l'audio ne peut pas 
+                                    remplacer le braille. Si les solutions vocales facilitent l'accès à l'information, elles 
+                                    ne permettent pas à elles seules de maîtriser pleinement la langue écrite.
+                                </p>
+                                
+                                <p class="mt-3">
+                                    Le braille demeure en effet un pilier fondamental de l'autonomie intellectuelle et sociale 
+                                    des personnes aveugles. Il offre un accès direct à l'orthographe, à la grammaire et à la 
+                                    structure des phrases. Là où l'audio restitue le sens global, le braille donne accès à la 
+                                    forme écrite des mots, indispensable pour lire, écrire et comprendre un texte en profondeur.
+                                </p>
+                                <p class="mt-3">
+                                    Cette compétence est d'autant plus cruciale dans le monde professionnel. Rédiger un document, 
+                                    corriger un texte ou analyser des informations exige une lecture précise que l'audio seul 
+                                    ne peut garantir. Comme le rappellent de nombreux professionnels : 
+                                    <a class="text-white fst-italic" target="_blank" href="https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/bouches-du-rhone/marseille/ca-ne-developpe-pas-l-orthographe-livres-sonores-podcast-200-ans-apres-sa-creation-le-braille-perd-du-terrain-3248248.html">
+                                        « Dans le cadre professionnel, si vous voulez bosser, il faut pouvoir lire et écrire. »</a>
+                                </p>
+                                <p class="mt-3">
+                                    L'audio constitue donc un outil complémentaire précieux, notamment pour les lectures longues 
+                                    ou le confort quotidien, mais il ne saurait se substituer au braille dans les situations 
+                                    d'apprentissage, d'étude et de maîtrise approfondie de la langue. Comme le résume un expert :
+                                    <a class="text-white fst-italic" target="_blank" href="https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/bouches-du-rhone/marseille/ca-ne-developpe-pas-l-orthographe-livres-sonores-podcast-200-ans-apres-sa-creation-le-braille-perd-du-terrain-3248248.html">
+                                        « Pour étudier un texte, comprendre la grammaire et maîtriser la langue, seul le braille le permet. »</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="container text-white defis pt-5 pb-3" data-aos="zoom-in" data-aos-delay="300">
+                <h2 class="text-center display-6 py-3 text-decoration-underline fst-italic">Résultats de la veille technologique</h2>
+                <h4 class="text-center h3 fst-italic aveugle mt-5">Les innovations en intelligence artificielle qui transforment le quotidien</h4>
+            </div>
+
+            <section class="container text-white section pt-5 pb-4">
+                <div class="container-fluid mx-auto mt-5" data-aos="fade-up-left" data-aos-delay="300">
+                    <span class="alcim text-uppercase fw-bolder">Le Campus Louis Braille : un épicentre de l'innovation inclusive</span>
+                    <div class="pt-5">
+                        <p>
+                            Inauguré en décembre 2024 à Paris, le Campus Louis Braille incarne une nouvelle étape majeure dans 
+                            le développement de solutions technologiques dédiées aux personnes aveugles et malvoyantes. 
+                            Véritable hub <!-- centre majeur --> de l'innovation inclusive, il rassemble startups, chercheurs, associations et 
+                            utilisateurs autour d'un objectif commun : mettre l'intelligence artificielle au service de 
+                            l'autonomie et de l'inclusion.
+                        </p>
+                        <p>
+                            Le Campus se distingue par une approche collaborative et centrée sur les usages réels, 
+                            faisant des personnes concernées des acteurs à part entière de l'innovation.
+                        </p>
+                    </div>
+                    <div class="pt-2">
+                        <p class="mt-4 mb-2 h4 fst-italic aveugle">Les missions du Campus Louis Braille</p>
+                        <p class="mt-4 mb-2">Le Campus s'articule autour de plusieurs axes stratégiques :</p>
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg ">
+                            <li>◈ <strong>Incubation de startups spécialisées en accessibilité,</strong> favorisant l'émergence de solutions innovantes et concrètes</li>
+                            <li>◈ <strong>Recherche et développement</strong> sur l'intelligence artificielle appliquée au handicap visuel</li>
+                            <li>◈ <strong>Co-conception avec les utilisateurs finaux,</strong> afin de garantir des outils réellement adaptés aux besoins du terrain</li>
+                            <li>◈ <strong>Formation aux technologies d'assistance,</strong> pour accompagner l'appropriation des outils numériques et réduire la fracture technologique</li>
+                        </ul>
+                    </div>
+                    <div class="row justify-content-end mt-3">
+                        <div class="col-md-10 pt-2 pb-4">
+                            <p class="mt-4 mb-2 h4 fst-italic aveugle">Une philosophie centrée sur l'humain et l'innovation sociale</p>
+                            <p class="mt-4">
+                                Au-delà de la technologie, le Campus défend une vision profondément humaine de l'innovation. Comme l'explique 
+                                <strong class="fst-italic">Thibaut de Martimprey</strong>, directeur du Campus et lui-même malvoyant :
+                            </p>
+                            <p class="text-center references">
+                                <a class="text-white fst-italic" target="_blank" href="https://www.acuite.fr/actualite/profession/315148/le-campus-louis-braille-nouveau-hub-de-linnovation-pour-le-handicap?utm_source">« 
+                                La technologie ne suffit pas sans l'innovation sociale. Il faut des solutions à la fois utiles, 
+                                accessibles financièrement et durables. »</a>
+                            </p>
+                            <p>
+                                Cette philosophie rappelle que l'IA ne peut être réellement inclusive que si elle s'inscrit dans une démarche globale, prenant en compte les 
+                                usages, l'accessibilité économique et l'impact à long terme sur la qualité de vie.
+                            </p>
+                         </div>   
+                    </div>
+                    <div class="row justify-content-start">
+                        <div class="col-md-10 pb-5">
+                            <p class="mt-4 mb-2 h4 fst-italic aveugle">Un enjeu clé : l'accessibilité financière des aides technologiques</p>
+                            <p class="mt-4">
+                                L'un des freins majeurs à l'adoption des technologies d'assistance reste leur coût élevé, certaines solutions 
+                                pouvant atteindre jusqu'à 10 000 euros. Conscient de cet obstacle, le Campus Louis Braille milite pour la 
+                                reconnaissance de ces aides comme dispositifs médicaux, afin de permettre leur prise en charge par la 
+                                Sécurité sociale.
+                            </p>
+                            <p>
+                                L'objectif est clair : démocratiser l'accès aux innovations en IA, pour que ces technologies ne soient pas 
+                                réservées à une minorité, mais deviennent de véritables leviers d'égalité et d'autonomie pour le plus grand nombre.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container text-white defis pt-3 pb-3" data-aos="zoom-in" data-aos-delay="300">
+                    <h2 class="text-center display-6 py-5 fst-italic aveugle">Classification des solutions IA</h2>
+                </div>
+
+                <div class="container carousel swiper swiper-container d-flex justify-content-center" data-aos="zoom-in-down" data-aos-delay="1000">
+                    <div class="slider-wrapper text-white pb-5 px-1 ">
+                        <ul class="categorie-liste swiper-wrapper list-unstyled">
+                        <!-- 1 -->
+                        <li class="categorie-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="categorie-item p-1 mt-5 mb-3">
+                                    <!-- stretched-link nécessite un parent position-relative!!!! -->
+                                    <div class="card language col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border position-relative">
+                                        <h4 class="card-title text-center pt-3 pb-4 px-2">1. Vision artificielle et description d'images</h4>
+                                        <p class="card-text fw-normal text-center mt-5">
+                                            Transformer l'invisible en information accessible
+                                        </p>
+                                        <img class="card-img my-auto veille-image mx-auto my-2 " src="assets/images/veilles/be_my_eyes.webp" alt="Be My Eyes">
+                                        <span class="image-source text-black bg-body-secondary rounded-2 p-1">https://www.autonomia.org/produit/application-be-my-eyes</span>
+                                        <a href="#categorie-1" class="stretched-link" aria-label="Aller à la section 1 : Vision artificielle et description d'images"></a>
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="categorie-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="categorie-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border position-relative">
+                                        <h4 class="card-title text-center pt-4 pb-5 px-2">2. MyEye OrCam</h4>
+                                        <p class="card-text fw-normal text-center mt-5">
+                                            La révolution des lunettes intelligentes « made in Israel »
+                                        </p>
+                                        <img class="card-img my-auto veille-image mx-auto" src="assets/images/veilles/OrCam-MyEye-Pro.webp" alt="MyEye OrCam">
+                                        <span class="image-source text-black bg-body-secondary rounded-2 p-1">https://mytoolsforliving.com/products/orcam-myeye-pro?srsltid=AfmBOoqUToFjvnMq9hEls3xGCEpR66h1SLf6c-sh530F_8GTVWdSj9X0</span>
+                                        <a href="#categorie-2" class="stretched-link" aria-label="Aller à la section 2 : MyEye OrCam"></a>
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="categorie-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="categorie-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border position-relative">
+                                        <h4 class="card-title text-center py-3 ">3. Lecture et compréhension de documents </h4>
+                                        <p class="card-text fw-normal text-center mt-4">
+                                                Quand l'OCR et l'IA transforment l'accès à l'écrit
+                                        </p>
+                                        <img class="card-img my-auto mx-auto my-2" src="assets/images/veilles/OCR_IAwebp.webp" alt="OCR_IA">
+                                        <span class="image-source text-black bg-body-secondary rounded-2 p-1">https://www.stemapartners.com/blog/ocr-ia-transformez-vos-documents-numerises-grace-a-lintelligence-artificielle</span>
+                                        <a href="#categorie-3" class="stretched-link" aria-label="Aller à la section 3 : Lecture et compréhension de documents"></a>
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="categorie-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="categorie-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border position-relative">
+                                        <h4 class="card-title text-center py-3">4. Navigation et mobilité assistées par IA</h4>
+                                        <p class="card-text fw-normal text-center mt-5">
+                                            Se déplacer autrement, en toute autonomie
+                                        </p> 
+                                        <!-- ceinture lombaire imprimé en 3D -->
+                                        <img class="card-img my-auto veille-image mx-auto my-2" src="assets/images/veilles/ceinture_Artha.webp" alt="Ceinture Artha"> 
+                                        <span class="image-source text-black bg-body-secondary rounded-2 p-1">https://rehab-lab.org/external/categories/press/artha-france-une-ceinture-lombaire-imprimee-en-3-d-pour-aider-les-deficients-visuels</span>
+                                        <a href="#categorie-4" class="stretched-link" aria-label="Aller à la section 4 : Navigation et mobilité assistées par IA"></a>
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="categorie-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="categorie-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border position-relative">
+                                        <h4 class="card-title text-center py-3">5. Interfaces vocales et personnalisation</h4>
+                                        <p class="card-text fw-normal text-center mt-5">
+                                            Quand la voix devient la clé de l'accessibilité numérique
+                                        </p>
+                                        <img class="card-img my-auto veille-image mx-auto my-2" src="assets/images/veilles/Siri.webp" alt="Siri (Apple)"> 
+                                        <span class="image-source text-black bg-body-secondary rounded-2 p-1">https://www.cnet.com/tech/services-and-software/report-apple-has-developed-an-internal-chatgpt-like-tool-for-testing-siri-features/</span>
+                                        <a href="#categorie-5" class="stretched-link" aria-label="Aller à la section 5 : Interfaces vocales et personnalisation"></a>
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="categorie-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="categorie-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border position-relative">
+                                        <h4 class="card-title text-center pt-3 pb-5">6. Lunettes connectées avec IA : </h4>
+                                        <p class="card-text fw-normal text-center mt-4">
+                                            L'avenir de l'accessibilité… sur le nez
+                                        </p>
+                                        <img class="card-img my-auto veille-image mx-auto my-2" src="assets/images/veilles/Ally_solos.webp" alt="Ally Solos Glasses">
+                                        <span class="image-source text-black bg-body-secondary rounded-2 p-1">https://www.msn.com/en-us/lifestyle/shopping/these-smart-glasses-use-ai-to-help-low-vision-users/ar-AA1Kwy5h</span>
+                                        <a href="#categorie-6" class="stretched-link" aria-label="Aller à la section 6 : Lunettes connectées avec IA"></a>
+                                    </div>
+                                </div> 
+                            </li>
+                        </ul>
+
+                        <!-- pour la pagination = a lapozashoz -->
+                        <div class="swiper-pagination pt-2"></div>
+
+                        <!-- les boutons de navigation -->
+                        <div class="swiper-slide-button swiper-button-prev d-none d-sm-block"></div>
+                        <div class="swiper-slide-button swiper-button-next d-none d-sm-block"></div>
+                    </div>  
+                </div>
+
+                <div id="categorie-1" class="container-fluid mx-auto mt-5" data-aos="zoom-in-up" data-aos-delay="400">
+                    <span class="alcim-veille text-uppercase fw-bolder"> 1. Vision artificielle et description d'images</span>
+                    <div class="pt-2">
+                        <p class="my-4">
+                            Grâce à l'intelligence artificielle, il est désormais possible d'analyser une image ou une scène 
+                            vidéo en temps réel et d'en générer une description textuelle ou orale. Ces technologies 
+                            transforment des informations visuelles jusque-là inaccessibles en données compréhensibles, 
+                            offrant ainsi une nouvelle autonomie aux personnes aveugles et malvoyantes.
+                        </p>
+                    </div>
+                    <div class="py-2">
+                        <p class=" fst-italic text-decoration-underline">Technologies clés</p>
+                        <p class="my-2">
+                            Les solutions de vision artificielle reposent sur plusieurs briques technologiques majeures :
+                        </p>
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                            <li>◈ <strong>Computer vision :</strong> reconnaissance d'objets, de personnes, de scènes et de contextes</li>
+                            <li>◈ <strong>OCR (Optical Character Recognition) :</strong> lecture et interprétation de textes imprimés</li>
+                            <li>◈ <strong>Génération de langage naturel :</strong> production de descriptions claires, contextualisées et compréhensibles</li>
+                        </ul>
+                    </div>
+                    <div class="pt-2 pb-4">
+                        <p class="fst-italic">Les outils phares :</p>
+                        <table class="table table-dark table-striped text-white fs-6 box-shadow-IA">
+                            <thead>
+                                <tr class="align-middle fs-5">
+                                    <th scope="col">Application</th>
+                                    <th scope="col" class="d-none d-lg-table-cell">Développeur</th>
+                                    <th scope="col">Fonctionnalités clés</th>
+                                    <th scope="col" class="d-none d-sm-table-cell">Utilisation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="align-middle">
+                                    <th scope="row"></th>
+                                    <td class="d-none d-lg-table-cell"></td>
+                                    <td></td>
+                                    <td class="d-none d-sm-table-cell"></td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">Seeing AI</th>
+                                    <td class="d-none d-lg-table-cell">Microsoft</td>
+                                    <td>Narration du monde : lecture de courrier, reconnaissance de produits, 
+                                        description de photos, identification de visages</td>
+                                    <td class="d-none d-sm-table-cell">Quotidien, courses, tri de documents</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">Be My Eyes / <br> Be My AI</th>
+                                    <td class="d-none d-lg-table-cell">Startup danoise</td>
+                                    <td>Description d'images par IA + possibilité d'appeler un bénévole en visio</td>
+                                    <td class="d-none d-sm-table-cell">900 000 utilisateurs dans le monde</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">Google Lookout</th>
+                                    <td class="d-none d-lg-table-cell">Google</td>
+                                    <td>Identification d'objets, texte, couleurs, devises</td>
+                                    <td class="d-none d-sm-table-cell">Shopping, lecture d'étiquettes</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">ChatGPT Vision</th>
+                                    <td class="d-none d-lg-table-cell">OpenAI</td>
+                                    <td>Description d'images, réponses à des questions sur le contenu visuel</td>
+                                    <td class="d-none d-sm-table-cell">Analyse de documents complexes</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">MyEye OrCam</th>
+                                    <td class="d-none d-lg-table-cell">OrCam (Israël)</td>
+                                    <td>Dispositif qui se clipse sur des lunettes, lecture instantanée de textes, reconnaissance de visages et produits</td>
+                                    <td class="d-none d-sm-table-cell">Lecture de livres, menus, panneaux</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mb-5">
+                        <p class="my-4 fst-italic h4 fst-italic aveugle">Témoignage inspirant</p>
+                        <p class="mb-0 references"><strong class="fst-italic">Thibaut de Martimprey</strong>, directeur du Campus Louis Braille, partage son expérience :
+                            <a target="_blank" href="https://www.lemonde.fr/pixels/article/2025/12/03/l-ia-des-outils-incroyables-pour-les-personnes-en-situation-de-handicap_6655791_4408996.html" class="fst-italic text-white">
+                                « Je l'utilise beaucoup au quotidien. C'est intuitif : j'ouvre la caméra et je demande par exemple quelle est la 
+                            date de péremption d'une boîte de chocolats. C'est incroyablement libérateur. »</a>
+                        </p>
+                        <p class="mt-0">Ce type d'usage illustre concrètement la manière dont l'IA peut réduire la dépendance à l'entourage et renforcer l'autonomie au quotidien.</p>
+                    </div>
+                    <div >
+                        <p class="my-4 fst-italic text-decoration-underline">Cas d'usage concrets</p>
+                        <p class="mb-2">Les applications de vision artificielle couvrent aujourd'hui de nombreux contextes de vie :</p>
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                            <li>◈ <strong>À la maison :</strong> lire une étiquette, trier le courrier, identifier un vêtement par sa couleur</li>
+                            <li>◈ <strong>En courses :</strong> scanner des codes-barres, lire les prix, différencier des produits similaires</li>
+                            <li>◈ <strong>En déplacement :</strong> lire des panneaux, des menus de restaurant, des horaires de train</li>
+                            <li>◈ <strong>Au travail :</strong> consulter des documents, identifier des collègues, participer activement à des réunions</li>
+                        </ul>
+                    </div>
+                    <div class="pt-1 pb-4">
+                        <p class="my-4 fst-italic text-decoration-underline">Une nécessaire prudence : les limites de l'IA </p>
+                        <p class="references mb-1">Malgré leurs performances, ces outils ne sont pas infaillibles. Comme le souligne <strong class="fst-italic">Thibaut de Martimprey</strong> :
+                            <a target="_blank" href="https://www.lemonde.fr/pixels/article/2025/12/03/l-ia-des-outils-incroyables-pour-les-personnes-en-situation-de-handicap_6655791_4408996.html" class="fst-italic text-white">
+                                « C'est plus “secure” avec Be My Eyes, qui permet d'appeler un bénévole humain
+                            en visio, car ChatGPT fait parfois des erreurs. ».</a>
+                        </p>
+                        <p class="lien-extern">
+                            Lors d'une démonstration, par exemple, ChatGPT n'avait pas détecté une peluche grise posée 
+                            sur une chaise. Cette limite rappelle l'importance de solutions hybrides, combinant 
+                            intelligence artificielle et intervention humaine, afin de garantir fiabilité et sécurité.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="categorie-2" class="container-fluid mx-auto mt-5" data-aos="zoom-in-up" data-aos-delay="400">
+                    <span class="alcim-veille text-uppercase fw-bolder"> 2. MyEye OrCam</span>
+                    <div class="pt-2">
+                        <p class="mt-4 mb-1">
+                            Avant de transformer l'accessibilité visuelle, les fondateurs d'OrCam — <strong class="fst-italic">Amnon Shashua </strong>
+                            et <strong class="fst-italic">Ziv Aviram</strong> — ont marqué l'histoire de l'intelligence 
+                            artificielle appliquée à la mobilité. 
+                            En 1999, ils créent Mobileye, entreprise pionnière des systèmes d'aide à la conduite 
+                            automobile basés sur la vision artificielle.
+                        </p>
+                        <p>
+                            Cette technologie, capable de détecter piétons, obstacles et situations de danger sur la 
+                            route, est ensuite transposée en 2010 à un tout autre enjeu : aider les personnes 
+                            aveugles et malvoyantes à percevoir leur environnement. C'est ainsi que naît MyEye OrCam, 
+                            un concentré d'IA embarquée pensé pour l'autonomie.
+                        </p>
+                    </div>
+                    
+                    <div class="pt-2 pb-2">
+                        <p class=" mt-4 mb-2 h4 fst-italic aveugle">Le dispositif MyEye OrCam </p>
+                        <!-- <p>Caractéristiques techniques</p> -->
+                        <p class="lien-extern mt-4 mb-2"> <a class="fst-italic text-white" href="https://www.orcam.com"><strong>MyEye OrCam</strong></a> se distingue par un design discret et une autonomie totale :</p>
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                            <li>◈ <strong>Dimensions :</strong> 7,6 cm de long × 2,1 cm de large</li>
+                            <li>◈ <strong>Poids :</strong> 22,5 grammes (ultra-léger)</li>
+                            <li>◈ <strong>Fixation :</strong> double système magnétique adaptable à toutes les branches de lunettes</li>
+                            <li>◈ <strong>Fonctionnement :</strong> sans connexion Internet, garantissant une utilisation en toute circonstance</li>
+                        </ul>
+
+                        <p class="my-4 fst-italic text-decoration-underline">Trois modes d'activation intuitifs et adaptatifs</p>
+                        <p class="mb-2">Le dispositif s'adapte aux préférences et capacités de chaque utilisateur :</p>
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                            <li>◈ <strong>Commande vocale :</strong> pour une utilisation entièrement mains libres</li>
+                            <li>◈ <strong>Geste du doigt :</strong> il suffit de pointer approximativement vers le texte à lire</li>
+                            <li>◈ <strong>Barre tactile latérale :</strong> texturée et facilement repérable au toucher</li>
+                        </ul>
+                    </div>
+                    <div class="row justify-content-end">
+                        <div class="col-md-8 pt-1 pb-2">
+                            <p class="my-4 fst-italic text-decoration-underline">Des fonctionnalités intelligentes au service de l'autonomie</p>
+                            <p class="mb-2">MyEye OrCam embarque une intelligence artificielle avancée capable de :</p>
+                            <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                <li>◈ Lire des textes imprimés ou numériques, avec détection automatique du bon 
+                                    positionnement (alerte si le texte est à l'envers ou mal centré)</li>
+                                <li>◈ Reconnaître les visages, après enregistrement, et annoncer le nom des proches</li>
+                                <li>◈ Identifier des objets et produits pré-enregistrés</li>
+                                <li>◈ Lire des codes-barres et QR codes</li>
+                                <li>◈ Identifier les couleurs en pointant une zone précise</li>
+                                <li>◈ Donner l'heure et la date, simplement en levant le poignet comme pour regarder une montre</li>
+                            </ul>
+                        </div>  
+                    </div>
+                    <div class="row justify-content-end mt-1">
+                        <div class="col-md-10 pt-1 pb-2">
+                            <p class="my-4 fst-italic text-decoration-underline"> Une véritable intelligence contextuelle</p>
+                            <p>
+                                Au-delà de la simple lecture, MyEye OrCam comprend le contexte des documents.
+                                Dans un restaurant, il peut lire uniquement les entrées d'un menu. Sur une facture, il 
+                                identifie et annonce les montants clés. 
+                                Cette capacité d'analyse contextuelle permet un accès rapide et ciblé à l'information, sans surcharge cognitive.
+                            </p>
+                        </div>
+                        <div class="col-md-10 pt-1 pb-2">
+                            <p class="my-4 fst-italic text-decoration-underline"> Sécurité et respect de la vie privée</p>
+                            <p>
+                                La protection des données est un enjeu central. Toutes les informations liées à la reconnaissance faciale 
+                                sont chiffrées, garantissant un haut niveau de confidentialité et de respect de la vie privée.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pt-1 pb-2">
+                        <p class="my-4 fst-italic text-decoration-underline">Les différentes versions disponibles</p>
+                        <p class="mb-2">OrCam propose plusieurs déclinaisons pour répondre à des besoins variés :</p>
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                            <li>◈ <strong>MyEye PRO :</strong> version complète intégrant la reconnaissance faciale</li>
+                            <li>◈ <strong>MyEye Smart :</strong> version sans reconnaissance faciale, plus accessible financièrement</li>
+                            <li>◈ <strong>OrCam Read :</strong> format « stylo lecteur », destiné notamment aux personnes dyslexiques et malvoyantes</li>
+                        </ul>
+                    </div>
+                    <div class="pb-1">
+                        <p class="my-4 fst-italic text-decoration-underline">Une reconnaissance internationale</p>
+                        <p class="mb-2">La technologie OrCam a été saluée à l'échelle mondiale :</p>
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                            <li>◈ 🏆 Prix de l'innovation - Consumer Electronics Show (CES)</li>
+                            <li>◈ 🏆 Silmo d'Or</li>
+                            <li>◈ 🏆 Top des meilleures inventions 2019 - Time Magazine</li>
+                        </ul>
+                        <p>Aujourd'hui, MyEye OrCam est disponible en 25 langues et distribuée dans 48 pays.</p>
+                    </div>
+                    <div class=" pb-4">
+                        <p class="my-4 fst-italic text-decoration-underline"> Le principal frein : le coût</p>
+                        <p class="mb-0">
+                            Malgré ses bénéfices indéniables, le prix reste un obstacle majeur. Selon la version, 
+                            le dispositif coûte entre 3 000 et 4 750 euros et demeure peu ou pas remboursé en 
+                            France par la Sécurité sociale, la  (Prestation de compensation du handicap) ou les mutuelles.
+                        </p>
+                        <p>
+                            OrCam, en collaboration avec plusieurs associations, milite activement pour la reconnaissance de ces 
+                            solutions comme de véritables dispositifs médicaux, afin de permettre leur prise en charge et d'en 
+                            démocratiser l'accès.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="categorie-3" class="container-fluid mx-auto mt-5" data-aos="zoom-in-up" data-aos-delay="400">
+                    <span class="alcim-veille text-uppercase fw-bolder">3. Lecture et compréhension de documents</span>
+                    <div class="pt-2 pb-1">
+                        <p class="mt-4 mb-0">
+                            Malgré la généralisation du numérique, des millions de documents restent hors de portée 
+                            pour les personnes aveugles et malvoyantes. PDF scannés, formulaires administratifs, 
+                            factures, notices médicales ou contrats sont souvent conçus comme de simples images, 
+                            rendant leur contenu invisible pour les lecteurs d'écran traditionnels.
+                        </p>
+                        <p class="mt-0">
+                            Cette inaccessibilité ne relève pas seulement d'un inconfort : elle constitue un 
+                            véritable frein à l'autonomie, à l'accès aux droits et à l'égalité des chances.
+                        </p>
+                    </div>
+                    
+                    <div class="pb-1">
+                        <p class="my-4 fst-italic text-decoration-underline">La solution apportée par l'intelligence artificielle</p>
+                        <p class="mb-4"> 
+                            Les avancées récentes reposent sur la combinaison de l'OCR (Optical Character Recognition) et 
+                            de modèles de langage avancés, tels que ceux utilisés par ChatGPT. <br>
+                            L'enjeu ne se limite plus à « lire » un document, mais à le comprendre, l'analyser et le rendre exploitable.
+                        </p>    
+                    </div>
+                    <div class="pt-1">
+                        <p class="my-4 fst-italic text-decoration-underline">Des capacités profondément transformatrices</p>
+                        <p class="mb-2">Grâce à cette synergie entre OCR et IA, il devient possible de :</p>
+                        <ul class=" list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                            <li>◈ Lire des documents scannés et des formulaires complexes, jusque-là inaccessibles</li>
+                            <li>◈ Structurer automatiquement le contenu pour les lecteurs d'écran (titres, paragraphes, listes, tableaux)</li>
+                            <li>◈ Résumer un document long en quelques phrases claires et pertinentes</li>
+                            <li>◈ Expliquer des termes techniques, médicaux ou juridiques dans un langage accessible</li>
+                            <li>◈ Naviguer intelligemment dans le document en accédant directement à une section ou une information clé</li>
+                        </ul>
+                    </div>
+                    <div class="pt-2 pb-4">
+                        <p class="my-4 fst-italic text-decoration-underline">Un impact concret sur l'autonomie</p>
+                        <p class="mb-0"> 
+                            Grâce à ces technologies, un document auparavant « mort » — illisible par les outils classiques — devient 
+                            consultable, navigable et compréhensible avec un lecteur d'écran. <br>
+                            L'expérience de lecture se transforme radicalement : l'utilisateur reprend le contrôle de 
+                            l'information, peut effectuer ses démarches de manière autonome et accéder à des contenus complexes sans 
+                            assistance.
+                        </p>   
+                        <p>
+                            Cette évolution marque une étape décisive vers une accessibilité documentaire réellement inclusive, 
+                            où l'intelligence artificielle agit comme un véritable médiateur entre le texte et l'utilisateur.
+                        </p> 
+                    </div>
+                </div>
+
+                <div id="categorie-4" class="container-fluid mx-auto mt-5" data-aos="zoom-in-up" data-aos-delay="400">
+                    <span class="alcim-veille text-uppercase fw-bolder">4. Navigation et mobilité assistées par l'IA</span>
+                    <div class="pt-2 pb-4">
+                        <p class="mt-4 mb-0">
+                            La mobilité a longtemps été l'un des plus grands défis pour les personnes aveugles et malvoyantes. 
+                            Là où il fallait auparavant solliciter systématiquement l'aide de passants, les technologies 
+                            d'assistance redéfinissent aujourd'hui les usages et les réflexes.
+                        </p>
+                        <p>Comme le résume <strong class="fst-italic">Mathys</strong>, chargé des études stratégiques au Campus Louis Braille :</p>
+                        <p class="fst-italic references">
+                            <a class="text-white" target="_blank" href="https://www.sciencesetavenir.fr/sante/ophtalmo/malvoyance-quelles-solutions-pour-le-deficit-visuel-en-2040_189307">« Avant, pour se déplacer, on était vraiment perdu n'importe où et on demandait 
+                            de l'aide dans la rue. Aujourd'hui, on pense plus aux oreillettes, aux batteries et à la 
+                            qualité du réseau. » </a></p>
+                        <p>
+                            Cette évolution illustre le passage d'une dépendance humaine à une autonomie technologique, 
+                            rendue possible par l'intelligence artificielle.
+                        </p>
+                    </div>
+                    <div class="pt-2 pb-4">
+                        <p class="fst-italic">Les solutions actuelles</p>
+                        <table class="table table-dark table-striped text-white fs-6 box-shadow-IA">
+                            <thead>
+                                <tr class="align-middle fs-5">
+                                    <th scope="col">Application</th>
+                                    <th scope="col">Caractéristiques</th>
+                                    <th scope="col" class="d-none d-sm-table-cell">Innovation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="align-middle">
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td class="d-none d-sm-table-cell"></td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">Ezymob</th>
+                                    <td>Navigation GPS adaptée, guidage vocal précis</td>
+                                    <td class="d-none d-sm-table-cell">Itinéraires optimisés pour l'accessibilité</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">SonarVision</th>
+                                    <td>Guidage sonore basé sur la réalité augmentée</td>
+                                    <td class="d-none d-sm-table-cell">Son 3D directionnel pour l'orientation</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">EyeView <br> (Fédération des aveugles de France)</th>
+                                    <td>Navigation intérieure et extérieure</td>
+                                    <td class="d-none d-sm-table-cell">Cartographie détaillée des bâtiments publics</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">Artha (Prix Lépine 2024 🏆)</th>
+                                    <td>Ceinture haptique intelligente</td>
+                                    <td class="d-none d-sm-table-cell">Vibrations tactiles pour percevoir l'environnement</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class=" pb-4">
+                        <div class="mt-3">
+                            <p class=" mt-4 mb-2 h4 fst-italic aveugle">Focus innovation : la ceinture Artha</p>
+                            <p class="mt-4 lien-extern">
+                                Récompensée au Concours Lépine 2024, <a class="text-white fst-italic" target="_blank" href="https://informations.handicap.fr/a-artha-ceinture-lunette-lepine-aveugle-concours-36675.php"><strong>Artha</strong></a> 
+                                est une invention française qui repousse les limites de la mobilité assistée. 
+                                Elle propose une approche radicalement différente, basée sur le sens du 
+                                toucher plutôt que sur le son.
+                            </p>
+                            <p class="text-decoration-underline fst-italic mb-2">Le système</p>
+                            <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                <li>◈ Une ceinture portée autour des lombaires</li>
+                                <li>◈ Une caméra miniature, clippée sur une paire de lunettes</li>
+                                <li>◈ Des algorithmes d'IA embarqués, analysant l'environnement en temps réel</li>
+                                <li>◈ Un système de vibrations haptiques, retransmises dans le dos de l'utilisateur</li>
+                            </ul>
+                        </div>
+                        <div class="mt-4">
+                            <p class="my-4 text-decoration-underline fst-italic">Comment ça fonctionne</p>
+                            <p>
+                                La caméra capte l'environnement, y compris dans l'obscurité grâce à la vision 
+                                nocturne. Les images sont instantanément analysées par l'intelligence 
+                                artificielle, puis traduites en sensations tactiles. Cette cartographie 
+                                sensorielle permet de « ressentir » l'espace, sans surcharge auditive.
+                            </p>
+                            <p class=" fst-italic mb-2">Exemples concrets d'interprétation :</p>
+                            <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                <li>◈ Vibration à gauche → obstacle à gauche</li>
+                                <li>◈ Vibration centrale → obstacle devant</li>
+                                <li>◈ Vibration à droite → chemin libre</li>
+                            </ul>
+                        </div>
+                        <div class="row justify-content-end mt-1">
+                            <div class="col-md-10 mt-4">
+                                <p class=" mt-2 mb-4 text-decoration-underline fst-italic">Des avantages uniques</p>
+                                <p class="mb-2">
+                                    Ces technologies de navigation assistée introduisent une nouvelle manière 
+                                    de percevoir l'espace, en s'appuyant sur des sens souvent sous-exploités :
+                                </p>
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                    <li>◈ Perception tactile de l'environnement, venant compléter efficacement 
+                                        le son et l'usage de la canne blanche</li>
+                                    <li>◈ Utilisation possible de jour comme de nuit, grâce à la vision infrarouge intégrée</li>
+                                    <li>◈ Mains libres, permettant des déplacements plus naturels, sans contrainte matérielle</li>
+                                    <li>◈ Confort et discrétion, avec un ressenti efficace à travers les vêtements, 
+                                        sans gêne ni exposition visible</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                            <div class="col-md-10 mt-4">
+                                <p class=" mb-4 text-decoration-underline fst-italic">Fonctionnalités communes des outils de navigation assistée</p>
+                                <p class="mb-2">
+                                    Malgré la diversité des solutions, les outils de mobilité basés sur l'intelligence 
+                                    artificielle reposent sur un socle de fonctionnalités essentielles, devenues incontournables :
+                                </p>
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                    <li>◈ Détection intelligente des obstacles (poteaux, branches, mobilier urbain)</li>
+                                    <li>◈ Reconnaissance des passages piétons et des feux tricolores, pour sécuriser les traversées</li>
+                                    <li>◈ Identification des numéros de rue et des enseignes, facilitant le repérage urbain</li>
+                                    <li>◈ Guidage vocal précis vers une destination, adapté aux besoins spécifiques des utilisateurs</li>
+                                    <li>◈ Annonce en temps réel de l'arrivée des transports en commun, renforçant l'autonomie 
+                                        dans les déplacements quotidiens</li>
+                                </ul>
+                            </div>
+                        <p>
+                            Cette nouvelle génération d'outils marque une avancée majeure : la mobilité ne repose plus uniquement 
+                            sur l'ouïe ou l'aide humaine, mais sur une perception augmentée de l'espace, adaptée aux besoins 
+                            et aux préférences de chacun.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="categorie-5" class="container-fluid mx-auto mt-5 pb-3" data-aos="zoom-in-up" data-aos-delay="400">
+                    <span class="alcim-veille text-uppercase fw-bolder">5. Interfaces vocales et personnalisation</span>
+                    <div class="pt-2 pb-2">
+                        <p class="my-4">
+                            Les interfaces vocales permettent une interaction entièrement orale avec les appareils 
+                            numériques, sans dépendre d'une interface graphique. Pour les personnes aveugles et 
+                            malvoyantes, la voix devient une véritable interface universelle, simple, rapide et 
+                            naturelle, ouvrant l'accès à un large éventail de services numériques.
+                        </p>
+                    </div>
+                    <div class="mt-4">
+                        <p class="mb-4 text-decoration-underline fst-italic">Des assistants vocaux de plus en plus adaptés</p>
+                        <p class="mb-2">
+                        Les principaux assistants vocaux du marché — <strong class="fst-italic">Siri (Apple), Google Assistant et 
+                        Alexa (Amazon)</strong> — jouent aujourd'hui un rôle central dans l'accessibilité :
+                        </p>
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                            <li>◈ Pilotage de la domotique : éclairage, chauffage, volets roulants ou appareils électroménagers</li>
+                            <li>◈ Recherche d'informations par simple commande vocale</li>
+                            <li>◈ Rédaction et dictée d'e-mails, de messages ou de documents</li>
+                            <li>◈ Gestion du quotidien : rappels, agendas, appels, météo</li>
+                        </ul>
+                    </div>
+                    <div class="mt-5">
+                        <p class=" my-4 text-decoration-underline fst-italic">Une expérience personnalisable selon les besoins</p>
+                        <p class="mb-2">
+                        L'un des atouts majeurs des interfaces vocales réside dans leur haut niveau de personnalisation. 
+                        Chaque utilisateur peut adapter l'outil à ses préférences et à son confort :
+                        </p>
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mb-1">
+                            <li>◈ Réglage du rythme de lecture</li>
+                            <li>◈ Choix du niveau de détail des informations</li>
+                            <li>◈ Sélection d'une voix préférée (ton, timbre, accent)</li>
+                        </ul>
+                        <p>Cette personnalisation améliore significativement l'expérience utilisateur et réduit la fatigue cognitive.</p>
+                    </div>
+
+                    <div class="row justify-content-end mt-1">
+                        <div class="col-md-10 pt-2">
+                            <p class="my-4 h4 fst-italic aveugle"> Innovation récente : Gemini intégré à TalkBack</p>
+                            <p class="lien-extern mb-0">
+                                Google a récemment annoncé l'intégration de Gemini, son intelligence artificielle générative, au lecteur d'
+                                <a class="text-white fst-italic" target="_blank" href="https://www.frandroid.com/culture-tech/intelligence-artificielle/google-gemini/2616859_google-ajoute-gemini-a-talkback-et-ca-change-tout-on-vous-explique-pourquoi"><strong>écran TalkBack</strong></a>.
+                                Cette avancée marque une étape importante dans l'accessibilité mobile.
+                            </p>
+                            <p>
+                                Grâce à Gemini, TalkBack ne se contente plus de lire l'écran : il analyse le contenu visuel, fournit des 
+                                descriptions d'images enrichies et permet à l'utilisateur de poser des questions contextuelles sur ce 
+                                qui est affiché.
+                            </p>
+                        </div>
+                        <div class="col-md-10 mt-1">
+                            <p class="my-4 text-decoration-underline fst-italic">Exemple d'usage concret</p>
+                            <p class="mb-0">
+                                Une personne aveugle navigue sur un site de e-commerce. Une image de produit apparaît 
+                                sans description alternative. Gemini analyse l'image et annonce : <span class="fst-italic">« 
+                                    Chaussures de randonnée marron en cuir, semelle crantée, lacets noirs. »</span>
+                                </p>
+                            <p>L'utilisateur peut alors décider en toute autonomie s'il souhaite poursuivre son achat ou explorer des produits similaires.</p>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <p class="my-4 text-decoration-underline fst-italic">Un impact direct sur l'autonomie</p>
+                        <p>
+                            Ces innovations renforcent considérablement l'autonomie domestique et professionnelle des personnes 
+                            aveugles et malvoyantes. En rendant les interfaces numériques plus intelligentes, conversationnelles 
+                            et personnalisables, l'IA contribue activement à réduire la fracture numérique et à favoriser une 
+                            inclusion plus équitable dans la société numérique.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="categorie-6" class="container-fluid mx-auto mt-5 pt-2" data-aos="zoom-in-up" data-aos-delay="400">
+                    <span class="alcim-veille text-uppercase fw-bolder">6. Lunettes connectées avec IA</span>
+                    <div class="pt-2 pb-4">
+                        <p class="mt-4 mb-0">
+                            Les lunettes connectées marquent une rupture majeure dans l'accessibilité visuelle. 
+                            Elles replacent l'assistance au niveau du regard, sans nécessiter de sortir un smartphone, 
+                            de cadrer une image ou de naviguer dans une interface complexe. <br>
+                            L'information est captée en temps réel et transmise directement dans l'oreille de 
+                            l'utilisateur, de manière fluide, naturelle et continue.
+                        </p>
+                        <p>
+                            Cette approche transforme l'expérience en s'intègrant l'IA au geste, au mouvement et 
+                            à l'interaction sociale, sans interrompre l'action.
+                        </p>
+                    </div>
+                    
+                    <div class=" pb-4">
+                        <div class="mt-2">
+                            <p class="my-4 h4 fst-italic aveugle">Solution phare : Ally Solos Glasses (Solos × Envision)</p>
+                            <p>
+                                Récompensées aux <strong>App Store Awards 2025</strong>, dans la catégorie Impact culturel, 
+                                <a class="text-white" target="_blank" href="https://www.watchgeneration.fr/wearables/2025/08/ally-solos-glasses-des-lunettes-connectees-carburant-lia-concues-pour-les-personnes-malvoyantes-18535">les Ally Solos Glasses</a> 
+                                 incarnent cette nouvelle génération d'aides visuelles. Elles intègrent Ally, l'assistant vocal 
+                                développé par <strong class="fst-italic">Envision</strong> et propulsé par l'intelligence artificielle.
+                            </p>
+                        </div>
+                        <div class="mt-5">
+                            <p class="my-4 fst-italic text-decoration-underline">Fonctionnalités :</p>
+                            <p class="mb-2">
+                                Ces lunettes connectées proposent un ensemble de fonctionnalités avancées, 
+                                entièrement pilotées à la voix, pour une interaction fluide et sans friction :
+                            </p>
+                            <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mb-1">
+                                <li>◈ Lecture en temps réel de textes : livres, menus, panneaux, courriers ou documents du quotidien</li>
+                                <li>◈ Reconnaissance d'objets et de visages, permettant une meilleure compréhension de l'environnement immédiat</li>
+                                <li>◈ Description de scènes, afin d'identifier ce qui se déroule devant soi en un instant</li>
+                                <li>◈ Interaction vocale intuitive, sans menus complexes ni manipulations techniques</li>
+                            </ul>
+                        </div>
+                        <div class="mt-5">
+                            <p class="my-4 fst-italic text-decoration-underline">Une utilisation simple et naturelle</p>
+                            <p class="mb-2">
+                                L'expérience repose sur un dialogue direct avec l'intelligence artificielle. Une fois les lunettes portées, 
+                                l'utilisateur peut poser ses questions à voix haute, comme dans une conversation :
+                            </p>
+                            <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mb-1">
+                                <li>◈ <span class="fst-italic">« Qu'est-ce qu'il y a devant moi ? »</span></li>
+                                <li>◈ <span class="fst-italic">« Lis ce panneau. »</span></li>
+                                <li>◈ <span class="fst-italic">« Qui est cette personne ? »</span></li>
+                            </ul>
+                            <p>
+                                Les réponses sont immédiates, contextualisées et délivrées de manière discrète, 
+                                permettant de rester pleinement engagé dans son environnement et ses interactions.
+                            </p>
+                        </div>
+                        <div class="mt-5" >
+                            <p class="my-4 fst-italic text-decoration-underline">Un avantage décisif : la liberté de mouvement</p>
+                            <p class="mb-0">
+                            Contrairement à l'usage du smartphone — sortir l'appareil, le déverrouiller, cadrer, zoomer, 
+                            attendre — les lunettes connectées offrent une réponse instantanée, mains libres, tout en 
+                            permettant de continuer à marcher, échanger ou se déplacer.
+                            </p>
+                            <p>
+                                Cette continuité d'usage constitue un gain considérable en confort, en sécurité et en autonomie.
+                            </p>
+                        </div>
+                    </div>
+                    <div class=" pb-3">
+                        <div class="mt-1">
+                            <p class="my-4 h4 fst-italic aveugle">Une alternative grand public : Ray-Ban Meta Smart Glasses</p>
+                            <p class="references mb-0">
+                                Les <a class="text-white fst-italic" target="_blank" href="https://www.meta.com/fr/ai-glasses/">Ray-Ban Meta Smart Glasses </a> 
+                                illustrent une tendance émergente majeure : des produits conçus à l'origine pour le grand 
+                                public qui, grâce à l'intelligence artificielle, deviennent de véritables leviers 
+                                d'accessibilité pour les personnes aveugles et malvoyantes.
+                            </p>
+                            <p class="mb-2">
+                                En intégrant Meta AI, ces lunettes étendent leurs usages bien au-delà 
+                                de la simple connectivité et proposent des fonctionnalités à fort impact inclusif :
+                            </p>
+                            <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mb-1 references">
+                                <li>◈ Descriptions détaillées de l'environnement, permettant de mieux comprendre ce qui entoure l'utilisateur</li>
+                                <li>◈ Fonction « Call a Volunteer », reliée au réseau mondial de bénévoles <a class="text-white fst-italic" target="_blank" href="https://www.bemyeyes.com/fr/"><strong>Be My Eyes</strong></a>, pour obtenir une aide humaine en temps réel</li>
+                                <li>◈ Assistance à la navigation en mobilité, facilitant les déplacements et le repérage dans l'espace</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-1">
+                        <p class="my-4 text-decoration-underline fst-italic">Vers une accessibilité intégrée et invisible</p>
+                        <p>
+                            Avec les lunettes connectées, l'accessibilité ne se présente plus comme un outil à part, mais comme 
+                            une extension naturelle de la perception. Discrètes, intuitives et puissantes, elles préfigurent un 
+                            futur où l'IA accompagne les personnes aveugles et malvoyantes sans stigmatisation, directement au 
+                            plus près de leur quotidien.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="container text-white py-5">
+                <div class="container-fluid justify-content-end row mt-3" data-aos="fade-up-right" data-aos-delay="300">
+                    <div class="col-md-10 mb-3 defis">
+                        <span class="alcim text-uppercase fw-bolder">Défis actuels et limites de l'IA pour l'accessibilité visuelle</span>
+                        <div class="pb-4 row mt-4">
+                            <p class="mt-4 mb-2 h4 fst-italic aveugle">Une accessibilité numérique encore insuffisante</p>
+                            <p class="mt-4 mb-2">
+                               Malgré la montée en puissance des outils d'assistance, le numérique demeure largement 
+                               excluant pour les personnes aveugles et malvoyantes. Aujourd'hui, seuls 10 % des sites 
+                               web peuvent être considérés comme réellement accessibles, et les normes WCAG restent 
+                               trop souvent ignorées ou mal appliquées. Cette situation s'explique en partie par un 
+                               manque de formation à l'accessibilité dans les filières du numérique, où ces enjeux 
+                               restent encore marginaux.
+                            </p>
+                            <p>
+                                En conséquence, même équipés de lecteurs d'écran performants et de solutions d'intelligence 
+                                artificielle avancées, les utilisateurs se heurtent quotidiennement à des formulaires 
+                                inexploitables, des images sans description alternative ou des parcours de navigation 
+                                incohérents. Un véritable cercle vicieux s'installe alors : le manque d'investissement 
+                                conduit à des sites inaccessibles, qui limitent l'usage par les personnes concernées, 
+                                renforçant à leur tour l'idée erronée que l'accessibilité n'est pas un enjeu prioritaire.
+                            </p>
+                        </div>
+
+                        <div class="row justify-content-end mt-1">
+                            <div class="col-md-10 pb-4">
+                                <p class="mt-4 mb-2 h4 fst-italic aveugle">Le coût des technologies d'assistance : une barrière majeure</p>
+                                <p class="mt-4 mb-2">
+                                <!-- MyEye OrCam : 3 000 à 4 750 €; Lunettes AR avancées : 2 000 à 5 000 €-->
+                                Malgré leur potentiel transformateur, les technologies d'assistance les plus 
+                                innovantes demeurent souvent financièrement inaccessibles. Des dispositifs 
+                                comme <strong class="fst-italic">MyEye OrCam</strong>, certaines lunettes de réalité augmentée ou d'autres aides 
+                                techniques avancées peuvent représenter un investissement de plusieurs milliers 
+                                d'euros, allant parfois jusqu'à 10 000 euros.
+                                </p>
+                                <p>
+                                    En France, ces solutions sont encore peu ou pas prises en charge par 
+                                    la Sécurité sociale, la <strong>PCH</strong> (Prestation de Compensation du Handicap) ou les mutuelles, 
+                                    ce qui soulève un enjeu majeur d'équité. La reconnaissance de ces technologies 
+                                    comme de véritables dispositifs médicaux apparaît dès lors indispensable 
+                                    pour permettre leur remboursement et garantir une accessibilité réelle, durable et universelle.
+                                </p>
+                            </div>
+                       </div>
+                        <div class="pb-4 row">
+                            <p class="mt-4 mb-2 h4 fst-italic aveugle">Le risque d'un isolement technologique</p>
+                            <p class="mt-4 mb-2">
+                               Si l'intelligence artificielle renforce considérablement l'autonomie des personnes 
+                               aveugles et malvoyantes, elle peut aussi, paradoxalement, affaiblir les interactions 
+                               humaines lorsqu'elle devient omniprésente. Ce risque d'isolement est d'autant plus 
+                               important que la technologie tend à remplacer des échanges autrefois spontanés.
+                            </p>
+                            <p class="mb-2 references">
+                                Comme le souligne <strong class="fst-italic">Mathys</strong>, chargé des études stratégiques au Campus Louis Braille : <br>
+
+                                <a class="text-white fst-italic" target="_blank" href="https://www.sciencesetavenir.fr/sante/ophtalmo/malvoyance-quelles-solutions-pour-le-deficit-visuel-en-2040_189307">
+                                « Prenons garde au risque d'isolement induit par trop de technologie. Les liens humains, c'est bien aussi. »</a>
+                            </p>
+                            <p>
+                                Une dépendance excessive aux outils numériques, combinée à la frustration générée 
+                                par les pannes, les problèmes de réseau ou de batterie, rappelle une évidence : 
+                                l'IA doit rester un outil complémentaire, et non un substitut au lien social. 
+                                Des solutions comme <strong class="fst-italic">Be My Eyes</strong> incarnent cet équilibre vertueux, en associant 
+                                la puissance de l'intelligence artificielle à la richesse de l'entraide humaine.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid row py-4 mt-2" data-aos="fade-up-left" data-aos-delay="400">
+                    <div class="col-md-10 mb-3 defis">
+                        <span class="alcim text-uppercase fw-bolder">Perspectives d'avenir et recommandations</span>
+                        <div class="pb-4 row">
+                            <p></p>
+                            <p class="my-4">
+                               L'avenir de l'accessibilité visuelle s'oriente vers des solutions toujours plus précises, 
+                               intégrées et universelles. L'intelligence artificielle, associée à de nouvelles interfaces 
+                               sensorielles, ne cherche plus uniquement à compenser la déficience visuelle, mais à 
+                               concevoir des environnements accessibles par défaut, intégrant l'inclusion dès leur 
+                               conception.
+                            </p>
+                            <p>
+                                <strong class="aveugle">À court terme</strong>, les progrès attendus portent sur une amélioration significative de la 
+                                fiabilité et du contexte des descriptions d'images, la démocratisation de lunettes 
+                                connectées plus abordables, ainsi que l'intégration progressive de l'IA dans les 
+                                transports publics, notamment pour les annonces et le guidage. Parallèlement, la 
+                                navigation intérieure devrait se généraliser dans des lieux complexes comme les gares, 
+                                hôpitaux ou musées.
+                            </p>
+                            <p>
+                                <strong class="aveugle">À moyen terme</strong>, l'évolution se dirigera vers des interfaces haptiques avancées, permettant 
+                                de ressentir l'environnement par le toucher, et vers une IA multimodale combinant audio et 
+                                retour tactile. Le développement de cartographies 3D accessibles en temps réel et 
+                                l'adoption de standards internationaux communs renforceront l'interopérabilité et 
+                                l'accessibilité globale des solutions.
+                            </p>
+                            <p>
+                                <strong class="aveugle">À long terme</strong>, des technologies encore expérimentales ouvrent des perspectives inédites, 
+                                telles que les interfaces cerveau-machine permettant un contrôle sans interaction physique, 
+                                ou les implants visuels couplés à l'IA visant une restauration partielle de la vision. 
+                                Ces avancées s'inscrivent dans une vision plus large de villes intelligentes pensées 
+                                accessibles dès leur conception, où l'accessibilité devient une norme et non une 
+                                adaptation.
+                            </p>
+                        </div>
+
+                        <div class="row justify-content-end mt-1"> 
+                            <div class="col-md-10 pb-4">
+                                <p class="my-4 h4 fst-italic aveugle">Interfaces cerveau-machine : une piste à surveiller</p>
+                                <p class="mb-1">
+                                    Des projets expérimentaux, comme les travaux menés par <strong class="fst-italic">Apple et Synchron</strong> ou
+                                    <strong class="fst-italic">Neuralink</strong>, explorent la possibilité de contrôler des appareils par la pensée ou de restaurer 
+                                    certaines fonctions sensorielles.
+                                </p>
+                                <p class="mb-1">
+                                    Même si ces technologies ne ciblent pas encore directement les personnes aveugles, elles 
+                                    illustrent le potentiel de l'IA couplée aux capteurs neuronaux pour contourner 
+                                    des limitations sensorielles.
+                                </p>
+                                <p>
+                                    Elles soulèvent toutefois d'importantes questions éthiques (sécurité, 
+                                    consentement, données neuronales) et doivent être abordées avec prudence.
+                                </p>
+                            </div>
+                        </div>
+                         <div class="row justify-content-center mt-1">
+                             <div class="col-md-10 pb-4 row">
+                                 <p class="my-4 h4 fst-italic aveugle">Recommandations pour une IA réellement inclusive</p>
+                                 <p>
+                                     Pour que l'intelligence artificielle devienne un véritable levier d'inclusion, elle 
+                                     doit être pensée avec et pour les personnes concernées. La co-conception est essentielle : 
+                                     impliquer les utilisateurs dès les premières phases de développement, tester les solutions 
+                                     en conditions réelles et intégrer leurs retours en continu permet de concevoir des outils 
+                                     réellement adaptés, comme le démontre l'approche du Campus Louis Braille.
+                                 </p>
+                                 <p>
+                                     L'accessibilité doit également être intégrée dès la conception des produits numériques. 
+                                     Former les développeurs aux normes WCAG, adopter de bonnes pratiques dès le départ et 
+                                     réaliser des audits réguliers évitent que l'accessibilité ne soit traitée comme une 
+                                     contrainte tardive ou secondaire.
+                                 <p>
+                                     Par ailleurs, le recours à des standards ouverts et interopérables est indispensable. 
+                                     Favoriser l'open source et éviter les écosystèmes fermés permet aux utilisateurs de ne 
+                                     pas être enfermés dans une solution unique et garantit une meilleure pérennité des 
+                                     technologies d'assistance.
+                                 </p>
+                                 <p>
+                                     L'enjeu est aussi institutionnel et économique. La reconnaissance des aides 
+                                     technologiques comme dispositifs médicaux constitue une étape clé pour permettre 
+                                     leur remboursement et assurer un accès équitable, indépendamment des ressources 
+                                     financières des utilisateurs.
+                                 </p>
+                                 <p>
+                                     Enfin, une IA inclusive ne peut exister sans un effort continu de formation 
+                                     et de sensibilisation. Former les professionnels, informer le grand public et 
+                                     valoriser les bonnes pratiques sont des leviers essentiels pour diffuser durablement 
+                                     une culture de l'accessibilité et de l'inclusion.
+                                 </p>
+                             </div>
+
+                         </div>
+                    </div>  
+                </div>
+
+                <div class="container-fluid row py-4 mt-2" data-aos="fade-up-left" data-aos-delay="400">
+                    <div class="col-md-10 mb-3 defis">
+                        <span class="alcim text-uppercase fw-bolder">Accessibilité et inclusion : vers une société réellement inclusive</span>
+                        <div class="pb-4 row">
+                            <p class="my-4">
+                                Au-delà des prouesses techniques, l'intelligence artificielle doit être un levier 
+                                d'inclusion sociale. L'accessibilité ne consiste pas seulement à compenser une 
+                                déficience visuelle, mais à permettre aux personnes aveugles et malvoyantes de 
+                                participer pleinement à la vie collective, sur un pied d'égalité.
+                            </p>
+                            <p class="mb-2">Les piliers de l'inclusion par l'IA :</p>
+                            <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                <li>◈ <strong class="fst-italic text-decoration-underline">Autonomie :</strong> L'IA permet de 
+                                    réduire la dépendance à l'entourage pour lire un courrier, faire des courses, se déplacer ou 
+                                    voyager. Elle redonne un contrôle direct sur le quotidien, et avec lui, un sentiment de 
+                                    dignité et d'indépendance.</li>
+                                <li>◈ <strong class="fst-italic text-decoration-underline">Égalité d'accès à l'information :</strong> 
+                                    L'accès à l'information devient plus équitable lorsque les sites web, applications, 
+                                    documents administratifs, œuvres culturelles ou contenus éducatifs sont conçus 
+                                    pour être accessibles dès l'origine.</li>
+                                <li>◈ <strong class="fst-italic text-decoration-underline">Participation citoyenne et 
+                                    professionnelle :</strong> Grâce aux technologies d'assistance, les personnes aveugles 
+                                    peuvent accéder aux services publics, participer à la vie professionnelle (réunions, 
+                                    outils numériques, documents) et prendre part à la vie sociale et culturelle sans 
+                                    exclusion.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid row justify-content-end py-4 mt-2" data-aos="fade-up-right" data-aos-delay="400">
+                    <div class="col-md-10 mb-3 defis box-shadow">
+                        <span class="alcim text-uppercase fw-bolder">Conclusion</span>
+                        <div class="pb-4 row">
+                            <p class="mt-4 mb-2">
+                                L'intelligence artificielle transforme profondément l'accessibilité 
+                                pour les personnes aveugles et malvoyantes. Là où l'information visuelle excluait, 
+                                elle devient progressivement interprétable, navigable et actionnable : lecture instantanée 
+                                de textes et d'images, compréhension de documents complexes, guidage en mobilité, interfaces 
+                                vocales et lunettes connectées qui rendent l'assistance plus naturelle et continue.
+                            </p>
+                            <p class="my-2">
+                                Cette dynamique est particulièrement bien illustrée par le Campus Louis Braille, qui montre 
+                                que l'innovation ne fonctionne vraiment que lorsqu'elle est pensée avec les personnes 
+                                concernées, et pas seulement pour elles. En associant recherche, startups, formation 
+                                et co-conception, tout en intégrant la question du coût et de l'accompagnement dès le 
+                                départ, le Campus propose un modèle d'innovation à la fois technologique et social.
+                            </p>
+                            <p class="my-2">
+                                Mais cette révolution reste incomplète : la fiabilité de certaines IA, l'inaccessibilité 
+                                persistante de nombreux sites, le prix élevé des aides techniques et le risque d'un 
+                                isolement “tout-technologique” rappellent une évidence. Pour être réellement inclusive, 
+                                l'IA doit être sûre, accessible financièrement, interopérable, et conçue by design, tout 
+                                en laissant une place essentielle aux relations humaines.
+                            </p>
+                            <p class="my-2">
+                                En résumé, l'IA est un levier puissant — à condition de rester au service de l'humain 
+                                et de contribuer à une société où l'autonomie n'exclut jamais le lien, et où 
+                                l'accessibilité devient la norme, pas l'exception.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid row justify-content-end py-4 mt-2 references-liens" data-aos="fade-up-right" data-aos-delay="400">
+    <div class="accordion accordion-flush bg-dark" id="accordionFlushReferences">
+        <div class="accordion-item bg-dark">
+            <h2 class="accordion-header">
+                <span class="alcim text-uppercase fw-bolder accordion-button collapsed bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Bibliographie</span>
+                <!-- sources éditoriales : articles de presse, billets signés, publications/rapports -->
+            </h2>
+
+            <div id="flush-collapseOne" class="accordion-collapse collapse bg-dark" data-bs-parent="#accordionFlushReferences">
+                <div class="accordion-body text-white">
+                    <p class="fw-bold mb-3 h4 aveugle text-decoration-underline">Handicap visuel et intelligence artificielle</p>
+                    <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                        <li>◈ EYESEEMAG : "MyEye OrCam, l'intelligence artificielle au service des malvoyants", 2025. [en ligne] <a href="https://eye-see-mag.com/high-tech/lintelligence-artificielle-au-service-des-malvoyants/" target="_blank">URL</a> [consulté le 3 janvier 2026].</li>
+                        <li>◈ Le Monde : "L'IA, des outils incroyables pour les personnes en situation de handicap", 3 décembre 2025. [en ligne] <a href="https://www.lemonde.fr/pixels/article/2025/12/03/l-ia-des-outils-incroyables-pour-les-personnes-en-situation-de-handicap_6655791_4408996.html" target="_blank">URL</a> [consulté le 5 janvier 2026].</li>
+                        <li>◈ Sciences et Avenir : "Malvoyance : quelles solutions pour le déficit visuel en 2040 ?", 14 novembre 2025. [en ligne] <a href="https://www.sciencesetavenir.fr/sante/ophtalmo/malvoyance-quelles-solutions-pour-le-deficit-visuel-en-2040_189307" target="_blank">URL</a> [consulté le 5 janvier 2026].</li>
+                        <li>◈ Guide-Vue : "Les déficiences visuelles, un état des lieux à l'échelle mondiale", 5 juillet 2023. [en ligne] <a href="https://www.sciencesetavenir.fr/sante/ophtalmo/malvoyance-quelles-solutions-pour-le-deficit-visuel-en-2040_189307" target="_blank">URL</a> [consulté le 17 juin 2025].</li>
+                        <li>◈ LesEchos : "Comment l'intelligence artificielle va révolutionner la vie des malvoyants", 11 février 2019. [en ligne] <a href="https://www.lesechos.fr/tech-medias/intelligence-artificielle/comment-lintelligence-artificielle-va-revolutionner-la-vie-des-malvoyants-963448" target="_blank">URL</a> [consulté le 12 juillet 2025].</li>
+                        <li>◈ Anne-Aël Durand : "L’IA, des « outils incroyables » pour les personnes en situation de handicap", 3 décembre 2025. [en ligne] <a href="https://www.lemonde.fr/pixels/article/2025/12/03/l-ia-des-outils-incroyables-pour-les-personnes-en-situation-de-handicap_6655791_4408996.html" target="_blank">URL</a> [consulté le 8 janvier 2026].</li>
+                    </ul>
+                    
+                    <p class="fw-bold mb-3 mt-4 h4 aveugle text-decoration-underline">Campus Louis Braille et innovation inclusive</p>
+                    <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                        <li>◈ Sorbonne Université : "Lancement du Campus Louis Braille", 5 décembre 2024. [en ligne] <a href="https://www.sorbonne-universite.fr/dossiers/sante-globale/lancement-du-campus-louis-braille" target="_blank">URL</a> [consulté le 5 janvier 2026].</li>
+                        <li>◈ Sorbonne Université : "Cybathlon : un dispositif de guidage innovant pour les personnes déficientes visuelles", 23 octobre 2024. [en ligne] <a href="https://www.sorbonne-universite.fr/dossiers/sante-globale/cybathlon-un-dispositif-de-guidage-innovant-pour-les-personnes-deficientes-visuelles" target="_blank">URL</a> [consulté le 5 janvier 2026].</li>
+                        <li>◈ France Culture / Radio France : "Campus Louis Braille, un incubateur pour start-up et chercheurs au service du quotidien des aveugles", 15 janvier 2025 [en ligne] <a href="https://www.radiofrance.fr/franceculture/podcasts/le-reportage-de-la-redaction/campus-louis-braille-un-incubateur-pour-start-up-et-chercheurs-au-service-du-quotidien-des-aveugles-9324937" target="_blank">URL</a> [consulté le 5 janvier 2026].</li>
+                        <li>◈ Acuité : "Le Campus Louis Braille, nouveau hub de l'innovation pour le handicap visuel", 17 juillet 2025 [en ligne] <a href="https://www.acuite.fr/actualite/profession/315148/le-campus-louis-braille-nouveau-hub-de-linnovation-pour-le-handicap" target="_blank">URL</a> [consulté le 5 janvier 2026].</li>
+                    </ul>
+                    
+                    <p class="fw-bold mb-3 mt-4 h4 aveugle text-decoration-underline">Innovations et technologies d'assistance</p>
+                    <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                        <li>◈ Journal du Geek : "Des lunettes connectées qui facilitent la vie des malvoyants", 17 août 2025. [en ligne] <a href="https://www.journaldugeek.com/2025/08/17/des-lunettes-connectees-qui-facilitent-la-vie-des-malvoyants/" target="_blank">URL</a> [consulté le 27 décembre 2025].</li>
+                        <li>◈ L'Informaticien : "Les lunettes intelligentes avec IA aident les personnes aveugles et malvoyantes", 16 août2025. [en ligne] <a href="https://www.linformatique.org/lunettes-ia-aveugles-malvoyants/" target="_blank">URL</a> [consulté le 5 janvier 2026].</li>
+                        <li>◈ France Inter : "Lunettes connectées, assistants vocaux : ce que l'IA fait pour aider les non-voyants", 4 octobre 2023. [en ligne] <a href="https://www.radiofrance.fr/franceinter/lunettes-connectees-assistants-vocaux-ce-que-l-intelligence-artificielle-fait-pour-aider-les-non-voyants-5342078" target="_blank">URL</a> [consulté le 5 janvier 2026].</li>
+                        <li>◈ The Verge : "Ray-Ban Meta smart glasses: AI detailed responses", 15 mai 2025. [en ligne] (en anglais) <a href="https://www.theverge.com/news/667613/ray-ban-meta-smart-glasses-ai-detailed-responses-call-a-volunteer" target="_blank">URL</a> [consulté le 5 janvier 2026].</li>
+                        <li>◈ Handicap.fr: "Concours Lépine: Artha, aide aux déficients visuels, primée", 13 mai 2024. [en ligne] <a href="https://informations.handicap.fr/a-artha-ceinture-lunette-lepine-aveugle-concours-36675.php" target="_blank">URL</a> [consulté le 3 janvier 2026].</li>
+                        <li>◈ @uto/nomia : "Application Be My Eyes" 14 avril 2022. [en ligne]<a href="https://www.autonomia.org/produit/application-be-my-eyes" target="_blank">URL</a> [consulté le 12 novembre 2025].</li>
+                        <li>◈ Ouest France: "Cette invention pourrait révolutionner le quotidien des personnes malvoyantes", 21 février 2022. [en ligne] <a href="https://angers.maville.com/actu/actudet_-cette-invention-pourrait-revolutionner-le-quotidien-des-personnes-malvoyantes-_54135-5090240_actu.Htm" target="_blank">URL</a> [consulté le 18 juin 2025].</li>
+                        <li>◈ Paris Match: "Cette ceinture permet de « redonner la vue » aux aveugles", 23 mai 2024. [en ligne] <a href="https://www.parismatch.com/actu/sciences/cette-ceinture-permet-de-redonner-la-vue-aux-aveugles-237754" target="_blank">URL</a>[consulté le 3 janvier 2026].</li>
+                        <li>◈ Frandoid: "Google ajoute Gemini à TalkBack, et ça change tout : on vous explique pourquoi", 24 juin 2025. [en ligne] <a href="hhttps://www.frandroid.com/culture-tech/intelligence-artificielle/google-gemini/2616859_google-ajoute-gemini-a-talkback-et-ca-change-tout-on-vous-explique-pourquoi" target="_blank">URL</a>[consulté le 3 janvier 2026].</li>
+                        <li>◈ Thomas Urbain : "Lunettes connectées : nouvel allié des personnes aveugles", 6 janvier 2026. [en ligne] <a href="https://informations.handicap.fr/a-lunettes-connectees-nouvel-allie-des-personnes-aveugles-38703.php" target="_blank">URL</a> [consulté le 8 janvier 2026].</li>
+                    </ul>
+
+                    <p class="fw-bold mb-3 mt-4 h4 aveugle text-decoration-underline">Braille, audio et accès à la lecture</p>
+                    <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                        <li>◈ La Liberté : "Née il y a deux cents ans, l'écriture braille est aujourd'hui menacée par l'audio", 29 novembre 2025. [en ligne] <a href="https://www.laliberte.ch/articles/culture/livres/nee-il-y-a-deux-cents-ans-lecriture-braille-est-aujourdhui-menacee-par-laudio-1251010" target="_blank">URL</a> [consulté le 5 janvier 2026].</li>
+                        <li>◈ France 3 Provence-Alpes-Côte d'Azur : "Ça ne développe pas l'orthographe : livres sonores, podcast... 200 ans après sa création, le braille perd du terrain", 15 novembre 2025. [en ligne] <a href="https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/bouches-du-rhone/marseille/ca-ne-developpe-pas-l-orthographe-livres-sonores-podcast-200-ans-apres-sa-creation-le-braille-perd-du-terrain-3248248.html" target="_blank">URL</a> [consulté le 5 janvier 2026].</li>
+                        <li>◈ Handicap.fr : "Reportage dans les coulisses d'une imprimerie en braille", 22 décembre 2025. [en ligne] <a href="https://informations.handicap.fr/a-reportage-dans-les-coulisses-d-une-imprimerie-en-braille-38675.php" target="_blank">URL</a> [consulté le 5 janvier 2026].</li>
+                    </ul>
+
+                    <p class="fw-bold mb-3 mt-4 h4 aveugle text-decoration-underline">Innovations internationales</p>
+                    <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                        <li>◈ Vietnam.vn : "L'intelligence artificielle ouvre la voie à l'égalité pour les personnes handicapées", 8 juin 2025. [en ligne] <a href="https://www.vietnam.vn/fr/tri-tue-nhan-tao-mo-canh-cua-binh-dang-cho-nguoi-khuyet-tat" target="_blank">URL</a> [consulté le 5 janvier 2026].</li>
+                        <li>◈ Vietnam.vn : "Un garçon aveugle remporte le premier prix d'un concours national d'informatique.", 4 décembre 2025. [en ligne] <a href="https://www.vietnam.vn/fr/chang-trai-mu-doat-giai-nhat-hoi-thi-tin-hoc-quoc-gia" target="_blank">URL</a> [consulté le 4 janvier 2026].</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+       
+        <div class="accordion-item bg-dark mt-4">
+            <h2 class="accordion-header">
+                <span class="alcim text-uppercase fw-bolder accordion-button collapsed bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">Sitographie</span>
+                <!-- pages d'outils, fiches produit, docs d'aide, sites officiels -->
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse bg-dark" data-bs-parent="#accordionFlushReferences">
+                <div class="accordion-body text-white">
+                    <p class="fw-bold mb-3 h4 aveugle text-decoration-underline">Applications et services</p>
+                    <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                        <li>◈ Seeing AI (Microsoft) (site officiel, en anglais) <a href="https://www.microsoft.com/en-us/ai/seeing-ai" target="_blank">URL</a> [consulté le 5 janvier 2026].</li>
+                        <li>◈ Be My Eyes / Be My AI (site officiel, en anglais) <a href="https://www.bemyeyes.com" target="_blank">URL</a> [consulté le 12 novembre 2025].</li>
+                        <li>◈ OrCam - MyEye OrCam (site officiel). <a href="https://www.orcam.com" target="_blank">URL</a> [consulté le 12 novembre 2025].</li>
+                        <li>◈ Google Lookout - Accessibilité Android. <a href="https://support.google.com/accessibility/android/answer/9031274?hl=fr" target="_blank">URL</a> [consulté le 5 janvier 2026].</li>
+                        <li>◈ Stema Partners : "OCR IA : transformez vos documents numérisés grâce à l'intelligence artificielle", 2024. <a href="https://www.stemapartners.com/blog/ocr-ia-transformez-vos-documents-numerises-grace-a-lintelligence-artificielle" target="_blank">URL</a> [consulté le 5 janvier 2026].</li>
+                        <li>◈ Ally Solos Glasses (Solos × Envision) (site officiel, en anglais) <a href="https://www.letsenvision.com" target="_blank">URL</a> [consulté le 5 janvier 2026].</li>
+                        <li>◈ Ray-Ban Meta Smart Glasses (Site officiel Meta) <a href="https://www.meta.com/smart-glasses/" target="_blank">URL</a> [consulté le 5 janvier 2026].</li>
+                        <li>◈ SeeHaptic - Ceinture haptique. <a href="https://www.seehaptic.com/le-produit" target="_blank">URL</a> [consulté le 3 janvier 2026].</li>
+                    </ul>
+
+                    <p class="fw-bold mb-3 mt-4 h4 aveugle text-decoration-underline">Navigation, mobilité et dispositifs innovants</p>
+                    <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                        <li>◈ Artha - Ceinture haptique (Prix Lépine 2024). <a href="https://www.arthafrance.com" target="_blank">URL</a> [consulté le 26 novembre 2025].</li>
+                        <li>◈ Ezymob - Navigation GPS accessible. <a href="https://www.ezymob.fr" target="_blank">URL</a> [consulté le 5 janvier 2026].</li>
+                        <li>◈ SonarVision - Guidage sonore avec réalité augmentée. <a href="https://www.sonarvision.fr/" target="_blank">URL</a> [consulté le 5 janvier 2026].</li>
+                        <li>◈ EyeView - Fédération des Aveugles de France. <a href="https://aveuglesdefrance.org/eyeview-lapplication-de-la-federation-des-aveugles-de-france/" target="_blank">URL</a> [consulté le 21 octobre 2025].</li>
+                    </ul>
+
+                    <p class="fw-bold mb-3 mt-4 h4 aveugle text-decoration-underline">Organisations, institutions et données officielles</p>
+                    <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                        <li>◈ Organisation mondiale de la santé (OMS) - Déficience visuelle. <a href="https://www.who.int/fr/news-room/fact-sheets/detail/blindness-and-visual-impairment" target="_blank">URL</a> [consulté le 13 novembre 2025].</li>
+                        <li>◈ CNSA - Informer les personnes aveugles et malvoyantes (PDF), avril 2024. <a href="https://www.cnsa.fr/sites/default/files/2024-04/informer_les_personnes_aveugles_et_malvoyantes-2.pdf" target="_blank">URL</a> [consulté le 22 juillet 2025].</li>
+                        <li>◈ Étude Homère - Mieux connaître les personnes déficientes visuelles en France <a href="https://diphe.univ-lyon2.fr/wp-content/uploads/2023/02/Homere-8-pages-2-fevrier-version-access.pdf" target="_blank">URL</a> [consulté le 5 janvier 2026].</li>
+                        <li>◈ Campus Louis Braille - Site officiel. <a href="https://www.campusbraille.fr" target="_blank">URL</a> [consulté le 5 janvier 2026].</li>
+                    </ul>
+
+                    <p class="fw-bold mb-3 mt-4 h4 aveugle text-decoration-underline">Normes, prix et reconnaissance</p>
+                    <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                        <li>◈ WCAG - Web Content Accessibility Guidelines (en anglais) <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank">URL</a> [consulté le 5 janvier 2026].</li>
+                        <li>◈ App Store Awards 2025 - Catégorie Impact culturel. <a href="https://developer.apple.com/app-store/app-store-awards-2025/" target="_blank">URL</a> [consulté le 28 décembre 2025].</li>
+                        <li>◈ Concours Lépine 2024 - Prix de l'innovation (ceinture Artha). <a href="https://www.concours-lepine.com" target="_blank">URL</a> [consulté le 5 janvier 2026].</li>
+                        <li>◈ Wikipédia - VoiceOver. <a href="https://fr.wikipedia.org/wiki/VoiceOver" target="_blank">URL</a> [consulté le 3 janvier 2026].</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            </section>
 
 
 
+         
 
 
-        <!-- scripts -->
-         <script src="assets/js/portfolio.js"></script>
+              
+
+            
+
+
+
+        </main>
+
+        <!-- script de AOS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <!-- script de Link SwiperJS-->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="assets/js/carousel.js"></script>
+        <script src="assets/js/portfolio.js"></script>
 
         <!-- script de Bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>

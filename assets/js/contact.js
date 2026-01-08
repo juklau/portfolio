@@ -30,16 +30,17 @@ function validerField({inputId, regex, errorMsg, errorSelector}){
     }
 }
 
+
 const validNom = () => validerField({
     inputId: "nom",
-    regex: /^[A-Z]{1}[a-zA-Z\s\-]{2,50}$/,
+    regex: /^[A-ZÀÂÆÇÉÈÊËÏÎÔÙÛÜ][a-zA-Zàâæçéèêëïîôùûüÿ\s\-]{1,49}$/,
     errorMsg: "Veuillez saisir un nom valide commençant par une lettre majuscule",
     errorSelector: "#small-nom"
 });
 
 const validPrenom = () => validerField({
     inputId: "prenom",
-    regex: /^[A-Z]{1}[a-zA-Z\s\-]{2,50}$/,
+    regex: /^[A-ZÀÂÆÇÉÈÊËÏÎÔÙÛÜ][a-zA-Zàâæçéèêëïîôùûüÿ\s\-]{1,49}$/,
     errorMsg: "Veuillez saisir un prénom valide commençant par une lettre majuscule",
 });
 
@@ -51,14 +52,14 @@ const validEmail = () => validerField({
 
 const validSujet = () => validerField({
     inputId: "sujet",
-    regex: /^[a-zA-Z0-9'\s]{5,50}$/,
-    errorMsg: "Veuillez entrer minimum 5 caractères sans caractères spéciaux"
+    regex: /^[a-zA-ZàâæçéèêëïîôùûüÿÀÂÆÇÉÈÊËÏÎÔÙÛÜ0-9'\s]{5,50}$/,
+    errorMsg: "Veuillez entrer minimum 5 caractères"
 });
 
 const validMessage = () => validerField({
     inputId: "message",
-    regex: /^[a-zA-Z0-9 ._()!:;,?%'"^ \t\n\r]{5,500}$/,
-    errorMsg: "Veuillez entrer minimum 5 caractères sans caractères spéciaux"
+    regex: /^[a-zA-ZàâæçéèêëïîôùûüÿÀÂÆÇÉÈÊËÏÎÔÙÛÜ0-9 ._()!:;,?%'"^\t\n\r-]{5,500}$/,
+    errorMsg: "Veuillez entrer minimum 5 caractères"
 });
 
 const validCheckbox = function(){

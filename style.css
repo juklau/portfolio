@@ -160,6 +160,7 @@
     margin-top: -50px;
 }
 .lien-intern a:hover,
+.lien-extern a:hover,
 .container-option-BTS-SIO p > strong{
     color: var(--main-color) !important;
 }
@@ -261,7 +262,8 @@
 /*********************************************************************************************
                                 Page projets -partie compétences // veille sourds
 **********************************************************************************************/
-.langage{
+.langage,
+.aveugle{
     color: var(--main-color) !important;
 }
 .outil-image{

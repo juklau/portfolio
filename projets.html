@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="style.css">
     </head> 
     <body class="fs-5 overflow-x-hidden bg-dark">
-        <header id="header" class="border-bottom border-secondary" >
+        <header id="header" class="border-bottom border-secondary">
             <nav class="navbar navbar-expand-md bg-dark p-4" data-bs-theme="dark">
                 <div class="container d-flex justify-content-between">
                     <a class="navbar-brand" href="#">Klaudia Juhasz</a>
@@ -51,14 +51,14 @@
                                         <li><a class="dropdown-item text-white" href="ppe-mediastock.html">MediaStock</a></li>
                                         <li><a class="dropdown-item text-white" href="page-error.html">CryptoVault</a></li>
                                         <li><a class="dropdown-item text-white" href="stage1.html">LinkStream (stage 2025)</a></li>
+                                        <li><a class="dropdown-item text-white" href="page-error.html">Swantrad (stage 2026)</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle text-white" href="veille.html" role="button" aria-expanded="false">La veille</a>
                                     <ul class="dropdown-menu border-0 ">
                                         <li><a class="dropdown-item text-white" href="veille-sourds.html">IA & surdité</a></li>
-                                        <li><a class="dropdown-item text-white" href="page-error.html">IA & vision</a></li>
-                                        <li><a class="dropdown-item text-white" href="page-error.html">IA & mobilité</a></li>
+                                        <li><a class="dropdown-item text-white" href="veille-aveugle.html">IA & vision</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -443,7 +443,7 @@
                                     <div class="card col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border">
                                         <h4 class="card-title text-center py-2 ">Eclipse</h4>
                                         <img class="card-img rounded-circle outil-image mx-auto my-2" src="assets/images/eclipse.webp" alt="Logo Eclipse">
-                                        <div class="card-body mt-1">
+                                        <div class="card-body mt-4">
                                             <p class="card-text fw-normal text-center">
                                                 Java Eclipse est un environnement de développement 
                                                 intégré ouvert pour le langage de programmation Java.
@@ -539,19 +539,6 @@
                             <li class="IDE-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border">
-                                        <h4 class="card-title text-center py-2 ">PhpStorm</h4>
-                                        <img class="card-img rounded-circle outil-image mx-auto my-2" src="assets/images/phpStorm.webp" alt="Logo PhpStorm">
-                                        <div class="card-body mt-1">
-                                            <p class="card-text fw-normal text-center">
-                                                PhpStorm est un éditeur pour PHP, HTML, SCC et JavaScript, édité par JetBrains.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div> 
-                            </li>
-                            <li class="IDE-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
-                                <div class="outil-item p-1 mt-5 mb-3">
-                                    <div class="card col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border">
                                         <h4 class="card-title text-center py-2">Thonny</h4>
                                         <img class="card-img rounded-circle outil-image mx-auto my-2" src="assets/images/thonny.webp" alt="Logo Thonny">
                                         <div class="card-body mt-1">
@@ -568,7 +555,7 @@
                                     <div class="card col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border">
                                         <h4 class="card-title text-center py-2">Visual Studio Code</h4>
                                         <img class="card-img rounded-circle outil-image mx-auto my-2" src="assets/images/visual studio code.webp" alt="Logo Visual Studio Code">
-                                        <div class="card-body mt-1">
+                                        <div class="card-body mt-4">
                                             <p class="card-text fw-normal text-center">
                                                 Visual Studio Code (VSCode) est un éditeur de code source 
                                                 et un environnement de développement intégré (IDE) de Microsoft.
@@ -579,14 +566,15 @@
                             </li>
 
                             <!-- A METTRE DEDANS !!!!!!!! -->
-                            <!-- <li class="IDE-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                            <li class="IDE-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border">
                                         <h4 class="card-title text-center py-2">Laragon</h4>
-                                        <img class="card-img rounded-circle outil-image mx-auto my-2" src="assets/images/" alt="Logo Laragon">
-                                        <div class="card-body mt-1">
+                                        <img class="card-img rounded-circle outil-image mx-auto my-2" src="assets/images/laragon.webp" alt="Logo Laragon">
+                                        <div class="card-body mt-5">
                                             <p class="card-text fw-normal text-center">
-                                                
+                                                Laragon est un environnement de développement local tout-en-un pour créer et tester 
+                                                des applications web (PHP, MySQL, Apache/Nginx).
                                             </p>
                                         </div>
                                     </div>
@@ -596,10 +584,10 @@
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border">
                                         <h4 class="card-title text-center py-2">VirtualBox</h4>
-                                        <img class="card-img rounded-circle outil-image mx-auto my-2" src="assets/images/" alt="Logo VirtualBox">
-                                        <div class="card-body mt-1">
+                                        <img class="card-img rounded-circle outil-image mx-auto my-2" src="assets/images/VirtualBox.webp" alt="Logo VirtualBox">
+                                        <div class="card-body mt-5">
                                             <p class="card-text fw-normal text-center">
-                                                
+                                                VirtualBox est un logiciel de virtualisation permettant d'exécuter des systèmes d'exploitation virtuels sur un ordinateur.
                                             </p>
                                         </div>
                                     </div>
@@ -609,10 +597,10 @@
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border">
                                         <h4 class="card-title text-center py-2">IntelliJ IDEA</h4>
-                                        <img class="card-img rounded-circle outil-image mx-auto my-2" src="assets/images/" alt="Logo IntelliJ IDEA">
+                                        <img class="card-img rounded-circle outil-image mx-auto my-2" src="assets/images/IntelliJ_IDEA.webp" alt="Logo IntelliJ IDEA">
                                         <div class="card-body mt-1">
                                             <p class="card-text fw-normal text-center">
-                                               
+                                               IntelliJ IDEA est un environnement de développement intégré (IDE) utilisé principalement pour le développement Java.
                                             </p>
                                         </div>
                                     </div>
@@ -621,16 +609,17 @@
                             <li class="IDE-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card col-md-4 mx-auto rounded-4 py-3 bg-dark text-white border">
-                                        <h4 class="card-title text-center py-2">Docker</h4>
-                                        <img class="card-img rounded-circle outil-image mx-auto my-2" src="assets/images/" alt="Logo Docker">
+                                        <h4 class="card-title text-center py-2">Docker Desktop</h4>
+                                        <img class="card-img rounded-circle outil-image mx-auto my-2" src="assets/images/docker.webp" alt="Logo Docker">
                                         <div class="card-body mt-1">
                                             <p class="card-text fw-normal text-center">
-                                               
+                                               Docker Desktop est une application qui facilite l'utilisation de Docker 
+                                               pour la conteneurisation grâce à une interface graphique intégrée.
                                             </p>
                                         </div>
                                     </div>
                                 </div> 
-                            </li> -->
+                            </li>
                         </ul>
 
                         <!-- pour la pagination = a lapozashoz -->
