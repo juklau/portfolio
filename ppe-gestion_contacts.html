@@ -82,7 +82,9 @@
             
             <div class="container text-center py-5 mb-5">
                 <h1 class="display-1 text-white pt-5 pb-3 my-5">Mini CRM - gestion des contacts</h1>
-                <h3 class="pb-5">Application web de gestion simplifiée pour les contacts professionnels </h3>
+                <h3 class="pb-5">
+                    Application web de gestion de contacts professionnels avec authentification et gestion multi-utilisateurs
+                </h3>
             </div>
 
             <section class="presentation container">
@@ -91,20 +93,23 @@
                     <div class=" py-3 row">
                         <div class="col-md-8 my-3">
                             <p class="mt-3">
-                                Le projet Mini-CRM a été développé dans le cadre de ma formation en BTS SIO, 
-                                option SLAM. 
+                                Le projet Mini-CRM a été développé dans le cadre de ma formation en BTS SIO,
+                                option SLAM. Il s'agit d'une application web destinée à la gestion de contacts
+                                professionnels, pensée pour les freelances, indépendants et petites structures.
                                 <br>
-                                L'objectif était de concevoir une application web de gestion de contacts 
-                                professionnels adaptée aux besoins d'un freelance ou d'une petite structure. 
-                                Réalisée en autonomie à partir d'un cahier des charges fictif, cette solution 
-                                repose sur une architecture 100 % front-end utilisant HTML, CSS et JavaScript.
+                                Initialement conçue comme une solution mono-utilisateur, l'application a
+                                récemment évolué afin d'intégrer un système d'authentification sécurisé
+                                permettant la gestion de plusieurs clients au sein d'une même application.
                             </p>
                             <p>
-                                L'application peut être installée sur un seul ordinateur pour un usage 
-                                individuel, car le système d'authentification n'est pas encore finalisé. 
-                                Ce projet m'a permis de mettre en œuvre mes compétences en conception 
-                                d'interface, développement web et intégration d'API REST, tout en suivant 
-                                une démarche professionnelle inspirée du modèle de développement logiciel.
+                                Chaque utilisateur dispose désormais de son propre espace personnel,
+                                avec des données de contacts strictement isolées. Cette évolution a nécessité
+                                une refonte partielle de la logique applicative, notamment au niveau des appels
+                                API, du filtrage des données et de la gestion des sessions.
+                                <br>
+                                Ce projet met en œuvre une architecture 100 % front-end reposant sur HTML,
+                                CSS et JavaScript, tout en s'appuyant sur des services cloud pour le stockage 
+                                des données et l'hébergement des images.
                             </p>
                         </div>
                         <div class="col-md-3 my-auto mx-lg-auto d-none d-md-block">
@@ -116,16 +121,18 @@
                     <div class="col-md-8 mt-5" data-aos="fade-up-right" data-aos-delay="700">
                         <span class="alcim text-uppercase fw-bolder">Besoins</span>
                         <p class=" mt-4 mb-1">
-                            Le besoin exprimé est celui d'un outil simple, intuitif et accessible permettant 
-                            à un utilisateur unique de centraliser la gestion de ses contacts. De nombreux 
-                            indépendants n'ont pas les moyens ou le besoin d'utiliser un CRM complexe; 
-                            Mini-CRM répond donc à cette problématique en proposant une interface claire 
-                            regroupant les fonctionnalités essentielles : ajout, modification, suppression, 
-                            recherche multicritère, classement alphabétique et mise en favoris. 
+                            Le besoin exprimé est celui d'un outil simple, intuitif et sécurisé permettant
+                            à plusieurs utilisateurs de gérer indépendamment leurs contacts professionnels.
+                            Chaque client doit pouvoir créer un compte, se connecter et accéder uniquement
+                            à ses propres données.
                             <br>
-                            L'objectif est de simplifier le suivi client (relances, statuts, notes) tout en offrant une 
-                            solution légère, locale et personnalisable qui ne nécessite ni installation 
-                            complexe ni base de données lourde.
+                            Mini-CRM répond à cette problématique en proposant une interface claire et
+                            ergonomique intégrant les fonctionnalités essentielles : ajout, modification,
+                            suppression, recherche multicritère, filtres avancés, classement alphabétique
+                            et gestion des favoris.
+                            <br>
+                            L'objectif est de proposer une solution légère mais évolutive, adaptée à un
+                            contexte multi-clients, sans la complexité d'un CRM industriel.
                         </p>
                     </div>
                 </div>
@@ -144,6 +151,8 @@
                             <li><span class="mini-crm">◈ Font Awesome</span> - Pour les icônes de navigation et d'interaction.</li>
                             <li><span class="mini-crm">◈ Assistance IA</span> - Pour l'aide à la rédaction de documentation et à l'optimisation du code.</li>
                             <li><span class="mini-crm">◈ GitHub</span> - Pour la gestion de version et l'hébergement du code source.</li>
+                            <li><span class="mini-crm">◈ Système d'authentification</span> - Gestion des comptes utilisateurs, connexion sécurisée et isolation des données.</li>
+                            <li><span class="mini-crm">◈ Gestion des sessions utilisateur</span> - Association dynamique des contacts à l'utilisateur connecté.</li>
                         </ul>
                         <p>
                             Ces technologies m'ont permis de créer une application fonctionnelle, responsive et maintenable, 
@@ -167,6 +176,16 @@
                             <li>◈ PATCH pour la modification;</li>
                             <li>◈ DELETE pour la suppression.</li>
                         </ul>
+                        <p>
+                            Une évolution majeure du projet a consisté à intégrer un système
+                            d'authentification permettant à plusieurs utilisateurs de se connecter
+                            à l'application. Chaque action (affichage, ajout, modification, suppression)
+                            est désormais liée à l'utilisateur authentifié.
+                            <br>
+                            Les requêtes API sont filtrées dynamiquement afin de garantir l'isolation
+                            des données entre les clients, renforçant ainsi la sécurité et la
+                            confidentialité des informations.
+                        </p>
                         <p class="">
                             Une partie du projet a également été pensée pour le déploiement local (SISR), avec la possibilité 
                             d'héberger l'application sur un serveur Apache ou Nginx et de la rendre accessible via une 
@@ -189,9 +208,29 @@
                             <li class="CRM-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Affichage de tous les contacts</h4>
+                                        <h4 class="card-title text-center pt-5 ">Authentification utilisateur</h4>
+                                        <p class="pb-5 fst-italic text-center">Inscription</p>
                                         <br>
-                                        <img class="card-img CRM-image mx-auto my-2 " src="assets/images/mini-crm/index.webp" alt="Affichage des contacts">
+                                        <img class="card-img CRM-image mx-auto my-2 " src="assets/images/mini-crm/inscription.webp" alt="Inscription">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="CRM-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center pt-5 ">Authentification utilisateur</h4>
+                                        <p class="pb-5 fst-italic text-center">Connexion</p>
+                                        <br>
+                                        <img class="card-img CRM-image mx-auto my-2 " src="assets/images/mini-crm/connexion.webp" alt="Connexion">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="CRM-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-5 ">Affichage des contacts de l'utilisateur connecté</h4>
+                                        <br>
+                                        <img class="card-img CRM-image mx-auto my-2 " src="assets/images/mini-crm/afficher_contacts.webp" alt="Affichage des contacts">
                                     </div>
                                 </div>
                             </li>
@@ -199,7 +238,7 @@
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
                                         <h4 class="card-title text-center py-5 ">Recherche dynamique par nom du contact</h4>
-                                        <img class="card-img CRM-image mx-auto my-2 " src="assets/images/mini-crm/recherche par nom.webp" alt="Recherche par nom">
+                                        <img class="card-img CRM-image mx-auto my-2 " src="assets/images/mini-crm/recherche_par_nom.webp" alt="Recherche par nom">
                                     </div>
                                 </div>
                             </li>
@@ -207,7 +246,7 @@
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
                                         <h4 class="card-title text-center py-5 ">Recherche dynamique par entreprise</h4>
-                                        <img class="card-img CRM-image mx-auto my-2 " src="assets/images/mini-crm/recherche par entreprise.webp" alt="Recherche par entreprise">
+                                        <img class="card-img CRM-image mx-auto my-2 " src="assets/images/mini-crm/recherche_par_entreprise.webp" alt="Recherche par entreprise">
                                     </div>
                                 </div> 
                             </li>
@@ -215,7 +254,7 @@
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
                                         <h4 class="card-title text-center py-5 ">Ajout de nouveau contact avec photo</h4>
-                                        <img class="card-img CRM-image mx-auto my-2" src="assets/images/mini-crm/ajouter contact.webp" alt="Ajout de nouveau contact">
+                                        <img class="card-img CRM-image mx-auto my-2" src="assets/images/mini-crm/ajouter_contact.webp" alt="Ajout de nouveau contact">
                                     </div>
                                 </div> 
                             </li>
@@ -223,14 +262,14 @@
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
                                         <h4 class="card-title text-center py-5 ">Problème pendant l'ajout de nouveau contact</h4>
-                                        <img class="card-img CRM-image mx-auto my-2" src="assets/images/mini-crm/probleme ajoute.webp" alt="Problème pendant l'ajoute">
+                                        <img class="card-img CRM-image mx-auto my-2" src="assets/images/mini-crm/problème_ajout.webp" alt="Problème pendant l'ajout">
                                     </div>
                                 </div> 
                             </li>
                             <li class="CRM-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 mt-4">Modification des fiches existantes</h4>
+                                        <h4 class="card-title text-center py-5">Modification des fiches existantes</h4>
                                          <img class="card-img CRM-image mx-auto my-2" src="assets/images/mini-crm/modification.webp" alt="Modification du contact existant">
                                     </div>
                                 </div> 
@@ -265,16 +304,27 @@
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
                                         <h4 class="card-title text-center py-5">Filtres avancés par type de contact et/ou statut de relance</h4>
-                                        <img class="card-img CRM-image mx-auto my-2" src="assets/images/mini-crm/recherche filtré.webp" alt="Recherche filtré">
+                                        <img class="card-img CRM-image mx-auto my-2" src="assets/images/mini-crm/recherche_filtré.webp" alt="Recherche filtré">
                                     </div>
                                 </div> 
                             </li>
                             <li class="CRM-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5">Formulaire de contact</h4>
+                                        <h4 class="card-title text-center pt-5">Formulaire de contact</h4>
+                                        <p class="pb-3 fst-italic text-center">Utilisateur connecté</p>
                                         <br>
-                                        <img class="card-img CRM-image mx-auto my-2" src="assets/images/mini-crm/nous contacter.webp" alt="Formulaire de contact">
+                                        <img class="card-img CRM-image mx-auto my-2" src="assets/images/mini-crm/formulaire_contact_ok.webp" alt="Formulaire de contact">
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="CRM-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center pt-5">Formulaire de contact</h4>
+                                        <p class="pb-3 fst-italic text-center">Utilisateur non connecté</p>
+                                        <br>
+                                        <img class="card-img CRM-image mx-auto my-2" src="assets/images/mini-crm/formulaire_contact_ok_non_connecté.webp" alt="Formulaire de contact">
                                     </div>
                                 </div> 
                             </li>
@@ -282,7 +332,7 @@
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
                                         <h4 class="card-title text-center py-5">Vérification des champs du formulaire</h4>
-                                        <img class="card-img CRM-image mx-auto my-2" src="assets/images/mini-crm/problème envoi.webp" alt="Formulaire de contact">
+                                        <img class="card-img CRM-image mx-auto my-2" src="assets/images/mini-crm/formulaire_contact_pasOK.webp" alt="Formulaire de contact">
                                     </div>
                                 </div> 
                             </li>
@@ -324,8 +374,15 @@
                             Cette expérience m'a aussi appris à travailler en autonomie, à documenter efficacement mon 
                             code et à tester mes fonctionnalités à l'aide d'outils comme Postman.                   
                         </p>
-                        <p> Les prochaines évolutions envisagées concernent la mise en place d'un système d'authentification complet
-                            et la gestion multi-utilisateurs.
+                        <p> 
+                            L'intégration de l'authentification et de la gestion multi-clients marque
+                            une étape importante dans l'évolution du projet. Elle m'a permis d'aborder
+                            des problématiques concrètes de sécurité, de filtrage des données et de
+                            gestion des utilisateurs.
+                            <br>
+                            Ce projet est désormais pleinement exploitable dans un contexte réel
+                            multi-utilisateurs et constitue une base solide pour de futures évolutions
+                            (gestion des rôles, statistiques, export de données, etc.).
                         </p>
                     </div>
                 </div>
@@ -352,8 +409,10 @@
                         <p class="mt-3 fst-italic CRM">1. Gérer le patrimoine informatique</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li>1.4. Vérifier les conditions de continuité d'un service informatique</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic">Configuration et validation du bon fonctionnement d'une API externe (Airtable) 
-                                    avec Postman pour garantir la disponibilité du service.
+                                <small class="ps-md-3 ps-lg-5 fst-italic">
+                                    Configuration et validation du bon fonctionnement d'une API externe (Airtable) 
+                                    avec Postman,ainsi que vérification du bon fonctionnement des accès (droits, filtrage par utilisateur)
+                                    pour garantir la disponibilité et la cohérence du service.
                                 </small>
                         </ul>
                     </div>
@@ -361,8 +420,10 @@
                         <p class="fst-italic CRM">2. Répondre aux incidents et aux demandes d'assistance et d'évolution</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li>2.3. Traiter des demandes concernant les applications</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic"> En adaptant et en modifiant mon application (ajout, suppression et recherche 
-                                    de contacts), j'ai contribué à l'évolution fonctionnelle d'une solution applicative.
+                                <small class="ps-md-3 ps-lg-5 fst-italic"> 
+                                    En faisant évoluer l’application avec un système d’authentification 
+                                    (inscription/connexion), une gestion de session et un filtrage des données par utilisateur, j’ai contribué 
+                                    à l’évolution fonctionnelle et à la sécurisation de la solution.
                                 </small>
                         </ul>
                     </div>
@@ -370,7 +431,8 @@
                         <p class="fst-italic CRM">4. Travailler en mode projet</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li> 4.1. Analyser les objectifs et les modalités d'organisation d'un projet</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic"> L'analyse du cahier des charges m'a permis de comprendre les objectifs 
+                                <small class="ps-md-3 ps-lg-5 fst-italic"> 
+                                    L'analyse du cahier des charges m'a permis de comprendre les objectifs 
                                     attendus et de planifier les différentes étapes du projet en fonction des contraintes définies.
                                 </small>
                         </ul>
@@ -379,13 +441,16 @@
                         <p class="fst-italic CRM">5. Mettre à disposition des utilisateurs un service informatique</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li>5.1. Réaliser les tests d'intégration et d'acceptation d'un service</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai utilisé Postman pour tester les requêtes vers l'API Airtable, 
-                                    validant ainsi l'intégration des fonctionnalités avec la base de données.
+                                <small class="ps-md-3 ps-lg-5 fst-italic">
+                                    Tests des endpoints Airtable (GET/POST/PATCH/DELETE) et 
+                                    validation des scénarios utilisateur (connecté / non connecté) afin de garantir 
+                                    l’intégration et la fiabilité du service.
                                 </small>
                             <!-- <li>5.2. Déployer un service</li> PAS POUR L'INSTANT!!!
                             <small class="ps-5 fst-italic"> Le service a été mis en ligne via GitHub Pages, rendant l'application accessible publiquement</small> -->
                             <li>5.3. Accompagner les utilisateurs dans la mise en place d'un service</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic">Un fichier README.md détaillé explique comment utiliser l'application CRM, 
+                                <small class="ps-md-3 ps-lg-5 fst-italic">
+                                    Un fichier README.md détaillé explique comment utiliser l'application CRM, 
                                     facilitant ainsi sa prise en main par les utilisateurs.
                                 </small>
                         </ul>
@@ -394,11 +459,13 @@
                         <p class="fst-italic CRM">6. Organiser son développement professionnel</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li>6.1. Mettre en place son environnement d'apprentissage personnel</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai utilisé divers outils professionnels pour développer mes compétences : 
+                                <small class="ps-md-3 ps-lg-5 fst-italic">
+                                    J'ai utilisé divers outils professionnels pour développer mes compétences : 
                                     Figma, Bootstrap, Postman, Airtable API, GitHub.
                                 </small>
                             <li>6.2. Mettre en œuvre des outils et stratégies de veille informationnelle</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai mené des recherches ciblées sur les API, frameworks et bonnes pratiques 
+                                <small class="ps-md-3 ps-lg-5 fst-italic">
+                                    J'ai mené des recherches ciblées sur les API, frameworks et bonnes pratiques 
                                     pour résoudre des problématiques spécifiques.
                                 </small>
                         </ul>
@@ -406,11 +473,13 @@
                     <div data-aos="fade-left" data-aos-delay="1300">
                         <ul class="list-unstyled lh-lg ps-4">
                             <li>6.3. Gérer son identité professionnelle</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic"> Je valorise mon projet en le présentant sur mon portfolio 
+                                <small class="ps-md-3 ps-lg-5 fst-italic"> 
+                                    Je valorise mon projet en le présentant sur mon portfolio 
                                     en ligne ainsi que sur GitHub.
                                 </small>
                             <li>6.4. Développer son projet professionnel</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic"> Ce projet m'a permis d'enrichir concrètement mes compétences 
+                                <small class="ps-md-3 ps-lg-5 fst-italic"> 
+                                    Ce projet m'a permis d'enrichir concrètement mes compétences 
                                     en développement web, en cohérence avec mon orientation SLAM.
                                 </small>
                         </ul>
