@@ -94,16 +94,14 @@
                                 Le projet MédiaStock a été réalisé dans le cadre du BTS SIO, option SLAM, au cours de 
                                 la deuxième année de formation. 
                                 <br>
-                                Il s'agit d'une application web de gestion de matériel multimédia développée pour un établissement scolaire.
-                                Avant sa conception, la gestion des prêts de matériel (casques, micros, câbles, transmetteurs, multiprises...)
-                                se faisait à l'aide de fiches papier, entraînant un manque de traçabilité et une perte de temps 
-                                pour le personnel administratif.
+                                Il s'agit d'une application web mobile-first destinée à gérer l'inventaire et les prêts 
+                                de matériel informatique et audiovisuel dans un établissement scolaire.
                             </p>
                             <p>
-                                MédiaStock a donc été pensé comme une solution numérique complète, permettant de 
-                                remplacer le système manuel par une interface intuitive, responsive et connectée à 
-                                une base de données centralisée. Le projet a été réalisé individuellement, avec un déploiement 
-                                sur serveur local et serveur SISR via Docker.
+                                Avant la mise en place de l'application, les prêts étaient suivis via des fiches papier, ce qui entraînait
+                                un manque de traçabilité, des erreurs de saisie et une perte de temps. MediaStock digitalise le processus
+                                en centralisant les données (matériel, emprunteurs, prêts/retours) et en intégrant l'identification des équipements
+                                via QR codes.
                             </p>
                         </div>
                         <div class="col-md-3 my-auto mx-lg-auto d-none d-md-block">
@@ -115,15 +113,15 @@
                     <div class="col-md-8 mt-5" data-aos="fade-up-right" data-aos-delay="700">
                         <span class="alcim text-uppercase fw-bolder">Besoins</span>
                         <p class=" mt-4 mb-1">
-                            L'objectif principal du projet est de simplifier et automatiser la gestion des prêts 
+                            L'objectif est de simplifier et automatiser la gestion des prêts 
                             et retours de matériel au sein de l'école.
                         </p>
-                        <p class="">L'application devait permettre à l'équipe administrative de :</p>
+                        <p class="mb-2">L'application devait permettre à l'équipe administrative de :</p>
                         <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
                             <li>◈ gérer l'inventaire complet du matériel (ajout, suppression, modification, archivage),</li>
-                            <li>◈ suivre les prêts et restitutions en temps réel,</li>
-                            <li>◈ identifier chaque matériel grâce à un QR code unique,</li>
-                            <li>◈ effectuer les opérations de prêt, et restitution directement depuis un smartphone.</li>
+                            <li>◈ enregistrer un prêt et une restitution rapidement (sur mobile),</li>
+                            <li>◈ identifier chaque matériel par QR code unique,</li>
+                            <li>◈ visualiser les prêts en cours et repérer les retards.</li>
                         </ul>
                         <p class="">
                             Le besoin exprimé portait aussi sur la traçabilité (historique des prêts, retard, état du matériel) 
@@ -144,14 +142,14 @@
                         <p class="fst-italic mediastock mt-3 mb-0"><strong>Backend</strong></p>
                         <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
                             <li>◈ PHP 8.2 (procédural) - logique métier et gestion des sessions.</li>
-                            <li>◈ MySQL 8.0 - base de données relationnelle (tables : item, prêt, emprunteur, admininstrateur …).</li>
-                            <li>◈ PDO (PHP Data Objects) - sécurité des requêtes SQL (préparées).</li>
-                            <li>◈ Docker / Docker Compose - conteneurisation complète avec services Apache, MySQL et PhpMyAdmin</li>
+                            <li>◈ MySQL 8.0 - base de données relationnelle (tables : item, prêt, emprunteur, administrateur…).</li>
+                            <li>◈ PDO (PHP Data Objects) - requêtes SQL préparées et sécurisées.</li>
+                            <li>◈ Docker / Docker Compose - conteneurisation de l'environnement (Apache, MySQL, phpMyAdmin).</li>
                         </ul>
 
                         <p class="fst-italic mediastock mt-3 mb-0"><strong>Frontend</strong></p>
                         <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
-                            <li>◈ HTML5 / CSS3 / Bootstrap 5 - structure et mise en forme responsive.</li>
+                            <li>◈ HTML5 / CSS3 / Bootstrap 5 - structure et mise en forme responsive (mobil-first).</li>
                             <li>◈ JavaScript (ES6) - interactions dynamiques et scan des QR codes.</li>
                             <li>◈ Flatpickr - gestion intuitive des dates de prêt et de retour.</li>
                             <li>◈ Font Awesome - icônes d'interface.</li>
@@ -160,12 +158,12 @@
                         <p class="fst-italic mediastock mt-3 mb-0"><strong>Outils et environnement</strong></p>
                         <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
                             <li>◈ VS Code - environnement de développement.</li>
-                            <li>◈ Git / GitHub - versionnage et hébergement du code.</li>
+                            <li>◈ Git / GitHub - gestion de versions et hébergement du code.</li>
                             <li>◈ Figma - conception des maquettes UI/UX.</li>
                             <li>◈ Smartphone Android - tests des fonctionnalités de scan via caméra.</li>
                         </ul>
                         <p>
-                            L'ensemble a été conçu pour fonctionner en local (via WAMP/Docker) et sur 
+                            L'ensemble a été conçu pour fonctionner en local (Docker) et sur 
                             un serveur SISR distant, garantissant la portabilité et la cohérence de l'environnement.
                         </p>
                     </div>
@@ -174,44 +172,44 @@
                     <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="900">
                         <span class="alcim text-uppercase fw-bolder">Réalisation</span>
                         <p class="mt-4 mb-2">
-                           Le développement de MédiaStock sest déroulé sur six semaines, selon une approche itérative et 
+                           Le développement de MédiaStock s'est déroulé sur plusieurs semaines, selon une approche itérative et 
                            incrémentale, en suivant un planning hebdomadaire structuré comprenant les phases de définition, 
                            développement, tests et déploiement.
                         </p>
 
                         <p class="fst-italic mediastock mt-3 mb-0"><strong>Structure de l'application</strong></p>
-                        <p>Architecture PHP procédurale, organisée en dossiers distincts :</p>
+                        <p class="mb-2">L'application repose sur une architecture PHP procédurale, organisée en dossiers distincts :</p>
                         <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
-                            <li>◈ <span class="fst-italic">/public/api/</span> : endpoints pour la gestion du matériel et des prêts (additem.php, updateitem.php, cloturepret.php ...).</li>
-                            <li>◈ <span class="fst-italic">/config/</span> : fichiers de connexion et configuration de la base (database.php).</li>
-                            <li>◈ <span class="fst-italic">/src/ </span> : classes métiers (Item, Pret, Emprunteur, Administrateur, Categorie, Formation).</li>
-                            <li>◈ <span class="fst-italic">/sql/</span> : scripts d'initialisation et de test de la base (<span class="fst-italic">init.sql</span>).</li>
+                            <li>◈ <span class="fst-italic">/public/api/</span> : endpoints pour la gestion du matériel et des prêts (<span class="fst-italic">additem.php, updateitem.php, cloturepret.php</span>).</li>
+                            <li>◈ <span class="fst-italic">/config/</span> : fichiers de configuration et de connexion à la base de données (<span class="fst-italic">database.php</span>).</li>
+                            <li>◈ <span class="fst-italic">/src/ </span> : organisation logique des entités métiers (Item, Pret, Emprunteur, Administrateur, Categorie, Formation).</li>
+                            <li>◈ <span class="fst-italic">/sql/</span> : scripts d'initialisation et de test de la base de données (<span class="fst-italic">init.sql</span>).</li>
                         </ul>
 
                         <p class="fst-italic mediastock mt-3 mb-0"><strong>Fonctionnalités principales</strong></p>
                         <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
                             <li>◈ CRUD complet du matériel (ajout, modification, suppression, archivage).</li>
                             <li>◈ Génération automatique de QR codes lors de l'ajout d'un nouvel item.</li>
-                            <li>◈ Scan via smartphone redirigeant automatiquement vers la fiche du matériel.</li>
+                            <li>◈ Scan via smartphone redirigeant vers la fiche détaillée du matériel.</li>
                             <li>◈ Gestion des prêts et retours avec mise à jour en temps réel de la disponibilité.</li>
-                            <li>◈ Authentification administrateur avec mot de passe haché et session PHP.</li>
-                            <li>◈ Interface responsive permettant l'utilisation sur ordinateur et mobile.</li>
+                            <li>◈ Authentification administrateur sécurisée (mot de passe haché, session PHP).</li>
+                            <li>◈ Interface responsive utilisable sur ordinateur et smartphone.</li>
                         </ul>
-
 
                         <p class="fst-italic mediastock mt-3 mb-0"><strong>Déploiement</strong></p>
                         <p class="">
-                            Le projet a été déployé en local via Docker (http://localhost:9080) puis transféré sur le serveur 
-                            SISR mutualisé pour la phase finale de test.
+                            Le projet a été déployé en environnement local via Docker, puis transféré sur un serveur 
+                            SISR mutualisé pour la phase finale de tests.
                             <br>
-                            Une documentation complète (technique + utilisateur) a accompagné la livraison, 
-                            incluant le script SQL, les captures d'écran, le schéma MCD/MLD et le guide d'installation.
+                            Une documentation complète (technique et utilisateur) a accompagné la livraison,
+                            incluant les scripts SQL, le schéma MCD/MLD et des captures d'écran illustrant
+                            les principales fonctionnalités de l'application.
                         </p>
                     </div>
                 </div>
             </section>
 
-             <section class="fonctionnalites container">
+            <section class="fonctionnalites container">
                 <div class="mt-5" data-aos="zoom-in-down" data-aos-delay="900">
                     <span class=" alcim text-uppercase fw-bolder">Fonctionnalités</span>
                 </div>
@@ -242,7 +240,7 @@
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
                                         <h4 class="card-title text-center pt-5 py-2">Gestion de l'inventaire du matériel (CRUD)</h4>
                                         <p class="text-center fst-italic">Liste du matériel</p>
-                                        <img class="card-img MediaStock-image mx-auto my-2 " src="assets/images/mediastock/liste_matériel2.webp" alt="Liste du matériel">
+                                        <img class="card-img MediaStock-image mx-auto my-2 " src="assets/images/mediastock/liste_materiel2.webp" alt="Liste du matériel">
                                     </div>
                                 </div>
                             </li>
@@ -259,7 +257,16 @@
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
                                         <h4 class="card-title text-center py-5">Fiche détaillée d'un matériel</h4>
-                                        <img class="card-img MediaStock-image mx-auto my-2 pt-3" src="assets/images/mediastock/fiche-détaillé.webp" alt="Fiche détaillée d'un matériel">
+                                        <p class="text-center fst-italic">Modification des informations du matériel</p>
+                                        <img class="card-img MediaStock-image mx-auto my-2 pt-3" src="assets/images/mediastock/fiche-detaille.webp" alt="Fiche détaillée d'un matériel">
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="MediaStock-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-5">Enregistrement d'un prêt</h4>
+                                        <img class="card-img MediaStock-image mx-auto my-2 pt-3" src="assets/images/mediastock/creation-pret.webp" alt="Enregistrement d'un prêt">
                                     </div>
                                 </div> 
                             </li>
@@ -306,9 +313,7 @@
                         <div class="swiper-slide-button MediaStock swiper-button-next d-none d-sm-block"></div>
                     </div>  
                 </div>
-
             </section>
-
 
             <section class="container">
                 <div class=" row pt-4 mt-5 text-white" >
@@ -319,19 +324,20 @@
                             prêts de matériel dans un établissement scolaire. 
                             <br>
                             Partant d'un système entièrement manuel basé sur des fiches papier, le projet a introduit une solution numérique complète, sécurisée et ergonomique, 
-                            capable de gérer l'inventaire, les prêts, les restitutions, et les retards.
+                            capable de gérer l'inventaire, les prêts, les restitutions, tout en facilitant l'identification des retards.
                         </p>
                     </div>
                     <div class=" row justify-content-center">
                         <div class="col-md-10" data-aos="fade-up-left" data-aos-delay="700">
                             <!-- px-2 -->
                             <p class="">
-                                Grâce à une architecture trois-tiers (frontend, backend, base de données), conteneurisée avec Docker, 
+                                                                <!-- (frontend, backend, base de données) -->
+                                Grâce à une architecture trois-tiers (présentation, logique métier, données), conteneurisée avec Docker, 
                                 et à une approche itérative du développement, chaque fonctionnalité a été pensée pour répondre 
                                 aux besoins réels de l'équipe administrative. 
                                 <br>
                                 Le système de QR codes intégré a considérablement 
-                                simplifié les opérations terrain, tout en garantissant une traçabilité complète.
+                                simplifié les opérations terrain, tout en garantissant une traçabilité fiable du matériel.
                             </p>
                         </div>
                     </div>
@@ -340,7 +346,7 @@
                             <!-- px-2 -->
                             <p class="">
                                 Ce projet m'a permis de mobiliser mes compétences en conception d'architecture, développement 
-                                PHP/MySQL, sécurité web, gestion de projet agile, et prototypage d'interface avec Figma. 
+                                PHP/MySQL, sécurité web, gestion de projet agile et prototypage d'interface avec Figma. 
                                 Il représente une solution robuste, évolutive et directement exploitable en contexte réel.
                             </p>
                         </div>
@@ -356,9 +362,9 @@
 
                         <p class="mt-4 fst-italic mediastock text-decoration-underline">Documentation technique et fonctionnelle</p>
                         <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
-                            <li>◈ Cahier des charges complet décrivant les objectifs, les besoins fonctionnels et techniques.</li>
+                            <li>◈ Cahier des charges complet décrivant les objectifs ainsi que les besoins fonctionnels et techniques.</li>
                             <li>◈ Maquettes Figma des interfaces mobile.</li>
-                            <li>◈ Schémas MCD et MLD de la base de données (présentés dans les annexes du cahier des charges, page 19).</li>  
+                            <li>◈ Schémas MCD et MLD de la base de données (présentés dans les annexes du cahier des charges, page 18).</li>  
                         </ul>
 
                         <p class="mt-4 fst-italic mediastock text-decoration-underline">Code source et environnement</p>
@@ -372,10 +378,10 @@
 
                         <p class="mt-4 fst-italic mediastock text-decoration-underline">Outils de gestion et tests</p>
                         <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
-                            <li>◈ Diagrammes de Gantt et Kanban (page 21 du cahier des charges) pour le suivi du développement.</li>
+                            <li>◈ Diagrammes de Gantt et Kanban (page 20 - 21 du cahier des charges) pour le suivi du développement.</li>
                             <li>◈ Plan de tests détaillant les scénarios d'authentification, de prêt/restitution et de sécurité 
-                                (page 12 du cahier des charges).</li>
-                            <li>◈ Documentation utilisateur et guides de déploiement remis à l'établissement.</li>
+                                (page 12 - 13 du cahier des charges).</li>
+                            <li>◈ Documentation utilisateur illustrée par des captures d'écran des principales fonctionnalités.</li>
                         </ul>
                     </div>
                 </div>
@@ -422,9 +428,6 @@
                 </div>
             </section>
 
-
-
-
             <section class="container mt-5">
                 <div class="container-fluid mt-4 py-4 px-3">
                     <span class="alcim text-uppercase fw-bolder">Compétences</span>
@@ -444,14 +447,15 @@
                                     sensibles de l'application.
                                 </small>
                             <li>1.4. Vérifier les conditions de continuité d'un service informatique</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic">Le projet a été déployé à la fois en local et sur un serveur SISR 
-                                    mutualisé, ce qui m'a permis de tester la disponibilité et la continuité du service sur 
-                                    différents environnements.
+                                <small class="ps-md-3 ps-lg-5 fst-italic">Le projet a été déployé en environnement local et sur un serveur 
+                                    SISR mutualisé, ce qui m'a permis de vérifier le bon fonctionnement et la disponibilité du service 
+                                    sur différents environnements d'exécution.
                                 </small>
                             <li>1.5. Gérer des sauvegardes</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai mis en place un système de sauvegarde automatique des données 
-                                    grâce à l'utilisation des volumes Docker, permettant la persistance de la base MySQL et la conservation des 
-                                    informations relatives aux matériels et aux prêts, même après l'arrêt ou le redéploiement des conteneurs.
+                                <small class="ps-md-3 ps-lg-5 fst-italic">Dans le cadre du projet, j'ai mis en place et testé des scripts de 
+                                    sauvegarde et de restauration de la base de données MySQL, réalisés lors du cours de cybersécurité.
+                                    Ces scripts permettent d'exporter les données et de les restaurer en cas de perte
+                                    ou de redéploiement de l'environnement.
                                 </small>
                         </ul>
                     </div>
@@ -465,7 +469,7 @@
                                 </small>
                         </ul>
                     </div>
-                    <div data-aos="fade-left" data-aos-delay="900">
+                    <!-- <div data-aos="fade-left" data-aos-delay="900">
                         <p class="fst-italic MediaStock">3. Développer la présence en ligne de l'organisation</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li>3.3. Participer à l'évolution d'un site Web exploitant les données de l'organisation</li>
@@ -474,29 +478,31 @@
                                     l'exploitation des données de l'organisation (matériels, prêts et utilisateurs).
                                 </small>
                         </ul>
-                    </div>
+                    </div> -->
                     <div data-aos="fade-left" data-aos-delay="950">
                         <p class="fst-italic MediaStock">4. Travailler en mode projet</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li> 4.1. Analyser les objectifs et les modalités d'organisation d'un projet</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai analysé le cahier des charges pour identifier les objectifs, 
-                                    les fonctionnalités attendues et les contraintes techniques du projet, afin de définir une organisation 
-                                    adaptée à sa réalisation.
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai analysé le cahier des charges afin d'identifier les 
+                                    objectifs du projet, les fonctionnalités attendues ainsi que les contraintes techniques
+                                    (choix des technologies, architecture, environnement de déploiement),
+                                    dans le but de définir une organisation adaptée à sa réalisation.
                                 </small>
                             <li> 4.2. Planifier les activités</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai planifié les différentes étapes du projet (conception, 
                                     développement, tests, déploiement) à l'aide d'un diagramme de Gantt et d'un suivi hebdomadaire.
                                 </small>
                             <li> 4.3. Évaluer les indicateurs de suivi d'un projet et analyser les écarts</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai assuré un suivi régulier de l'avancement du projet en 
-                                    comparant la planification initiale et les réalisations effectives, ce qui m'a permis d'ajuster 
-                                    certaines priorités.
+                                <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai assuré un suivi régulier de l'avancement du projet en
+                                     comparant l'état réel des réalisations avec la planification initiale, afin d'identifier 
+                                     les écarts et d'ajuster les priorités lorsque cela était nécessaire.
                                 </small>
                         </ul>
                     </div>
                     <div data-aos="fade-left" data-aos-delay="1000">
                         <p class="fst-italic MediaStock">5. Mettre à disposition des utilisateurs un service informatique</p>
                         <ul class="list-unstyled lh-lg ps-4">
+                            <!-- tests fonctionnels + intégration BDD/UI -->
                             <li>5.1. Réaliser les tests d'intégration et d'acceptation d'un service</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">J'ai réalisé des tests d'intégration pour vérifier la 
                                     cohérence entre les modules de l'application (interface, base de données et génération de QR codes) 
@@ -519,17 +525,10 @@
                                     GitHub, MySQL) me permettant de travailler de manière autonome et efficace sur le projet.
                                 </small>
                             <li>6.2. Mettre en œuvre des outils et stratégies de veille informationnelle</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai réalisé une veille technologique en consultant la documentation 
-                                    officielle et des ressources spécialisées (PHP, Docker, Bootstrap) afin de résoudre des problèmes techniques 
-                                    et d'optimiser le développement du projet.
-                                </small>
-                        </ul>
-                    </div>
-                    <div data-aos="fade-left" data-aos-delay="1300">
-                        <ul class="list-unstyled lh-lg ps-4">
-                            <li>6.3. Gérer son identité professionnelle</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai utilisé GitHub pour héberger et versionner mon code, ce qui 
-                                    contribue à construire mon identité numérique professionnelle et à valoriser mes réalisations.
+                                <small class="ps-md-3 ps-lg-5 fst-italic">Dans le cadre du projet, j'ai consulté de manière ciblée 
+                                    la documentation officielle et des ressources techniques en ligne (PHP, Docker, Bootstrap) afin 
+                                    de comprendre certaines fonctionnalités, résoudre des problèmes rencontrés et appliquer les bonnes
+                                    pratiques nécessaires au développement de l'application.
                                 </small>
                             <li>6.4. Développer son projet professionnel</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic"> Ce projet m'a permis d'enrichir concrètement mes compétences en 
@@ -538,16 +537,20 @@
                                 </small>
                         </ul>
                     </div>
+                    <!-- <div data-aos="fade-left" data-aos-delay="1300">
+                        <ul class="list-unstyled lh-lg ps-4">
+                            <li>6.3. Gérer son identité professionnelle</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai utilisé GitHub pour héberger et versionner mon code, ce qui 
+                                    contribue à construire mon identité numérique professionnelle et à valoriser mes réalisations.
+                                </small>
+                        </ul>
+                    </div> -->
                 </div>
             </section>
             <div class="d-flex justify-content-center mt-5 pt-4" data-aos="zoom-in" data-aos-delay="700">
                 <a href="assets/documents/RP_4_MediaStock_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn" type="button" id="fiche-MediaStock-btn">Fiche descriptive</button></a>
             </div>
-        
         </main>
-
-
-
 
          <!-- script de AOS -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

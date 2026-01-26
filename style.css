@@ -3,6 +3,7 @@
 
     --nav-hover-color: #e3a127; /* Pour navmenu/footer/page d'accueil */
     --main-color: #e3a127;
+    --main-second-color: rgba(227, 161, 39, 0.9);
     --shadow-color: rgba(208, 179, 62, 0.3);
     --white-color: rgb(255, 255, 255);
     --white-opal-color: rgba(255, 255, 255, 0.8);  
@@ -320,6 +321,7 @@
     width: 75%;
 }
 
+
 /*********************************************************************************************
                                     Projets-card à flipper
 **********************************************************************************************/
@@ -391,7 +393,7 @@
 }
 
 /*********************************************************************************************
-                                     Page RP Mini-CRM, Chat, MediaStock, Linkstream
+                        Page RP Mini-CRM, Chat, MediaStock, Linkstream
 **********************************************************************************************/
 #image-crm,
 #image-mediastock{
@@ -480,7 +482,11 @@
 .fst-italic.MediaStock,     /* page MediaStock */  
 .mediastock,                /* page MediaStock */
 .fst-italic.LinkStream{        
-    color: var(--main-color) !important;
+    color: var(--main-second-color) !important;
+}
+.linkstream{
+    color: var(--main-second-color);
+    
 }
 
 
@@ -575,8 +581,11 @@
 
 .references a:hover,
 .defis .text-decoration-underline{
-    text-decoration-color: var(--main-color) !important;
+    text-decoration-color: var(--main-second-color-color) !important;
     text-decoration-thickness: 2px !important;
+}
+.veille{
+    color: var(--main-second-color);
 }
 table {
     border-collapse: collapse;
