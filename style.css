@@ -320,6 +320,9 @@
 #cryptovault{
     width: 75%;
 }
+#swantrad{
+    width: 85%;
+}
 
 
 /*********************************************************************************************
@@ -412,7 +415,8 @@
     /* border-color: var(--CRM-color) !important; */
 }
 .Chat-container .card,
-.linkstream-container .card{
+.linkstream-container .card,
+.swantrad-container .card{
     height: 550px;
     max-width: 340px;
     width: auto;
@@ -432,7 +436,8 @@
 }
 .slider-wrapper .swiper-slide-button.Chat:hover,
 .Chat-container:hover .card-title,
-.linkstream-container:hover .card-title{
+.linkstream-container:hover .card-title,
+.swantrad-container:hover .card-title{
     color: var(--main-color) !important;
 }
 .CRM-image,
@@ -451,42 +456,44 @@
  /*image "zoomé" en plein d'écran */
 
 .zoom-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--black-color2);
-  z-index: 999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--black-color2);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .zoomed {
-  max-width: 90vw;
-  max-height: 90vh;
-  object-fit: contain;
-  box-shadow: 0 0 10px var(--white-opal-color);
-  border-radius: 10px;
-  background-color: var(--dark-gray-color);
-  cursor: zoom-out;
-  z-index: 1000;
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    box-shadow: 0 0 10px var(--white-opal-color);
+    border-radius: 10px;
+    background-color: var(--dark-gray-color);
+    cursor: zoom-out;
+    z-index: 1000;
 }
 
 .fst-italic.CRM,
 .mini-crm,
-.fst-italic.Chat,           /* page Chat */
-.jours,                     /* page Chat */
-.Chat,                      /* page Chat */ 
-.fst-italic.MediaStock,     /* page MediaStock */  
-.mediastock,                /* page MediaStock */
-.fst-italic.LinkStream{        
+.fst-italic.Chat,                   /* page Chat */
+.jours,                             /* page Chat */
+.Chat,                              /* page Chat */ 
+.fst-italic.MediaStock,             /* page MediaStock */  
+.mediastock,                        /* page MediaStock */
+.LinkStream-liste,                  /* page LinkStream */
+.fst-italic.LinkStream,             /* page LinkStream */
+.fw-bolder.fst-italic.swantrad,
+.swantrad-liste{        
     color: var(--main-second-color) !important;
 }
 .linkstream{
-    color: var(--main-second-color);
-    
+    color: var(--main-second-color); 
 }
 
 

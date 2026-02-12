@@ -51,7 +51,7 @@
                                         <li><a class="dropdown-item text-white" href="ppe-mediastock.html">MediaStock</a></li>
                                         <li><a class="dropdown-item text-white" href="page-error.html">CryptoVault</a></li>
                                         <li><a class="dropdown-item text-white" href="stage1.html">LinkStream (stage 2025)</a></li>
-                                        <li><a class="dropdown-item text-white" href="page-error.html">Swantrad (stage 2026)</a></li>
+                                        <li><a class="dropdown-item text-white" href="stage2.html">Swantrad (stage 2026)</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -86,7 +86,7 @@
                 <div class="row mx-auto mt-5" data-aos="fade-up-left" data-aos-delay="600">
                     <span class="alcim text-uppercase fw-bolder">Contexte</span> 
                     <div class=" pt-2 pb-4 row">
-                        <div class="col-md-10 mb-3">
+                        <div class="col-md-10 mb-3 box-shadow">
                             <p class="mt-1">
                                 Dans le cadre de la semaine intensive SLAM du BTS SIO, j'ai développé ClassCord 
                                 Client, une application de messagerie instantanée en Java destinée à fonctionner 
@@ -354,27 +354,31 @@
                                 <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai respecté le standard de structuration du code, l'architecture MVC et 
                                     le standard d'interopérabilité (l'utilisation du format JSON pour les échanges client-serveur).
                                 </small>
-                            <li>1.3. Mettre en place et vérifier les niveaux d'habilitation associés à un service</li>
+                            <!-- <li>1.3. Mettre en place et vérifier les niveaux d'habilitation associés à un service</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">Gestion de la connexion par login/mot de passe pendant l'authentification.
-                                </small>
-                            <li>1.4. Vérifier les conditions de continuité d'un service informatique</li>
+                                </small> 
+                                il n'y a pas des rôles différents, des permissions distictes, et droits admin
+                                c'est juste une authentification basique, pas de gestion d'habilitation complexe
+                            -->
+                            <!-- <li>1.4. Vérifier les conditions de continuité d'un service informatique</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">J'ai travaillé sur la stabilité de la connexion TCP en gérant les erreurs et la reconnexion.
-                                </small>
-                            <li>1.6 Vérifier le respect des règles d'utilisation des ressources numériques</li>
+                                </small> 
+                                pas de mise ne place une redondance, PRA, serveur secondaire
+                                c'est juste gestion d'erreurs applicatives, pas continuité de service au sens BTS.
+                            -->
+                            <!-- <li>1.6 Vérifier le respect des règles d'utilisation des ressources numériques</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">L'application respecte les règles de communication réseau, gestion de statuts et des identifiants.
-                                </small>
+                                </small> 
+                                ça concerne: politique d'usage, charte informatique, sécurité des accès, RGPD, gestion des comptes => je fais pas
+                            -->
                         </ul>
                     </div>
                     <div data-aos="fade-left" data-aos-delay="900">
                         <p class="fst-italic Chat">2. Répondre aux incidents et aux demandes d'assistance et d'évolution</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li>2.1. Collecter, suivre et orienter des demandes</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai mis en place une interface de connexion et d'authentification, qui 
-                                    demande à l'utilisateur de fournir une adresse IP, un port, un login/mot de passe.
-                                </small>
-                                <br>
-                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai conçu des mécanismes de retour d'information comme message de 
-                                    bienvenue, messages d'erreur, statuts des utilisateurs qui permettent d'orienter l'utilisateur.
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai analysé le cahier des charges fourni lors de la semaine intensive 
+                                    afin d'identifier les fonctionnalités à développer et structurer le projet en conséquence.
                                 </small>
                             <li>2.2. Traiter des demandes concernant les services réseau et système, applicatifs</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">J'ai travaillé sur la connexion réseau via sockets TCP et j'ai géré 
@@ -403,8 +407,8 @@
                                     maintenabilité du code, et j'ai analysé les modalités techniques: Maven, choix des IDE (VSCode et IntelliJ), format JSON. 
                                 </small>
                             <li> 4.2. Planifier les activités</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai structuré ce projet en journées de développement afin d'avoir
-                                    chaque jour des tâches précises comme le Jour 3: implémentation de l'authentification...
+                                <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai organisé le développement en plusieurs phases successives (connexion 
+                                    réseau, authentification, messagerie privée, gestion des statuts) afin de structurer l'avancement du projet.
                                 </small>
                             <!-- <li> 4.3. Évaluer les indicateurs de suivi d'un projet et analyser les écarts</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic"> Cette compétence est acquise partiellement, car j'ai fait un suivi 
@@ -419,25 +423,24 @@
                         <p class="fst-italic Chat">5. Mettre à disposition des utilisateurs un service informatique</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li>5.1. Réaliser les tests d'intégration et d'acceptation d'un service</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai testé mon application au fur et à mesure du développement (compilation avec
-                                    Maven, affichage console, connexion au serveur, envoi/réception de messages).
-                                </small>
-                                <br>
-                                <small class="ps-md-3 ps-lg-5 fst-italic">Il reste à réaliser des tests formels d'acceptation avec plusieurs utilisateurs 
-                                    sur un serveur de production.
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai testé l'application en conditions réelles en validant la 
+                                    connexion au serveur, l'envoi et la réception de messages ainsi que la gestion des statuts utilisateurs.
                                 </small>
                             <!-- <li>5.2. Déployer un service</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai déployé un service applicatif côté client en mettant en place une 
                                     application prête à l'emploi.
                                 </small> -->
-                            <li>5.3. Accompagner les utilisateurs dans la mise en place d'un service</li>
+                            <!-- <li>5.3. Accompagner les utilisateurs dans la mise en place d'un service</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">J'ai préparé une documentation technique (README.md) pour aider les utilisateurs 
                                     à installer, configurer et lancer le projet.
                                 </small>
                                 <br>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">J'ai également intégré des messages d'aide et d'erreur dans l'interface et 
                                     ajouté des éléments ergonomiques comme messages de bienvenue, pseudo mémorisé...
-                                </small>
+                                </small> 
+                                c'est concerne formation, support, assistance, déploiement chez user
+                                Github != accompagnement user
+                            -->
                         </ul>
                     </div>
                     <div data-aos="fade-left" data-aos-delay="1200">
@@ -558,7 +561,7 @@
                 <a href="https://github.com/juklau" class="text-white me-4" target="_blank" title="Lien vers mon GitHub"><i class="fab fa-github fa-2xl"></i></a>
             </section>
         </div>
-        <div class="text-center py-5 bg-black" > © 2025 Copyright</div>
+        <div class="text-center py-5 bg-black" > © 2026 Copyright</div>
 
         <!-- Scroll Top -->
         <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

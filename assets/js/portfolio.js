@@ -200,7 +200,7 @@ AOS.init({
 
 
 // j'ai enlevé le ".Chat-image"
-document.querySelectorAll(".CRM-image, .linkstream-image, .MediaStock-image").forEach(img => {
+document.querySelectorAll(".CRM-image, .linkstream-image, .MediaStock-image, .swantrad-image").forEach(img => {
   img.addEventListener("click", function () {
 
     // Supprimer l'overlay existant s'il y en a un
@@ -222,7 +222,7 @@ document.querySelectorAll(".CRM-image, .linkstream-image, .MediaStock-image").fo
 
     // Ajoute le comportement de fermeture
     overlay.addEventListener("click", function () {
-      overlay.remove();
+        overlay.remove();
     });
   });
 });

@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const pageActuelle = window.location.pathname.includes("ppe-gestion_contacts.html") || 
                         window.location.pathname.includes("ppe-chat.html") || 
-                        window.location.pathname.includes("ppe-mediastock.html");
+                        window.location.pathname.includes("ppe-mediastock.html") ||
+                        window.location.pathname.includes("stage1.html") ||
+                        window.location.pathname.includes("stage2.html");
 
     // const isProjetsPage = window.location.pathname.includes("projets.html");
 

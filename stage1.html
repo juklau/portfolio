@@ -51,7 +51,7 @@
                                         <li><a class="dropdown-item text-white" href="ppe-mediastock.html">MediaStock</a></li>
                                         <li><a class="dropdown-item text-white" href="page-error.html">CryptoVault</a></li>
                                         <li><a class="dropdown-item text-white" href="stage1.html">LinkStream (stage 2025)</a></li>
-                                        <li><a class="dropdown-item text-white" href="page-error.html">Swantrad (stage 2026)</a></li>
+                                        <li><a class="dropdown-item text-white" href="stage2.html">Swantrad (stage 2026)</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -83,14 +83,14 @@
                 <h3 class="pb-5"> </h3>
             </div>
 
-            <section class="presentation container">
+            <section class="presentation container"> 
                 <div class="row mx-auto mt-5" data-aos="fade-up-left" data-aos-delay="600">
                     <span class="alcim text-uppercase fw-bolder">Contexte</span> 
-                    <div class=" pt-2 pb-4 row">
-                        <div class="col-md-10 mb-3">
-                            <p>
+                    <div class=" pt-2 pb-4 row ">
+                        <div class="col-md-10 mb-3 box-shadow">
+                            <p class="lien-extern">
                                 Le projet LinkStream a été réalisé dans le cadre de mon stage de première année de 
-                                BTS SIO (option SLAM) au sein de l'entreprise OPS Imperium, spécialisée dans 
+                                BTS SIO (option SLAM) au sein de l'entreprise <a class="text-white" href="https://ops-imperium.com/" target="_blank"><strong class="fw-medium fst-italic">OPS Imperium</strong></a>, spécialisée dans 
                                 automatisation et intelligence artificielle.
                                 <br>
                                 L'objectif était de concevoir une solution permettant d'automatiser la récupération 
@@ -134,14 +134,14 @@
                             Le développement s'est appuyé sur un environnement moderne, orienté automatisation et interconnexion d'API :
                         </p>
                         <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mt-1">
-                            <li><span class="linkstream fst-italic">◈ n8n</span> - <span class="fst-italic">création et orchestration de workflows automatisés,</span></li>
-                            <li><span class="linkstream fst-italic">◈ Unipile API</span> - <span class="fst-italic">récupération des conversations, messages et profils LinkedIn,</span></li>
-                            <li><span class="linkstream fst-italic">◈ Supabase (PostgreSQL)</span> - <span class="fst-italic">stockage structuré et exposition d'une API REST,</span></li>
-                            <li><span class="linkstream fst-italic">◈ Streamlit (Python)</span> - <span class="fst-italic">développement du frontend interactif,</span></li>
+                            <li><span class="LinkStream-liste">◈ n8n</span> - <span class="fst-italic">création et orchestration de workflows automatisés,</span></li>
+                            <li><span class="LinkStream-liste">◈ Unipile API</span> - <span class="fst-italic">récupération des conversations, messages et profils LinkedIn,</span></li>
+                            <li><span class="LinkStream-liste">◈ Supabase (PostgreSQL)</span> - <span class="fst-italic">stockage structuré et exposition d'une API REST,</span></li>
+                            <li><span class="LinkStream-liste">◈ Streamlit (Python)</span> - <span class="fst-italic">développement du frontend interactif,</span></li>
                             <!-- <li>◈<span class="linkstream"> Docker</span> - <span class="fst-italic">déploiement et portabilité de l'environnement applicatif,</span></li> -->
-                            <li><span class="linkstream fst-italic">◈ VS Code et GitHub</span> - <span class="fst-italic">environnement de développement et gestion de version,</span></li>
-                            <li><span class="linkstream fst-italic">◈ Python (requests, pandas)</span> - <span class="fst-italic">traitement des données et communication entre services,</span></li>
-                            <li><span class="linkstream fst-italic">◈ Assistance IA</span> - <span class="fst-italic">aide à la rédaction de documentation et à l'optimisation du code.</span></li>
+                            <li><span class="LinkStream-liste">◈ VS Code et GitHub</span> - <span class="fst-italic">environnement de développement et gestion de version,</span></li>
+                            <li><span class="LinkStream-liste">◈ Python (requests, pandas)</span> - <span class="fst-italic">traitement des données et communication entre services,</span></li>
+                            <li><span class="LinkStream-liste">◈ Assistance IA</span> - <span class="fst-italic">aide à la rédaction de documentation et à l'optimisation du code.</span></li>
                         </ul>
                         <p>
                             Cet environnement a permis de concevoir une architecture modulaire, fiable et facilement réutilisable, 
@@ -194,7 +194,7 @@
             </section>
 
             <section class="fonctionnalites container">
-                <div class="mt-5" data-aos="zoom-in-down" data-aos-delay="900">
+                <div class="mt-5 text-center" data-aos="zoom-in-down" data-aos-delay="900">
                     <span class="px-2 alcim text-uppercase fw-bolder">Fonctionnalités et automatisation de LinkStream</span>
                 </div>
                 <div class="container carousel swiper swiper-container d-flex justify-content-center mt-2" data-aos="zoom-in-down" data-aos-delay="1000">
@@ -318,7 +318,7 @@
                             <!-- px-2 -->
                             <p class="">
                                 Ce projet m'a permis de mobiliser des compétences transversales en automatisation, en modélisation de 
-                                base de données et en développement backend et frontend <!--, ainsi qu'en déploiement via Docker -->. Malgré des 
+                                base de données et en développement backend et frontend<!--, ainsi qu'en déploiement via Docker -->. Malgré des 
                                 contraintes techniques (échec d'import JSON, transtypage, gestion des doublons), j'ai su adapter les 
                                 workflows et structurer les traitements pour garantir la fiabilité du système.
                             </p>
@@ -330,7 +330,7 @@
                     <div class="col-md-10" data-aos="fade-up-right" data-aos-delay="800">
                         <span class="alcim text-uppercase fw-bolder">Productions associées</span>
                         <p class="mt-4 mb-2">
-                            Voici les livrables techniques réalisés dans le cadre du projet :
+                            Dans le cadre de ce projet, plusieurs livrables techniques ont été produits pour documenter et présenter le travail réalisé :
                         </p>
                         <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
                             <li>◈ Workflows n8n assurant la récupération, le traitement et l'insertion automatique des données LinkedIn.</li>
@@ -357,19 +357,19 @@
                             Plusieurs pistes d'amélioration ont été identifiées pour la suite du projet :
                         </p>
                         <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
-                            <li><span class="fw-bolder linkstream fst-italic">◈ Ajout de fonctionnalités de filtrage et de recherche avancée </span>
+                            <li><span class="fw-bolder LinkStream-liste">◈ Ajout de fonctionnalités de filtrage et de recherche avancée </span>
                                 dans l'interface pour faciliter la navigation entre les messages et les contacts.
                             </li>
-                            <li><span class="fw-bolder linkstream fst-italic">◈ Extension du système d'automatisation</span> afin de permettre 
+                            <li><span class="fw-bolder LinkStream-liste">◈ Extension du système d'automatisation</span> afin de permettre 
                                 la réponse automatique à certains  messages ou le suivi des interactions (relances, nouveaux contacts).
                             </li>                
-                            <li><span class="fw-bolder linkstream fst-italic">◈ Extension multi-plateformes</span> avec l'intégration d'autres réseaux 
+                            <li><span class="fw-bolder LinkStream-liste">◈ Extension multi-plateformes</span> avec l'intégration d'autres réseaux 
                                 sociaux (WhatsApp, Gmail, etc.) via Unipile.
                             </li>
-                            <li><span class="fw-bolder linkstream fst-italic">◈ Implémentation d'un système d'authentification utilisateur complet</span> 
+                            <li><span class="fw-bolder LinkStream-liste">◈ Implémentation d'un système d'authentification utilisateur complet</span> 
                                 au sein de l'application Streamlit, permettant à plusieurs comptes LinkedIn de se connecter indépendamment.
                             </li>
-                            <li><span class="fw-bolder linkstream fst-italic">◈ Déploiement complet du service sur un serveur cloud</span> comme via Docker Compose,
+                            <li><span class="fw-bolder LinkStream-liste">◈ Déploiement complet du service sur un serveur cloud</span> comme via Docker Compose,
                                  pour en faire une solution accessible en ligne.</li>               
                         </ul>
                     </div>
@@ -393,18 +393,21 @@
                                 <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai respecté les standards imposé par Supabae/PostgreSQL (clés
                                     primaires, clés étrangères) et par l'API Unipile (endpoints /chats et /messages, format JSON, webhooks).
                                 </small>
-                            <li>1.4. Vérifier les conditions de continuité d'un service informatique</li>
+                            <!-- <li>1.4. Vérifier les conditions de continuité d'un service informatique</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">J'ai intégré des webhooks et automatisé le flux de données
                                     via n8n pour garantir la mise à jour continue de la base.
-                                </small>
+                                </small> 
+                                je n'ai pas mise en place un PRA, géré la redondance, testé une panne, mis en place un monitoring ou alerting, ou encore documenté les procédures de reprise d'activité, donc je n'ai pas traité cette compétence.
+                                juste j'ai fait automatisation, pas de la continuité de service au sens BTS.
+                            -->
                         </ul>
                     </div>
                     <div data-aos="fade-left" data-aos-delay="900">
                         <p class="fst-italic LinkStream">2. Répondre aux incidents et aux demandes d'assistance et d'évolution</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li>2.1. Collecter, suivre et orienter des demandes</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai recueilli les besoins liés à l'application et ensuite
-                                    j'ai conçu des spécifications fonctionnelles pour répondre à ces besoins (n8n pour l'automatisation,
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai analysé les besoins exprimés par l'entreprise et formalisé les 
+                                    fonctionnalités à développer pour répondre aux objectifs du projet. (n8n pour l'automatisation,
                                     Supabase pour la base de données, Streamlit pour l'interface utilisateur).
                                 </small>
                             <li>2.2. Traiter des demandes concernant les services réseau et système, applicatifs</li>
@@ -561,7 +564,7 @@
                 <a href="https://github.com/juklau" class="text-white me-4" target="_blank" title="Lien vers mon GitHub"><i class="fab fa-github fa-2xl"></i></a>
             </section>
         </div>
-        <div class="text-center py-5 bg-black" > © 2025 Copyright</div>
+        <div class="text-center py-5 bg-black" > © 2026 Copyright</div>
 
         <!-- Scroll Top -->
         <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

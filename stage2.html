@@ -5,15 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
 
-        <!-- CSS de Bootstrap -->
+         <!-- CSS de Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
+        <!-- link SwiperJS CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+        <!-- AOS CSS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" href="style.css">
     </head> 
-    <body>
+    <body class="overflow-x-hidden fs-5 bg-dark">
         <header id="header" class="border-bottom border-secondary">
             <nav class="navbar navbar-expand-md bg-dark p-4" data-bs-theme="dark">
                 <div class="container d-flex justify-content-between">
@@ -35,7 +40,7 @@
                                     <a class="nav-link text-white" aria-current="page" href="index.html">Accueil</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" href="formation.html">Formation</a>
+                                    <a class="nav-link text-white" href="formation.html">Formation</a> 
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle text-white" href="projets.html" role="button" aria-expanded="false"> Projets</a>
@@ -46,7 +51,7 @@
                                         <li><a class="dropdown-item text-white" href="ppe-mediastock.html">MediaStock</a></li>
                                         <li><a class="dropdown-item text-white" href="page-error.html">CryptoVault</a></li>
                                         <li><a class="dropdown-item text-white" href="stage1.html">LinkStream (stage 2025)</a></li>
-                                        <li><a class="dropdown-item text-white" href="page-error.html">Swantrad (stage 2026)</a></li>
+                                        <li><a class="dropdown-item text-white" href="stage2.html">Swantrad (stage 2026)</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -73,16 +78,545 @@
             </nav>
         </header>
 
+        <main class="bg-dark py-5 text-white">
+            <div class="container text-center py-5 mb-5">
+                <h1 class="display-1 text-white pt-5 pb-3 my-5">Stage au sein de l'entreprise Swantrad</h1>
+                <h3 class="pb-5"> </h3>
+            </div>
+
+            <section class="presentation container">
+                <div class="row mx-auto mt-5" data-aos="fade-up-left" data-aos-delay="600">
+                    <span class="alcim text-uppercase fw-bolder">Contexte</span> 
+                    <div class=" pt-2 pb-4 row box-shadow">
+                        <div class="col-md-12 mb-3">
+                            <p class="lien-extern">
+                                Dans le cadre de ma deuxième année de BTS SIO option SLAM (session 2026), j'ai effectué
+                                 un stage du 5 janvier au 15 février 2026 au sein de la startup <a class="text-white" href="https://www.swantrad.com/" target="_blank"><strong class="fw-medium fst-italic">Swantrad</strong></a>, entreprise 
+                                 française spécialisée dans la digitalisation des traductions assermentées.
+                            </p>
+                            <p>
+                                Swantrad évolue dans un secteur à forts enjeux juridiques : la traduction officielle de 
+                                documents destinés aux administrations, tribunaux et entreprises. L'objectif de la plateforme 
+                                est de moderniser ce domaine encore largement basé sur des processus papier, en proposant 
+                                une solution 100 % numérique intégrant la signature électronique qualifiée conforme au 
+                                règlement européen eIDAS.
+                            </p>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <p>
+                                    J'ai intégré le pôle technique de l'entreprise, au sein d'un environnement startup dynamique, 
+                                    où la collaboration entre profils techniques, juridiques et métier est essentielle. 
+                                    Le projet était déjà en production, utilisé par des professionnels, mais présentait 
+                                    plusieurs fragilités techniques liées à son évolution progressive : dette technique 
+                                    importante, duplications de code, tests automatisés partiels et environnement de 
+                                    développement instable.
+                                </p>
+                                <p class="pt-2">
+                                    Le contexte de mon stage était donc clair :
+                                    <br>
+                                    <span class="fw-bolder fst-italic swantrad">
+                                        Améliorer la qualité, la maintenabilité et la fiabilité d'une 
+                                        application web existante, sans impacter son fonctionnement en production.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-end">
+                            <div class="col-md-8">
+                                <p>
+                                    Ce cadre m'a permis de travailler sur des problématiques concrètes de maintenance 
+                                    applicative, de qualité logicielle (SonarQube), de tests automatisés (Laravel / PHPUnit) 
+                                    et d'intégration continue (GitHub Actions), dans un contexte professionnel réel et exigeant.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-end py-4">
+                    <div class="col-md-12 mt-5" data-aos="fade-up-right" data-aos-delay="700">
+                        <span class="alcim text-uppercase fw-bolder">Besoins</span>
+                        <div></div>
+                        <p class=" mt-4 mb-1">
+                            Lors de ma prise en main du projet Swantrad, une analyse technique approfondie a permis 
+                            d'identifier plusieurs besoins majeurs. Bien que la plateforme soit déjà en production et 
+                            fonctionnelle pour les utilisateurs, son évolution progressive avait entraîné certaines 
+                            fragilités techniques.
+                        </p>
+                        <p>
+                            Le premier besoin concernait la stabilisation de l'environnement de développement. Le projet 
+                            ne pouvait pas être exécuté correctement en local sans ajustements spécifiques liés 
+                            aux versions de PHP, aux dépendances Composer et aux migrations de base de données. 
+                            Il était donc essentiel de <span class="fw-bolder fst-italic swantrad">mettre en place un environnement fiable, cohérent et reproductible</span> 
+                            afin de travailler dans des conditions professionnelles.
+                        </p>
+                       
+                        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <p>
+                                    L'analyse de la qualité du code, réalisée à l'aide de SonarQube, a également mis en 
+                                    évidence une dette technique importante, caractérisée par des duplications de code, des 
+                                    problèmes de maintenabilité et une complexité excessive sur certaines parties critiques. 
+                                    Un besoin clair s'est alors imposé : <span class="fw-bolder fst-italic swantrad">améliorer la lisibilité, la structure et la 
+                                    maintenabilité du code</span>, sans altérer le fonctionnement de l'application en production.
+                                </p>
+                                <p>
+                                    Par ailleurs, la présence de code obsolète ou inutilisé (contrôleurs non appelés, vues 
+                                    Blade non référencées, fichiers CSS superflus) rendait le projet plus lourd et plus 
+                                    difficile à maintenir. Un travail de nettoyage et de rationalisation était nécessaire 
+                                    afin de sécuriser les futures évolutions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <p>
+                                Enfin, la couverture de tests existante étant partielle et peu intégrée dans un processus 
+                                d'intégration continue, il était indispensable de <span class="fw-bolder fst-italic swantrad">renforcer la stratégie de tests automatisés</span>. 
+                                L'objectif était de prévenir les régressions, de sécuriser les modifications et d'inscrire le 
+                                projet dans une démarche d'amélioration continue.  
+                                </p>
+                               
+                            </div>  
+                        </div>
+                        <p>
+                            Ainsi, le besoin global du stage consistait à renforcer la fiabilité, la qualité et la 
+                            pérennité technique d'une application web existante, tout en garantissant sa stabilité 
+                            en production.
+                        </p>
+                     </div>
+                </div>
 
 
+                <div class="row py-4 mt-2 justify-content-center" >
+                    <div class="col-md-11 mt-3" data-aos="fade-up-left" data-aos-delay="800">
+                        <span class="alcim text-uppercase fw-bolder">Environnement technologique</span>
+                        <p class="mt-4 mb-2">
+                            Le stage s'est appuyé sur un environnement web moderne, orienté qualité logicielle, 
+                            architecture structurée et automatisation des validations :
+                        </p>
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mt-1">
+                            <li><span class="swantrad-liste">◈ Laravel 12 (PHP 8.4)</span> - <span class="fst-italic">Framework MVC pour le développement backend et la structuration de l'application,</span></li>
+                            <li><span class="swantrad-liste">◈ MySQL 8.4 & Eloquent ORM</span> - <span class="fst-italic">Gestion de la base de données relationnelle et interactions sécurisées avec les données,</span></li>
+                            <li><span class="swantrad-liste">◈ Blade</span> - <span class="fst-italic">Moteur de templates pour la génération dynamique des interfaces,</span></li>
+                            <li><span class="swantrad-liste">◈ Tailwind CSS 4</span> - <span class="fst-italic">Framework CSS utilitaire pour la structuration et le design des interfaces,</span></li>
+                            <li><span class="swantrad-liste">◈ Vite 6</span> - <span class="fst-italic">Outil de build et de gestion des assets front-end (CSS / JavaScript),</span></li>
+                            <li><span class="swantrad-liste">◈ Git & GitHub</span> - <span class="fst-italic">Gestion de version, collaboration et suivi des évolutions du code,</span></li>
+                            <li><span class="swantrad-liste">◈ GitHub Actions (CI/CD)</span> - <span class="fst-italic">Pipeline d'intégration continue pour l'exécution automatisée des tests,</span></li>
+                            <li><span class="swantrad-liste">◈ PHPUnit & Laravel Testing</span> - <span class="fst-italic">Mise en place de tests unitaires, d'intégration et de non-régression,</span></li>
+                            <li><span class="swantrad-liste">◈ SonarQube</span> - <span class="fst-italic">Analyse statique du code et mesure de la dette technique,</span></li>
+                            <li><span class="swantrad-liste">◈ Stripe & Yousign (API)</span> - <span class="fst-italic">Intégration de services tiers sécurisés (paiement et signature électronique),</span></li>
+                            <li><span class="swantrad-liste">◈ Mailjet & hCaptcha</span> - <span class="fst-italic">Gestion des emails transactionnels et protection anti-bot,</span></li>
+                            <li><span class="swantrad-liste">◈ Laragon / Node.js / NPM / Composer</span> - <span class="fst-italic">Environnement de développement local et gestion des dépendances.</span></li>
+                        </ul>
+                        <p>
+                            Cet environnement technologique m'a permis de travailler sur une <span>architecture MVC structurée</span>, 
+                            intégrant des pratiques professionnelles telles que l'analyse de qualité, les tests 
+                            automatisés et l'intégration continue, dans un contexte réel de production.
+                        </p>
+                    </div>
+                </div>
 
+                <div class="row justify-content-end py-4">
+                    <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="900">
+                        <span class="alcim text-uppercase fw-bolder">Missions réalisées</span>
+                        <p class=" mt-4 mb-2">
+                          Au cours de mon stage chez Swantrad j'ai participé à l'amélioration technique d'une application 
+                          web déjà en production, avec pour objectif principal de renforcer sa qualité, sa 
+                          stabilité et sa maintenabilité.
+                        </p>
+                        <p>
+                            Ma première mission a consisté à <span class="fw-bolder fst-italic swantrad">stabiliser l'environnement de développement local</span> : 
+                            configuration de PHP et des dépendances Composer, import et correction de la base de données, résolution 
+                            de problèmes liés aux migrations et mise en place d'un workflow de développement fonctionnel.
+                        </p>
+                       <p>
+                            J'ai ensuite mené une <span class="fw-bolder fst-italic swantrad">analyse approfondie de la qualité du code</span> à l'aide de SonarQube, 
+                            afin d'identifier les duplications, les problèmes de maintenabilité et les zones à risque. Sur cette base, j'ai 
+                            réalisé des actions de <span class="fw-bolder fst-italic swantrad">maintenance et de refactorisation ciblées</span> : suppression de code obsolète, 
+                            réduction de duplications, amélioration de la lisibilité et factorisation de certaines logiques, 
+                            tout en garantissant l'absence de régression fonctionnelle.
+                       </p>
+                        <p class="">
+                            Une part importante de mon travail a également porté sur les <span class="fw-bolder fst-italic swantrad">tests automatisés</span> : création et correction 
+                            de tests unitaires et d'intégration, configuration d'une base de données dédiée aux tests, puis 
+                            intégration complète dans le pipeline <span>CI/CD (GitHub Actions)</span> pour assurer une validation 
+                            automatique à chaque modification du code.
+                        </p>
+                        <p>
+                            Enfin, j'ai contribué à la <span class="fw-bolder fst-italic swantrad">documentation technique</span> du projet (guides d'exécution des tests, 
+                            documentation CI/CD, traçabilité Git), afin de faciliter la maintenance et la prise en main 
+                            future par d'autres développeurs.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
+             <section class="fonctionnalites container">
+                <div class="mt-5 text-center" data-aos="zoom-in-down" data-aos-delay="900">
+                    <span class="px-2 alcim text-uppercase fw-bolder">Preuves et résultats techniques (avant / après)</span>
+                </div>
+                <div class="container carousel swiper swiper-container d-flex justify-content-center mt-2" data-aos="zoom-in-down" data-aos-delay="1000">
+                    <div class="slider-wrapper text-white pb-5 px-1 ">
+                        <ul class="fonctionnalites-liste swiper-wrapper list-unstyled mb-5 pb-5">
+                            <li class="swantrad-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="fonctionnalites-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-3">Analyse initiale SonarQube</h4>
+                                        <small class="legende text-center fs-6 fst-italic">
+                                            État de la dette technique au début du stage
+                                        </small>
+                                        <img class="card-img swantrad-image mx-auto my-auto my-2 " src="assets/images/swantrad/SonarQube_etat_initial.webp" alt="Analyse initiale SonarQube">
+                                        
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swantrad-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="fonctionnalites-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-3">Plan d'action priorisé</h4>
+                                        <small class="legende text-center fs-6 fst-italic py-2">
+                                            Tableau de priorisation des corrections  <br>(impact / risque)
+                                        </small>
+                                        <img class="card-img swantrad-image mx-auto my-2 " src="assets/images/swantrad/tableau_priorisation.webp" alt="Plan d'action priorisé">
+                                        
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swantrad-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="fonctionnalites-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-3">Comparatif avant / après refactorisation</h4>
+                                        <small class="legende text-center fs-6 fst-italic">
+                                            82 % des issues de maintenabilité corrigées sur le périmètre traité
+                                        </small>
+                                        <img class="card-img swantrad-image mx-auto my-2 " src="assets/images/swantrad/comparatif_avant_après.webp" alt="Comparatif avant / après refactorisation">
+                                        
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="swantrad-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="fonctionnalites-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-3">Coverage CSS - état initial</h4>
+                                        <small class="legende text-center fs-6 fst-italic">
+                                            Analyse de duplication et surcharge dans chat.css (avant nettoyage)
+                                        </small>
+                                        <img class="card-img swantrad-image mx-auto my-2 my-auto" src="assets/images/swantrad/coverage_chat_avant.webp" alt="Coverage CSS - état initial">
+                                        
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="swantrad-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="fonctionnalites-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-3">Coverage CSS - après refactorisation</h4>
+                                        <small class="legende text-center fs-6 fst-italic">
+                                            Réduction de 55 % du fichier chat.css après optimisation
+                                        </small>
+                                        <img class="card-img swantrad-image mx-auto my-2 my-auto" src="assets/images/swantrad/coverage_chat_apres.webp" alt="Coverage CSS - après refactorisation">
+                                        
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="swantrad-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="fonctionnalites-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-3">Validation des tests en local</h4>
+                                        <small class="legende text-center fs-6 fst-italic">
+                                            Exécution réussie des tests Laravel / PHPUnit (php artisan test)
+                                        </small> 
+                                        <img class="card-img swantrad-image mx-auto my-2 my-auto" src="assets/images/swantrad/php_artisan_test_Passed.webp" alt="Validation des tests en local">
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="swantrad-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="fonctionnalites-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-3">Validation automatique en CI/CD</h4>
+                                        <small class="legende text-center fs-6 fst-italic">
+                                            Pipeline GitHub Actions : tests exécutés à chaque commit
+                                        </small>
+                                        <img class="card-img swantrad-image mx-auto my-2 my-auto" src="assets/images/swantrad/GitHub_Actions_Passed.webp" alt="Validation automatique en CI/CD"> 
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="swantrad-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="fonctionnalites-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-3">Analyse finale SonarQube</h4>
+                                        <small class="legende text-center fs-6 fst-italic">
+                                            Amélioration de la qualité du code en fin de stage
+                                        </small>
+                                        <img class="card-img swantrad-image mx-auto my-2 my-auto" src="assets/images/swantrad/SonarQube_etat_final.webp" alt="Analyse finale SonarQube"> 
+                                    </div>
+                                </div> 
+                            </li>
+                        </ul>
 
-        <!-- scripts -->
-         <script src="assets/js/portfolio.js"></script>
+                        <!-- pour la pagination = a lapozashoz -->
+                        <div class="swiper-pagination pt-5 mt-md-5"></div>
+
+                        <!-- les boutons de navigation -->
+                        <div class="swiper-slide-button swiper-button-prev d-none d-sm-block"></div>
+                        <div class="swiper-slide-button swiper-button-next d-none d-sm-block"></div>
+                    </div>  
+                </div>
+            </section>
+
+            <section class="container">
+                 <div class=" row pt-4 mt-5 text-white" >
+                    <div class="col-md-10 mt-5 justify-content-end" data-aos="fade-up-left" data-aos-delay="700">
+                        <span class="alcim text-uppercase fw-bolder">Bilan</span>
+                        <p class="mt-4">
+                            Ce stage chez Swantrad a constitué une étape déterminante dans mon parcours en BTS SIO 
+                            option SLAM. Il m'a permis d'intervenir sur une application web réelle, déjà en production, 
+                            avec des exigences concrètes en matière de qualité, de fiabilité et de sécurité.
+                        </p>
+                        <p>
+                            Les actions menées durant le stage ont contribué à stabiliser l'environnement de développement, à 
+                            renforcer la qualité structurelle du code et à fiabiliser le processus de validation des évolutions.
+                            Bien que les indicateurs globaux SonarQube n'aient pas connu une évolution spectaculaire — en 
+                            raison de la taille du projet et des développements parallèles réalisés par l'équipe — les 
+                            améliorations apportées ont permis de consolider certaines zones critiques et de renforcer la 
+                            maintenabilité du projet.
+                        </p>
+                    </div>
+                    <div class=" row justify-content-center">
+                        <div class="col-md-10" data-aos="fade-up-left" data-aos-delay="700">
+                            <!-- px-2 -->
+                            <p class="">
+                                Le renforcement des tests automatisés et leur intégration dans le pipeline CI/CD 
+                                constituent un résultat concret et durable. Le projet bénéficie désormais d'une validation 
+                                systématique avant intégration, réduisant significativement les risques de régression.
+                            </p>
+                            <p>
+                                Au-delà des aspects techniques, ce stage m'a permis de développer une approche 
+                                professionnelle fondée sur l'analyse, la rigueur et l'amélioration continue. Il a confirmé 
+                                mon intérêt pour le développement backend et m'a permis de renforcer mes compétences en 
+                                Laravel, en architecture applicative et en gestion de bases de données, dans un contexte 
+                                réel de production.
+                            </p>
+                           
+                        </div>
+                    </div>
+
+                    <div class=" mt-4 py-4 row">
+                        <div class="col-md-12 row" data-aos="fade-up-right" data-aos-delay="800">
+                            <span class="alcim text-uppercase fw-bolder">Productions associées</span>
+                            <p class="mt-4 mb-2">
+                                Dans le cadre de ce stage chez Swantrad, plusieurs livrables techniques ont été 
+                                réalisés afin de structurer, documenter et sécuriser les travaux menés sur le projet:
+                            </p>
+                            <div class="row justify-content-center">
+                                <div class="col-md-10 pt-3">
+                                    <p class="mb-1 swantrad-liste text-decoration-underline">Analyse et qualité du code </p>
+                                    <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                                        <li>◈ Rapport d'analyse initiale et finale SonarQube</li>
+                                        <li>◈ Plan d'amélioration priorisé (impact / risque)</li>
+                                        <li>◈ Liste argumentée des éléments refactorisés ou supprimés</li>  
+                                        <li>◈ Comparatif avant / après sur certaines zones critiques</li> 
+                                    </ul>
+                                    <p>
+                                        Ces documents formalisent l'analyse de la dette technique et les 
+                                        actions de maintenance menées durant le stage.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row justify-content-end">
+                                <div class="col-md-10 pt-3">
+                                    <p class="mb-1 swantrad-liste text-decoration-underline">Tests automatisés </p>
+                                    <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                                        <li>◈ Documentation des scénarios de tests</li>
+                                        <li>◈ Guide d'exécution des tests (local & CI)</li>
+                                        <li>◈ Rapport de tests détaillé</li>  
+                                        <li>◈ Captures d'exécution réussie en local et sur GitHub Actions</li> 
+                                        <li>◈ Création et correction de tests unitaires et d'intégration</li> 
+                                    </ul>
+                                    <p>
+                                        Ces productions démontrent le renforcement du dispositif de 
+                                        validation et la sécurisation des évolutions du projet.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row justify-content-end">
+                                <div class="col-md-8 pt-3">
+                                    <p class="mb-1 swantrad-liste text-decoration-underline">Intégration continue (CI/CD) </p>
+                                    <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                                        <li>◈ Documentation du pipeline GitHub Actions</li>
+                                        <li>◈ Preuves d'exécution automatisée des tests</li>
+                                        <li>◈ Guide technique des corrections apportées au pipeline</li>  
+                                    </ul>
+                                    <p>
+                                        Ces éléments illustrent la fiabilisation du processus d'intégration 
+                                        continue et la validation automatique du code.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row justify-content-end">
+                                <div class="col-md-10 pt-3">
+                                    <p class="mb-1 swantrad-liste text-decoration-underline">Architecture et compréhension du projet</p>
+                                    <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                                        <li>◈ Documentation de l'architecture MVC</li>
+                                        <li>◈ Analyse de la structure des dossiers et des rôles utilisateurs</li>  
+                                    </ul>
+                                    <p>
+                                        Cette documentation facilite la maintenabilité et la prise en main future du projet.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-md-10 pt-3">
+                                    <p class="mb-1 swantrad-liste text-decoration-underline">Suivi et gestion du projet</p>
+                                    <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                                        <li>◈ Comptes rendus hebdomadaires</li>
+                                        <li>◈ Diagramme de Gantt</li>  
+                                        <li>◈ Historique Git commenté</li>  
+                                        <li>◈ Rapport intermédiaire et rapport final</li>  
+                                    </ul>
+                                    <p>
+                                        Ces livrables témoignent d'une démarche structurée, rigoureuse et professionnelle tout au long du stage.
+                                    </p>
+                                </div>
+                            </div>
+                            <p>
+                                L'ensemble de ces productions reflète une approche méthodique basée sur l'analyse, la traçabilité, 
+                                la documentation et l'amélioration continue, dans un contexte réel de projet en production.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container">
+                <div class="mt-4 py-4  row">
+                    <div class="col-md-12" data-aos="fade-up-right" data-aos-delay="900">
+                        <span class="alcim text-uppercase fw-bolder">Perspectives</span>
+                        <p class="mt-4 mb-2">
+                            Les travaux réalisés durant ce stage ont permis de consolider les bases techniques du projet 
+                            Swantrad, mais ils s'inscrivent dans une démarche progressive d'amélioration continue.
+                        </p>
+                        <p>
+                            La réduction de la dette technique engagée pourrait être poursuivie par des actions ciblées 
+                            sur les zones à forte complexité identifiées par SonarQube. De même, l'enrichissement progressif 
+                            de la couverture des tests automatisés, notamment sur les fonctionnalités métier sensibles, 
+                            permettrait de renforcer encore la fiabilité globale de la plateforme.
+                        </p>
+                        <p>
+                            L'exploitation régulière des indicateurs qualité et du pipeline CI/CD constitue également un 
+                            levier stratégique pour accompagner l'évolution du projet dans un contexte de production et de croissance.
+                        </p>
+                        <p>
+                            Sur le plan personnel, ce stage représente une étape structurante dans la construction de mon 
+                            projet professionnel. Il m'a permis de mieux comprendre les enjeux liés à la maintenance 
+                            d'un projet existant, à la qualité du code et à la sécurisation des évolutions. Il confirme mon 
+                            intérêt pour des environnements techniques exigeants, où la rigueur, l'analyse et la fiabilité 
+                            sont essentielles.
+                        </p>
+                       
+                    </div>
+                </div>
+            </section>
+
+            <section class="container mt-5">
+                <div class="container-fluid mt-4 py-4 px-3">
+                    <span class="alcim text-uppercase fw-bolder">Compétences</span>
+                </div>
+                 <div class="container-fluid box-shadow-left">
+                    <div data-aos="fade-left" data-aos-delay="800">
+                        <p class="mt-3 fst-italic MediaStock">1. Gérer le patrimoine informatique</p>
+                        <ul class="list-unstyled lh-lg ps-4">
+                            <li>1.1. Recenser et identifier les ressources numériques</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai analysé l'architecture technique du projet 
+                                    (Laravel, base de données, tests, pipeline CI/CD) afin d'identifier les différentes 
+                                    ressources numériques utilisées et repérer les éléments obsolètes ou à améliorer.
+                                </small>
+                            <li>1.2. Exploiter des référentiels, normes et standards adoptés par le prestataire informatique</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai exploité des standards reconnus tels que l'architecture REST, 
+                                    l'authentification JWT, la modélisation Merise pour la base de données et un contrat d'API OpenAPI, 
+                                    afin d'assurer la cohérence, la sécurité et l'interopérabilité du service.
+                                </small>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="900">
+                        <p class="fst-italic LinkStream">2. Répondre aux incidents et aux demandes d'assistance et d'évolution</p>
+                        <ul class="list-unstyled lh-lg ps-4">
+                            <li>2.2. Traiter des demandes concernant les services réseau et système, applicatifs</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai diagnostiqué et corrigé des incidents liés à l'environnement de 
+                                    développement, aux migrations de base de données et à l'exécution des tests dans le pipeline CI/CD.
+                                </small>
+                            <li>2.3. Traiter des demandes concernant les applications</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai réalisé des corrections et des évolutions sur l'application 
+                                    Laravel afin d'améliorer la maintenabilité du code et de sécuriser les fonctionnalités existantes.
+                                </small>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="1000">
+                        <p class="fst-italic LinkStream">3. Développer la présence en ligne de l'organisation</p>
+                        <ul class="list-unstyled lh-lg ps-4">
+                            <li> 3.3. Participer à l'évolution d'un site Web exploitant les données de l'organisation</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai participé à la maintenance et à l'amélioration 
+                                    technique de l'application web Laravel de Swantrad, exploitant les données utilisateurs et 
+                                    métier, afin d'en renforcer la stabilité et la maintenabilité.
+                                </small>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="1000">
+                        <p class="fst-italic LinkStream">4. Travailler en mode projet</p>
+                        <ul class="list-unstyled lh-lg ps-4">
+                            <li> 4.1. Analyser les objectifs et les modalités d'organisation d'un projet</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai analysé les objectifs du stage et l'état initial du projet afin 
+                                    de définir des actions prioritaires compatibles avec une application déjà en production.
+                                </small>
+                            <li> 4.2. Planifier les activités</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai établi un planning prévisionnel (diagramme de Gantt) 
+                                    structurant les différentes phases du stage, de l'analyse initiale à la fiabilisation des tests.
+                                </small>
+                            <li> 4.3. Évaluer les indicateurs de suivi d'un projet et analyser les écarts</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai analysé les indicateurs de qualité fournis par SonarQube 
+                                    ainsi que les résultats du pipeline CI/CD afin d'évaluer l'évolution du projet et comprendre les écarts observés.
+                                </small>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="1100">
+                        <p class="fst-italic LinkStream">5. Mettre à disposition des utilisateurs un service informatique</p>
+                        <ul class="list-unstyled lh-lg ps-4">
+                            <li>5.1. Réaliser les tests d'intégration et d'acceptation d'un service</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai conçu et exécuté des tests unitaires et d'intégration sur l'application 
+                                    Laravel, puis intégré leur validation automatique dans le pipeline CI/CD.
+                                </small>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="1200">
+                        <p class="fst-italic LinkStream">6. Organiser son développement professionnel</p>
+                        <ul class="list-unstyled lh-lg ps-4">
+                            <li>6.1. Mettre en place son environnement d'apprentissage personnel</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai configuré et stabilisé un environnement de développement complet 
+                                    (Laravel, base de données, tests, CI/CD) afin de travailler efficacement sur le projet.
+                                </small>
+                            <li> 6.4. Développer son projet professionnel</li>
+                            <small class="ps-md-3 ps-lg-5 fst-italic">Ce stage m'a permis de confirmer mon intérêt 
+                                pour le développement backend et les environnements techniques orientés qualité et fiabilité.
+                            </small>
+                        </ul>
+                    </div>
+            </section>
+            <div class="d-flex justify-content-center mt-5 pt-4" data-aos="zoom-in" data-aos-delay="700">
+                <a href="assets/documents/RP_6_Swantrad_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn" type="button" id="fiche-LinkStream-btn">Fiche descriptive</button></a>
+            </div>
+        </main>
+
+         <!-- script de AOS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <!-- script de Link SwiperJS-->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="assets/js/carousel.js"></script>
+        <script src="assets/js/portfolio.js"></script>
 
         <!-- script de Bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+
     </body>
 
     <!-- Footer -->
@@ -159,7 +693,7 @@
                 <a href="https://github.com/juklau" class="text-white me-4" target="_blank" title="Lien vers mon GitHub"><i class="fab fa-github fa-2xl"></i></a>
             </section>
         </div>
-        <div class="text-center py-5 bg-black" > © 2025 Copyright</div>
+        <div class="text-center py-5 bg-black" > © 2026 Copyright</div>
 
         <!-- Scroll Top -->
         <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
