@@ -49,7 +49,7 @@
                                         <li><a class="dropdown-item text-white" href="ppe-gestion_contacts.html">Mini-CRM</a></li>
                                         <li><a class="dropdown-item text-white" href="ppe-chat.html">ClassCord Client</a></li>
                                         <li><a class="dropdown-item text-white" href="ppe-mediastock.html">MediaStock</a></li>
-                                        <li><a class="dropdown-item text-white" href="page-error.html">CryptoVault</a></li>
+                                        <li><a class="dropdown-item text-white" href="ppe-cryptovault.html">CryptoVault</a></li>
                                         <li><a class="dropdown-item text-white" href="stage1.html">LinkStream (stage 2025)</a></li>
                                         <li><a class="dropdown-item text-white" href="stage2.html">Swantrad (stage 2026)</a></li>
                                     </ul>
@@ -109,7 +109,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container-fluid row justify-content-end py-4 px-3 mt-2">
+                <div class="row justify-content-end py-4 mt-2">
                     <div class="col-md-8 mt-5" data-aos="fade-up-right" data-aos-delay="700">
                         <span class="alcim text-uppercase fw-bolder">Besoins</span>
                         <p class=" mt-4 mb-1">
@@ -132,7 +132,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="container-fluid row py-4 mt-2 px-3  justify-content-center" >
+                <div class=" py-4 mt-2 justify-content-center" >
                     <div class="col-md-11 mt-5" data-aos="fade-up-left" data-aos-delay="800">
                         <span class="alcim text-uppercase fw-bolder">Environnement technologique</span>
                         <p class="mt-4">
@@ -147,13 +147,17 @@
                             <li>◈ Docker / Docker Compose - conteneurisation de l'environnement (Apache, MySQL, phpMyAdmin).</li>
                         </ul>
 
-                        <p class="fst-italic mediastock mt-3 mb-0"><strong>Frontend</strong></p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
-                            <li>◈ HTML5 / CSS3 / Bootstrap 5 - structure et mise en forme responsive (mobil-first).</li>
-                            <li>◈ JavaScript (ES6) - interactions dynamiques et scan des QR codes.</li>
-                            <li>◈ Flatpickr - gestion intuitive des dates de prêt et de retour.</li>
-                            <li>◈ Font Awesome - icônes d'interface.</li>
-                        </ul>
+                         <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <p class="fst-italic mediastock mt-3 mb-0"><strong>Frontend</strong></p>
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                    <li>◈ HTML5 / CSS3 / Bootstrap 5 - structure et mise en forme responsive (mobil-first).</li>
+                                    <li>◈ JavaScript (ES6) - interactions dynamiques et scan des QR codes.</li>
+                                    <li>◈ Flatpickr - gestion intuitive des dates de prêt et de retour.</li>
+                                    <li>◈ Font Awesome - icônes d'interface.</li>
+                                </ul>
+                            </div>
+                        </div>
                         
                         <p class="fst-italic mediastock mt-3 mb-0"><strong>Outils et environnement</strong></p>
                         <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
@@ -168,7 +172,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="row justify-content-end py-4 px-3">
+                <div class="row justify-content-end py-4">
                     <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="900">
                         <span class="alcim text-uppercase fw-bolder">Réalisation</span>
                         <p class="mt-4 mb-2">
@@ -177,24 +181,32 @@
                            développement, tests et déploiement.
                         </p>
 
-                        <p class="fst-italic mediastock mt-3 mb-0"><strong>Structure de l'application</strong></p>
-                        <p class="mb-2">L'application repose sur une architecture PHP procédurale, organisée en dossiers distincts :</p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
-                            <li>◈ <span class="fst-italic">/public/api/</span> : endpoints pour la gestion du matériel et des prêts (<span class="fst-italic">additem.php, updateitem.php, cloturepret.php</span>).</li>
-                            <li>◈ <span class="fst-italic">/config/</span> : fichiers de configuration et de connexion à la base de données (<span class="fst-italic">database.php</span>).</li>
-                            <li>◈ <span class="fst-italic">/src/ </span> : organisation logique des entités métiers (Item, Pret, Emprunteur, Administrateur, Categorie, Formation).</li>
-                            <li>◈ <span class="fst-italic">/sql/</span> : scripts d'initialisation et de test de la base de données (<span class="fst-italic">init.sql</span>).</li>
-                        </ul>
+                        <div class="row justify-content-end">
+                            <div class="col-md-9">
+                                <p class="fst-italic mediastock mt-3 mb-0"><strong>Structure de l'application</strong></p>
+                                <p class="mb-2">L'application repose sur une architecture PHP procédurale, organisée en dossiers distincts :</p>
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                    <li>◈ <span class="fst-italic">/public/api/</span> : endpoints pour la gestion du matériel et des prêts (<span class="fst-italic">additem.php, updateitem.php, cloturepret.php</span>).</li>
+                                    <li>◈ <span class="fst-italic">/config/</span> : fichiers de configuration et de connexion à la base de données (<span class="fst-italic">database.php</span>).</li>
+                                    <li>◈ <span class="fst-italic">/src/ </span> : organisation logique des entités métiers (Item, Pret, Emprunteur, Administrateur, Categorie, Formation).</li>
+                                    <li>◈ <span class="fst-italic">/sql/</span> : scripts d'initialisation et de test de la base de données (<span class="fst-italic">init.sql</span>).</li>
+                                </ul>
+                            </div>
+                        </div>
 
-                        <p class="fst-italic mediastock mt-3 mb-0"><strong>Fonctionnalités principales</strong></p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
-                            <li>◈ CRUD complet du matériel (ajout, modification, suppression, archivage).</li>
-                            <li>◈ Génération automatique de QR codes lors de l'ajout d'un nouvel item.</li>
-                            <li>◈ Scan via smartphone redirigeant vers la fiche détaillée du matériel.</li>
-                            <li>◈ Gestion des prêts et retours avec mise à jour en temps réel de la disponibilité.</li>
-                            <li>◈ Authentification administrateur sécurisée (mot de passe haché, session PHP).</li>
-                            <li>◈ Interface responsive utilisable sur ordinateur et smartphone.</li>
-                        </ul>
+                        <div class="row justify-content-center">
+                            <div class="col-md-9">
+                                <p class="fst-italic mediastock mt-3 mb-0"><strong>Fonctionnalités principales</strong></p>
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                    <li>◈ CRUD complet du matériel (ajout, modification, suppression, archivage).</li>
+                                    <li>◈ Génération automatique de QR codes lors de l'ajout d'un nouvel item.</li>
+                                    <li>◈ Scan via smartphone redirigeant vers la fiche détaillée du matériel.</li>
+                                    <li>◈ Gestion des prêts et retours avec mise à jour en temps réel de la disponibilité.</li>
+                                    <li>◈ Authentification administrateur sécurisée (mot de passe haché, session PHP).</li>
+                                    <li>◈ Interface responsive utilisable sur ordinateur et smartphone.</li>
+                                </ul>
+                            </div>
+                        </div>
 
                         <p class="fst-italic mediastock mt-3 mb-0"><strong>Déploiement</strong></p>
                         <p class="">
@@ -354,7 +366,7 @@
                 </div>
 
                 <div class=" mt-4 py-4 row justify-content-end">
-                    <div class="col-md-10" data-aos="fade-up-right" data-aos-delay="800">
+                    <div class="col-md-11" data-aos="fade-up-right" data-aos-delay="800">
                         <span class="alcim text-uppercase fw-bolder">Productions associées</span>
                         <p class="mt-4">
                             Les livrables du projet comprennent plusieurs ensembles cohérents :
@@ -367,29 +379,37 @@
                             <li>◈ Schémas MCD et MLD de la base de données (présentés dans les annexes du cahier des charges, page 18).</li>  
                         </ul>
 
-                        <p class="mt-4 fst-italic mediastock text-decoration-underline">Code source et environnement</p>
-                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
-                            <li>◈ Application développée en PHP/ MySQL/ HTML/ CSS/ JavaScript/ Bootstrap 5.</li>
-                            <li>◈ Déploiement conteneurisé avec Docker Compose (fichiers docker-compose.yml, Dockerfile, .env).</li>
-                            <li>◈ Système d'authentification et gestion des QR codes via bibliothèques PHP et JS.</li>
-                            <li class="lien-intern">◈ Le code source de l'application disponible sur GitHub 
-                                <a class="text-white" href="https://github.com/juklau/MediaStock.git" target="_blank"><strong class="fw-medium fst-italic">en cliquant sur ce lien</strong></a>.</li>
-                        </ul>
+                        <div class="row justify-content-end">
+                            <div class="col-md-10">
+                                <p class="mt-4 fst-italic mediastock text-decoration-underline">Code source et environnement</p>
+                                <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                                    <li>◈ Application développée en PHP/ MySQL/ HTML/ CSS/ JavaScript/ Bootstrap 5.</li>
+                                    <li>◈ Déploiement conteneurisé avec Docker Compose (fichiers docker-compose.yml, Dockerfile, .env).</li>
+                                    <li>◈ Système d'authentification et gestion des QR codes via bibliothèques PHP et JS.</li>
+                                    <li class="lien-intern">◈ Le code source de l'application disponible sur GitHub 
+                                        <a class="text-white" href="https://github.com/juklau/MediaStock.git" target="_blank"><strong class="fw-medium fst-italic">en cliquant sur ce lien</strong></a>.</li>
+                                </ul>
+                            </div>
+                        </div>
 
-                        <p class="mt-4 fst-italic mediastock text-decoration-underline">Outils de gestion et tests</p>
-                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
-                            <li>◈ Diagrammes de Gantt et Kanban (page 20 - 21 du cahier des charges) pour le suivi du développement.</li>
-                            <li>◈ Plan de tests détaillant les scénarios d'authentification, de prêt/restitution et de sécurité 
-                                (page 12 - 13 du cahier des charges).</li>
-                            <li>◈ Documentation utilisateur illustrée par des captures d'écran des principales fonctionnalités.</li>
-                        </ul>
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <p class="mt-4 fst-italic mediastock text-decoration-underline">Outils de gestion et tests</p>
+                                <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                                    <li>◈ Diagrammes de Gantt et Kanban (page 20 - 21 du cahier des charges) pour le suivi du développement.</li>
+                                    <li>◈ Plan de tests détaillant les scénarios d'authentification, de prêt/restitution et de sécurité 
+                                        (page 12 - 13 du cahier des charges).</li>
+                                    <li>◈ Documentation utilisateur illustrée par des captures d'écran des principales fonctionnalités.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section class="container">
                 <div class="mt-4 py-4  row">
-                    <div class="col-md-10" data-aos="fade-up-right" data-aos-delay="900">
+                    <div class="col-md-12" data-aos="fade-up-right" data-aos-delay="900">
                         <span class="alcim text-uppercase fw-bolder">Perspectives</span>
                         <p class="mt-4">
                             Plusieurs pistes d'amélioration ont été identifiées pour une version ultérieure de l'application :
@@ -406,24 +426,38 @@
                             </li>  
                         </ul>
 
-                        <p class="mt-4 fst-italic mediastock text-decoration-underline">Améliorations techniques</p>
-                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
-                            <li>◈ Migration progressive vers un framework PHP moderne (Laravel) ou JavaScript 
-                                (React/Node.js) pour une meilleure extensibilité.
-                            </li>
-                            <li>◈ Mise en place d'un hébergement cloud sécurisé (AWS, Azure ou GCP).</li>
-                            <li>◈ Intégration d'API externes pour la synchronisation avec la base de données de l'établissement.</li>
-                            <!-- p.ex. savoir si un étudiant est autorisé à emprunter ou le archiver automatiquement s'il a quitté l'école -->
-                        </ul>
+                        <div class="row justify-content-end">
+                            <div class="col-md-10">
+                                <p class="mt-4 fst-italic mediastock text-decoration-underline">Améliorations techniques</p>
+                                <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                                    <li>◈ Migration progressive vers un framework PHP moderne (Laravel) ou JavaScript 
+                                        (React/Node.js) pour une meilleure extensibilité.
+                                    </li>
+                                    <li>◈ Mise en place d'un hébergement cloud sécurisé (AWS, Azure ou GCP).</li>
+                                    <li>◈ Intégration d'API externes pour la synchronisation avec la base de données de l'établissement.</li>
+                                    <!-- p.ex. savoir si un étudiant est autorisé à emprunter ou le archiver automatiquement s'il a quitté l'école -->
+                                </ul>
+                            </div>
+                        </div>
                         
-                        <p class="mt-4 fst-italic mediastock text-decoration-underline">Pérennisation du projet</p>
-                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
-                            <li>◈ Documentation continue et formation des utilisateurs internes.</li>
-                            <li>◈ Automatisation de la sauvegarde et de la supervision (monitoring système, alertes de panne).</li>
-                            <li>◈ Ouverture potentielle du projet en open-source éducatif pour favoriser la 
-                                collaboration entre établissements.
-                            </li>
-                        </ul>
+                        
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <p class="mt-4 fst-italic mediastock text-decoration-underline">Pérennisation du projet</p>
+                                <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                                    <li>◈ Documentation continue et formation des utilisateurs internes.</li>
+                                    <li>◈ Automatisation de la sauvegarde et de la supervision (monitoring système, alertes de panne).</li>
+                                    <li>◈ Ouverture potentielle du projet en open-source éducatif pour favoriser la 
+                                        collaboration entre établissements.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- <div class="row justify-content-center">
+                            <div class="col-md-10">
+                            </div>
+                        </div> -->
                     </div>
                 </div>
             </section>
@@ -497,11 +531,11 @@
                                 <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai planifié les différentes étapes du projet (conception, 
                                     développement, tests, déploiement) à l'aide d'un diagramme de Gantt et d'un suivi hebdomadaire.
                                 </small>
-                            <li> 4.3. Évaluer les indicateurs de suivi d'un projet et analyser les écarts</li>
+                            <!-- <li> 4.3. Évaluer les indicateurs de suivi d'un projet et analyser les écarts</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai assuré un suivi régulier de l'avancement du projet en
                                      comparant l'état réel des réalisations avec la planification initiale, afin d'identifier 
                                      les écarts et d'ajuster les priorités lorsque cela était nécessaire.
-                                </small>
+                                </small> rizikos-->
                         </ul>
                     </div>
                     <div data-aos="fade-left" data-aos-delay="1000">

@@ -399,7 +399,8 @@
                         Page RP Mini-CRM, Chat, MediaStock, Linkstream
 **********************************************************************************************/
 #image-crm,
-#image-mediastock{
+#image-mediastock, 
+#image-cryptovault{
     width: 270px;
     height: auto;
     object-fit: contain;
@@ -407,7 +408,8 @@
 
 /* leellenörizniii!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .CRM-container .card,
-.MediaStock-container .card{
+.MediaStock-container .card,
+.CryptoVault-container .card{
     width: 340px;
     max-width: 340px;
     height: 600px;
@@ -437,11 +439,15 @@
 .slider-wrapper .swiper-slide-button.Chat:hover,
 .Chat-container:hover .card-title,
 .linkstream-container:hover .card-title,
-.swantrad-container:hover .card-title{
+.swantrad-container:hover .card-title,
+.CryptoVault-container:hover .card-title{
     color: var(--main-color) !important;
 }
 .CRM-image,
-.MediaStock-image{ /*image à "zoomer"  */
+.MediaStock-image,
+.linkstream-image,
+.swantrad-image,
+.cryptovault-image{ /*image à "zoomer"  */
     max-width: 100%;
     height: auto;
     cursor: zoom-in;
@@ -452,6 +458,18 @@
 
 .MediaStock-image{
     max-width: 60%;
+}
+
+.cryptovault-image-web{
+    max-width: 65%;
+}
+
+.cryptovault-image-web2{
+    max-width: 75%;
+}
+
+.cryptovault-image{
+    max-width: 85%;
 }
  /*image "zoomé" en plein d'écran */
 
@@ -489,7 +507,9 @@
 .LinkStream-liste,                  /* page LinkStream */
 .fst-italic.LinkStream,             /* page LinkStream */
 .fw-bolder.fst-italic.swantrad,
-.swantrad-liste{        
+.fst-italic.swantrad,
+.swantrad-liste,
+.fst-italic.cryptovault{        
     color: var(--main-second-color) !important;
 }
 .linkstream{

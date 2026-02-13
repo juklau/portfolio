@@ -49,7 +49,7 @@
                                         <li><a class="dropdown-item text-white" href="ppe-gestion_contacts.html">Mini-CRM</a></li>
                                         <li><a class="dropdown-item text-white" href="ppe-chat.html">ClassCord Client</a></li>
                                         <li><a class="dropdown-item text-white" href="ppe-mediastock.html">MediaStock</a></li>
-                                        <li><a class="dropdown-item text-white" href="page-error.html">CryptoVault</a></li>
+                                        <li><a class="dropdown-item text-white" href="ppe-cryptovault.html">CryptoVault</a></li>
                                         <li><a class="dropdown-item text-white" href="stage1.html">LinkStream (stage 2025)</a></li>
                                         <li><a class="dropdown-item text-white" href="stage2.html">Swantrad (stage 2026)</a></li>
                                     </ul>
@@ -81,340 +81,533 @@
         <main class="bg-dark py-5 text-white">
 
             <div class="container text-center py-5 mb-5">
-                <h1 class="display-1 text-white pt-5 pb-3 my-5">MediaStock</h1>
-                <h3 class="pb-5">Application web de gestion de matériel </h3>
+                <h1 class="display-1 text-white pt-5 pb-3 my-5">CryptoVault</h1>
+                <h3 class="pb-5">Coffre-fort numérique sécurisé</h3>
             </div>
 
             <section class="presentation container ">
-                <div class="row mx-auto mt-5" data-aos="fade-up-left" data-aos-delay="600">
+                <div class="mx-auto mt-5" data-aos="fade-up-left" data-aos-delay="600">
                     <span class="alcim text-uppercase fw-bolder">Contexte</span>
-                    <div class="py-3 px-3 row">
-                        <div class="col-md-8 my-3">
-                            <p class="mt-3">
-                                Le projet CryptoVault a été réalisé dans le cadre du BTS SIO, option SLAM, au cours de 
-                                la deuxième année de formation. 
-                                <br>
-                               
+                    <div class="py-3 row">
+                        <div class="col-11 my-3 mx-1 box-shadow">
+                            <div class="row col-md-12 ">
+                                <div class="col-md-8">
+                                    <p class="mt-3">
+                                        CryptoVault est un projet de coffre-fort numérique sécurisé réalisé en binôme dans le 
+                                        cadre de ma formation en BTS Services Informatiques aux Organisations (option SLAM).
+                                    </p>
+                                    <p>
+                                        Ce projet avait pour objectif de strong <span class="fst-italic cryptovault">concevoir et développer une application complète</span> permettant 
+                                        de stocker, organiser et partager des fichiers de manière sécurisée. Il s'inscrit dans une 
+                                        démarche professionnelle visant à mettre en œuvre une architecture full-stack moderne, combinant 
+                                        une API REST, un client lourd JavaFX et une interface Web dédiée aux partages publics.
+                                    </p>
+                                    <p>
+                                        L'enjeu principal était de répondre aux problématiques actuelles liées à la <span class="fst-italic cryptovault">protection des données 
+                                        numériques</span> : contrôle des accès, gestion des habilitations, chiffrement des fichiers, traçabilité 
+                                        des actions et séparation des espaces utilisateurs.
+                                    </p>
+                                </div>
+                                <div class="col-md-3 my-auto mx-lg-auto d-none d-md-block">
+                                    <img id="image-cryptovault" src="assets/images/cryptovault/Logo_CryptoVault.webp" alt="Logo de CryptoVault">
+                                </div>
+                            </div>
+                            
+                            <p>
+                                Réalisé dans un contexte pédagogique simulant un environnement professionnel, le projet nous a 
+                                amenés à intervenir sur l'ensemble du cycle de développement : analyse du besoin, modélisation 
+                                de la base de données, développement backend et frontend, intégration des mécanismes de sécurité, 
+                                puis déploiement conteneurisé avec Docker.
                             </p>
                             <p>
-                               
+                                CryptoVault représente ainsi une réalisation complète illustrant ma capacité à travailler en équipe 
+                                sur une solution sécurisée, structurée et maintenable.
                             </p>
                         </div>
-                        <div class="col-md-3 my-auto mx-lg-auto d-none d-md-block">
-                            <img id="image-mediastock" src="assets/images/cryptovault/Logo_CryptoVault.webp" alt="Logo de CryptoVault">
+                    </div>
+                </div>
+                <div class=" justify-content-end py-4 mt-2">
+                    <div class="col-md-12 mt-5" data-aos="fade-up-right" data-aos-delay="700">
+                        <span class="alcim text-uppercase fw-bolder">Besoins</span>
+                        <p class=" mt-4 mb-1">
+                            Le projet CryptoVault a été conçu pour répondre à des enjeux concrets liés à la gestion 
+                            et à la sécurisation des données numériques.
+                        </p>
+                        <p class="">
+                            Sur le plan fonctionnel, l'objectif était de <span class="fst-italic cryptovault">proposer à chaque utilisateur un espace personnel sécurisé</span> 
+                             lui permettant de stocker et d'organiser ses fichiers au sein d'une arborescence de 
+                            dossiers. La solution devait également intégrer un système de versionnage afin de conserver 
+                            l'historique des modifications, ainsi qu'un mécanisme de contrôle des quotas pour limiter 
+                            l'espace de stockage utilisé.
+                        </p>
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <p class="">
+                                    Un autre besoin essentiel concernait le <span class="fst-italic cryptovault">partage sécurisé de fichiers ou de dossiers</span>. Il était 
+                                    nécessaire de pouvoir générer des liens publics temporaires, configurables (date d'expiration, 
+                                    nombre de téléchargements), tout en garantissant une traçabilité des accès et des actions 
+                                    effectuées. Le système devait également distinguer les utilisateurs standards de l'administrateur, 
+                                    ce dernier disposant de fonctionnalités supplémentaires comme la gestion des quotas et des comptes.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-end">
+                            <div class="col-md-10">
+                                <p>
+                                    Sur le plan technique, la solution devait centraliser la logique métier au sein d'une API 
+                                    REST sécurisée. L'authentification devait être robuste, basée sur des mécanismes modernes 
+                                    (JWT), et les <span class="fst-italic cryptovault">données sensibles protégées</span> via le hachage des mots de passe et le chiffrement 
+                                    des fichiers. La cohérence des données devait être assurée par un modèle relationnel normalisé 
+                                    et des contraintes d'intégrité.
+                                </p>
+                                <p>
+                                    Enfin, l'application devait être <span class="fst-italic cryptovault">ergonomique et simple d'utilisation côté client</span>, tout en 
+                                    permettant un déploiement reproductible et structuré grâce à la conteneurisation.
+                                </p>
+                            
+                            </div>
+                        </div>
+                        
+                    </div>
+               </div>
+                <div class=" py-4 mt-2 justify-content-center" >
+                    <div class="col-md-12 mt-5" data-aos="fade-up-left" data-aos-delay="800">
+                        <span class="alcim text-uppercase fw-bolder">Environnement technologique</span>
+                        <p class="mt-4">
+                            La solution repose sur un environnement technologique complet, couvrant le 
+                            backend, le frontend, la base de données et le déploiement.
+                        </p>
+                        <p class="fst-italic cryptovault mt-3 mb-0"><strong>Backend</strong></p>
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                            <li>◈ <strong>PHP 8.2</strong> - développement de l'API REST et implémentation de la logique métier.</li>
+                            <li>◈ <strong>Slim 4</strong> - framework léger pour la gestion des routes, middlewares et contrôleurs REST.</li>
+                            <li>◈ <strong>Medoo (ORM)</strong> - abstraction simplifiée de l'accès aux données via PDO.</li>
+                            <li>◈ <strong>MySQL</strong> - base de données relationnelle normalisée avec contraintes d'intégrité.</li>
+                            <li>◈ <strong>JWT (HMAC-SHA256)</strong> - authentification stateless sécurisée des utilisateurs.</li>
+                            <li>◈ <strong>Bcrypt</strong> - hachage sécurisé des mots de passe avec salage intégré et protection contre les attaques par force brute.</li>
+                            <li>◈ <strong>AES-256-GCM</strong> - chiffrement des fichiers avec authentification et garantie d'intégrité.</li>
+                            <li>◈ <strong>Middlewares de sécurité</strong> - gestion des rôles (user/admin), contrôle d'accès et validation des requêtes.</li>
+                        </ul>
+
+                         <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <p class="fst-italic cryptovault mt-3 mb-0"><strong>Client lourd</strong></p>
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                    <li>◈ <strong>Java 17 LTS</strong> - socle applicatif stable et maintenable.</li>
+                                    <li>◈ <strong>JavaFX 21</strong> - développement de l'interface graphique.</li>
+                                    <li>◈ <strong>Architecture MVC</strong> - séparation claire entre modèle, vue et contrôleur.</li>
+                                    <li>◈ <strong>FXML & SceneBuilder</strong> - conception structurée des interfaces.</li>
+                                    <li>◈ <strong>HTTP Client (REST)</strong> - communication sécurisée avec l'API.</li>
+                                    <li>◈ <strong>Gestion asynchrone (Tasks JavaFX)</strong> - upload de fichiers avec barre de progression et interface réactive.</li>
+                                </ul>
+                            </div>
+                         </div>
+                        <div class="row justify-content-end">
+                            <div class="col-md-10">
+                                <p class="fst-italic cryptovault mt-3 mb-0"><strong>Client léger Web</strong></p>
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                    <li>◈ <strong>HTML5 / CSS3</strong> - structure et mise en forme des pages publiques.</li>
+                                    <li>◈ <strong>Bootstrap 5</strong> - interface responsive et ergonomique.</li>
+                                    <li>◈ <strong>JavaScript (ES6)</strong> - gestion des interactions côté navigateur.</li>
+                                    <li>◈ <strong>Intégration API REST</strong> - téléchargement sécurisé via lien public avec vérification des 
+                                        contraintes côté serveur (expiration, nombre d'usages, révocation).</li>
+                                </ul>
+                            </div>
+                         </div>
+                        <div class="row justify-content-start">
+                            <div class="col-md-10">
+                                <p class="fst-italic cryptovault mt-3 mb-0"><strong>Outils et déploiement</strong></p>
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                    <li>◈ <strong>Docker / Docker Compose</strong> - conteneurisation et déploiement reproductible.</li>
+                                    <li>◈ <strong>Git & GitHub</strong> - gestion de versions et collaboration en binôme.</li>
+                                    <li>◈ <strong>IntelliJ IDEA & Visual Studio Code</strong> - environnements de développement.</li>
+                                    <li>◈ <strong>Postman</strong> - tests et validation des endpoints REST.</li>
+                                    <li>◈ <strong>Figma</strong> - conception des maquettes UI/UX.</li>
+                                </ul> 
+                            </div>
+                         </div>
+                    </div>
+                </div> 
+                <div class="row justify-content-end py-3">
+                    <div class="col-md-11 mt-5" data-aos="fade-up-right" data-aos-delay="900">
+                        <span class="alcim text-uppercase fw-bolder">Réalisation</span>
+                        <p class="mt-4 mb-2">
+                           Le développement de CryptoVault s'est déroulé en binôme selon une démarche progressive et 
+                           structurée, allant de la modélisation des données à l'implémentation complète des fonctionnalités.
+                        </p>
+                        <p>
+                            La première étape a consisté à <span class="fst-italic cryptovault">concevoir le modèle relationnel de la base de données</span>. Nous avons 
+                            élaboré un MCD puis un schéma SQL intégrant les entités principales : utilisateurs, dossiers 
+                            hiérarchiques, fichiers, versions, partages et journalisation. Les contraintes d'intégrité et 
+                            les relations ont été soigneusement définies afin de garantir la cohérence et la séparation 
+                            stricte des espaces utilisateurs.
+                        </p>
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <p>
+                                    Nous avons ensuite <span class="fst-italic cryptovault">développé l'API REST</span>, cœur de l'application. Celle-ci centralise l'ensemble 
+                                    de la logique métier : gestion des comptes, contrôle des habilitations, traitement des uploads, 
+                                    calcul des quotas, gestion des partages et vérifications de sécurité. Une attention particulière 
+                                    a été portée à la robustesse des contrôles (validation des entrées, vérification des droits, 
+                                    gestion des erreurs et des cas limites).
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-end">
+                            <div class="col-md-10">
+                                <p>
+                                    Le <span class="fst-italic cryptovault">système de versionnage</span> a été conçu pour conserver l'historique complet des fichiers, sans 
+                                    écrasement des données. Chaque nouvelle version est enregistrée de manière indépendante, 
+                                    garantissant traçabilité et intégrité.
+                                </p>
+                                <p>
+                                    Le <span class="fst-italic cryptovault">client JavaFX</span> a été développé pour offrir une expérience proche d'un explorateur de fichiers : 
+                                    navigation arborescente, affichage dynamique des ressources, gestion des versions et des partages. 
+                                    Les uploads sont gérés de manière asynchrone avec indicateur de progression afin de maintenir 
+                                    une interface fluide.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <p>
+                            Une <span class="fst-italic cryptovault">interface Web publique</span> a également été réalisée pour permettre le téléchargement via lien 
+                            sécurisé. Toutes les contraintes (expiration, nombre de téléchargements restants, révocation) 
+                            sont contrôlées côté serveur avant toute autorisation.
+                        </p>
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <p>
+                                    Enfin, l'ensemble de la solution a été conteneurisé avec Docker afin de garantir un 
+                                    environnement de développement et de déploiement reproductible.
+                                </p>
+                                <p>
+                                    Cette réalisation illustre ma capacité à concevoir une architecture cohérente, sécurisée 
+                                    et maintenable, tout en travaillant en collaboration sur un projet structuré.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="container-fluid row justify-content-end py-4 px-3 mt-2">
-                    <div class="col-md-8 mt-5" data-aos="fade-up-right" data-aos-delay="700">
-                        <span class="alcim text-uppercase fw-bolder">Besoins</span>
-                        <p class=" mt-4 mb-1">
-                            L'objectif principal du projet est de simplifier et automatiser la gestion des prêts 
-                            et retours de matériel au sein de l'école.
-                        </p>
-                        <p class="">L'application devait permettre à l'équipe administrative de :</p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
-                            <li>◈ gérer l'inventaire complet du matériel (ajout, suppression, modification, archivage),</li>
-                            <li>◈ suivre les prêts et restitutions en temps réel,</li>
-                            <li>◈ identifier chaque matériel grâce à un QR code unique,</li>
-                            <li>◈ effectuer les opérations de prêt, et restitution directement depuis un smartphone.</li>
-                        </ul>
-                        <p class="">
-                            Le besoin exprimé portait aussi sur la traçabilité (historique des prêts, retard, état du matériel) 
-                            et la sécurisation des accès via une authentification administrateur.
-                            <br>
-                            Le système devait être rapide à déployer, léger, et fonctionner aussi bien en 
-                            local qu'à distance pour les tests sur le réseau de l'école.
-                        </p>
-                    </div> -->
-                <!-- </div>
-                <div class="container-fluid row py-4 mt-2 px-3  justify-content-center" >
-                    <div class="col-md-11 mt-5" data-aos="fade-up-left" data-aos-delay="800">
-                        <span class="alcim text-uppercase fw-bolder">Environnement technologique</span>
-                        <p class="mt-4">
-                            Le projet s'appuie sur une architecture trois-tiers (présentation, logique métier, données) et 
-                            sur des technologies modernes respectant les standards du web :
-                        </p>
-                        <p class="fst-italic mediastock mt-3 mb-0"><strong>Backend</strong></p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
-                            <li>◈ PHP 8.2 (procédural) - logique métier et gestion des sessions.</li>
-                            <li>◈ MySQL 8.0 - base de données relationnelle (tables : item, prêt, emprunteur, admininstrateur …).</li>
-                            <li>◈ PDO (PHP Data Objects) - sécurité des requêtes SQL (préparées).</li>
-                            <li>◈ Docker / Docker Compose - conteneurisation complète avec services Apache, MySQL et PhpMyAdmin</li>
-                        </ul>
+          </section>
 
-                        <p class="fst-italic mediastock mt-3 mb-0"><strong>Frontend</strong></p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
-                            <li>◈ HTML5 / CSS3 / Bootstrap 5 - structure et mise en forme responsive.</li>
-                            <li>◈ JavaScript (ES6) - interactions dynamiques et scan des QR codes.</li>
-                            <li>◈ Flatpickr - gestion intuitive des dates de prêt et de retour.</li>
-                            <li>◈ Font Awesome - icônes d'interface.</li>
-                        </ul>
-                        
-                        <p class="fst-italic mediastock mt-3 mb-0"><strong>Outils et environnement</strong></p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
-                            <li>◈ VS Code - environnement de développement.</li>
-                            <li>◈ Git / GitHub - versionnage et hébergement du code.</li>
-                            <li>◈ Figma - conception des maquettes UI/UX.</li>
-                            <li>◈ Smartphone Android - tests des fonctionnalités de scan via caméra.</li>
-                        </ul>
-                        <p>
-                            L'ensemble a été conçu pour fonctionner en local (via WAMP/Docker) et sur 
-                            un serveur SISR distant, garantissant la portabilité et la cohérence de l'environnement.
-                        </p>
-                    </div>
-                </div>
-                <div class="row justify-content-end py-4 px-3">
-                    <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="900">
-                        <span class="alcim text-uppercase fw-bolder">Réalisation</span>
-                        <p class="mt-4 mb-2">
-                           Le développement de MédiaStock sest déroulé sur six semaines, selon une approche itérative et 
-                           incrémentale, en suivant un planning hebdomadaire structuré comprenant les phases de définition, 
-                           développement, tests et déploiement.
-                        </p>
-
-                        <p class="fst-italic mediastock mt-3 mb-0"><strong>Structure de l'application</strong></p>
-                        <p>Architecture PHP procédurale, organisée en dossiers distincts :</p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
-                            <li>◈ <span class="fst-italic">/public/api/</span> : endpoints pour la gestion du matériel et des prêts (additem.php, updateitem.php, cloturepret.php ...).</li>
-                            <li>◈ <span class="fst-italic">/config/</span> : fichiers de connexion et configuration de la base (database.php).</li>
-                            <li>◈ <span class="fst-italic">/src/ </span> : classes métiers (Item, Pret, Emprunteur, Administrateur, Categorie, Formation).</li>
-                            <li>◈ <span class="fst-italic">/sql/</span> : scripts d'initialisation et de test de la base (<span class="fst-italic">init.sql</span>).</li>
-                        </ul>
-
-                        <p class="fst-italic mediastock mt-3 mb-0"><strong>Fonctionnalités principales</strong></p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
-                            <li>◈ CRUD complet du matériel (ajout, modification, suppression, archivage).</li>
-                            <li>◈ Génération automatique de QR codes lors de l'ajout d'un nouvel item.</li>
-                            <li>◈ Scan via smartphone redirigeant automatiquement vers la fiche du matériel.</li>
-                            <li>◈ Gestion des prêts et retours avec mise à jour en temps réel de la disponibilité.</li>
-                            <li>◈ Authentification administrateur avec mot de passe haché et session PHP.</li>
-                            <li>◈ Interface responsive permettant l'utilisation sur ordinateur et mobile.</li>
-                        </ul>
-
-
-                        <p class="fst-italic mediastock mt-3 mb-0"><strong>Déploiement</strong></p>
-                        <p class="">
-                            Le projet a été déployé en local via Docker (http://localhost:9080) puis transféré sur le serveur 
-                            SISR mutualisé pour la phase finale de test.
-                            <br>
-                            Une documentation complète (technique + utilisateur) a accompagné la livraison, 
-                            incluant le script SQL, les captures d'écran, le schéma MCD/MLD et le guide d'installation.
-                        </p>
-                    </div>
-                </div> -->
-            <!-- </section>
-
-             <section class="fonctionnalites container">
+               <section class="fonctionnalites container">
                 <div class="mt-5" data-aos="zoom-in-down" data-aos-delay="900">
                     <span class=" alcim text-uppercase fw-bolder">Fonctionnalités</span>
                 </div>
                 <div class="container carousel swiper swiper-container d-flex justify-content-center mt-2" data-aos="zoom-in-down" data-aos-delay="1000">
                     <div class="slider-wrapper text-white pb-5 px-1 ">
                         <ul class="outil-liste swiper-wrapper list-unstyled mb-5 pb-5">
-                            <li class="MediaStock-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+
+                            <!-- accès, authentification -->
+                            <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Authentification administrateur</h4>
+                                        <h4 class="card-title text-center py-3">Inscription</h4>
+                                        <p class="text-center fst-italic">Message d'erreur si le mot de passe différent</p>
+                                        <img class="card-img cryptovault-image mx-auto my-2 " src="assets/images/cryptovault/inscription_mdpdiff.webp" alt="Inscription">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-5 ">Authentification</h4>
                                         <br>
-                                        <img class="card-img MediaStock-image mx-auto my-2 " src="assets/images/mediastock/authentification.webp" alt="Authentification">
+                                        <img class="card-img cryptovault-image mx-auto my-2 " src="assets/images/cryptovault/connexion.webp" alt="Authentification">
                                     </div>
                                 </div>
                             </li>
-                            <li class="MediaStock-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                        
+                            <!-- l'espace navigation -->
+                            <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center pt-5 py-2 ">Authentification administrateur</h4>
-                                        <p class="text-center fst-italic">Message d'erreur en cas d'identification incorrecte</p>
+                                        <h4 class="card-title text-center py-5">Dashboard utilisateur</h4>                                
+                                        <img class="card-img cryptovault-image mx-auto my-auto " src="assets/images/cryptovault/tableau_board_user.webp" alt="Dashboard utilisateur">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-5">Gestion des dossiers</h4>
+                                   
+                                        <img class="card-img cryptovault-image mx-auto my-auto" src="assets/images/cryptovault/gestion_des_dossiers.webp" alt="Gestion des dossiers">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-5 ">Gestion des fichiers</h4>
+                                      
+                                        <img class="card-img cryptovault-image mx-auto my-auto" src="assets/images/cryptovault/gestion_des_fichiers.webp" alt="Gestion des fichiers">
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- gestion avancée =>stockage -->
+                            <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-5">Upload de fichiers</h4>
+                                      
+                                        <img class="card-img cryptovault-image mx-auto my-auto" src="assets/images/cryptovault/Upload_fichiers.webp" alt="Upload de fichiers">
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-5">Gestion des versions</h4>
+                                   
+                                        <img class="card-img cryptovault-image mx-auto my-auto" src="assets/images/cryptovault/gestion_des_version.webp" alt="Gestion des versions">
+                                    </div>
+                                </div>
+                            </li>
+                             <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-3">Delete Version</h4>
+                                        <p class="text-center fst-italic">Cas limite: Impossible de supprimer la dernière version</p>
+                                         <img class="card-img cryptovault-image mx-auto my-auto" src="assets/images/cryptovault/impossible_delete_last_version.webp" alt="Delete Version">
+                                    </div>
+                                </div> 
+                            </li>
+
+                            <!-- partage -->
+                            <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-5 ">Partager un fichier</h4>
+                                        <img class="card-img cryptovault-image mx-auto my-auto" src="assets/images/cryptovault/share_fichier.webp" alt="Partager un fichier">
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-5 ">Mes partages</h4>
+                                        <img class="card-img cryptovault-image mx-auto my-auto" src="assets/images/cryptovault/different_statut_partage.webp" alt="Mes partages">
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-5 ">Lien de partage d'un fichier</h4>
+                                        <img class="card-img cryptovault-image mx-auto my-auto" src="assets/images/cryptovault/lien_partage_fichier.webp" alt="Lien de partage d'un fichier">
+                                    </div>
+                                </div> 
+                            </li>
+                            
+                            <!-- côté web => destinataire -->
+                            <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-3">Web: partage un fichier avec versions</h4>
+                                        <img class="card-img cryptovault-image-web2 mx-auto my-auto" src="assets/images/cryptovault/web_versions2.webp" alt="Web: partage un fichier avec versions"> 
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-3">Web: partage d'un dossier </h4>
+                                       
                                         <br>
-                                        <img class="card-img MediaStock-image mx-auto my-2 " src="assets/images/mediastock/message_erreur.webp" alt="Message d'erreur">
+                                        <img class="card-img cryptovault-image-web mx-auto my-auto" src="assets/images/cryptovault/web_partage_dossier.webp" alt="Web: partage d'un dossier"> 
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-3">Web : lien invalide ou expiré</h4>
+                                     
+                                        <img class="card-img cryptovault-image-web mx-auto my-auto" src="assets/images/cryptovault/web_partage_revoque.webp" alt="Web : lien invalide ou expiré"> 
+                                    </div>
+                                </div> 
+                            </li>
+
+                            <!-- Administration -->
+                            <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                                <div class="outil-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-5">Dashboard administrateur</h4>
+                                        <img class="card-img cryptovault-image mx-auto my-auto" src="assets/images/cryptovault/tableau_board_admin.webp" alt="Dashboard administrateur">
                                     </div>
                                 </div>
                             </li>
-                            <li class="MediaStock-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                            <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center pt-5 py-2">Gestion de l'inventaire du matériel (CRUD)</h4>
-                                        <p class="text-center fst-italic">Liste du matériel</p>
-                                        <img class="card-img MediaStock-image mx-auto my-2 " src="assets/images/mediastock/liste_matériel2.webp" alt="Liste du matériel">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="MediaStock-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
-                                <div class="outil-item p-1 mt-5 mb-3">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center pt-5 py-2 ">Gestion de l'inventaire du matériel (CRUD)</h4>
-                                        <p class="text-center fst-italic">Formulaire d'ajout de matériel</p>
-                                        <img class="card-img MediaStock-image mx-auto my-2 " src="assets/images/mediastock/ajout-materiel.webp" alt="Formulaire d'ajout de matériel">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="MediaStock-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
-                                <div class="outil-item p-1 mt-5 mb-3">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5">Fiche détaillée d'un matériel</h4>
-                                        <img class="card-img MediaStock-image mx-auto my-2 pt-3" src="assets/images/mediastock/fiche-détaillé.webp" alt="Fiche détaillée d'un matériel">
+                                        <h4 class="card-title text-center py-5">Gestion de quota par admin</h4>
+                                 
+                                        <img class="card-img cryptovault-image mx-auto my-auto" src="assets/images/cryptovault/gestion_de_quota2.webp" alt="Gestion de quota par admin"> 
                                     </div>
                                 </div> 
                             </li>
-                            <li class="MediaStock-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                            <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Gestion des prêts</h4>
-                                        <img class="card-img MediaStock-image mx-auto my-auto" src="assets/images/mediastock/gestion-pret.webp" alt="Gestion des prêts">
+                                        <h4 class="card-title text-center pt-5 pb-4">Supprimer un utilisateur par admin</h4>
+                               
+                                        <img class="card-img cryptovault-image mx-auto my-auto" src="assets/images/cryptovault/delete_user3.webp" alt="Supprimer un utilisateur par admin"> 
                                     </div>
                                 </div> 
                             </li>
-                            <li class="MediaStock-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
-                                <div class="outil-item p-1 mt-5 mb-3">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Historique d'un prêt</h4>
-                                        <img class="card-img MediaStock-image mx-auto my-2" src="assets/images/mediastock/historique.webp" alt="Historique d'un prêt">
-                                    </div>
-                                </div> 
-                            </li>
-                            <li class="MediaStock-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
-                                <div class="outil-item p-1 mt-5 mb-3">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5">Gestion des retours</h4>
-                                         <img class="card-img MediaStock-image mx-auto my-2" src="assets/images/mediastock/restitution.webp" alt="Gestion des retours">
-                                    </div>
-                                </div> 
-                            </li> -->
-                            <!-- <li class="MediaStock-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
-                                <div class="outil-item p-1 mt-5 mb-3">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5">Suivi des retards</h4>
-                                        <br>
-                                        <img class="card-img MediaStock-image mx-auto my-2" src="assets/images/mediastock/" alt="Suivi des retards"> 
-                                    </div>
-                                </div> 
-                            </li> -->
-                        <!-- </ul> -->
+                      </ul> 
 
                         <!-- pour la pagination = a lapozashoz -->
-                        <!-- <div class="swiper-pagination pt-5"></div> -->
+                        <div class="swiper-pagination pt-5"></div>
 
                         <!-- les boutons de navigation -->
-                        <!-- <div class="swiper-slide-button MediaStock swiper-button-prev d-none d-sm-block"></div>
-                        <div class="swiper-slide-button MediaStock swiper-button-next d-none d-sm-block"></div>
+                         <div class="swiper-slide-button swiper-button-prev d-none d-sm-block"></div>
+                        <div class="swiper-slide-button swiper-button-next d-none d-sm-block"></div>
                     </div>  
                 </div>
 
-            </section> -->
+            </section>
 
-<!-- 
+ 
             <section class="container">
                 <div class=" row pt-4 mt-5 text-white" >
                     <div class="col-md-10 mt-5 justify-content-end" data-aos="fade-up-left" data-aos-delay="700">
                         <span class="alcim text-uppercase fw-bolder">Bilan</span>
                         <p class="mt-4">
-                            Le projet MediaStock a permis de concevoir une application web mobile-first dédiée à la gestion des 
-                            prêts de matériel dans un établissement scolaire. 
-                            <br>
-                            Partant d'un système entièrement manuel basé sur des fiches papier, le projet a introduit une solution numérique complète, sécurisée et ergonomique, 
-                            capable de gérer l'inventaire, les prêts, les restitutions, et les retards.
+                            CryptoVault constitue une étape majeure dans mon parcours de formation. Ce projet m'a permis d'approfondir 
+                            des compétences techniques essentielles à la conception d'une application sécurisée et structurée.
                         </p>
                     </div>
                     <div class=" row justify-content-center">
-                        <div class="col-md-10" data-aos="fade-up-left" data-aos-delay="700"> -->
+                        <div class="col-md-10" data-aos="fade-up-left" data-aos-delay="700"> 
                             <!-- px-2 -->
-                            <!-- <p class="">
-                                Grâce à une architecture trois-tiers (frontend, backend, base de données), conteneurisée avec Docker, 
-                                et à une approche itérative du développement, chaque fonctionnalité a été pensée pour répondre 
-                                aux besoins réels de l'équipe administrative. 
-                                <br>
-                                Le système de QR codes intégré a considérablement 
-                                simplifié les opérations terrain, tout en garantissant une traçabilité complète.
+                            <p class="">
+                                Au-delà de l'implémentation fonctionnelle, j'ai pu travailler sur des problématiques concrètes 
+                                telles que la conception d'une architecture REST robuste, la gestion des échanges entre clients 
+                                et API, la mise en œuvre de mécanismes de sécurité (authentification, chiffrement, contrôle des 
+                                accès) ainsi que la modélisation d'une base de données relationnelle normalisée garantissant 
+                                la cohérence des informations.
+                            </p>
+                            <p>
+                                La réalisation du projet m'a également confrontée à des enjeux proches du contexte professionnel : 
+                                gestion des droits utilisateurs, traitement des erreurs et des cas limites, organisation du code, 
+                                séparation claire des responsabilités entre les différentes couches de l'application, et rédaction 
+                                d'une documentation complète et structurée.
                             </p>
                         </div>
                     </div>
                     <div class=" row justify-content-center">
-                        <div class="col-md-8" data-aos="fade-up-left" data-aos-delay="700"> -->
+                        <div class="col-md-8" data-aos="fade-up-left" data-aos-delay="700">
                             <!-- px-2 -->
-                            <!-- <p class="">
-                                Ce projet m'a permis de mobiliser mes compétences en conception d'architecture, développement 
-                                PHP/MySQL, sécurité web, gestion de projet agile, et prototypage d'interface avec Figma. 
-                                Il représente une solution robuste, évolutive et directement exploitable en contexte réel.
+                            <p class="">
+                                Ce travail en binôme m'a permis de développer ma capacité à collaborer efficacement sur un projet
+                                 technique, à structurer les tâches, à échanger sur les choix d'architecture et à maintenir 
+                                 une cohérence globale dans le développement.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <div class=" mt-4 py-4 row justify-content-end">
-                    <div class="col-md-10" data-aos="fade-up-right" data-aos-delay="800">
+                <div class=" mt-4 py-4 row">
+                    <div class="col-md-12" data-aos="fade-up-right" data-aos-delay="800">
                         <span class="alcim text-uppercase fw-bolder">Productions associées</span>
                         <p class="mt-4">
-                            Les livrables du projet comprennent plusieurs ensembles cohérents :
+                            Les livrables du projet CryptoVault s'articulent autour de plusieurs ensembles complémentaires, 
+                            couvrant la conception, le développement et la documentation de la solution :
                         </p>
 
-                        <p class="mt-4 fst-italic mediastock text-decoration-underline">Documentation technique et fonctionnelle</p>
+                        <p class="mt-4 fst-italic cryptovault text-decoration-underline">Documentation et conception</p>
                         <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
-                            <li>◈ Cahier des charges complet décrivant les objectifs, les besoins fonctionnels et techniques.</li>
-                            <li>◈ Maquettes Figma des interfaces mobile.</li>
-                            <li>◈ Schémas MCD et MLD de la base de données (présentés dans les annexes du cahier des charges, page 19).</li>  
+                            <li>◈ Documentation technique détaillée (architecture, sécurité, base de données, flux applicatifs).</li>
+                            <li>◈ Guide utilisateur décrivant le fonctionnement du client JavaFX et de l'interface Web publique.</li>
+                            <li>◈ Modélisation de la base de données : MCD, modèle relationnel et schéma SQL.</li> 
+                            <li>◈ Maquettes UI/UX réalisées sous Figma.</li> 
                         </ul>
 
-                        <p class="mt-4 fst-italic mediastock text-decoration-underline">Code source et environnement</p>
-                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
-                            <li>◈ Application développée en PHP/ MySQL/ HTML/ CSS/ JavaScript/ Bootstrap 5.</li>
-                            <li>◈ Déploiement conteneurisé avec Docker Compose (fichiers docker-compose.yml, Dockerfile, .env).</li>
-                            <li>◈ Système d'authentification et gestion des QR codes via bibliothèques PHP et JS.</li>
-                            <li class="lien-intern">◈ Le code source de l'application disponible sur GitHub 
-                                <a class="text-white" href="https://github.com/juklau/MediaStock.git" target="_blank"><strong class="fw-medium fst-italic">en cliquant sur ce lien</strong></a>.</li>
-                        </ul>
-
-                        <p class="mt-4 fst-italic mediastock text-decoration-underline">Outils de gestion et tests</p>
-                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
-                            <li>◈ Diagrammes de Gantt et Kanban (page 21 du cahier des charges) pour le suivi du développement.</li>
-                            <li>◈ Plan de tests détaillant les scénarios d'authentification, de prêt/restitution et de sécurité 
-                                (page 12 du cahier des charges).</li>
-                            <li>◈ Documentation utilisateur et guides de déploiement remis à l'établissement.</li>
-                        </ul>
+                        <div class="row justify-content-end">
+                            <div class="col-md-10">
+                                <p class="mt-4 fst-italic cryptovault text-decoration-underline">Développement et architecture applicative</p>
+                                <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                                    <li>◈ API REST sécurisée (PHP 8 / Slim 4 / Medoo / JWT).</li>
+                                    <li>◈ Client lourd JavaFX (Java 17) interfacé avec l'API REST.</li>
+                                    <li>◈ Interface Web publique de téléchargement via lien de partage.</li>
+                                    <li>◈ Base de données MySQL normalisée + scripts SQL d'initialisation.</li>
+                                    <li>◈ Environnement Docker Compose.</li>
+                                    <li class="lien-intern">◈ Code source versionné et disponible sur GitHub. 
+                                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                                            <!-- backend -->
+                                            <li> - <a class="text-white" href="https://github.com/PlumCreativ/coffreFort.git" target="_blank"><strong class="fw-medium fst-italic">Backend (API REST PHP / Slim)</strong></a></li>
+                                            <!-- JavaFx -->
+                                            <li> - <a class="text-white" href="https://github.com/PlumCreativ/coffreFortJava.git" target="_blank"><strong class="fw-medium fst-italic">Client lourd JavaFX</strong></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <p class="mt-4 fst-italic cryptovault text-decoration-underline">Organisation et validation</p>
+                                <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                                    <li>◈ Travail collaboratif en binôme avec gestion de versions via Git/GitHub.</li>
+                                    <li>◈ Tests des endpoints REST (Postman) et validation des flux fonctionnels.</li>
+                                    <li>◈ Vérification des mécanismes de sécurité : contrôle des accès, gestion des rôles, expiration et limitation des liens de partage.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section> -->
+            </section> 
 
-            <!-- <section class="container">
+            <section class="container">
                 <div class="mt-4 py-4  row">
-                    <div class="col-md-10" data-aos="fade-up-right" data-aos-delay="900">
+                    <div class="col-md-12" data-aos="fade-up-right" data-aos-delay="900">
                         <span class="alcim text-uppercase fw-bolder">Perspectives</span>
                         <p class="mt-4">
-                            Plusieurs pistes d'amélioration ont été identifiées pour une version ultérieure de l'application :
+                            Plusieurs axes d'évolution ont été identifiés pour une version ultérieure de CryptoVault :
                         </p>
 
-                        <p class="mt-4 fst-italic mediastock text-decoration-underline">Évolutions fonctionnelles</p>
+                        <p class="mt-4 fst-italic cryptovault text-decoration-underline">Évolutions fonctionnelles</p>
                         <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
-                            <li>◈ Ajout d'un module statistique pour visualiser le taux d'utilisation du matériel
-                                 et la durée moyenne des prêts.
-                            </li>
-                            <li>◈ Intégration d'une gestion multi-comptes avec journal d'audit pour tracer les actions des administrateurs.</li>
-                            <li>◈ Création d'un mode inventaire permettant de comparer le stock physique et 
-                                théorique par scan successif des QR codes.
-                            </li>  
+                            <li>◈ Mise en place d'une authentification renforcée (double facteur - 2FA).</li>
+                            <li>◈ Protection optionnelle des liens de partage par mot de passe.</li>
+                            <li>◈ Mise en place de notifications (expiration imminente, dépassement de quota).</li>
+                            <li>◈ Gestion avancée des droits (groupes d'utilisateurs, permissions fines).</li>
+                            <li>◈ Développement d'une version full Web en complément du client JavaFX.</li>
+                            <li>◈ Ajout du déplacement de dossiers et fichiers.</li>
+                            <li>◈ Consultation d'un espace « Mon historique » pour visualiser les actions passées.</li>
+                            <li>◈ Ajout de pages informatives (« Mentions légales », « À propos »).</li>
+                            <li>◈ Renforcement de la politique de complexité des mots de passe.</li>
+                            <li>◈ Extension du système de journalisation via des triggers supplémentaires dans audit_logs.</li>
                         </ul>
 
-                        <p class="mt-4 fst-italic mediastock text-decoration-underline">Améliorations techniques</p>
-                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
-                            <li>◈ Migration progressive vers un framework PHP moderne (Laravel) ou JavaScript 
-                                (React/Node.js) pour une meilleure extensibilité.
-                            </li>
-                            <li>◈ Mise en place d'un hébergement cloud sécurisé (AWS, Azure ou GCP).</li>
-                            <li>◈ Intégration d'API externes pour la synchronisation avec la base de données de l'établissement.</li> -->
-                            <!-- p.ex. savoir si un étudiant est autorisé à emprunter ou le archiver automatiquement s'il a quitté l'école -->
-                        <!-- </ul>
+                        <div class="row justify-content-end">
+                            <div class="col-md-8">
+                                <p class="mt-4 fst-italic cryptovault text-decoration-underline">Améliorations techniques</p>
+                                <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                                    <li>◈ Déploiement sur un serveur distant avec configuration HTTPS complète.</li>
+                                    <li>◈ Intégration de tests automatisés (unitaires et d'intégration).</li>
+                                    <li>◈ Mise en place d'un système de sauvegarde et de restauration automatisé.</li>
+                                    <li>◈ Ajout d'outils de supervision et de monitoring du service.</li>
+                                </ul>
+                            </div>
+                        </div>
                         
-                        <p class="mt-4 fst-italic mediastock text-decoration-underline">Pérennisation du projet</p>
-                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
-                            <li>◈ Documentation continue et formation des utilisateurs internes.</li>
-                            <li>◈ Automatisation de la sauvegarde et de la supervision (monitoring système, alertes de panne).</li>
-                            <li>◈ Ouverture potentielle du projet en open-source éducatif pour favoriser la 
-                                collaboration entre établissements.
-                            </li>
-                        </ul>
+                         <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <p class="mt-4 fst-italic cryptovault text-decoration-underline">Pérennisation du projet</p>
+                                <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                                    <li>◈ Maintien d'une documentation technique et utilisateur à jour.</li>
+                                    <li>◈ Amélioration continue de la sécurité applicative.</li>
+                                    <li>◈ Structuration du projet pour faciliter son évolution vers un environnement professionnel réel.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section> -->
+            </section> 
 
 
 
@@ -425,7 +618,7 @@
                 </div>
                 <div class="container-fluid box-shadow-left">
                     <div data-aos="fade-left" data-aos-delay="800">
-                        <p class="mt-3 fst-italic MediaStock">1. Gérer le patrimoine informatique</p>
+                        <p class="mt-3 fst-italic cryptovault">1. Gérer le patrimoine informatique</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li>1.1. Recenser et identifier les ressources numériques</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">Dans le cadre du projet Coffre-fort numérique, 
@@ -434,7 +627,7 @@
                                     conteneurisé Docker, client lourd JavaFX et client léger Web pour le téléchargement des fichiers.
                                 </small>
                             <li>1.2. Exploiter des référentiels, normes et standards adoptés par le prestataire informatique</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai exploité des standards reconnus tels que l'architecture REST, 
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai appliqué des standards reconnus tels que l'architecture REST, 
                                     l'authentification JWT, la modélisation Merise pour la base de données et un contrat d'API OpenAPI, 
                                     afin d'assurer la cohérence, la sécurité et l'interopérabilité du service.
                                 </small>
@@ -443,28 +636,27 @@
                                     permettant de gérer les habilitations des utilisateurs, de sécuriser l'accès aux ressources 
                                     et de restreindre les actions selon les rôles définis (utilisateur / administrateur).
                                 </small>
-                            <li>1.4. Vérifier les conditions de continuité d'un service informatique</li>
+                            <!-- <li>1.4. Vérifier les conditions de continuité d'un service informatique</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">Le service a été déployé et testé dans un environnement Docker, 
                                     ce qui m'a permis de vérifier la disponibilité de l'API, la persistance des données après 
                                     redémarrage des conteneurs et la continuité du service en cas de reconstruction 
                                     de l'environnement.
-                                </small>
+                                </small> 
+                                pas de mise ne place une redondance, PRA, serveur secondaire-->
                             <!-- <li>1.5. Gérer des sauvegardes</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">J'ai assuré la persistance et la restauration des données grâce 
                                     à l'utilisation de volumes Docker et de scripts SQL d'initialisation, permettant de reconstruire la 
                                     base de données et de conserver les données en cas d'arrêt ou de redéploiement du service.</small> -->
                             <li>1.6. Vérifier le respect des règles d'utilisation des ressources numériques</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai intégré des règles d'utilisation des ressources 
-                                    numériques en mettant en place des quotas de stockage par utilisateur, des contrôles d'accès 
-                                    aux fichiers et une journalisation des téléchargements afin d'assurer un usage maîtrisé du 
-                                    service.
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai intégré des quotas de stockage, des contrôles d'accès et une 
+                                    journalisation des actions afin d'assurer une utilisation sécurisée des ressources numériques.
                                 </small>
                         </ul>
                     </div>
                     <div data-aos="fade-left" data-aos-delay="850">
-                        <p class="fst-italic MediaStock">2. Répondre aux incidents et aux demandes d'assistance et d'évolution</p>
+                        <p class="fst-italic cryptovault">2. Répondre aux incidents et aux demandes d'assistance et d'évolution</p>
                         <ul class="list-unstyled lh-lg ps-4">
-                            <li>2.1. Collecter, suivre et orienter des demandes</li>
+                            <!-- <li>2.1. Collecter, suivre et orienter des demandes</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic"> Dans le cadre du projet Coffre-fort numérique, j'ai collecté 
                                     et analysé les besoins à partir du cahier des charges, puis priorisé les fonctionnalités 
                                     à développer dans le cadre d'un MVP. J'ai assuré le suivi des demandes et des évolutions 
@@ -476,58 +668,51 @@
                                     fonctionnement du service, notamment la configuration et le déploiement de l'environnement 
                                     Docker, la gestion des accès réseau (ports, endpoints API) et la résolution de problèmes de 
                                     communication entre l'API REST et le client JavaFX.
-                                </small>
+                                </small> -->
                             <li>2.3. Traiter des demandes concernant les applications</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai assuré la maintenance corrective et évolutive de 
-                                    l'application en corrigeant des anomalies détectées lors des tests et en adaptant les 
-                                    fonctionnalités du back-end et du client JavaFX afin de répondre aux besoins identifiés 
-                                    et d'améliorer l'expérience utilisateur.
+                                    l'application en corrigeant des anomalies détectées lors des tests et en ajustant certaines 
+                                    fonctionnalités du backend et du client JavaFX
                                 </small>
                         </ul>
                     </div>
                     <div data-aos="fade-left" data-aos-delay="950">
-                        <p class="fst-italic MediaStock">4. Travailler en mode projet</p>
+                        <p class="fst-italic cryptovault">4. Travailler en mode projet</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li> 4.1. Analyser les objectifs et les modalités d'organisation d'un projet</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic">Dans le cadre du projet Coffre-fort numérique, j'ai 
-                                    analysé les objectifs fonctionnels et techniques à partir du cahier des charges afin 
-                                    de définir un périmètre de réalisation centré sur un MVP. J'ai également identifié 
-                                    les rôles, les contraintes techniques et les modalités d'organisation nécessaires 
-                                    au travail en parallèle sur le back-end, le client JavaFX et le client léger Web.
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai analysé les objectifs fonctionnels et techniques 
+                                    à partir du cahier des charges afin de définir un périmètre de réalisation centré sur un MVP.
+                                     J'ai également pris en compte les contraintes techniques et l'organisation du travail 
+                                     en binôme pour répartir les développements entre le back-end, le client JavaFX et l'interface Web.
                                 </small>
                             <li> 4.2. Planifier les activités</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai planifié les différentes activités du projet en 
-                                    définissant des priorités de développement et un ordre logique de réalisation 
-                                    (authentification, gestion des dossiers, gestion des fichiers, quotas, clients). 
-                                    Le suivi de l'avancement a été assuré à l'aide du dépôt GitHub, des commits 
-                                    réguliers, le Gantt et d'une organisation par fonctionnalités.
+                                <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai planifié les différentes phases du projet en 
+                                    définissant un ordre logique de développement (authentification, gestion des dossiers, fichiers, 
+                                    quotas, partages, clients). Le suivi de l'avancement a été assuré via GitHub (commits réguliers) 
+                                    et un planning de type Gantt, avec une organisation par fonctionnalités.
                                 </small>
-                            <li> 4.3. Évaluer les indicateurs de suivi d'un projet et analyser les écarts</li>
+                            <!-- <li> 4.3. Évaluer les indicateurs de suivi d'un projet et analyser les écarts</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic"> J'ai suivi l'avancement du projet en comparant 
                                     les objectifs initiaux du MVP avec les fonctionnalités effectivement réalisées. 
                                     Cette évaluation m'a permis d'identifier les écarts, de reporter certaines 
                                     fonctionnalités non prioritaires et d'ajuster le planning afin de garantir 
                                     un projet fonctionnel et cohérent à l'étape actuelle.
-                                </small>
+                                </small> rizikos-->
                         </ul>
                     </div>
                     <div data-aos="fade-left" data-aos-delay="1000">
-                        <p class="fst-italic MediaStock">5. Mettre à disposition des utilisateurs un service informatique</p>
+                        <p class="fst-italic cryptovault">5. Mettre à disposition des utilisateurs un service informatique</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li>5.1. Réaliser les tests d'intégration et d'acceptation d'un service</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">J'ai réalisé des tests d'intégration afin de 
-                                    vérifier le bon fonctionnement des échanges entre l'API REST, la base de données 
-                                    et le client JavaFX. Ces tests m'ont permis de valider les parcours principaux 
-                                    du service (authentification, navigation dans les dossiers, upload et 
-                                    téléchargement de fichiers) et de m'assurer de la conformité du service 
-                                    aux besoins définis dans le cadre du MVP.
+                                    valider le bon fonctionnement des échanges entre le client JavaFX, l'API REST et la 
+                                    base de données (authentification, upload, versionnage, partages sécurisés).
                                 </small>
-                            <!-- <li>5.2. Déployer un service</li>
-                            <small class="ps-5 fst-italic"> J'ai déployé le service dans un environnement 
-                                conteneurisé à l'aide de Docker Compose, incluant l'API, la base de 
-                                données et les outils d'administration. Le service a été rendu accessible en 
-                                local pour les phases de test, ce qui m'a permis de valider le bon fonctionnement 
-                                du déploiement et la disponibilité du service.</small> -->
+                            <li>5.2. Déployer un service</li>
+                            <small class="ps-5 fst-italic">J'ai configuré et exécuté le service dans un environnement local 
+                                conteneurisé via Docker Compose (API et base de données), puis validé son bon fonctionnement 
+                                et la persistance des données lors des redémarrages.
+                            </small>
                             <!-- <li>5.3. Accompagner les utilisateurs dans la mise en place d'un service</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">J'ai accompagné les utilisateurs dans la prise en 
                                     main du service en rédigeant une documentation technique et fonctionnelle décrivant 
@@ -537,44 +722,48 @@
                         </ul>
                     </div>
                     <div data-aos="fade-left" data-aos-delay="1150">
-                        <p class="fst-italic MediaStock">6. Organiser son développement professionnel</p>
+                        <p class="fst-italic cryptovault">6. Organiser son développement professionnel</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li>6.1. Mettre en place son environnement d'apprentissage personnel</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic">Dans le cadre de mes projets, j'ai mis en 
-                                    place un environnement de travail et d'apprentissage adapté comprenant VS Code, 
-                                    IntelliJ IDEA, Docker, Git/GitHub, Postman et JavaFX. Cet environnement m'a permis 
-                                    de développer, tester et comprendre de nouvelles technologies de manière autonome 
-                                    et progressive.
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai mis en place un environnement de développement 
+                                    structuré comprenant VS Code, IntelliJ IDEA, Docker, Git/GitHub, Postman et JavaFX.
+                                    Cet environnement m'a permis de développer, tester et expérimenter de nouvelles technologies 
+                                    de manière autonome, tout en assurant la qualité et la reproductibilité de mes réalisations.
                                 </small>
-                            <li>6.2. Mettre en œuvre des outils et stratégies de veille informationnelle</li>
+                            <!-- <li>6.2. Mettre en œuvre des outils et stratégies de veille informationnelle</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">J'ai réalisé une veille technologique en consultant 
                                     régulièrement la documentation officielle des technologies utilisées (PHP, Slim, Medoo, 
                                     JWT, JavaFX, Docker), ainsi que des ressources en ligne afin de résoudre des 
                                     problématiques techniques et d'optimiser le développement de mes projets.
+                                </small> 
+                                j'ai pas fait suivi régulier, outils de veille, documentation des sources
+                                j'ai fait juste des recherches simples
+                                -->
+                            <li>6.4. Développer son projet professionnel</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">La réalisation de projets tels que CryptoVault m'a permis 
+                                    de consolider mes compétences en développement back-end, en conception d'API REST et en 
+                                    développement de clients applicatifs.
+                                    Ces expériences ont confirmé mon intérêt pour le développement logiciel et orientent mon 
+                                    projet professionnel vers des métiers liés à la conception et au développement d'applications 
+                                    sécurisées.
                                 </small>
                         </ul>
                     </div>
                     <div data-aos="fade-left" data-aos-delay="1300">
                         <ul class="list-unstyled lh-lg ps-4">
-                            <li>6.3. Gérer son identité professionnelle</li>
+                            <!-- <li>6.3. Gérer son identité professionnelle</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">J'ai utilisé GitHub pour héberger et versionner 
                                     mes projets, ce qui contribue à construire mon identité numérique professionnelle. 
                                     J'ai également valorisé mes réalisations à travers mon portfolio en ligne, en 
                                     présentant mes projets, mes compétences et les technologies utilisées.
-                                </small>
-                            <li>6.4. Développer son projet professionnel</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic">Les projets réalisés, notamment le coffre-fort 
-                                    numérique, m'ont permis de consolider mes compétences en développement back-end, 
-                                    en conception d'API REST et en développement de clients applicatifs. Ces expériences 
-                                    ont confirmé mon intérêt pour le développement applicatif et orientent mon projet 
-                                    professionnel vers des métiers du développement logiciel.
-                                </small>
+                                </small> -->
+                            
                         </ul>
                     </div>
                 </div>
             </section>
             <div class="d-flex justify-content-center mt-5 pt-4" data-aos="zoom-in" data-aos-delay="700">
-                <a href="assets/documents/RP_5_CryptoVault_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn" type="button" id="fiche-MediaStock-btn">Fiche descriptive</button></a>
+                <a href="assets/documents/RP_5_CryptoVault_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn" type="button" id="fiche-cryptovault-btn">Fiche descriptive</button></a>
             </div>
         
         </main>

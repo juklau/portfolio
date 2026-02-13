@@ -200,7 +200,7 @@ AOS.init({
 
 
 // j'ai enlevé le ".Chat-image"
-document.querySelectorAll(".CRM-image, .linkstream-image, .MediaStock-image, .swantrad-image").forEach(img => {
+document.querySelectorAll(".CRM-image, .linkstream-image, .MediaStock-image, .swantrad-image, .cryptovault-image, .cryptovault-image-web, .cryptovault-image-web2").forEach(img => {
   img.addEventListener("click", function () {
 
     // Supprimer l'overlay existant s'il y en a un
