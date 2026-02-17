@@ -109,8 +109,8 @@
                                     où la collaboration entre profils techniques, juridiques et métier est essentielle. 
                                     Le projet était déjà en production, utilisé par des professionnels, mais présentait 
                                     plusieurs fragilités techniques liées à son évolution progressive : dette technique 
-                                    importante, duplications de code, tests automatisés partiels et environnement de 
-                                    développement instable.
+                                    importante, duplications de code, couverture de tests limitée et insuffisamment intégrée dans 
+                                    un processus d'intégration continue, ainsi qu'un environnement de développement instable.
                                 </p>
                                 <p class="pt-2">
                                     Le contexte de mon stage était donc clair :
@@ -123,7 +123,7 @@
                             </div>
                         </div>
                         <div class="row justify-content-end">
-                            <div class="col-md-8">
+                            <div class="col-md-10">
                                 <p>
                                     Ce cadre m'a permis de travailler sur des problématiques concrètes de maintenance 
                                     applicative, de qualité logicielle (SonarQube), de tests automatisés (Laravel / PHPUnit) 
@@ -172,12 +172,12 @@
                         <div class="row justify-content-center">
                             <div class="col-md-10">
                                 <p>
-                                Enfin, la couverture de tests existante étant partielle et peu intégrée dans un processus 
-                                d'intégration continue, il était indispensable de <span class="fw-bolder fst-italic swantrad">renforcer la stratégie de tests automatisés</span>. 
-                                L'objectif était de prévenir les régressions, de sécuriser les modifications et d'inscrire le 
-                                projet dans une démarche d'amélioration continue.  
+                                    Enfin, bien qu'une base de tests automatisés existe déjà, leur couverture restait limitée 
+                                    et leur intégration dans un processus d'intégration continue nécessitait des améliorations. 
+                                    Il était indispensable de <span class="fw-bolder fst-italic swantrad">renforcer la stratégie de tests automatisés</span>. 
+                                    L'objectif était de prévenir les régressions, de sécuriser les modifications et d'inscrire le 
+                                    projet dans une démarche d'amélioration continue.  
                                 </p>
-                               
                             </div>  
                         </div>
                         <p>
@@ -222,25 +222,29 @@
                     <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="900">
                         <span class="alcim text-uppercase fw-bolder">Missions réalisées</span>
                         <p class=" mt-4 mb-2">
-                          Au cours de mon stage chez Swantrad j'ai participé à l'amélioration technique d'une application 
-                          web déjà en production, avec pour objectif principal de renforcer sa qualité, sa 
-                          stabilité et sa maintenabilité.
+                            Au cours de mon stage chez Swantrad j'ai participé à l'amélioration technique d'une application 
+                            web déjà en production, avec pour objectif principal de renforcer sa qualité, sa 
+                            stabilité et sa maintenabilité.
                         </p>
                         <p>
                             Ma première mission a consisté à <span class="fw-bolder fst-italic swantrad">stabiliser l'environnement de développement local</span> : 
                             configuration de PHP et des dépendances Composer, import et correction de la base de données, résolution 
                             de problèmes liés aux migrations et mise en place d'un workflow de développement fonctionnel.
                         </p>
-                       <p>
-                            J'ai ensuite mené une <span class="fw-bolder fst-italic swantrad">analyse approfondie de la qualité du code</span> à l'aide de SonarQube, 
-                            afin d'identifier les duplications, les problèmes de maintenabilité et les zones à risque. Sur cette base, j'ai 
-                            réalisé des actions de <span class="fw-bolder fst-italic swantrad">maintenance et de refactorisation ciblées</span> : suppression de code obsolète, 
-                            réduction de duplications, amélioration de la lisibilité et factorisation de certaines logiques, 
-                            tout en garantissant l'absence de régression fonctionnelle.
-                       </p>
+                        <div class="row justify-content-end">
+                            <div class="col-md-10">
+                                <p>
+                                     J'ai ensuite mené une <span class="fw-bolder fst-italic swantrad">analyse approfondie de la qualité du code</span> à l'aide de SonarQube, 
+                                     afin d'identifier les duplications, les problèmes de maintenabilité et les zones à risque. Sur cette base, j'ai 
+                                     réalisé des actions de <span class="fw-bolder fst-italic swantrad">maintenance et de refactorisation ciblées</span> : suppression de code obsolète, 
+                                     réduction de duplications, amélioration de la lisibilité et factorisation de certaines logiques, 
+                                     tout en garantissant l'absence de régression fonctionnelle.
+                                </p>
+                            </div>
+                        </div>
                         <p class="">
-                            Une part importante de mon travail a également porté sur les <span class="fw-bolder fst-italic swantrad">tests automatisés</span> : création et correction 
-                            de tests unitaires et d'intégration, configuration d'une base de données dédiée aux tests, puis 
+                            Une part importante de mon travail a également porté sur les <span class="fw-bolder fst-italic swantrad">tests automatisés</span> : création, correction 
+                            et enrichissement des tests unitaires et d'intégration existants, configuration d'une base de données dédiée aux tests, puis 
                             intégration complète dans le pipeline <span>CI/CD (GitHub Actions)</span> pour assurer une validation 
                             automatique à chaque modification du code.
                         </p>
@@ -289,7 +293,8 @@
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
                                         <h4 class="card-title text-center py-3">Comparatif avant / après refactorisation</h4>
                                         <small class="legende text-center fs-6 fst-italic">
-                                            82 % des issues de maintenabilité corrigées sur le périmètre traité
+                                            82 % des issues de maintenabilité corrigées sur le périmètre ciblé
+                                            <!-- (réduction globale de 135 Code Smells High) -->
                                         </small>
                                         <img class="card-img swantrad-image mx-auto my-2 " src="assets/images/swantrad/comparatif_avant_après.webp" alt="Comparatif avant / après refactorisation">
                                         
@@ -377,10 +382,9 @@
                         <p>
                             Les actions menées durant le stage ont contribué à stabiliser l'environnement de développement, à 
                             renforcer la qualité structurelle du code et à fiabiliser le processus de validation des évolutions.
-                            Bien que les indicateurs globaux SonarQube n'aient pas connu une évolution spectaculaire — en 
-                            raison de la taille du projet et des développements parallèles réalisés par l'équipe — les 
-                            améliorations apportées ont permis de consolider certaines zones critiques et de renforcer la 
-                            maintenabilité du projet.
+                            Bien que les indicateurs globaux SonarQube n'ont pas connu une évolution spectaculaire en raison de la 
+                            taille du projet et des développements parallèles, des améliorations mesurables ont 
+                            été obtenues sur des métriques ciblées (Code Smells High et duplications).
                         </p>
                     </div>
                     <div class=" row justify-content-center">
@@ -502,18 +506,21 @@
                             de la couverture des tests automatisés, notamment sur les fonctionnalités métier sensibles, 
                             permettrait de renforcer encore la fiabilité globale de la plateforme.
                         </p>
-                        <p>
-                            L'exploitation régulière des indicateurs qualité et du pipeline CI/CD constitue également un 
-                            levier stratégique pour accompagner l'évolution du projet dans un contexte de production et de croissance.
-                        </p>
-                        <p>
-                            Sur le plan personnel, ce stage représente une étape structurante dans la construction de mon 
-                            projet professionnel. Il m'a permis de mieux comprendre les enjeux liés à la maintenance 
-                            d'un projet existant, à la qualité du code et à la sécurisation des évolutions. Il confirme mon 
-                            intérêt pour des environnements techniques exigeants, où la rigueur, l'analyse et la fiabilité 
-                            sont essentielles.
-                        </p>
-                       
+                        <div class="row justify-content-end">
+                            <div class="col-md-10 pt-3">
+                                <p>
+                                    L'exploitation régulière des indicateurs qualité et du pipeline CI/CD constitue également un 
+                                    levier stratégique pour accompagner l'évolution du projet dans un contexte de production et de croissance.
+                                </p>
+                                <p>
+                                    Sur le plan personnel, ce stage représente une étape structurante dans la construction de mon 
+                                    projet professionnel. Il m'a permis de mieux comprendre les enjeux liés à la maintenance 
+                                    d'un projet existant, à la qualité du code et à la sécurisation des évolutions. Il confirme mon 
+                                    intérêt pour des environnements techniques exigeants, où la rigueur, l'analyse et la fiabilité 
+                                    sont essentielles.
+                                </p>
+                            </div>
+                        </div>                 
                     </div>
                 </div>
             </section>
