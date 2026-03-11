@@ -5,9 +5,11 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 
-    const pageActuelle = window.location.pathname.includes("ppe-gestion_contacts.html") || 
-                        window.location.pathname.includes("ppe-chat.html") || 
-                        window.location.pathname.includes("ppe-mediastock.html") ||
+    const pageActuelle = window.location.pathname.includes("rp-gestion_contacts.html") || 
+                        window.location.pathname.includes("rp-chat.html") || 
+                        window.location.pathname.includes("rp-mediastock.html") ||
+                        window.location.pathname.includes("rp-mediastock.html") ||
+                        window.location.pathname.includes("rp-cryptovault.html") ||
                         window.location.pathname.includes("stage1.html") ||
                         window.location.pathname.includes("stage2.html");
 

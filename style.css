@@ -131,6 +131,11 @@
     -webkit-box-shadow: 1px 0.5px 0px var(--main-color); 
     -moz-box-shadow: 1px 0.1px 0px var(--main-color); 
 }
+.box-shadow-reverse{
+    box-shadow: -1px 0.5px 0px var(--main-color); 
+    -webkit-box-shadow: -1px 0.5px 0px var(--main-color); 
+    -moz-box-shadow: -1px 0.1px 0px var(--main-color); 
+}
 .box-shadow-left{
     box-shadow: -1px 0px 0px var(--main-color); 
     -webkit-box-shadow: -1px 0px 0px var(--main-color); 
@@ -418,7 +423,8 @@
 }
 .Chat-container .card,
 .linkstream-container .card,
-.swantrad-container .card{
+.swantrad-container .card,
+.Meteo-container .card{
     height: 550px;
     max-width: 340px;
     width: auto;
@@ -440,14 +446,16 @@
 .Chat-container:hover .card-title,
 .linkstream-container:hover .card-title,
 .swantrad-container:hover .card-title,
-.CryptoVault-container:hover .card-title{
+.CryptoVault-container:hover .card-title,
+.Meteo-container:hover .card-title{
     color: var(--main-color) !important;
 }
 .CRM-image,
 .MediaStock-image,
 .linkstream-image,
 .swantrad-image,
-.cryptovault-image{ /*image à "zoomer"  */
+.cryptovault-image,
+.Meteo-image{ /*image à "zoomer"  */
     max-width: 100%;
     height: auto;
     cursor: zoom-in;
@@ -506,6 +514,8 @@
 .mediastock,                        /* page MediaStock */
 .LinkStream-liste,                  /* page LinkStream */
 .fst-italic.LinkStream,             /* page LinkStream */
+.meteo,                             /* page Meteo */
+.fst-italic.Meteo,                  /* page Meteo */
 .fw-bolder.fst-italic.swantrad,
 .fst-italic.swantrad,
 .swantrad-liste,
