@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         window.location.pathname.includes("rp-mediastock.html") ||
                         window.location.pathname.includes("rp-mediastock.html") ||
                         window.location.pathname.includes("rp-cryptovault.html") ||
+                        window.location.pathname.includes("rp-roombooking.html") ||
                         window.location.pathname.includes("stage1.html") ||
                         window.location.pathname.includes("stage2.html");
 

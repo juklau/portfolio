@@ -66,6 +66,10 @@
 .dropdown:hover .dropdown-menu {
     display: block;
 }
+.dropdown-item.active {
+    background-color: var(--surface-color) !important;
+    color: var(--nav-hover-color) !important;
+}
 
 /*********************************************************************************************
                                             Footer
@@ -424,7 +428,8 @@
 .Chat-container .card,
 .linkstream-container .card,
 .swantrad-container .card,
-.Meteo-container .card{
+.Meteo-container .card,
+.RoomBooking-container .card{
     height: 550px;
     max-width: 340px;
     width: auto;
@@ -447,7 +452,8 @@
 .linkstream-container:hover .card-title,
 .swantrad-container:hover .card-title,
 .CryptoVault-container:hover .card-title,
-.Meteo-container:hover .card-title{
+.Meteo-container:hover .card-title,
+.RoomBooking-container:hover .card-title{
     color: var(--main-color) !important;
 }
 .CRM-image,
@@ -455,7 +461,8 @@
 .linkstream-image,
 .swantrad-image,
 .cryptovault-image,
-.Meteo-image{ /*image à "zoomer"  */
+.Meteo-image,
+.RoomBooking-image{ /*image à "zoomer"  */
     max-width: 100%;
     height: auto;
     cursor: zoom-in;
@@ -516,9 +523,11 @@
 .fst-italic.LinkStream,             /* page LinkStream */
 .meteo,                             /* page Meteo */
 .fst-italic.Meteo,                  /* page Meteo */
-.fw-bolder.fst-italic.swantrad,
-.fst-italic.swantrad,
-.swantrad-liste,
+.roombooking,                       /* page RoomBooking */
+.fst-italic.RoomBooking,
+.fw-bolder.fst-italic.swantrad,     /* page swantrad */
+.fst-italic.swantrad,               /* page swantrad */
+.swantrad-liste,                    /* page swantrad */
 .fst-italic.cryptovault{        
     color: var(--main-second-color) !important;
 }

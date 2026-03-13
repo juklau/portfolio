@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" href="style.css">
     </head> 
-    <body>
+    <body class="fs-5 overflow-x-hidden bg-dark">
         <header id="header" class="border-bottom border-secondary">
             <nav class="navbar navbar-expand-md bg-dark p-4" data-bs-theme="dark">
                 <div class="container d-flex justify-content-between">
@@ -39,8 +39,12 @@
                                 <li class="nav-item">
                                     <a class="nav-link text-white" aria-current="page" href="index.html">Accueil</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-white" href="formation.html">Formation</a>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-white" href="formation.html" role="button" aria-expanded="false">Formation</a>
+                                    <ul class="dropdown-menu border-0 ">
+                                        <li><a class="dropdown-item text-white" href="stage1.html">LinkStream (stage 2025)</a></li>
+                                        <li><a class="dropdown-item text-white" href="stage2.html">Swantrad (stage 2026)</a></li>
+                                    </ul>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle text-white" href="projets.html" role="button" aria-expanded="false"> Projets</a>
@@ -50,10 +54,9 @@
                                         <li><a class="dropdown-item text-white" href="rp-chat.html">ClassCord Client</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-mediastock.html">MediaStock</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-cryptovault.html">CryptoVault</a></li>
-                                        <li><a class="dropdown-item text-white" href="page-error.html">RoomBooking</a></li>
+                                        <li><a class="dropdown-item text-white" href="rp-roombooking.html">RoomBooking</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-meteo_api.html">Meteo</a></li>
-                                        <li><a class="dropdown-item text-white" href="stage1.html">LinkStream (stage 2025)</a></li>
-                                        <li><a class="dropdown-item text-white" href="stage2.html">Swantrad (stage 2026)</a></li>
+                                        
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -61,6 +64,7 @@
                                     <ul class="dropdown-menu border-0 ">
                                         <li><a class="dropdown-item text-white" href="veille-sourds.html">IA & surdité</a></li>
                                         <li><a class="dropdown-item text-white" href="veille-aveugle.html">IA & vision</a></li>
+                                        <li><a class="dropdown-item text-white" href="page-error.html">Cybermenace</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -88,37 +92,43 @@
             </div>
 
             <section class="presentation container ">
-                <div class="row mx-auto mt-5" data-aos="fade-up-left" data-aos-delay="600"> 
+                <div class="row mx-auto mt-5 " data-aos="fade-up-left" data-aos-delay="600"> 
                     <span class="alcim text-uppercase fw-bolder">Contexte</span>
-                    <div class="py-3 px-3 row ">
-                        <div class="col-md-8 my-3 box-shadow">
-                            <p class="mt-3">
-                                Dans les systèmes d'information modernes, les applications sont souvent construites 
-                                selon une architecture séparant les services de données et les interfaces utilisateur. 
-                                Les données sont généralement exposées par des API (Application Programming Interfaces), 
-                                tandis que les utilisateurs interagissent avec ces informations via des interfaces web
-                                ou des applications clientes.
-                            </p>
-                            <p>
-                                Dans ce contexte, de nombreuses organisations ont besoin d'outils permettant de 
-                                consulter rapidement des données externes, de les visualiser de manière claire et de 
-                                faciliter leur exploitation par les utilisateurs.
-                            </p>
-                            <p>
-                                Le projet Météo 7 jours a été réalisé afin de 
-                                répondre à cette problématique. Il consiste à développer une application web capable 
-                                de consommer une API météo publique, de récupérer des données au format JSON et de les 
-                                présenter dans une interface utilisateur ergonomique et interactive.
-                            </p>
-                            <p>
-                                L'application permet à un utilisateur de rechercher une ville française (par nom ou code postal) 
-                                et d'obtenir les prévisions météorologiques sur 7 jours, accompagnées de statistiques, graphiques 
-                                et d'une carte interactive.
-                            </p>
-                            <p>
-                                Ce projet illustre une situation très courante dans le développement web professionnel : la création 
-                                d'interfaces permettant d'exploiter des services distants via des API.
-                            </p>
+                    <div class="box-shadow-reverse">
+                        <div class="py-3 px-3 row">
+                            <div class="col-md-8 my-3">
+                                <p class="mt-3">
+                                    Dans les systèmes d'information modernes, les applications sont souvent construites 
+                                    selon une architecture séparant les services de données et les interfaces utilisateur. 
+                                    Les données sont généralement exposées par des API (Application Programming Interfaces), 
+                                    tandis que les utilisateurs interagissent avec ces informations via des interfaces web
+                                    ou des applications clientes.
+                                </p>
+                                <p>
+                                    Dans ce contexte, de nombreuses organisations ont besoin d'outils permettant de 
+                                    consulter rapidement des données externes, de les visualiser de manière claire et de 
+                                    faciliter leur exploitation par les utilisateurs.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <p>
+                                    Le projet Météo 7 jours a été réalisé afin de 
+                                    répondre à cette problématique. Il consiste à développer une application web capable 
+                                    de consommer une API météo publique, de récupérer des données au format JSON et de les 
+                                    présenter dans une interface utilisateur ergonomique et interactive.
+                                </p>
+                                <p>
+                                    L'application permet à un utilisateur de rechercher une ville française (par nom ou code postal) 
+                                    et d'obtenir les prévisions météorologiques sur 7 jours, accompagnées de statistiques, graphiques 
+                                    et d'une carte interactive.
+                                </p>
+                                <p>
+                                    Ce projet illustre une situation très courante dans le développement web professionnel : la création 
+                                    d'interfaces permettant d'exploiter des services distants via des API.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -184,9 +194,9 @@
                         
                         <p class="fst-italic meteo mt-3 mb-0"><strong>Outils et environnement</strong></p>
                         <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
-                            <li>◈ VS Code — environnement de développement.</li>
-                            <li>◈ Git / GitHub — gestion de versions et hébergement du code.</li>
-                            <li>◈ Live Server (extension VS Code) — serveur local pour tester l'application dans le navigateur.</li>
+                            <li>◈ Visual Studio Code — environnement de développement.</li>
+                            <li>◈ Git / GitHub — gestion de versions et hébergement du code source.</li>
+                            <li>◈ Live Server (extension Visual Studio Code) — serveur local pour tester l'application dans le navigateur.</li>
                         </ul>
                         <p>
                             L'ensemble de l'application fonctionne côté client dans le navigateur, en interrogeant directement les 
@@ -225,7 +235,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="col-md-10">
-                                <p >
+                                <p>
                                     L'application intègre également des fonctionnalités de tri des prévisions météo 
                                     ainsi qu'une gestion des erreurs pour les cas de ville introuvable ou d'erreurs 
                                     lors des appels API.
@@ -344,24 +354,24 @@
 
                         <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
                             <li class="meteo">◈ Code source de l'application</li>
-                            <small>
-                                Application web développée en HTML, CSS et JavaScript permettant de consommer les APIs Open-Meteo 
-                                et Nominatim.
-                            </small>
+                                <small>
+                                    Application web développée en HTML, CSS et JavaScript permettant de consommer les APIs Open-Meteo 
+                                    et Nominatim.
+                                </small>
                             <li class="meteo">◈ Dépôt GitHub du projet</li>
-                            <small class="lien-extern">
-                                Le code source est versionné et accessible en ligne afin de faciliter la consultation et la reproduction 
-                                du projet <a class="text-white" href="https://github.com/juklau/Meteo_API.git" target="_blank"><strong class="fw-medium fst-italic">en cliquant sur ce lien</strong></a>.</li>
-                            </small>
+                                <small class="lien-extern">
+                                    Le code source est versionné et accessible en ligne afin de faciliter la consultation et la reproduction 
+                                    du projet <a class="text-white" href="https://github.com/juklau/Meteo_API.git" target="_blank"><strong class="fw-medium fst-italic">en cliquant sur ce lien</strong></a>.</li>
+                                </small>
                             <li class="meteo">◈ Captures d'écran de l'application</li> 
-                            <small>
-                                Illustrations de l'interface utilisateur montrant la recherche de ville, l'affichage des 
-                                prévisions météo, les graphiques et la carte interactive.
-                            </small>
+                                <small>
+                                    Illustrations de l'interface utilisateur montrant la recherche de ville, l'affichage des 
+                                    prévisions météo, les graphiques et la carte interactive.
+                                </small>
                             <li class="meteo">◈ Documentation technique</li>
-                            <small class="lien-extern">
-                                <a class="text-white" href="https://github.com/juklau/Meteo_API.git" target="_blank"><strong class="fw-medium fst-italic">README</strong></a> détaillant la structure du projet, les technologies utilisées et le fonctionnement des appels API.
-                            </small>
+                                <small class="lien-extern">
+                                    <a class="text-white" href="https://github.com/juklau/Meteo_API.git" target="_blank"><strong class="fw-medium fst-italic">README</strong></a> détaillant la structure du projet, les technologies utilisées et le fonctionnement des appels API.
+                                </small>
                         </ul>
                     </div>
                 </div>
@@ -373,7 +383,6 @@
                             Plusieurs améliorations pourraient être envisagées afin d'enrichir l'application :
                         </p>
 
-                        
                         <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
                             <li>◈ Ajout d'une recherche multi-villes permettant de comparer les prévisions 
                                 météorologiques de plusieurs villes.

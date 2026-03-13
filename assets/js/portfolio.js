@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function(){
     let navLinks = document.querySelectorAll(".nav-link")
     let dropdownItems = document.querySelectorAll(".dropdown-menu .dropdown-item");
     let currentUrl = window.location.href.split("#")[0];
+    let kidCurrentUrl = window.location.href.split("#")[1];
 
     navLinks.forEach(link => { //!!!!!
         //link.href.split("#") =>szetvalasztja par "#" les elements GPI.html#GLPI 
@@ -71,8 +72,28 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     });
 
+    dropdownItems.forEach(link => { 
+        // cas 1 : page avec fragment => #OCS-Inventory
+        if(kidCurrentUrl && link.href.split("#")[1] === kidCurrentUrl){
+            link.classList.add("active");
+        }
+        // cas 2 : page normale (stage1.html, rp-chat.html, etc.)
+        else if(link.href.split("#")[0] === currentUrl){
+            link.classList.add("active");
+        }
+    })
+
+    // si un page "stage" est active => dans le menu "formation.html" sera active
+    if(window.location.href.includes("stage")){
+        navLinks.forEach(link => {
+            if(link.href.includes("formation.html")){
+                link.classList.add("active")
+            }
+        })
+    }
+
     // si un page "rp-" est active => dans le menu "projets.html" sera active
-    if(window.location.href.includes("rp") || window.location.href.includes("stage")){
+    if(window.location.href.includes("rp")){
         navLinks.forEach(link => {
             if(link.href.includes("projets.html")){
                 link.classList.add("active")
@@ -92,11 +113,13 @@ document.addEventListener("DOMContentLoaded", function(){
     // si un "dropdown" est active => dans le menu "son parent" sera active
     dropdownItems.forEach(item => {
         item.addEventListener("click", function(){
-            if(item.href.split("#")[0] === currentUrl){
-                // trouver le parent de l'enfant
-                let parentDropdown = this.closest(".dropdown");
-                if(parentDropdown){
-                    parentDropdown.querySelectorAll(".nav-link").classList.add(active);
+
+            // trouver le parent de l'enfant
+            let parentDropdown = this.closest(".dropdown");
+            if(parentDropdown){
+                let parentLink = parentDropdown.querySelector(".nav-link");
+                if(parentLink){
+                    parentLink.classList.add("active")
                 }
             }
         })
@@ -200,7 +223,7 @@ AOS.init({
 
 
 // j'ai enlevé le ".Chat-image"
-document.querySelectorAll(".CRM-image, .linkstream-image, .MediaStock-image, .swantrad-image, .cryptovault-image, .cryptovault-image-web, .cryptovault-image-web, .Meteo-image").forEach(img => {
+document.querySelectorAll(".CRM-image, .linkstream-image, .MediaStock-image, .swantrad-image, .cryptovault-image, .cryptovault-image-web, .cryptovault-image-web, .Meteo-image, .RoomBooking-image").forEach(img => {
   img.addEventListener("click", function () {
 
     // Supprimer l'overlay existant s'il y en a un
