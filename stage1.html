@@ -50,12 +50,12 @@
                                     <a class="nav-link dropdown-toggle text-white" href="projets.html" role="button" aria-expanded="false"> Projets</a>
                                     <ul class="dropdown-menu border-0 ">
                                         <li><a class="dropdown-item text-white" href="projets.html">Compétences</a></li>
-                                        <li><a class="dropdown-item text-white" href="rp-gestion_contacts.html">Mini-CRM</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-chat.html">ClassCord Client</a></li>
+                                        <li><a class="dropdown-item text-white" href="rp-gestion_contacts.html">Mini-CRM</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-mediastock.html">MediaStock</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-cryptovault.html">CryptoVault</a></li>
-                                        <li><a class="dropdown-item text-white" href="rp-roombooking.html">RoomBooking</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-meteo_api.html">Meteo</a></li>
+                                        <li><a class="dropdown-item text-white" href="rp-roombooking.html">RoomBooking</a></li>
                                         
                                     </ul>
                                 </li>
@@ -112,95 +112,10 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="row justify-content-end py-4">
-                    <div class="col-md-8 mt-3" data-aos="fade-up-right" data-aos-delay="700">
-                        <span class="alcim text-uppercase fw-bolder">Besoins</span>
-                        <p class=" mt-4 mb-1">
-                            Le besoin principal identifié par l'entreprise était de remédier à l'absence d'interface utilisateur 
-                            dans l'outil d'automatisation n8n, utilisé pour collecter des données LinkedIn via l'API Unipile.
-                        </p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mt-2">
-                            <li>◈ Centraliser les messages et contacts LinkedIn dans une base relationnelle cohérente,</li>
-                            <li>◈ Offrir une interface de consultation intuitive pour visualiser les conversations et profils associés,</li>
-                            <li>◈ Permettre le déclenchement manuel de workflows n8n via webhooks ou API,</li>
-                            <li>◈ Garantir la cohérence et l'actualisation automatique des données grâce à un système d'automatisation fiable.</li>
-                        </ul>
-                        <p>
-                            Ce besoin répondait à l'objectif d'OPS Imperium de centraliser et de simplifier la gestion de ses échanges sur 
-                            LinkedIn, tout en posant les bases d'un futur système d'automatisation globale.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row py-4 mt-2 justify-content-center" >
-                    <div class="col-md-11 mt-3" data-aos="fade-up-left" data-aos-delay="800">
-                        <span class="alcim text-uppercase fw-bolder">Environnement technologique</span>
-                        <p class="mt-4 mb-2">
-                            Le développement s'est appuyé sur un environnement moderne, orienté automatisation et interconnexion d'API :
-                        </p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mt-1">
-                            <li><span class="LinkStream-liste">◈ n8n</span> - <span class="fst-italic">création et orchestration de workflows automatisés,</span></li>
-                            <li><span class="LinkStream-liste">◈ Unipile API</span> - <span class="fst-italic">récupération des conversations, messages et profils LinkedIn,</span></li>
-                            <li><span class="LinkStream-liste">◈ Supabase (PostgreSQL)</span> - <span class="fst-italic">stockage structuré et exposition d'une API REST,</span></li>
-                            <li><span class="LinkStream-liste">◈ Streamlit (Python)</span> - <span class="fst-italic">développement du frontend interactif,</span></li>
-                            <!-- <li>◈<span class="linkstream"> Docker</span> - <span class="fst-italic">déploiement et portabilité de l'environnement applicatif,</span></li> -->
-                            <li><span class="LinkStream-liste">◈ VS Code et GitHub</span> - <span class="fst-italic">environnement de développement et gestion de version,</span></li>
-                            <li><span class="LinkStream-liste">◈ Python (requests, pandas)</span> - <span class="fst-italic">traitement des données et communication entre services,</span></li>
-                            <li><span class="LinkStream-liste">◈ Assistance IA</span> - <span class="fst-italic">aide à la rédaction de documentation et à l'optimisation du code.</span></li>
-                        </ul>
-                        <p>
-                            Cet environnement a permis de concevoir une architecture modulaire, fiable et facilement réutilisable, 
-                            conforme aux standards actuels du développement cloud.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row justify-content-end py-4">
-                    <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="900">
-                        <span class="alcim text-uppercase fw-bolder">Réalisation</span>
-                        <p class=" mt-4 mb-2">
-                           Le projet a été mené selon une démarche itérative, alternant phases de conception, développement et validation.
-                        </p>
-                        <p>
-                            Les principales étapes réalisées sont :
-                        </p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mt-2">
-                            <li class="linkstream">◈ Mise en place des workflows n8n :</li>
-                            <small class="ms-4 fs-5">
-                                récupération automatique des messages, profils et conversations via l'API Unipile et insertion dans Supabase.
-                            </small>
-                            <li class="linkstream">◈ Modélisation des données :</li>
-                            <small class="ms-4 fs-5">
-                                création des tables <span class="fst-italic">linkedin_people</span>, <span class="fst-italic">linkedin_chats</span>, 
-                                <span class="fst-italic">linkedin_messages</span> et d'une fonction SQL <span class="fst-italic">get_messages()</span> 
-                                pour simplifier les requêtes.
-                            </small>
-                            <li class="linkstream">◈ Développement de l'application Streamlit :</li>
-                            <small class="ms-4 fs-5">
-                                authentification via Unipile, affichage des conversations sous forme de bulles,
-                                 envoi de messages LinkedIn et rafraîchissement dynamique.
-                            </small>
-                            <li class="linkstream">◈ Tests d'intégration complets :</li>
-                            <small class="ms-4 fs-5">
-                                vérification de la communication entre Unipile ↔ n8n ↔ Supabase ↔ Streamlit et 
-                                validation fonctionnelle du prototype.
-                            </small>
-                            <li class="linkstream">◈ Documentation technique et visuelle :</li>
-                            <small class="ms-4 fs-5">
-                                schémas d'architecture, MCD, workflows annotés et commentaires intégrés au code.
-                            </small>
-                        </ul>
-                        <p class="">
-                            Le résultat est un prototype fonctionnel démontrant la faisabilité d'une automatisation complète entre 
-                            plusieurs services cloud, avec une interface utilisateur simple et opérationnelle.
-                        </p>
-                    </div>
-                </div>
             </section>
 
             <section class="fonctionnalites container">
-                <div class="mt-5 text-center" data-aos="zoom-in-down" data-aos-delay="900">
+                <div class="mt-5 pt-5" data-aos="zoom-in-down" data-aos-delay="900">
                     <span class="px-2 alcim text-uppercase fw-bolder">Fonctionnalités et automatisation de LinkStream</span>
                 </div>
                 <div class="container carousel swiper swiper-container d-flex justify-content-center mt-2" data-aos="zoom-in-down" data-aos-delay="1000">
@@ -302,6 +217,93 @@
                         <div class="swiper-slide-button swiper-button-prev d-none d-sm-block"></div>
                         <div class="swiper-slide-button swiper-button-next d-none d-sm-block"></div>
                     </div>  
+                </div>
+            </section>
+
+            <section class="presentation container">
+                <div class="row justify-content-end py-4 mt-4">
+                    <div class="col-md-9 mt-5" data-aos="fade-up-right" data-aos-delay="700">
+                        <span class="alcim text-uppercase fw-bolder">Besoins</span>
+                        <p class=" mt-4 mb-1">
+                            Le besoin principal identifié par l'entreprise était de remédier à l'absence d'interface utilisateur 
+                            dans l'outil d'automatisation n8n, utilisé pour collecter des données LinkedIn via l'API Unipile.
+                        </p>
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mt-2">
+                            <li>◈ Centraliser les messages et contacts LinkedIn dans une base relationnelle cohérente,</li>
+                            <li>◈ Offrir une interface de consultation intuitive pour visualiser les conversations et profils associés,</li>
+                            <li>◈ Permettre le déclenchement manuel de workflows n8n via webhooks ou API,</li>
+                            <li>◈ Garantir la cohérence et l'actualisation automatique des données grâce à un système d'automatisation fiable.</li>
+                        </ul>
+                        <p>
+                            Ce besoin répondait à l'objectif d'OPS Imperium de centraliser et de simplifier la gestion de ses échanges sur 
+                            LinkedIn, tout en posant les bases d'un futur système d'automatisation globale.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row py-4 mt-2 justify-content-center" >
+                    <div class="col-md-11 mt-3" data-aos="fade-up-left" data-aos-delay="800">
+                        <span class="alcim text-uppercase fw-bolder">Environnement technologique</span>
+                        <p class="mt-4 mb-2">
+                            Le développement s'est appuyé sur un environnement moderne, orienté automatisation et interconnexion d'API :
+                        </p>
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mt-1">
+                            <li><span class="LinkStream-liste">◈ n8n</span> - <span class="fst-italic">création et orchestration de workflows automatisés,</span></li>
+                            <li><span class="LinkStream-liste">◈ Unipile API</span> - <span class="fst-italic">récupération des conversations, messages et profils LinkedIn,</span></li>
+                            <li><span class="LinkStream-liste">◈ Supabase (PostgreSQL)</span> - <span class="fst-italic">stockage structuré et exposition d'une API REST,</span></li>
+                            <li><span class="LinkStream-liste">◈ Streamlit (Python)</span> - <span class="fst-italic">développement du frontend interactif,</span></li>
+                            <!-- <li>◈<span class="linkstream"> Docker</span> - <span class="fst-italic">déploiement et portabilité de l'environnement applicatif,</span></li> -->
+                            <li><span class="LinkStream-liste">◈ VS Code et GitHub</span> - <span class="fst-italic">environnement de développement et gestion de version,</span></li>
+                            <li><span class="LinkStream-liste">◈ Python (requests, pandas)</span> - <span class="fst-italic">traitement des données et communication entre services,</span></li>
+                            <li><span class="LinkStream-liste">◈ Assistance IA</span> - <span class="fst-italic">aide à la rédaction de documentation et à l'optimisation du code.</span></li>
+                        </ul>
+                        <p>
+                            Cet environnement a permis de concevoir une architecture modulaire, fiable et facilement réutilisable, 
+                            conforme aux standards actuels du développement cloud.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-end py-4">
+                    <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="900">
+                        <span class="alcim text-uppercase fw-bolder">Réalisation</span>
+                        <p class=" mt-4 mb-2">
+                           Le projet a été mené selon une démarche itérative, alternant phases de conception, développement et validation.
+                        </p>
+                        <p>
+                            Les principales étapes réalisées sont :
+                        </p>
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mt-2">
+                            <li class="linkstream">◈ Mise en place des workflows n8n :</li>
+                            <small class="ms-4 fs-5">
+                                récupération automatique des messages, profils et conversations via l'API Unipile et insertion dans Supabase.
+                            </small>
+                            <li class="linkstream">◈ Modélisation des données :</li>
+                            <small class="ms-4 fs-5">
+                                création des tables <span class="fst-italic">linkedin_people</span>, <span class="fst-italic">linkedin_chats</span>, 
+                                <span class="fst-italic">linkedin_messages</span> et d'une fonction SQL <span class="fst-italic">get_messages()</span> 
+                                pour simplifier les requêtes.
+                            </small>
+                            <li class="linkstream">◈ Développement de l'application Streamlit :</li>
+                            <small class="ms-4 fs-5">
+                                authentification via Unipile, affichage des conversations sous forme de bulles,
+                                 envoi de messages LinkedIn et rafraîchissement dynamique.
+                            </small>
+                            <li class="linkstream">◈ Tests d'intégration complets :</li>
+                            <small class="ms-4 fs-5">
+                                vérification de la communication entre Unipile ↔ n8n ↔ Supabase ↔ Streamlit et 
+                                validation fonctionnelle du prototype.
+                            </small>
+                            <li class="linkstream">◈ Documentation technique et visuelle :</li>
+                            <small class="ms-4 fs-5">
+                                schémas d'architecture, MCD, workflows annotés et commentaires intégrés au code.
+                            </small>
+                        </ul>
+                        <p class="">
+                            Le résultat est un prototype fonctionnel démontrant la faisabilité d'une automatisation complète entre 
+                            plusieurs services cloud, avec une interface utilisateur simple et opérationnelle.
+                        </p>
+                    </div>
                 </div>
             </section>
 
@@ -477,12 +479,27 @@
                     </div>
                 </div>
             </section>
-            <div class="d-flex justify-content-center mt-5 pt-4" data-aos="zoom-in" data-aos-delay="700">
-                <a href="assets/documents/RP_3_LinkStream_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn" type="button" id="fiche-LinkStream-btn">Fiche descriptive</button></a>
+            <div class="row py-4 justify-content-center">
+                <div class="col-12 d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
+
+                    <div data-aos="zoom-in" data-aos-delay="700">
+                        <a href="assets/documents/RP_3_LinkStream_JUHASZ.pdf" target="_blank">
+                            <button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn my-3">
+                                Fiche descriptive
+                            </button>
+                        </a>
+                    </div>
+
+                    <div data-aos="zoom-in" data-aos-delay="700">
+                        <a href="assets/documents/rapport_stage_ops_imperium.pdf" target="_blank">
+                            <button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn">
+                                Rapport de stage
+                            </button>
+                        </a>
+                    </div>
+                </div>
             </div>
-
         </main>
-
 
         <!-- script de AOS -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

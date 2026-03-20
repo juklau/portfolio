@@ -50,12 +50,12 @@
                                     <a class="nav-link dropdown-toggle text-white" href="projets.html" role="button" aria-expanded="false"> Projets</a>
                                     <ul class="dropdown-menu border-0 ">
                                         <li><a class="dropdown-item text-white" href="projets.html">Compétences</a></li>
-                                        <li><a class="dropdown-item text-white" href="rp-gestion_contacts.html">Mini-CRM</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-chat.html">ClassCord Client</a></li>
+                                        <li><a class="dropdown-item text-white" href="rp-gestion_contacts.html">Mini-CRM</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-mediastock.html">MediaStock</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-cryptovault.html">CryptoVault</a></li>
-                                        <li><a class="dropdown-item text-white" href="rp-roombooking.html">RoomBooking</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-meteo_api.html">Meteo</a></li>
+                                        <li><a class="dropdown-item text-white" href="rp-roombooking.html">RoomBooking</a></li>
                                         
                                     </ul>
                                 </li>
@@ -91,7 +91,7 @@
                 <h3 class="pb-5">Réservations des salles</h3>
             </div>
 
-            <section class="presentation container ">
+            <section class="presentation container">
                 <div class="row mx-auto mt-5" data-aos="fade-up-left" data-aos-delay="600"> 
                     <span class="alcim text-uppercase fw-bolder">Contexte</span>
                     <div class="py-3 px-3 row ">
@@ -127,138 +127,10 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="row justify-content-end py-4 mt-2">
-                    <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="700">
-                        <span class="alcim text-uppercase fw-bolder">Besoins</span>
-                        <p class="mt-4 mb-1">
-                            Le besoin principal du projet est de mettre à disposition de l'établissement une application web 
-                            permettant de gérer efficacement les réservations de salles et d'espaces de travail
-                        </p>
-                        <p>
-                            L'application doit permettre aux différents utilisateurs (administrateur, coordinateurs et étudiants) 
-                            de consulter les salles disponibles et d'effectuer des réservations selon une date et un créneau horaire.
-                        </p>
-                        <div class="row justify-content-center">
-                            <div class="col-md-11">
-                                <p class="">
-                                    La solution doit également intégrer :
-                                </p>
-                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
-                                    <li>◈ un système d'authentification permettant aux utilisateurs de se connecter et d'accéder 
-                                        aux fonctionnalités correspondant à leur rôle
-                                    </li>
-                                    <li>◈ la consultation des salles et de leurs caractéristiques (capacité, équipements, disponibilité)</li>
-                                    <li>◈ la création et l'annulation de réservations de salles</li>
-                                    <li>◈ la visualisation des disponibilités et des indisponibilités des salles</li>
-                                    <li>◈ la gestion des salles, des classes et des utilisateurs par l'administrateur</li>
-                                    <li>◈ la gestion des étudiants au sein des classes par les coordinateurs</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row justify-content-start">
-                            <div class="col-md-10">
-                                <p>
-                                    L'objectif est de proposer un outil permettant de centraliser la gestion des réservations, améliorer 
-                                    l'organisation des infrastructures et simplifier l'utilisation du service pour les utilisateurs.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row py-4 mt-2 justify-content-center" >
-                    <div class="col-md-11 mt-5" data-aos="fade-up-left" data-aos-delay="800">
-                        <span class="alcim text-uppercase fw-bolder">Technologies utilisées</span>
-                        <p class="mt-4">
-                            Le projet RoomBooking repose sur une architecture web moderne permettant de 
-                            gérer les réservations de salles et les utilisateurs de manière centralisée.
-                        </p>
-                        <p class="fst-italic roombooking mt-3 mb-0"><strong>Backend</strong></p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
-                            <li>◈ Symfony (PHP) — framework utilisé pour le développement de 
-                                l'application et la structuration de la logique métier.
-                            </li>
-                            <li>◈ PHP — langage utilisé pour le développement côté serveur.</li>
-                            <li>◈ MySQL — base de données relationnelle utilisée pour stocker les 
-                                informations liées aux salles, utilisateurs, classes, réservations et équipements.
-                            </li>
-                            <li>◈ Doctrine ORM — gestion de la persistance des données et interaction avec la base de données.</li>
-                        </ul>
-
-                         <div class="row justify-content-center">
-                            <div class="col-md-8">
-                                <p class="fst-italic roombooking mt-3 mb-0"><strong>Frontend</strong></p>
-                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
-                                    <li>◈ HTML5 / CSS3 — structure et mise en forme de l'interface utilisateur.</li>
-                                    <li>◈ Bootstrap — framework CSS utilisé pour concevoir une interface responsive.</li>
-                                    <li>◈ Twig — moteur de templates utilisé par Symfony pour générer les pages dynamiques.</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="row justify-content-center">
-                            <div class="col-md-10">
-                                <p class="fst-italic roombooking mt-3 mb-0"><strong>Environnement de développement</strong></p>
-                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
-                                    <li>◈ Docker / Docker Compose — conteneurisation de l'environnement de développement (serveur web, base de données).</li>
-                                    <li>◈ Git / GitHub — gestion de versions et hébergement du code source.</li>
-                                    <li>◈ Visual Studio Code — environnement de développement utilisé pour la programmation.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-<!-- itt tartok!!!  -->
-                <div class="row justify-content-end py-3">
-                    <div class="col-md-11 mt-5" data-aos="fade-up-right" data-aos-delay="900">
-                        <span class="alcim text-uppercase fw-bolder">Réalisation</span>
-                        <p class="mt-4 mb-2">
-                            La réalisation du projet RoomBooking a consisté à développer une application web permettant la gestion 
-                            et la réservation de salles au sein de l'établissement MediaSchool IRIS Nice.
-                        </p>
-                        <p>
-                            L'application repose sur une architecture web utilisant le framework Symfony, permettant de structurer 
-                            l'application selon une séparation claire entre les différentes couches (contrôleurs, modèles et vues). 
-                            Les données sont stockées dans une base de données MySQL, et l'interface utilisateur est générée à 
-                            l'aide du moteur de templates Twig avec une mise en forme réalisée grâce au framework Bootstrap.
-                        </p>
-                        <p>
-                            L'application intègre un système d'authentification permettant aux utilisateurs de se connecter et 
-                            d'accéder aux fonctionnalités correspondant à leur rôle. Trois types d'utilisateurs sont définis dans 
-                            l'application : un administrateur unique chargé de l'administration globale, ainsi que des coordinateurs 
-                            et des étudiants, chacun disposant de droits d'accès spécifiques.
-                        </p>
-                        <div class="row justify-content-end">
-                            <div class="col-md-10">
-                                <p class="mb-2">
-                                    Les principales fonctionnalités développées sont :
-                                </p>
-                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
-                                    <li>◈ la gestion des salles (consultation des salles, visualisation des équipements et de la capacité)</li>
-                                    <li>◈ la consultation des disponibilités des salles selon une date et un créneau horaire</li>
-                                    <li>◈ la création et l'annulation de réservations de salles</li>
-                                    <li>◈ la gestion des salles, des utilisateurs et des classes par l'administrateur</li>
-                                    <li>◈ la gestion des étudiants au sein des classes par les coordinateurs</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-md-10">
-                                <p>
-                                    L'application vérifie automatiquement les conflits de réservation, afin d'éviter les doubles 
-                                    réservations pour une même salle et un même créneau horaire.
-                                    <br>
-                                    Le développement du projet a été réalisé dans un environnement conteneurisé avec Docker, 
-                                    facilitant la mise en place de l'environnement de développement et l'exécution de l'application.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </section>
 
             <section class="fonctionnalites container">
-                <div class="mt-5" data-aos="zoom-in-down" data-aos-delay="900">
+                <div class="mt-5 pt-4" data-aos="zoom-in-down" data-aos-delay="900">
                     <span class="px-2 alcim text-uppercase fw-bolder">Fonctionnalités</span>
                 </div>
                 <div class="container carousel swiper swiper-container d-flex justify-content-center mt-2" data-aos="zoom-in-down" data-aos-delay="1000">
@@ -432,6 +304,136 @@
                         <div class="swiper-slide-button RoomBooking swiper-button-prev d-none d-sm-block"></div>
                         <div class="swiper-slide-button RoomBooking swiper-button-next d-none d-sm-block"></div>
                     </div>  
+                </div>
+            </section>
+
+            <section class="presentation container">
+                <div class="row justify-content-end py-4 mt-5">
+                    <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="700">
+                        <span class="alcim text-uppercase fw-bolder">Besoins</span>
+                        <p class="mt-4 mb-1">
+                            Le besoin principal du projet est de mettre à disposition de l'établissement une application web 
+                            permettant de gérer efficacement les réservations de salles et d'espaces de travail
+                        </p>
+                        <p>
+                            L'application doit permettre aux différents utilisateurs (administrateur, coordinateurs et étudiants) 
+                            de consulter les salles disponibles et d'effectuer des réservations selon une date et un créneau horaire.
+                        </p>
+                        <div class="row justify-content-center">
+                            <div class="col-md-11">
+                                <p class="">
+                                    La solution doit également intégrer :
+                                </p>
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                    <li>◈ un système d'authentification permettant aux utilisateurs de se connecter et d'accéder 
+                                        aux fonctionnalités correspondant à leur rôle
+                                    </li>
+                                    <li>◈ la consultation des salles et de leurs caractéristiques (capacité, équipements, disponibilité)</li>
+                                    <li>◈ la création et l'annulation de réservations de salles</li>
+                                    <li>◈ la visualisation des disponibilités et des indisponibilités des salles</li>
+                                    <li>◈ la gestion des salles, des classes et des utilisateurs par l'administrateur</li>
+                                    <li>◈ la gestion des étudiants au sein des classes par les coordinateurs</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row justify-content-start">
+                            <div class="col-md-10">
+                                <p>
+                                    L'objectif est de proposer un outil permettant de centraliser la gestion des réservations, améliorer 
+                                    l'organisation des infrastructures et simplifier l'utilisation du service pour les utilisateurs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row py-4 mt-2 justify-content-center" >
+                    <div class="col-md-11 mt-5" data-aos="fade-up-left" data-aos-delay="800">
+                        <span class="alcim text-uppercase fw-bolder">Technologies utilisées</span>
+                        <p class="mt-4">
+                            Le projet RoomBooking repose sur une architecture web moderne permettant de 
+                            gérer les réservations de salles et les utilisateurs de manière centralisée.
+                        </p>
+                        <p class="fst-italic roombooking mt-3 mb-0"><strong>Backend</strong></p>
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                            <li>◈ Symfony (PHP) — framework utilisé pour le développement de 
+                                l'application et la structuration de la logique métier.
+                            </li>
+                            <li>◈ PHP — langage utilisé pour le développement côté serveur.</li>
+                            <li>◈ MySQL — base de données relationnelle utilisée pour stocker les 
+                                informations liées aux salles, utilisateurs, classes, réservations et équipements.
+                            </li>
+                            <li>◈ Doctrine ORM — gestion de la persistance des données et interaction avec la base de données.</li>
+                        </ul>
+
+                         <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <p class="fst-italic roombooking mt-3 mb-0"><strong>Frontend</strong></p>
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                    <li>◈ HTML5 / CSS3 — structure et mise en forme de l'interface utilisateur.</li>
+                                    <li>◈ Bootstrap — framework CSS utilisé pour concevoir une interface responsive.</li>
+                                    <li>◈ Twig — moteur de templates utilisé par Symfony pour générer les pages dynamiques.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <p class="fst-italic roombooking mt-3 mb-0"><strong>Environnement de développement</strong></p>
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                    <li>◈ Docker / Docker Compose — conteneurisation de l'environnement de développement (serveur web, base de données).</li>
+                                    <li>◈ Git / GitHub — gestion de versions et hébergement du code source.</li>
+                                    <li>◈ Visual Studio Code — environnement de développement utilisé pour la programmation.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-end py-3">
+                    <div class="col-md-11 mt-5" data-aos="fade-up-right" data-aos-delay="900">
+                        <span class="alcim text-uppercase fw-bolder">Réalisation</span>
+                        <p class="mt-4 mb-2">
+                            La réalisation du projet RoomBooking a consisté à développer une application web permettant la gestion 
+                            et la réservation de salles au sein de l'établissement MediaSchool IRIS Nice.
+                        </p>
+                        <p>
+                            L'application repose sur une architecture web utilisant le framework Symfony, permettant de structurer 
+                            l'application selon une séparation claire entre les différentes couches (contrôleurs, modèles et vues). 
+                            Les données sont stockées dans une base de données MySQL, et l'interface utilisateur est générée à 
+                            l'aide du moteur de templates Twig avec une mise en forme réalisée grâce au framework Bootstrap.
+                        </p>
+                        <p>
+                            L'application intègre un système d'authentification permettant aux utilisateurs de se connecter et 
+                            d'accéder aux fonctionnalités correspondant à leur rôle. Trois types d'utilisateurs sont définis dans 
+                            l'application : un administrateur unique chargé de l'administration globale, ainsi que des coordinateurs 
+                            et des étudiants, chacun disposant de droits d'accès spécifiques.
+                        </p>
+                        <div class="row justify-content-end">
+                            <div class="col-md-10">
+                                <p class="mb-2">
+                                    Les principales fonctionnalités développées sont :
+                                </p>
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                    <li>◈ la gestion des salles (consultation des salles, visualisation des équipements et de la capacité)</li>
+                                    <li>◈ la consultation des disponibilités des salles selon une date et un créneau horaire</li>
+                                    <li>◈ la création et l'annulation de réservations de salles</li>
+                                    <li>◈ la gestion des salles, des utilisateurs et des classes par l'administrateur</li>
+                                    <li>◈ la gestion des étudiants au sein des classes par les coordinateurs</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <p>
+                                    L'application vérifie automatiquement les conflits de réservation, afin d'éviter les doubles 
+                                    réservations pour une même salle et un même créneau horaire.
+                                    <br>
+                                    Le développement du projet a été réalisé dans un environnement conteneurisé avec Docker, 
+                                    facilitant la mise en place de l'environnement de développement et l'exécution de l'application.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -690,7 +692,7 @@
             </section>
 
             <div class="d-flex justify-content-center mt-5 pt-4" data-aos="zoom-in" data-aos-delay="700">
-                <a href="assets/documents/RP_5_RoomBooking_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn" type="button" id="fiche-RoomBooking-btn">Fiche descriptive</button></a>
+                <a href="assets/documents/RP_8_RoomBooking_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn" type="button" id="fiche-RoomBooking-btn">Fiche descriptive</button></a>
             </div>
         </main>
 

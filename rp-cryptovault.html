@@ -50,12 +50,12 @@
                                     <a class="nav-link dropdown-toggle text-white" href="projets.html" role="button" aria-expanded="false"> Projets</a>
                                     <ul class="dropdown-menu border-0 ">
                                         <li><a class="dropdown-item text-white" href="projets.html">Compétences</a></li>
-                                        <li><a class="dropdown-item text-white" href="rp-gestion_contacts.html">Mini-CRM</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-chat.html">ClassCord Client</a></li>
+                                        <li><a class="dropdown-item text-white" href="rp-gestion_contacts.html">Mini-CRM</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-mediastock.html">MediaStock</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-cryptovault.html">CryptoVault</a></li>
-                                        <li><a class="dropdown-item text-white" href="rp-roombooking.html">RoomBooking</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-meteo_api.html">Meteo</a></li>
+                                        <li><a class="dropdown-item text-white" href="rp-roombooking.html">RoomBooking</a></li>
                                         
                                     </ul>
                                 </li>
@@ -91,7 +91,7 @@
                 <h3 class="pb-5">Coffre-fort numérique sécurisé</h3>
             </div>
 
-            <section class="presentation container ">
+            <section class="presentation container">
                 <div class="mx-auto mt-5" data-aos="fade-up-left" data-aos-delay="600"> 
                     <span class="alcim text-uppercase fw-bolder">Contexte</span>
                     <div class="py-3 row">
@@ -131,171 +131,11 @@
                             </p>
                         </div>
                     </div>
-                </div>
-                <div class="row justify-content-end py-4 mt-2">
-                    <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="700">
-                        <span class="alcim text-uppercase fw-bolder">Besoins</span>
-                        <p class=" mt-4 mb-1">
-                            Le projet CryptoVault a été conçu pour répondre à des enjeux concrets liés à la gestion 
-                            et à la sécurisation des données numériques.
-                        </p>
-                        <p class="">
-                            Sur le plan fonctionnel, l'objectif était de <span class="fst-italic cryptovault">proposer à chaque utilisateur un espace personnel sécurisé</span> 
-                             lui permettant de stocker et d'organiser ses fichiers au sein d'une arborescence de 
-                            dossiers. La solution devait également intégrer un système de versionnage afin de conserver 
-                            l'historique des modifications, ainsi qu'un mécanisme de contrôle des quotas pour limiter 
-                            l'espace de stockage utilisé.
-                        </p>
-                        <div class="row justify-content-center">
-                            <div class="col-md-10">
-                                <p class="">
-                                    Un autre besoin essentiel concernait le <span class="fst-italic cryptovault">partage sécurisé de fichiers ou de dossiers</span>. Il était 
-                                    nécessaire de pouvoir générer des liens publics temporaires, configurables (date d'expiration, 
-                                    nombre de téléchargements), tout en garantissant une traçabilité des accès et des actions 
-                                    effectuées. Le système devait également distinguer les utilisateurs standards de l'administrateur, 
-                                    ce dernier disposant de fonctionnalités supplémentaires comme la gestion des quotas et des comptes.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row justify-content-end">
-                            <div class="col-md-10">
-                                <p>
-                                    Sur le plan technique, la solution devait centraliser la logique métier au sein d'une API 
-                                    REST sécurisée. L'authentification devait être robuste, basée sur des mécanismes modernes 
-                                    (JWT), et les <span class="fst-italic cryptovault">données sensibles protégées</span> via le hachage des mots de passe et le chiffrement 
-                                    des fichiers. La cohérence des données devait être assurée par un modèle relationnel normalisé 
-                                    et des contraintes d'intégrité.
-                                </p>
-                                <p>
-                                    Enfin, l'application devait être <span class="fst-italic cryptovault">ergonomique et simple d'utilisation côté client</span>, tout en 
-                                    permettant un déploiement reproductible et structuré grâce à la conteneurisation.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-               </div>
-                <div class="py-4 mt-2" >
-                    <div class="col-md-12 mt-5" data-aos="fade-up-left" data-aos-delay="800">
-                        <span class="alcim text-uppercase fw-bolder">Environnement technologique</span>
-                        <p class="mt-4">
-                            La solution repose sur un environnement technologique complet, couvrant le 
-                            backend, le frontend, la base de données et le déploiement.
-                        </p>
-                        <p class="fst-italic cryptovault mt-3 mb-0"><strong>Backend</strong></p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
-                            <li>◈ <strong>PHP 8.2</strong> - développement de l'API REST et implémentation de la logique métier.</li>
-                            <li>◈ <strong>Slim 4</strong> - framework léger pour la gestion des routes, middlewares et contrôleurs REST.</li>
-                            <li>◈ <strong>Medoo (ORM)</strong> - abstraction simplifiée de l'accès aux données via PDO.</li>
-                            <li>◈ <strong>MySQL</strong> - base de données relationnelle normalisée avec contraintes d'intégrité.</li>
-                            <li>◈ <strong>JWT (HMAC-SHA256)</strong> - authentification stateless sécurisée des utilisateurs.</li>
-                            <li>◈ <strong>Bcrypt</strong> - hachage sécurisé des mots de passe avec salage intégré et protection contre les attaques par force brute.</li>
-                            <li>◈ <strong>AES-256-GCM</strong> - chiffrement des fichiers avec authentification et garantie d'intégrité.</li>
-                            <li>◈ <strong>Middlewares de sécurité</strong> - gestion des rôles (user/admin), contrôle d'accès et validation des requêtes.</li>
-                        </ul>
-
-                        <div class="row justify-content-center">
-                            <div class="col-md-10">
-                                <p class="fst-italic cryptovault mt-3 mb-0"><strong>Client lourd</strong></p>
-                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
-                                    <li>◈ <strong>Java 17 LTS</strong> - socle applicatif stable et maintenable.</li>
-                                    <li>◈ <strong>JavaFX 21</strong> - développement de l'interface graphique.</li>
-                                    <li>◈ <strong>Architecture MVC</strong> - séparation claire entre modèle, vue et contrôleur.</li>
-                                    <li>◈ <strong>FXML & SceneBuilder</strong> - conception structurée des interfaces.</li>
-                                    <li>◈ <strong>HTTP Client (REST)</strong> - communication sécurisée avec l'API.</li>
-                                    <li>◈ <strong>Gestion asynchrone (Tasks JavaFX)</strong> - upload de fichiers avec barre de progression et interface réactive.</li>
-                                </ul>
-                            </div>
-                         </div>
-                        <div class="row justify-content-end">
-                            <div class="col-md-10">
-                                <p class="fst-italic cryptovault mt-3 mb-0"><strong>Client léger Web</strong></p>
-                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
-                                    <li>◈ <strong>HTML5 / CSS3</strong> - structure et mise en forme des pages publiques.</li>
-                                    <li>◈ <strong>Bootstrap 5</strong> - interface responsive et ergonomique.</li>
-                                    <li>◈ <strong>JavaScript (ES6)</strong> - gestion des interactions côté navigateur.</li>
-                                    <li>◈ <strong>Intégration API REST</strong> - téléchargement sécurisé via lien public avec vérification des 
-                                        contraintes côté serveur (expiration, nombre d'usages, révocation).</li>
-                                </ul>
-                            </div>
-                         </div>
-                        <div class="row justify-content-start">
-                            <div class="col-md-10">
-                                <p class="fst-italic cryptovault mt-3 mb-0"><strong>Outils et déploiement</strong></p>
-                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
-                                    <li>◈ <strong>Docker / Docker Compose</strong> - conteneurisation et déploiement reproductible.</li>
-                                    <li>◈ <strong>Git & GitHub</strong> - gestion de versions et collaboration en binôme.</li>
-                                    <li>◈ <strong>IntelliJ IDEA & Visual Studio Code</strong> - environnements de développement.</li>
-                                    <li>◈ <strong>Postman</strong> - tests et validation des endpoints REST.</li>
-                                    <li>◈ <strong>Figma</strong> - conception des maquettes UI/UX.</li>
-                                </ul> 
-                            </div>
-                         </div>
-                    </div>
                 </div> 
-                <div class="row justify-content-end py-3">
-                    <div class="col-md-11 mt-5" data-aos="fade-up-right" data-aos-delay="900">
-                        <span class="alcim text-uppercase fw-bolder">Réalisation</span>
-                        <p class="mt-4 mb-2">
-                           Le développement de CryptoVault s'est déroulé en binôme selon une démarche progressive et 
-                           structurée, allant de la modélisation des données à l'implémentation complète des fonctionnalités.
-                        </p>
-                        <p>
-                            La première étape a consisté à <span class="fst-italic cryptovault">concevoir le modèle relationnel de la base de données</span>. Nous avons 
-                            élaboré un MCD puis un schéma SQL intégrant les entités principales : utilisateurs, dossiers 
-                            hiérarchiques, fichiers, versions, partages et journalisation. Les contraintes d'intégrité et 
-                            les relations ont été soigneusement définies afin de garantir la cohérence et la séparation 
-                            stricte des espaces utilisateurs.
-                        </p>
-                        <div class="row justify-content-center">
-                            <div class="col-md-10">
-                                <p>
-                                    Nous avons ensuite <span class="fst-italic cryptovault">développé l'API REST</span>, cœur de l'application. Celle-ci centralise l'ensemble 
-                                    de la logique métier : gestion des comptes, contrôle des habilitations, traitement des uploads, 
-                                    calcul des quotas, gestion des partages et vérifications de sécurité. Une attention particulière 
-                                    a été portée à la robustesse des contrôles (validation des entrées, vérification des droits, 
-                                    gestion des erreurs et des cas limites).
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row justify-content-end">
-                            <div class="col-md-10">
-                                <p>
-                                    Le <span class="fst-italic cryptovault">système de versionnage</span> a été conçu pour conserver l'historique complet des fichiers, sans 
-                                    écrasement des données. Chaque nouvelle version est enregistrée de manière indépendante, 
-                                    garantissant traçabilité et intégrité.
-                                </p>
-                                <p>
-                                    Le <span class="fst-italic cryptovault">client JavaFX</span> a été développé pour offrir une expérience proche d'un explorateur de fichiers : 
-                                    navigation arborescente, affichage dynamique des ressources, gestion des versions et des partages. 
-                                    Les uploads sont gérés de manière asynchrone avec indicateur de progression afin de maintenir 
-                                    une interface fluide.
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <p>
-                            Une <span class="fst-italic cryptovault">interface Web publique</span> a également été réalisée pour permettre le téléchargement via lien 
-                            sécurisé. Toutes les contraintes (expiration, nombre de téléchargements restants, révocation) 
-                            sont contrôlées côté serveur avant toute autorisation.
-                        </p>
-                        <div class="row justify-content-center">
-                            <div class="col-md-10">
-                                <p>
-                                    Enfin, l'ensemble de la solution a été conteneurisé avec Docker afin de garantir un 
-                                    environnement de développement et de déploiement reproductible.
-                                </p>
-                                <p>
-                                    Cette réalisation illustre ma capacité à concevoir une architecture cohérente, sécurisée 
-                                    et maintenable, tout en travaillant en collaboration sur un projet structuré.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-          </section>
-               <section class="fonctionnalites container">
-                <div class="mt-5" data-aos="zoom-in-down" data-aos-delay="900">
+            </section>
+
+            <section class="fonctionnalites container">
+                <div class="mt-5 py-4" data-aos="zoom-in-down" data-aos-delay="900">
                     <span class=" alcim text-uppercase fw-bolder">Fonctionnalités</span>
                 </div>
                 <div class="container carousel swiper swiper-container d-flex justify-content-center mt-2" data-aos="zoom-in-down" data-aos-delay="1000">
@@ -470,6 +310,169 @@
                          <div class="swiper-slide-button swiper-button-prev d-none d-sm-block"></div>
                         <div class="swiper-slide-button swiper-button-next d-none d-sm-block"></div>
                     </div>  
+                </div>
+            </section>
+
+            <section class="presentation container mt-5">
+                <div class="row justify-content-end py-4 mt-2">
+                    <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="700">
+                        <span class="alcim text-uppercase fw-bolder">Besoins</span>
+                        <p class=" mt-4 mb-1">
+                            Le projet CryptoVault a été conçu pour répondre à des enjeux concrets liés à la gestion 
+                            et à la sécurisation des données numériques.
+                        </p>
+                        <p class="">
+                            Sur le plan fonctionnel, l'objectif était de <span class="fst-italic cryptovault">proposer à chaque utilisateur un espace personnel sécurisé</span> 
+                             lui permettant de stocker et d'organiser ses fichiers au sein d'une arborescence de 
+                            dossiers. La solution devait également intégrer un système de versionnage afin de conserver 
+                            l'historique des modifications, ainsi qu'un mécanisme de contrôle des quotas pour limiter 
+                            l'espace de stockage utilisé.
+                        </p>
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <p class="">
+                                    Un autre besoin essentiel concernait le <span class="fst-italic cryptovault">partage sécurisé de fichiers ou de dossiers</span>. Il était 
+                                    nécessaire de pouvoir générer des liens publics temporaires, configurables (date d'expiration, 
+                                    nombre de téléchargements), tout en garantissant une traçabilité des accès et des actions 
+                                    effectuées. Le système devait également distinguer les utilisateurs standards de l'administrateur, 
+                                    ce dernier disposant de fonctionnalités supplémentaires comme la gestion des quotas et des comptes.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-end">
+                            <div class="col-md-10">
+                                <p>
+                                    Sur le plan technique, la solution devait centraliser la logique métier au sein d'une API 
+                                    REST sécurisée. L'authentification devait être robuste, basée sur des mécanismes modernes 
+                                    (JWT), et les <span class="fst-italic cryptovault">données sensibles protégées</span> via le hachage des mots de passe et le chiffrement 
+                                    des fichiers. La cohérence des données devait être assurée par un modèle relationnel normalisé 
+                                    et des contraintes d'intégrité.
+                                </p>
+                                <p>
+                                    Enfin, l'application devait être <span class="fst-italic cryptovault">ergonomique et simple d'utilisation côté client</span>, tout en 
+                                    permettant un déploiement reproductible et structuré grâce à la conteneurisation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+                <div class="py-4 mt-2" >
+                    <div class="col-md-12 mt-5" data-aos="fade-up-left" data-aos-delay="800">
+                        <span class="alcim text-uppercase fw-bolder">Environnement technologique</span>
+                        <p class="mt-4">
+                            La solution repose sur un environnement technologique complet, couvrant le 
+                            backend, le frontend, la base de données et le déploiement.
+                        </p>
+                        <p class="fst-italic cryptovault mt-3 mb-0"><strong>Backend</strong></p>
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                            <li>◈ <strong>PHP 8.2</strong> - développement de l'API REST et implémentation de la logique métier.</li>
+                            <li>◈ <strong>Slim 4</strong> - framework léger pour la gestion des routes, middlewares et contrôleurs REST.</li>
+                            <li>◈ <strong>Medoo (ORM)</strong> - abstraction simplifiée de l'accès aux données via PDO.</li>
+                            <li>◈ <strong>MySQL</strong> - base de données relationnelle normalisée avec contraintes d'intégrité.</li>
+                            <li>◈ <strong>JWT (HMAC-SHA256)</strong> - authentification stateless sécurisée des utilisateurs.</li>
+                            <li>◈ <strong>Bcrypt</strong> - hachage sécurisé des mots de passe avec salage intégré et protection contre les attaques par force brute.</li>
+                            <li>◈ <strong>AES-256-GCM</strong> - chiffrement des fichiers avec authentification et garantie d'intégrité.</li>
+                            <li>◈ <strong>Middlewares de sécurité</strong> - gestion des rôles (user/admin), contrôle d'accès et validation des requêtes.</li>
+                        </ul>
+
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <p class="fst-italic cryptovault mt-3 mb-0"><strong>Client lourd</strong></p>
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                    <li>◈ <strong>Java 17 LTS</strong> - socle applicatif stable et maintenable.</li>
+                                    <li>◈ <strong>JavaFX 21</strong> - développement de l'interface graphique.</li>
+                                    <li>◈ <strong>Architecture MVC</strong> - séparation claire entre modèle, vue et contrôleur.</li>
+                                    <li>◈ <strong>FXML & SceneBuilder</strong> - conception structurée des interfaces.</li>
+                                    <li>◈ <strong>HTTP Client (REST)</strong> - communication sécurisée avec l'API.</li>
+                                    <li>◈ <strong>Gestion asynchrone (Tasks JavaFX)</strong> - upload de fichiers avec barre de progression et interface réactive.</li>
+                                </ul>
+                            </div>
+                         </div>
+                        <div class="row justify-content-end">
+                            <div class="col-md-10">
+                                <p class="fst-italic cryptovault mt-3 mb-0"><strong>Client léger Web</strong></p>
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                    <li>◈ <strong>HTML5 / CSS3</strong> - structure et mise en forme des pages publiques.</li>
+                                    <li>◈ <strong>Bootstrap 5</strong> - interface responsive et ergonomique.</li>
+                                    <li>◈ <strong>JavaScript (ES6)</strong> - gestion des interactions côté navigateur.</li>
+                                    <li>◈ <strong>Intégration API REST</strong> - téléchargement sécurisé via lien public avec vérification des 
+                                        contraintes côté serveur (expiration, nombre d'usages, révocation).</li>
+                                </ul>
+                            </div>
+                         </div>
+                        <div class="row justify-content-start">
+                            <div class="col-md-10">
+                                <p class="fst-italic cryptovault mt-3 mb-0"><strong>Outils et déploiement</strong></p>
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                    <li>◈ <strong>Docker / Docker Compose</strong> - conteneurisation et déploiement reproductible.</li>
+                                    <li>◈ <strong>Git & GitHub</strong> - gestion de versions et collaboration en binôme.</li>
+                                    <li>◈ <strong>IntelliJ IDEA & Visual Studio Code</strong> - environnements de développement.</li>
+                                    <li>◈ <strong>Postman</strong> - tests et validation des endpoints REST.</li>
+                                    <li>◈ <strong>Figma</strong> - conception des maquettes UI/UX.</li>
+                                </ul> 
+                            </div>
+                         </div>
+                    </div>
+                </div> 
+                <div class="row justify-content-end py-3">
+                    <div class="col-md-11 mt-5" data-aos="fade-up-right" data-aos-delay="900">
+                        <span class="alcim text-uppercase fw-bolder">Réalisation</span>
+                        <p class="mt-4 mb-2">
+                           Le développement de CryptoVault s'est déroulé en binôme selon une démarche progressive et 
+                           structurée, allant de la modélisation des données à l'implémentation complète des fonctionnalités.
+                        </p>
+                        <p>
+                            La première étape a consisté à <span class="fst-italic cryptovault">concevoir le modèle relationnel de la base de données</span>. Nous avons 
+                            élaboré un MCD puis un schéma SQL intégrant les entités principales : utilisateurs, dossiers 
+                            hiérarchiques, fichiers, versions, partages et journalisation. Les contraintes d'intégrité et 
+                            les relations ont été soigneusement définies afin de garantir la cohérence et la séparation 
+                            stricte des espaces utilisateurs.
+                        </p>
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <p>
+                                    Nous avons ensuite <span class="fst-italic cryptovault">développé l'API REST</span>, cœur de l'application. Celle-ci centralise l'ensemble 
+                                    de la logique métier : gestion des comptes, contrôle des habilitations, traitement des uploads, 
+                                    calcul des quotas, gestion des partages et vérifications de sécurité. Une attention particulière 
+                                    a été portée à la robustesse des contrôles (validation des entrées, vérification des droits, 
+                                    gestion des erreurs et des cas limites).
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-end">
+                            <div class="col-md-10">
+                                <p>
+                                    Le <span class="fst-italic cryptovault">système de versionnage</span> a été conçu pour conserver l'historique complet des fichiers, sans 
+                                    écrasement des données. Chaque nouvelle version est enregistrée de manière indépendante, 
+                                    garantissant traçabilité et intégrité.
+                                </p>
+                                <p>
+                                    Le <span class="fst-italic cryptovault">client JavaFX</span> a été développé pour offrir une expérience proche d'un explorateur de fichiers : 
+                                    navigation arborescente, affichage dynamique des ressources, gestion des versions et des partages. 
+                                    Les uploads sont gérés de manière asynchrone avec indicateur de progression afin de maintenir 
+                                    une interface fluide.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <p>
+                            Une <span class="fst-italic cryptovault">interface Web publique</span> a également été réalisée pour permettre le téléchargement via lien 
+                            sécurisé. Toutes les contraintes (expiration, nombre de téléchargements restants, révocation) 
+                            sont contrôlées côté serveur avant toute autorisation.
+                        </p>
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <p>
+                                    Enfin, l'ensemble de la solution a été conteneurisé avec Docker afin de garantir un 
+                                    environnement de développement et de déploiement reproductible.
+                                </p>
+                                <p>
+                                    Cette réalisation illustre ma capacité à concevoir une architecture cohérente, sécurisée 
+                                    et maintenable, tout en travaillant en collaboration sur un projet structuré.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -761,7 +764,7 @@
                 </div>
             </section>
             <div class="d-flex justify-content-center mt-5 pt-4" data-aos="zoom-in" data-aos-delay="700">
-                <a href="assets/documents/RP_4_CryptoVault_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn" type="button" id="fiche-cryptovault-btn">Fiche descriptive</button></a>
+                <a href="assets/documents/RP_5_CryptoVault_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn" type="button" id="fiche-cryptovault-btn">Fiche descriptive</button></a>
             </div>
         </main>
 

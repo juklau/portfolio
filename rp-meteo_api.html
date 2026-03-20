@@ -50,12 +50,12 @@
                                     <a class="nav-link dropdown-toggle text-white" href="projets.html" role="button" aria-expanded="false"> Projets</a>
                                     <ul class="dropdown-menu border-0 ">
                                         <li><a class="dropdown-item text-white" href="projets.html">Compétences</a></li>
-                                        <li><a class="dropdown-item text-white" href="rp-gestion_contacts.html">Mini-CRM</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-chat.html">ClassCord Client</a></li>
+                                        <li><a class="dropdown-item text-white" href="rp-gestion_contacts.html">Mini-CRM</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-mediastock.html">MediaStock</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-cryptovault.html">CryptoVault</a></li>
-                                        <li><a class="dropdown-item text-white" href="rp-roombooking.html">RoomBooking</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-meteo_api.html">Meteo</a></li>
+                                        <li><a class="dropdown-item text-white" href="rp-roombooking.html">RoomBooking</a></li>
                                         
                                     </ul>
                                 </li>
@@ -91,7 +91,7 @@
                 <h3 class="pb-5">Prévisions pour les villes de France — données Open-Meteo </h3>
             </div>
 
-            <section class="presentation container ">
+            <section class="presentation container">
                 <div class="row mx-auto mt-5 " data-aos="fade-up-left" data-aos-delay="600"> 
                     <span class="alcim text-uppercase fw-bolder">Contexte</span>
                     <div class="box-shadow-reverse">
@@ -132,8 +132,77 @@
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="row justify-content-end py-4 mt-2">
+            <section class="fonctionnalites container">
+                <div class="mt-5 pt-5" data-aos="zoom-in-down" data-aos-delay="900">
+                    <span class="px-2 alcim text-uppercase fw-bolder">Fonctionnalités</span>
+                </div>
+                <div class="container carousel swiper swiper-container d-flex justify-content-center mt-2" data-aos="zoom-in-down" data-aos-delay="1000">
+                    <div class="slider-wrapper text-white pb-5 px-1 ">
+                        <ul class="outil-liste swiper-wrapper list-unstyled">
+                            <li class="Meteo-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-5 ">Page d'accueil </h4>
+                                        <img class="card-img Meteo-image mx-auto mt-5" src="assets/images/meteo/page_accueil.webp" alt="Page d'accueil">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="Meteo-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-5">Résultat après recherche</h4>
+                                        <img class="card-img Meteo-image mx-auto mt-5" src="assets/images/meteo/résultat_recherche.webp" alt="Résultat après recherche">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="Meteo-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-5">Statistiques météo</h4>
+                                        <img class="card-img Meteo-image mx-auto mt-5" src="assets/images/meteo/statistique.webp" alt="Statistiques météo">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="Meteo-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5 mb-3">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-5">Graphiques météo</h4>
+                                        <img class="card-img Meteo-image mx-auto mt-5" src="assets/images/meteo/graphique.webp" alt="Graphiques météo">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="Meteo-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-5 ">Carte interactive</h4>
+                                        <img class="card-img Meteo-image mx-auto mt-5" src="assets/images/meteo/carte_interactive.webp" alt="Carte interactive">
+                                    </div>
+                                </div> 
+                            </li>
+                            <li class="Meteo-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h4 class="card-title text-center py-5 ">Tri des prévisions</h4>
+                                        <img class="card-img Meteo-image mx-auto mt-5" src="assets/images/meteo/tri_prevision.webp" alt="Tri des prévisions">
+                                    </div>
+                                </div> 
+                            </li>
+                        </ul>
+
+                        <!-- pour la pagination = a lapozashoz -->
+                        <div class="swiper-pagination pt-2"></div>
+
+                        <!-- les boutons de navigation -->
+                        <div class="swiper-slide-button Meteo swiper-button-prev d-none d-sm-block"></div>
+                        <div class="swiper-slide-button Meteo swiper-button-next d-none d-sm-block"></div>
+                    </div>  
+                </div>
+            </section>
+
+            <section class="presentation container">
+                <div class="row justify-content-end py-4 mt-5">
                     <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="700">
                         <span class="alcim text-uppercase fw-bolder">Besoin</span>
                         <p class="mt-4 mb-1">
@@ -246,73 +315,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <section class="fonctionnalites container">
-                <div class="mt-5" data-aos="zoom-in-down" data-aos-delay="900">
-                    <span class="px-2 alcim text-uppercase fw-bolder">Fonctionnalités</span>
-                </div>
-                <div class="container carousel swiper swiper-container d-flex justify-content-center mt-2" data-aos="zoom-in-down" data-aos-delay="1000">
-                    <div class="slider-wrapper text-white pb-5 px-1 ">
-                        <ul class="outil-liste swiper-wrapper list-unstyled">
-                            <li class="Meteo-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                <div class="outil-item p-1 mt-5">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Page d'accueil </h4>
-                                        <img class="card-img Meteo-image mx-auto mt-5" src="assets/images/meteo/page_accueil.webp" alt="Page d'accueil">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="Meteo-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                <div class="outil-item p-1 mt-5">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5">Résultat après recherche</h4>
-                                        <img class="card-img Meteo-image mx-auto mt-5" src="assets/images/meteo/résultat_recherche.webp" alt="Résultat après recherche">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="Meteo-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                <div class="outil-item p-1 mt-5 mb-3">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5">Statistiques météo</h4>
-                                        <img class="card-img Meteo-image mx-auto mt-5" src="assets/images/meteo/statistique.webp" alt="Statistiques météo">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="Meteo-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                <div class="outil-item p-1 mt-5 mb-3">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5">Graphiques météo</h4>
-                                        <img class="card-img Meteo-image mx-auto mt-5" src="assets/images/meteo/graphique.webp" alt="Graphiques météo">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="Meteo-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                <div class="outil-item p-1 mt-5">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Carte interactive</h4>
-                                        <img class="card-img Meteo-image mx-auto mt-5" src="assets/images/meteo/carte_interactive.webp" alt="Carte interactive">
-                                    </div>
-                                </div> 
-                            </li>
-                            <li class="Meteo-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                <div class="outil-item p-1 mt-5">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Tri des prévisions</h4>
-                                        <img class="card-img Meteo-image mx-auto mt-5" src="assets/images/meteo/tri_prevision.webp" alt="Tri des prévisions">
-                                    </div>
-                                </div> 
-                            </li>
-                        </ul>
-
-                        <!-- pour la pagination = a lapozashoz -->
-                        <div class="swiper-pagination pt-2"></div>
-
-                        <!-- les boutons de navigation -->
-                        <div class="swiper-slide-button Meteo swiper-button-prev d-none d-sm-block"></div>
-                        <div class="swiper-slide-button Meteo swiper-button-next d-none d-sm-block"></div>
-                    </div>  
                 </div>
             </section>
 
@@ -469,7 +471,7 @@
             </section>
 
             <div class="d-flex justify-content-center mt-5 pt-4" data-aos="zoom-in" data-aos-delay="700">
-                <a href="assets/documents/RP_6_Meteo_API_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn" type="button" id="fiche-Meteo-btn">Fiche descriptive</button></a>
+                <a href="assets/documents/RP_7_Meteo_API_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn" type="button" id="fiche-Meteo-btn">Fiche descriptive</button></a>
             </div>
         </main>
 

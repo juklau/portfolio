@@ -50,12 +50,12 @@
                                     <a class="nav-link dropdown-toggle text-white" href="projets.html" role="button" aria-expanded="false"> Projets</a>
                                     <ul class="dropdown-menu border-0 ">
                                         <li><a class="dropdown-item text-white" href="projets.html">Compétences</a></li>
-                                        <li><a class="dropdown-item text-white" href="rp-gestion_contacts.html">Mini-CRM</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-chat.html">ClassCord Client</a></li>
+                                        <li><a class="dropdown-item text-white" href="rp-gestion_contacts.html">Mini-CRM</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-mediastock.html">MediaStock</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-cryptovault.html">CryptoVault</a></li>
-                                        <li><a class="dropdown-item text-white" href="rp-roombooking.html">RoomBooking</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-meteo_api.html">Meteo</a></li>
+                                        <li><a class="dropdown-item text-white" href="rp-roombooking.html">RoomBooking</a></li>
                                         
                                     </ul>
                                 </li>
@@ -96,117 +96,45 @@
             <section class="presentation container">
                 <div class="row mt-5" data-aos="fade-up-left" data-aos-delay="600">
                     <span class="alcim text-uppercase fw-bolder">Contexte</span>
-                    <div class=" py-3 row box-shadow">
-                        <div class="col-md-8 my-3">
-                            <p class="mt-3">
-                                Le projet Mini-CRM a été développé dans le cadre de ma formation en BTS SIO,
-                                option SLAM. Il s'agit d'une application web destinée à la gestion de contacts
-                                professionnels, pensée pour les freelances, indépendants et petites structures.
-                                <br>
-                                Initialement conçue comme une solution mono-utilisateur, l'application a
-                                récemment évolué afin d'intégrer un système d'authentification sécurisé
-                                permettant la gestion de plusieurs clients au sein d'une même application.
-                            </p>
-                            <p>
-                                Chaque utilisateur dispose désormais de son propre espace personnel,
-                                avec des données de contacts strictement isolées. Cette évolution a nécessité
-                                une refonte partielle de la logique applicative, notamment au niveau des appels
-                                API, du filtrage des données et de la gestion des sessions.
-                                <br>
-                                Ce projet met en œuvre une architecture 100 % front-end reposant sur HTML,
-                                CSS et JavaScript, tout en s'appuyant sur des services cloud pour le stockage 
-                                des données et l'hébergement des images.
-                            </p>
+                    <div class=" py-3">
+                        <div class="row">
+                            <div class="col-11 my-3 mx-1 box-shadow-reverse">
+                                <div class="row col-md-12 ">
+                                    <div class="col-md-8 my-3">
+                                        <p class="mt-3">
+                                            Le projet Mini-CRM a été développé dans le cadre de ma formation en BTS SIO,
+                                            option SLAM. Il s'agit d'une application web destinée à la gestion de contacts
+                                            professionnels, pensée pour les freelances, indépendants et petites structures.
+                                            <br>
+                                            Initialement conçue comme une solution mono-utilisateur, l'application a
+                                            récemment évolué afin d'intégrer un système d'authentification sécurisé
+                                            permettant la gestion de plusieurs clients au sein d'une même application.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3 my-auto mx-lg-auto d-none d-md-block">
+                                        <img id="image-crm" src="assets/images/logo CRM2.webp" alt="Logo d'application">
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>
+                                        Chaque utilisateur dispose désormais de son propre espace personnel,
+                                        avec des données de contacts strictement isolées. Cette évolution a nécessité
+                                        une refonte partielle de la logique applicative, notamment au niveau des appels
+                                        API, du filtrage des données et de la gestion des sessions.
+                                        <br>
+                                        Ce projet met en œuvre une architecture 100 % front-end reposant sur HTML,
+                                        CSS et JavaScript, tout en s'appuyant sur des services cloud pour le stockage 
+                                        des données et l'hébergement des images.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-3 my-auto mx-lg-auto d-none d-md-block">
-                            <img id="image-crm" src="assets/images/logo CRM2.webp" alt="Logo d'application">
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-end py-4 mt-2">
-                    <div class="col-md-8 mt-5" data-aos="fade-up-right" data-aos-delay="700">
-                        <span class="alcim text-uppercase fw-bolder">Besoins</span>
-                        <p class=" mt-4 mb-1">
-                            Le besoin exprimé est celui d'un outil simple, intuitif et sécurisé permettant
-                            à plusieurs utilisateurs de gérer indépendamment leurs contacts professionnels.
-                            Chaque client doit pouvoir créer un compte, se connecter et accéder uniquement
-                            à ses propres données.
-                            <br>
-                            Mini-CRM répond à cette problématique en proposant une interface claire et
-                            ergonomique intégrant les fonctionnalités essentielles : ajout, modification,
-                            suppression, recherche multicritère, filtres avancés, classement alphabétique
-                            et gestion des favoris.
-                            <br>
-                            L'objectif est de proposer une solution légère mais évolutive, adaptée à un
-                            contexte multi-clients, sans la complexité d'un CRM industriel.
-                        </p>
-                    </div>
-                </div>
-                <div class="row py-4 mt-2 justify-content-center" >
-                    <div class="col-md-11 mt-5" data-aos="fade-up-left" data-aos-delay="800">
-                        <span class="alcim text-uppercase fw-bolder">Environnement technologique</span>
-                        <p class="mt-4 mb-2">
-                            Le projet s'appuie sur un environnement moderne et modulable, combinant plusieurs outils complémentaires :
-                        </p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
-                            <li><span class="mini-crm">◈ HTML5 / CSS3 / JavaScript</span> - Langages de base pour la structure, le style et la logique applicative.</li>
-                            <li><span class="mini-crm">◈ Bootstrap</span> - mise en page responsive et design adaptatif.</li>
-                            <li><span class="mini-crm">◈ API Airtable</span> - gestion et stockage distant des données de contact.</li>
-                            <li><span class="mini-crm">◈ API Cloudinary</span> - hébergement et gestion des images de profil.</li>
-                            <li><span class="mini-crm">◈ Postman</span> - test et validation des requêtes HTTP (GET, POST, PATCH, DELETE).</li>
-                            <li><span class="mini-crm">◈ Font Awesome</span> - icônes de navigation et d'interaction.</li>
-                            <li><span class="mini-crm">◈ Assistance IA</span> - aide à la rédaction de documentation et à l'optimisation du code.</li>
-                            <li><span class="mini-crm">◈ GitHub</span> - gestion de version et hébergement du code source.</li>
-                            <li><span class="mini-crm">◈ Système d'authentification</span> - identification des utilisateurs et accès aux données associées.</li>
-                            <li><span class="mini-crm">◈ Gestion des sessions utilisateur</span> - association dynamique des contacts à l'utilisateur connecté.</li>
-                            <li><span class="mini-crm">◈ Assistance IA</span> - aide ponctuelle à la rédaction de documentation et à l'optimisation du code.</li>
-                        </ul>
-                        <p>
-                            Ces technologies m'ont permis de créer une application fonctionnelle, responsive et maintenable, 
-                            en respectant les bonnes pratiques du développement web.
-                        </p>
-                    </div>
-                </div>
-                <div class="row justify-content-end py-4">
-                    <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="900">
-                        <span class="alcim text-uppercase fw-bolder">Réalisation</span>
-                        <p class=" mt-4 mb-2">
-                           L'application est composée de plusieurs pages principales : Accueil, Ajout de contact, Recherche, À propos et Contact.
-                        </p>
-                        <p class="mb-2">
-                            La structure repose sur une architecture JavaScript modulaire, facilitant la maintenance et 
-                            l'évolution du code. Les interactions avec la base Airtable se font via des appels API sécurisés :
-                        </p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
-                            <li>◈ GET pour l'affichage dynamique des contacts;</li>
-                            <li>◈ POST pour l'ajout;</li>
-                            <li>◈ PATCH pour la modification;</li>
-                            <li>◈ DELETE pour la suppression.</li>
-                        </ul>
-                        <p>
-                            Une évolution majeure du projet a consisté à intégrer un système
-                            d'authentification permettant à plusieurs utilisateurs de se connecter
-                            à l'application. Chaque action (affichage, ajout, modification, suppression)
-                            est désormais liée à l'utilisateur authentifié.
-                            <br>
-                            Les requêtes API sont filtrées dynamiquement afin de garantir l'isolation
-                            des données entre les clients, renforçant ainsi la sécurité et la
-                            confidentialité des informations.
-                        </p>
-                        <p class="">
-                            Une partie du projet a également été pensée pour le déploiement local (SISR), avec la possibilité 
-                            d'héberger l'application sur un serveur Apache ou Nginx et de la rendre accessible via une 
-                            adresse IP interne.
-                            <br>
-                            La maquette Figma a servi de référence pour la conception visuelle : elle présente une interface 
-                            cohérente, ergonomique et responsive.
-                        </p>
                     </div>
                 </div>
             </section>
 
             <section class="fonctionnalites container">
-                <div class="mt-5" data-aos="zoom-in-down" data-aos-delay="900">
+                <div class="mt-5 pt-5" data-aos="zoom-in-down" data-aos-delay="900">
                     <span class="px-2 alcim text-uppercase fw-bolder">Fonctionnalités</span>
                 </div>
                 <div class="container carousel swiper swiper-container d-flex justify-content-center mt-2" data-aos="zoom-in-down" data-aos-delay="1000">
@@ -352,6 +280,89 @@
                         <div class="swiper-slide-button CRM swiper-button-prev d-none d-sm-block"></div>
                         <div class="swiper-slide-button CRM swiper-button-next d-none d-sm-block"></div>
                     </div>  
+                </div>
+            </section>
+
+            <section class="presentation container">
+                <div class="row justify-content-end py-4 mt-5">
+                    <div class="col-md-9 mt-5" data-aos="fade-up-right" data-aos-delay="700">
+                        <span class="alcim text-uppercase fw-bolder">Besoins</span>
+                        <p class=" mt-4 mb-1">
+                            Le besoin exprimé est celui d'un outil simple, intuitif et sécurisé permettant
+                            à plusieurs utilisateurs de gérer indépendamment leurs contacts professionnels.
+                            Chaque client doit pouvoir créer un compte, se connecter et accéder uniquement
+                            à ses propres données.
+                            <br>
+                            Mini-CRM répond à cette problématique en proposant une interface claire et
+                            ergonomique intégrant les fonctionnalités essentielles : ajout, modification,
+                            suppression, recherche multicritère, filtres avancés, classement alphabétique
+                            et gestion des favoris.
+                            <br>
+                            L'objectif est de proposer une solution légère mais évolutive, adaptée à un
+                            contexte multi-clients, sans la complexité d'un CRM industriel.
+                        </p>
+                    </div>
+                </div>
+                <div class="row py-4 mt-2 justify-content-center" >
+                    <div class="col-md-11 mt-5" data-aos="fade-up-left" data-aos-delay="800">
+                        <span class="alcim text-uppercase fw-bolder">Environnement technologique</span>
+                        <p class="mt-4 mb-2">
+                            Le projet s'appuie sur un environnement moderne et modulable, combinant plusieurs outils complémentaires :
+                        </p>
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                            <li><span class="mini-crm">◈ HTML5 / CSS3 / JavaScript</span> - Langages de base pour la structure, le style et la logique applicative.</li>
+                            <li><span class="mini-crm">◈ Bootstrap</span> - mise en page responsive et design adaptatif.</li>
+                            <li><span class="mini-crm">◈ API Airtable</span> - gestion et stockage distant des données de contact.</li>
+                            <li><span class="mini-crm">◈ API Cloudinary</span> - hébergement et gestion des images de profil.</li>
+                            <li><span class="mini-crm">◈ Postman</span> - test et validation des requêtes HTTP (GET, POST, PATCH, DELETE).</li>
+                            <li><span class="mini-crm">◈ Font Awesome</span> - icônes de navigation et d'interaction.</li>
+                            <li><span class="mini-crm">◈ Assistance IA</span> - aide à la rédaction de documentation et à l'optimisation du code.</li>
+                            <li><span class="mini-crm">◈ GitHub</span> - gestion de version et hébergement du code source.</li>
+                            <li><span class="mini-crm">◈ Système d'authentification</span> - identification des utilisateurs et accès aux données associées.</li>
+                            <li><span class="mini-crm">◈ Gestion des sessions utilisateur</span> - association dynamique des contacts à l'utilisateur connecté.</li>
+                            <li><span class="mini-crm">◈ Assistance IA</span> - aide ponctuelle à la rédaction de documentation et à l'optimisation du code.</li>
+                        </ul>
+                        <p>
+                            Ces technologies m'ont permis de créer une application fonctionnelle, responsive et maintenable, 
+                            en respectant les bonnes pratiques du développement web.
+                        </p>
+                    </div>
+                </div>
+                <div class="row justify-content-end py-4">
+                    <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="900">
+                        <span class="alcim text-uppercase fw-bolder">Réalisation</span>
+                        <p class=" mt-4 mb-2">
+                           L'application est composée de plusieurs pages principales : Accueil, Ajout de contact, Recherche, À propos et Contact.
+                        </p>
+                        <p class="mb-2">
+                            La structure repose sur une architecture JavaScript modulaire, facilitant la maintenance et 
+                            l'évolution du code. Les interactions avec la base Airtable se font via des appels API sécurisés :
+                        </p>
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                            <li>◈ GET pour l'affichage dynamique des contacts;</li>
+                            <li>◈ POST pour l'ajout;</li>
+                            <li>◈ PATCH pour la modification;</li>
+                            <li>◈ DELETE pour la suppression.</li>
+                        </ul>
+                        <p>
+                            Une évolution majeure du projet a consisté à intégrer un système
+                            d'authentification permettant à plusieurs utilisateurs de se connecter
+                            à l'application. Chaque action (affichage, ajout, modification, suppression)
+                            est désormais liée à l'utilisateur authentifié.
+                            <br>
+                            Les requêtes API sont filtrées dynamiquement afin de garantir l'isolation
+                            des données entre les clients, renforçant ainsi la sécurité et la
+                            confidentialité des informations.
+                        </p>
+                        <p class="">
+                            Une partie du projet a également été pensée pour le déploiement local (SISR), avec la possibilité 
+                            d'héberger l'application sur un serveur Apache ou Nginx et de la rendre accessible via une 
+                            adresse IP interne.
+                            <br>
+                            La maquette Figma a servi de référence pour la conception visuelle : elle présente une interface 
+                            cohérente, ergonomique et responsive.
+                        </p>
+                    </div>
                 </div>
             </section>
          
@@ -508,7 +519,7 @@
                 </div>
             </section>
             <div class="d-flex justify-content-center mt-5 pt-4" data-aos="zoom-in" data-aos-delay="700">
-                <a href="assets/documents/RP_1_Mini_CRM_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn" type="button" id="fiche-CRM-btn">Fiche descriptive</button></a>
+                <a href="assets/documents/RP_2_Mini_CRM_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn" type="button" id="fiche-CRM-btn">Fiche descriptive</button></a>
             </div>
 
         </main>

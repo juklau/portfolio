@@ -50,12 +50,12 @@
                                     <a class="nav-link dropdown-toggle text-white" href="projets.html" role="button" aria-expanded="false"> Projets</a>
                                     <ul class="dropdown-menu border-0 ">
                                         <li><a class="dropdown-item text-white" href="projets.html">Compétences</a></li>
-                                        <li><a class="dropdown-item text-white" href="rp-gestion_contacts.html">Mini-CRM</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-chat.html">ClassCord Client</a></li>
+                                        <li><a class="dropdown-item text-white" href="rp-gestion_contacts.html">Mini-CRM</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-mediastock.html">MediaStock</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-cryptovault.html">CryptoVault</a></li>
-                                        <li><a class="dropdown-item text-white" href="rp-roombooking.html">RoomBooking</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-meteo_api.html">Meteo</a></li>
+                                        <li><a class="dropdown-item text-white" href="rp-roombooking.html">RoomBooking</a></li>
                                         
                                     </ul>
                                 </li>
@@ -139,132 +139,10 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="row justify-content-end py-4">
-                    <div class="col-md-12 mt-5" data-aos="fade-up-right" data-aos-delay="700">
-                        <span class="alcim text-uppercase fw-bolder">Besoins</span>
-                       
-                        <p class=" mt-4 mb-1">
-                            Lors de ma prise en main du projet Swantrad, une analyse technique approfondie a permis 
-                            d'identifier plusieurs besoins majeurs. Bien que la plateforme soit déjà en production et 
-                            fonctionnelle pour les utilisateurs, son évolution progressive avait entraîné certaines 
-                            fragilités techniques.
-                        </p>
-                        <p>
-                            Le premier besoin concernait la stabilisation de l'environnement de développement. Le projet 
-                            ne pouvait pas être exécuté correctement en local sans ajustements spécifiques liés 
-                            aux versions de PHP, aux dépendances Composer et aux migrations de base de données. 
-                            Il était donc essentiel de <span class="fw-bolder fst-italic swantrad">mettre en place un environnement fiable, cohérent et reproductible</span> 
-                            afin de travailler dans des conditions professionnelles.
-                        </p>
-                       
-                        <div class="row justify-content-center">
-                            <div class="col-md-8">
-                                <p>
-                                    L'analyse de la qualité du code, réalisée à l'aide de SonarQube, a également mis en 
-                                    évidence une dette technique importante, caractérisée par des duplications de code, des 
-                                    problèmes de maintenabilité et une complexité excessive sur certaines parties critiques. 
-                                    Un besoin clair s'est alors imposé : <span class="fw-bolder fst-italic swantrad">améliorer la lisibilité, la structure et la 
-                                    maintenabilité du code</span>, sans altérer le fonctionnement de l'application en production.
-                                </p>
-                                <p>
-                                    Par ailleurs, la présence de code obsolète ou inutilisé (contrôleurs non appelés, vues 
-                                    Blade non référencées, fichiers CSS superflus) rendait le projet plus lourd et plus 
-                                    difficile à maintenir. Un travail de nettoyage et de rationalisation était nécessaire 
-                                    afin de sécuriser les futures évolutions.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-md-10">
-                                <p>
-                                    Enfin, bien qu'une base de tests automatisés existe déjà, leur couverture restait limitée 
-                                    et leur intégration dans un processus d'intégration continue nécessitait des améliorations. 
-                                    Il était indispensable de <span class="fw-bolder fst-italic swantrad">renforcer la stratégie de tests automatisés</span>. 
-                                    L'objectif était de prévenir les régressions, de sécuriser les modifications et d'inscrire le 
-                                    projet dans une démarche d'amélioration continue.  
-                                </p>
-                            </div>  
-                        </div>
-                        <p>
-                            Ainsi, le besoin global du stage consistait à renforcer la fiabilité, la qualité et la 
-                            pérennité technique d'une application web existante, tout en garantissant sa stabilité 
-                            en production.
-                        </p>
-                     </div>
-                </div>
-
-
-                <div class="row py-4 mt-2 justify-content-center" >
-                    <div class="col-md-11 mt-3" data-aos="fade-up-left" data-aos-delay="800">
-                        <span class="alcim text-uppercase fw-bolder">Environnement technologique</span>
-                        <p class="mt-4 mb-2">
-                            Le stage s'est appuyé sur un environnement web moderne, orienté qualité logicielle, 
-                            architecture structurée et automatisation des validations :
-                        </p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mt-1">
-                            <li><span class="swantrad-liste">◈ Laravel 12 (PHP 8.4)</span> - <span class="fst-italic">Framework MVC pour le développement backend et la structuration de l'application,</span></li>
-                            <li><span class="swantrad-liste">◈ MySQL 8.4 & Eloquent ORM</span> - <span class="fst-italic">Gestion de la base de données relationnelle et interactions sécurisées avec les données,</span></li>
-                            <li><span class="swantrad-liste">◈ Blade</span> - <span class="fst-italic">Moteur de templates pour la génération dynamique des interfaces,</span></li>
-                            <li><span class="swantrad-liste">◈ Tailwind CSS 4</span> - <span class="fst-italic">Framework CSS utilitaire pour la structuration et le design des interfaces,</span></li>
-                            <li><span class="swantrad-liste">◈ Vite 6</span> - <span class="fst-italic">Outil de build et de gestion des assets front-end (CSS / JavaScript),</span></li>
-                            <li><span class="swantrad-liste">◈ Git & GitHub</span> - <span class="fst-italic">Gestion de version, collaboration et suivi des évolutions du code,</span></li>
-                            <li><span class="swantrad-liste">◈ GitHub Actions (CI/CD)</span> - <span class="fst-italic">Pipeline d'intégration continue pour l'exécution automatisée des tests,</span></li>
-                            <li><span class="swantrad-liste">◈ PHPUnit & Laravel Testing</span> - <span class="fst-italic">Mise en place de tests unitaires, d'intégration et de non-régression,</span></li>
-                            <li><span class="swantrad-liste">◈ SonarQube</span> - <span class="fst-italic">Analyse statique du code et mesure de la dette technique,</span></li>
-                            <li><span class="swantrad-liste">◈ Stripe & Yousign (API)</span> - <span class="fst-italic">Intégration de services tiers sécurisés (paiement et signature électronique),</span></li>
-                            <li><span class="swantrad-liste">◈ Mailjet & hCaptcha</span> - <span class="fst-italic">Gestion des emails transactionnels et protection anti-bot,</span></li>
-                            <li><span class="swantrad-liste">◈ Laragon / Node.js / NPM / Composer</span> - <span class="fst-italic">Environnement de développement local et gestion des dépendances.</span></li>
-                        </ul>
-                        <p>
-                            Cet environnement technologique m'a permis de travailler sur une <span>architecture MVC structurée</span>, 
-                            intégrant des pratiques professionnelles telles que l'analyse de qualité, les tests 
-                            automatisés et l'intégration continue, dans un contexte réel de production.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row justify-content-end py-4">
-                    <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="900">
-                        <span class="alcim text-uppercase fw-bolder">Missions réalisées</span>
-                        <p class=" mt-4 mb-2">
-                            Au cours de mon stage chez Swantrad j'ai participé à l'amélioration technique d'une application 
-                            web déjà en production, avec pour objectif principal de renforcer sa qualité, sa 
-                            stabilité et sa maintenabilité.
-                        </p>
-                        <p>
-                            Ma première mission a consisté à <span class="fw-bolder fst-italic swantrad">stabiliser l'environnement de développement local</span> : 
-                            configuration de PHP et des dépendances Composer, import et correction de la base de données, résolution 
-                            de problèmes liés aux migrations et mise en place d'un workflow de développement fonctionnel.
-                        </p>
-                        <div class="row justify-content-end">
-                            <div class="col-md-10">
-                                <p>
-                                     J'ai ensuite mené une <span class="fw-bolder fst-italic swantrad">analyse approfondie de la qualité du code</span> à l'aide de SonarQube, 
-                                     afin d'identifier les duplications, les problèmes de maintenabilité et les zones à risque. Sur cette base, j'ai 
-                                     réalisé des actions de <span class="fw-bolder fst-italic swantrad">maintenance et de refactorisation ciblées</span> : suppression de code obsolète, 
-                                     réduction de duplications, amélioration de la lisibilité et factorisation de certaines logiques, 
-                                     tout en garantissant l'absence de régression fonctionnelle.
-                                </p>
-                            </div>
-                        </div>
-                        <p class="">
-                            Une part importante de mon travail a également porté sur les <span class="fw-bolder fst-italic swantrad">tests automatisés</span> : création, correction 
-                            et enrichissement des tests unitaires et d'intégration existants, configuration d'une base de données dédiée aux tests, puis 
-                            intégration complète dans le pipeline <span>CI/CD (GitHub Actions)</span> pour assurer une validation 
-                            automatique à chaque modification du code.
-                        </p>
-                        <p>
-                            Enfin, j'ai contribué à la <span class="fw-bolder fst-italic swantrad">documentation technique</span> du projet (guides d'exécution des tests, 
-                            documentation CI/CD, traçabilité Git), afin de faciliter la maintenance et la prise en main 
-                            future par d'autres développeurs.
-                        </p>
-                    </div>
-                </div>
             </section>
 
              <section class="fonctionnalites container">
-                <div class="mt-5 text-center" data-aos="zoom-in-down" data-aos-delay="900">
+                <div class="mt-5 py-5" data-aos="zoom-in-down" data-aos-delay="900">
                     <span class="px-2 alcim text-uppercase fw-bolder">Preuves et résultats techniques (avant / après)</span>
                 </div>
                 <div class="container carousel swiper swiper-container d-flex justify-content-center mt-2" data-aos="zoom-in-down" data-aos-delay="1000">
@@ -373,6 +251,129 @@
                         <div class="swiper-slide-button swiper-button-prev d-none d-sm-block"></div>
                         <div class="swiper-slide-button swiper-button-next d-none d-sm-block"></div>
                     </div>  
+                </div>
+            </section>
+
+            <section class="presentation container">
+                <div class="row justify-content-end py-4 mt-4">
+                    <div class="col-md-12 mt-5" data-aos="fade-up-right" data-aos-delay="700">
+                        <span class="alcim text-uppercase fw-bolder">Besoins</span>
+                       
+                        <p class=" mt-4 mb-1">
+                            Lors de ma prise en main du projet Swantrad, une analyse technique approfondie a permis 
+                            d'identifier plusieurs besoins majeurs. Bien que la plateforme soit déjà en production et 
+                            fonctionnelle pour les utilisateurs, son évolution progressive avait entraîné certaines 
+                            fragilités techniques.
+                        </p>
+                        <p>
+                            Le premier besoin concernait la stabilisation de l'environnement de développement. Le projet 
+                            ne pouvait pas être exécuté correctement en local sans ajustements spécifiques liés 
+                            aux versions de PHP, aux dépendances Composer et aux migrations de base de données. 
+                            Il était donc essentiel de <span class="fw-bolder fst-italic swantrad">mettre en place un environnement fiable, cohérent et reproductible</span> 
+                            afin de travailler dans des conditions professionnelles.
+                        </p>
+                       
+                        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <p>
+                                    L'analyse de la qualité du code, réalisée à l'aide de SonarQube, a également mis en 
+                                    évidence une dette technique importante, caractérisée par des duplications de code, des 
+                                    problèmes de maintenabilité et une complexité excessive sur certaines parties critiques. 
+                                    Un besoin clair s'est alors imposé : <span class="fw-bolder fst-italic swantrad">améliorer la lisibilité, la structure et la 
+                                    maintenabilité du code</span>, sans altérer le fonctionnement de l'application en production.
+                                </p>
+                                <p>
+                                    Par ailleurs, la présence de code obsolète ou inutilisé (contrôleurs non appelés, vues 
+                                    Blade non référencées, fichiers CSS superflus) rendait le projet plus lourd et plus 
+                                    difficile à maintenir. Un travail de nettoyage et de rationalisation était nécessaire 
+                                    afin de sécuriser les futures évolutions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <p>
+                                    Enfin, bien qu'une base de tests automatisés existe déjà, leur couverture restait limitée 
+                                    et leur intégration dans un processus d'intégration continue nécessitait des améliorations. 
+                                    Il était indispensable de <span class="fw-bolder fst-italic swantrad">renforcer la stratégie de tests automatisés</span>. 
+                                    L'objectif était de prévenir les régressions, de sécuriser les modifications et d'inscrire le 
+                                    projet dans une démarche d'amélioration continue.  
+                                </p>
+                            </div>  
+                        </div>
+                        <p>
+                            Ainsi, le besoin global du stage consistait à renforcer la fiabilité, la qualité et la 
+                            pérennité technique d'une application web existante, tout en garantissant sa stabilité 
+                            en production.
+                        </p>
+                     </div>
+                </div>
+
+                <div class="row py-4 mt-2 justify-content-center" >
+                    <div class="col-md-11 mt-3" data-aos="fade-up-left" data-aos-delay="800">
+                        <span class="alcim text-uppercase fw-bolder">Environnement technologique</span>
+                        <p class="mt-4 mb-2">
+                            Le stage s'est appuyé sur un environnement web moderne, orienté qualité logicielle, 
+                            architecture structurée et automatisation des validations :
+                        </p>
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mt-1">
+                            <li><span class="swantrad-liste">◈ Laravel 12 (PHP 8.4)</span> - <span class="fst-italic">Framework MVC pour le développement backend et la structuration de l'application,</span></li>
+                            <li><span class="swantrad-liste">◈ MySQL 8.4 & Eloquent ORM</span> - <span class="fst-italic">Gestion de la base de données relationnelle et interactions sécurisées avec les données,</span></li>
+                            <li><span class="swantrad-liste">◈ Blade</span> - <span class="fst-italic">Moteur de templates pour la génération dynamique des interfaces,</span></li>
+                            <li><span class="swantrad-liste">◈ Tailwind CSS 4</span> - <span class="fst-italic">Framework CSS utilitaire pour la structuration et le design des interfaces,</span></li>
+                            <li><span class="swantrad-liste">◈ Vite 6</span> - <span class="fst-italic">Outil de build et de gestion des assets front-end (CSS / JavaScript),</span></li>
+                            <li><span class="swantrad-liste">◈ Git & GitHub</span> - <span class="fst-italic">Gestion de version, collaboration et suivi des évolutions du code,</span></li>
+                            <li><span class="swantrad-liste">◈ GitHub Actions (CI/CD)</span> - <span class="fst-italic">Pipeline d'intégration continue pour l'exécution automatisée des tests,</span></li>
+                            <li><span class="swantrad-liste">◈ PHPUnit & Laravel Testing</span> - <span class="fst-italic">Mise en place de tests unitaires, d'intégration et de non-régression,</span></li>
+                            <li><span class="swantrad-liste">◈ SonarQube</span> - <span class="fst-italic">Analyse statique du code et mesure de la dette technique,</span></li>
+                            <li><span class="swantrad-liste">◈ Stripe & Yousign (API)</span> - <span class="fst-italic">Intégration de services tiers sécurisés (paiement et signature électronique),</span></li>
+                            <li><span class="swantrad-liste">◈ Mailjet & hCaptcha</span> - <span class="fst-italic">Gestion des emails transactionnels et protection anti-bot,</span></li>
+                            <li><span class="swantrad-liste">◈ Laragon / Node.js / NPM / Composer</span> - <span class="fst-italic">Environnement de développement local et gestion des dépendances.</span></li>
+                        </ul>
+                        <p>
+                            Cet environnement technologique m'a permis de travailler sur une <span>architecture MVC structurée</span>, 
+                            intégrant des pratiques professionnelles telles que l'analyse de qualité, les tests 
+                            automatisés et l'intégration continue, dans un contexte réel de production.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-end py-4">
+                    <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="900">
+                        <span class="alcim text-uppercase fw-bolder">Missions réalisées</span>
+                        <p class=" mt-4 mb-2">
+                            Au cours de mon stage chez Swantrad j'ai participé à l'amélioration technique d'une application 
+                            web déjà en production, avec pour objectif principal de renforcer sa qualité, sa 
+                            stabilité et sa maintenabilité.
+                        </p>
+                        <p>
+                            Ma première mission a consisté à <span class="fw-bolder fst-italic swantrad">stabiliser l'environnement de développement local</span> : 
+                            configuration de PHP et des dépendances Composer, import et correction de la base de données, résolution 
+                            de problèmes liés aux migrations et mise en place d'un workflow de développement fonctionnel.
+                        </p>
+                        <div class="row justify-content-end">
+                            <div class="col-md-10">
+                                <p>
+                                     J'ai ensuite mené une <span class="fw-bolder fst-italic swantrad">analyse approfondie de la qualité du code</span> à l'aide de SonarQube, 
+                                     afin d'identifier les duplications, les problèmes de maintenabilité et les zones à risque. Sur cette base, j'ai 
+                                     réalisé des actions de <span class="fw-bolder fst-italic swantrad">maintenance et de refactorisation ciblées</span> : suppression de code obsolète, 
+                                     réduction de duplications, amélioration de la lisibilité et factorisation de certaines logiques, 
+                                     tout en garantissant l'absence de régression fonctionnelle.
+                                </p>
+                            </div>
+                        </div>
+                        <p class="">
+                            Une part importante de mon travail a également porté sur les <span class="fw-bolder fst-italic swantrad">tests automatisés</span> : création, correction 
+                            et enrichissement des tests unitaires et d'intégration existants, configuration d'une base de données dédiée aux tests, puis 
+                            intégration complète dans le pipeline <span>CI/CD (GitHub Actions)</span> pour assurer une validation 
+                            automatique à chaque modification du code.
+                        </p>
+                        <p>
+                            Enfin, j'ai contribué à la <span class="fw-bolder fst-italic swantrad">documentation technique</span> du projet (guides d'exécution des tests, 
+                            documentation CI/CD, traçabilité Git), afin de faciliter la maintenance et la prise en main 
+                            future par d'autres développeurs.
+                        </p>
+                    </div>
                 </div>
             </section>
 
@@ -614,8 +615,26 @@
                         </ul>
                     </div>
             </section>
-            <div class="d-flex justify-content-center mt-5 pt-4" data-aos="zoom-in" data-aos-delay="700">
-                <a href="assets/documents/RP_6_Swantrad_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn" type="button" id="fiche-swantrad-btn">Fiche descriptive</button></a>
+           
+            <div class="row py-4 justify-content-center">
+                <div class="col-12 d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
+
+                    <div data-aos="zoom-in" data-aos-delay="700">
+                        <a href="assets/documents/RP_6_Swantrad_JUHASZ.pdf" target="_blank">
+                            <button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn my-3">
+                                Fiche descriptive
+                            </button>
+                        </a>
+                    </div>
+
+                    <div data-aos="zoom-in" data-aos-delay="700">
+                        <a href="assets/documents/rapport_stage_swantrad.pdf" target="_blank">
+                            <button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn">
+                                Rapport de stage
+                            </button>
+                        </a>
+                    </div>
+                </div>
             </div>
         </main>
 
