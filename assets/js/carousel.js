@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const pageActuelle = window.location.pathname.includes("rp-gestion_contacts.html") || 
                         window.location.pathname.includes("rp-chat.html") || 
+                        window.location.pathname.includes("projets.html") || 
                         window.location.pathname.includes("rp-mediastock.html") ||
                         window.location.pathname.includes("rp-mediastock.html") ||
                         window.location.pathname.includes("rp-cryptovault.html") ||
@@ -29,13 +30,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const breakpointsConfig = {
         0: {
-            slidesPerView: 1
+            slidesPerView: 1,
+            spaceBetween: 20,
         },
         900: {
-            slidesPerView: 2
+            slidesPerView: 2,
+            spaceBetween: 80,
         },
         1200: {
-            slidesPerView: pageActuelle ? 2 : 3
+            slidesPerView: 2,
+            spaceBetween: 80,
         }
     };
 
@@ -53,20 +57,23 @@ document.addEventListener("DOMContentLoaded", () => {
     
         loop: true,
         spaceBetween: 15,
+        passiveListeners: true,
+        preventClicks: false,
+        preventClicksPropagation: false,
     
         // Pagination bullets
         //pagination = tourner la page
         pagination: {
-        el: '.slider-wrapper .swiper-pagination',
-        clickable: true,
-        //afin d'avoir quelques puces visible "dynamiquement"
-        dynamicBullets: true,
+            el: '.slider-wrapper .swiper-pagination',
+            clickable: true,
+            //afin d'avoir quelques puces visible "dynamiquement"
+            dynamicBullets: true,
         },
     
         // Navigation arrows
         navigation: {
-        nextEl: '.slider-wrapper .swiper-button-next',
-        prevEl: '.slider-wrapper .swiper-button-prev',
+            nextEl: '.slider-wrapper .swiper-button-next',
+            prevEl: '.slider-wrapper .swiper-button-prev',
         },
 
         

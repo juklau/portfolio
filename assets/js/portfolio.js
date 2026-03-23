@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function(){
     // si un page "stage" est active => dans le menu "formation.html" sera active
     if(window.location.href.includes("stage")){
         navLinks.forEach(link => {
-            if(link.href.includes("formation.html")){
+            if(link.href.includes("stages.html")){
                 link.classList.add("active")
             }
         })
@@ -213,21 +213,29 @@ AOS.init({
 
     // désactiver l'effet sur mobil
     disable: function() {
-    return window.innerWidth < 576;
-  }
+        return window.innerWidth < 576;
+    }
 });
 
 /* ======================================================================================== */
 /*                          ZOOM Image en plein d'écran
 /* ======================================================================================== */
 
-
-// j'ai enlevé le ".Chat-image"
-document.querySelectorAll(".CRM-image, .linkstream-image, .MediaStock-image, .swantrad-image, .cryptovault-image, .cryptovault-image-web, .cryptovault-image-web, .Meteo-image, .RoomBooking-image").forEach(img => {
+document.querySelectorAll(".Chat-image, #user-list, .CRM-image, .linkstream-image, .MediaStock-image, .swantrad-image, .cryptovault-image, .cryptovault-image-web, .cryptovault-image-web2, .Meteo-image, .RoomBooking-image").forEach(img => {
   img.addEventListener("click", function () {
+
+    //désactiver le zoom x < sm
+    if(window.innerWidth < 576) return;
+
+    //désactivation le scroll-top
+    let scrollTopBtn = document.getElementById("scroll-top");
+    scrollTopBtn.classList.remove("active");
 
     // Supprimer l'overlay existant s'il y en a un
     document.querySelector(".zoom-overlay")?.remove();
+
+    //bloquer le scroll du body
+    document.body.style.overflow = "hidden"
 
     // Créer l'overlay
     const overlay = document.createElement("div");
@@ -235,6 +243,11 @@ document.querySelectorAll(".CRM-image, .linkstream-image, .MediaStock-image, .sw
 
     // Cloner l'image
     const zoomedImg = img.cloneNode(true);
+
+    zoomedImg.removeAttribute("style");
+    zoomedImg.removeAttribute("id");
+    // zoomedImg.classList.remove("img-fluid", "rounded-3", "d-block", "mx-auto");
+
     zoomedImg.classList.add("zoomed");
 
     // Ajouter l'image dans l'overlay
@@ -246,6 +259,30 @@ document.querySelectorAll(".CRM-image, .linkstream-image, .MediaStock-image, .sw
     // Ajoute le comportement de fermeture
     overlay.addEventListener("click", function () {
         overlay.remove();
+
+         // rétablir le scroll
+        document.body.style.overflow = "";
+
+        // réactiver le bouton scroll-top si on est assez scrollé
+        if (window.scrollY > 200) {
+            scrollTopBtn.classList.add("active");
+        }
+    });
+
+     //Fermeture aussi avec la touche Echap
+    document.addEventListener("keydown", function closeOnEsc(e) {
+        if (e.key === "Escape") {
+            overlay.remove();
+            document.body.style.overflow = "";
+
+
+            // réactiver le bouton scroll-top si on est assez scrollé
+            if (window.scrollY > 200) {
+                scrollTopBtn.classList.add("active");
+            }
+
+            document.removeEventListener("keydown", closeOnEsc);
+        }
     });
   });
 });

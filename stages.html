@@ -9,12 +9,14 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
+        <!-- AOS CSS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" href="style.css">
     </head> 
-    <body class="overflow-x-hidden">
-       <header id="header" class="border-bottom border-secondary">
+    <body class="overflow-x-hidden bg-dark">
+        <header id="header" class="border-bottom border-secondary">
             <nav class="navbar navbar-expand-md bg-dark p-4" data-bs-theme="dark">
                 <div class="container d-flex justify-content-between">
                     <a class="navbar-brand" href="#">Klaudia Juhasz</a>
@@ -30,7 +32,7 @@
                         </div>
 
                         <div class="offcanvas-body navbarmenu" >
-                           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
                                     <a class="nav-link text-white" aria-current="page" href="index.html">Accueil</a>
                                 </li>
@@ -77,62 +79,81 @@
             </nav>
         </header>
 
-        <main id="main-plan-site" class="pt-5 pb-3">
-            <section class="main-content container py-3 my-3">
-                <div class="container-fluid contenu image-container position-relative">
-                    <div class="fejlec py-4 d-flex flex-column justify-content-end">
-                        <h1 class="py-5">Plan du site</h1>
-                        <h2 class="my-lg-5">Vous vous êtes perdu ? Ne vous inquitez pas!</h2>
-                        <h3 class="fw-bold pt-3">
-                            Voici les principales pages de mon site pour vous aider à retrouver votre cible:
-                        </h3>
-                    </div>
-                    
-                    <img class="img-fluid m-auto mt-2 pt-1 mb-4" id="cible-a-trouver" src="assets/images/plan-du_site.webp" alt="cible à trouver" title="Source: https://fr.123rf.com/">
-                    <!-- <span class="image-source tir text-black bg-body-secondary rounded-2 p-1">Source: https://fr.123rf.com/</span> -->
-                    
-                    <div class="pages-liste ms-5 fw-bolder ">
-                        <ul class="list-unstyled ms-3">
-                            <li>◈ <a class="text-black fst-italic" href="index.html"> Accueil</a></li>
-                            <li>◈ <a class="text-black fst-italic" href="stages.html">Stages</a>
-                                <ul class="list-unstyled ms-4">
-                                    <li>◈ <a class="text-black fst-italic" href="stage1.html">LinkStream (stage 2025)</a></li>
-                                    <li>◈ <a class="text-black fst-italic" href="stage2.html">Swantrad (stage 2026)</a></li>
-                                </ul>
-                            </li>
-                            <li>◈ <a class="text-black fst-italic" href="projets.html">Projets</a>
-                                <ul class="list-unstyled ms-4">
-                                    <li>◈ <a class="text-black fst-italic" href="projets.html">Compétences</a></li>
-                                    <li>◈ <a class="text-black fst-italic" href="rp-chat.html">ClassCord Client</a></li>
-                                    <li>◈ <a class="text-black fst-italic" href="rp-gestion_contacts.html">Mini-CRM</a></li>
-                                    <li>◈ <a class="text-black fst-italic" href="rp-mediastock.html">MediaStock</a></li>
-                                    <li>◈ <a class="text-black fst-italic" href="rp-cryptovault.html">CryptoVault</a></li>
-                                    <li>◈ <a class="text-black fst-italic" href="rp-meteo_api.html">Meteo</a></li>
-                                    <li>◈ <a class="text-black fst-italic" href="rp-roombooking.html">RoomBooking</a></li>
-                                </ul>
-                            </li>
-                            <li>◈<a class="text-black fst-italic" href="veille.html">La veille</a>
-                                <ul class="list-unstyled ms-4">
-                                    <li>◈ <a class="text-black fst-italic" href="veille-sourds.html">IA & surdité</a></li>
-                                    <li>◈ <a class="text-black fst-italic" href="veille-aveugle.html">IA & vision</a></li>
-                                    <li>◈ <a class="text-black fst-italic" href="page-error.html">Cybermenace</a></li>
-                                </ul>
-                            </li>
-                            <li>◈ <a class="text-black fst-italic" href="synthese.html">Synthèse</a></li>
-                            <li>◈ <a class="text-black fst-italic" href="CV.html">CV</a></li>
-                            <li>◈ <a class="text-black" href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>  
+        <main class="bg-dark py-5">
+
+            <div class="container py-5">
+                <h1 class="display-5 text-white text-center py-5 mt-5">Stages</h1>
+            </div>
+
+           <section class="container pt-5 text-white" data-aos="fade-up-left" data-aos-delay="700">
+                <div class="container-fluid pb-1 mb-4 box-shadow-reverse">
+                    <p>
+                        Au cours de ma formation en BTS SIO, j'ai eu l'opportunité de réaliser deux stages en entreprise, 
+                        me permettant de mettre en pratique mes compétences techniques et de découvrir le fonctionnement 
+                        du monde professionnel. Ces expériences m'ont permis de travailler sur des projets concrets, 
+                        de développer mon autonomie et de renforcer mes compétences en développement.
+                    </p>
+                </div>
             </section>
+
+            <!-- Mes stages -->
+             <section class="container section mt-5 pt-4" data-aos="fade-up-left" data-aos-delay="800">
+                <!-- <span class="alcim text-uppercase fw-bolder my-5">Expériences professionnelles au cours de ma formation</span> -->
+                <div class="container-fluid">
+                    <div class="container">
+                        <div class="row d-md-flex justify-content-around pt-5">
+                            <!-- stage de 1ière année -->
+                            <div class="col-10 col-md-4 mb-3" data-aos="zoom-in-left" data-aos-delay="800">
+                                <div class="card stage-details bg-dark text-white">
+                                    <div class="card-body flex-column justify-content-center text-center ">
+                                        <h5 class="card-title pt-3 pb-2">Stage de première année</h5>
+                                        <div class="image-container position-relative d-inline-block">
+                                            <img class="card-img rounded-5 mx-auto mt-4 mb-3 img-fluid" id="ops-imperium" src="assets/images/linkstream/OPS_IMPERIUM.webp" alt="OPS Imperium">
+                                            <span class="image-source text-black bg-body-secondary rounded-2 p-1">https://www.linkedin.com/in/victor-langlois-/</span>
+                                        </div>
+                                        <p class="card-text pt-4 pb-2"><strong>OPS IMPERIUM</strong><br>Nice</p>
+                                        <p class="card-text py-2">Juillet - Août 2025</p>
+                                        <!-- <p class="card-text py-2 fst-italic">Afin de pouvoir valider ma première année</p> -->
+                                        <a href="stage1.html" class="btn btn-outline-secondary border border-2 rounded mt-3 mb-3 portfolio-btn" id="stage1-btn">En savoir plus</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- stage de 2ieme année -->
+                            <div class="col-10 col-md-4 mb-3 " data-aos="zoom-in-right" data-aos-delay="800">
+                                <div class="card stage-details bg-dark text-white ">
+                                    <div class="card-body flex-column justify-content-center text-center ">
+                                        <h5 class="card-title pt-3 pb-2">Stage de deuxième année</h5>
+                                        <div class="image-container position-relative d-inline-block">
+                                            <img class="card-img rounded-5 mx-auto my-4 img-fluid" id="swantrad" src="assets/images/swantrad/swantrad.webp" alt="Swantrad">
+                                            <span class="image-source text-black bg-body-secondary rounded-2 p-1">https://www.swantrad.com/</span>
+                                        </div>
+                                        <p class="card-text pt-4 pb-2"><strong>Swantrad</strong><br>Sophia-Antipolis</p>
+                                        <p class="card-text pt-2 mb-5">Janvier - Février 2026</p>
+                                        <!-- <p class="card-text py-4 fst-italic">Toujours en exploration...</p> -->
+                                        <a href="stage2.html" class="btn btn-outline-secondary border border-2 rounded mb-3 portfolio-btn" id="stage2-btn">En savoir plus</a>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>                   
+                    </div>
+                </div>
+            </section> 
         </main>
+
+        <!-- script de AOS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <!-- scripts -->
+        <script src="assets/js/portfolio.js"></script>
 
         <!-- script de Bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+
     </body>
 
     <!-- Footer -->
-    <footer class="footer container-fluid text-center text-white bg-dark p-0" >
+    <footer class="footer container-fluid text-center text-white bg-dark p-0 pt-5" >
         <div class="container-fluid border-top border-secondary">
              <section class="pt-3">
 

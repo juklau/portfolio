@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" href="style.css">
     </head>   
-    <body class="overflow-x-hidden fs-5 overflow-x-hidden bg-dark">
+    <body class="overflow-x-hidden bg-dark">
         <header id="header" class="border-bottom border-secondary">
             <nav class="navbar navbar-expand-md bg-dark p-4" data-bs-theme="dark">
                 <div class="container d-flex justify-content-between">
@@ -35,12 +35,12 @@
                         </div>
 
                         <div class="offcanvas-body navbarmenu" >
-                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
                                     <a class="nav-link text-white" aria-current="page" href="index.html">Accueil</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle text-white" href="formation.html" role="button" aria-expanded="false">Formation</a>
+                                    <a class="nav-link dropdown-toggle text-white" href="stages.html" role="button" aria-expanded="false">Stages</a>
                                     <ul class="dropdown-menu border-0 ">
                                         <li><a class="dropdown-item text-white" href="stage1.html">LinkStream (stage 2025)</a></li>
                                         <li><a class="dropdown-item text-white" href="stage2.html">Swantrad (stage 2026)</a></li>
@@ -56,7 +56,6 @@
                                         <li><a class="dropdown-item text-white" href="rp-cryptovault.html">CryptoVault</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-meteo_api.html">Meteo</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-roombooking.html">RoomBooking</a></li>
-                                        
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -67,12 +66,11 @@
                                         <li><a class="dropdown-item text-white" href="page-error.html">Cybermenace</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle text-white" href="GPI.html" role="button" aria-expanded="false"> GPI </a>
-                                    <ul class="dropdown-menu border-0">
-                                        <li><a class="dropdown-item text-white" href="GPI.html">GLPI</a></li>
-                                        <li><a class="dropdown-item text-white" href="GPI.html#OCS-Inventory">OCS Inventory</a></li>
-                                    </ul>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="synthese.html" role="button" aria-expanded="false">Synthèse</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="CV.html" role="button" aria-expanded="false">CV</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-white" href="contact.html">Contact</a>
@@ -85,13 +83,13 @@
         </header>
         <main class="bg-dark py-5 text-white">
             <div class="container text-center py-5 mb-5">
-                <h1 class="display-1 text-white pt-5 pb-3 my-5">ClassCord Client</h1>
-                <h3 class="pb-5">Application de Chat en Java</h3>
+                <h1 class="text-white pt-5 pb-3 my-5">ClassCord Client</h1>
+                <h5 class="pb-5">Application de Chat en Java</h5>
             </div>
             <section class="presentation container">
                 <div class="row mx-auto mt-5" data-aos="fade-up-left" data-aos-delay="600">
                     <span class="alcim text-uppercase fw-bolder">Contexte</span> 
-                    <div class=" pt-2 pb-4 row">
+                    <div class=" pt-2 pb-2 row">
                         <div class="col-md-10 mb-3 box-shadow">
                             <p class="mt-1">
                                 Dans le cadre de la semaine intensive SLAM du BTS SIO, j'ai développé ClassCord 
@@ -115,17 +113,18 @@
                 </div>
             </section>
 
-            <section class="fonctionnalites container mt-4 py-4">
+            <section class="fonctionnalites container py-4">
                 <div class="mt-5" data-aos="zoom-in-down" data-aos-delay="900">
                     <span class="px-2 alcim text-uppercase fw-bolder">Fonctionnalités</span>
                 </div>
                 <div class="container carousel swiper swiper-container d-flex justify-content-center mt-2" data-aos="zoom-in-down" data-aos-delay="1000">
                     <div class="slider-wrapper text-white px-1 ">
-                        <ul class="outil-liste swiper-wrapper list-unstyled mb-2 pb-2">
+                        <ul class="outil-liste swiper-wrapper list-unstyled mb-4 pb-2">
+                            
                             <li class="Chat-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto bg-dark text-white">
-                                        <h4 class="card-title text-center pt-5">Connexion au serveur</h4>
+                                        <h5 class="card-title text-center pt-2">Connexion au serveur</h5>
                                         <br>
                                         <img class="card-img Chat-image m-auto" src="assets/images/app_chat/ConnectToServeur.webp" alt="Connexion au serveur">
                                     </div>
@@ -134,7 +133,7 @@
                             <li class="Chat-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto bg-dark text-white">
-                                        <h4 class="card-title text-center pt-5">Authentification</h4>
+                                        <h5 class="card-title text-center pt-2">Authentification</h5>
                                         <br>
                                         <img class="card-img Chat-image m-auto" src="assets/images/app_chat/LoginUI.webp" alt="authentification">
                                     </div>
@@ -143,7 +142,7 @@
                             <li class="Chat-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto bg-dark text-white">
-                                        <h4 class="card-title text-center pt-5">Connexion en mode invité</h4>
+                                        <h5 class="card-title text-center pt-2">Connexion en mode invité</h5>
                                         <br>
                                         <img class="card-img Chat-image m-auto" src="assets/images/app_chat/GuestUI.webp" alt="authentification">
                                     </div>
@@ -152,7 +151,7 @@
                             <li class="Chat-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto bg-dark text-white">
-                                        <h4 class="card-title text-center pt-5">Envoi et réception des messages globaux et privés</h4>
+                                        <h5 class="card-title text-center pt-2">Envoi et réception des messages globaux et privés</h5>
                                         <img class="card-img Chat-image m-auto" src="assets/images/app_chat/Gestion des messages.webp" alt="Gestion des messages">
                                     </div>
                                 </div> 
@@ -160,15 +159,15 @@
                             <li class="Chat-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto bg-dark text-white">
-                                        <h4 class="card-title text-center pt-5">Liste dynamique des utilisateurs connectés</h4>
-                                        <img class="card-img Chat-image m-auto" id="user-list" src="assets/images/app_chat/liste d'utilisateur.webp" alt="Liste des utilisateurs">
+                                        <h5 class="card-title text-center pt-2">Liste dynamique des utilisateurs connectés</h5>
+                                        <img class="card-img Chat-image m-auto" id="user-list"  src="assets/images/app_chat/listeUtilisateur.webp" alt="Liste des utilisateurs">
                                     </div>
                                 </div> 
                             </li>
                             <li class="Chat-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto bg-dark text-white">
-                                        <h4 class="card-title text-center pt-5">Gestion des status utilisateurs</h4>
+                                        <h5 class="card-title text-center pt-2">Gestion des status utilisateurs</h5>
                                         <br>
                                         <!-- <p>(en ligne, absent, invisible, indisponible)</p> -->
                                         <img class="card-img Chat-image m-auto" src="assets/images/app_chat/Gestion des status.webp" alt="Gestion des status">
@@ -178,7 +177,7 @@
                             <li class="Chat-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto bg-dark text-white">
-                                        <h4 class="card-title text-center pt-5">Interface Swing ergonomique</h4>
+                                        <h5 class="card-title text-center pt-2">Interface Swing ergonomique</h5>
                                         <br>
                                         <!-- <p>Couleurs par utilisateur, icônes de statut, interface finale soignée</p> -->
                                          <img class="card-img Chat-image m-auto" src="assets/images/app_chat/Interface Swing final.webp" alt="Interface">
@@ -188,7 +187,7 @@
                         </ul>
 
                         <!-- pour la pagination = a lapozashoz -->
-                        <div class="swiper-pagination pt-2"></div>
+                        <div class="swiper-pagination pt-4"></div>
 
                         <!-- les boutons de navigation -->
                         <div class="swiper-slide-button Chat swiper-button-prev d-none d-sm-block"></div>
@@ -197,14 +196,14 @@
                 </div>
             </section>
 
-            <section class="presentation container mt-5">
+            <section class="presentation container">
                 <div class=" row justify-content-end py-4 ">
-                    <div class="col-md-9 mt-5" data-aos="fade-up-right" data-aos-delay="700">
+                    <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="700">
                         <span class="alcim text-uppercase fw-bolder">Besoins</span>
-                        <p class=" my-4">
+                        <p class="mt-4 mb-0">
                             L'application devait répondre aux besoins suivants :
                         </p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mt-4">
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5">
                             <li>◈ Connexion à un serveur distant via IP et port</li>
                             <li>◈ Choix du mode d'accès : invité ou authentifié (login/mot de passe)</li>
                             <li>◈ Communication en temps réel avec les autres utilisateurs</li>
@@ -216,52 +215,52 @@
                     </div>
                 </div>
                 <div class="row py-4 justify-content-center" >
-                    <div class="col-md-11 mt-3" data-aos="fade-up-left" data-aos-delay="800">
+                    <div class="col-md-11 mt-1" data-aos="fade-up-left" data-aos-delay="800">
                         <span class="alcim text-uppercase fw-bolder">Environnement technologique</span>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mt-4">
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 mt-4">
                             <li><span class="Chat">◈ Langage :</span> Java 11+</li>
-                            <span class="fst-italic fs-5 ms-4">
+                            <span class="fst-italic ms-4">
                                 Utilisé pour développer l'ensemble de l'application grâce à sa robustesse, 
                                 sa portabilité et sa prise en charge de la programmation orientée objet.
                             </span>
                             <li><span class="Chat">◈ IDE :</span> Visual Studio Code et IntelliJ IDEA</li>
-                            <span class="fst-italic fs-5 ms-4">
+                            <span class="fst-italic ms-4">
                                 Visual Studio Code a été utilisé pour une configuration rapide et légère, tandis qu'IntelliJ 
                                 IDEA a facilité le débogage, la navigation dans le code et la gestion avancée du projet.
                             </span>
                             <li><span class="Chat">◈ Gestionnaire de dépendances :</span> Maven</li>
-                            <span class="fst-italic fs-5 ms-4">
+                            <span class="fst-italic ms-4">
                                 Employé pour automatiser la gestion des bibliothèques externes, structurer le projet 
                                 et simplifier le processus de compilation.
                             </span>
                             <li><span class="Chat">◈ Bibliothèque externe :</span> org.json</li> 
-                            <span class="fst-italic fs-5 ms-4">
+                            <span class="fst-italic ms-4">
                                 Intégrée pour créer, envoyer et lire les messages au format JSON entre le client et le serveur via les sockets TCP.
                             </span>
                             <li><span class="Chat">◈ Interface graphique :</span> Java Swing</li>
-                            <span class="fst-italic fs-5 ms-4">
+                            <span class="fst-italic ms-4">
                                 Utilisée pour concevoir une interface utilisateur interactive, fluide et personnalisée, 
                                 avec des composants comme les zones de texte, boutons et listes.
                             </span>
                             <li><span class="Chat">◈ Architecture :</span> Modèle MVC</li>
-                            <span class="fst-italic fs-5 ms-4">
+                            <span class="fst-italic ms-4">
                                 Adoptée pour séparer clairement la logique métier, l'interface utilisateur et le contrôle des 
                                 interactions, ce qui améliore la lisibilité et la maintenabilité du code.
                             </span>
                             <li><span class="Chat">◈ Gestion de version :</span> Git/GitHub</li>
-                            <span class="fst-italic fs-5 ms-4">
+                            <span class="fst-italic ms-4">
                                 Git a permis de suivre l'évolution du projet avec des commits réguliers, et 
                                 GitHub a servi de plateforme de partage et de documentation du code.
                             </span>
                         </ul>
                     </div>
                 </div>
-                <div class="row justify-content-end py-4 ">
-                    <div class="col-md-10 mt-3" data-aos="fade-up-right" data-aos-delay="900">
+                <div class="row justify-content-end py-4">
+                    <div class="col-md-10 mt-1" data-aos="fade-up-right" data-aos-delay="900">
                         <span class="alcim text-uppercase fw-bolder">Réalisation</span>
-                        <p class="my-4">
+                        <p class="mb-4 mt-2">
                             Le développement s'est déroulé sur cinq journées intensives :
-                            <ul class="list-unstyled lh-lg">
+                            <ul class="list-unstyled">
                                 <li><strong class="text-decoration-underline jours fst-italic">
                                     Jour 1 :</strong> Initialisation du projet Maven, création des classes User et Message, structuration en packages MVC.
                                 </li>
@@ -287,8 +286,8 @@
             </section>
 
             <section class="container">
-                <div class=" row pt-4 mt-5 text-white" >
-                    <div class="col-md-10 mt-5 justify-content-end" data-aos="fade-up-left" data-aos-delay="700">
+                <div class=" row text-white" >
+                    <div class="col-md-10 mt-3 justify-content-end" data-aos="fade-up-left" data-aos-delay="700">
                         <span class="alcim text-uppercase fw-bolder">Bilan</span>
                         <p class="mt-4">
                             Ce projet m'a permis de renforcer mes compétences en <strong class="fst-italic">Java</strong>, en particulier dans 
@@ -305,13 +304,13 @@
                     <div class=" row justify-content-center">
                         <div class="col-md-10" data-aos="fade-up-left" data-aos-delay="700">
                             <!-- px-2 -->
-                            <p class="">
+                            <p class="mb-0">
                                 J'ai également appris à gérer les échanges réseau en temps réel entre plusieurs clients, tout en assurant une bonne 
                                 distinction entre les messages globaux et privés. 
                                 Chaque étape du développement a été soigneusement documentée, que ce soit dans le README, 
                                 les commentaires du code ou les captures d'écran illustrant les interfaces.
                             </p>
-                            <p class="">
+                            <p>
                                 Au final, cette réalisation m'a offert une expérience complète, mêlant conception, développement, tests et documentation.
                                 Il reste à tester l'application en conditions réelles, avec plusieurs clients connectés simultanément à un serveur 
                                 opérationnel, pour valider pleinement sa robustesse et son interopérabilité.
@@ -320,10 +319,10 @@
                     </div>
                 </div>
                 
-                <div class=" mt-4 py-4 row justify-content-end">
+                <div class="mt-4 py-4 row justify-content-end">
                     <div class="col-md-10" data-aos="fade-up-right" data-aos-delay="800">
                         <span class="alcim text-uppercase fw-bolder">Productions associées</span>
-                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5 mt-4">
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 mt-4">
                             <li class="lien-intern">◈ Le code source de l'application disponible sur GitHub <a class="text-white" href="https://github.com/juklau/classcord-client2.git" target="_blank"><strong class="fw-medium fst-italic">en cliquant sur ce lien</strong></a>.</li>
                             <li class="lien-intern">◈ Une documentation technique détaillée <a class="text-white" href="https://github.com/juklau/classcord-client2/blob/main/README.md" target="_blank"><strong class="fw-medium fst-italic">(README.md)</strong></a> disponible sur GitHub.</li>                    
                             <li>◈ Des commentaires intégrés dans le code pour faciliter la compréhension.</li>
@@ -333,10 +332,10 @@
                 </div>
             </section>
             <section class="container">
-                <div class="mt-4 py-4  row">
+                <div class="py-4 row">
                     <div class="col-md-10" data-aos="fade-up-right" data-aos-delay="900">
                         <span class="alcim text-uppercase fw-bolder">Perspectives</span>
-                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5 mt-4">
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 mt-4">
                             <li>◈ Ajouter des notifications sonores et visuelles pour les nouveaux messages.</li>
                             <li>◈ Développer une version JavaFX plus moderne et réactive.</li>                
                             <li>◈ Étendre la compatibilité multi-clients pour une utilisation à plus grande échelle.</li>
@@ -346,8 +345,8 @@
                     </div>
                 </div>
             </section>
-            <section class="container mt-5">
-                <div class="container-fluid mt-4 py-4 px-3">
+            <section class="container">
+                <div class="container-fluid mt-2 py-4 px-3">
                     <span class="alcim text-uppercase fw-bolder">Compétences</span>
                 </div>
                 <div class="container-fluid box-shadow-left">
@@ -478,9 +477,8 @@
                 </div>
             </section>
             <div class="d-flex justify-content-center mt-5 pt-4" data-aos="zoom-in" data-aos-delay="700">
-                <a href="assets/documents/RP_1_Tchat_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn" type="button" id="fiche-Chat-btn">Fiche descriptive</button></a>
+                <a href="assets/documents/RP_1_Tchat_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary border border-2 rounded portfolio-btn" type="button" id="fiche-Chat-btn">Fiche descriptive</button></a>
             </div>
-
         </main>
 
         <!-- script de AOS -->
@@ -498,64 +496,69 @@
    <!-- Footer -->
     <footer class="footer container-fluid text-center text-white bg-dark p-0 pt-5" >
         <div class="container-fluid border-top border-secondary">
-            <section class="pt-3">
+             <section class="pt-3">
 
                 <!-- Première row -->
-                <div class="row g-0 pt-5 col-12 justify-content-center">
+                <div class="row g-0 pt-3 col-12 justify-content-center">
                     <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
                         <div class="col-12 col-md-auto pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="index.html" class="text-white text-decoration-none fs-5">Accueil</a>
+                                <a href="index.html" class="text-white text-decoration-none">Accueil</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="formation.html" class="text-white text-decoration-none fs-5">Formation</a>
+                                <a href="stages.html" class="text-white text-decoration-none">Stages</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class=" font-weight-bold mx-2">
-                                <a href="projets.html" class="text-white text-decoration-none fs-5">Projets</a>
+                                <a href="projets.html" class="text-white text-decoration-none">Projets</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class=" font-weight-bold mx-2">
-                                <a href="veille.html" class="text-white text-decoration-none fs-5">La veille</a>
+                                <a href="veille.html" class="text-white text-decoration-none">La veille</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="GPI.html" class="text-white text-decoration-none fs-5">GPI</a>
+                                <a href="synthese.html" class="text-white text-decoration-none">Synthèse</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="CV.html" class="text-white text-decoration-none">CV</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class=" font-weight-bold mx-2">
-                                <a href="contact.html" class="text-white text-decoration-none fs-5">Contact</a>
+                                <a href="contact.html" class="text-white text-decoration-none">Contact</a>
                             </h6>
                         </div>
                     </div>
                 </div>
 
                 <!-- Deuxième row -->
-                <div class="row g-0 py-4 col-12 justify-content-center">
+                <div class="row g-0 py-3 col-12 justify-content-center">
                      <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
                         <div class="col-12 col-md-auto pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="mentions-légals.html" class="text-white text-decoration-none fs-5">Mentions légales</a>
+                                <a href="mentions-légals.html" class="text-white text-decoration-none">Mentions légales</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="plan-du-site.html" class="text-white text-decoration-none fs-5">Plan du site</a>
+                                <a href="plan-du-site.html" class="text-white text-decoration-none">Plan du site</a>
                             </h6>
                         </div>
                     </div>
                 </div>
             </section>
         
-            <hr class="my-3" />
+            <hr class="my-2"/>
 
-            <section class="py-4">
+            <section class="py-3">
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-8">
                         <p><strong>Designed by Klaudia Juhasz</strong></p>
@@ -563,13 +566,13 @@
                 </div>
             </section>
         
-            <section class="container-fluid text-center pb-5">
+            <section class="container-fluid text-center pb-3">
                 <a href="https://www.linkedin.com/in/klaudia-juhasz-a165002bb/" class="text-white me-4" target="_blank" title="Lien vers mon profil LinkedIn"><i class="fab fa-linkedin fa-2xl"></i></a>
                 <a href="https://www.figma.com/design/QMpU6uu0tGXpdInYixZ798/Mon_portfolio?node-id=1-2&p=f&t=4kfGd9vv8Z0PAOW0-0" class="text-white me-4" target="_blank" title="Lien vers mon compte Figma"><img src="assets/images/figma-logo.webp" class="rounded-circle" id="figma-logo" alt="logo Figma"></a>
                 <a href="https://github.com/juklau" class="text-white me-4" target="_blank" title="Lien vers mon GitHub"><i class="fab fa-github fa-2xl"></i></a>
             </section>
         </div>
-        <div class="text-center py-5 bg-black" > © 2026 Copyright</div>
+        <div class="text-center py-3 bg-black"> © 2026 Copyright</div>
 
         <!-- Scroll Top -->
         <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

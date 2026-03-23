@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" href="style.css">
     </head> 
-    <body class="fs-5 overflow-x-hidden bg-dark">
+    <body class="overflow-x-hidden bg-dark">
         <header id="header" class="border-bottom border-secondary">
             <nav class="navbar navbar-expand-md bg-dark p-4" data-bs-theme="dark">
                 <div class="container d-flex justify-content-between">
@@ -87,60 +87,68 @@
         <main class="bg-dark py-5 text-white">
 
             <div class="container text-center py-5 mb-5">
-                <h1 class="display-1 text-white pt-5 pb-3 my-5">RoomBooking</h1>
-                <h3 class="pb-5">Réservations des salles</h3>
+                <h1 class="text-white pt-5 pb-3 my-5">RoomBooking</h1>
+                <h5 class="pb-5">Réservations des salles</h5>
+            </div>
+
+            <div class="container d-flex justify-content-start mt-5 pt-4" data-aos="zoom-in" data-aos-delay="700">
+                <!-- <a href="page-error.html"><button class="btn btn-outline-secondary border border-2 rounded portfolio-btn" type="button" id="fiche-cryptovault-btn">Accès au document récapitulatif</button></a> -->
+                <a href="page-error.html"><button class="btn btn-outline-secondary border border-2 rounded portfolio-btn" type="button" id="fiche-cryptovault-btn">Documentation récapitulative</button></a>
             </div>
 
             <section class="presentation container">
                 <div class="row mx-auto mt-5" data-aos="fade-up-left" data-aos-delay="600"> 
                     <span class="alcim text-uppercase fw-bolder">Contexte</span>
                     <div class="py-3 px-3 row ">
-                        <div class="col-md-8 my-3 box-shadow">
-                            <p class="mt-3">
-                                Le projet RoomBooking est une application web de réservation de 
-                                salles développée dans le cadre du BTS SIO option SLAM à MediaSchool IRIS Nice.
-                            </p>
-                            <p>
-                                L'école MediaSchool IRIS Nice, établissement de formation comptant environ 45 collaborateurs 
-                                et intervenants, propose des cursus spécialisés en informatique et en digital. Le 
-                                fonctionnement de l'établissement nécessite une gestion quotidienne de ses 
-                                infrastructures, notamment les salles de cours, les salles de travaux pratiques et 
-                                les espaces de travail collaboratif (box de projet).
-                            </p>
-                            <p>
-                                Dans ce contexte, la gestion des réservations de ces espaces peut devenir complexe 
-                                lorsqu'elle est réalisée de manière informelle ou dispersée, ce qui peut entraîner 
-                                des conflits de réservation, un manque de visibilité sur la disponibilité des salles 
-                                et une charge administrative supplémentaire
-                            </p>
-                            <p>
-                                Le projet RoomBooking a donc pour objectif de concevoir une application web centralisée 
-                                permettant de gérer efficacement la réservation des salles et des espaces de travail. 
-                                L'application permet aux différents acteurs de l'établissement (administrateur, 
-                                coordinateurs et étudiants) de consulter les disponibilités des salles et d'effectuer 
-                                des réservations de manière simple et sécurisée.
-                            </p>
-                            <p>
-                                La solution a été développée à l'aide d'une architecture web moderne reposant sur Symfony, 
-                                PHP, MySQL et Bootstrap, dans un environnement de développement conteneurisé grâce à Docker.
-                            </p>
+                        <div class="row col-md-12 my-3 box-shadow-reverse">
+                                <p class="mt-3">
+                                    Le projet RoomBooking est une application web de réservation de 
+                                    salles développée dans le cadre du BTS SIO option SLAM à MediaSchool IRIS Nice.
+                                </p>
+                                <p>
+                                    L'école MediaSchool IRIS Nice, établissement de formation comptant environ 45 collaborateurs 
+                                    et intervenants, propose des cursus spécialisés en informatique et en digital. Le 
+                                    fonctionnement de l'établissement nécessite une gestion quotidienne de ses 
+                                    infrastructures, notamment les salles de cours, les salles de travaux pratiques et 
+                                    les espaces de travail collaboratif (box de projet).
+                                </p>
+                                <p>
+                                    Dans ce contexte, <span class="fst-italic roombooking">la gestion des réservations de ces espaces</span> peut devenir complexe 
+                                    lorsqu'elle est réalisée de manière informelle ou dispersée, ce qui peut entraîner 
+                                    des conflits de réservation, un manque de visibilité sur la disponibilité des salles 
+                                    et une charge administrative supplémentaire
+                                   </p>
+                             <div class="col-md-10">
+                                <p>
+                                    Le projet RoomBooking a donc pour objectif de concevoir une application web centralisée 
+                                    permettant de gérer efficacement la réservation des salles et des espaces de travail. 
+                                    L'application permet aux différents acteurs de l'établissement (administrateur, 
+                                    coordinateurs et étudiants) de consulter les disponibilités des salles et d'effectuer 
+                                    des réservations de manière simple et sécurisée.
+                                </p>
+                                <p>
+                                    La solution a été développée à l'aide d'une architecture web moderne reposant sur Symfony, 
+                                    PHP, MySQL et Bootstrap, dans un environnement de développement conteneurisé grâce à Docker.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
             <section class="fonctionnalites container">
-                <div class="mt-5 pt-4" data-aos="zoom-in-down" data-aos-delay="900">
+                <div class="mt-5" data-aos="zoom-in-down" data-aos-delay="900">
                     <span class="px-2 alcim text-uppercase fw-bolder">Fonctionnalités</span>
                 </div>
                 <div class="container carousel swiper swiper-container d-flex justify-content-center mt-2" data-aos="zoom-in-down" data-aos-delay="1000">
                     <div class="slider-wrapper text-white pb-5 px-1 ">
                         <ul class="outil-liste swiper-wrapper list-unstyled">
+                            
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Page de connexion</h4>
-                                        <br>
+                                        <h5 class="card-title text-center py-2">Page de connexion</h5>
+                                   
                                         <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/connexion.webp" alt="Page de connexion de l'application">
                                     </div>
                                 </div>
@@ -148,8 +156,8 @@
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5">Création de compte</h4>
-                                        <br>
+                                        <h5 class="card-title text-center py-2">Création de compte</h5>
+                                    
                                         <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/inscription.webp" alt="Création de compte">
                                     </div>
                                 </div>
@@ -157,8 +165,8 @@
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5">Tableau de bord administrateur</h4>
-                                        <br>
+                                        <h5 class="card-title text-center">Tableau de bord administrateur</h5>
+                                     
                                         <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/dashboard_admin.webp" alt="Tableau de bord administrateur">
                                     </div>
                                 </div>
@@ -166,8 +174,8 @@
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5">Tableau de bord coordinateur</h4>
-                                        <br>
+                                        <h5 class="card-title text-center">Tableau de bord coordinateur</h5>
+                         
                                         <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/dashboard_prof.webp" alt="Tableau de bord coordinateur">
                                     </div>
                                 </div>
@@ -175,7 +183,7 @@
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Tableau de bord étudiant</h4>
+                                        <h5 class="card-title text-center mb-2">Tableau de bord étudiant</h5>
                                         <br>
                                         <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/dashboard_etudiant.webp" alt="Tableau de bord étudiant">
                                     </div>
@@ -184,7 +192,7 @@
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Consultation de la liste des salles</h4>
+                                        <h5 class="card-title text-center">Consultation de la liste des salles</h5>
                                         <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/liste_salles.webp" alt="Consultation de la liste des salles">
                                     </div>
                                 </div> 
@@ -192,7 +200,7 @@
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Consultation des salles — interface coordinateur</h4>
+                                        <h5 class="card-title text-center">Consultation des salles — interface coordinateur</h5>
                                         <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/liste_salles_prof.webp" alt="Consultation des salles — interface coordinateur">
                                     </div>
                                 </div> 
@@ -200,7 +208,7 @@
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Consultation des salles — interface étudiant</h4>
+                                        <h5 class="card-title text-center">Consultation des salles — interface étudiant</h5>
                                         <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/liste_salles_etudiant.webp" alt="Consultation des salles — interface étudiant">
                                     </div>
                                 </div> 
@@ -208,7 +216,7 @@
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Détail d'une salle et de ses équipements</h4>
+                                        <h5 class="card-title text-center">Détail d'une salle et de ses équipements</h5>
                                         <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/detail_salle.webp" alt="Détail d'une salle et de ses équipements">
                                     </div>
                                 </div> 
@@ -216,7 +224,7 @@
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Consultation du détail d'une salle — interface étudiant</h4>
+                                        <h5 class="card-title text-center">Consultation du détail d'une salle — interface étudiant</h5>
                                         <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/detail_salle_etudiant.webp" alt="Consultation du détail d'une salle — interface étudiant">
                                     </div>
                                 </div> 
@@ -224,7 +232,7 @@
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Formulaire de réservation d'une salle</h4>
+                                        <h5 class="card-title text-center">Formulaire de réservation d'une salle</h5>
                                         <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/reservation_salle.webp" alt="Formulaire de réservation d'une salle">
                                     </div>
                                 </div> 
@@ -232,7 +240,7 @@
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Gestion des équipements des salles</h4>
+                                        <h5 class="card-title text-center">Gestion des équipements des salles</h5>
                                         <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/gestion_equipements.webp" alt="Gestion des équipements des salles">
                                     </div>
                                 </div> 
@@ -240,7 +248,7 @@
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Gestion des utilisateurs de l'application</h4>
+                                        <h5 class="card-title text-center ">Gestion des utilisateurs de l'application</h5>
                                         <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/liste_user.webp" alt="Gestion des utilisateurs de l'application">
                                     </div>
                                 </div> 
@@ -248,7 +256,7 @@
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Création d'un compte coordinateur</h4>
+                                        <h5 class="card-title text-center">Création d'un compte coordinateur</h5>
                                         <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/create_prof.webp" alt="Création d'un compte coordinateur">
                                     </div>
                                 </div> 
@@ -256,8 +264,8 @@
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Création d'un compte étudiant</h4>
-                                        <br>
+                                        <h5 class="card-title text-center">Création d'un compte étudiant</h5>
+                                 
                                         <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/create_etudiant.webp" alt="Création d'un compte étudiant">
                                     </div>
                                 </div> 
@@ -265,7 +273,7 @@
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Réinitialisation du mot de passe d'un utilisateur</h4>
+                                        <h5 class="card-title text-center">Réinitialisation du mot de passe d'un utilisateur</h5>
                                         <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/reset_password.webp" alt="Réinitialisation du mot de passe d'un utilisateur">
                                     </div>
                                 </div> 
@@ -273,7 +281,7 @@
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Gestion des classes (administrateur)</h4>
+                                        <h5 class="card-title text-center">Gestion des classes (administrateur)</h5>
                                         <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/gestion_classe_2.webp" alt="Gestion des classes (administrateur)">
                                     </div>
                                 </div> 
@@ -281,7 +289,7 @@
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Gestion des classes <br> (interface coordinateur)</h4>
+                                        <h5 class="card-title text-center">Gestion des classes <br> (interface coordinateur)</h5>
                                         <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/gestion_classe_prof.webp" alt="Gestion des classes — interface coordinateur">
                                     </div>
                                 </div> 
@@ -289,12 +297,11 @@
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Détail d'une classe et liste des étudiants</h4>
+                                        <h5 class="card-title text-center">Détail d'une classe et liste des étudiants</h5>
                                         <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/detail_classe_prof.webp" alt="Détail d'une classe et liste des étudiants">
                                     </div>
                                 </div> 
-                            </li>
-                            
+                            </li> 
                         </ul>
 
                         <!-- pour la pagination = a lapozashoz -->
@@ -308,23 +315,23 @@
             </section>
 
             <section class="presentation container">
-                <div class="row justify-content-end py-4 mt-5">
+                <div class="row justify-content-end py-4">
                     <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="700">
                         <span class="alcim text-uppercase fw-bolder">Besoins</span>
                         <p class="mt-4 mb-1">
-                            Le besoin principal du projet est de mettre à disposition de l'établissement une application web 
+                            Le besoin principal du projet est de mettre à disposition de l'établissement <span class="fst-italic roombooking">une application web</span> 
                             permettant de gérer efficacement les réservations de salles et d'espaces de travail
                         </p>
                         <p>
-                            L'application doit permettre aux différents utilisateurs (administrateur, coordinateurs et étudiants) 
+                            L'application doit permettre aux <span class="fst-italic roombooking">différents utilisateurs</span> (administrateur, coordinateurs et étudiants) 
                             de consulter les salles disponibles et d'effectuer des réservations selon une date et un créneau horaire.
                         </p>
                         <div class="row justify-content-center">
                             <div class="col-md-11">
-                                <p class="">
+                                <p class="mb-0 roombooking fst-italic">
                                     La solution doit également intégrer :
                                 </p>
-                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
                                     <li>◈ un système d'authentification permettant aux utilisateurs de se connecter et d'accéder 
                                         aux fonctionnalités correspondant à leur rôle
                                     </li>
@@ -339,22 +346,22 @@
                         <div class="row justify-content-start">
                             <div class="col-md-10">
                                 <p>
-                                    L'objectif est de proposer un outil permettant de centraliser la gestion des réservations, améliorer 
+                                    L'objectif est de proposer un outil permettant de <span class="fst-italic roombooking">centraliser la gestion des réservations</span>, améliorer 
                                     l'organisation des infrastructures et simplifier l'utilisation du service pour les utilisateurs.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row py-4 mt-2 justify-content-center" >
-                    <div class="col-md-11 mt-5" data-aos="fade-up-left" data-aos-delay="800">
+                <div class="row py-4 justify-content-center" >
+                    <div class="col-md-11" data-aos="fade-up-left" data-aos-delay="800">
                         <span class="alcim text-uppercase fw-bolder">Technologies utilisées</span>
                         <p class="mt-4">
                             Le projet RoomBooking repose sur une architecture web moderne permettant de 
                             gérer les réservations de salles et les utilisateurs de manière centralisée.
                         </p>
                         <p class="fst-italic roombooking mt-3 mb-0"><strong>Backend</strong></p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
                             <li>◈ Symfony (PHP) — framework utilisé pour le développement de 
                                 l'application et la structuration de la logique métier.
                             </li>
@@ -368,7 +375,7 @@
                          <div class="row justify-content-center">
                             <div class="col-md-8">
                                 <p class="fst-italic roombooking mt-3 mb-0"><strong>Frontend</strong></p>
-                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
                                     <li>◈ HTML5 / CSS3 — structure et mise en forme de l'interface utilisateur.</li>
                                     <li>◈ Bootstrap — framework CSS utilisé pour concevoir une interface responsive.</li>
                                     <li>◈ Twig — moteur de templates utilisé par Symfony pour générer les pages dynamiques.</li>
@@ -379,7 +386,7 @@
                         <div class="row justify-content-center">
                             <div class="col-md-10">
                                 <p class="fst-italic roombooking mt-3 mb-0"><strong>Environnement de développement</strong></p>
-                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
                                     <li>◈ Docker / Docker Compose — conteneurisation de l'environnement de développement (serveur web, base de données).</li>
                                     <li>◈ Git / GitHub — gestion de versions et hébergement du code source.</li>
                                     <li>◈ Visual Studio Code — environnement de développement utilisé pour la programmation.</li>
@@ -389,31 +396,39 @@
                     </div>
                 </div>
 
+                <div class="lien-intern my-5 row justify-content-center" data-aos="fade-up-right" data-aos-delay="850">
+                    <div class="col-md-8 text-center">
+                        <span class="alcim text-uppercase fw-bolder">Modèle conceptuel des données — RoomBooking</span>
+                        <img src="assets/images/roombooking/MCD_RoomBooking.png"
+                            alt="Modèle conceptuel des données de l'application RoomBooking" class="img-fluid rounded-3 d-block mx-auto mt-4" id="mcd-roombooking">
+                    </div>
+                </div>
+
                 <div class="row justify-content-end py-3">
-                    <div class="col-md-11 mt-5" data-aos="fade-up-right" data-aos-delay="900">
+                    <div class="col-md-11 mt-2" data-aos="fade-up-right" data-aos-delay="900">
                         <span class="alcim text-uppercase fw-bolder">Réalisation</span>
                         <p class="mt-4 mb-2">
                             La réalisation du projet RoomBooking a consisté à développer une application web permettant la gestion 
                             et la réservation de salles au sein de l'établissement MediaSchool IRIS Nice.
                         </p>
                         <p>
-                            L'application repose sur une architecture web utilisant le framework Symfony, permettant de structurer 
+                            L'application repose sur une architecture web utilisant le <span class="fst-italic roombooking">framework Symfony</span>, permettant de structurer 
                             l'application selon une séparation claire entre les différentes couches (contrôleurs, modèles et vues). 
-                            Les données sont stockées dans une base de données MySQL, et l'interface utilisateur est générée à 
-                            l'aide du moteur de templates Twig avec une mise en forme réalisée grâce au framework Bootstrap.
+                            Les données sont stockées dans une base de <span class="fst-italic roombooking">données MySQL</span>, et l'interface utilisateur est générée à 
+                            l'aide du moteur de <span class="fst-italic roombooking">templates Twig</span> avec une mise en forme réalisée grâce au <span class="fst-italic roombooking">framework Bootstrap</span>.
                         </p>
                         <p>
-                            L'application intègre un système d'authentification permettant aux utilisateurs de se connecter et 
-                            d'accéder aux fonctionnalités correspondant à leur rôle. Trois types d'utilisateurs sont définis dans 
-                            l'application : un administrateur unique chargé de l'administration globale, ainsi que des coordinateurs 
-                            et des étudiants, chacun disposant de droits d'accès spécifiques.
+                            L'application intègre un <span class="fst-italic roombooking">système d'authentification</span> permettant aux utilisateurs de se connecter et 
+                            d'accéder aux fonctionnalités correspondant à leur rôle. <span class="fst-italic roombooking">Trois types d'utilisateurs</span> sont définis dans 
+                            l'application : <span class="fst-italic roombooking">un administrateur unique</span> chargé de l'administration globale, ainsi que <span class="fst-italic roombooking">des coordinateurs 
+                            et des étudiants</span>, chacun disposant de droits d'accès spécifiques.
                         </p>
                         <div class="row justify-content-end">
                             <div class="col-md-10">
-                                <p class="mb-2">
+                                <p class="mb-0 roombooking text-decoration-underline">
                                     Les principales fonctionnalités développées sont :
                                 </p>
-                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
                                     <li>◈ la gestion des salles (consultation des salles, visualisation des équipements et de la capacité)</li>
                                     <li>◈ la consultation des disponibilités des salles selon une date et un créneau horaire</li>
                                     <li>◈ la création et l'annulation de réservations de salles</li>
@@ -425,10 +440,10 @@
                         <div class="row justify-content-center">
                             <div class="col-md-10">
                                 <p>
-                                    L'application vérifie automatiquement les conflits de réservation, afin d'éviter les doubles 
-                                    réservations pour une même salle et un même créneau horaire.
+                                    L'application vérifie automatiquement les conflits de réservation, afin d'<span class="fst-italic roombooking">éviter les doubles 
+                                    réservations</span> pour une même salle et un même créneau horaire.
                                     <br>
-                                    Le développement du projet a été réalisé dans un environnement conteneurisé avec Docker, 
+                                    Le développement du projet a été réalisé dans un environnement conteneurisé avec <span class="fst-italic roombooking">Docker</span>, 
                                     facilitant la mise en place de l'environnement de développement et l'exécution de l'application.
                                 </p>
                             </div>
@@ -438,8 +453,8 @@
             </section>
 
             <section class="container">
-                <div class="row mt-5 text-white" >
-                    <div class="col-md-10 mt-5 justify-content-end" data-aos="fade-up-left" data-aos-delay="700">
+                <div class="row text-white" >
+                    <div class="col-md-10 mt-3 justify-content-end" data-aos="fade-up-left" data-aos-delay="700">
                         <span class="alcim text-uppercase fw-bolder">Bilan</span>
                         <p class="mt-4">
                             La réalisation du projet RoomBooking a permis de développer une application web répondant à un 
@@ -454,9 +469,9 @@
                             <!-- px-2 -->
                             <p class="">
                                 Ce projet m'a permis de mettre en pratique plusieurs compétences liées au développement d'applications 
-                                web, notamment la conception d'une application avec le framework Symfony, la gestion des données 
-                                via une base de données relationnelle MySQL et la mise en place d'un système d'authentification 
-                                avec gestion des rôles utilisateurs. La prise en compte des contraintes fonctionnelles, comme la 
+                                web, notamment la <span class="fst-italic roombooking">conception d'une application avec le framework Symfony</span>, la gestion des données 
+                                via une base de données relationnelle MySQL et la <span class="fst-italic roombooking">mise en place d'un système d'authentification 
+                                avec gestion des rôles utilisateurs</span>. La prise en compte des contraintes fonctionnelles, comme la 
                                 gestion des disponibilités et la prévention des conflits de réservation, a également constitué un 
                                 aspect important du développement.
                             </p>
@@ -466,8 +481,8 @@
                     <div class="row justify-content-end">
                         <div class="col-md-10" data-aos="fade-up-left" data-aos-delay="700"> 
                              <p class="mb-0">
-                                Le projet m'a également permis de travailler dans un environnement de développement conteneurisé 
-                                avec Docker, facilitant l'installation et la configuration de l'environnement de travail.
+                                Le projet m'a également permis de travailler dans un <span class="fst-italic roombooking">environnement de développement conteneurisé 
+                                avec Docker</span>, facilitant l'installation et la configuration de l'environnement de travail.
                             </p>
                             <p>
                                 Cette réalisation m'a permis de renforcer mes compétences en développement web, modélisation de 
@@ -488,7 +503,7 @@
                         <p>
                             Les principales productions associées au projet sont :
                         </p>
-                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                        <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5">
                             <li class="roombooking">◈ Cahier des charges : 
                                 <small class="text-white fst-italic">
                                     Document décrivant le contexte du projet, les besoins fonctionnels, les 
@@ -520,10 +535,10 @@
                                     d'amélioration de l'application RoomBooking.
                                 </small>
                             </li>
-                            <li class="roombooking fs-6">◈ Dépôt GitHub du projet : 
-                                <small class="text-white fst-italic" class="lien-extern">
+                            <li class="roombooking">◈ Dépôt GitHub du projet : 
+                                <small class="text-white fst-italic lien-extern">
                                     Le code source est versionné et accessible en ligne afin de faciliter sa consultation 
-                                    <a class="text-white" href="https://github.com/juklau/RoomBooking.git" target="_blank"><strong class="fw-medium fst-italic">en cliquant sur ce lien</strong></a>.</li>
+                                    <a class="text-white" href="https://github.com/juklau/RoomBooking.git" target="_blank"><strong class=" fst-italic fw-medium">en cliquant sur ce lien</strong></a>.
                                 </small>
                             </li>
                             <li class="roombooking">◈ Captures d'écran de l'application : 
@@ -547,7 +562,7 @@
                     </div>
                 </div>
 
-                <div class="mt-4 py-4 row justify-content-end">
+                <div class="py-4 row justify-content-end">
                     <div class="col-md-11" data-aos="fade-up-left" data-aos-delay="900">
                         <span class="alcim text-uppercase fw-bolder">Perspectives</span>
                         <p class="mt-4">
@@ -562,25 +577,25 @@
                                     Certaines évolutions pourraient être mises en place afin d'optimiser l'utilisation de 
                                     l'application et renforcer ses fonctionnalités, comme : 
                                 </p>
-                                <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
-                                    <li>◈ la mise en place d'un système de <strong class="roombooking fst-italic">pagination des listes</strong> (salles, utilisateurs, 
+                                <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5">
+                                    <li>◈ la mise en place d'un système de <span class="roombooking fst-italic">pagination des listes</span> (salles, utilisateurs, 
                                         réservations) afin d'améliorer la lisibilité et les performances lorsque le volume de données augmente
                                     </li>
-                                    <li>◈ l'ajout d'une fonctionnalité de <strong class="roombooking fst-italic">réinitialisation de mot de passe</strong>, permettant 
+                                    <li>◈ l'ajout d'une fonctionnalité de <span class="roombooking fst-italic">réinitialisation de mot de passe</span>, permettant 
                                         aux utilisateurs de récupérer leur accès via l'envoi d'un lien sécurisé par email
                                     </li>
-                                    <li>◈ le <strong class="roombooking fst-italic">renforcement de la validation des mots de passe</strong>, en imposant des règles de complexité 
+                                    <li>◈ le <span class="roombooking fst-italic">renforcement de la validation des mots de passe</span>, en imposant des règles de complexité 
                                         (majuscule, chiffre et caractère spécial) afin d'améliorer la sécurité de l'application
                                     </li>  
-                                    <li>◈ l'intégration d'une vue <strong class="roombooking fst-italic">calendrier interactive</strong> permettant de visualiser les 
+                                    <li>◈ l'intégration d'une vue <span class="roombooking fst-italic">calendrier interactive</span> permettant de visualiser les 
                                         réservations sous forme de planning hebdomadaire ou mensuel
                                     </li>  
-                                    <li>◈ <strong class="roombooking fst-italic">l'envoi de notifications par email</strong> lors de la création ou de l'annulation d'une réservation</li>  
-                                    <li>◈ la possibilité de <strong class="roombooking fst-italic">créer des réservations récurrentes</strong>, par exemple pour réserver 
+                                    <li>◈ <span class="roombooking fst-italic">l'envoi de notifications par email</span> lors de la création ou de l'annulation d'une réservation</li>  
+                                    <li>◈ la possibilité de <span class="roombooking fst-italic">créer des réservations récurrentes</span>, par exemple pour réserver 
                                         une salle chaque semaine pendant une période donnée
                                     </li>  
-                                    <li>◈ la génération d'un <strong class="roombooking fst-italic">export PDF du planning</strong> d'une salle ou d'un utilisateur</li>  
-                                    <li>◈ la mise en place d'un <strong class="roombooking fst-italic">système de sauvegarde automatique</strong> de la base de 
+                                    <li>◈ la génération d'un <span class="roombooking fst-italic">export PDF du planning</span> d'une salle ou d'un utilisateur</li>  
+                                    <li>◈ la mise en place d'un <span class="roombooking fst-italic">système de sauvegarde automatique</span> de la base de 
                                         données afin de sécuriser les données de l'application
                                     </li>  
                                 </ul>
@@ -604,8 +619,8 @@
                 </div>
             </section>
 
-            <section class="container mt-5">
-                <div class="container-fluid mt-4 py-4 px-3">
+            <section class="container">
+                <div class="container-fluid py-4 px-3">
                     <span class="alcim text-uppercase fw-bolder">Compétences</span>
                 </div>
                 <div class="container-fluid box-shadow-left">
@@ -692,7 +707,7 @@
             </section>
 
             <div class="d-flex justify-content-center mt-5 pt-4" data-aos="zoom-in" data-aos-delay="700">
-                <a href="assets/documents/RP_8_RoomBooking_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn" type="button" id="fiche-RoomBooking-btn">Fiche descriptive</button></a>
+                <a href="assets/documents/RP_8_RoomBooking_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary border border-2 rounded portfolio-btn" type="button" id="fiche-RoomBooking-btn">Fiche descriptive</button></a>
             </div>
         </main>
 
@@ -712,64 +727,69 @@
     <!-- Footer -->
     <footer class="footer container-fluid text-center text-white bg-dark p-0 pt-5" >
         <div class="container-fluid border-top border-secondary">
-            <section class="pt-3">
+             <section class="pt-3">
 
                 <!-- Première row -->
-                <div class="row g-0 pt-5 col-12 justify-content-center">
+                <div class="row g-0 pt-3 col-12 justify-content-center">
                     <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
                         <div class="col-12 col-md-auto pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="index.html" class="text-white text-decoration-none fs-5">Accueil</a>
+                                <a href="index.html" class="text-white text-decoration-none">Accueil</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="formation.html" class="text-white text-decoration-none fs-5">Formation</a>
+                                <a href="stages.html" class="text-white text-decoration-none">Stages</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class=" font-weight-bold mx-2">
-                                <a href="projets.html" class="text-white text-decoration-none fs-5">Projets</a>
+                                <a href="projets.html" class="text-white text-decoration-none">Projets</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class=" font-weight-bold mx-2">
-                                <a href="veille.html" class="text-white text-decoration-none fs-5">La veille</a>
+                                <a href="veille.html" class="text-white text-decoration-none">La veille</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="GPI.html" class="text-white text-decoration-none fs-5">GPI</a>
+                                <a href="synthese.html" class="text-white text-decoration-none">Synthèse</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="CV.html" class="text-white text-decoration-none">CV</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class=" font-weight-bold mx-2">
-                                <a href="contact.html" class="text-white text-decoration-none fs-5">Contact</a>
+                                <a href="contact.html" class="text-white text-decoration-none">Contact</a>
                             </h6>
                         </div>
                     </div>
                 </div>
 
                 <!-- Deuxième row -->
-                <div class="row g-0 py-4 col-12 justify-content-center">
+                <div class="row g-0 py-3 col-12 justify-content-center">
                      <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
                         <div class="col-12 col-md-auto pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="mentions-légals.html" class="text-white text-decoration-none fs-5">Mentions légales</a>
+                                <a href="mentions-légals.html" class="text-white text-decoration-none">Mentions légales</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="plan-du-site.html" class="text-white text-decoration-none fs-5">Plan du site</a>
+                                <a href="plan-du-site.html" class="text-white text-decoration-none">Plan du site</a>
                             </h6>
                         </div>
                     </div>
                 </div>
             </section>
         
-            <hr class="my-3" />
+            <hr class="my-2" />
 
-            <section class="py-4">
+            <section class="py-3">
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-8">
                         <p><strong>Designed by Klaudia Juhasz</strong></p>
@@ -777,13 +797,13 @@
                 </div>
             </section>
         
-            <section class="container-fluid text-center pb-5">
+            <section class="container-fluid text-center pb-3">
                 <a href="https://www.linkedin.com/in/klaudia-juhasz-a165002bb/" class="text-white me-4" target="_blank" title="Lien vers mon profil LinkedIn"><i class="fab fa-linkedin fa-2xl"></i></a>
                 <a href="https://www.figma.com/design/QMpU6uu0tGXpdInYixZ798/Mon_portfolio?node-id=1-2&p=f&t=4kfGd9vv8Z0PAOW0-0" class="text-white me-4" target="_blank" title="Lien vers mon compte Figma"><img src="assets/images/figma-logo.webp" class="rounded-circle" id="figma-logo" alt="logo Figma"></a>
                 <a href="https://github.com/juklau" class="text-white me-4" target="_blank" title="Lien vers mon GitHub"><i class="fab fa-github fa-2xl"></i></a>
             </section>
         </div>
-        <div class="text-center py-5 bg-black" > © 2026 Copyright</div>
+        <div class="text-center py-3 bg-black"> © 2026 Copyright</div>
 
         <!-- Scroll Top -->
         <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

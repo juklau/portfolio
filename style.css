@@ -42,7 +42,7 @@
     z-index: 1000000;
 }
 #menu-btn{
-   font-size: 40px;
+   font-size: 30px;
 }
 .navbarmenu ul li > a,
 .nav-link.active{
@@ -81,7 +81,7 @@
     color: var(--nav-hover-color) !important;
 }
 #figma-logo{
-    width: 50px;
+    width: 40px;
     height: auto;
 }
 
@@ -121,11 +121,11 @@
 }
 
 /*********************************************************************************************
-                                    Page accueil (index) et formation
+                                    Page accueil (index) et stages
 **********************************************************************************************/
 #moi{
-    max-width: 40%;
-    max-height: 40%;
+    max-width: 27%;
+    max-height: 27%;
 }
 .introduce{
     color: var(--main-color) !important;
@@ -165,8 +165,8 @@
     display: block;
 }
 .icon-diplom{
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
     margin-top: -50px;
 }
 .lien-intern a:hover,
@@ -177,12 +177,18 @@
 #logo-onisep{
     height: 100px;
 }
+.card.stage-details{
+    width: 350px;
+}
+.card.stage-details:hover{
+    border-color: var(--main-color) !important;
+}
 
 /*********************************************************************************************
                                     Page accueil TIMELINE
 **********************************************************************************************/
 .alcim {
-    font-size: 1.6rem;
+    font-size: 1.0rem;
     /* margin-bottom: 2rem; */
     color: var(--main-color);
 }
@@ -205,7 +211,7 @@
     z-index: 0;
 }
 .timeline-item {
-    width: 90%;
+    width: 85%;
     /* left: 0 !important; */
     text-align: left !important;
     margin-left: 20px;
@@ -228,7 +234,7 @@
 /* Contenu timeline */
 .timeline-content {
     background: var(--black-color);
-    box-shadow: 0 0 10px rgba(149, 131, 60, 0.3);
+    box-shadow: 0 0 5px rgba(149, 131, 60, 0.3);
     padding: 1rem;
     border-radius: 1rem;
 }
@@ -277,11 +283,14 @@
     color: var(--main-color) !important;
 }
 .outil-image{
-    max-width: 50%;
+    max-width: 45%;
     height: auto;
     object-fit: contain;
     border: 3px solid var(--white-opal-color);
     padding: 4px;
+}
+.language-informatique .outil-image{
+    max-width: 55%;
 }
 .veille-image{ /*veille sourde */ 
     max-width: 90%;
@@ -289,7 +298,17 @@
     object-fit: contain;
 }
 #image-veille-gant{  /*veille sourde */ 
-    max-width: 75%
+    max-width: 65%
+}
+#img-just-tap{
+    max-width: 85%;
+}
+#img-ocr-ia{
+    max-width: 90%;
+}
+#img-ceinture,
+#img-siri{
+    max-width: 80%;
 }
 .outil-liste .outil-item, /*projets et mini-crm  */
 .categorie-liste .categorie-item, /*veille sourde  */
@@ -305,20 +324,36 @@
 }
 .categorie-container .card, /*veille sourde */ 
 .IDE-container .card{
-    width: 300px;
-    max-width: 300px;
-    height: 440px;
+    width: 250px;
+    max-width: 250px;
+    /* height: 300px; */
     background-color: transparent;
     border-color: var(--nav-hover-color) !important;
 }
+.IDE-container .card.logiciels{
+    height: 350px;
+}
 .categorie-container .card{ /*veille sourde */ 
-    height: 600px;
+    height: 300px;
 }
 .card.language{
     height: 350px;
 }
+.card.language-informatique{
+    height: 250px;
+    width: 200px;
+}
+.card.stage{
+    height: 330px;
+}
+.stage2{
+    height: 450px;
+}
 .categorie-container .card.language{ /*veille sourde */
-    height: 600px;
+    height: 450px;
+}
+.categorie-container .card.language-aveugle{ /*veille sourde */
+    height: 400px;
 }
 
 /*********************************************************************************************
@@ -326,11 +361,16 @@
 **********************************************************************************************/
 #CRM,
 #mediastock,
-#cryptovault{
+#cryptovault,
+#meteo_7,
+#roombooking-jeu{
     width: 75%;
 }
 #swantrad{
     width: 85%;
+}
+#ops-imperium{
+    width: 60%;
 }
 
 
@@ -338,8 +378,9 @@
                                     Projets-card à flipper
 **********************************************************************************************/
 .flip-card{
-    width: 100%;
-    height: 550px; /* Hauteur fixe pour éviter que le flip dépasse */
+    /* width: 100%; */
+    width: 300px;
+    height: 350px; /* Hauteur fixe pour éviter que le flip dépasse */
     perspective: 1000px;
     cursor: pointer;
 }
@@ -357,7 +398,7 @@
 .flip-card-back{
     /* position: absolute; */
     width: 100%;
-    height: 550px;
+    height: 350px;
     backface-visibility: hidden;
     border-radius: 1rem;
     /* border:1px solid var(--main-color); */
@@ -373,8 +414,12 @@
 /* ********************************************************************************************* */
 .slider-wrapper{
     overflow: hidden;
-    max-width: 1100px;
+    max-width: 600px;
     user-select: none;
+}
+.slider-wrapper.rp-first-year,
+.slider-wrapper.rp-second-year{
+    max-width: 700px;
 }
 
 /******************************* bullets en-sous de la carousel *************************************/
@@ -391,7 +436,7 @@
 /************************************** carousel boutons *******************************************/
 .slider-wrapper .swiper-slide-button{
     color: var(--white-opal-color);
-    height: 30px;
+    height: 20px;
     transition: 0.2s ease;
 }
 .slider-wrapper .swiper-slide-button:hover{
@@ -419,7 +464,7 @@
 .CRM-container .card,
 .MediaStock-container .card,
 .CryptoVault-container .card{
-    width: 340px;
+    width: auto;   /* modositva: elötte 340px */
     max-width: 340px;
     height: 600px;
     background-color: transparent;
@@ -427,7 +472,6 @@
 }
 .Chat-container .card,
 .linkstream-container .card,
-.swantrad-container .card,
 .Meteo-container .card,
 .RoomBooking-container .card{
     height: 550px;
@@ -435,9 +479,34 @@
     width: auto;
     background-color: transparent;
 }
-#user-list{
+.Chat-container .card.language,
+.Meteo-container .card.language{
+    height: 350px;
+}
+.CRM-container .card.language{
     height: 400px;
+}
+.MediaStock-container .card.language{
+    height: 550px;
+}
+.CryptoVault-container .card.language{
+    height: 480px;
+}
+.RoomBooking-container .card.language{
+    height: 400px;
+}
+.swantrad-container .card{
+    height: 500px;
+    max-width: 350px;
     width: auto;
+    background-color: transparent;
+}
+#user-list{
+    height: 80% !important;
+    width: auto !important;
+}
+.Chat-image{
+    width: 90% !important;
 }
 .slider-wrapper .swiper-slide-button.CRM:hover,
 .CRM-container:hover .card-title{
@@ -456,38 +525,44 @@
 .RoomBooking-container:hover .card-title{
     color: var(--main-color) !important;
 }
+.Chat-image,
 .CRM-image,
 .MediaStock-image,
 .linkstream-image,
 .swantrad-image,
 .cryptovault-image,
+#mcd-cryptovault,
+#mcd-roombooking,
 .Meteo-image,
 .RoomBooking-image{ /*image à "zoomer"  */
     max-width: 100%;
     height: auto;
-    cursor: zoom-in;
+    cursor: default;
     transition: transform 0.3s ease;
     display: block;
     z-index: 100;
 }
-
+.CRM-image{
+    max-width: 70%;
+}
 .MediaStock-image{
-    max-width: 60%;
+    max-width: 50%;
 }
 
 .cryptovault-image-web{
     max-width: 65%;
 }
-
 .cryptovault-image-web2{
     max-width: 75%;
 }
-
 .cryptovault-image{
     max-width: 85%;
 }
+#mcd-cryptovault,
+#mcd-roombooking{
+    max-width: 75% !important;
+}
  /*image "zoomé" en plein d'écran */
-
 .zoom-overlay {
     position: fixed;
     top: 0;
@@ -499,18 +574,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 60px;
 }
 
 .zoomed {
     max-width: 90vw;
-    max-height: 90vh;
-    object-fit: contain;
+    max-height: 80vh;
+    object-fit:contain;
     box-shadow: 0 0 10px var(--white-opal-color);
     border-radius: 10px;
-    background-color: var(--dark-gray-color);
+    background-color: var(--dark-gray-color) !important;
     cursor: zoom-out;
+    display: block;
+    position: relative;
     z-index: 1000;
 }
+
 
 .fst-italic.CRM,
 .mini-crm,
@@ -520,7 +599,7 @@
 .fst-italic.MediaStock,             /* page MediaStock */  
 .mediastock,                        /* page MediaStock */
 .LinkStream-liste,                  /* page LinkStream */
-.fst-italic.LinkStream,             /* page LinkStream */
+.fst-italic.LinkStream,             /* page LinkStream */ 
 .meteo,                             /* page Meteo */
 .fst-italic.Meteo,                  /* page Meteo */
 .roombooking,                       /* page RoomBooking */
@@ -541,15 +620,18 @@
                                      Page La veille
 **********************************************************************************************/
 .sujet-veille,
-.veille-title:hover > h2{
+.veille-title:hover > h4{
     color: var(--main-color) !important;
 }
 .img-outils{
-    height: 600px;
+    height: 400px;
     width: auto;
     object-fit: cover;
     min-width: 300px;
     min-height: auto; 
+}
+.outils-veille-mobilfirst{
+    width: 80%;
 }
 #IA-sourds,
 #IA-handicap_physique{
@@ -566,8 +648,8 @@
 
 /******************* pour acceder à des pages des veilles spécifiques ************************/
 .service-card .card-action{
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
     background-color: var(--main-color);
     opacity: 0;
     visibility: hidden;
@@ -646,9 +728,10 @@ table {
 th,
 td {
     border: 1px solid var(--border-table);
-    padding: 8px 10px;
+    /* padding: 8px 10px; */
     text-align: center;
     font-style: italic;
+    font-size: smaller;
 }
 
 .box-shadow-IA{
@@ -703,13 +786,48 @@ html {
 }
 
 
-
-
 /*********************************************************************************************
-                                        Page GPI
+                                        Page CV
 **********************************************************************************************/
-.container-strong-GPI strong{
-     color: var(--main-color) !important;
+
+/* ── Conteneur de l'aperçu CV ── */
+.cv-viewer-wrapper,
+.synthese-viewer-wrapper {
+    width: 75%;
+    width: 100%;
+    max-width: 700px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: #1a1a1a;
+    transition: box-shadow .25s ease;
+}
+.cv-viewer-wrapper:hover,
+.synthese-viewer-wrapper:hover {
+    box-shadow: 0 0 24px rgba(227, 161, 39, 0.2) !important;
+}
+
+/* image du CV*/
+.cv-img,
+.synthese-img {
+    display: block;
+    width: 90%;
+    height: auto;        /* ratio préservé automatiquement */
+    cursor: pointer;
+    transition: opacity .2s ease;
+}
+.cv-img:hover,
+.synthese-img:hover {
+    opacity: 0.92;
+}
+
+/* ── Sur mobile : wrapper pleine largeur ── */
+@media (min-width: 575px) {
+    .cv-viewer-wrapper,
+    .synthese-viewer-wrapper {
+        width: 75%;
+        border-radius: 12px;
+    }
 }
 
 /*********************************************************************************************
@@ -791,7 +909,7 @@ input, textarea {
     max-width: 800px;
 }
 .fejlec h1{
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: 900;
 }
 #error-btn:hover{
@@ -825,7 +943,7 @@ input, textarea {
 **********************************************************************************************/
 
 .container-a a:hover,
-.mentions.h1{
+.mentions.h4{
     color: var(--main-color) !important;
 }
 
@@ -835,8 +953,32 @@ input, textarea {
 } */
 
 /* =============================================================================================== */
-/*                                      📱 RESPONSIVE DESIGN */
+/*                                       RESPONSIVE DESIGN */
 /* ================================================================================================ */
+
+@media (min-width: 576px) {
+    .CRM-image,
+    .MediaStock-image,
+    .linkstream-image,
+    .swantrad-image,
+    .cryptovault-image,
+    .cryptovault-image-web,
+    .cryptovault-image-web2,
+    .Meteo-image,
+    .RoomBooking-image,
+    .Chat-image,
+    #user-list {
+        cursor: zoom-in;
+    }
+
+    .zoomed {
+        cursor: zoom-out !important;
+    }
+
+    .MediaStock-image{
+        max-width: 60%;
+    }
+}
 
 @media screen and (min-width: 768px){
     #error-cible,

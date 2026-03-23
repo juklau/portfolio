@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" href="style.css">
     </head> 
-    <body class="fs-5 overflow-x-hidden bg-dark">
+    <body class="overflow-x-hidden bg-dark">
         <header id="header" class="border-bottom border-secondary">
             <nav class="navbar navbar-expand-md bg-dark p-4" data-bs-theme="dark">
                 <div class="container d-flex justify-content-between">
@@ -40,7 +40,7 @@
                                     <a class="nav-link text-white" aria-current="page" href="index.html">Accueil</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle text-white" href="formation.html" role="button" aria-expanded="false">Formation</a>
+                                    <a class="nav-link dropdown-toggle text-white" href="stages.html" role="button" aria-expanded="false">Stages</a>
                                     <ul class="dropdown-menu border-0 ">
                                         <li><a class="dropdown-item text-white" href="stage1.html">LinkStream (stage 2025)</a></li>
                                         <li><a class="dropdown-item text-white" href="stage2.html">Swantrad (stage 2026)</a></li>
@@ -56,7 +56,6 @@
                                         <li><a class="dropdown-item text-white" href="rp-cryptovault.html">CryptoVault</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-meteo_api.html">Meteo</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-roombooking.html">RoomBooking</a></li>
-                                        
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -67,12 +66,11 @@
                                         <li><a class="dropdown-item text-white" href="page-error.html">Cybermenace</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle text-white" href="GPI.html" role="button" aria-expanded="false"> GPI </a>
-                                    <ul class="dropdown-menu border-0">
-                                        <li><a class="dropdown-item text-white" href="GPI.html">GLPI</a></li>
-                                        <li><a class="dropdown-item text-white" href="GPI.html#OCS-Inventory">OCS Inventory</a></li>
-                                    </ul>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="synthese.html" role="button" aria-expanded="false">Synthèse</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="CV.html" role="button" aria-expanded="false">CV</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-white" href="contact.html">Contact</a>
@@ -87,15 +85,15 @@
         <main class="bg-dark py-5 text-white">
 
             <div class="container text-center py-5 mb-5">
-                <h1 class="display-1 text-white pt-5 pb-3 my-5">MediaStock</h1>
-                <h3 class="pb-5">Application web de gestion de matériel </h3>
+                <h1 class="text-white pt-5 pb-3 my-5">MediaStock</h1>
+                <h5 class="pb-5">Application web de gestion de matériel </h5>
             </div>
 
             <section class="presentation container ">
                 <div class="row mt-5 " data-aos="fade-up-left" data-aos-delay="600"> 
                     <span class="alcim text-uppercase fw-bolder">Contexte</span>
-                    <div class="py-3 px-3 row box-shadow-reverse">
-                        <div class="col-md-8 my-3 ">
+                    <div class="pt-3 px-3 row box-shadow-reverse">
+                        <div class="col-md-8 mt-3 ">
                             <p class="mt-3">
                                 Le projet MédiaStock a été réalisé dans le cadre du BTS SIO, option SLAM, au cours de 
                                 la deuxième année de formation. 
@@ -118,87 +116,89 @@
             </section>
 
             <section class="fonctionnalites container mt-5">
-                <div class="mt-5 py-5" data-aos="zoom-in-down" data-aos-delay="900">
+                <div class="mt-5 pt-2" data-aos="zoom-in-down" data-aos-delay="900">
                     <span class=" alcim text-uppercase fw-bolder">Fonctionnalités</span>
                 </div>
                 <div class="container carousel swiper swiper-container d-flex justify-content-center mt-2" data-aos="zoom-in-down" data-aos-delay="1000">
                     <div class="slider-wrapper text-white pb-5 px-1 ">
-                        <ul class="outil-liste swiper-wrapper list-unstyled mb-5 pb-5">
+                        <ul class="outil-liste swiper-wrapper list-unstyled mb-1">
+
                             <li class="MediaStock-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
-                                <div class="outil-item p-1 mt-5 mb-3">
+                                <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Authentification administrateur</h4>
+                                        <h5 class="card-title text-center py-2 ">Authentification administrateur</h5>
                                         <br>
-                                        <img class="card-img MediaStock-image mx-auto my-2 " src="assets/images/mediastock/authentification.webp" alt="Authentification">
+                                        <img class="card-img MediaStock-image mx-auto my-auto" src="assets/images/mediastock/authentification.webp" alt="Authentification">
                                     </div>
                                 </div>
                             </li>
                             <li class="MediaStock-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
-                                <div class="outil-item p-1 mt-5 mb-3">
+                                <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center pt-5 py-2 ">Authentification administrateur</h4>
+                                        <h5 class="card-title text-center pt-2">Authentification administrateur</h5>
                                         <p class="text-center fst-italic">Message d'erreur en cas d'identification incorrecte</p>
                                         <br>
-                                        <img class="card-img MediaStock-image mx-auto my-2 " src="assets/images/mediastock/message_erreur.webp" alt="Message d'erreur">
+                                        <img class="card-img MediaStock-image mx-auto my-3" src="assets/images/mediastock/message_erreur.webp" alt="Message d'erreur">
                                     </div>
                                 </div>
                             </li>
                             <li class="MediaStock-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
-                                <div class="outil-item p-1 mt-5 mb-3">
+                                <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center pt-5 py-2">Gestion de l'inventaire du matériel (CRUD)</h4>
+                                        <h5 class="card-title text-center pt-2">Gestion de l'inventaire du matériel (CRUD)</h5>
                                         <p class="text-center fst-italic">Liste du matériel</p>
-                                        <img class="card-img MediaStock-image mx-auto my-2 " src="assets/images/mediastock/liste_materiel2.webp" alt="Liste du matériel">
+                                        <img class="card-img MediaStock-image mx-auto my-auto" src="assets/images/mediastock/liste_materiel2.webp" alt="Liste du matériel">
                                     </div>
                                 </div>
                             </li>
                             <li class="MediaStock-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
-                                <div class="outil-item p-1 mt-5 mb-3">
+                                <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center pt-5 py-2 ">Gestion de l'inventaire du matériel (CRUD)</h4>
+                                        <h5 class="card-title text-center pt-2">Gestion de l'inventaire du matériel (CRUD)</h5>
                                         <p class="text-center fst-italic">Formulaire d'ajout de matériel</p>
-                                        <img class="card-img MediaStock-image mx-auto my-2 " src="assets/images/mediastock/ajout-materiel.webp" alt="Formulaire d'ajout de matériel">
+                                        <img class="card-img MediaStock-image mx-auto my-auto" src="assets/images/mediastock/ajout-materiel.webp" alt="Formulaire d'ajout de matériel">
                                     </div>
                                 </div>
                             </li>
                             <li class="MediaStock-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
-                                <div class="outil-item p-1 mt-5 mb-3">
+                                <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5">Fiche détaillée d'un matériel</h4>
-                                        <p class="text-center fst-italic">Modification des informations du matériel</p>
-                                        <img class="card-img MediaStock-image mx-auto my-2 pt-3" src="assets/images/mediastock/fiche-detaille.webp" alt="Fiche détaillée d'un matériel">
+                                        <h5 class="card-title text-center pt-2">Fiche détaillée d'un matériel</h5>
+                                        <p class="text-center fst-italic">Modification des informations</p>
+                                        <!-- <p class="text-center fst-italic">Modification des informations du matériel</p> -->
+                                        <img class="card-img MediaStock-image mx-auto my-auto" src="assets/images/mediastock/fiche-detaille.webp" alt="Fiche détaillée d'un matériel">
                                     </div>
                                 </div> 
                             </li>
                             <li class="MediaStock-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5">Enregistrement d'un prêt</h4>
-                                        <img class="card-img MediaStock-image mx-auto my-2 pt-3" src="assets/images/mediastock/creation-pret.webp" alt="Enregistrement d'un prêt">
+                                        <h5 class="card-title text-center pt-2 pb-5">Enregistrement d'un prêt</h5>
+                                        <img class="card-img MediaStock-image mx-auto my-auto" src="assets/images/mediastock/creation-pret.webp" alt="Enregistrement d'un prêt">
                                     </div>
                                 </div> 
                             </li>
                             <li class="MediaStock-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
-                                <div class="outil-item p-1 mt-5 mb-3">
+                                <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Gestion des prêts</h4>
+                                        <h5 class="card-title text-center py-2 ">Gestion des prêts</h5>
                                         <img class="card-img MediaStock-image mx-auto my-auto" src="assets/images/mediastock/gestion-pret.webp" alt="Gestion des prêts">
                                     </div>
                                 </div> 
                             </li>
                             <li class="MediaStock-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
-                                <div class="outil-item p-1 mt-5 mb-3">
+                                <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Historique d'un prêt</h4>
-                                        <img class="card-img MediaStock-image mx-auto my-2" src="assets/images/mediastock/historique.webp" alt="Historique d'un prêt">
+                                        <h5 class="card-title text-center py-2">Historique d'un prêt</h5>
+                                        <img class="card-img MediaStock-image mx-auto my-auto" src="assets/images/mediastock/historique.webp" alt="Historique d'un prêt">
                                     </div>
                                 </div> 
                             </li>
                             <li class="MediaStock-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
-                                <div class="outil-item p-1 mt-5 mb-3">
+                                <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5">Gestion des retours</h4>
-                                         <img class="card-img MediaStock-image mx-auto my-2" src="assets/images/mediastock/restitution.webp" alt="Gestion des retours">
+                                        <h5 class="card-title text-center py-2">Gestion des retours</h5>
+                                         <img class="card-img MediaStock-image mx-auto my-auto" src="assets/images/mediastock/restitution.webp" alt="Gestion des retours">
                                     </div>
                                 </div> 
                             </li>
@@ -214,7 +214,7 @@
                         </ul>
 
                         <!-- pour la pagination = a lapozashoz -->
-                        <div class="swiper-pagination pt-5"></div>
+                        <div class="swiper-pagination"></div>
 
                         <!-- les boutons de navigation -->
                         <div class="swiper-slide-button MediaStock swiper-button-prev d-none d-sm-block"></div>
@@ -224,15 +224,15 @@
             </section>
 
             <section class="presentation container">
-                <div class="row justify-content-end py-4 mt-5">
-                    <div class="col-md-9 mt-5" data-aos="fade-up-right" data-aos-delay="700">
+                <div class="row justify-content-end py-4">
+                    <div class="col-md-9 mt-4" data-aos="fade-up-right" data-aos-delay="700">
                         <span class="alcim text-uppercase fw-bolder">Besoins</span>
                         <p class=" mt-4 mb-1">
                             L'objectif est de simplifier et automatiser la gestion des prêts 
                             et retours de matériel au sein de l'école.
                         </p>
                         <p class="mb-2">L'application devait permettre à l'équipe administrative de :</p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5">
                             <li>◈ gérer l'inventaire complet du matériel (ajout, suppression, modification, archivage),</li>
                             <li>◈ enregistrer un prêt et une restitution rapidement (sur mobile),</li>
                             <li>◈ identifier chaque matériel par QR code unique,</li>
@@ -247,15 +247,15 @@
                         </p>
                     </div>
                 </div>
-                <div class="row py-4 mt-2 justify-content-center" >
-                    <div class="col-md-11 mt-5" data-aos="fade-up-left" data-aos-delay="800">
+                <div class="row py-4 mt-1 justify-content-center" >
+                    <div class="col-md-11" data-aos="fade-up-left" data-aos-delay="800">
                         <span class="alcim text-uppercase fw-bolder">Environnement technologique</span>
                         <p class="mt-4">
                             Le projet s'appuie sur une architecture trois-tiers (présentation, logique métier, données) et 
                             sur des technologies modernes respectant les standards du web :
                         </p>
                         <p class="fst-italic mediastock mt-3 mb-0"><strong>Backend</strong></p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
                             <li>◈ PHP 8.2 (procédural) - logique métier et gestion des sessions.</li>
                             <li>◈ MySQL 8.0 - base de données relationnelle (tables : item, prêt, emprunteur, administrateur…).</li>
                             <li>◈ PDO (PHP Data Objects) - requêtes SQL préparées et sécurisées.</li>
@@ -265,7 +265,7 @@
                          <div class="row justify-content-center">
                             <div class="col-md-8">
                                 <p class="fst-italic mediastock mt-3 mb-0"><strong>Frontend</strong></p>
-                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
                                     <li>◈ HTML5 / CSS3 / Bootstrap 5 - structure et mise en forme responsive (mobil-first).</li>
                                     <li>◈ JavaScript (ES6) - interactions dynamiques et scan des QR codes.</li>
                                     <li>◈ Flatpickr - gestion intuitive des dates de prêt et de retour.</li>
@@ -275,7 +275,7 @@
                         </div>
                         
                         <p class="fst-italic mediastock mt-3 mb-0"><strong>Outils et environnement</strong></p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
                             <li>◈ Visual Studio Code - environnement de développement.</li>
                             <li>◈ Git / GitHub - gestion de versions et hébergement du code.</li>
                             <li>◈ Figma - conception des maquettes UI/UX.</li>
@@ -288,7 +288,7 @@
                     </div>
                 </div>
                 <div class="row justify-content-end py-4">
-                    <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="900">
+                    <div class="col-md-10" data-aos="fade-up-right" data-aos-delay="900">
                         <span class="alcim text-uppercase fw-bolder">Réalisation</span>
                         <p class="mt-4 mb-2">
                            Le développement de MédiaStock s'est déroulé sur plusieurs semaines, selon une approche itérative et 
@@ -300,7 +300,7 @@
                             <div class="col-md-9">
                                 <p class="fst-italic mediastock mt-3 mb-0"><strong>Structure de l'application</strong></p>
                                 <p class="mb-2">L'application repose sur une architecture PHP procédurale, organisée en dossiers distincts :</p>
-                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
                                     <li>◈ <span class="fst-italic">/public/api/</span> : endpoints pour la gestion du matériel et des prêts (<span class="fst-italic">additem.php, updateitem.php, cloturepret.php</span>).</li>
                                     <li>◈ <span class="fst-italic">/config/</span> : fichiers de configuration et de connexion à la base de données (<span class="fst-italic">database.php</span>).</li>
                                     <li>◈ <span class="fst-italic">/src/ </span> : organisation logique des entités métiers (Item, Pret, Emprunteur, Administrateur, Categorie, Formation).</li>
@@ -312,7 +312,7 @@
                         <div class="row justify-content-center">
                             <div class="col-md-9">
                                 <p class="fst-italic mediastock mt-3 mb-0"><strong>Fonctionnalités principales</strong></p>
-                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
                                     <li>◈ CRUD complet du matériel (ajout, modification, suppression, archivage).</li>
                                     <li>◈ Génération automatique de QR codes lors de l'ajout d'un nouvel item.</li>
                                     <li>◈ Scan via smartphone redirigeant vers la fiche détaillée du matériel.</li>
@@ -337,8 +337,8 @@
             </section>
 
             <section class="container">
-                <div class=" row pt-4 mt-5 text-white" >
-                    <div class="col-md-10 mt-5 justify-content-end" data-aos="fade-up-left" data-aos-delay="700">
+                <div class=" row text-white" >
+                    <div class="col-md-10 mt-3 justify-content-end" data-aos="fade-up-left" data-aos-delay="700">
                         <span class="alcim text-uppercase fw-bolder">Bilan</span>
                         <p class="mt-4">
                             Le projet MediaStock a permis de concevoir une application web mobile-first dédiée à la gestion des 
@@ -381,8 +381,8 @@
                             Les livrables du projet comprennent plusieurs ensembles cohérents :
                         </p>
 
-                        <p class="mt-4 fst-italic mediastock text-decoration-underline">Documentation technique et fonctionnelle</p>
-                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                        <p class="mt-4 fst-italic mediastock text-decoration-underline mb-1">Documentation technique et fonctionnelle</p>
+                        <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5">
                             <li>◈ Cahier des charges complet décrivant les objectifs ainsi que les besoins fonctionnels et techniques.</li>
                             <li>◈ Maquettes Figma des interfaces mobile.</li>
                             <li>◈ Schémas MCD et MLD de la base de données (présentés dans les annexes du cahier des charges, page 18).</li>  
@@ -390,8 +390,8 @@
 
                         <div class="row justify-content-end">
                             <div class="col-md-10">
-                                <p class="mt-4 fst-italic mediastock text-decoration-underline">Code source et environnement</p>
-                                <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                                <p class="mt-4 fst-italic mediastock text-decoration-underline mb-1">Code source et environnement</p>
+                                <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5">
                                     <li>◈ Application développée en PHP/ MySQL/ HTML/ CSS/ JavaScript/ Bootstrap 5.</li>
                                     <li>◈ Déploiement conteneurisé avec Docker Compose (fichiers docker-compose.yml, Dockerfile, .env).</li>
                                     <li>◈ Système d'authentification et gestion des QR codes via bibliothèques PHP et JS.</li>
@@ -403,8 +403,8 @@
 
                         <div class="row justify-content-center">
                             <div class="col-md-10">
-                                <p class="mt-4 fst-italic mediastock text-decoration-underline">Outils de gestion et tests</p>
-                                <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                                <p class="mt-4 fst-italic mediastock text-decoration-underline mb-1">Outils de gestion et tests</p>
+                                <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5">
                                     <li>◈ Diagrammes de Gantt et Kanban (page 20 - 21 du cahier des charges) pour le suivi du développement.</li>
                                     <li>◈ Plan de tests détaillant les scénarios d'authentification, de prêt/restitution et de sécurité 
                                         (page 12 - 13 du cahier des charges).</li>
@@ -417,15 +417,15 @@
             </section>
 
             <section class="container">
-                <div class="mt-4 py-4  row">
+                <div class=" py-4 row">
                     <div class="col-md-12" data-aos="fade-up-left" data-aos-delay="900">
                         <span class="alcim text-uppercase fw-bolder">Perspectives</span>
                         <p class="mt-4">
                             Plusieurs pistes d'amélioration ont été identifiées pour une version ultérieure de l'application :
                         </p>
 
-                        <p class="mt-4 fst-italic mediastock text-decoration-underline">Évolutions fonctionnelles</p>
-                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                        <p class="mt-4 fst-italic mediastock text-decoration-underline mb-1">Évolutions fonctionnelles</p>
+                        <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5">
                             <li>◈ Ajout d'un module statistique pour visualiser le taux d'utilisation du matériel
                                  et la durée moyenne des prêts.
                             </li>
@@ -437,8 +437,8 @@
 
                         <div class="row justify-content-end">
                             <div class="col-md-10">
-                                <p class="mt-4 fst-italic mediastock text-decoration-underline">Améliorations techniques</p>
-                                <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                                <p class="mt-4 fst-italic mediastock text-decoration-underline mb-1">Améliorations techniques</p>
+                                <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5">
                                     <li>◈ Migration progressive vers un framework PHP moderne (Laravel) ou JavaScript 
                                         (React/Node.js) pour une meilleure extensibilité.
                                     </li>
@@ -451,8 +451,8 @@
                         
                         <div class="row justify-content-center">
                             <div class="col-md-10">
-                                <p class="mt-4 fst-italic mediastock text-decoration-underline">Pérennisation du projet</p>
-                                <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                                <p class="mt-4 fst-italic mediastock text-decoration-underline mb-1">Pérennisation du projet</p>
+                                <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5">
                                     <li>◈ Documentation continue et formation des utilisateurs internes.</li>
                                     <li>◈ Automatisation de la sauvegarde et de la supervision (monitoring système, alertes de panne).</li>
                                     <li>◈ Ouverture potentielle du projet en open-source éducatif pour favoriser la 
@@ -470,8 +470,8 @@
                 </div>
             </section>
 
-            <section class="container mt-5">
-                <div class="container-fluid mt-4 py-4 px-3">
+            <section class="container">
+                <div class="container-fluid mt-2 py-4 px-3">
                     <span class="alcim text-uppercase fw-bolder">Compétences</span>
                 </div>
                 <div class="container-fluid box-shadow-left">
@@ -599,7 +599,7 @@
                 </div>
             </section>
             <div class="d-flex justify-content-center mt-5 pt-4" data-aos="zoom-in" data-aos-delay="700">
-                <a href="assets/documents/RP_4_MediaStock_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn" type="button" id="fiche-MediaStock-btn">Fiche descriptive</button></a>
+                <a href="assets/documents/RP_4_MediaStock_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary border border-2 rounded portfolio-btn" type="button" id="fiche-MediaStock-btn">Fiche descriptive</button></a>
             </div>
         </main>
 
@@ -618,64 +618,69 @@
     <!-- Footer -->
     <footer class="footer container-fluid text-center text-white bg-dark p-0 pt-5" >
         <div class="container-fluid border-top border-secondary">
-            <section class="pt-3">
+             <section class="pt-3">
 
                 <!-- Première row -->
-                <div class="row g-0 pt-5 col-12 justify-content-center">
+                <div class="row g-0 pt-3 col-12 justify-content-center">
                     <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
                         <div class="col-12 col-md-auto pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="index.html" class="text-white text-decoration-none fs-5">Accueil</a>
+                                <a href="index.html" class="text-white text-decoration-none">Accueil</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="formation.html" class="text-white text-decoration-none fs-5">Formation</a>
+                                <a href="stages.html" class="text-white text-decoration-none">Stages</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class=" font-weight-bold mx-2">
-                                <a href="projets.html" class="text-white text-decoration-none fs-5">Projets</a>
+                                <a href="projets.html" class="text-white text-decoration-none">Projets</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class=" font-weight-bold mx-2">
-                                <a href="veille.html" class="text-white text-decoration-none fs-5">La veille</a>
+                                <a href="veille.html" class="text-white text-decoration-none">La veille</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="GPI.html" class="text-white text-decoration-none fs-5">GPI</a>
+                                <a href="synthese.html" class="text-white text-decoration-none">Synthèse</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="CV.html" class="text-white text-decoration-none">CV</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class=" font-weight-bold mx-2">
-                                <a href="contact.html" class="text-white text-decoration-none fs-5">Contact</a>
+                                <a href="contact.html" class="text-white text-decoration-none">Contact</a>
                             </h6>
                         </div>
                     </div>
                 </div>
 
                 <!-- Deuxième row -->
-                <div class="row g-0 py-4 col-12 justify-content-center">
+                <div class="row g-0 py-3 col-12 justify-content-center">
                      <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
                         <div class="col-12 col-md-auto pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="mentions-légals.html" class="text-white text-decoration-none fs-5">Mentions légales</a>
+                                <a href="mentions-légals.html" class="text-white text-decoration-none">Mentions légales</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="plan-du-site.html" class="text-white text-decoration-none fs-5">Plan du site</a>
+                                <a href="plan-du-site.html" class="text-white text-decoration-none">Plan du site</a>
                             </h6>
                         </div>
                     </div>
                 </div>
             </section>
         
-            <hr class="my-3" />
+            <hr class="my-2" />
 
-            <section class="py-4">
+            <section class="py-3">
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-8">
                         <p><strong>Designed by Klaudia Juhasz</strong></p>
@@ -683,13 +688,13 @@
                 </div>
             </section>
         
-            <section class="container-fluid text-center pb-5">
+            <section class="container-fluid text-center pb-3">
                 <a href="https://www.linkedin.com/in/klaudia-juhasz-a165002bb/" class="text-white me-4" target="_blank" title="Lien vers mon profil LinkedIn"><i class="fab fa-linkedin fa-2xl"></i></a>
                 <a href="https://www.figma.com/design/QMpU6uu0tGXpdInYixZ798/Mon_portfolio?node-id=1-2&p=f&t=4kfGd9vv8Z0PAOW0-0" class="text-white me-4" target="_blank" title="Lien vers mon compte Figma"><img src="assets/images/figma-logo.webp" class="rounded-circle" id="figma-logo" alt="logo Figma"></a>
                 <a href="https://github.com/juklau" class="text-white me-4" target="_blank" title="Lien vers mon GitHub"><i class="fab fa-github fa-2xl"></i></a>
             </section>
         </div>
-        <div class="text-center py-5 bg-black" > © 2026 Copyright</div>
+        <div class="text-center py-3 bg-black"> © 2026 Copyright</div>
 
         <!-- Scroll Top -->
         <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

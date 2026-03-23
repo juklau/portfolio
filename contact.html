@@ -14,7 +14,7 @@
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head> 
-    <body class="fs-5 overflow-x-hidden bg-dark">
+    <body class="overflow-x-hidden bg-dark">
         <header id="header" class="border-bottom border-secondary">
             <nav class="navbar navbar-expand-md bg-dark p-4" data-bs-theme="dark">
                 <div class="container d-flex justify-content-between">
@@ -36,7 +36,7 @@
                                     <a class="nav-link text-white" aria-current="page" href="index.html">Accueil</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle text-white" href="formation.html" role="button" aria-expanded="false">Formation</a>
+                                    <a class="nav-link dropdown-toggle text-white" href="stages.html" role="button" aria-expanded="false">Stages</a>
                                     <ul class="dropdown-menu border-0 ">
                                         <li><a class="dropdown-item text-white" href="stage1.html">LinkStream (stage 2025)</a></li>
                                         <li><a class="dropdown-item text-white" href="stage2.html">Swantrad (stage 2026)</a></li>
@@ -52,7 +52,6 @@
                                         <li><a class="dropdown-item text-white" href="rp-cryptovault.html">CryptoVault</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-meteo_api.html">Meteo</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-roombooking.html">RoomBooking</a></li>
-                                        
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -63,12 +62,11 @@
                                         <li><a class="dropdown-item text-white" href="page-error.html">Cybermenace</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle text-white" href="GPI.html" role="button" aria-expanded="false"> GPI </a>
-                                    <ul class="dropdown-menu border-0">
-                                        <li><a class="dropdown-item text-white" href="GPI.html">GLPI</a></li>
-                                        <li><a class="dropdown-item text-white" href="GPI.html#OCS-Inventory">OCS Inventory</a></li>
-                                    </ul>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="synthese.html" role="button" aria-expanded="false">Synthèse</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="CV.html" role="button" aria-expanded="false">CV</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-white" href="contact.html">Contact</a>
@@ -80,21 +78,21 @@
             </nav>
         </header>
 
-        <main class="bg-dark fs-5 py-5">
+        <main class="bg-dark py-5">
             <div class="container-fluid py-5">
-                <h1 class="display-1 text-white text-center py-5 my-4">Contact</h1> 
+                <h1 class="text-white text-center py-5 my-4">Contact</h1> 
             </div>
 
             <div class="container text-center text-white " id="remplir">
-                <p class="fst-italic fs-4">Veuillez remplir ce formulaire pour me contacter</p>
+                <p class="fst-italic">Veuillez remplir ce formulaire pour me contacter</p>
             </div>
 
-            <section class="container d-flex justify-content-center align-items-center py-5">
-                <div class="col-lg-8 col-md-10">
+            <section class="container d-flex justify-content-center align-items-center py-3">
+                <div class="col-lg-6 col-md-8">
                     <div class="card box-shadow bg-secondary bg-opacity-10 border-0 rounded-1 p-4">
                         <!-- action="https://formspree.io/f/xaneaygb" method="POST" -->
                         <form id="contact-form" class="text-white ">
-                            <div class="row g-4">
+                            <div class="row g-3">
                                 <div class="row mt-3 d-md-flex justify-content-md-around">
                                     <div class="col-12 col-md-5 mt-4">
                                         <label class="form-label" for="nom">Nom*</label>
@@ -122,26 +120,25 @@
                                     <textarea class="form-control" name="message" id="message" cols="30" rows="10" required></textarea>
                                     <small></small>
                                 </div>
-                                <div class="mt-5">
+                                <div class="mt-3">
                                     <p>* Champ Obligatoire</p>
                                 </div>
-                                 <div id="form-confirmation" class="mb-5 text-center fst-italic hidden fs-4" >
+                                 <div id="form-confirmation" class="mb-5 text-center fst-italic hidden" >
                                     <p> Le formulaire a bien été envoyé.</p>
                                 </div>
                                 <div class="costum-check">
                                     <input class="d-none " type="checkbox" id="egyetertes" name="egyetertes">
                                     <label class="position-relative d-flex align-items-center justify-content-center ms-2 mx-auto" for="egyetertes" id="check-label">J'accepte que mes données servent uniquement à me recontacter.</label>
-                                    <label class="text-white fst-italic fs-6 ms-4 ms-xl-5 ps-xl-5" for="egyetertes"><a class="text-white" href="mentions-légals.html"><span>(Voir Mentions Légales)</span></a></label>
+                                    <label class="text-white fst-italic ms-4 ms-xl-5 ps-xl-5" for="egyetertes"><a class="text-white" href="mentions-légals.html"><span>(Voir Mentions Légales)</span></a></label>
                                 </div>
                                 <div class="col-md-12 d-flex justify-content-center py-3">
-                                    <button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn" id="submit-btn" type="submit" >Envoyer</button>
+                                    <button class="btn btn-outline-secondary border border-2 rounded portfolio-btn" id="submit-btn" type="submit" >Envoyer</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
             </section>
-
         </main>
 
         <!-- scripts -->
@@ -156,64 +153,69 @@
     <!-- Footer -->
     <footer class="footer container-fluid text-center text-white bg-dark p-0 pt-5" >
         <div class="container-fluid border-top border-secondary">
-            <section class="pt-3">
+             <section class="pt-3">
 
                 <!-- Première row -->
-                <div class="row g-0 pt-5 col-12 justify-content-center">
+                <div class="row g-0 pt-3 col-12 justify-content-center">
                     <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
                         <div class="col-12 col-md-auto pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="index.html" class="text-white text-decoration-none fs-5">Accueil</a>
+                                <a href="index.html" class="text-white text-decoration-none">Accueil</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="formation.html" class="text-white text-decoration-none fs-5">Formation</a>
+                                <a href="stages.html" class="text-white text-decoration-none">Stages</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class=" font-weight-bold mx-2">
-                                <a href="projets.html" class="text-white text-decoration-none fs-5">Projets</a>
+                                <a href="projets.html" class="text-white text-decoration-none">Projets</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class=" font-weight-bold mx-2">
-                                <a href="veille.html" class="text-white text-decoration-none fs-5">La veille</a>
+                                <a href="veille.html" class="text-white text-decoration-none">La veille</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="GPI.html" class="text-white text-decoration-none fs-5">GPI</a>
+                                <a href="synthese.html" class="text-white text-decoration-none">Synthèse</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="CV.html" class="text-white text-decoration-none">CV</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class=" font-weight-bold mx-2">
-                                <a href="contact.html" class="text-white text-decoration-none fs-5">Contact</a>
+                                <a href="contact.html" class="text-white text-decoration-none">Contact</a>
                             </h6>
                         </div>
                     </div>
                 </div>
 
                 <!-- Deuxième row -->
-                <div class="row g-0 py-4 col-12 justify-content-center">
+                <div class="row g-0 py-3 col-12 justify-content-center">
                      <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
                         <div class="col-12 col-md-auto pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="mentions-légals.html" class="text-white text-decoration-none fs-5">Mentions légales</a>
+                                <a href="mentions-légals.html" class="text-white text-decoration-none">Mentions légales</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="plan-du-site.html" class="text-white text-decoration-none fs-5">Plan du site</a>
+                                <a href="plan-du-site.html" class="text-white text-decoration-none">Plan du site</a>
                             </h6>
                         </div>
                     </div>
                 </div>
             </section>
         
-            <hr class="my-3" />
+            <hr class="my-2" />
 
-            <section class="py-4">
+            <section class="py-3">
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-8">
                         <p><strong>Designed by Klaudia Juhasz</strong></p>
@@ -221,13 +223,13 @@
                 </div>
             </section>
         
-            <section class="container-fluid text-center pb-5">
+            <section class="container-fluid text-center pb-3">
                 <a href="https://www.linkedin.com/in/klaudia-juhasz-a165002bb/" class="text-white me-4" target="_blank" title="Lien vers mon profil LinkedIn"><i class="fab fa-linkedin fa-2xl"></i></a>
                 <a href="https://www.figma.com/design/QMpU6uu0tGXpdInYixZ798/Mon_portfolio?node-id=1-2&p=f&t=4kfGd9vv8Z0PAOW0-0" class="text-white me-4" target="_blank" title="Lien vers mon compte Figma"><img src="assets/images/figma-logo.webp" class="rounded-circle" id="figma-logo" alt="logo Figma"></a>
                 <a href="https://github.com/juklau" class="text-white me-4" target="_blank" title="Lien vers mon GitHub"><i class="fab fa-github fa-2xl"></i></a>
             </section>
         </div>
-        <div class="text-center py-5 bg-black" > © 2026 Copyright</div>
+        <div class="text-center py-3 bg-black" > © 2026 Copyright</div>
 
         <!-- Scroll Top -->
         <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

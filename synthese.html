@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" href="style.css">
     </head> 
-    <body class="overflow-x-hidden">
+    <body class="overflow-x-hidden bg-dark">
        <header id="header" class="border-bottom border-secondary">
             <nav class="navbar navbar-expand-md bg-dark p-4" data-bs-theme="dark">
                 <div class="container d-flex justify-content-between">
@@ -77,53 +77,26 @@
             </nav>
         </header>
 
-        <main id="main-plan-site" class="pt-5 pb-3">
+       <main class="bg-dark pt-5 pb-3">
             <section class="main-content container py-3 my-3">
-                <div class="container-fluid contenu image-container position-relative">
-                    <div class="fejlec py-4 d-flex flex-column justify-content-end">
-                        <h1 class="py-5">Plan du site</h1>
-                        <h2 class="my-lg-5">Vous vous êtes perdu ? Ne vous inquitez pas!</h2>
-                        <h3 class="fw-bold pt-3">
-                            Voici les principales pages de mon site pour vous aider à retrouver votre cible:
-                        </h3>
-                    </div>
-                    
-                    <img class="img-fluid m-auto mt-2 pt-1 mb-4" id="cible-a-trouver" src="assets/images/plan-du_site.webp" alt="cible à trouver" title="Source: https://fr.123rf.com/">
-                    <!-- <span class="image-source tir text-black bg-body-secondary rounded-2 p-1">Source: https://fr.123rf.com/</span> -->
-                    
-                    <div class="pages-liste ms-5 fw-bolder ">
-                        <ul class="list-unstyled ms-3">
-                            <li>◈ <a class="text-black fst-italic" href="index.html"> Accueil</a></li>
-                            <li>◈ <a class="text-black fst-italic" href="stages.html">Stages</a>
-                                <ul class="list-unstyled ms-4">
-                                    <li>◈ <a class="text-black fst-italic" href="stage1.html">LinkStream (stage 2025)</a></li>
-                                    <li>◈ <a class="text-black fst-italic" href="stage2.html">Swantrad (stage 2026)</a></li>
-                                </ul>
-                            </li>
-                            <li>◈ <a class="text-black fst-italic" href="projets.html">Projets</a>
-                                <ul class="list-unstyled ms-4">
-                                    <li>◈ <a class="text-black fst-italic" href="projets.html">Compétences</a></li>
-                                    <li>◈ <a class="text-black fst-italic" href="rp-chat.html">ClassCord Client</a></li>
-                                    <li>◈ <a class="text-black fst-italic" href="rp-gestion_contacts.html">Mini-CRM</a></li>
-                                    <li>◈ <a class="text-black fst-italic" href="rp-mediastock.html">MediaStock</a></li>
-                                    <li>◈ <a class="text-black fst-italic" href="rp-cryptovault.html">CryptoVault</a></li>
-                                    <li>◈ <a class="text-black fst-italic" href="rp-meteo_api.html">Meteo</a></li>
-                                    <li>◈ <a class="text-black fst-italic" href="rp-roombooking.html">RoomBooking</a></li>
-                                </ul>
-                            </li>
-                            <li>◈<a class="text-black fst-italic" href="veille.html">La veille</a>
-                                <ul class="list-unstyled ms-4">
-                                    <li>◈ <a class="text-black fst-italic" href="veille-sourds.html">IA & surdité</a></li>
-                                    <li>◈ <a class="text-black fst-italic" href="veille-aveugle.html">IA & vision</a></li>
-                                    <li>◈ <a class="text-black fst-italic" href="page-error.html">Cybermenace</a></li>
-                                </ul>
-                            </li>
-                            <li>◈ <a class="text-black fst-italic" href="synthese.html">Synthèse</a></li>
-                            <li>◈ <a class="text-black fst-italic" href="CV.html">CV</a></li>
-                            <li>◈ <a class="text-black" href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>  
+                <div class="container py-5">
+                    <h1 class="display-5 text-white text-center py-5 mt-5">Tableau de Synthèse</h1>
+                </div>
+
+                <div class="container d-flex justify-content-center mb-4" data-aos="zoom-in" data-aos-delay="700">
+                    <a href="assets/documents/Tableau_de_synthèse_JUHASZ.pdf" download="Tableau_de_synthèse_JUHASZ.pdf">
+                        <button class="btn btn-outline-secondary border border-2 rounded portfolio-btn" type="button" id="synthese-btn">
+                            <i class="bi bi-download me-2"></i>Téléchargez le Tableau de Synthèse 
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Aperçu du CV en image -->
+                <div class="container synthese-viewer-wrapper shadow mx-auto mb-5">
+                    <a href="assets/documents/Tableau_de_synthèse_JUHASZ.pdf" download="Tableau_de_synthèse_JUHASZ.pdf" title="Cliquez pour télécharger le Tableau de Synthèse">
+                        <img src="assets/documents/Tableau_de_synthèse_JUHASZ.webp" alt="Aperçu du Tableau de Synthèse" class="synthese-img mx-auto" loading="lazy">
+                    </a>
+                </div>
             </section>
         </main>
 

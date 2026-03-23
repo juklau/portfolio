@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" href="style.css">
     </head>   
-    <body class="overflow-x-hidden fs-5 bg-dark">
+    <body class="overflow-x-hidden bg-dark">
         <header id="header" class="border-bottom border-secondary">
             <nav class="navbar navbar-expand-md bg-dark p-4" data-bs-theme="dark">
                 <div class="container d-flex justify-content-between">
@@ -40,7 +40,7 @@
                                     <a class="nav-link text-white" aria-current="page" href="index.html">Accueil</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle text-white" href="formation.html" role="button" aria-expanded="false">Formation</a>
+                                    <a class="nav-link dropdown-toggle text-white" href="stages.html" role="button" aria-expanded="false">Stages</a>
                                     <ul class="dropdown-menu border-0 ">
                                         <li><a class="dropdown-item text-white" href="stage1.html">LinkStream (stage 2025)</a></li>
                                         <li><a class="dropdown-item text-white" href="stage2.html">Swantrad (stage 2026)</a></li>
@@ -56,7 +56,6 @@
                                         <li><a class="dropdown-item text-white" href="rp-cryptovault.html">CryptoVault</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-meteo_api.html">Meteo</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-roombooking.html">RoomBooking</a></li>
-                                        
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -67,12 +66,11 @@
                                         <li><a class="dropdown-item text-white" href="page-error.html">Cybermenace</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle text-white" href="GPI.html" role="button" aria-expanded="false"> GPI </a>
-                                    <ul class="dropdown-menu border-0">
-                                        <li><a class="dropdown-item text-white" href="GPI.html">GLPI</a></li>
-                                        <li><a class="dropdown-item text-white" href="GPI.html#OCS-Inventory">OCS Inventory</a></li>
-                                    </ul>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="synthese.html" role="button" aria-expanded="false">Synthèse</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="CV.html" role="button" aria-expanded="false">CV</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-white" href="contact.html">Contact</a>
@@ -85,7 +83,7 @@
         </header>
         <main class="bg-dark py-5 text-white">
             <div class="container text-center py-5 mb-5">
-                <h1 class="display-1 text-white pt-5 pb-3 my-5">Stage au sein de l'entreprise OPS IMPERIUM</h1>
+                <h1 class="text-white pt-5 pb-3 my-5">Stage au sein de l'entreprise OPS IMPERIUM</h1>
                 <h3 class="pb-5"> </h3>
             </div>
 
@@ -120,14 +118,13 @@
                 </div>
                 <div class="container carousel swiper swiper-container d-flex justify-content-center mt-2" data-aos="zoom-in-down" data-aos-delay="1000">
                     <div class="slider-wrapper text-white pb-5 px-1 ">
-                        <ul class="fonctionnalites-liste swiper-wrapper list-unstyled mb-5 pb-5">
+                        <ul class="fonctionnalites-liste swiper-wrapper list-unstyled mb-1">
                             <li class="linkstream-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="fonctionnalites-item p-1 mt-5 mb-3">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Authentification sécurisée via Unipile</h4>
-                                        <br>
-                                        <img class="card-img linkstream-image mx-auto my-auto my-2 " src="assets/images/linkstream/auth par assistant unipile.webp" alt="Authentification">
-                                        <small class="legende text-center fs-6 fst-italic mt-3">
+                                    <div class="card stage col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center pt-2 pb-1">Authentification sécurisée via Unipile</h5>
+                                        <img class="card-img linkstream-image mx-auto my-auto" src="assets/images/linkstream/auth par assistant unipile.webp" alt="Authentification">
+                                        <small class="legende text-center fst-italic mt-1">
                                             Connexion directe à LinkedIn grâce à lAPI Unipile, pour une 
                                             authentification fluide et sécurisée des utilisateurs
                                         </small>
@@ -136,10 +133,10 @@
                             </li>
                             <li class="linkstream-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="fonctionnalites-item p-1 mt-5 mb-3">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Centralisation des conversations LinkedIn</h4>
-                                        <img class="card-img linkstream-image mx-auto my-2 " src="assets/images/linkstream/affichage_conversations.webp" alt="Centralisation des conversations">
-                                        <small class="legende text-center fs-6 fst-italic mt-3">
+                                    <div class="card stage col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-2">Centralisation des conversations LinkedIn</h5>
+                                        <img class="card-img linkstream-image my-auto" src="assets/images/linkstream/affichage_conversations.webp" alt="Centralisation des conversations">
+                                        <small class="legende text-center fst-italic mt-3">
                                             Toutes les discussions LinkedIn (classique, Sales Navigator, Recruiter) 
                                             sont regroupées dans une seule interface intuitive.
                                         </small>
@@ -148,10 +145,10 @@
                             </li>
                             <li class="linkstream-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="fonctionnalites-item p-1 mt-5 mb-3">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Visualisation dynamique des messages</h4>
-                                        <img class="card-img linkstream-image mx-auto my-2 " src="assets/images/linkstream/affichage_dynamique.webp" alt="Visualisation des messages">
-                                        <small class="legende text-center fs-6 fst-italic mt-3">
+                                    <div class="card stage col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-2">Visualisation dynamique des messages</h5>
+                                        <img class="card-img linkstream-image my-auto" src="assets/images/linkstream/affichage_dynamique.webp" alt="Visualisation des messages">
+                                        <small class="legende text-center fst-italic mt-3">
                                             Interface développée avec Streamlit permettant d'explorer les messages et profils en 
                                             temps réel depuis la base Supabase.
                                         </small>
@@ -160,10 +157,10 @@
                             </li>
                             <li class="linkstream-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="fonctionnalites-item p-1 mt-5 mb-3">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Automatisation des chats (Workflow n°1)</h4>
-                                        <img class="card-img linkstream-image mx-auto my-2 my-auto" src="assets/images/linkstream/workflow_chats.webp" alt="Automatisation des chats">
-                                        <small class="legende text-center fs-6 fst-italic mt-3">
+                                    <div class="card stage col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-2">Automatisation des chats (Workflow n°1)</h5>
+                                        <img class="card-img linkstream-image my-auto" src="assets/images/linkstream/workflow_chats.webp" alt="Automatisation des chats">
+                                        <small class="legende text-center fst-italic mt-3">
                                             Workflow n8n automatisant la récupération et la mise à jour des conversations 
                                             LinkedIn dans Supabase, avec filtrage anti-doublons.
                                         </small>
@@ -172,10 +169,10 @@
                             </li>
                             <li class="linkstream-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="fonctionnalites-item p-1 mt-5 mb-3">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Synchronisation des messages (Workflow n°2)</h4>
-                                        <img class="card-img linkstream-image mx-auto my-2 my-auto" src="assets/images/linkstream/workflow_messages.webp" alt="Synchronisation des messages">
-                                        <small class="legende text-center fs-6 fst-italic mt-3">
+                                    <div class="card stage col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-3">Synchronisation des messages (Workflow n°2)</h5>
+                                        <img class="card-img linkstream-image my-auto" src="assets/images/linkstream/workflow_messages.webp" alt="Synchronisation des messages">
+                                        <small class="legende text-center fst-italic mt-3">
                                             Récupération, vérification et insertion des nouveaux messages dans la base 
                                             de données via un traitement séquentiel automatisé.
                                         </small>
@@ -184,11 +181,11 @@
                             </li>
                             <li class="linkstream-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="fonctionnalites-item p-1 mt-5 mb-3">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5">Enrichissement des profils utilisateurs (Workflow n°3)</h4>
+                                    <div class="card stage col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-3">Enrichissement des profils utilisateurs (Workflow n°3)</h5>
                                         
-                                        <img class="card-img linkstream-image mx-auto my-2 my-auto" src="assets/images/linkstream/workflow_people.webp" alt="Enrichissement des profils users">
-                                        <small class="legende text-center fs-6 fst-italic mt-3">
+                                        <img class="card-img linkstream-image my-auto" src="assets/images/linkstream/workflow_people.webp" alt="Enrichissement des profils users">
+                                        <small class="legende text-center fst-italic mt-3">
                                             Identification et ajout automatique des utilisateurs LinkedIn à la base Supabase, 
                                             avec contrôle d'unicité et cohérence des données.
                                         </small>    
@@ -197,11 +194,11 @@
                             </li>
                             <li class="linkstream-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="fonctionnalites-item p-1 mt-5 mb-3">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5">Architecture et base de données Supabase</h4>
+                                    <div class="card stage col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-3">Architecture et base de données Supabase</h5>
                                         <br>
                                         <img class="card-img linkstream-image mx-auto my-2 my-auto" src="assets/images/linkstream/MCD.webp" alt="Architecture et BDD"> 
-                                        <small class="legende text-center fs-6 fst-italic mt-3">
+                                        <small class="legende text-center fst-italic mt-3">
                                             Structure relationnelle optimisée (chats, messages, utilisateurs)
                                              garantissant la cohérence et la traçabilité des données LinkedIn.
                                         </small>
@@ -211,7 +208,7 @@
                         </ul>
 
                         <!-- pour la pagination = a lapozashoz -->
-                        <div class="swiper-pagination pt-5 mt-md-5"></div>
+                        <div class="swiper-pagination"></div>
 
                         <!-- les boutons de navigation -->
                         <div class="swiper-slide-button swiper-button-prev d-none d-sm-block"></div>
@@ -221,14 +218,14 @@
             </section>
 
             <section class="presentation container">
-                <div class="row justify-content-end py-4 mt-4">
-                    <div class="col-md-9 mt-5" data-aos="fade-up-right" data-aos-delay="700">
+                <div class="row justify-content-end mt-4">
+                    <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="700">
                         <span class="alcim text-uppercase fw-bolder">Besoins</span>
                         <p class=" mt-4 mb-1">
                             Le besoin principal identifié par l'entreprise était de remédier à l'absence d'interface utilisateur 
                             dans l'outil d'automatisation n8n, utilisé pour collecter des données LinkedIn via l'API Unipile.
                         </p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mt-2">
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 mt-2">
                             <li>◈ Centraliser les messages et contacts LinkedIn dans une base relationnelle cohérente,</li>
                             <li>◈ Offrir une interface de consultation intuitive pour visualiser les conversations et profils associés,</li>
                             <li>◈ Permettre le déclenchement manuel de workflows n8n via webhooks ou API,</li>
@@ -247,7 +244,7 @@
                         <p class="mt-4 mb-2">
                             Le développement s'est appuyé sur un environnement moderne, orienté automatisation et interconnexion d'API :
                         </p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mt-1">
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 mt-1">
                             <li><span class="LinkStream-liste">◈ n8n</span> - <span class="fst-italic">création et orchestration de workflows automatisés,</span></li>
                             <li><span class="LinkStream-liste">◈ Unipile API</span> - <span class="fst-italic">récupération des conversations, messages et profils LinkedIn,</span></li>
                             <li><span class="LinkStream-liste">◈ Supabase (PostgreSQL)</span> - <span class="fst-italic">stockage structuré et exposition d'une API REST,</span></li>
@@ -264,8 +261,8 @@
                     </div>
                 </div>
 
-                <div class="row justify-content-end py-4">
-                    <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="900">
+                <div class="row justify-content-end pt-4">
+                    <div class="col-md-10" data-aos="fade-up-right" data-aos-delay="900">
                         <span class="alcim text-uppercase fw-bolder">Réalisation</span>
                         <p class=" mt-4 mb-2">
                            Le projet a été mené selon une démarche itérative, alternant phases de conception, développement et validation.
@@ -273,29 +270,29 @@
                         <p>
                             Les principales étapes réalisées sont :
                         </p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg mt-2">
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 mt-2">
                             <li class="linkstream">◈ Mise en place des workflows n8n :</li>
-                            <small class="ms-4 fs-5">
+                            <small class="ms-4">
                                 récupération automatique des messages, profils et conversations via l'API Unipile et insertion dans Supabase.
                             </small>
                             <li class="linkstream">◈ Modélisation des données :</li>
-                            <small class="ms-4 fs-5">
+                            <small class="ms-4">
                                 création des tables <span class="fst-italic">linkedin_people</span>, <span class="fst-italic">linkedin_chats</span>, 
                                 <span class="fst-italic">linkedin_messages</span> et d'une fonction SQL <span class="fst-italic">get_messages()</span> 
                                 pour simplifier les requêtes.
                             </small>
                             <li class="linkstream">◈ Développement de l'application Streamlit :</li>
-                            <small class="ms-4 fs-5">
+                            <small class="ms-4">
                                 authentification via Unipile, affichage des conversations sous forme de bulles,
                                  envoi de messages LinkedIn et rafraîchissement dynamique.
                             </small>
                             <li class="linkstream">◈ Tests d'intégration complets :</li>
-                            <small class="ms-4 fs-5">
+                            <small class="ms-4">
                                 vérification de la communication entre Unipile ↔ n8n ↔ Supabase ↔ Streamlit et 
                                 validation fonctionnelle du prototype.
                             </small>
                             <li class="linkstream">◈ Documentation technique et visuelle :</li>
-                            <small class="ms-4 fs-5">
+                            <small class="ms-4">
                                 schémas d'architecture, MCD, workflows annotés et commentaires intégrés au code.
                             </small>
                         </ul>
@@ -308,7 +305,7 @@
             </section>
 
             <section class="container">
-                <div class=" row pt-4 mt-5 text-white" >
+                <div class="row text-white" >
                     <div class="col-md-10 mt-5 justify-content-end" data-aos="fade-up-left" data-aos-delay="700">
                         <span class="alcim text-uppercase fw-bolder">Bilan</span>
                         <p class="mt-4">
@@ -334,13 +331,13 @@
                     </div>
                 </div>
 
-                <div class=" mt-4 py-4 row justify-content-end">
+                <div class="mt-4 py-4 row justify-content-end">
                     <div class="col-md-10" data-aos="fade-up-right" data-aos-delay="800">
                         <span class="alcim text-uppercase fw-bolder">Productions associées</span>
                         <p class="mt-4 mb-2">
                             Dans le cadre de ce projet, plusieurs livrables techniques ont été produits pour documenter et présenter le travail réalisé :
                         </p>
-                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5">
                             <li>◈ Workflows n8n assurant la récupération, le traitement et l'insertion automatique des données LinkedIn.</li>
                             <li>◈ Base de données Supabase/PostgreSQL structurée avec les tables <span class="fst-italic">linkedin_people</span>, 
                                 <span class="fst-italic">linkedin_chats</span>, <span class="fst-italic">linkedin_messages</span> et la fonction SQL 
@@ -358,13 +355,13 @@
             </section>
 
             <section class="container">
-                <div class="mt-4 py-4  row">
+                <div class="mt-4 row">
                     <div class="col-md-10" data-aos="fade-up-right" data-aos-delay="900">
                         <span class="alcim text-uppercase fw-bolder">Perspectives</span>
                         <p class="mt-4 mb-2">
                             Plusieurs pistes d'amélioration ont été identifiées pour la suite du projet :
                         </p>
-                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5">
                             <li><span class="fw-bolder LinkStream-liste">◈ Ajout de fonctionnalités de filtrage et de recherche avancée </span>
                                 dans l'interface pour faciliter la navigation entre les messages et les contacts.
                             </li>
@@ -384,8 +381,7 @@
                 </div>
             </section>
 
-
-            <section class="container mt-5">
+            <section class="container">
                 <div class="container-fluid mt-4 py-4 px-3">
                     <span class="alcim text-uppercase fw-bolder">Compétences</span>
                 </div>
@@ -484,7 +480,7 @@
 
                     <div data-aos="zoom-in" data-aos-delay="700">
                         <a href="assets/documents/RP_3_LinkStream_JUHASZ.pdf" target="_blank">
-                            <button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn my-3">
+                            <button class="btn btn-outline-secondary border border-2 rounded portfolio-btn my-3">
                                 Fiche descriptive
                             </button>
                         </a>
@@ -492,7 +488,7 @@
 
                     <div data-aos="zoom-in" data-aos-delay="700">
                         <a href="assets/documents/rapport_stage_ops_imperium.pdf" target="_blank">
-                            <button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn">
+                            <button class="btn btn-outline-secondary border border-2 rounded portfolio-btn">
                                 Rapport de stage
                             </button>
                         </a>
@@ -516,64 +512,69 @@
     <!-- Footer -->
     <footer class="footer container-fluid text-center text-white bg-dark p-0 pt-5" >
         <div class="container-fluid border-top border-secondary">
-            <section class="pt-3">
+             <section class="pt-3">
 
                 <!-- Première row -->
-                <div class="row g-0 pt-5 col-12 justify-content-center">
+                <div class="row g-0 pt-3 col-12 justify-content-center">
                     <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
                         <div class="col-12 col-md-auto pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="index.html" class="text-white text-decoration-none fs-5">Accueil</a>
+                                <a href="index.html" class="text-white text-decoration-none">Accueil</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="formation.html" class="text-white text-decoration-none fs-5">Formation</a>
+                                <a href="stages.html" class="text-white text-decoration-none">Stages</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class=" font-weight-bold mx-2">
-                                <a href="projets.html" class="text-white text-decoration-none fs-5">Projets</a>
+                                <a href="projets.html" class="text-white text-decoration-none">Projets</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class=" font-weight-bold mx-2">
-                                <a href="veille.html" class="text-white text-decoration-none fs-5">La veille</a>
+                                <a href="veille.html" class="text-white text-decoration-none">La veille</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="GPI.html" class="text-white text-decoration-none fs-5">GPI</a>
+                                <a href="synthese.html" class="text-white text-decoration-none">Synthèse</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="CV.html" class="text-white text-decoration-none">CV</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class=" font-weight-bold mx-2">
-                                <a href="contact.html" class="text-white text-decoration-none fs-5">Contact</a>
+                                <a href="contact.html" class="text-white text-decoration-none">Contact</a>
                             </h6>
                         </div>
                     </div>
                 </div>
 
                 <!-- Deuxième row -->
-                <div class="row g-0 py-4 col-12 justify-content-center">
+                <div class="row g-0 py-3 col-12 justify-content-center">
                      <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
                         <div class="col-12 col-md-auto pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="mentions-légals.html" class="text-white text-decoration-none fs-5">Mentions légales</a>
+                                <a href="mentions-légals.html" class="text-white text-decoration-none">Mentions légales</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="plan-du-site.html" class="text-white text-decoration-none fs-5">Plan du site</a>
+                                <a href="plan-du-site.html" class="text-white text-decoration-none">Plan du site</a>
                             </h6>
                         </div>
                     </div>
                 </div>
             </section>
         
-            <hr class="my-3" />
+            <hr class="my-2" />
 
-            <section class="py-4">
+            <section class="py-3">
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-8">
                         <p><strong>Designed by Klaudia Juhasz</strong></p>
@@ -581,13 +582,13 @@
                 </div>
             </section>
         
-            <section class="container-fluid text-center pb-5">
+            <section class="container-fluid text-center pb-3">
                 <a href="https://www.linkedin.com/in/klaudia-juhasz-a165002bb/" class="text-white me-4" target="_blank" title="Lien vers mon profil LinkedIn"><i class="fab fa-linkedin fa-2xl"></i></a>
                 <a href="https://www.figma.com/design/QMpU6uu0tGXpdInYixZ798/Mon_portfolio?node-id=1-2&p=f&t=4kfGd9vv8Z0PAOW0-0" class="text-white me-4" target="_blank" title="Lien vers mon compte Figma"><img src="assets/images/figma-logo.webp" class="rounded-circle" id="figma-logo" alt="logo Figma"></a>
                 <a href="https://github.com/juklau" class="text-white me-4" target="_blank" title="Lien vers mon GitHub"><i class="fab fa-github fa-2xl"></i></a>
             </section>
         </div>
-        <div class="text-center py-5 bg-black" > © 2026 Copyright</div>
+        <div class="text-center py-3 bg-black" > © 2026 Copyright</div>
 
         <!-- Scroll Top -->
         <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

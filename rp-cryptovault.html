@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" href="style.css">
     </head> 
-    <body class="fs-5 overflow-x-hidden bg-dark">
+    <body class="overflow-x-hidden bg-dark">
        <header id="header" class="border-bottom border-secondary">
             <nav class="navbar navbar-expand-md bg-dark p-4" data-bs-theme="dark">
                 <div class="container d-flex justify-content-between">
@@ -87,10 +87,14 @@
         <main class="bg-dark py-5 text-white">
 
             <div class="container text-center py-5 mb-5">
-                <h1 class="display-1 text-white pt-5 pb-3 my-5">CryptoVault</h1>
-                <h3 class="pb-5">Coffre-fort numérique sécurisé</h3>
+                <h1 class="text-white pt-5 pb-3 my-5">CryptoVault</h1>
+                <h5 class="pb-5">Coffre-fort numérique sécurisé</h5>
             </div>
 
+            <div class="container d-flex justify-content-start mt-5 pt-4" data-aos="zoom-in" data-aos-delay="700">
+                <!-- <a href="page-error.html"><button class="btn btn-outline-secondary border border-2 rounded portfolio-btn" type="button" id="fiche-cryptovault-btn">Accès au document récapitulatif</button></a> -->
+                <a href="page-error.html"><button class="btn btn-outline-secondary border border-2 rounded portfolio-btn" type="button" id="fiche-cryptovault-btn">Documentation récapitulative</button></a>
+            </div>
             <section class="presentation container">
                 <div class="mx-auto mt-5" data-aos="fade-up-left" data-aos-delay="600"> 
                     <span class="alcim text-uppercase fw-bolder">Contexte</span>
@@ -135,18 +139,18 @@
             </section>
 
             <section class="fonctionnalites container">
-                <div class="mt-5 py-4" data-aos="zoom-in-down" data-aos-delay="900">
+                <div class="mt-2 py-4" data-aos="zoom-in-down" data-aos-delay="900">
                     <span class=" alcim text-uppercase fw-bolder">Fonctionnalités</span>
                 </div>
-                <div class="container carousel swiper swiper-container d-flex justify-content-center mt-2" data-aos="zoom-in-down" data-aos-delay="1000">
+                <div class="container carousel swiper swiper-container d-flex justify-content-center" data-aos="zoom-in-down" data-aos-delay="1000">
                     <div class="slider-wrapper text-white pb-5 px-1 ">
-                        <ul class="outil-liste swiper-wrapper list-unstyled mb-5 pb-5">
+                        <ul class="outil-liste swiper-wrapper list-unstyled">
 
                             <!-- accès, authentification -->
                             <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-3">Inscription</h4>
+                                        <h5 class="card-title text-center py-3">Inscription</h5>
                                         <p class="text-center fst-italic">Message d'erreur si le mot de passe différent</p>
                                         <img class="card-img cryptovault-image mx-auto my-2 " src="assets/images/cryptovault/inscription_mdpdiff.webp" alt="Inscription">
                                     </div>
@@ -155,7 +159,7 @@
                             <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Authentification</h4>
+                                        <h5 class="card-title text-center py-5 ">Authentification</h5>
                                         <br>
                                         <img class="card-img cryptovault-image mx-auto my-2 " src="assets/images/cryptovault/connexion.webp" alt="Authentification">
                                     </div>
@@ -166,26 +170,24 @@
                             <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5">Dashboard utilisateur</h4>                                
-                                        <img class="card-img cryptovault-image mx-auto my-auto " src="assets/images/cryptovault/tableau_board_user.webp" alt="Dashboard utilisateur">
+                                        <h5 class="card-title text-center py-5">Dashboard utilisateur</h5>                                
+                                        <img class="card-img cryptovault-image mx-auto my-4" src="assets/images/cryptovault/tableau_board_user.webp" alt="Dashboard utilisateur">
                                     </div>
                                 </div>
                             </li>
                             <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5">Gestion des dossiers</h4>
-                                   
-                                        <img class="card-img cryptovault-image mx-auto my-auto" src="assets/images/cryptovault/gestion_des_dossiers.webp" alt="Gestion des dossiers">
+                                        <h5 class="card-title text-center py-5">Gestion des dossiers</h5>
+                                        <img class="card-img cryptovault-image mx-auto my-4" src="assets/images/cryptovault/gestion_des_dossiers.webp" alt="Gestion des dossiers">
                                     </div>
                                 </div>
                             </li>
                             <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Gestion des fichiers</h4>
-                                      
-                                        <img class="card-img cryptovault-image mx-auto my-auto" src="assets/images/cryptovault/gestion_des_fichiers.webp" alt="Gestion des fichiers">
+                                        <h5 class="card-title text-center py-5 ">Gestion des fichiers</h5>
+                                        <img class="card-img cryptovault-image mx-auto my-4" src="assets/images/cryptovault/gestion_des_fichiers.webp" alt="Gestion des fichiers">
                                     </div>
                                 </div>
                             </li>
@@ -194,27 +196,26 @@
                             <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5">Upload de fichiers</h4>
-                                      
-                                        <img class="card-img cryptovault-image mx-auto my-auto" src="assets/images/cryptovault/Upload_fichiers.webp" alt="Upload de fichiers">
+                                        <h5 class="card-title text-center py-5">Upload de fichiers</h5>
+                                        <img class="card-img cryptovault-image mx-auto my-4" src="assets/images/cryptovault/Upload_fichiers.webp" alt="Upload de fichiers">
                                     </div>
                                 </div> 
                             </li>
                             <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5">Gestion des versions</h4>
+                                        <h5 class="card-title text-center py-5">Gestion des versions</h5>
                                    
-                                        <img class="card-img cryptovault-image mx-auto my-auto" src="assets/images/cryptovault/gestion_des_version.webp" alt="Gestion des versions">
+                                        <img class="card-img cryptovault-image mx-auto my-4" src="assets/images/cryptovault/gestion_des_version.webp" alt="Gestion des versions">
                                     </div>
                                 </div>
                             </li>
                              <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-3">Delete Version</h4>
+                                        <h5 class="card-title text-center py-3">Delete Version</h5>
                                         <p class="text-center fst-italic">Cas limite: Impossible de supprimer la dernière version</p>
-                                         <img class="card-img cryptovault-image mx-auto my-auto" src="assets/images/cryptovault/impossible_delete_last_version.webp" alt="Delete Version">
+                                         <img class="card-img cryptovault-image mx-auto my-4" src="assets/images/cryptovault/impossible_delete_last_version.webp" alt="Delete Version">
                                     </div>
                                 </div> 
                             </li>
@@ -223,24 +224,24 @@
                             <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Partager un fichier</h4>
-                                        <img class="card-img cryptovault-image mx-auto my-auto" src="assets/images/cryptovault/share_fichier.webp" alt="Partager un fichier">
+                                        <h5 class="card-title text-center py-5 ">Partager un fichier</h5>
+                                        <img class="card-img cryptovault-image mx-auto my-4" src="assets/images/cryptovault/share_fichier.webp" alt="Partager un fichier">
                                     </div>
                                 </div> 
                             </li>
                             <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Mes partages</h4>
-                                        <img class="card-img cryptovault-image mx-auto my-auto" src="assets/images/cryptovault/different_statut_partage.webp" alt="Mes partages">
+                                        <h5 class="card-title text-center py-5 ">Mes partages</h5>
+                                        <img class="card-img cryptovault-image mx-auto my-4" src="assets/images/cryptovault/different_statut_partage.webp" alt="Mes partages">
                                     </div>
                                 </div> 
                             </li>
                             <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5 ">Lien de partage d'un fichier</h4>
-                                        <img class="card-img cryptovault-image mx-auto my-auto" src="assets/images/cryptovault/lien_partage_fichier.webp" alt="Lien de partage d'un fichier">
+                                        <h5 class="card-title text-center py-5 ">Lien de partage d'un fichier</h5>
+                                        <img class="card-img cryptovault-image mx-auto my-4" src="assets/images/cryptovault/lien_partage_fichier.webp" alt="Lien de partage d'un fichier">
                                     </div>
                                 </div> 
                             </li>
@@ -249,7 +250,7 @@
                             <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-3">Web: partage un fichier avec versions</h4>
+                                        <h5 class="card-title text-center py-2">Web: partage un fichier avec versions</h5>
                                         <img class="card-img cryptovault-image-web2 mx-auto my-auto" src="assets/images/cryptovault/web_versions2.webp" alt="Web: partage un fichier avec versions"> 
                                     </div>
                                 </div> 
@@ -257,8 +258,7 @@
                             <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-3">Web: partage d'un dossier </h4>
-                                       
+                                        <h5 class="card-title text-center py-2">Web: partage d'un dossier </h5>
                                         <br>
                                         <img class="card-img cryptovault-image-web mx-auto my-auto" src="assets/images/cryptovault/web_partage_dossier.webp" alt="Web: partage d'un dossier"> 
                                     </div>
@@ -267,8 +267,7 @@
                             <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-3">Web : lien invalide ou expiré</h4>
-                                     
+                                        <h5 class="card-title text-center pt-2">Web : lien invalide ou expiré</h5>
                                         <img class="card-img cryptovault-image-web mx-auto my-auto" src="assets/images/cryptovault/web_partage_revoque.webp" alt="Web : lien invalide ou expiré"> 
                                     </div>
                                 </div> 
@@ -278,33 +277,31 @@
                             <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5">Dashboard administrateur</h4>
-                                        <img class="card-img cryptovault-image mx-auto my-auto" src="assets/images/cryptovault/tableau_board_admin.webp" alt="Dashboard administrateur">
+                                        <h5 class="card-title text-center py-5">Dashboard administrateur</h5>
+                                        <img class="card-img cryptovault-image mx-auto my-4" src="assets/images/cryptovault/tableau_board_admin.webp" alt="Dashboard administrateur">
                                     </div>
                                 </div>
                             </li>
                             <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center py-5">Gestion de quota par admin</h4>
-                                 
-                                        <img class="card-img cryptovault-image mx-auto my-auto" src="assets/images/cryptovault/gestion_de_quota2.webp" alt="Gestion de quota par admin"> 
+                                        <h5 class="card-title text-center py-5">Gestion de quota par admin</h5>
+                                        <img class="card-img cryptovault-image mx-auto my-3" src="assets/images/cryptovault/gestion_de_quota2.webp" alt="Gestion de quota par admin"> 
                                     </div>
                                 </div> 
                             </li>
                             <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h4 class="card-title text-center pt-5 pb-4">Supprimer un utilisateur par admin</h4>
-                               
-                                        <img class="card-img cryptovault-image mx-auto my-auto" src="assets/images/cryptovault/delete_user3.webp" alt="Supprimer un utilisateur par admin"> 
+                                        <h5 class="card-title text-center pt-5 pb-4">Supprimer un utilisateur par admin</h5>
+                                        <img class="card-img cryptovault-image mx-auto my-4" src="assets/images/cryptovault/delete_user3.webp" alt="Supprimer un utilisateur par admin"> 
                                     </div>
                                 </div> 
                             </li>
                         </ul> 
 
                         <!-- pour la pagination = a lapozashoz -->
-                        <div class="swiper-pagination pt-5"></div>
+                        <div class="swiper-pagination"></div>
 
                         <!-- les boutons de navigation -->
                          <div class="swiper-slide-button swiper-button-prev d-none d-sm-block"></div>
@@ -313,8 +310,8 @@
                 </div>
             </section>
 
-            <section class="presentation container mt-5">
-                <div class="row justify-content-end py-4 mt-2">
+            <section class="presentation container">
+                <div class="row justify-content-end py-4">
                     <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="700">
                         <span class="alcim text-uppercase fw-bolder">Besoins</span>
                         <p class=" mt-4 mb-1">
@@ -357,14 +354,14 @@
                     </div>
                </div>
                 <div class="py-4 mt-2" >
-                    <div class="col-md-12 mt-5" data-aos="fade-up-left" data-aos-delay="800">
+                    <div class="col-md-12" data-aos="fade-up-left" data-aos-delay="800">
                         <span class="alcim text-uppercase fw-bolder">Environnement technologique</span>
                         <p class="mt-4">
                             La solution repose sur un environnement technologique complet, couvrant le 
                             backend, le frontend, la base de données et le déploiement.
                         </p>
                         <p class="fst-italic cryptovault mt-3 mb-0"><strong>Backend</strong></p>
-                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                        <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
                             <li>◈ <strong>PHP 8.2</strong> - développement de l'API REST et implémentation de la logique métier.</li>
                             <li>◈ <strong>Slim 4</strong> - framework léger pour la gestion des routes, middlewares et contrôleurs REST.</li>
                             <li>◈ <strong>Medoo (ORM)</strong> - abstraction simplifiée de l'accès aux données via PDO.</li>
@@ -378,7 +375,7 @@
                         <div class="row justify-content-center">
                             <div class="col-md-10">
                                 <p class="fst-italic cryptovault mt-3 mb-0"><strong>Client lourd</strong></p>
-                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
                                     <li>◈ <strong>Java 17 LTS</strong> - socle applicatif stable et maintenable.</li>
                                     <li>◈ <strong>JavaFX 21</strong> - développement de l'interface graphique.</li>
                                     <li>◈ <strong>Architecture MVC</strong> - séparation claire entre modèle, vue et contrôleur.</li>
@@ -391,7 +388,7 @@
                         <div class="row justify-content-end">
                             <div class="col-md-10">
                                 <p class="fst-italic cryptovault mt-3 mb-0"><strong>Client léger Web</strong></p>
-                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
                                     <li>◈ <strong>HTML5 / CSS3</strong> - structure et mise en forme des pages publiques.</li>
                                     <li>◈ <strong>Bootstrap 5</strong> - interface responsive et ergonomique.</li>
                                     <li>◈ <strong>JavaScript (ES6)</strong> - gestion des interactions côté navigateur.</li>
@@ -403,7 +400,7 @@
                         <div class="row justify-content-start">
                             <div class="col-md-10">
                                 <p class="fst-italic cryptovault mt-3 mb-0"><strong>Outils et déploiement</strong></p>
-                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lh-lg">
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
                                     <li>◈ <strong>Docker / Docker Compose</strong> - conteneurisation et déploiement reproductible.</li>
                                     <li>◈ <strong>Git & GitHub</strong> - gestion de versions et collaboration en binôme.</li>
                                     <li>◈ <strong>IntelliJ IDEA & Visual Studio Code</strong> - environnements de développement.</li>
@@ -414,8 +411,23 @@
                          </div>
                     </div>
                 </div> 
+                <!-- <div class="lien-intern mb-4 row justify-content-center" data-aos="fade-up-right" data-aos-delay="850">
+                    <div class="col-md-8">
+                        <a class="text-white" id="MCD-image" href="assets/images/cryptovault/MCD_CryptoVault.png" target="_blank">
+                            <strong class="fw-medium fst-italic">Consultation du modèle conceptuel des données de l'application CryptoVault</strong>
+                        </a>
+                    </div>
+                </div> -->
+
+                <div class="lien-intern my-5 row justify-content-center" data-aos="fade-up-right" data-aos-delay="850">
+                    <div class="col-md-8 text-center">
+                        <span class="alcim text-uppercase fw-bolder">Modèle conceptuel des données — CryptoVault</span>
+                        <img src="assets/images/cryptovault/MCD_CryptoVault.png"
+                            alt="Modèle conceptuel des données de l'application CryptoVault" class="img-fluid rounded-3 d-block mx-auto mt-4" id="mcd-cryptovault">
+                    </div>
+                </div>
                 <div class="row justify-content-end py-3">
-                    <div class="col-md-11 mt-5" data-aos="fade-up-right" data-aos-delay="900">
+                    <div class="col-md-11" data-aos="fade-up-right" data-aos-delay="900">
                         <span class="alcim text-uppercase fw-bolder">Réalisation</span>
                         <p class="mt-4 mb-2">
                            Le développement de CryptoVault s'est déroulé en binôme selon une démarche progressive et 
@@ -477,8 +489,8 @@
             </section>
 
             <section class="container">
-                <div class=" row pt-4 mt-5 text-white" >
-                    <div class="col-md-10 mt-5 justify-content-end" data-aos="fade-up-left" data-aos-delay="700">
+                <div class=" row text-white" >
+                    <div class="col-md-10 mt-3 justify-content-end" data-aos="fade-up-left" data-aos-delay="700">
                         <span class="alcim text-uppercase fw-bolder">Bilan</span>
                         <p class="mt-4">
                             CryptoVault constitue une étape majeure dans mon parcours de formation. Ce projet m'a permis d'approfondir 
@@ -523,8 +535,8 @@
                             couvrant la conception, le développement et la documentation de la solution :
                         </p>
 
-                        <p class="mt-4 fst-italic cryptovault text-decoration-underline">Documentation et conception</p>
-                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                        <p class="mt-4 fst-italic cryptovault text-decoration-underline mb-1">Documentation et conception</p>
+                        <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5">
                             <li>◈ Documentation technique détaillée (architecture, sécurité, base de données, flux applicatifs).</li>
                             <li>◈ Guide utilisateur décrivant le fonctionnement du client JavaFX et de l'interface Web publique.</li>
                             <li>◈ Modélisation de la base de données : MCD, modèle relationnel et schéma SQL.</li> 
@@ -533,19 +545,19 @@
 
                         <div class="row justify-content-end">
                             <div class="col-md-10">
-                                <p class="mt-4 fst-italic cryptovault text-decoration-underline">Développement et architecture applicative</p>
-                                <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                                <p class="mt-4 fst-italic cryptovault text-decoration-underline mb-1">Développement et architecture applicative</p>
+                                <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5">
                                     <li>◈ API REST sécurisée (PHP 8 / Slim 4 / Medoo / JWT).</li>
                                     <li>◈ Client lourd JavaFX (Java 17) interfacé avec l'API REST.</li>
                                     <li>◈ Interface Web publique de téléchargement via lien de partage.</li>
                                     <li>◈ Base de données MySQL normalisée + scripts SQL d'initialisation.</li>
                                     <li>◈ Environnement Docker Compose.</li>
                                     <li class="lien-intern">◈ Code source versionné et disponible sur GitHub. 
-                                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                                        <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5">
                                             <!-- backend -->
-                                            <li> - <a class="text-white" href="https://github.com/PlumCreativ/coffreFort.git" target="_blank"><strong class="fw-medium fst-italic">Backend (API REST PHP / Slim)</strong></a></li>
+                                            <li> - <a class="text-white" href="https://github.com/juklau/coffreFort-backEnd-private.git" target="_blank"><strong class="fw-medium fst-italic">Backend (API REST PHP / Slim)</strong></a></li>
                                             <!-- JavaFx -->
-                                            <li> - <a class="text-white" href="https://github.com/PlumCreativ/coffreFortJava.git" target="_blank"><strong class="fw-medium fst-italic">Client lourd JavaFX</strong></a></li>
+                                            <li> - <a class="text-white" href="https://github.com/juklau/coffreFort-Java-private.git" target="_blank"><strong class="fw-medium fst-italic">Client lourd JavaFX</strong></a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -554,8 +566,8 @@
                         
                         <div class="row justify-content-center">
                             <div class="col-md-10">
-                                <p class="mt-4 fst-italic cryptovault text-decoration-underline">Organisation et validation</p>
-                                <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                                <p class="mt-4 fst-italic cryptovault text-decoration-underline mb-1">Organisation et validation</p>
+                                <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5">
                                     <li>◈ Travail collaboratif en binôme avec gestion de versions via Git/GitHub.</li>
                                     <li>◈ Tests des endpoints REST (Postman) et validation des flux fonctionnels.</li>
                                     <li>◈ Vérification des mécanismes de sécurité : contrôle des accès, gestion des rôles, expiration et limitation des liens de partage.</li>
@@ -567,15 +579,15 @@
             </section> 
 
             <section class="container">
-                <div class="mt-4 py-4  row">
+                <div class="py-4 row">
                     <div class="col-md-12" data-aos="fade-up-left" data-aos-delay="900">
                         <span class="alcim text-uppercase fw-bolder">Perspectives</span>
                         <p class="mt-4">
                             Plusieurs axes d'évolution ont été identifiés pour une version ultérieure de CryptoVault :
                         </p>
 
-                        <p class="mt-4 fst-italic cryptovault text-decoration-underline">Évolutions fonctionnelles</p>
-                        <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                        <p class="mt-4 fst-italic cryptovault text-decoration-underline mb-1">Évolutions fonctionnelles</p>
+                        <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5">
                             <li>◈ Mise en place d'une authentification renforcée (double facteur - 2FA).</li>
                             <li>◈ Protection optionnelle des liens de partage par mot de passe.</li>
                             <li>◈ Mise en place de notifications (expiration imminente, dépassement de quota).</li>
@@ -590,8 +602,8 @@
 
                         <div class="row justify-content-end">
                             <div class="col-md-8">
-                                <p class="mt-4 fst-italic cryptovault text-decoration-underline">Améliorations techniques</p>
-                                <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                                <p class="mt-2 fst-italic cryptovault text-decoration-underline mb-1">Améliorations techniques</p>
+                                <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5">
                                     <li>◈ Déploiement sur un serveur distant avec configuration HTTPS complète.</li>
                                     <li>◈ Intégration de tests automatisés (unitaires et d'intégration).</li>
                                     <li>◈ Mise en place d'un système de sauvegarde et de restauration automatisé.</li>
@@ -602,8 +614,8 @@
                         
                         <div class="row justify-content-center">
                             <div class="col-md-10">
-                                <p class="mt-4 fst-italic cryptovault text-decoration-underline">Pérennisation du projet</p>
-                                <ul class="list-unstyled lh-lg ms-2 ms-sm-3 ms-md-5">
+                                <p class="mt-2 fst-italic cryptovault text-decoration-underline mb-1">Pérennisation du projet</p>
+                                <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5">
                                     <li>◈ Maintien d'une documentation technique et utilisateur à jour.</li>
                                     <li>◈ Amélioration continue de la sécurité applicative.</li>
                                     <li>◈ Structuration du projet pour faciliter son évolution vers un environnement professionnel réel.</li>
@@ -614,7 +626,7 @@
                 </div>
             </section> 
 
-            <section class="container mt-5">
+            <section class="container">
                 <div class="container-fluid mt-4 py-4 px-3">
                     <span class="alcim text-uppercase fw-bolder">Compétences</span>
                 </div>
@@ -764,7 +776,7 @@
                 </div>
             </section>
             <div class="d-flex justify-content-center mt-5 pt-4" data-aos="zoom-in" data-aos-delay="700">
-                <a href="assets/documents/RP_5_CryptoVault_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary btn-lg border border-2 rounded portfolio-btn" type="button" id="fiche-cryptovault-btn">Fiche descriptive</button></a>
+                <a href="assets/documents/RP_5_CryptoVault_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary border border-2 rounded portfolio-btn" type="button" id="fiche-cryptovault-btn">Fiche descriptive</button></a>
             </div>
         </main>
 
@@ -783,64 +795,69 @@
     <!-- Footer -->
     <footer class="footer container-fluid text-center text-white bg-dark p-0 pt-5" >
         <div class="container-fluid border-top border-secondary">
-            <section class="pt-3">
+             <section class="pt-3">
 
                 <!-- Première row -->
-                <div class="row g-0 pt-5 col-12 justify-content-center">
+                <div class="row g-0 pt-3 col-12 justify-content-center">
                     <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
                         <div class="col-12 col-md-auto pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="index.html" class="text-white text-decoration-none fs-5">Accueil</a>
+                                <a href="index.html" class="text-white text-decoration-none">Accueil</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="formation.html" class="text-white text-decoration-none fs-5">Formation</a>
+                                <a href="stages.html" class="text-white text-decoration-none">Stages</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class=" font-weight-bold mx-2">
-                                <a href="projets.html" class="text-white text-decoration-none fs-5">Projets</a>
+                                <a href="projets.html" class="text-white text-decoration-none">Projets</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class=" font-weight-bold mx-2">
-                                <a href="veille.html" class="text-white text-decoration-none fs-5">La veille</a>
+                                <a href="veille.html" class="text-white text-decoration-none">La veille</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="GPI.html" class="text-white text-decoration-none fs-5">GPI</a>
+                                <a href="synthese.html" class="text-white text-decoration-none">Synthèse</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="CV.html" class="text-white text-decoration-none">CV</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class=" font-weight-bold mx-2">
-                                <a href="contact.html" class="text-white text-decoration-none fs-5">Contact</a>
+                                <a href="contact.html" class="text-white text-decoration-none">Contact</a>
                             </h6>
                         </div>
                     </div>
                 </div>
 
                 <!-- Deuxième row -->
-                <div class="row g-0 py-4 col-12 justify-content-center">
+                <div class="row g-0 py-3 col-12 justify-content-center">
                      <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
                         <div class="col-12 col-md-auto pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="mentions-légals.html" class="text-white text-decoration-none fs-5">Mentions légales</a>
+                                <a href="mentions-légals.html" class="text-white text-decoration-none">Mentions légales</a>
                             </h6>
                         </div>
                         <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
                             <h6 class="font-weight-bold mx-2">
-                                <a href="plan-du-site.html" class="text-white text-decoration-none fs-5">Plan du site</a>
+                                <a href="plan-du-site.html" class="text-white text-decoration-none">Plan du site</a>
                             </h6>
                         </div>
                     </div>
                 </div>
             </section>
         
-            <hr class="my-3" />
+            <hr class="my-2" />
 
-            <section class="py-4">
+            <section class="py-3">
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-8">
                         <p><strong>Designed by Klaudia Juhasz</strong></p>
@@ -848,13 +865,13 @@
                 </div>
             </section>
         
-            <section class="container-fluid text-center pb-5">
+            <section class="container-fluid text-center pb-3">
                 <a href="https://www.linkedin.com/in/klaudia-juhasz-a165002bb/" class="text-white me-4" target="_blank" title="Lien vers mon profil LinkedIn"><i class="fab fa-linkedin fa-2xl"></i></a>
                 <a href="https://www.figma.com/design/QMpU6uu0tGXpdInYixZ798/Mon_portfolio?node-id=1-2&p=f&t=4kfGd9vv8Z0PAOW0-0" class="text-white me-4" target="_blank" title="Lien vers mon compte Figma"><img src="assets/images/figma-logo.webp" class="rounded-circle" id="figma-logo" alt="logo Figma"></a>
                 <a href="https://github.com/juklau" class="text-white me-4" target="_blank" title="Lien vers mon GitHub"><i class="fab fa-github fa-2xl"></i></a>
             </section>
         </div>
-        <div class="text-center py-5 bg-black" > © 2026 Copyright</div>
+        <div class="text-center py-3 bg-black"> © 2026 Copyright</div>
 
         <!-- Scroll Top -->
         <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
