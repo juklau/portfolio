@@ -13,6 +13,7 @@
     --danger-color: rgb(185, 26, 26);
 
     --coral: #ff9994;
+    --cyber-color: #eb955c;
 
     --border-table:rgb(160, 160, 160);
     --gray-color: rgb(128, 128, 128);
@@ -439,7 +440,8 @@
     height: 20px;
     transition: 0.2s ease;
 }
-.slider-wrapper .swiper-slide-button:hover{
+.slider-wrapper .swiper-slide-button:hover,
+.carousel-control-prev:hover{
     color: var(--nav-hover-color) !important;
 }
 .swiper-button-next{
@@ -607,7 +609,8 @@
 .fw-bolder.fst-italic.swantrad,     /* page swantrad */
 .fst-italic.swantrad,               /* page swantrad */
 .swantrad-liste,                    /* page swantrad */
-.fst-italic.cryptovault{        
+.fst-italic.cryptovault,
+.cybermenace{        
     color: var(--main-second-color) !important;
 }
 .linkstream{
@@ -623,19 +626,25 @@
 .veille-title:hover > h4{
     color: var(--main-color) !important;
 }
+#carouselExampleIndicators{
+    width: 70%;
+}
 .img-outils{
-    height: 400px;
-    width: auto;
+    height: auto;
+    width: 70%;
     object-fit: cover;
     min-width: 300px;
     min-height: auto; 
+}
+#img-interview{
+    width: 10%;
 }
 .outils-veille-mobilfirst{
     width: 80%;
 }
 #IA-sourds,
 #IA-handicap_physique{
-    height: 300px;
+    height: 250px;
     width: auto;
 }
 .images-logo{
@@ -648,8 +657,8 @@
 
 /******************* pour acceder à des pages des veilles spécifiques ************************/
 .service-card .card-action{
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     background-color: var(--main-color);
     opacity: 0;
     visibility: hidden;
@@ -787,6 +796,28 @@ html {
 
 
 /*********************************************************************************************
+                                        Page veille: cybermenace
+**********************************************************************************************/
+
+.données{
+    font-size:2rem;
+}
+.explication{
+    font-size:.8rem;
+}
+.cyber{
+     color: var(--cyber-color);
+}
+
+.conclusion{
+    width:30px;
+    height:30px;
+    font-size:1.1rem;
+    background: var(--main-color);
+}
+
+
+/*********************************************************************************************
                                         Page CV
 **********************************************************************************************/
 
@@ -865,7 +896,7 @@ input, textarea {
 /******************************************** Checkbox *******************************************/
 
 .costum-check label {
-    line-height: 1.5;
+    line-height: 1.2;
     min-width: 300px;
 }
 #egyetertes + label::before{
@@ -873,8 +904,8 @@ input, textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1.5rem; /* 8px */
-    height: 1.5rem;
+    width: 1.2rem; /* 8px */
+    height: 1.2rem;
     background-color: var(--white-color);
     margin-right: 1rem;
     font-weight: 700;

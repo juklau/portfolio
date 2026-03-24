@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="fr">
+     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+
+        <!-- CSS de Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+        <!-- link SwiperJS CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+        <!-- AOS CSS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head> 
+    <body class="overflow-x-hidden bg-dark">
+        <header id="header" class="border-bottom border-secondary">
+            <nav class="navbar navbar-expand-md bg-dark p-4" data-bs-theme="dark">
+                <div class="container d-flex justify-content-between">
+                    <a class="navbar-brand" href="#">Klaudia Juhasz</a>
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="text-white" id="menu-btn"><i class="bi bi-list"></i></span>
+                    </button>
+                   
+                    <div class="offcanvas offcanvas-start menu-ouvert" tabindex="-1" id="navbarSupportedContent" 
+                    aria-labelledby="navbarSupportedContentLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title text-white" id="navbarSupportedContentLabel">Menu</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+
+                        <div class="offcanvas-body navbarmenu" >
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" aria-current="page" href="index.html">Accueil</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-white" href="stages.html" role="button" aria-expanded="false">Stages</a>
+                                    <ul class="dropdown-menu border-0 ">
+                                        <li><a class="dropdown-item text-white" href="stage1.html">LinkStream (stage 2025)</a></li>
+                                        <li><a class="dropdown-item text-white" href="stage2.html">Swantrad (stage 2026)</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-white" href="projets.html" role="button" aria-expanded="false"> Projets</a>
+                                    <ul class="dropdown-menu border-0 ">
+                                        <li><a class="dropdown-item text-white" href="projets.html">Compétences</a></li>
+                                        <li><a class="dropdown-item text-white" href="rp-chat.html">ClassCord Client</a></li>
+                                        <li><a class="dropdown-item text-white" href="rp-gestion_contacts.html">Mini-CRM</a></li>
+                                        <li><a class="dropdown-item text-white" href="rp-mediastock.html">MediaStock</a></li>
+                                        <li><a class="dropdown-item text-white" href="rp-cryptovault.html">CryptoVault</a></li>
+                                        <li><a class="dropdown-item text-white" href="rp-meteo_api.html">Meteo</a></li>
+                                        <li><a class="dropdown-item text-white" href="rp-roombooking.html">RoomBooking</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-white" href="veille.html" role="button" aria-expanded="false">La veille</a>
+                                    <ul class="dropdown-menu border-0 ">
+                                        <li><a class="dropdown-item text-white" href="veille-sourds.html">IA & surdité</a></li>
+                                        <li><a class="dropdown-item text-white" href="veille-aveugle.html">IA & vision</a></li>
+                                        <li><a class="dropdown-item text-white" href="veille-cybermenace.html">Cybermenace</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="synthese.html" role="button" aria-expanded="false">Synthèse</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="CV.html" role="button" aria-expanded="false">CV</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>  
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="bg-dark py-5 text-white">
+
+            <div class="container text-center py-5 mb-5">
+                <h1 class="text-white pt-5 pb-3 my-5">Client Léger vs Client Lourd :<br>Cybersécurité en 2023–2025</h1>
+            </div>
+
+            <!-- introduction -->
+            <section class="container text-white section pb-4">
+                <div class="row mx-auto mt-5" data-aos="fade-up-left" data-aos-delay="300">
+                    <div class="col-md-12 mb-3">
+                        <span class="alcim text-uppercase fw-bolder">Introduction</span>
+
+                        <div class="pt-4 row">
+                            <div class="col-md-12">
+                                <p class="my-4 text-center cybermenace">
+                                    <em>« Vous utilisez un navigateur pour travailler ? Vous êtes peut-être déjà une cible. »</em>
+                                </p>
+                                <p class="mt-3">
+                                    Aujourd'hui, une grande partie des activités professionnelles repose sur des applications informatiques,
+                                     accessibles soit via un navigateur web, soit via des logiciels installés localement.
+                                    </p>
+                                <p >
+                                    Cette veille technologique a pour objectif de comparer les risques en cybersécurité selon deux architectures principales :
+                                    le <strong class="fst-italic cybermenace">client léger</strong> (application web dans un navigateur) et le 
+                                    <strong class="fst-italic cybermenace">client lourd</strong>
+                                    (logiciel installé localement). <br> Ces deux modèles présentent des différences majeures en termes de surface d'attaque, 
+                                    de vecteurs d'intrusion et d'impact en cas de compromission.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row  mt-4">
+                            <div class="col-md-10">
+                                <p class="mb-4">
+                                    <strong class="cybermenace">Problématique :</strong> Les risques de cybersécurité sont-ils identiques entre client léger et client lourd ?
+                                </p>
+                            </div>
+                        </div>
+
+                        
+                        <!-- Chiffres d'accroche -->
+                        <div class="row mt-4 g-3 justify-content-center" data-aos="zoom-in" data-aos-delay="400">
+                            <span class="alcim text-uppercase fw-bolder">Chiffres clés</span>
+                            <div class="col-6 col-md-3 text-center mt-3">
+                                <p class="fw-bold mb-0 cybermenace données">+49 %</p>
+                                <p class="text-white fst-italic mb-0 explication">Attaques web en 2024 (Cloudflare)</p>
+                            </div>
+                            <div class="col-6 col-md-3 text-center mt-3">
+                                <p class=" fw-bold mb-0 cybermenace données">62 M</p>
+                                <p class="text-white fst-italic mb-0 explication">Personnes exposées — MOVEit 2023</p>
+                            </div>
+                            <div class="col-6 col-md-3 text-center mt-3">
+                                <p class="fw-bold mb-0 cybermenace données" >10 Md$</p>
+                                <p class="text-white fst-italic mb-0 explication">Coût estimé — MOVEit 2023</p>
+                            </div>
+                            <div class="col-6 col-md-3 text-center mt-3">
+                                <p class="fw-bold mb-0 cybermenace données">600 K</p>
+                                <p class="text-white fst-italic mb-0 explication">Entreprises exposées — 3CX 2023</p>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center mt-4">
+                            <div class="col-md-10">
+                                <p class="mb-4">
+                                    <strong class="cybermenace">Message clé :</strong> Le danger ne dépend pas 
+                                    du type de client lui-même, mais de la surface d'attaque exposée, de la qualité 
+                                    du code et de la gestion des mises à jour.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Définitions -->
+                <div class="row py-4 px-2">
+                    <div class="col-md-12 mt-2 defis" data-aos="fade-up-right" data-aos-delay="350">
+                        <span class="alcim text-uppercase fw-bolder">Définitions : Client Léger & Client Lourd</span>
+                        <div class="row d-md-flex mt-3 justify-content-md-around g-4">
+                            <div class="col-md-5">
+                                <div class="p-2 border border-secondary rounded-3 h-100">
+                                    <p class="cybermenace fw-bold fst-italic text-decoration-underline mb-3">CLIENT LÉGER — Thin Client</p>
+                                    <p>
+                                        Un client léger correspond à une application dont le traitement est 
+                                        majoritairement réalisé côté serveur. Le poste utilisateur agit principalement comme interface d'accès.
+                                    </p>
+                                    <p class="fst-italic cybermenace mb-0">Caractéristiques :</p>
+                                    <ul class="list-unstyled ms-2 ms-sm-3">
+                                        <li>◈ Pas ou peu d'installation locale</li>
+                                        <li>◈ Données hébergées côté serveur ou dans le cloud</li>
+                                        <li>◈ Mises à jour centralisées et automatiques</li>
+                                        <li>◈ Dépendance à une connexion réseau</li>
+                                    </ul>
+                                    <p class="fst-italic cybermenace mb-0 mt-3">Exemples :</p>
+                                    <ul class="list-unstyled ms-2 ms-sm-3">
+                                        <li>◈ Gmail, Google Docs, Salesforce</li>
+                                        <li>◈ Applications web PHP (Laravel) ou Java (Spring Boot)</li>
+                                        <li>◈ Terminaux virtuels: VDI, Citrix, accès distant via navigateur</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="p-2 border border-secondary rounded-3 h-100">
+                                    <p class="cybermenace fw-bold fst-italic text-decoration-underline mb-3">CLIENT LOURD — Thick / Fat Client</p>
+                                    <p>
+                                        Un client lourd est une application installée localement, contenant sa propre 
+                                        logique métier et pouvant fonctionner sans connexion permanente.
+                                    </p>
+                                    <p class="fst-italic cybermenace mb-0">Caractéristiques :</p>
+                                    <ul class="list-unstyled ms-2 ms-sm-3">
+                                        <li>◈ Installation requise sur chaque poste</li>
+                                        <li>◈ Données stockées localement ou synchronisées</li>
+                                        <li>◈ Mises à jour dépendantes de l'utilisateur ou de l'administrateur</li>
+                                        <li>◈ Fonctionnement possible hors ligne</li>
+                                    </ul>
+                                    <p class="fst-italic cybermenace mb-0 mt-3">Exemples :</p>
+                                    <ul class="list-unstyled ms-2 ms-sm-3">
+                                        <li>◈ Microsoft Office, Adobe, Visual Studio</li>
+                                        <li>◈ Applications Java Swing / JavaFX</li>
+                                        <li>◈ Outils de transfert: MOVEit Transfer, FileZilla, Outlook</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- résultat -->
+            <div class="container text-white defis" data-aos="zoom-in" data-aos-delay="300">
+                <h4 class="text-center py-3 text-decoration-underline fst-italic">Résultats de la veille technologique</h4>
+            </div>
+
+            <section class="container text-white section pb-4">
+
+                <!-- Tableau comparatif -->
+                <div class="container-fluid mx-auto mt-5" data-aos="fade-up-left" data-aos-delay="300">
+                    <span class="alcim text-uppercase fw-bolder">Comparaison cybersécurité : différences clés</span>
+                    <div class="pt-2 pb-5 container-md mt-3">
+                        <table class="table table-dark table-striped text-white box-shadow-IA">
+                            <thead>
+                                <tr class="align-middle">
+                                    <th scope="col">Critère</th>
+                                    <th scope="col">Client Léger</th>
+                                    <th scope="col" class="d-none d-sm-table-cell">Client Lourd</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="align-middle">
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td class="d-none d-sm-table-cell"></td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">Surface d'attaque</th>
+                                    <td>Navigateur + serveur web + API</td>
+                                    <td class="d-none d-sm-table-cell">App locale + OS + fichiers locaux</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">Vecteur s'attaque</th>
+                                    <td>XSS, SQLi, vol de session, CSRF</td>
+                                    <td class="d-none d-sm-table-cell">Failles logicielles, désérialisation, RCE</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">Impact</th>
+                                    <td><strong>Une faille serveur impacte tous les utilisateurs</strong></td>
+                                    <td class="d-none d-sm-table-cell">Impact local, mais persistant</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">Mise à jour</th>
+                                    <td>Centralisées et immédiates</td>
+                                    <td class="d-none d-sm-table-cell">Dépendantes de chaque poste</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">Surveillance</th>
+                                    <td>Logs centralisés — SIEM facile</td>
+                                    <td class="d-none d-sm-table-cell">Logs distribués — difficile à centraliser</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">Exemples</th>
+                                    <td>Laravel web, Spring Boot MVC</td>
+                                    <td class="d-none d-sm-table-cell">Application Java Swing / Log4j, MOVEit installé</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table table-dark table-striped text-white box-shadow-IA d-sm-none mt-5">
+                            <thead>
+                                <tr class="align-middle">
+                                    <th scope="col">Critère</th>
+                                    <th scope="col">Client Lourd</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="align-middle">
+                                    <th scope="row"></th>
+                                    <td></td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">Surface d'attaque</th>
+                                    <td>App locale + OS + fichiers locaux</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">Vecteur d'attaque</th>
+                                    <td>Failles logicielles, désérialisation, RCE</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">Impact</th>
+                                    <td>Impact local, mais persistant</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">Mise à jour</th>
+                                    <td>Dépendantes de chaque poste</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">Surveillance</th>
+                                    <td>Logs distribués — difficile à centraliser</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">Exemples</th>
+                                    <td>Application Java Swing / Log4j, MOVEit installé</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="fst-italic mt-4">
+                            <strong class="cybermenace">Point clé :</strong> Le client léger centralise le risque 
+                            côté serveur, tandis que le client lourd le distribue sur chaque poste.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Risques client léger -->
+                <div id="categorie-1" class="container-fluid mx-1 mt-2" data-aos="zoom-in-up" data-aos-delay="400">
+                    <span class="alcim-veille text-uppercase fw-bolder">1. Risques du Client Léger — Failles & Exemples</span>
+                    <div class="pt-2 pb-2">
+                        <p class="my-4">
+                            Les clients légers exposent principalement les serveurs et les sessions utilisateurs. 
+                            Une vulnérabilité côté serveur peut affecter l'ensemble des utilisateurs simultanément.
+                        </p>
+                    </div>
+                    <!-- row d-md-flex mt-5 justify-content-md-around g-4 -->
+                    <div class="row g-3 mb-4 d-md-flex justify-content-center">
+                        <div class="col-md-4">
+                            <div class="p-3 border border-secondary rounded-3 h-100">
+                                <p class="cybermenace fw-bold mb-2 fst-italic text-decoration-underline">Injections web</p>
+                                <p>XSS, SQL, CSRF : failles liées à des entrées non sécurisées.</p>
+                                <p class="fst-italic text-white">
+                                    Exemple PHP : utilisation de <code class="cyber">$_GET</code> sans requêtes préparées → injection SQL
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-3 border border-secondary rounded-3 h-100">
+                                <p class="cybermenace fw-bold mb-2 fst-italic text-decoration-underline">Vol de session</p>
+                                <p>Cookies ou tokens interceptés dans le navigateur.</p>
+                                <p class="fst-italic text-white">
+                                    Exemple : attaque Okta 2023 — 134 clients impactés via un cookie volé dans le navigateur d'un technicien.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-3 border border-secondary rounded-3 h-100">
+                                <p class="cybermenace fw-bold mb-2 fst-italic text-decoration-underline">Mauvaise configuration des API</p>
+                                <p>Endpoints sensibles accessibles sans authentification.</p>
+                                <p class="fst-italic text-white">
+                                    Exemple : endpoint <code class="cyber">/actuator</code> Spring Boot laissé ouvert sans Spring Security.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="fst-italic mt-5 mb-3">Attaques réelles — Client Léger (2023–2024) :</p>
+                    <div class="pb-4 container-md">
+                        <table class="table table-dark table-striped text-white box-shadow-IA">
+                            <thead>
+                                <tr class="align-middle">
+                                    <th scope="col">Attaque</th>
+                                    <th scope="col" class="d-none d-sm-table-cell">Type</th>
+                                    <th scope="col">Vecteur / Impact</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="align-middle"><th scope="row"></th><td class="d-none d-sm-table-cell"></td><td></td></tr>
+                                <tr class="align-middle">
+                                    <th scope="row"><a class="text-white fst-italic" href="https://www.manageengine.com/fr/blog/general/analyse-de-lattaque-de-la-chaine-dapprovisionnement-dokta-en-2023.html" target="_blank">Okta (2023)</a></th>
+                                    <td class="d-none d-sm-table-cell">SaaS / Navigateur</td>
+                                    <td>Cookie de session volé → accès à Cloudflare, 1Password, BeyondTrust. <br><strong>134 clients impactés.</strong> Okta gère +17 000 entreprises.</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row"><a class="text-white fst-italic" href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-012/" target="_blank">CitrixBleed CVE-2023-4966</a></th>
+                                    <td class="d-none d-sm-table-cell">VDI / Client léger</td>
+                                    <td>Fuite mémoire → vol de tokens actifs. Contourne le MFA. Exploité par LockBit, Medusa. <br> <strong>+10 000 serveurs exposés.</strong> Boeing, ICBC victimes.</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row"><a class="text-white fst-italic" href="https://sansec.io/" target="_blank">Magecart / Magento (2024)</a></th>
+                                    <td class="d-none d-sm-table-cell">App web PHP</td>
+                                    <td>JS malveillant injecté dans pages de paiement PHP. <br>CosmicSting : 75 % des plateformes touchées. <strong>70 000+ boutiques, 380 000 clients British Airways.</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Risques client lourd -->
+                <div id="categorie-2" class="container-fluid mx-auto mt-3" data-aos="zoom-in-up" data-aos-delay="400">
+                    <span class="alcim-veille text-uppercase fw-bolder">2. Risques du Client Lourd — Failles & Exemples</span>
+                    <div class="pt-2 pb-2">
+                        <p class="my-4">
+                            Les clients lourds distribuent le risque sur chaque poste individuel.
+                            Chaque machine non mise à jour représente une porte d'entrée indépendante, potentiellement ouverte indéfiniment.
+                        </p>
+                    </div>
+                    <div class="row g-3 mb-4 justify-content-center">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="p-3 border border-secondary rounded-3 h-100">
+                                <p class="cybermenace fw-bold mb-2 fst-italic text-decoration-underline">Patch non appliqué</p>
+                                <p>Faille connue, correctif disponible, mais non installé sur le poste.</p>
+                                <small class="fst-italic text-white">Exemple : MOVEit 2023 — le patch existait avant l'exploitation</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="p-3 border border-secondary rounded-3 h-100">
+                                <p class="cybermenace fw-bold mb-2 fst-italic text-decoration-underline">Version End of Life</p>
+                                <p>L'éditeur arrête les correctifs → toute nouvelle CVE reste non corrigée.</p>
+                                <small class="fst-italic text-white">Exemple : PHP 7.4 encore utilisé après fin de support</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="p-3 border border-secondary rounded-3 h-100">
+                                <p class="cybermenace fw-bold mb-2 fst-italic text-decoration-underline">Dépendances non mises à jour</p>
+                                <p>Librairies vulnérables intégrées à l'application.</p>
+                                <small class="fst-italic text-white">Exemple : Log4j 2.14 → Log4Shell CVSS 10/10, encore actif en 2024.</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="p-3 border border-secondary rounded-3 h-100">
+                                <p class="cybermenace fw-bold mb-2 fst-italic text-decoration-underline">Supply Chain</p>
+                                <p>La mise à jour officielle elle-même est compromise par un attaquant.</p>
+                                <small class="fst-italic text-white">Exemple : 3CX 2023 (Lazarus) — 600 000 entreprises exposées.</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="fst-italic mt-4 mb-3">Attaques réelles — Client Lourd (2023–2024) :</p>
+                    <div class="pb-4 container-md">
+                        <table class="table table-dark table-striped text-white box-shadow-IA">
+                            <thead>
+                                <tr class="align-middle">
+                                    <th scope="col">Attaque</th>
+                                    <th scope="col" class="d-none d-sm-table-cell">Type</th>
+                                    <th scope="col">Vecteur / Impact</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="align-middle"><th scope="row"></th><td class="d-none d-sm-table-cell"></td><td></td></tr>
+                                <tr class="align-middle">
+                                    <th scope="row"><a class="text-white fst-italic" href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-005/" target="_blank">MOVEit CVE-2023-34362</a></th>
+                                    <td class="d-none d-sm-table-cell">Logiciel installé</td>
+                                    <td>Injection SQL → accès sans authentification. Patch disponible le jour J. <br> <strong>+2 500 organisations touchés, 62 M personnes exposées, +10 Md$.</strong> BBC, Shell, gouvernement Canada.</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row"><a class="text-white fst-italic" href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-003/" target="_blank">3CX Supply Chain (2023)</a></th>
+                                    <td class="d-none d-sm-table-cell">Mise à jour compromise</td>
+                                    <td>Lazarus Group compromet le build officiel de 3CX. La mise à jour contenait un malware. <br> <strong>600 000 entreprises potentiellement exposées.</strong></td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row"><a class="text-white fst-italic" href="https://logging.apache.org/log4j/2.x/index.html" target="_blank">Log4Shell CVE-2021-44228</a></th>
+                                    <td class="d-none d-sm-table-cell">Java client lourd</td>
+                                    <td>CVSS 10/10. App Java avec Log4j 2.14 → prise de contrôle complète. <br> <strong>En 2024 : 37 % des téléchargements Log4j = version vulnérable.</strong> Apple, Amazon, Tesla touchés.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Log4Shell comparaison -->
+                <div id="categorie-3" class="container-fluid mx-auto mt-3" data-aos="zoom-in-up" data-aos-delay="400">
+                    <span class="alcim-veille text-uppercase fw-bolder">3. Java : Client Léger ET Client Lourd — Log4Shell illustre les deux</span>
+                    <div class="pt-2 pb-4">
+                        <p class="my-4 fst-italic">
+                            Log4Shell (CVE-2021-44228 — CVSS 10/10) illustre parfaitement l'impact différent selon l'architecture.
+                        </p>
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-md-5">
+                                <div class="p-2 border border-secondary rounded-3 h-100">
+                                    <p class="cybermenace fw-bold fst-italic text-decoration-underline mb-3">Java — Client Léger (web)</p>
+                                    <p>Spring Boot MVC servi via navigateur.</p>
+                                    <ul class="list-unstyled ms-2 ms-sm-3">
+                                        <li>◈ Faille Log4Shell côté serveur</li>
+                                        <li>◈ <span class="fst-italic cybermenace">1 patch serveur = tous les utilisateurs sont protégés instantanément</span></li>
+                                        <li>◈ Correction rapide et centralisée</li>
+                                        <li>◈ Exemple : API REST Java en production avec Log4j → patch en 1 seul déploiement</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="p-2 border border-secondary rounded-3 h-100">
+                                    <p class="cybermenace fw-bold fst-italic text-decoration-underline mb-3">Java — Client Lourd (installé)</p>
+                                    <p>App Java Swing / JavaFX installée localement.</p>
+                                    <ul class="list-unstyled ms-2 ms-sm-3">
+                                        <li>◈ Faille Log4Shell sur chaque poste</li>
+                                        <li>◈ <span class="fst-italic cybermenace">Chaque poste doit être mis à jour individuellement</span></li>
+                                        <li>◈ Un poste oublié = faille ouverte des mois</li>
+                                        <li>◈ En 2024 : 37 % des téléchargements Log4j = version vulnérable</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-center mt-4 fst-italic">
+                            <strong class="cybermenace">Conclusion :</strong> Une même faille peut avoir un impact radicalement 
+                            différent selon l'architecture.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tableau de synthèse -->
+                <div id="categorie-4" class="container-fluid mx-auto mt-3" data-aos="zoom-in-up" data-aos-delay="400">
+                    <span class="alcim-veille text-uppercase fw-bolder">4. Tableau de synthèse des attaques récentes</span>
+                    <div class="pt-2 pb-4 container-md">
+                        <table class="table table-dark table-striped text-white box-shadow-IA mt-3">
+                            <thead>
+                                <tr class="align-middle">
+                                    <th scope="col">Attaque</th>
+                                    <th scope="col" class="d-none d-sm-table-cell">Type client</th>
+                                    <th scope="col" class="d-none d-md-table-cell">Année</th>
+                                    <th scope="col">Impact</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="align-middle"><th scope="row"></th><td class="d-none d-sm-table-cell"></td><td class="d-none d-md-table-cell"></td><td></td></tr>
+                                <tr class="align-middle">
+                                    <th scope="row">Okta</th>
+                                    <td class="d-none d-sm-table-cell">Léger (SaaS)</td>
+                                    <td class="d-none d-md-table-cell">2023</td>
+                                    <td>134 clients</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">CitrixBleed CVE-2023-4966</th>
+                                    <td class="d-none d-sm-table-cell">Léger (VDI)</td>
+                                    <td class="d-none d-md-table-cell">2023</td>
+                                    <td>+10 000 serveurs</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">Magecart / Magento</th>
+                                    <td class="d-none d-sm-table-cell">Léger (PHP)</td>
+                                    <td class="d-none d-md-table-cell">2024</td>
+                                    <td>70 000+ boutiques</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">MOVEit CVE-2023-34362</th>
+                                    <td class="d-none d-sm-table-cell">Lourd (installé)</td>
+                                    <td class="d-none d-md-table-cell">2023</td>
+                                    <td>62 M personnes, 10 Md$</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">3CX Supply Chain</th>
+                                    <td class="d-none d-sm-table-cell">Lourd (installé)</td>
+                                    <td class="d-none d-md-table-cell">2023</td>
+                                    <td>600 000 entreprises</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th scope="row">Log4Shell (Java local)</th>
+                                    <td class="d-none d-sm-table-cell">Lourd (Java)</td>
+                                    <td class="d-none d-md-table-cell">2021–24</td>
+                                    <td>CVSS 10/10, millions postes</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="fst-italic mt-4">
+                            <strong class="cybermenace">Observation :</strong> Dans tous ces cas, la cause racine est la
+                             même — code vulnérable, dépendances non mises à jour ou absence de patch. <br>
+                            Le type de client ne détermine pas la gravité d'une faille, mais la manière dont elle se propage.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- bonnes pratiques -->
+            <section class="container text-white py-3">
+                <div class="container-fluid row" data-aos="fade-up-left" data-aos-delay="300">
+                    <div class="col-md-10 mb-3 defis">
+                        <span class="alcim text-uppercase fw-bolder">Bonnes pratiques — Client Léger & Client Lourd</span>
+                        <div class="pb-4 mt-4 container-md">
+                            <table class="table table-dark table-striped text-white box-shadow-IA ">
+                                <thead>
+                                    <tr class="align-middle">
+                                        <th scope="col">Domaine</th>
+                                        <th scope="col">Client Léger</th>
+                                        <th scope="col" class="d-none d-sm-table-cell">Client Lourd</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="align-middle"><th scope="row"></th><td></td><td class="d-none d-sm-table-cell"></td></tr>
+                                    <tr class="align-middle">
+                                        <th scope="row">Mises à jour</th>
+                                        <td>Patch serveur immédiat → tous protégés</td>
+                                        <td class="d-none d-sm-table-cell">Automatisation du patch poste</td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <th scope="row">End of Life</th>
+                                        <td>Vérification du support PHP/Java (EOL = danger)</td>
+                                        <td class="d-none d-sm-table-cell">Changement de version avant fin de support</td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <th scope="row">Dépendances</th>
+                                        <td><code class="cyber">composer audit</code>, <code class="cyber">npm audit</code></td>
+                                        <td class="d-none d-sm-table-cell">OWASP Dependency-Check Java/Maven</td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <th scope="row">Authentification</th>
+                                        <td>MFA + gestion sessions, OAuth scopes minimaux</td>
+                                        <td class="d-none d-sm-table-cell">MFA + credentials forts, pas de comptes partagés</td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <th scope="row">Moindre privilège</th>
+                                        <td>RBAC, pas d'endpoint sensible exposé (<code class="cyber">/actuator</code>)</td>
+                                        <td class="d-none d-sm-table-cell">Pas d'admin local inutile, droits utilisateurs limités</td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <th scope="row">Surveillance</th>
+                                        <td>WAF + logs centralisés (SIEM)</td>
+                                        <td class="d-none d-sm-table-cell">EDR sur chaque poste + centralisation logs</td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <th scope="row">Chiffrement</th>
+                                        <td>HTTPS / TLS obligatoire (HSTS)</td>
+                                        <td class="d-none d-sm-table-cell">Chiffrement disque (BitLocker, FileVault)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="table table-dark table-striped text-white box-shadow-IA d-sm-none mt-5">
+                                <thead>
+                                    <tr class="align-middle">
+                                        <th scope="col">Domaine</th>
+                                        <th scope="col">Client Lourd</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="align-middle"><th scope="row"></th><td></td><td class="d-none d-sm-table-cell"></td></tr>
+                                    <tr class="align-middle">
+                                        <th scope="row">Mises à jour</th>
+                                        <td>Automatisation du patch poste</td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <th scope="row">End of Life</th>
+                                        <td>Changement de version avant fin de support</td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <th scope="row">Dépendances</th>
+                                        <td>OWASP Dependency-Check Java/Maven</td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <th scope="row">Authentification</th>
+                                        <td>MFA + credentials forts, pas de comptes partagés</td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <th scope="row">Moindre privilège</th>
+                                        <td>Pas d'admin local inutile, droits utilisateurs limités</td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <th scope="row">Surveillance</th>
+                                        <td>EDR sur chaque poste + centralisation logs</td>
+                                    </tr>
+                                    <tr class="align-middle">
+                                        <th scope="row">Chiffrement</th>
+                                        <td>Chiffrement disque (BitLocker, FileVault)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conclusion -->
+                <div class="container-fluid row justify-content-end py-4 mt-2" data-aos="fade-up-right" data-aos-delay="400">
+                    <div class="col-md-10 mb-3 defis">
+                        <span class="alcim text-uppercase fw-bolder">Conclusion — 3 messages à retenir</span>
+                        <div class="pb-4 row mt-5">
+                            <div class="d-flex gap-3 align-items-start mb-4">
+                                <div class="conclusion d-flex align-items-center justify-content-center text-white fw-bold rounded-circle flex-shrink-0">
+                                    1
+                                </div>
+                                <div>
+                                    <p class="fw-bold mb-1 fst-italic">Client Léger</p>
+                                    <p class="mb-0">Le risque est centralisé : une seule faille serveur peut impacter tous les utilisateurs.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-3 align-items-start mb-4">
+                                <div class="conclusion d-flex align-items-center justify-content-center text-white fw-bold rounded-circle flex-shrink-0">
+                                    2
+                                </div>
+                                <div>
+                                    <p class="fw-bold mb-1 fst-italic">Client Lourd</p>
+                                    <p class="mb-0">Le risque est distribué : chaque poste non mis à jour reste vulnérable.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-3 align-items-start mb-4">
+                                <div class="conclusion d-flex align-items-center justify-content-center text-white fw-bold rounded-circle flex-shrink-0">
+                                    3
+                                </div>
+                                <div>
+                                    <p class="fw-bold mb-1 fst-italic cybermenace">La vraie protection</p>
+                                    <ul class="list-unstyled ms-2 ms-sm-3">
+                                        <li>◈ Patch management</li>
+                                        <li>◈ Gestion des dépendances</li>
+                                        <li>◈ MFA</li>
+                                        <li>◈ Surveillance</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <blockquote class="border-start box-shadow-left ps-4 mt-3">
+                                <p class="fst-italic mb-4 text-center">
+                                    « La sécurité n'est pas une caractéristique du logiciel. C'est une pratique continue, quel que soit le type de client. »
+                                </p>
+                                <small class="text-white">Un développeur qui connaît les failles de son environnement vaut mieux que n'importe quel antivirus.</small>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Glossaire -->
+                <div class="container-fluid row pb-4 mt-2" data-aos="fade-up-left" data-aos-delay="400">
+                    <div class=" mb-3">
+                        <span class="alcim text-uppercase fw-bolder">Glossaire des termes techniques</span>
+                        <div class="pb-4 row mt-4 g-3 d-flex flex-lg-wrap">
+                            <ul class="list-unstyled ms-2 ms-sm-3 lh-lg">
+                                <li>◈ <span class="cybermenace">API</span> permet à des applications de communiquer entre elles.</li>
+                                <li>◈ <span class="cybermenace">API REST</span> utilise le protocole HTTP et des méthodes standards (GET, POST, etc.) pour échanger des données.
+                                <li>◈ <span class="cybermenace">CSRF — Cross-Site Request Forgery</span> : Le pirate fait exécuter une action à la victime sans qu'elle le sache (exemple : transfert bancaire 
+                                        automatique depuis un site piégé).</li>
+                                <li>◈ <span class="cybermenace">CVSS</span> : notation de 0 à 10 de la gravité d'une faille.</li>
+                                <li>◈ <span class="cybermenace">CVE</span> : répertoire officiel des failles connues (exemple : CVE-2023-34362).</li>
+                                <li>◈ <span class="cybermenace">End of Life (EOL)</span> : Quand un éditeur arrête le support d'une version, toute nouvelle CVE découverte après cette date ne sera jamais corrigée.</li>
+                                <li>◈ <span class="cybermenace">HTTPS</span> : protocole sécurisé utilisant TLS pour chiffrer les communications.</li>
+                                <li>◈ <span class="cybermenace">HSTS</span> force l'utilisation exclusive de connexions sécurisées.</li>
+                                <li>◈ <span class="cybermenace">MVC</span> : Architecture qui sépare les données, l'interface utilisateur 
+                                       et la logique de traitement pour mieux organiser une application.</li>
+                                <li>◈ <span class="cybermenace">MFA</span> : Méthode d'authentification qui combine plusieurs facteurs 
+                                       (mot de passe, code, biométrie) pour renforcer la sécurité des accès.</li>
+                                <li>◈ <span class="cybermenace">Patch</span> : Mise à jour logicielle visant à corriger des vulnérabilités ou des failles de sécurité.</li>
+                                <li>◈ <span class="cybermenace">RCE — Remote Code Execution</span> : Le pire scénario c'est quand un attaquant peut exécuter du code sur la machine victime à distance. Souvent noté CVSS 9 ou 10/10.</li>
+                                <li>◈ <span class="cybermenace">SaaS</span> : Modèle où une application est accessible via Internet sans installation locale, généralement via un navigateur.</li>
+                                <li>◈ <span class="cybermenace">SQLi</span> : Injection de code malveillant dans une requête vers une base de données.</li>
+                                <li>◈ <span class="cybermenace">WAF</span> : pare-feu applicatif web.</li>
+                                <li>◈ <span class="cybermenace">SIEM</span> : centralise et analyse les logs.</li>
+                                <li>◈ <span class="cybermenace">EDR</span> : détection et réponse sur chaque poste</li>
+                                <li>◈ <span class="cybermenace">XSS — Cross-Site Scripting</span> : Injection de code JavaScript malveillant dans une page web, exécuté dans 
+                                        le navigateur d'autres utilisateurs.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sitographie -->
+                <div class="container-fluid row justify-content-end references-liens" data-aos="fade-up-right" data-aos-delay="400">
+                    <div class="accordion accordion-flush bg-dark" id="accordionFlushReferences">
+                        <div class="accordion-item bg-dark">
+                            <h2 class="accordion-header">
+                                <span class="alcim text-uppercase fw-bolder accordion-button collapsed bg-dark mb-3"
+                                      type="button" data-bs-toggle="collapse"
+                                      data-bs-target="#flush-collapseOne"
+                                      aria-expanded="false" aria-controls="flush-collapseOne">Sitographie</span>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse bg-dark" data-bs-parent="#accordionFlushReferences">
+                                <div class="accordion-body text-white p-0">
+                                    <p class="fw-bold mb-1 cybermenace text-decoration-underline">Alertes et CVE officielles</p>
+                                    <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5">
+                                        <li>◈ CERTFR-2023-ALE-012 – Vulnérabilité CitrixBleed (CVE-2023-4966). <a href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-012/" target="_blank">URL</a></li>
+                                        <li>◈ CERTFR-2023-ALE-005 – Vulnérabilités MOVEit Transfer. <a href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-005/" target="_blank">URL</a></li>
+                                        <li>◈ CERTFR-2023-ALE-003 – Vulnérabilités 3CX Desktop App. <a href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-003/" target="_blank">URL</a></li>
+                                        <li>◈ CISA – Cybersecurity and Infrastructure Security Agency. <a href="https://www.cisa.gov/" target="_blank">URL</a></li>
+                                        <li>◈ MITRE – Base officielle des CVE. <a href="https://cve.mitre.org/" target="_blank">URL</a></li>
+                                        <li>◈ NVD – National Vulnerability Database. <a href="https://nvd.nist.gov/" target="_blank">URL</a></li>
+                                    </ul>
+
+                                    <p class="fw-bold mb-1 mt-4 cybermenace text-decoration-underline">Attaques et analyses</p>
+                                    <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5">
+                                        <li>◈ Ransomware LockBit et faille CitrixBleed. <a href="https://www.it-connect.fr/ransomware-lockbit-faille-citrix-bleed-cve-2023-4966/" target="_blank">URL</a></li>
+                                        <li>◈ Analyse de l'attaque Okta 2023. <a href="https://www.manageengine.com/fr/blog/general/analyse-de-lattaque-de-la-chaine-dapprovisionnement-dokta-en-2023.html" target="_blank">URL</a></li>
+                                        <li>◈ Log4Shell – Sophos. <a href="https://www.sophos.com/fr-fr/blog/log4shell-java-vulnerability-how-to-safeguard-your-servers" target="_blank">URL</a></li>
+                                        <li>◈ Sansec (sécurité e-commerce / Magecart). <a href="https://sansec.io/" target="_blank">URL</a></li>
+                                        <li>◈ Emsisoft – Rapport MOVEit. <a href="https://www.emsisoft.com/" target="_blank">URL</a></li>
+                                    </ul>
+
+                                    <p class="fw-bold mb-1 mt-4 cybermenace text-decoration-underline">Documentation officielle</p>
+                                    <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5">
+                                        <li>◈ Apache Software Foundation : Log4j Security Vulnerabilities. <a href="https://logging.apache.org/log4j/2.x/index.html" target="_blank">URL</a></li>
+                                        <li>◈ Spring Boot : Documentation officielle Actuator. <a href="https://spring.io/projects/spring-boot" target="_blank">URL</a></li>
+                                        <li>◈ Magento / Adobe Commerce. <a href="https://business.adobe.com/products/magento/magento-commerce.html" target="_blank">URL</a></li>
+                                        <li>◈ OWASP (vulnérabilités XSS, CSRF, etc.). <a href="https://owasp.org/" target="_blank">URL</a></li>
+                                        <li>◈ Cloudflare Radar (statistiques attaques web). <a href="https://radar.cloudflare.com/" target="_blank">URL</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+         </main>
+
+         <!-- script de AOS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <!-- script de Link SwiperJS-->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="assets/js/carousel.js"></script>
+        <script src="assets/js/portfolio.js"></script>
+
+        <!-- script de Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    
+    </body>
+
+    <!-- Footer -->
+    <footer class="footer container-fluid text-center text-white bg-dark p-0 pt-5" >
+        <div class="container-fluid border-top border-secondary">
+             <section class="pt-3">
+
+                <!-- Première row -->
+                <div class="row g-0 pt-3 col-12 justify-content-center">
+                    <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
+                        <div class="col-12 col-md-auto pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="index.html" class="text-white text-decoration-none">Accueil</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="stages.html" class="text-white text-decoration-none">Stages</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class=" font-weight-bold mx-2">
+                                <a href="projets.html" class="text-white text-decoration-none">Projets</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class=" font-weight-bold mx-2">
+                                <a href="veille.html" class="text-white text-decoration-none">La veille</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="synthese.html" class="text-white text-decoration-none">Synthèse</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="CV.html" class="text-white text-decoration-none">CV</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class=" font-weight-bold mx-2">
+                                <a href="contact.html" class="text-white text-decoration-none">Contact</a>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deuxième row -->
+                <div class="row g-0 py-3 col-12 justify-content-center">
+                     <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
+                        <div class="col-12 col-md-auto pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="mentions-legales.html" class="text-white text-decoration-none">Mentions légales</a>
+                            </h6>
+                        </div>
+                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                            <h6 class="font-weight-bold mx-2">
+                                <a href="plan-du-site.html" class="text-white text-decoration-none">Plan du site</a>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <hr class="my-2" />
+
+            <section class="py-3">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                        <p><strong>Designed by Klaudia Juhasz</strong></p>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="container-fluid text-center pb-3">
+                <a href="https://www.linkedin.com/in/klaudia-juhasz-a165002bb/" class="text-white me-4" target="_blank" title="Lien vers mon profil LinkedIn"><i class="fab fa-linkedin fa-2xl"></i></a>
+                <a href="https://www.figma.com/design/QMpU6uu0tGXpdInYixZ798/Mon_portfolio?node-id=1-2&p=f&t=4kfGd9vv8Z0PAOW0-0" class="text-white me-4" target="_blank" title="Lien vers mon compte Figma"><img src="assets/images/figma-logo.webp" class="rounded-circle" id="figma-logo" alt="logo Figma"></a>
+                <a href="https://github.com/juklau" class="text-white me-4" target="_blank" title="Lien vers mon GitHub"><i class="fab fa-github fa-2xl"></i></a>
+            </section>
+        </div>
+        <div class="text-center py-3 bg-black"> © 2026 Copyright</div>
+
+        <!-- Scroll Top -->
+        <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    </footer>
+    
+</html>
