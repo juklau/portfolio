@@ -126,19 +126,19 @@
                             <span class="alcim text-uppercase fw-bolder">Chiffres clés</span>
                             <div class="col-6 col-md-3 text-center mt-3">
                                 <p class="fw-bold mb-0 cybermenace données">+49 %</p>
-                                <p class="text-white fst-italic mb-0 explication">Attaques web en 2024 (Cloudflare)</p>
+                                <p class="text-white fst-italic mb-0 explication-cybermenac">Attaques web en 2024 (Cloudflare)</p>
                             </div>
                             <div class="col-6 col-md-3 text-center mt-3">
                                 <p class=" fw-bold mb-0 cybermenace données">62 M</p>
-                                <p class="text-white fst-italic mb-0 explication">Personnes exposées — MOVEit 2023</p>
+                                <p class="text-white fst-italic mb-0 explication-cybermenac">Personnes exposées — MOVEit 2023</p>
                             </div>
                             <div class="col-6 col-md-3 text-center mt-3">
                                 <p class="fw-bold mb-0 cybermenace données" >10 Md$</p>
-                                <p class="text-white fst-italic mb-0 explication">Coût estimé — MOVEit 2023</p>
+                                <p class="text-white fst-italic mb-0 explication-cybermenac">Coût estimé — MOVEit 2023</p>
                             </div>
                             <div class="col-6 col-md-3 text-center mt-3">
                                 <p class="fw-bold mb-0 cybermenace données">600 K</p>
-                                <p class="text-white fst-italic mb-0 explication">Entreprises exposées — 3CX 2023</p>
+                                <p class="text-white fst-italic mb-0 explication-cybermenac">Entreprises exposées — 3CX 2023</p>
                             </div>
                         </div>
 
@@ -239,7 +239,7 @@
                                     <td class="d-none d-sm-table-cell">App locale + OS + fichiers locaux</td>
                                 </tr>
                                 <tr class="align-middle">
-                                    <th scope="row">Vecteur s'attaque</th>
+                                    <th scope="row">Vecteur d'attaque</th>
                                     <td>XSS, SQLi, vol de session, CSRF</td>
                                     <td class="d-none d-sm-table-cell">Failles logicielles, désérialisation, RCE</td>
                                 </tr>
@@ -590,12 +590,12 @@
                                     </tr>
                                     <tr class="align-middle">
                                         <th scope="row">Authentification</th>
-                                        <td>MFA + gestion sessions, OAuth scopes minimaux</td>
+                                        <td>MFA + gestion sessions</td>
                                         <td class="d-none d-sm-table-cell">MFA + credentials forts, pas de comptes partagés</td>
                                     </tr>
                                     <tr class="align-middle">
                                         <th scope="row">Moindre privilège</th>
-                                        <td>RBAC, pas d'endpoint sensible exposé (<code class="cyber">/actuator</code>)</td>
+                                        <td>OAuth scopes minimaux, RBAC, pas d'endpoint sensible exposé (<code class="cyber">/actuator</code>)</td>
                                         <td class="d-none d-sm-table-cell">Pas d'admin local inutile, droits utilisateurs limités</td>
                                     </tr>
                                     <tr class="align-middle">
@@ -711,22 +711,24 @@
                                 <li>◈ <span class="cybermenace">API REST</span> utilise le protocole HTTP et des méthodes standards (GET, POST, etc.) pour échanger des données.
                                 <li>◈ <span class="cybermenace">CSRF — Cross-Site Request Forgery</span> : Le pirate fait exécuter une action à la victime sans qu'elle le sache (exemple : transfert bancaire 
                                         automatique depuis un site piégé).</li>
-                                <li>◈ <span class="cybermenace">CVSS</span> : notation de 0 à 10 de la gravité d'une faille.</li>
                                 <li>◈ <span class="cybermenace">CVE</span> : répertoire officiel des failles connues (exemple : CVE-2023-34362).</li>
+                                <li>◈ <span class="cybermenace">CVSS</span> : notation de 0 à 10 de la gravité d'une faille.</li>
+                                <li>◈ <span class="cybermenace">EDR</span> : détection et réponse sur chaque poste.</li>
                                 <li>◈ <span class="cybermenace">End of Life (EOL)</span> : Quand un éditeur arrête le support d'une version, toute nouvelle CVE découverte après cette date ne sera jamais corrigée.</li>
-                                <li>◈ <span class="cybermenace">HTTPS</span> : protocole sécurisé utilisant TLS pour chiffrer les communications.</li>
-                                <li>◈ <span class="cybermenace">HSTS</span> force l'utilisation exclusive de connexions sécurisées.</li>
+                                <li>◈ <span class="cybermenace">HTTPS</span> : protocole sécurisé utilisant SSL/TLS pour chiffrer les communications.</li>
+                                <li>◈ <span class="cybermenace">HSTS</span> : force l'utilisation exclusive de connexions sécurisées.</li>
                                 <li>◈ <span class="cybermenace">MVC</span> : Architecture qui sépare les données, l'interface utilisateur 
                                        et la logique de traitement pour mieux organiser une application.</li>
                                 <li>◈ <span class="cybermenace">MFA</span> : Méthode d'authentification qui combine plusieurs facteurs 
                                        (mot de passe, code, biométrie) pour renforcer la sécurité des accès.</li>
                                 <li>◈ <span class="cybermenace">Patch</span> : Mise à jour logicielle visant à corriger des vulnérabilités ou des failles de sécurité.</li>
+                                <li>◈ <span class="cybermenace">RBCA</span> : Contrôle d'accès basé sur les rôles.</li>
                                 <li>◈ <span class="cybermenace">RCE — Remote Code Execution</span> : Le pire scénario c'est quand un attaquant peut exécuter du code sur la machine victime à distance. Souvent noté CVSS 9 ou 10/10.</li>
                                 <li>◈ <span class="cybermenace">SaaS</span> : Modèle où une application est accessible via Internet sans installation locale, généralement via un navigateur.</li>
-                                <li>◈ <span class="cybermenace">SQLi</span> : Injection de code malveillant dans une requête vers une base de données.</li>
-                                <li>◈ <span class="cybermenace">WAF</span> : pare-feu applicatif web.</li>
                                 <li>◈ <span class="cybermenace">SIEM</span> : centralise et analyse les logs.</li>
-                                <li>◈ <span class="cybermenace">EDR</span> : détection et réponse sur chaque poste</li>
+                                <li>◈ <span class="cybermenace">SQLi</span> : Injection de code malveillant dans une requête vers une base de données.</li>
+                                <li>◈ <span class="cybermenace">VDI</span> : Infrastructure de bureau virtuel.</li>
+                                <li>◈ <span class="cybermenace">WAF</span> : pare-feu applicatif web.</li>
                                 <li>◈ <span class="cybermenace">XSS — Cross-Site Scripting</span> : Injection de code JavaScript malveillant dans une page web, exécuté dans 
                                         le navigateur d'autres utilisateurs.</li>
                             </ul>
