@@ -369,10 +369,13 @@
 }
 #swantrad{
     width: 85%;
+    border: 2px solid var(--white-color) !important;
 }
 #ops-imperium{
     width: 60%;
+    border: 2px solid var(--white-color) !important;
 }
+
 
 
 /*********************************************************************************************

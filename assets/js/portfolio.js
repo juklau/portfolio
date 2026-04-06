@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
     dropdownItems.forEach(link => { 
-        // cas 1 : page avec fragment => #OCS-Inventory
+        // cas 1 : page avec fragment => #OCS-Inventory (ancien code)
         if(kidCurrentUrl && link.href.split("#")[1] === kidCurrentUrl){
             link.classList.add("active");
         }
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     })
 
-    // si un page "stage" est active => dans le menu "formation.html" sera active
+    // si un page "stage" est active => dans le menu "stage.html" sera active
     if(window.location.href.includes("stage")){
         navLinks.forEach(link => {
             if(link.href.includes("stages.html")){
