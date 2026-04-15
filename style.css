@@ -179,7 +179,7 @@
     height: 100px;
 }
 .card.stage-details{
-    width: 350px;
+    min-width: 300px;
 }
 .card.stage-details:hover{
     border-color: var(--main-color) !important;
@@ -538,6 +538,11 @@
 .cryptovault-image,
 #mcd-cryptovault,
 #mcd-roombooking,
+
+#mcd-mini-crm,
+#gantt-linkstream,
+#gantt-swantrad,
+#gantt-classcord,
 .Meteo-image,
 .RoomBooking-image{ /*image à "zoomer"  */
     max-width: 100%;
@@ -563,9 +568,16 @@
 .cryptovault-image{
     max-width: 85%;
 }
+#mcd-mediastock{
+    max-width: 90% !important;
+}
 #mcd-cryptovault,
-#mcd-roombooking{
+#mcd-roombooking,
+#mcd-linkstream-proposed{
     max-width: 75% !important;
+}
+#mcd-mini-crm{
+    max-width: 65% !important;
 }
  /*image "zoomé" en plein d'écran */
 .zoom-overlay {
@@ -581,8 +593,24 @@
     align-items: center;
     padding-top: 60px;
 }
+.zoom-wrapper {
+    background-color: var(--dark-gray-color);
+    padding: 100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .zoomed {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    box-shadow: 0 0 10px var(--white-opal-color);
+    cursor: zoom-out;
+}
+
+/* .zoomed {
     max-width: 90vw;
     max-height: 80vh;
     object-fit:contain;
@@ -593,7 +621,7 @@
     display: block;
     position: relative;
     z-index: 1000;
-}
+} */
 
 
 .fst-italic.CRM,
@@ -994,15 +1022,19 @@ input, textarea {
     .CRM-image,
     .MediaStock-image,
     .linkstream-image,
+    #gantt-linkstream,
     .swantrad-image,
+    #gantt-swantrad,
     .cryptovault-image,
     .cryptovault-image-web,
     .cryptovault-image-web2,
     .Meteo-image,
     .RoomBooking-image,
     .Chat-image,
+    #gantt-classcord,
     #user-list {
         cursor: zoom-in;
+        max-width: 80%;
     }
 
     .zoomed {

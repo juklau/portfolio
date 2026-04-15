@@ -39,12 +39,8 @@
                                 <li class="nav-item">
                                     <a class="nav-link text-white" aria-current="page" href="index.html">Accueil</a>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle text-white" href="stages.html" role="button" aria-expanded="false">Stages</a>
-                                    <ul class="dropdown-menu border-0 ">
-                                        <li><a class="dropdown-item text-white" href="stage1.html">LinkStream (stage 2025)</a></li>
-                                        <li><a class="dropdown-item text-white" href="stage2.html">Swantrad (stage 2026)</a></li>
-                                    </ul>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="stages.html">Stages</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle text-white" href="projets.html" role="button" aria-expanded="false"> Projets</a>
@@ -52,9 +48,9 @@
                                         <li><a class="dropdown-item text-white" href="projets.html">Compétences</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-chat.html">ClassCord Client</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-gestion_contacts.html">Mini-CRM</a></li>
-                                        <li><a class="dropdown-item text-white" href="rp-mediastock.html">MediaStock</a></li>
+                                        <li><a class="dropdown-item text-white" href="rp-mediastock.html">MédiaStock</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-cryptovault.html">CryptoVault</a></li>
-                                        <li><a class="dropdown-item text-white" href="rp-meteo_api.html">Meteo</a></li>
+                                        <li><a class="dropdown-item text-white" href="rp-meteo_api.html">Météo</a></li>
                                         <li><a class="dropdown-item text-white" href="rp-roombooking.html">RoomBooking</a></li>
                                     </ul>
                                 </li>
@@ -88,7 +84,7 @@
             </div>
 
             <section class="presentation container"> 
-                <div class="row mx-auto mt-5" data-aos="fade-up-left" data-aos-delay="600">
+                <div class="row mx-auto mt-5" data-aos="fade-up-left" data-aos-delay="200">
                     <span class="alcim text-uppercase fw-bolder">Contexte</span> 
                     <div class=" pt-2 pb-4 row ">
                         <div class="col-md-10 mb-3 box-shadow">
@@ -112,20 +108,20 @@
                 </div>
             </section>
 
-            <section class="fonctionnalites container">
-                <div class="mt-5 pt-5" data-aos="zoom-in-down" data-aos-delay="900">
+            <section class="fonctionnalites container" data-aos="zoom-in-down" data-aos-delay="200">
+                <div class="mt-5 pt-5">
                     <span class="px-2 alcim text-uppercase fw-bolder">Fonctionnalités et automatisation de LinkStream</span>
                 </div>
-                <div class="container carousel swiper swiper-container d-flex justify-content-center mt-2" data-aos="zoom-in-down" data-aos-delay="1000">
+                <div class="container carousel swiper swiper-container d-flex justify-content-center mt-2">
                     <div class="slider-wrapper text-white pb-5 px-1 ">
                         <ul class="fonctionnalites-liste swiper-wrapper list-unstyled mb-1">
                             <li class="linkstream-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="fonctionnalites-item p-1 mt-5 mb-3">
                                     <div class="card stage col-md-4 mx-auto py-3 bg-dark text-white">
                                         <h5 class="card-title text-center pt-2 pb-1">Authentification sécurisée via Unipile</h5>
-                                        <img class="card-img linkstream-image mx-auto my-auto" src="assets/images/linkstream/auth par assistant unipile.webp" alt="Authentification">
+                                        <img class="card-img linkstream-image mx-auto my-auto" src="assets/images/linkstream/auth_par_assistant_unipile.webp" alt="Authentification">
                                         <small class="legende text-center fst-italic mt-1">
-                                            Connexion directe à LinkedIn grâce à lAPI Unipile, pour une 
+                                            Connexion directe à LinkedIn grâce à l'Application Programming Interface (API) Unipile, pour une 
                                             authentification fluide et sécurisée des utilisateurs
                                         </small>
                                     </div>
@@ -192,7 +188,7 @@
                                     </div>
                                 </div> 
                             </li>
-                            <li class="linkstream-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
+                            <li class="linkstream-container swiper-slide d-flex flex-column align-items-center position-relative mb-2" id="MCD-linkstream">
                                 <div class="fonctionnalites-item p-1 mt-5 mb-3">
                                     <div class="card stage col-md-4 mx-auto py-3 bg-dark text-white">
                                         <h5 class="card-title text-center py-3">Architecture et base de données Supabase</h5>
@@ -218,8 +214,8 @@
             </section>
 
             <section class="presentation container">
-                <div class="row justify-content-end mt-4">
-                    <div class="col-md-10 mt-5" data-aos="fade-up-right" data-aos-delay="700">
+                <div class="row mt-4">
+                    <div class="col-md-12 mt-5" data-aos="fade-up-right" data-aos-delay="250">
                         <span class="alcim text-uppercase fw-bolder">Besoins</span>
                         <p class=" mt-4 mb-1">
                             Le besoin principal identifié par l'entreprise était de remédier à l'absence d'interface utilisateur 
@@ -239,7 +235,7 @@
                 </div>
 
                 <div class="row py-4 mt-2 justify-content-center" >
-                    <div class="col-md-11 mt-3" data-aos="fade-up-left" data-aos-delay="800">
+                    <div class="col-md-11 mt-3" data-aos="fade-up-left">
                         <span class="alcim text-uppercase fw-bolder">Environnement technologique</span>
                         <p class="mt-4 mb-2">
                             Le développement s'est appuyé sur un environnement moderne, orienté automatisation et interconnexion d'API :
@@ -261,12 +257,28 @@
                     </div>
                 </div>
 
+                <div class="lien-intern my-5 row justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="col-md-8 text-center">
+                        <span class="alcim text-uppercase fw-bolder">Modèle conceptuel des données (proposition d'évolution)</span>
+                        <img src="assets/images/linkstream/MCD_proposed.webp"
+                            alt="Modèle conceptuel des données (proposition d'évolution)" class="img-fluid rounded-3 d-block mx-auto mt-4" id="mcd-linkstream-proposed">
+                    </div>
+                </div>
+
                 <div class="row justify-content-end pt-4">
-                    <div class="col-md-10" data-aos="fade-up-right" data-aos-delay="900">
+                    <div class="col-md-11" data-aos="fade-up-right">
                         <span class="alcim text-uppercase fw-bolder">Réalisation</span>
                         <p class=" mt-4 mb-2">
                            Le projet a été mené selon une démarche itérative, alternant phases de conception, développement et validation.
                         </p>
+
+                        <div class="lien-intern my-5 row justify-content-center">
+                            <div class="col-md-8 text-center">
+                                <span class="alcim text-uppercase fw-bolder">Planification du projet – Diagramme de Gantt</span>
+                                <img src="assets/images/linkstream/gantt_linkstream.webp"
+                                    alt="Planification du projet – Diagramme de Gantt" class="img-fluid rounded-3 d-block mx-auto mt-4" id="gantt-linkstream">
+                            </div>
+                        </div>
                         <p>
                             Les principales étapes réalisées sont :
                         </p>
@@ -276,9 +288,10 @@
                                 récupération automatique des messages, profils et conversations via l'API Unipile et insertion dans Supabase.
                             </small>
                             <li class="linkstream">◈ Modélisation des données :</li>
-                            <small class="ms-4">
-                                création des tables <span class="fst-italic">linkedin_people</span>, <span class="fst-italic">linkedin_chats</span>, 
-                                <span class="fst-italic">linkedin_messages</span> et d'une fonction SQL <span class="fst-italic">get_messages()</span> 
+                            <small class="ms-4 lien-intern">
+                                création des tables <span class="fst-italic">linkedin_people (utilisateur)</span>, <span class="fst-italic">linkedin_chats (conversation)</span>, 
+                                <!-- (Cf. Rapport de stage: Figure 14 - page 39.) -->
+                                <span class="fst-italic">linkedin_messages (message)</span> <a class="text-white fst-italic" href="#MCD-linkstream">(Cf. MCD Supabase)</a> et d'une fonction SQL <span class="fst-italic">get_messages() <a class="text-white" href="assets/documents/rapport_stage_ops_imperium.pdf" target="_blank">(Cf. Rapport de stage: Annexes 7 - page 31.)</a></span> 
                                 pour simplifier les requêtes.
                             </small>
                             <li class="linkstream">◈ Développement de l'application Streamlit :</li>
@@ -305,8 +318,8 @@
             </section>
 
             <section class="container">
-                <div class="row text-white" >
-                    <div class="col-md-10 mt-5 justify-content-end" data-aos="fade-up-left" data-aos-delay="700">
+                <div class="row text-white" data-aos="fade-up-left" data-aos-delay="250">
+                    <div class="col-md-10 mt-5 justify-content-end">
                         <span class="alcim text-uppercase fw-bolder">Bilan</span>
                         <p class="mt-4">
                             Le projet LinkStream a permis de concevoir une solution complète d'automatisation et de valorisation des 
@@ -319,7 +332,7 @@
                         </p>
                     </div>
                     <div class=" row justify-content-center">
-                        <div class="col-md-10" data-aos="fade-up-left" data-aos-delay="700">
+                        <div class="col-md-11">
                             <!-- px-2 -->
                             <p class="">
                                 Ce projet m'a permis de mobiliser des compétences transversales en automatisation, en modélisation de 
@@ -331,8 +344,8 @@
                     </div>
                 </div>
 
-                <div class="mt-4 py-4 row justify-content-end">
-                    <div class="col-md-10" data-aos="fade-up-right" data-aos-delay="800">
+                <div class="mt-4 py-4 row justify-content-center">
+                    <div class="col-md-10" data-aos="fade-up-right">
                         <span class="alcim text-uppercase fw-bolder">Productions associées</span>
                         <p class="mt-4 mb-2">
                             Dans le cadre de ce projet, plusieurs livrables techniques ont été produits pour documenter et présenter le travail réalisé :
@@ -343,7 +356,8 @@
                                 <span class="fst-italic">linkedin_chats</span>, <span class="fst-italic">linkedin_messages</span> et la fonction SQL 
                                 <span class="fst-italic">get_messages()</span>.</li>
                             <li>◈ Application Streamlit de consultation et de visualisation des conversations LinkedIn.</li>  
-                            <li>◈ Schéma d'architecture technique illustrant les interactions entre les services (Unipile, n8n, Supabase, Streamlit).</li> 
+                            <li class="lien-intern">◈ Schéma d'architecture technique illustrant les interactions entre les services (Unipile, n8n, Supabase, Streamlit) -<a class="text-white" href="https://github.com/juklau/app_automatisation/tree/main" target="_blank"><strong class="fw-medium fst-italic">
+                                README.md</strong></a>.</li> 
                             <li>◈ MCD de la base de données et commentaires intégrés dans le code.</li>      
                             <li class="lien-intern">◈ Documentation technique du projet <a class="text-white" href="https://github.com/juklau/app_automatisation/tree/main" target="_blank"><strong class="fw-medium fst-italic">
                                 (README.md)</strong></a> présentant le contexte, l'architecture, les technologies utilisées et le fonctionnement 
@@ -356,7 +370,7 @@
 
             <section class="container">
                 <div class="mt-4 row">
-                    <div class="col-md-10" data-aos="fade-up-right" data-aos-delay="900">
+                    <div class="col-md-10" data-aos="fade-up-right" data-aos-delay="250">
                         <span class="alcim text-uppercase fw-bolder">Perspectives</span>
                         <p class="mt-4 mb-2">
                             Plusieurs pistes d'amélioration ont été identifiées pour la suite du projet :
@@ -386,7 +400,7 @@
                     <span class="alcim text-uppercase fw-bolder">Compétences</span>
                 </div>
                 <div class="container-fluid box-shadow-left">
-                    <div data-aos="fade-left" data-aos-delay="800">
+                    <div data-aos="fade-left" data-aos-delay="200">
                         <p class="mt-3 fst-italic LinkStream">1. Gérer le patrimoine informatique</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li>1.1. Recenser et identifier les ressources numériques</li>
@@ -395,7 +409,7 @@
                                 </small>
                         </ul>
                     </div>
-                    <div data-aos="fade-left" data-aos-delay="900">
+                    <div data-aos="fade-left" data-aos-delay="200">
                         <p class="fst-italic LinkStream">2. Répondre aux incidents et aux demandes d'assistance et d'évolution</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li>2.1. Collecter, suivre et orienter des demandes</li>
@@ -410,7 +424,7 @@
                                 </small>
                         </ul>
                     </div>
-                    <div data-aos="fade-left" data-aos-delay="1000">
+                    <div data-aos="fade-left" data-aos-delay="200">
                         <p class="fst-italic LinkStream">4. Travailler en mode projet</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li> 4.1. Analyser les objectifs et les modalités d'organisation d'un projet</li>
@@ -434,7 +448,7 @@
                                 </small>
                         </ul>
                     </div>
-                    <div data-aos="fade-left" data-aos-delay="1100">
+                    <div data-aos="fade-left" data-aos-delay="200">
                         <p class="fst-italic LinkStream">5. Mettre à disposition des utilisateurs un service informatique</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li>5.1. Réaliser les tests d'intégration et d'acceptation d'un service</li>
@@ -445,7 +459,7 @@
                                 </small>
                         </ul>
                     </div>
-                    <div data-aos="fade-left" data-aos-delay="1200">
+                    <div data-aos="fade-left" data-aos-delay="200">
                         <p class="fst-italic LinkStream">6. Organiser son développement professionnel</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li>6.1. Mettre en place son environnement d'apprentissage personnel</li>
@@ -465,7 +479,7 @@
             <div class="row py-4 justify-content-center">
                 <div class="col-12 d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
 
-                    <div data-aos="zoom-in" data-aos-delay="700">
+                    <div data-aos="zoom-in" data-aos-delay="250">
                         <a href="assets/documents/RP_3_LinkStream_JUHASZ.pdf" target="_blank">
                             <button class="btn btn-outline-secondary border border-2 rounded portfolio-btn my-3">
                                 Fiche descriptive
@@ -473,7 +487,7 @@
                         </a>
                     </div>
 
-                    <div data-aos="zoom-in" data-aos-delay="700">
+                    <div data-aos="zoom-in" data-aos-delay="250">
                         <a href="assets/documents/rapport_stage_ops_imperium.pdf" target="_blank">
                             <button class="btn btn-outline-secondary border border-2 rounded portfolio-btn">
                                 Rapport de stage
