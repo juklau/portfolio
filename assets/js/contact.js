@@ -83,19 +83,21 @@ function validateNom(nom, fieldName = "nom"){
 
     //vérifier que username contient seulement des caractères autorisés
     // const usernameRegex = /^[A-ZÀÂÆÇÉÈÊËÏÎÔÙÛÜ][a-zA-Zàâæçéèêëïîôùûüÿ\s\-]{1,49}$/;
-    const nomRegex = /^[a-zA-ZàâæçéèêëïîôùûüÿÀÂÆÇÉÈÊËÏÎÔÙÛÜ\s\-]{1,49}$/;
+    const nomRegex = /^[a-zA-ZàâæçéèêëïîôùûüÿÀÂÆÇÉÈÊËÏÎÔÙÛÜ\s\-']{2,50}$/;
     if(!nomRegex.test(nom)){
-        errors.push(`Le ${fieldName} ne peut contenir que des lettres, espaces, tirets et apostrophes`);
+        errors.push(`Le ${fieldName} ne peut contenir que des lettres, des espaces, des tirets et des apostrophes`);
     }
 
     // détecter les tentatives d'injectionSQL dans username
     if (containsSQLInjection(nom)) {
-        errors.push(`Le ${fieldName} contient des caractères invalides (SQL)`);
+        // errors.push(`Le ${fieldName} contient des caractères invalides (SQL)`);
+        errors.push(`Le ${fieldName} contient des caractères non autorisés`);
     }
 
     //détecter les tentatives d'injection XSS dans username
     if (containsXSS(nom)) {
-        errors.push(`Le ${fieldName} contient des caractères invalides (XSS)`);
+        // errors.push(`Le ${fieldName} contient des caractères invalides (XSS)`);
+        errors.push(`Le ${fieldName} contient des caractères non autorisés`);
     }
 
     return errors;
@@ -123,20 +125,17 @@ function validateEmail(email) {
     
     // vérifier les injections
     if (containsSQLInjection(email)) {
-        errors.push("L'email contient des caractères invalides (SQL)");
+        // errors.push("L'email contient des caractères invalides (SQL)");
+        errors.push("L'email contient des caractères non autorisés");
     }
     
     if (containsXSS(email)) {
-        errors.push("L'email contient des caractères invalides (XSS)");
+        // errors.push("L'email contient des caractères invalides (XSS)");
+        errors.push("L'email contient des caractères non autorisés");
     }
     
     return errors;
 }
-
-
-
-const form = document.querySelector("#contact-form");
-const submitBtn = document.querySelector("#submit-btn");
 
 // fonction"générale" pour valider les champs
 function validerField(inputId, validateFn){
@@ -211,11 +210,13 @@ const validSujet = () => {
         }
         
         if (containsSQLInjection(value)) {
-            errors.push("Le sujet contient des caractères invalides (SQL)");
+            // errors.push("Le sujet contient des caractères invalides (SQL)");
+            errors.push("Le sujet contient des caractères non autorisés");
         }
         
         if (containsXSS(value)) {
-            errors.push("Le sujet contient des caractères invalides (XSS)");
+            // errors.push("Le sujet contient des caractères invalides (XSS)");
+            errors.push("Le sujet contient des caractères non autorisés");
         }
         
         return errors;
@@ -237,11 +238,13 @@ const validMessage = () => {
         }
         
         if (containsSQLInjection(value)) {
-            errors.push("Le message contient des caractères invalides (SQL)");
+            // errors.push("Le message contient des caractères invalides (SQL)");
+            errors.push("Le message contient des caractères non autorisés");
         }
         
         if (containsXSS(value)) {
-            errors.push("Le message contient des caractères invalides (XSS)");
+            // errors.push("Le message contient des caractères invalides (XSS)");
+            errors.push("Le message contient des caractères non autorisés");
         }
         
         return errors;
@@ -256,17 +259,35 @@ const validCheckbox = function(){
 }
 
 
-//réinitialiser tous les styles de validation
-function resetValidationStyles() {
+//afficher / masquer le message d'erreur du checkbox
+function showCheckboxError(show) {
+    let errorElement = document.getElementById("checkbox-error");
+    if (!errorElement) {
+        errorElement = document.createElement("p");
+        errorElement.id = "checkbox-error";
+        errorElement.classList.add("text-danger", "text-center", "fst-italic", "mt-2");
+        const checkboxWrapper = document.querySelector(".costum-check");
+        checkboxWrapper.insertAdjacentElement("afterend", errorElement); // ← était "errorEl"
+    }
+    errorElement.textContent = show
+        ? "Vous devez accepter que vos données servent uniquement à vous recontacter."
+        : "";
+}
 
-    document.querySelectorAll(".megfelelo, .nem-megfelelo").forEach(element => {
+
+//réinitialiser tous les styles de validation
+function resetValidationStyles(form) {
+
+    form.querySelectorAll(".megfelelo, .nem-megfelelo").forEach(element => {
         element.classList.remove("megfelelo", "nem-megfelelo");
     });
 
-    document.querySelectorAll("small").forEach(small => {
+    form.querySelectorAll("small").forEach(small => {
         small.textContent = "";
         small.classList.remove("text-danger", "text-success");
     });
+
+    showCheckboxError(false); //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 }
 
 //afficher le message de confirmation
@@ -283,7 +304,7 @@ function showConfirmation(){
 }
 
 //gestion de l'état du bouton de soumission
-function setSubmitBtnLoading(isLoading){
+function setSubmitBtnLoading(isLoading, submitBtn){
     if(isLoading){
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Envoi en cours...';
@@ -299,6 +320,9 @@ function setSubmitBtnLoading(isLoading){
 //initialisation des événements de validation
 document.addEventListener("DOMContentLoaded", () => {
 
+    const form = document.querySelector("#contact-form");
+    const submitBtn = document.querySelector("#submit-btn");
+
     //blur => validation en temps réel sur perte de focus
     form.nom.addEventListener("blur", validNom);
     form.prenom.addEventListener("blur", validPrenom);
@@ -308,70 +332,80 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //validation immédiate pour le checkbox
     form.egyetertes.addEventListener("change", () => {
-        if(!validCheckbox){
-            alert("Vous devez accepter que vos données servent uniquement à vous recontacter.");
+        if(validCheckbox()){
+            // alert("Vous devez accepter que vos données servent uniquement à vous recontacter.");
+            showCheckboxError(false);
+        }else{
+            showCheckboxError(true);
         }
     });
-});
 
 
-//gestion de le soumission du formulaire
-form.addEventListener("submit", async function(e) {
 
-    //empêche le rechargement de page
-    e.preventDefault();
+    //gestion de le soumission du formulaire
+    form.addEventListener("submit", async function(e) {
 
-    // Validation complète du formulaire
-    const isNomValid = validNom();
-    const isPrenomValid = validPrenom();
-    const isEmailValid = validEmail();
-    const isSujetValid = validSujet();
-    const isMessageValid = validMessage();
-    const isCheckboxValid = validCheckbox();
+        //empêche le rechargement de page
+        e.preventDefault();
 
-    if (isNomValid && isPrenomValid && isEmailValid && isSujetValid && isMessageValid && isCheckboxValid) {
+        // Validation complète du formulaire
+        const isNomValid = validNom();
+        const isPrenomValid = validPrenom();
+        const isEmailValid = validEmail();
+        const isSujetValid = validSujet();
+        const isMessageValid = validMessage();
+        const isCheckboxValid = validCheckbox();
 
-        try{
-            //valider le spinner
-            setSubmitBtnLoading(true);
-
-            const formData = new FormData(this);
-
-            const response = await fetch("https://formspree.io/f/xaneaygb", {
-
-                method: "POST", 
-                body: formData,
-                headers: {
-                    'Accept' : 'application/json'
-                }
-            });
-
-            if(response.ok){
-
-                //afficher la confirmation
-                showConfirmation();
-
-                //réinitialiser le formulaie
-                form.reset();
-                resetValidationStyles();
-            }else{
-                const data = await response.json();
-
-                // throw => interrompre le fonctionnement normal et "donne" le control au catch
-                throw new Error(data.error || "Erreur lors de l'envoi.");
-                
-            }
-        } catch (error){
-            console.error("Erreur Formspree: ", error);
-            alert("Une erreur est survenu lors de l'envoi. Veuillez réessayer.")
-        } finally {
-
-            //désactiver le spinner
-            setSubmitBtnLoading(false);
+        //afficher le message d'erreur chackbox sans vider le formulaire
+        if(!isCheckboxValid){
+            showCheckboxError(true);
+        }else{
+            showCheckboxError(false);
         }
 
-    }else {
-        console.warn("Formulaire invalide !");
-        alert("Veuillez corriger les erreurs dans le formulaire.");
-    } 
+        if (isNomValid && isPrenomValid && isEmailValid && isSujetValid && isMessageValid && isCheckboxValid) {
+
+            try{
+                //valider le spinner
+                setSubmitBtnLoading(true, submitBtn);
+
+                const formData = new FormData(this);
+
+                const response = await fetch("https://formspree.io/f/xaneaygb", {
+
+                    method: "POST", 
+                    body: formData,
+                    headers: {
+                        'Accept' : 'application/json'
+                    }
+                });
+
+                if(response.ok){
+
+                    //afficher la confirmation
+                    showConfirmation();
+
+                    //réinitialiser le formulaie
+                    form.reset();
+                    resetValidationStyles(form);
+                }else{
+                    const data = await response.json();
+
+                    // throw => interrompre le fonctionnement normal et "donne" le control au catch
+                    throw new Error(data.error || "Erreur lors de l'envoi.");
+                    
+                }
+            } catch (error){
+                console.error("Erreur Formspree: ", error);
+                alert("Une erreur est survenu lors de l'envoi. Veuillez réessayer.")
+            } finally {
+
+                //désactiver le spinner
+                setSubmitBtnLoading(false, submitBtn);
+            }
+
+        }else {
+            console.warn("Formulaire invalide !");
+        } 
+    });
 });
