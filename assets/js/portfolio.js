@@ -221,7 +221,7 @@ AOS.init({
 /*                          ZOOM Image en plein d'écran
 /* ======================================================================================== */
 
-document.querySelectorAll(".Chat-image, #user-list, .CRM-image, .linkstream-image, #gantt-linkstream, .MediaStock-image, #gantt-classcord, .swantrad-image, #gantt-swantrad, .cryptovault-image, .cryptovault-image-web, .cryptovault-image-web2, .Meteo-image, .RoomBooking-image").forEach(img => {
+document.querySelectorAll(".Chat-image, #user-list, .CRM-image, .linkstream-image, #gantt-linkstream, .MediaStock-image, #gantt-classcord, .swantrad-image, #gantt-swantrad, #gantt-mediastock, #gantt-roombooking, #gantt-cryptovault, .cryptovault-image, .cryptovault-image-web, .cryptovault-image-web2, .Meteo-image, .RoomBooking-image").forEach(img => {
   img.addEventListener("click", function () {
 
     //désactiver le zoom x < sm
