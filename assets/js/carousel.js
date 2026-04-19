@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //     }
     // }
 
-    new Swiper('.slider-wrapper', {
+    window.swiperInstance = new Swiper('.slider-wrapper', {
     
         loop: true,
         spaceBetween: 15,

@@ -293,3 +293,47 @@ document.querySelectorAll(".Chat-image, #user-list, .CRM-image, .linkstream-imag
   });
 });
 
+
+/* ======================================================================================== */
+/*                          ZOOMED MCD LinkStream dans le carousel
+/* ======================================================================================== */
+
+const lienMCD = document.querySelector('a[href="#MCD-linkstream"]');
+
+if (lienMCD) {
+    lienMCD.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        // Trouver l'index de la slide MCD dans le carousel
+        // exclure les copie phantom lequel est créé par Swiper automatiquement si loop: true est activé
+        const slides = document.querySelectorAll('.swiper-slide:not(.swiper-slide-duplicate)');
+        let mcdIndex = 0;
+        slides.forEach((slide, i) => {
+            if (slide.id === 'MCD-linkstream') mcdIndex = i;
+        });
+
+        // Scroll vers le carousel
+        // smooth => faire défiler la page "en douceur"
+        // center => carousel soit visible au centre de l'écran 
+        const carousel = document.querySelector('.swiper-container');
+        carousel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        // 3. Naviguer vers la slide MCD + déclencher le zoom
+        setTimeout(() => {
+            if (window.swiperInstance) {        //=> l'instance Swiper qui est exposé dans carousel.js
+                window.swiperInstance.slideToLoop(mcdIndex); 
+            }
+
+            // 4. Réutiliser le système de zoom existant sur l'image MCD
+            setTimeout(() => {
+
+                // cible: l'image dans la slide MCD (.linkstream-image à l'intérieur de #MCD-linkstream)
+                const mcdImg = document.querySelector('#MCD-linkstream .linkstream-image'); 
+                if (mcdImg && window.innerWidth >= 576) {
+                    mcdImg.click(); //simulation du click
+                }
+            }, 400);  // il se déclanche à 1100ms
+
+        }, 700);  //naviguer vers slide après 700ms => 0,7 secondes
+    });
+}
