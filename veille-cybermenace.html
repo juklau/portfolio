@@ -23,9 +23,14 @@
             <nav class="navbar navbar-expand-md bg-dark p-4" data-bs-theme="dark">
                 <div class="container d-flex justify-content-between">
                     <a class="navbar-brand" href="#">Klaudia Juhasz</a>
-                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="text-white" id="menu-btn"><i class="bi bi-list"></i></span>
-                    </button>
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="https://www.linkedin.com/in/klaudia-juhasz-a165002bb/" class="text-white" target="_blank" title="Lien vers mon profil LinkedIn">
+                            <i class="fab fa-linkedin fa-2xl"></i>
+                        </a>
+                        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="text-white" id="menu-btn"><i class="bi bi-list"></i></span>
+                        </button>
+                    </div>
                    
                     <div class="offcanvas offcanvas-start menu-ouvert" tabindex="-1" id="navbarSupportedContent" 
                     aria-labelledby="navbarSupportedContentLabel">
@@ -361,17 +366,17 @@
                             </thead>
                             <tbody>
                                 <tr class="align-middle"><th scope="row"></th><td class="d-none d-sm-table-cell"></td><td></td></tr>
-                                <tr class="align-middle">
+                                <tr class="align-middle lien-extern">
                                     <th scope="row"><a class="text-white fst-italic" href="https://www.manageengine.com/fr/blog/general/analyse-de-lattaque-de-la-chaine-dapprovisionnement-dokta-en-2023.html" target="_blank">Okta (2023)</a></th>
                                     <td class="d-none d-sm-table-cell">SaaS / Navigateur</td>
                                     <td>Cookie de session volé → accès à Cloudflare, 1Password, BeyondTrust. <br><strong>134 clients impactés.</strong> Okta gère +17 000 entreprises.</td>
                                 </tr>
-                                <tr class="align-middle">
+                                <tr class="align-middle lien-extern">
                                     <th scope="row"><a class="text-white fst-italic" href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-012/" target="_blank">CitrixBleed CVE-2023-4966</a></th>
                                     <td class="d-none d-sm-table-cell">VDI / Client léger</td>
                                     <td>Fuite mémoire → vol de tokens actifs. Contourne le MFA. Exploité par LockBit, Medusa. <br> <strong>+10 000 serveurs exposés.</strong> Boeing, ICBC victimes.</td>
                                 </tr>
-                                <tr class="align-middle">
+                                <tr class="align-middle lien-extern">
                                     <th scope="row"><a class="text-white fst-italic" href="https://sansec.io/" target="_blank">Magecart / Magento (2024)</a></th>
                                     <td class="d-none d-sm-table-cell">App web PHP</td>
                                     <td>JS malveillant injecté dans pages de paiement PHP. <br>CosmicSting : 75 % des plateformes touchées. <strong>70 000+ boutiques, 380 000 clients British Airways.</strong></td>
@@ -433,17 +438,17 @@
                             </thead>
                             <tbody>
                                 <tr class="align-middle"><th scope="row"></th><td class="d-none d-sm-table-cell"></td><td></td></tr>
-                                <tr class="align-middle">
+                                <tr class="align-middle lien-extern">
                                     <th scope="row"><a class="text-white fst-italic" href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-005/" target="_blank">MOVEit CVE-2023-34362</a></th>
                                     <td class="d-none d-sm-table-cell">Logiciel installé</td>
                                     <td>Injection SQL → accès sans authentification. Patch disponible le jour J. <br> <strong>+2 500 organisations touchés, 62 M personnes exposées, +10 Md$.</strong> BBC, Shell, gouvernement Canada.</td>
                                 </tr>
-                                <tr class="align-middle">
+                                <tr class="align-middle lien-extern">
                                     <th scope="row"><a class="text-white fst-italic" href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-003/" target="_blank">3CX Supply Chain (2023)</a></th>
                                     <td class="d-none d-sm-table-cell">Mise à jour compromise</td>
                                     <td>Lazarus Group compromet le build officiel de 3CX. La mise à jour contenait un malware. <br> <strong>600 000 entreprises potentiellement exposées.</strong></td>
                                 </tr>
-                                <tr class="align-middle">
+                                <tr class="align-middle lien-extern">
                                     <th scope="row"><a class="text-white fst-italic" href="https://logging.apache.org/log4j/2.x/index.html" target="_blank">Log4Shell CVE-2021-44228</a></th>
                                     <td class="d-none d-sm-table-cell">Java client lourd</td>
                                     <td>CVSS 10/10. App Java avec Log4j 2.14 → prise de contrôle complète. <br> <strong>En 2024 : 37 % des téléchargements Log4j = version vulnérable.</strong> Apple, Amazon, Tesla touchés.</td>
