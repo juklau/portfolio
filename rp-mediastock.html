@@ -96,7 +96,7 @@
                         <div class="col-md-8 mt-3 ">
                             <p class="mt-3">
                                 Le projet MédiaStock a été réalisé dans le cadre du BTS SIO, option SLAM, au cours de 
-                                la deuxième année de formation. 
+                                la deuxième année de formation, pour répondre à des besoins de l'établissement IRIS MediaSchool Nice.
                                 <br>
                                 Il s'agit d'une application web mobile-first destinée à gérer l'inventaire et les prêts 
                                 de matériel informatique et audiovisuel dans un établissement scolaire.
@@ -249,7 +249,7 @@
                 </div>
                 <div class="row py-4 mt-1 justify-content-center" data-aos="fade-up-left" data-aos-delay="200">
                     <div class="col-md-11" >
-                        <span class="alcim text-uppercase fw-bolder">Environnement technologique</span>
+                        <span class="alcim text-uppercase fw-bolder">Environnement de développement</span>
                         <p class="mt-4">
                             Le projet s'appuie sur une architecture trois-tiers (présentation, logique métier, données) et 
                             sur des technologies modernes respectant les standards du web :
@@ -279,11 +279,12 @@
                             <li>◈ Visual Studio Code - environnement de développement.</li>
                             <li>◈ Git / GitHub - gestion de versions et hébergement du code.</li>
                             <li>◈ Figma - conception des maquettes UI/UX.</li>
-                            <li>◈ Smartphone Android - tests des fonctionnalités de scan via caméra.</li>
+                            <li>◈ Smartphone - tests des fonctionnalités de scan via caméra.</li>
+                            <li>◈ Alwaysdata - hébergement de l'application web et de la base de données en environnement de production.</li>
                         </ul>
                         <p>
-                            L'ensemble a été conçu pour fonctionner en local (Docker) et sur 
-                            un serveur SISR distant, garantissant la portabilité et la cohérence de l'environnement.
+                            L'ensemble a été conçu pour fonctionner en local (via Docker) ainsi que sur un 
+                            serveur distant Alwaysdata, garantissant la portabilité et la cohérence de l'environnement.
                         </p>
                     </div>
                 </div>
@@ -296,7 +297,7 @@
                     </div>
                 </div>
 
-                <div class="lien-intern my-5 row justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+                <div class="lien-intern my-5 row justify-content-center" id="gantt" data-aos="zoom-in" data-aos-delay="200">
                     <div class="col-md-8 text-center mt-4">
                         <span class="alcim text-uppercase fw-bolder">Planification du projet – Diagramme de Gantt</span>
                         <img src="assets/images/swantrad/gantt-swantrad.webp"
@@ -399,8 +400,8 @@
                         </p>
 
                         <p class="mt-4 fst-italic mediastock text-decoration-underline mb-1">Documentation technique et fonctionnelle</p>
-                        <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5">
-                            <li>◈ Cahier des charges complet décrivant les objectifs ainsi que les besoins fonctionnels et techniques.</li>
+                        <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5 lien-extern">
+                            <li>◈ <a class="text-white fst-italic" target="_blank" href="https://github.com/juklau/MediaStock/blob/klaudia/docs/Cahier_de_charges_MediaStock.pdf">Cahier des charges</a> complet décrivant les objectifs ainsi que les besoins fonctionnels et techniques.</li>
                             <li>◈ Maquettes Figma des interfaces mobile.</li>
                             <li>◈ Schémas MCD et MLD de la base de données (présentés dans les annexes du cahier des charges, page 18).</li>  
                         </ul>
@@ -414,6 +415,8 @@
                                     <li>◈ Système d'authentification et gestion des QR codes via bibliothèques PHP et JS.</li>
                                     <li class="lien-intern">◈ Le code source de l'application disponible sur GitHub 
                                         <a class="text-white" href="https://github.com/juklau/MediaStock.git" target="_blank"><strong class="fw-medium fst-italic">en cliquant sur ce lien</strong></a>.</li>
+                                    <li class="lien-intern">◈ Vidéo de démonstration de l'application disponible sur Youtube
+                                        <a class="text-white" href="https://youtu.be/37du31-Slkc" target="_blank"><strong class="fw-medium fst-italic">en cliquant sur ce lien</strong></a>.</li>
                                 </ul>
                             </div>
                         </div>
@@ -421,11 +424,11 @@
                         <div class="row justify-content-center">
                             <div class="col-md-10">
                                 <p class="mt-4 fst-italic mediastock text-decoration-underline mb-1">Outils de gestion et tests</p>
-                                <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5">
-                                    <li>◈ Diagrammes de Gantt et Kanban (page 20 - 21 du cahier des charges) pour le suivi du développement.</li>
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 lien-intern">
+                                    <li>◈ <a class="text-white fst-italic" href="#gantt">Diagrammes de Gantt</a> et Kanban pour le suivi du développement.</li>
                                     <li>◈ Plan de tests détaillant les scénarios d'authentification, de prêt/restitution et de sécurité 
                                         (page 12 - 13 du cahier des charges).</li>
-                                    <li>◈ Documentation utilisateur illustrée par des captures d'écran des principales fonctionnalités.</li>
+                                    <li>◈ <a class="text-white fst-italic" target="_blank" href="https://github.com/juklau/MediaStock/blob/klaudia/docs/documentation_utilisateur_MediaStock.pdf">Documentation utilisateur</a> illustrée par des captures d'écran des principales fonctionnalités.</li>
                                 </ul>
                             </div>
                         </div>
@@ -511,6 +514,13 @@
                     <div data-aos="fade-left" data-aos-delay="220">
                         <p class="fst-italic MediaStock">2. Répondre aux incidents et aux demandes d'assistance et d'évolution</p>
                         <ul class="list-unstyled lh-lg ps-4">
+                             <li>2.1. Collecter, suivre et orienter des demandes</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">Les besoins du projet ont été définis à partir d'un cahier 
+                                    des charges détaillé, permettant d'identifier les fonctionnalités attendues (gestion du 
+                                    matériel, prêts, QR codes, authentification). J'ai suivi ces demandes tout au long du 
+                                    projet en les traduisant en fonctionnalités techniques adaptées.
+                                    
+                                </small>
                             <li>2.2. Traiter des demandes concernant les services réseau et système, applicatifs</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic"> 
                                     J'ai traité des demandes liées aux services système et applicatifs en configurant et en maintenant 
@@ -570,6 +580,14 @@
                             <li>6.1. Mettre en place son environnement d'apprentissage personnel</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">J'ai configuré un environnement d'apprentissage complet (Visual Studio Code, Docker, 
                                     GitHub, MySQL) me permettant de travailler de manière autonome et efficace sur le projet.
+                                </small>
+                            <li>6.3. Gérer son identité professionnelle</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">Dans le cadre de ce projet réalisé en groupe, j'ai contribué en 
+                                    tant que développeuse backend, en documentant mon travail et en respectant les bonnes pratiques 
+                                    de développement (versionnement Git, organisation du code). Cette expérience m'a permis de 
+                                    valoriser mes compétences techniques et de construire une identité professionnelle cohérente 
+                                    dans le domaine du développement applicatif.
+
                                 </small>
                             <li>6.4. Développer son projet professionnel</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic"> Ce projet m'a permis d'enrichir concrètement mes compétences en 

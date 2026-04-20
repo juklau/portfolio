@@ -221,7 +221,7 @@ AOS.init({
 /*                          ZOOM Image en plein d'écran
 /* ======================================================================================== */
 
-document.querySelectorAll(".Chat-image, #user-list, .CRM-image, .linkstream-image, #gantt-linkstream, .MediaStock-image, #gantt-classcord, .swantrad-image, #gantt-swantrad, #gantt-mediastock, #gantt-roombooking, #gantt-cryptovault, .cryptovault-image, .cryptovault-image-web, .cryptovault-image-web2, .Meteo-image, .RoomBooking-image").forEach(img => {
+document.querySelectorAll(".Chat-image, #user-list, .CRM-image, .linkstream-image, #gantt-linkstream, .MediaStock-image, #gantt-classcord, #gantt-mini-crm, .swantrad-image, #gantt-swantrad, #gantt-mediastock, #gantt-roombooking, #gantt-cryptovault, .cryptovault-image, .cryptovault-image-web, .cryptovault-image-web2, .Meteo-image, .RoomBooking-image").forEach(img => {
   img.addEventListener("click", function () {
 
     //désactiver le zoom x < sm
@@ -337,3 +337,15 @@ if (lienMCD) {
         }, 700);  //naviguer vers slide après 700ms => 0,7 secondes
     });
 }
+
+
+//éviter que url change en cliquant sur un ID (LinkStream, MediaStock)
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});

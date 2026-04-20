@@ -98,13 +98,22 @@
                     <div class=" py-3">
                         <div class="row">
                             <div class="col-11 my-3 mx-1 box-shadow-reverse">
-                                <div class="row col-md-12 ">
+                                <div class="row col-md-12">
                                     <div class="col-md-8 my-3">
-                                        <p class="mt-3">
+                                        <p class="mt-3 mb-1">
                                             Le projet Mini-CRM a été développé dans le cadre de ma formation en BTS SIO,
-                                            option SLAM. Il s'agit d'une application web destinée à la gestion de contacts
-                                            professionnels, pensée pour les freelances, indépendants et petites structures.
-                                            <br>
+                                             option SLAM, à partir d'un cahier des charges fictif établi pour 
+                                             l'association éducative La Sapience Heimatlos. Cette application web vise 
+                                             à répondre aux besoins de l'association en matière de gestion de contacts 
+                                             professionnels.
+                                        </p>
+                                        <p class="mb-1">
+                                            Elle a été pensée pour les freelances, indépendants et petites structures, 
+                                            et plus particulièrement pour les collaborateurs de l'association 
+                                            (formateurs, coordinateurs, personnels administratifs), afin de leur 
+                                            permettre de gérer leurs contacts de manière centralisée, sécurisée et organisée.
+                                        </p>
+                                        <p class="mb-1">
                                             Initialement conçue comme une solution mono-utilisateur, l'application a
                                             récemment évolué afin d'intégrer un système d'authentification sécurisé
                                             permettant la gestion de plusieurs clients au sein d'une même application.
@@ -310,7 +319,7 @@
                 </div>
                 <div class="row py-4 mt-2 justify-content-center" >
                     <div class="col-md-11" data-aos="fade-up-left" data-aos-delay="220">
-                        <span class="alcim text-uppercase fw-bolder">Environnement technologique</span>
+                        <span class="alcim text-uppercase fw-bolder">Environnement de développement</span>
                         <p class="mt-4 mb-2">
                             Le projet s'appuie sur un environnement moderne et modulable, combinant plusieurs outils complémentaires :
                         </p>
@@ -334,11 +343,19 @@
                     </div>
                 </div>
 
-                <div class="lien-intern my-5 row justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+                <div class="my-5 row justify-content-center" data-aos="zoom-in" data-aos-delay="200">
                     <div class="col-md-8 text-center">
                         <span class="alcim text-uppercase fw-bolder">Modèle conceptuel des données — Mini CRM</span>
                         <img src="assets/images/mini-crm/MCD_Mini_CRM.webp"
                             alt="Modèle conceptuel des données de l'application Mini CRM" class="img-fluid rounded-3 d-block mx-auto mt-5" id="mcd-mini-crm">
+                    </div>
+                </div>
+
+                <div class="my-5 row justify-content-center" data-aos="zoom-in" data-aos-delay="220">
+                    <div class="col-md-8 text-center mt-4">
+                        <span class="alcim text-uppercase fw-bolder">Planification du projet – Diagramme de Gantt</span>
+                        <img src="assets/images/mini-crm/gantt-mini-crm.webp"
+                            alt="Planification du projet – Diagramme de Gantt" class="img-fluid rounded-3 d-block mx-auto mt-5" id="gantt-mini-crm">
                     </div>
                 </div>
 
@@ -445,6 +462,31 @@
                                     nécessaires au projet (API Airtable, Cloudinary, Bootstrap, Postman, GitHub, système 
                                     d'authentification et gestion des sessions) afin de structurer l'architecture de l'application.
                                 </small>
+                            <li>1.5. Gérer des sauvegardes</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">
+                                    Le projet est sauvegardé régulièrement afin de garantir la sécurité du code et des données. 
+                                    Une copie complète est stockée sur un disque dur externe, en complément du versionnement 
+                                    assuré par Git et de l'hébergement sur GitHub. 
+                                    <br>
+                                     Par ailleurs, les données métier peuvent être exportées directement depuis l'interface 
+                                     Airtable au format CSV, ce qui permet de conserver une sauvegarde supplémentaire des 
+                                     contacts sous une forme exploitable et réutilisable. 
+                                     Cette redondance assure la continuité du projet en cas de défaillance matérielle ou logicielle.
+                                </small>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="210">
+                        <p class="fst-italic LinkStream">2. Répondre aux incidents et aux demandes d'assistance et d'évolution</p>
+                        <ul class="list-unstyled lh-lg ps-4">
+                            <li>2.1. Collecter, suivre et orienter des demandes</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">
+                                    Les besoins du projet ont été définis à partir d'un cahier des charges fictif fourni pour 
+                                    l'association La Sapience Heimatlos. Ce document m'a permis d'identifier les 
+                                    fonctionnalités attendues (authentification, gestion des contacts, isolation des 
+                                    données, etc.) et de suivre leur mise en œuvre tout au long du développement. Les 
+                                    demandes ont été analysées, priorisées et traduites en fonctionnalités concrètes 
+                                    afin de répondre au besoin exprimé.
+                                </small>
                         </ul>
                     </div>
                     <div data-aos="fade-left" data-aos-delay="220">
@@ -454,6 +496,15 @@
                                 <small class="ps-md-3 ps-lg-5 fst-italic"> 
                                     L'analyse du cahier des charges m'a permis de comprendre les objectifs 
                                     attendus et de planifier les différentes étapes du projet en fonction des contraintes définies.
+                                </small>
+                            <li> 4.2. Planifier les activités</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">
+                                    La planification du projet a été réalisée à l'aide d'un diagramme de Gantt, 
+                                    permettant d'organiser les différentes phases du développement : initialisation 
+                                    et conception, développement des fonctionnalités CRUD, filtres et recherche, 
+                                    sécurisation, puis finalisation. Cette planification m'a permis de structurer 
+                                    mon travail, de respecter les délais fixés et de suivre l'avancement du projet 
+                                    de manière progressive et cohérente.
                                 </small>
                         </ul>
                     </div>

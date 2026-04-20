@@ -539,6 +539,7 @@
 #gantt-linkstream,
 #gantt-swantrad,
 #gantt-classcord,
+#gantt-mini-crm,
 #gantt-mediastock,
 .Meteo-image,
 .RoomBooking-image{ /*image à "zoomer"  */
@@ -572,7 +573,8 @@
 #mcd-roombooking,
 #mcd-linkstream-proposed,
 #gantt-cryptovault,
-#gantt-classcord{
+#gantt-classcord,
+#gantt-mini-crm{
     max-width: 75% !important;
 }
 #mcd-cryptovault,
@@ -1035,6 +1037,7 @@ input, textarea {
     #gantt-linkstream,
     #gantt-swantrad,
     #gantt-classcord,
+    #gantt-mini-crm,
     #gantt-mediastock,
     #gantt-roombooking,
     #gantt-cryptovault,
