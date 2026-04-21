@@ -93,7 +93,7 @@
             <div class="container d-flex justify-content-start mt-5 pt-4" data-aos="zoom-in" data-aos-delay="200">
                 <!-- <a href="page-error.html"><button class="btn btn-outline-secondary border border-2 rounded portfolio-btn" type="button" id="fiches-cryptovault-btn">Accès au document récapitulatif</button></a> -->
                 <!-- <a href="assets/documents/RP_cryptovault.zip"><button class="btn btn-outline-secondary border border-2 rounded portfolio-btn" type="button" id="fiches-cryptovault-btn">Documentation récapitulative</button></a> -->
-                <a href="page-error.html"><button class="btn btn-outline-secondary border border-2 rounded portfolio-btn" type="button" id="fiches-cryptovault-btn">Documentation récapitulative</button></a>
+                <a href="assets/documents/ressources_fournies_cryptovault.zip"><button class="btn btn-outline-secondary border border-2 rounded portfolio-btn" type="button" id="fiches-cryptovault-btn">Documentation récapitulative</button></a>
             </div>
             <section class="presentation container">
                 <div class="mx-auto mt-5" data-aos="fade-up-left" data-aos-delay="200"> 
@@ -104,10 +104,10 @@
                                 <div class="col-md-8">
                                     <p class="mt-3">
                                         CryptoVault est un projet de coffre-fort numérique sécurisé réalisé en binôme dans le 
-                                        cadre de ma formation en BTS Services Informatiques aux Organisations (option SLAM).
+                                        cadre de ma formation en BTS Services Informatiques aux Organisations (option SLAM) au sein de l'établissement IRIS MediaSchool Nice, qui est à l'origine de la demande.
                                     </p>
                                     <p>
-                                        Ce projet avait pour objectif de <span class="fst-italic cryptovault">concevoir et développer une application complète</span> permettant 
+                                        Ce projet avait pour objectif de <span class="fst-italic cryptovault">concevoir et développer une cyberapplication complète</span> permettant 
                                         de stocker, organiser et partager des fichiers de manière sécurisée. Il s'inscrit dans une 
                                         démarche professionnelle visant à mettre en œuvre une architecture full-stack moderne, combinant 
                                         une API REST, un client lourd JavaFX et une interface Web dédiée aux partages publics.
@@ -355,9 +355,9 @@
                </div>
                 <div class="py-4 mt-2" >
                     <div class="col-md-12" data-aos="fade-up-left" data-aos-delay="200">
-                        <span class="alcim text-uppercase fw-bolder">Environnement technologique</span>
+                        <span class="alcim text-uppercase fw-bolder">Environnement de développement</span>
                         <p class="mt-4">
-                            La solution repose sur un environnement technologique complet, couvrant le 
+                            La solution repose sur un environnement de développement complet, couvrant le 
                             backend, le frontend, la base de données et le déploiement.
                         </p>
                         <p class="fst-italic cryptovault mt-3 mb-0"><strong>Backend</strong></p>
@@ -419,7 +419,7 @@
                     </div>
                 </div> -->
 
-                <div class="lien-intern my-5 row justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+                <div class="lien-intern my-5 row justify-content-center" data-aos="zoom-in" data-aos-delay="200" id="MCD">
                     <div class="col-md-8 text-center">
                         <span class="alcim text-uppercase fw-bolder">Modèle conceptuel des données — CryptoVault</span>
                         <img src="assets/images/cryptovault/MCD_CryptoVault.webp"
@@ -444,7 +444,7 @@
                         </p>
                         <p>
                             La première étape a consisté à <span class="fst-italic cryptovault">concevoir le modèle relationnel de la base de données</span>. Nous avons 
-                            élaboré un MCD puis un schéma SQL intégrant les entités principales : utilisateurs, dossiers 
+                            élaboré un MCD puis un script SQL intégrant les entités principales : utilisateurs, dossiers 
                             hiérarchiques, fichiers, versions, partages et journalisation. Les contraintes d'intégrité et 
                             les relations ont été soigneusement définies afin de garantir la cohérence et la séparation 
                             stricte des espaces utilisateurs.
@@ -545,11 +545,11 @@
                         </p>
 
                         <p class="mt-4 fst-italic cryptovault text-decoration-underline mb-1">Documentation et conception</p>
-                        <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5">
-                            <li>◈ Documentation technique détaillée (architecture, sécurité, base de données, flux applicatifs).</li>
-                            <li>◈ Guide utilisateur décrivant le fonctionnement du client JavaFX et de l'interface Web publique.</li>
-                            <li>◈ Modélisation de la base de données : MCD, modèle relationnel et schéma SQL.</li> 
-                            <li>◈ Maquettes UI/UX réalisées sous Figma.</li> 
+                        <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5 lien-extern">
+                            <li>◈ <a class="text-white fst-italic" target="_blank" href="https://github.com/juklau/coffreFort-backEnd-private/blob/main/ressources_fournies/documentation_technique.pdf">Documentation technique</a> détaillée (architecture, sécurité, base de données, flux applicatifs).</li>
+                            <li>◈ <a class="text-white fst-italic" target="_blank" href="https://github.com/juklau/coffreFort-backEnd-private/blob/main/ressources_fournies/documentation_utilisateur.pdf">Documentation utilisateur</a> décrivant le fonctionnement du client JavaFX et de l'interface Web publique.</li>
+                            <li>◈ Modélisation de la base de données :<a class="text-white fst-italic" href="#MCD">MCD</a> , modèle relationnel et script SQL.</li> 
+                            <li>◈ <a class="text-white fst-italic" target="_blank" href="https://www.figma.com/design/QMpU6uu0tGXpdInYixZ798/Mon_portfolio?node-id=366-2&p=f&t=AWQGb1XKf44sCC5L-0">Maquettes UI/UX réalisées sous Figma</a>.</li> 
                         </ul>
 
                         <div class="row justify-content-center">
@@ -559,8 +559,8 @@
                                     <li>◈ API REST sécurisée (PHP 8 / Slim 4 / Medoo / JWT).</li>
                                     <li>◈ Client lourd JavaFX (Java 17) interfacé avec l'API REST.</li>
                                     <li>◈ Interface Web publique de téléchargement via lien de partage.</li>
-                                    <li>◈ Base de données MySQL normalisée + scripts SQL d'initialisation.</li>
-                                    <li>◈ Environnement Docker Compose.</li>
+                                    <li>◈ Base de données MySQL normalisée avec scripts SQL d'initialisation.</li>
+                                    <li>◈ Environnement conteneurisé avec Docker Compose.</li>
                                     <li class="lien-intern">◈ Code source versionné et disponible sur GitHub. 
                                         <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5">
                                             <!-- backend -->
@@ -664,6 +664,18 @@
                                 </small>
                         </ul>
                     </div>
+                    <div data-aos="fade-left" data-aos-delay="210">
+                        <p class="fst-italic LinkStream">2. Répondre aux incidents et aux demandes d'assistance et d'évolution</p>
+                        <ul class="list-unstyled lh-lg ps-4">
+                            <li>2.1. Collecter, suivre et orienter des demandes</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai analysé les besoins exprimés dans le cahier des 
+                                    charges (sécurisation des données, gestion des utilisateurs, partage de fichiers) afin 
+                                    d'identifier les fonctionnalités à développer. J'ai ensuite suivi ces demandes et orienté 
+                                    leur mise en œuvre en priorisant les fonctionnalités du MVP et en répartissant les 
+                                    tâches au sein du binôme
+                                </small>
+                        </ul>
+                    </div>
                     <div data-aos="fade-left" data-aos-delay="220">
                         <p class="fst-italic cryptovault">4. Travailler en mode projet</p>
                         <ul class="list-unstyled lh-lg ps-4">
@@ -734,7 +746,7 @@
                 </div>
             </section>
             <div class="d-flex justify-content-center mt-5 pt-4" data-aos="zoom-in" data-aos-delay="200">
-                <a href="assets/documents/RP_5_CryptoVault_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary border border-2 rounded portfolio-btn" type="button" id="fiche-cryptovault-btn">Fiche descriptive</button></a>
+                <a href="assets/documents/RP_1_CryptoVault_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary border border-2 rounded portfolio-btn" type="button" id="fiche-cryptovault-btn">Fiche descriptive</button></a>
             </div>
         </main>
 
