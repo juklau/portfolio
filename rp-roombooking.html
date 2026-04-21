@@ -97,7 +97,7 @@
             <div class="container d-flex justify-content-start mt-5" data-aos="zoom-in" data-aos-delay="200">
                 <!-- <a href="page-error.html"><button class="btn btn-outline-secondary border border-2 rounded portfolio-btn" type="button" id="fiches-cryptovault-btn">Accès au document récapitulatif</button></a> -->
                 <!-- <a href="assets/documents/RP_roombooking.zip"><button class="btn btn-outline-secondary border border-2 rounded portfolio-btn" type="button" id="fiches-cryptovault-btn">Documentation récapitulative</button></a> -->
-                <a href="page-error.html"><button class="btn btn-outline-secondary border border-2 rounded portfolio-btn" type="button" id="fiches-roombooking-btn">Documentation récapitulative</button></a>
+                <a href="assets/documents/ressources_fournies_roombooking.zip"><button class="btn btn-outline-secondary border border-2 rounded portfolio-btn" type="button" id="fiches-roombooking-btn">Documentation récapitulative</button></a>
             </div>
 
             <section class="presentation container">
@@ -105,36 +105,23 @@
                     <span class="alcim text-uppercase fw-bolder">Contexte</span>
                     <div class="py-3 px-3 row ">
                         <div class="row col-md-12 my-3 box-shadow-reverse">
-                                <p class="mt-3">
-                                    Le projet RoomBooking est une application web de réservation de 
-                                    salles développée dans le cadre du BTS SIO option SLAM.
-                                </p>
-                                <p>
-                                    L'école IRIS MediaSchool Nice, établissement de formation comptant environ 45 collaborateurs 
-                                    et intervenants, propose des cursus spécialisés en informatique et en digital. Le 
-                                    fonctionnement de l'établissement nécessite une gestion quotidienne de ses 
-                                    infrastructures, notamment les salles de cours, les salles de travaux pratiques et 
-                                    les espaces de travail collaboratif (box de projet).
-                                </p>
-                                <p>
-                                    Dans ce contexte, <span class="fst-italic roombooking">la gestion des réservations de ces espaces</span> peut devenir complexe 
-                                    lorsqu'elle est réalisée de manière informelle ou dispersée, ce qui peut entraîner 
-                                    des conflits de réservation, un manque de visibilité sur la disponibilité des salles 
-                                    et une charge administrative supplémentaire.
-                                   </p>
-                             <!-- <div class="col-md-10">
-                                <p>
-                                    Le projet RoomBooking a donc pour objectif de concevoir une application web centralisée 
-                                    permettant de gérer efficacement la réservation des salles et des espaces de travail. 
-                                    L'application permet aux différents acteurs de l'établissement (administrateur, 
-                                    coordinateurs et étudiants) de consulter les disponibilités des salles et d'effectuer 
-                                    des réservations de manière simple et sécurisée.
-                                </p>
-                                <p>
-                                    La solution a été développée à l'aide d'une architecture web moderne reposant sur Symfony, 
-                                    PHP, MySQL et Bootstrap, dans un environnement de développement conteneurisé grâce à Docker.
-                                </p>
-                            </div> -->
+                            <p class="mt-3">
+                                Le projet RoomBooking est une application web de réservation de 
+                                salles développée dans le cadre du BTS SIO option SLAM.
+                            </p>
+                            <p>
+                                L'établissement IRIS MediaSchool Nice, qui compte environ 45 collaborateurs et intervenants, 
+                                propose des formations spécialisées en informatique et en digital. Son fonctionnement repose 
+                                sur l'utilisation quotidienne de différentes infrastructures, notamment des salles de cours, 
+                                des salles de travaux pratiques et des espaces de travail collaboratif (box de projet).
+                            </p>
+                            <p>
+                                Dans ce contexte, <span class="fst-italic roombooking">la gestion des réservations de ces espaces</span>, 
+                                en particulier lors des périodes de forte activité comme les semaines de révision, peut devenir complexe 
+                                lorsqu'elle est réalisée de manière informelle ou dispersée. Cela peut entraîner 
+                                des conflits de réservation, un manque de visibilité sur la disponibilité des salles 
+                                et une charge administrative supplémentaire.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -359,7 +346,7 @@
                 </div>
                 <div class="row py-4 justify-content-center" >
                     <div class="col-md-11" data-aos="fade-up-left" data-aos-delay="200">
-                        <span class="alcim text-uppercase fw-bolder">Technologies utilisées</span>
+                        <span class="alcim text-uppercase fw-bolder">Environnement de développement</span>
                         <p class="mt-4">
                             Le projet RoomBooking repose sur une architecture web moderne permettant de 
                             gérer les réservations de salles et les utilisateurs de manière centralisée.
@@ -371,7 +358,7 @@
                             </li>
                             <li>◈ PHP — langage utilisé pour le développement côté serveur.</li>
                             <li>◈ MySQL — base de données relationnelle utilisée pour stocker les 
-                                informations liées aux salles, utilisateurs, classes, réservations et équipements.
+                                informations liées aux salles, aux utilisateurs, aux classes, aux réservations et aux équipements.
                             </li>
                             <li>◈ Doctrine ORM — gestion de la persistance des données et interaction avec la base de données.</li>
                         </ul>
@@ -389,7 +376,7 @@
                         
                         <div class="row justify-content-center">
                             <div class="col-md-11">
-                                <p class="fst-italic roombooking mt-3 mb-0"><strong>Environnement de développement</strong></p>
+                                <p class="fst-italic roombooking mt-3 mb-0"><strong>Outils et environnement</strong></p>
                                 <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
                                     <li>◈ Docker / Docker Compose — conteneurisation de l'environnement de développement (serveur web, base de données).</li>
                                     <li>◈ Git / GitHub — gestion de versions et hébergement du code source.</li>
@@ -552,6 +539,12 @@
                                     <a class="text-white" href="https://github.com/juklau/RoomBooking.git" target="_blank"><strong class=" fst-italic fw-medium">en cliquant sur ce lien</strong></a>.
                                 </small>
                             </li>
+                            <li class="roombooking">◈ Documentation du projet : 
+                                <small class="text-white fst-italic lien-extern">
+                                    l'ensemble des documents (cahier des charges, guides utilisateur et administrateur, MCD, etc.) est disponible dans le dossier dédié du dépôt GitHub :
+                                    <a class="text-white" href="https://github.com/juklau/RoomBooking/tree/main/ressources_fournies" target="_blank"><strong class=" fst-italic fw-medium">en cliquant sur ce lien</strong></a>.
+                                </small>
+                            </li>
                             <li class="roombooking">◈ Captures d'écran de l'application : 
                                 <small class="text-white fst-italic">
                                     Illustrations de l'interface utilisateur montrant les différentes fonctionnalités de 
@@ -615,6 +608,11 @@
                                     <li>◈ la mise en place d'un <span class="roombooking fst-italic">système de sauvegarde automatique</span> de la base de 
                                         données afin de sécuriser les données de l'application
                                     </li>  
+                                    <li>◈ la possibilité pour l'administrateur de <span class="roombooking fst-italic">visualiser l'ensemble des 
+                                        réservations de l'établissement</span> afin d'améliorer la supervision globale
+                                    </li>  
+                                    <li>◈ la possibilité de <span class="roombooking fst-italic">réserver des salles pour des classes</span>, permettant une gestion plus adaptée aux besoins pédagogiques
+                                    </li>  
                                 </ul>
                             </div>
                         </div>
@@ -662,6 +660,17 @@
                                     (backup.sh et restore.sh) permettant de sauvegarder la base de données MySQL, les volumes Docker, 
                                     le code source et la configuration.
                                     J'ai également intégré un mécanisme de vérification d'intégrité via checksum SHA256 afin de garantir la fiabilité des sauvegardes.
+                                </small>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="210">
+                        <p class="fst-italic LinkStream">2. Répondre aux incidents et aux demandes d'assistance et d'évolution</p>
+                        <ul class="list-unstyled lh-lg ps-4">
+                            <li>2.1. Collecter, suivre et orienter des demandes</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai collecté les besoins fonctionnels à partir du cahier des charges, 
+                                    notamment concernant la gestion des salles, des utilisateurs, des classes et des réservations. J'ai 
+                                    ensuite suivi ces demandes tout au long du projet afin d'orienter le développement des fonctionnalités 
+                                    en cohérence avec les priorités de l'établissement.
                                 </small>
                         </ul>
                     </div>
@@ -744,7 +753,7 @@
             </section>
 
             <div class="d-flex justify-content-center mt-5 pt-4" data-aos="zoom-in" data-aos-delay="200">
-                <a href="assets/documents/RP_8_RoomBooking_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary border border-2 rounded portfolio-btn" type="button" id="fiche-RoomBooking-btn">Fiche descriptive</button></a>
+                <a href="assets/documents/RP_2_RoomBooking_JUHASZ.pdf" target="_blank"><button class="btn btn-outline-secondary border border-2 rounded portfolio-btn" type="button" id="fiche-RoomBooking-btn">Fiche descriptive</button></a>
             </div>
         </main>
 
