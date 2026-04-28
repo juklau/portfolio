@@ -12,3 +12,5 @@ Thumbs.db
 # Éditeurs
 .vscode/
 .idea/
+
+.github/agents/

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,6 +27,9 @@
                         <a href="https://www.linkedin.com/in/klaudia-juhasz-a165002bb/" class="text-white" target="_blank" title="Lien vers mon profil LinkedIn">
                             <i class="fab fa-linkedin fa-2xl"></i>
                         </a>
+                        <button id="theme-toggle" class="btn border-0 text-white p-1" title="Changer de thème" aria-label="Changer de thème">
+                            <i class="bi bi-sun-fill fs-5" id="theme-icon"></i>
+                        </button>
                         <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="text-white" id="menu-btn"><i class="bi bi-list"></i></span>
                         </button>
@@ -658,9 +661,12 @@
                                     et de restreindre les actions selon les rôles définis (utilisateur / administrateur).
                                 </small>
                             <li>1.5. Gérer des sauvegardes</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai mis en place un système de sauvegarde du backend à 
-                                    l'aide de scripts automatisés permettant de générer des archives complètes (base de données, 
-                                    volumes Docker, code et configuration) et d'assurer leur restauration en cas de besoin.
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai mis en place trois scripts Bash 
+                                    (backup_serveur.sh, restore_serveur.sh, restore_serveur_isoled.sh) assurant la 
+                                    sauvegarde de la base de données MySQL, des volumes Docker et du code source, avec 
+                                    vérification d'intégrité SHA256 et rétention de 7 jours. Une tâche cron automatise 
+                                    le backup chaque vendredi à 18h30, et le script de restauration isolée permet de 
+                                    valider une sauvegarde sans toucher à la production.
                                 </small>
                         </ul>
                     </div>

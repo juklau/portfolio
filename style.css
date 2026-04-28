@@ -6,8 +6,8 @@
     --main-second-color: rgba(227, 161, 39, 0.9);
     --shadow-color: rgba(208, 179, 62, 0.3);
     --white-color: rgb(255, 255, 255);
-    --white-opal-color: rgba(255, 255, 255, 0.8);  
-    
+    --white-opal-color: rgba(255, 255, 255, 0.8);
+
     --CRM-color: rgb(123, 176, 98);
     --succes-color: rgb(23, 161, 23);
     --danger-color: rgb(185, 26, 26);
@@ -22,7 +22,63 @@
     --black-color: rgb(12, 11, 11);
     --black-color2:  rgba(0, 0, 0, 0.6);
     --background-error-color: rgba(25, 158, 157, 1);
-  }
+
+    /* Variables semantiques de theme (dark par defaut) */
+    --bg-primary: #1b262c;
+    --bg-secondary: rgb(12, 11, 11);
+    --bg-card: rgb(72, 72, 72);
+    --text-primary: rgb(255, 255, 255);
+    --text-muted: rgba(255, 255, 255, 0.8);
+    --accordion-bg: transparent;
+}
+
+[data-theme="light"] {
+    --bg-primary: #e0e0e0;
+    --bg-secondary: #f0f0f0;
+    --bg-card: #d4d4d4;
+    --text-primary: rgb(20, 20, 20);
+    --text-muted: rgba(20, 20, 20, 0.75);
+    --accordion-bg: #e8e8e8;
+}
+
+/* Overrides des classes Bootstrap hardcodees en mode clair */
+[data-theme="light"] .bg-dark {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-primary);
+}
+[data-theme="light"] .text-white {
+    color: var(--text-primary) !important;
+}
+[data-theme="light"] .navbar-brand {
+    color: var(--text-primary) !important;
+}
+[data-theme="light"] .nav-link {
+    color: var(--text-primary) !important;
+}
+[data-theme="light"] .border-secondary {
+    border-color: rgba(0, 0, 0, 0.2) !important;
+}
+[data-theme="light"] .dropdown-menu {
+    background-color: var(--bg-secondary) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+[data-theme="light"] .dropdown-item {
+    color: var(--text-primary) !important;
+}
+[data-theme="light"] .dropdown-item:hover {
+    background-color: var(--bg-card) !important;
+}
+[data-theme="light"] .offcanvas {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+}
+[data-theme="light"] .btn-close {
+    filter: none;
+}
+[data-theme="light"] .bg-black {
+    background-color: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+}
 
 /*********************************************************************************************
                                    Pour tous les pages
@@ -68,7 +124,7 @@
     display: block;
 }
 .dropdown-item.active {
-    background-color: var(--surface-color) !important;
+    background-color: var(--bg-primary) !important;
     color: var(--nav-hover-color) !important;
 }
 
@@ -234,7 +290,7 @@
 }
 /* Contenu timeline */
 .timeline-content {
-    background: var(--black-color);
+    background: var(--bg-secondary);
     box-shadow: 0 0 5px rgba(149, 131, 60, 0.3);
     padding: 1rem;
     border-radius: 1rem;
@@ -410,7 +466,7 @@
 }
 .flip-card-back{
     transform: rotateY(180deg);
-    background: var(--dark-gray-color) !important;
+    background: var(--bg-card) !important;
 }
 
 /* ********************************************************************************************* */
@@ -601,7 +657,7 @@
     padding-top: 60px;
 }
 .zoom-wrapper {
-    background-color: var(--dark-gray-color);
+    background-color: var(--bg-card);
     padding: 100px;
     border-radius: 10px;
     display: flex;
@@ -788,7 +844,7 @@ td {
 }
 
 .references-liens ul li>a{
-    color: var(--white-color);
+    color: var(--text-primary);
     font-style: italic;
 }
 .references-liens ul li>a:hover{
@@ -797,8 +853,8 @@ td {
 
 /* Style quand l'accordéon est ouvert => mot reste jaune! */
 .accordion-button:not(.collapsed) {
-    color: var(--main-color) !important; 
-    background-color: transparent; /* Garder le fond sombre */
+    color: var(--main-color) !important;
+    background-color: var(--accordion-bg);
     box-shadow: none; /* Supprimer l'effet de bordure Bootstrap */
 }
 
@@ -868,7 +924,7 @@ html {
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.12);
-    background: #1a1a1a;
+    background: var(--bg-primary);
     transition: box-shadow .25s ease;
 }
 .cv-viewer-wrapper:hover,

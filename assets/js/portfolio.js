@@ -349,3 +349,32 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
         }
     });
 });
+
+/* ======================================================================================== */
+/*                          Theme Toggle (dark / light)
+/* ======================================================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const htmlEl = document.documentElement;
+    const toggleBtn = document.getElementById("theme-toggle");
+    const themeIcon = document.getElementById("theme-icon");
+
+    function applyTheme(theme) {
+        htmlEl.setAttribute("data-theme", theme);
+        if (themeIcon) {
+            themeIcon.className = theme === "dark" ? "bi bi-sun-fill fs-5" : "bi bi-moon-fill fs-5";
+        }
+    }
+
+    const saved = localStorage.getItem("portfolio-theme") || "dark";
+    applyTheme(saved);
+
+    if (toggleBtn) {
+        toggleBtn.addEventListener("click", function () {
+            const current = htmlEl.getAttribute("data-theme");
+            const next = current === "dark" ? "light" : "dark";
+            applyTheme(next);
+            localStorage.setItem("portfolio-theme", next);
+        });
+    }
+});
