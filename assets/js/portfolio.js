@@ -206,16 +206,20 @@ document.querySelectorAll(".flip-card").forEach(card => {
 /*                          Activation effet JUSTE une fois
 /* ======================================================================================== */
 
-AOS.init({
-    // fonctionnement l'effet que pendant le chargement et il ne se répéte pas
-    once: true,
-    duration: 1500, 
+// pour éviter le ReferenceError sur la page CV et synthèse (switch entre dark and light)
+if (typeof AOS !== 'undefined') {
+    AOS.init({
 
-    // désactiver l'effet sur mobil
-    disable: function() {
-        return window.innerWidth < 576;
-    }
-});
+        // fonctionnement l'effet que pendant le chargement et il ne se répéte pas
+        once: true,
+        duration: 1500,
+
+        //désactiver l'effet sur mobil
+        disable: function() {
+            return window.innerWidth < 576;
+        }
+    });
+}
 
 /* ======================================================================================== */
 /*                          ZOOM Image en plein d'écran
