@@ -16,6 +16,7 @@
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <script>(function(){var t=localStorage.getItem("portfolio-theme")||"dark";document.documentElement.setAttribute("data-theme",t);})();</script>
         <link rel="stylesheet" href="style.css">
     </head> 
     <body class="overflow-x-hidden bg-dark">
@@ -242,8 +243,8 @@
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h5 class="card-title text-center ">Gestion des utilisateurs de l'application</h5>
-                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/liste_user.webp" alt="Gestion des utilisateurs de l'application">
+                                        <h5 class="card-title text-center ">Gestion des utilisateurs (administrateur)</h5>
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/liste_user.webp" alt="Gestion des utilisateurs (administrateur)">
                                     </div>
                                 </div> 
                             </li>
@@ -296,6 +297,33 @@
                                     </div>
                                 </div> 
                             </li> 
+                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-2">Mot de passe oublié</h5>
+                                    
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/forgot_password.webp" alt="Mot de passe oublié">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-2">Email - mot de passe oublié</h5>
+                                    
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/reset_password_email.webp" alt="Email - mot de passe oublié">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-2">Page de réinitialisation de mot de passe </h5>
+                                    
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/reset_password_page.webp" alt="Page de réinitialisation de mot de passe">
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
 
                         <!-- pour la pagination = a lapozashoz -->
@@ -431,11 +459,15 @@
                                     Les principales fonctionnalités développées sont :
                                 </p>
                                 <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
-                                    <li>◈ la gestion des salles (consultation des salles, visualisation des équipements et de la capacité)</li>
+                                    <li>◈ la gestion des salles (consultation, visualisation des équipements et de la capacité)</li>
                                     <li>◈ la consultation des disponibilités des salles selon une date et un créneau horaire</li>
-                                    <li>◈ la création et l'annulation de réservations de salles</li>
+                                    <li>◈ la création et l'annulation de réservations de salles, avec association à une classe</li>
                                     <li>◈ la gestion des salles, des utilisateurs et des classes par l'administrateur</li>
+                                    <li>◈ la visualisation de l'ensemble des réservations de l'établissement par l'administrateur</li>
                                     <li>◈ la gestion des étudiants au sein des classes par les coordinateurs</li>
+                                    <li>◈ la réinitialisation de mot de passe par email (lien sécurisé expirant après 15 minutes)</li>
+                                    <li>◈ la détection automatique des réservations passées via une tâche planifiée (cron horaire)</li>
+                                    <li>◈ la sauvegarde automatique de la base de données (cron hebdomadaire, rétention 7 jours)</li>
                                 </ul>
                             </div>
                         </div>
@@ -591,31 +623,17 @@
                                     l'application et renforcer ses fonctionnalités, comme : 
                                 </p>
                                 <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5">
-                                    <li>◈ la mise en place d'un système de <span class="roombooking fst-italic">pagination des listes</span> (salles, utilisateurs, 
+                                    <li>◈ la mise en place d'un système de <span class="roombooking fst-italic">pagination des listes</span> (salles, utilisateurs,
                                         réservations) afin d'améliorer la lisibilité et les performances lorsque le volume de données augmente
                                     </li>
-                                    <li>◈ l'ajout d'une fonctionnalité de <span class="roombooking fst-italic">réinitialisation de mot de passe</span>, permettant 
-                                        aux utilisateurs de récupérer leur accès via l'envoi d'un lien sécurisé par email
-                                    </li>
-                                    <!-- <li>◈ le <span class="roombooking fst-italic">renforcement de la validation des mots de passe</span>, en imposant des règles de complexité 
-                                        (majuscule, chiffre et caractère spécial) afin d'améliorer la sécurité de l'application
-                                    </li>   -->
-                                    <li>◈ l'intégration d'une vue <span class="roombooking fst-italic">calendrier interactive</span> permettant de visualiser les 
+                                    <li>◈ l'intégration d'une vue <span class="roombooking fst-italic">calendrier interactive</span> permettant de visualiser les
                                         réservations sous forme de planning hebdomadaire ou mensuel
-                                    </li>  
-                                    <li>◈ <span class="roombooking fst-italic">l'envoi de notifications par email</span> lors de la création ou de l'annulation d'une réservation</li>  
-                                    <li>◈ la possibilité de <span class="roombooking fst-italic">créer des réservations récurrentes</span>, par exemple pour réserver 
+                                    </li>
+                                    <li>◈ <span class="roombooking fst-italic">l'envoi de notifications par email</span> lors de la création ou de l'annulation d'une réservation</li>
+                                    <li>◈ la possibilité de <span class="roombooking fst-italic">créer des réservations récurrentes</span>, par exemple pour réserver
                                         une salle chaque semaine pendant une période donnée
-                                    </li>  
-                                    <li>◈ la génération d'un <span class="roombooking fst-italic">export PDF du planning</span> d'une salle ou d'un utilisateur</li>  
-                                    <li>◈ la mise en place d'un <span class="roombooking fst-italic">système de sauvegarde automatique</span> de la base de 
-                                        données afin de sécuriser les données de l'application
-                                    </li>  
-                                    <li>◈ la possibilité pour l'administrateur de <span class="roombooking fst-italic">visualiser l'ensemble des 
-                                        réservations de l'établissement</span> afin d'améliorer la supervision globale
-                                    </li>  
-                                    <li>◈ la possibilité de <span class="roombooking fst-italic">réserver des salles pour des classes</span>, permettant une gestion plus adaptée aux besoins pédagogiques
-                                    </li>  
+                                    </li>
+                                    <li>◈ la génération d'un <span class="roombooking fst-italic">export PDF du planning</span> d'une salle ou d'un utilisateur</li>
                                 </ul>
                             </div>
                         </div>
