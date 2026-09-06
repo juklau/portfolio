@@ -324,6 +324,36 @@
                                     </div>
                                 </div>
                             </li>
+
+                            <!--
+                                Nouvelles captures d'écran à ajouter une fois l'application redéployée
+                                sur le serveur de l'école (accès indisponible pour l'instant) :
+
+                                <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                    <div class="outil-item p-1 mt-5">
+                                        <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                            <h5 class="card-title text-center">Statut d'occupation des salles en temps réel (dashboard)</h5>
+                                            <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/dashboard_statut_salles.webp" alt="Badge de statut d'occupation des salles sur le tableau de bord">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                    <div class="outil-item p-1 mt-5">
+                                        <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                            <h5 class="card-title text-center">Réservations en attente avec badge "en concurrence"</h5>
+                                            <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/reservations_en_concurrence.webp" alt="Réservations en attente en concurrence sur un même créneau">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                    <div class="outil-item p-1 mt-5">
+                                        <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                            <h5 class="card-title text-center">Email de rappel de réservation (J-1)</h5>
+                                            <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/email_rappel_reservation.webp" alt="Email de rappel automatique envoyé 24h avant une réservation">
+                                        </div>
+                                    </div>
+                                </li>
+                            -->
                         </ul>
 
                         <!-- pour la pagination = a lapozashoz -->
@@ -411,6 +441,8 @@
                                 <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
                                     <li>◈ Docker / Docker Compose — conteneurisation de l'environnement de développement (serveur web, base de données).</li>
                                     <li>◈ Git / GitHub — gestion de versions et hébergement du code source.</li>
+                                    <li>◈ PHPUnit — suite de tests automatisés (unitaires et fonctionnels) couvrant les services, entités, contrôleurs et commandes de l'application.</li>
+                                    <li>◈ GitHub Actions — chaîne d'intégration continue (CI) exécutant automatiquement le linting et la suite de tests à chaque modification du code.</li>
                                     <li>◈ Visual Studio Code — environnement de développement utilisé pour la programmation.</li>
                                 </ul>
                             </div>
@@ -421,6 +453,12 @@
                 <div class="lien-intern my-5 row justify-content-center" data-aos="zoom-in" data-aos-delay="200">
                     <div class="col-md-8 text-center">
                         <span class="alcim text-uppercase fw-bolder">Modèle conceptuel des données — RoomBooking</span>
+                        <!--
+                            Le schéma a évolué depuis cette version du MCD : ajout de l'entité pivot
+                            ReservationRoom (réservations multi-salles) et de l'entité AuditLog
+                            (journal de traçabilité). Remplacer l'image ci-dessous par le MCD à jour
+                            (voir modele_donnees_roombooking.pdf dans le dépôt GitHub).
+                        -->
                         <img src="assets/images/roombooking/MCD_RoomBooking.webp"
                             alt="Modèle conceptuel des données de l'application RoomBooking" class="img-fluid rounded-3 d-block mx-auto mt-5" id="mcd-roombooking">
                     </div>
@@ -456,7 +494,7 @@
                         <div class="row justify-content-center">
                             <div class="col-md-11">
                                 <p class="mb-0 roombooking text-decoration-underline">
-                                    Les principales fonctionnalités développées sont :
+                                    Les fonctionnalités développées sont :
                                 </p>
                                 <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
                                     <li>◈ la gestion des salles (consultation, visualisation des équipements et de la capacité)</li>
@@ -468,6 +506,14 @@
                                     <li>◈ la réinitialisation de mot de passe par email (lien sécurisé expirant après 15 minutes)</li>
                                     <li>◈ la détection automatique des réservations passées via une tâche planifiée (cron horaire)</li>
                                     <li>◈ la sauvegarde automatique de la base de données (cron hebdomadaire, rétention 7 jours)</li>
+                                    <li>◈ l'auto-validation nocturne des réservations étudiantes non ambiguës (salle libre, capacité et quota respectés), les demandes concurrentes restant en attente d'un arbitrage par l'administrateur</li>
+                                    <li>◈ un rappel automatique par email 24h avant le début d'une réservation confirmée</li>
+                                    <li>◈ la visualisation en temps réel du statut d'occupation des salles (occupée, demande en attente, disponible) sur les tableaux de bord</li>
+                                    <li>◈ un export des données personnelles et une anonymisation des comptes utilisateurs, dans une logique de conformité RGPD</li>
+                                    <li>◈ la pagination des listes d'utilisateurs et de réservations, améliorant la lisibilité et les performances lorsque le volume de données augmente</li>
+                                    <li>◈ une vue calendrier mensuelle des réservations, en complément de la vue liste, filtrable par salle, date et statut</li>
+                                    <li>◈ la création de réservations récurrentes (plusieurs occurrences hebdomadaires sur une période donnée), avec exclusion automatique des jours fériés légaux</li>
+                                    <li>◈ l'export PDF du planning des réservations sur une période donnée, filtrable par salle et par statut</li>
                                 </ul>
                             </div>
                         </div>
@@ -477,8 +523,12 @@
                                     L'application vérifie automatiquement les conflits de réservation, afin d'<span class="fst-italic roombooking">éviter les doubles 
                                     réservations</span> pour une même salle et un même créneau horaire.
                                     <br>
-                                    Le développement du projet a été réalisé dans un environnement conteneurisé avec <span class="fst-italic roombooking">Docker</span>, 
+                                    Le développement du projet a été réalisé dans un environnement conteneurisé avec <span class="fst-italic roombooking">Docker</span>,
                                     facilitant la mise en place de l'environnement de développement et l'exécution de l'application.
+                                    <br>
+                                    La fiabilité de l'application est vérifiée par une <span class="fst-italic roombooking">suite de tests automatisés (PHPUnit)</span>,
+                                    exécutée automatiquement à chaque modification du code grâce à une <span class="fst-italic roombooking">chaîne d'intégration continue (GitHub Actions)</span>,
+                                    qui a notamment permis de détecter et corriger plusieurs anomalies (protection CSRF, gestion des rôles) avant leur mise en production.
                                 </p>
                             </div>
                         </div>
@@ -518,9 +568,17 @@
                                 avec Docker</span>, facilitant l'installation et la configuration de l'environnement de travail.
                             </p>
                             <p>
-                                Cette réalisation m'a permis de renforcer mes compétences en développement web, modélisation de 
-                                données et conception d'applications structurées, tout en travaillant sur un projet reproduisant 
+                                Cette réalisation m'a permis de renforcer mes compétences en développement web, modélisation de
+                                données et conception d'applications structurées, tout en travaillant sur un projet reproduisant
                                 une situation proche d'un contexte professionnel réel.
+                            </p>
+                            <p>
+                                Au-delà de la livraison initiale, j'ai poursuivi le travail sur RoomBooking en écrivant une
+                                <span class="fst-italic roombooking">suite de tests automatisés</span> qui a permis de détecter et corriger des bugs réels
+                                (notamment une faille de configuration désactivant la protection CSRF), puis en mettant en place une
+                                <span class="fst-italic roombooking">chaîne d'intégration continue</span> pour garantir que ces tests restent exécutés à chaque évolution
+                                du code. Cette démarche m'a sensibilisée à l'importance de la fiabilité applicative et de la sécurité
+                                dans un contexte proche de la production.
                             </p>
                         </div>
                     </div>
@@ -626,17 +684,9 @@
                                     l'application et renforcer ses fonctionnalités, comme : 
                                 </p>
                                 <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5">
-                                    <li>◈ la mise en place d'un système de <span class="roombooking fst-italic">pagination des listes</span> (salles, utilisateurs,
-                                        réservations) afin d'améliorer la lisibilité et les performances lorsque le volume de données augmente
+                                    <li>◈ le renforcement de la configuration de production (fichier <span class="roombooking fst-italic">.env.prod</span> dédié et
+                                        garde-fous de démarrage empêchant tout démarrage accidentel en configuration de test)
                                     </li>
-                                    <li>◈ l'intégration d'une vue <span class="roombooking fst-italic">calendrier interactive</span> permettant de visualiser les
-                                        réservations sous forme de planning hebdomadaire ou mensuel
-                                    </li>
-                                    <li>◈ <span class="roombooking fst-italic">l'envoi de notifications par email</span> lors de la création ou de l'annulation d'une réservation</li>
-                                    <li>◈ la possibilité de <span class="roombooking fst-italic">créer des réservations récurrentes</span>, par exemple pour réserver
-                                        une salle chaque semaine pendant une période donnée
-                                    </li>
-                                    <li>◈ la génération d'un <span class="roombooking fst-italic">export PDF du planning</span> d'une salle ou d'un utilisateur</li>
                                 </ul>
                             </div>
                         </div>
@@ -674,9 +724,15 @@
                                 </small>
                             <li>1.3. Mettre en place et vérifier les niveaux d'habilitation associés à un service</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">
-                                    J'ai mis en place un système de gestion des habilitations basé sur les rôles utilisateurs 
-                                    (administrateur, coordinateur et étudiant) avec Symfony Security, permettant de contrôler l'accès 
+                                    J'ai mis en place un système de gestion des habilitations basé sur les rôles utilisateurs
+                                    (administrateur, coordinateur et étudiant) avec Symfony Security, permettant de contrôler l'accès
                                     aux différentes fonctionnalités de l'application selon le profil connecté.
+                                </small>
+                                <br>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">
+                                    J'ai également vérifié et corrigé la protection contre les attaques CSRF sur les actions
+                                    sensibles (suppression, annulation, validation), en centralisant son contrôle dans une méthode
+                                    unique afin qu'une mauvaise configuration ne puisse plus la désactiver silencieusement.
                                 </small>
                             <li>1.5. Gérer des sauvegardes</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">
@@ -739,10 +795,17 @@
                         <ul class="list-unstyled lh-lg ps-4">
                             <li>5.1. Réaliser les tests d'intégration et d'acceptation d'un service</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">
-                                    J'ai réalisé des tests fonctionnels et d'intégration en vérifiant le bon fonctionnement 
-                                    des différentes fonctionnalités (réservation, gestion des rôles, filtrage des salles, 
-                                    règles métier) et en validant les scénarios utilisateurs afin de garantir la conformité 
+                                    J'ai réalisé des tests fonctionnels et d'intégration en vérifiant le bon fonctionnement
+                                    des différentes fonctionnalités (réservation, gestion des rôles, filtrage des salles,
+                                    règles métier) et en validant les scénarios utilisateurs afin de garantir la conformité
                                     aux besoins exprimés.
+                                </small>
+                                <br>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">
+                                    J'ai formalisé cette démarche de test en écrivant une suite automatisée avec PHPUnit,
+                                    couvrant les services, entités, contrôleurs et commandes de l'application, puis en
+                                    l'intégrant à une chaîne d'intégration continue (GitHub Actions) qui exécute
+                                    automatiquement l'ensemble des tests à chaque modification du code.
                                 </small>
                             <li>5.2. Déployer un service</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic"> 

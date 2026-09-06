@@ -227,12 +227,8 @@
     margin-top: -50px;
 }
 .lien-intern a:hover,
-.lien-extern a:hover,
-.container-option-BTS-SIO p > strong{
+.lien-extern a:hover{
     color: var(--main-color) !important;
-}
-#logo-onisep{
-    height: 100px;
 }
 .card.stage-details{
     min-width: 300px;
