@@ -142,15 +142,27 @@
                 </div> 
             </section>
 
+            <!-- Carrousel "Fonctionnalités" desactive temporairement : captures d'ecran obsoletes (version 1),
+                 a remettre a jour avec des captures de la version 2 (corbeille, categories, recherche,
+                 mon activite, statistiques/audit admin, mot de passe oublie, partages proteges par mot de passe). -->
+           
             <section class="fonctionnalites container" data-aos="zoom-in" data-aos-delay="200">
                 <div class="mt-2 pt-4 pb-2">
                     <span class=" alcim text-uppercase fw-bolder">Fonctionnalités</span>
                 </div>
-                <div class="container carousel swiper swiper-container d-flex justify-content-center">
+                <div class="row justify-content-center pb-5">
+                    <div class="col-md-9 col-lg-7 text-center mt-5">
+                        <p class="fst-italic mb-0">
+                            Le carrousel de captures d'écran est en cours de mise à jour pour refléter les nouvelles
+                            fonctionnalités de la version 2 (corbeille, catégories, recherche instantanée, tableau
+                            de bord administrateur...). Il sera de nouveau disponible prochainement.
+                        </p>
+                    </div>
+                </div>
+                <!-- <div class="container carousel swiper swiper-container d-flex justify-content-center">
                     <div class="slider-wrapper text-white pb-5 px-1 ">
                         <ul class="outil-liste swiper-wrapper list-unstyled">
 
-                            <!-- accès, authentification -->
                             <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
@@ -169,12 +181,11 @@
                                     </div>
                                 </div>
                             </li>
-                        
-                            <!-- l'espace navigation -->
+
                             <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h5 class="card-title text-center py-5">Dashboard utilisateur</h5>                                
+                                        <h5 class="card-title text-center py-5">Dashboard utilisateur</h5>                              
                                         <img class="card-img cryptovault-image mx-auto my-4" src="assets/images/cryptovault/tableau_board_user.webp" alt="Dashboard utilisateur">
                                     </div>
                                 </div>
@@ -196,7 +207,6 @@
                                 </div>
                             </li>
 
-                            <!-- gestion avancée =>stockage -->
                             <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
@@ -224,7 +234,6 @@
                                 </div> 
                             </li>
 
-                            <!-- partage -->
                             <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
@@ -250,7 +259,6 @@
                                 </div> 
                             </li>
                             
-                            <!-- côté web => destinataire -->
                             <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
@@ -277,7 +285,6 @@
                                 </div> 
                             </li>
 
-                            <!-- Administration -->
                             <li class="CryptoVault-container swiper-slide d-flex flex-column align-items-center position-relative mb-2">
                                 <div class="outil-item p-1 mt-5 mb-3">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
@@ -302,17 +309,17 @@
                                     </div>
                                 </div> 
                             </li>
-                        </ul> 
+                        </ul>
 
-                        <!-- pour la pagination = a lapozashoz -->
                         <div class="swiper-pagination"></div>
 
-                        <!-- les boutons de navigation -->
                          <div class="swiper-slide-button swiper-button-prev d-none d-sm-block"></div>
                         <div class="swiper-slide-button swiper-button-next d-none d-sm-block"></div>
-                    </div>  
-                </div>
+                    </div>
+                </div> -->
             </section>
+      
+            <!-- Fin du carrousel "Fonctionnalités" commenté -->
 
             <section class="presentation container">
                 <div class="row justify-content-center py-4">
@@ -366,14 +373,16 @@
                         </p>
                         <p class="fst-italic cryptovault mt-3 mb-0"><strong>Backend</strong></p>
                         <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
-                            <li>◈ <strong>PHP 8.2</strong> - développement de l'API REST et implémentation de la logique métier.</li>
+                            <li>◈ <strong>PHP 8.2</strong> - développement de l'API REST (61 routes) et implémentation de la logique métier.</li>
                             <li>◈ <strong>Slim 4</strong> - framework léger pour la gestion des routes, middlewares et contrôleurs REST.</li>
                             <li>◈ <strong>Medoo (ORM)</strong> - abstraction simplifiée de l'accès aux données via PDO.</li>
                             <li>◈ <strong>MySQL</strong> - base de données relationnelle normalisée avec contraintes d'intégrité.</li>
-                            <li>◈ <strong>JWT (HMAC-SHA256)</strong> - authentification stateless sécurisée des utilisateurs.</li>
-                            <li>◈ <strong>Bcrypt</strong> - hachage sécurisé des mots de passe avec salage intégré et protection contre les attaques par force brute.</li>
-                            <li>◈ <strong>AES-256-GCM</strong> - chiffrement des fichiers avec authentification et garantie d'intégrité.</li>
+                            <li>◈ <strong>JWT (access token + refresh token)</strong> - authentification stateless avec renouvellement automatique de session et détection de réutilisation frauduleuse (vol de jeton).</li>
+                            <li>◈ <strong>Argon2id</strong> - hachage des mots de passe recommandé par l'OWASP (compatibilité ascendante avec les anciens hachages Bcrypt).</li>
+                            <li>◈ <strong>AES-256-GCM</strong> - chiffrement des fichiers avec authentification et garantie d'intégrité, clé maîtresse dérivée par HKDF-SHA256.</li>
+                            <li>◈ <strong>Limitation de débit (rate limiting)</strong> - protection anti-bruteforce sur la connexion, les partages et la réinitialisation de mot de passe.</li>
                             <li>◈ <strong>Middlewares de sécurité</strong> - gestion des rôles (user/admin), contrôle d'accès et validation des requêtes.</li>
+                            <li>◈ <strong>PHPUnit / Mockery</strong> - 344 tests unitaires couvrant l'intégralité du code backend.</li>
                         </ul>
 
                         <div class="row justify-content-center">
@@ -384,8 +393,10 @@
                                     <li>◈ <strong>JavaFX 21</strong> - développement de l'interface graphique.</li>
                                     <li>◈ <strong>Architecture MVC</strong> - séparation claire entre modèle, vue et contrôleur.</li>
                                     <li>◈ <strong>FXML & SceneBuilder</strong> - conception structurée des interfaces.</li>
-                                    <li>◈ <strong>HTTP Client (REST)</strong> - communication sécurisée avec l'API.</li>
+                                    <li>◈ <strong>HTTP Client (REST)</strong> - communication sécurisée avec l'API, gestion automatique du renouvellement de session (refresh token).</li>
                                     <li>◈ <strong>Gestion asynchrone (Tasks JavaFX)</strong> - upload de fichiers avec barre de progression et interface réactive.</li>
+                                    <li>◈ <strong>Glisser-déposer natif</strong> - déplacement de fichiers/dossiers et import récursif d'un dossier local.</li>
+                                    <li>◈ <strong>JUnit 5 / Mockito / TestFX (Monocle)</strong> - 538 tests unitaires headless, exécutés en intégration continue.</li>
                                 </ul>
                             </div>
                          </div>
@@ -407,10 +418,11 @@
                                 <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
                                     <li>◈ <strong>Docker / Docker Compose</strong> - conteneurisation et déploiement reproductible.</li>
                                     <li>◈ <strong>Git & GitHub</strong> - gestion de versions et collaboration en binôme.</li>
+                                    <li>◈ <strong>GitHub Actions</strong> - intégration continue (exécution automatique des 882 tests unitaires à chaque push).</li>
                                     <li>◈ <strong>IntelliJ IDEA & Visual Studio Code</strong> - environnements de développement.</li>
-                                    <li>◈ <strong>Postman</strong> - tests et validation des endpoints REST.</li>
+                                    <li>◈ <strong>Postman / Newman</strong> - tests et validation des 64 endpoints de la collection, spécification <strong>OpenAPI</strong> du contrat de l'API.</li>
                                     <li>◈ <strong>Figma</strong> - conception des maquettes UI/UX.</li>
-                                </ul> 
+                                </ul>
                             </div>
                          </div>
                     </div>
@@ -423,13 +435,13 @@
                     </div>
                 </div> -->
 
-                <div class="lien-intern my-5 row justify-content-center" data-aos="zoom-in" data-aos-delay="200" id="MCD">
+                <!-- <div class="lien-intern my-5 row justify-content-center" data-aos="zoom-in" data-aos-delay="200" id="MCD">
                     <div class="col-md-8 text-center">
                         <span class="alcim text-uppercase fw-bolder">Modèle conceptuel des données — CryptoVault</span>
                         <img src="assets/images/cryptovault/MCD_CryptoVault.webp"
                             alt="Modèle conceptuel des données de l'application CryptoVault" class="img-fluid rounded-3 d-block mx-auto mt-4" id="mcd-cryptovault">
                     </div>
-                </div>
+                </div> -->
 
                 <!-- <div class="lien-intern my-5 row justify-content-center" data-aos="zoom-in" data-aos-delay="230">
                     <div class="col-md-8 text-center mt-4">
@@ -488,11 +500,20 @@
                         <div class="row justify-content-center">
                             <div class="col-md-11">
                                 <p>
-                                    Enfin, l'ensemble de la solution a été conteneurisé avec Docker afin de garantir un 
-                                    environnement de développement et de déploiement reproductible.
+                                    Une deuxième itération du projet a permis d'enrichir sensiblement l'application :
+                                    <span class="fst-italic cryptovault">renouvellement automatique de session par refresh token</span> (avec détection de vol de
+                                    jeton), <span class="fst-italic cryptovault">corbeille récupérable</span>, catégories de dossiers, recherche instantanée,
+                                    déplacement de fichiers/dossiers, mot de passe oublié, protection des partages par mot de passe, ainsi
+                                    qu'un tableau de bord administrateur (statistiques globales et journal d'audit).
                                 </p>
                                 <p>
-                                    Cette réalisation illustre ma capacité à concevoir une architecture cohérente, sécurisée 
+                                    Enfin, l'ensemble de la solution a été conteneurisé avec Docker afin de garantir un
+                                    environnement de développement et de déploiement reproductible, et couvert par une suite de
+                                    <span class="fst-italic cryptovault">882 tests unitaires</span> (344 côté backend, 538 côté client JavaFX) exécutés
+                                    automatiquement via GitHub Actions à chaque push.
+                                </p>
+                                <p>
+                                    Cette réalisation illustre ma capacité à concevoir une architecture cohérente, sécurisée
                                     et maintenable, tout en travaillant en collaboration sur un projet structuré.
                                 </p>
                             </div>
@@ -514,11 +535,13 @@
                         <div class="col-md-11"> 
                             <!-- px-2 -->
                             <p class="">
-                                Au-delà de l'implémentation fonctionnelle, j'ai pu travailler sur des problématiques concrètes 
-                                telles que la conception d'une architecture REST robuste, la gestion des échanges entre clients 
-                                et API, la mise en œuvre de mécanismes de sécurité (authentification, chiffrement, contrôle des 
-                                accès) ainsi que la modélisation d'une base de données relationnelle normalisée garantissant 
-                                la cohérence des informations.
+                                Au-delà de l'implémentation fonctionnelle, j'ai pu travailler sur des problématiques concrètes
+                                telles que la conception d'une architecture REST robuste, la gestion des échanges entre clients
+                                et API, la mise en œuvre de mécanismes de sécurité (authentification, chiffrement, contrôle des
+                                accès) ainsi que la modélisation d'une base de données relationnelle normalisée garantissant
+                                la cohérence des informations. La mise en place d'une suite de <span class="fst-italic cryptovault">882 tests unitaires</span>
+                                automatisés et d'une intégration continue via GitHub Actions m'a également permis de sécuriser
+                                les évolutions successives du projet sans régression.
                             </p>
                             <p>
                                 La réalisation du projet m'a également confrontée à des enjeux proches du contexte professionnel : 
@@ -606,29 +629,33 @@
 
                         <p class="mt-4 fst-italic cryptovault text-decoration-underline mb-1">Évolutions fonctionnelles</p>
                         <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5">
-                            <li>◈ l'ajout d'une fonctionnalité de réinitialisation de mot de passe, permettant 
-                                aux utilisateurs de récupérer leur accès via l'envoi d'un lien sécurisé par email
-                            </li>
-                            <li>◈ Mise en place d'une authentification renforcée (double facteur - 2FA).</li>
-                            <li>◈ Protection optionnelle des liens de partage par mot de passe.</li>
+                            <li>◈ Mise en place d'une authentification renforcée (double facteur - 2FA/TOTP).</li>
                             <li>◈ Mise en place de notifications (expiration imminente, dépassement de quota).</li>
                             <li>◈ Gestion avancée des droits (groupes d'utilisateurs, permissions fines).</li>
                             <li>◈ Développement d'une version full Web en complément du client JavaFX.</li>
-                            <li>◈ Ajout du déplacement de dossiers et fichiers.</li>
-                            <li>◈ Consultation d'un espace « Mon historique » pour visualiser les actions passées.</li>
-                            <li>◈ Ajout de pages informatives (« Mentions légales », « À propos »).</li>
-                            <!-- <li>◈ Renforcement de la politique de complexité des mots de passe.</li> -->
+                            <li>◈ Restauration automatique d'une ancienne version de fichier comme version courante
+                                (actuellement, seul le téléchargement d'une version antérieure est possible).
+                            </li>
+                            <li>◈ Prévisualisation des fichiers directement dans l'interface.</li>
+                            <li>◈ Ajout d'une page « À propos ».</li>
                             <li>◈ Extension du système de journalisation via des triggers supplémentaires dans audit_logs.</li>
+                            <li>◈ Export du journal d'audit (CSV/JSON) pour analyse externe.</li>
                         </ul>
 
                         <div class="row justify-content-center">
                             <div class="col-md-11" data-aos="fade-up-left" data-aos-delay="260">
                                 <p class="mt-2 fst-italic cryptovault text-decoration-underline mb-1">Améliorations techniques</p>
                                 <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5">
-                                    <li>◈ Déploiement sur un serveur distant avec configuration HTTPS complète.</li>
-                                    <li>◈ Intégration de tests automatisés (unitaires et d'intégration).</li>
-                                    <li>◈ Mise en place d'un système de sauvegarde et de restauration automatisé.</li>
+                                    <li>◈ Tests d'intégration de bout en bout avec une base de données réelle (en complément
+                                        des 882 tests unitaires actuels).
+                                    </li>
+                                    <li>◈ Déchiffrement côté client (architecture zero-knowledge).</li>
+                                    <li>◈ Rotation en ligne de la clé maîtresse de chiffrement (KEK), avec versionnement.</li>
+                                    <li>◈ Intégration avec un service externe de gestion de clés (KMS).</li>
                                     <li>◈ Ajout d'outils de supervision et de monitoring du service.</li>
+                                    <li>◈ Empaquetage natif du client lourd (jpackage) pour une installation simplifiée
+                                        (Windows/macOS/Linux).
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -719,9 +746,16 @@
                         <p class="fst-italic cryptovault">5. Mettre à disposition des utilisateurs un service informatique</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li>5.1. Réaliser les tests d'intégration et d'acceptation d'un service</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai réalisé des tests d'intégration afin de 
-                                    valider le bon fonctionnement des échanges entre le client JavaFX, l'API REST et la 
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai réalisé des tests d'intégration afin de
+                                    valider le bon fonctionnement des échanges entre le client JavaFX, l'API REST et la
                                     base de données (authentification, upload, versionnage, partages sécurisés).
+                                </small>
+                                <br>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">Au-delà des tests manuels via Postman, j'ai mis en
+                                    place une suite de 882 tests unitaires automatisés (PHPUnit/Mockery côté backend,
+                                    JUnit 5/Mockito/TestFX côté client JavaFX) couvrant l'intégralité du code applicatif,
+                                    intégrée à un pipeline GitHub Actions qui les exécute automatiquement à chaque push et
+                                    empêche la fusion d'une régression.
                                 </small>
                             <li>5.2. Déployer un service</li>
                             <small class="ps-5 fst-italic">J'ai déployé l'application CryptoVault avec l'aide d'un enseignant de la spécialisation 
