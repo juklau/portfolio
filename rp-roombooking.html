@@ -91,12 +91,12 @@
 
             <div class="container text-center py-5 mb-5">
                 <h1 class="text-white pt-5 pb-3 my-5">RoomBooking</h1>
-                <h5 class="pb-5">Réservations des salles</h5>
+                <h5 class="pb-5">Réservation des salles de MediaSchool IRIS Nice</h5>
             </div>
 
-            <!-- <div class="container d-flex justify-content-start mt-5 pt-4" data-aos="zoom-in" data-aos-delay="200">
-                <a href="https://room-klaudia.iris.a3n.fr:4433/login" target="_blank"><button class="btn btn-outline-secondary border border-2 rounded portfolio-btn" type="button" id="app-roombooking">Accéder à l'application</button></a>
-            </div> -->
+            <div class="container d-flex justify-content-start mt-5 pt-4" data-aos="zoom-in" data-aos-delay="200">
+                <a href="https://room-klaudia.iris.a3n.fr:4433/login" target="_blank" class="btn btn-outline-secondary border border-2 rounded portfolio-btn" id="app-roombooking">Accéder à l'application</a>
+            </div>
 
             <!-- <div class="container d-flex justify-content-start mt-5" data-aos="zoom-in" data-aos-delay="200"> -->
                 <!-- <a href="page-error.html"><button class="btn btn-outline-secondary border border-2 rounded portfolio-btn" type="button" id="fiches-cryptovault-btn">Accès au document récapitulatif</button></a> -->
@@ -126,6 +126,13 @@
                                 des conflits de réservation, un manque de visibilité sur la disponibilité des salles 
                                 et une charge administrative supplémentaire.
                             </p>
+                            <p>
+                                Livrée en une semaine en février 2026 pour couvrir l'intégralité du cahier des charges,
+                                l'application a ensuite été <span class="fst-italic roombooking">enrichie sur plusieurs mois</span> (validation des comptes
+                                et des réservations, réservations multi-salles et récurrentes, quotas, tickets de support,
+                                journal d'audit, conformité RGPD, tests automatisés) puis
+                                <span class="fst-italic roombooking">déployée et maintenue sur le serveur de l'école</span>.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -136,244 +143,193 @@
                     <span class="px-2 alcim text-uppercase fw-bolder">Fonctionnalités</span>
                 </div>
 
-                <div class="row justify-content-center pb-5">
-                    <div class="col-md-9 col-lg-7 text-center mt-5">
-                        <p class="fst-italic mb-0">
-                            Le carrousel de captures d'écran est en cours de mise à jour pour refléter les nouvelles
-                            fonctionnalités de la version 2 (évolutions des dashboards, vue calendrier mensuelle des réservations, création de réservations récurrentes,
-                             réinitialisation de mot de passe par email...). Il sera de nouveau disponible prochainement.
-                        </p>
-                    </div>
-                </div>
-                <!-- <div class="container carousel swiper swiper-container d-flex justify-content-center mt-2">
+                <div class="container carousel swiper swiper-container d-flex justify-content-center mt-2">
                     <div class="slider-wrapper text-white pb-5 px-1 ">
                         <ul class="outil-liste swiper-wrapper list-unstyled">
-                            
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
                                         <h5 class="card-title text-center py-2">Page de connexion</h5>
-                                   
-                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/connexion.webp" alt="Page de connexion de l'application">
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/connexion.webp" alt="Page de connexion de l'application RoomBooking">
                                     </div>
                                 </div>
                             </li>
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h5 class="card-title text-center py-2">Création de compte</h5>
-                                    
-                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/inscription.webp" alt="Création de compte">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                <div class="outil-item p-1 mt-5 mb-3">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h5 class="card-title text-center">Tableau de bord administrateur</h5>
-                                     
-                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/dashboard_admin.webp" alt="Tableau de bord administrateur">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                <div class="outil-item p-1 mt-5 mb-3">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h5 class="card-title text-center">Tableau de bord coordinateur</h5>
-                         
-                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/dashboard_prof.webp" alt="Tableau de bord coordinateur">
+                                        <h5 class="card-title text-center py-2">Inscription en attente de validation</h5>
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/inscription_attente.webp" alt="Compte auto-inscrit en attente de validation par un administrateur">
                                     </div>
                                 </div>
                             </li>
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h5 class="card-title text-center mb-2">Tableau de bord étudiant</h5>
-                                        <br>
-                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/dashboard_etudiant.webp" alt="Tableau de bord étudiant">
-                                    </div>
-                                </div> 
-                            </li>
-                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                <div class="outil-item p-1 mt-5">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h5 class="card-title text-center">Consultation de la liste des salles</h5>
-                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/liste_salles.webp" alt="Consultation de la liste des salles">
-                                    </div>
-                                </div> 
-                            </li>
-                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                <div class="outil-item p-1 mt-5">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h5 class="card-title text-center">Consultation des salles — interface coordinateur</h5>
-                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/liste_salles_prof.webp" alt="Consultation des salles — interface coordinateur">
-                                    </div>
-                                </div> 
-                            </li>
-                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                <div class="outil-item p-1 mt-5">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h5 class="card-title text-center">Consultation des salles — interface étudiant</h5>
-                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/liste_salles_etudiant.webp" alt="Consultation des salles — interface étudiant">
-                                    </div>
-                                </div> 
-                            </li>
-                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                <div class="outil-item p-1 mt-5">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h5 class="card-title text-center">Détail d'une salle et de ses équipements</h5>
-                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/detail_salle.webp" alt="Détail d'une salle et de ses équipements">
-                                    </div>
-                                </div> 
-                            </li>
-                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                <div class="outil-item p-1 mt-5">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h5 class="card-title text-center">Consultation du détail d'une salle — interface étudiant</h5>
-                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/detail_salle_etudiant.webp" alt="Consultation du détail d'une salle — interface étudiant">
-                                    </div>
-                                </div> 
-                            </li>
-                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                <div class="outil-item p-1 mt-5">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h5 class="card-title text-center">Formulaire de réservation d'une salle</h5>
-                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/reservation_salle.webp" alt="Formulaire de réservation d'une salle">
-                                    </div>
-                                </div> 
-                            </li>
-                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                <div class="outil-item p-1 mt-5">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h5 class="card-title text-center">Gestion des équipements des salles</h5>
-                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/gestion_equipements.webp" alt="Gestion des équipements des salles">
-                                    </div>
-                                </div> 
-                            </li>
-                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                <div class="outil-item p-1 mt-5">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h5 class="card-title text-center ">Gestion des utilisateurs (administrateur)</h5>
-                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/liste_user.webp" alt="Gestion des utilisateurs (administrateur)">
-                                    </div>
-                                </div> 
-                            </li>
-                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                <div class="outil-item p-1 mt-5">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h5 class="card-title text-center">Création d'un compte coordinateur</h5>
-                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/create_prof.webp" alt="Création d'un compte coordinateur">
-                                    </div>
-                                </div> 
-                            </li>
-                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                <div class="outil-item p-1 mt-5">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h5 class="card-title text-center">Création d'un compte étudiant</h5>
-                                 
-                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/create_etudiant.webp" alt="Création d'un compte étudiant">
-                                    </div>
-                                </div> 
-                            </li>
-                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                <div class="outil-item p-1 mt-5">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h5 class="card-title text-center">Réinitialisation du mot de passe d'un utilisateur</h5>
-                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/reset_password.webp" alt="Réinitialisation du mot de passe d'un utilisateur">
-                                    </div>
-                                </div> 
-                            </li>
-                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                <div class="outil-item p-1 mt-5">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h5 class="card-title text-center">Gestion des classes (administrateur)</h5>
-                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/gestion_classe_2.webp" alt="Gestion des classes (administrateur)">
-                                    </div>
-                                </div> 
-                            </li>
-                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                <div class="outil-item p-1 mt-5">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h5 class="card-title text-center">Gestion des classes <br> (interface coordinateur)</h5>
-                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/gestion_classe_prof.webp" alt="Gestion des classes — interface coordinateur">
-                                    </div>
-                                </div> 
-                            </li>
-                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                <div class="outil-item p-1 mt-5">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h5 class="card-title text-center">Détail d'une classe et liste des étudiants</h5>
-                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/detail_classe_prof.webp" alt="Détail d'une classe et liste des étudiants">
-                                    </div>
-                                </div> 
-                            </li> 
-                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                <div class="outil-item p-1 mt-5">
-                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h5 class="card-title text-center py-2">Mot de passe oublié</h5>
-                                    
-                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/forgot_password.webp" alt="Mot de passe oublié">
+                                        <h5 class="card-title text-center py-2">Tableau de bord administrateur</h5>
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/dashboard_admin.webp" alt="Tableau de bord administrateur : statistiques, inscriptions, réservations et tickets en attente">
                                     </div>
                                 </div>
                             </li>
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h5 class="card-title text-center py-2">Email - mot de passe oublié</h5>
-                                    
-                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/reset_password_email.webp" alt="Email - mot de passe oublié">
+                                        <h5 class="card-title text-center py-2">Validation des inscriptions</h5>
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/validation_inscriptions.webp" alt="Validation d'une inscription avec attribution du rôle et de la classe">
                                     </div>
                                 </div>
                             </li>
                             <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
                                 <div class="outil-item p-1 mt-5">
                                     <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                        <h5 class="card-title text-center py-2">Page de réinitialisation de mot de passe </h5>
-                                    
-                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/reset_password_page.webp" alt="Page de réinitialisation de mot de passe">
+                                        <h5 class="card-title text-center py-2">Gestion des utilisateurs</h5>
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/gestion_utilisateurs.webp" alt="Liste des utilisateurs : import CSV, changement de rôle, suspension, export">
                                     </div>
                                 </div>
-                            </li> -->
-
-                            <!--
-                                Nouvelles captures d'écran à ajouter une fois l'application redéployée
-                                sur le serveur de l'école (accès indisponible pour l'instant) :
-
-                                <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                    <div class="outil-item p-1 mt-5">
-                                        <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                            <h5 class="card-title text-center">Statut d'occupation des salles en temps réel (dashboard)</h5>
-                                            <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/dashboard_statut_salles.webp" alt="Badge de statut d'occupation des salles sur le tableau de bord">
-                                        </div>
+                            </li>
+                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-2">Salles : statut en temps réel et prises électriques</h5>
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/salles_statut.webp" alt="Liste des salles avec statut d'occupation, capacité et nombre de prises électriques">
                                     </div>
-                                </li>
-                                <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                    <div class="outil-item p-1 mt-5">
-                                        <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                            <h5 class="card-title text-center">Réservations en attente avec badge "en concurrence"</h5>
-                                            <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/reservations_en_concurrence.webp" alt="Réservations en attente en concurrence sur un même créneau">
-                                        </div>
+                                </div>
+                            </li>
+                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-2">Recherche des salles libres sur un créneau</h5>
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/salles_libres.webp" alt="Recherche des salles libres sur une date et un créneau horaire">
                                     </div>
-                                </li>
-                                <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
-                                    <div class="outil-item p-1 mt-5">
-                                        <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
-                                            <h5 class="card-title text-center">Email de rappel de réservation (J-1)</h5>
-                                            <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/email_rappel_reservation.webp" alt="Email de rappel automatique envoyé 24h avant une réservation">
-                                        </div>
+                                </div>
+                            </li>
+                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-2">Détail d'une salle et de ses équipements</h5>
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/detail_salle.webp" alt="Détail d'une salle : capacité, prises électriques et équipements">
                                     </div>
-                                </li>
-                            -->
+                                </div>
+                            </li>
+                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-2">Réservation multi-salles et récurrente</h5>
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/reservation_multi_recurrente.webp" alt="Formulaire de réservation de plusieurs salles avec récurrence hebdomadaire">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-2">Vue calendrier mensuelle des réservations</h5>
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/reservations_calendrier.webp" alt="Calendrier mensuel des réservations">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-2">Recherche et export des réservations</h5>
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/reservations_export.webp" alt="Vue liste des réservations avec recherche sur tous les mois et export CSV / PDF">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-2">Export PDF du planning</h5>
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/export_pdf.webp" alt="Planning des réservations exporté en PDF">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-2">Demandes en concurrence sur un même créneau</h5>
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/reservations_en_concurrence.webp" alt="Réservations étudiantes en attente avec badge en concurrence">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-2">Tableau de bord coordinateur</h5>
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/dashboard_coordinateur.webp" alt="Tableau de bord coordinateur : ses classes et ses réservations">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-2">Coordinateur : gestion de ses classes</h5>
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/gestion_classes_coordinateur.webp" alt="Espace coordinateur listant ses classes avec leurs étudiants">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-2">Tableau de bord étudiant et quota hebdomadaire</h5>
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/dashboard_etudiant.webp" alt="Tableau de bord étudiant avec quota hebdomadaire consommé">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-2">Mon compte étudiant : export RGPD des données personnelles</h5>
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/mon_compte_student_rgpd.webp" alt="Page Mon compte permettant de modifier son profil et de télécharger ses données personnelles (RGPD)">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-2">Envoi d'un ticket de support</h5>
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/ticket_formulaire.webp" alt="Formulaire d'envoi d'un ticket à l'administration">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-2">Suivi des tickets (administrateur)</h5>
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/tickets_admin.webp" alt="Historique des tickets ouverts et résolus">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-2">Journal d'audit</h5>
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/audit_logs.webp" alt="Journal d'audit des actions sensibles">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-2">Email de rappel de réservation (J-1)</h5>
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/email_rappel_reservation.webp" alt="Email de rappel envoyé la veille d'une réservation">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="RoomBooking-container swiper-slide d-flex flex-column align-items-center position-relative">
+                                <div class="outil-item p-1 mt-5">
+                                    <div class="card language col-md-4 mx-auto py-3 bg-dark text-white">
+                                        <h5 class="card-title text-center py-2">Mot de passe oublié : email de réinitialisation</h5>
+                                        <img class="card-img RoomBooking-image mx-auto mt-5" src="assets/images/roombooking/reset_password_email.webp" alt="Email contenant le lien de réinitialisation du mot de passe">
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
 
-                        <!-- pour la pagination = a lapozashoz -->
-                        <!-- <div class="swiper-pagination pt-2"></div> -->
+                        <div class="swiper-pagination pt-2"></div>
 
-                        <!-- les boutons de navigation -->
-                        <!-- <div class="swiper-slide-button RoomBooking swiper-button-prev d-none d-sm-block"></div>
+                        <div class="swiper-slide-button RoomBooking swiper-button-prev d-none d-sm-block"></div>
                         <div class="swiper-slide-button RoomBooking swiper-button-next d-none d-sm-block"></div>
-                    </div>  
-                </div> -->
+                    </div>
+                </div>
             </section>
 
             <section class="presentation container">
@@ -424,14 +380,19 @@
                         </p>
                         <p class="fst-italic roombooking mt-3 mb-0"><strong>Backend</strong></p>
                         <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5">
-                            <li>◈ Symfony (PHP) — framework utilisé pour le développement de 
-                                l'application et la structuration de la logique métier.
+                            <li>◈ Symfony 7.4 — framework utilisé pour le développement de
+                                l'application et la structuration de la logique métier (contrôleurs, services, commandes planifiées).
                             </li>
-                            <li>◈ PHP — langage utilisé pour le développement côté serveur.</li>
-                            <li>◈ MySQL — base de données relationnelle utilisée pour stocker les 
-                                informations liées aux salles, aux utilisateurs, aux classes, aux réservations et aux équipements.
+                            <li>◈ PHP 8.3 — langage utilisé pour le développement côté serveur.</li>
+                            <li>◈ MySQL 8 — base de données relationnelle (15 tables) stockant les salles, les
+                                utilisateurs, les classes, les réservations, les équipements, les tickets et le journal d'audit.
                             </li>
-                            <li>◈ Doctrine ORM — gestion de la persistance des données et interaction avec la base de données.</li>
+                            <li>◈ Doctrine ORM et Doctrine Migrations — gestion de la persistance des données et
+                                évolution versionnée du schéma et des données par défaut (classes, salles, équipements).
+                            </li>
+                            <li>◈ Symfony Security — authentification, rôles et protection CSRF.</li>
+                            <li>◈ Symfony Mailer — emails transactionnels (Mailtrap en local, Brevo en production).</li>
+                            <li>◈ Dompdf — génération des exports PDF du planning des réservations.</li>
                         </ul>
 
                          <div class="row justify-content-center">
@@ -449,10 +410,13 @@
                             <div class="col-md-11">
                                 <p class="fst-italic roombooking mt-3 mb-0"><strong>Outils et environnement</strong></p>
                                 <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
-                                    <li>◈ Docker / Docker Compose — conteneurisation de l'environnement de développement (serveur web, base de données).</li>
-                                    <li>◈ Git / GitHub — gestion de versions et hébergement du code source.</li>
-                                    <li>◈ PHPUnit — suite de tests automatisés (unitaires et fonctionnels) couvrant les services, entités, contrôleurs et commandes de l'application.</li>
+                                    <li>◈ Docker / Docker Compose — conteneurisation de l'application (PHP-FPM, Nginx, MySQL), en local comme sur le serveur de production.</li>
+                                    <li>◈ Git / GitHub — gestion de versions et hébergement du code source ; le serveur de production n'est qu'une copie du dépôt.</li>
+                                    <li>◈ PHPUnit — suite de 269 tests automatisés (unitaires et fonctionnels) couvrant les services, entités, dépôts, contrôleurs et commandes de l'application.</li>
                                     <li>◈ GitHub Actions — chaîne d'intégration continue (CI) exécutant automatiquement le linting et la suite de tests à chaque modification du code.</li>
+                                    <li>◈ Semgrep et Hadolint — analyse statique de sécurité (SAST) mise en place lors d'un TP de cybersécurité ;
+                                        désactivée depuis le retrait du runner installé sur le serveur, dont elle dépendait.</li>
+                                    <li>◈ Bash et cron — scripts de sauvegarde / restauration et tâches planifiées sur le serveur.</li>
                                     <li>◈ Visual Studio Code — environnement de développement utilisé pour la programmation.</li>
                                 </ul>
                             </div>
@@ -463,12 +427,6 @@
                 <div class="lien-intern my-5 row justify-content-center" data-aos="zoom-in" data-aos-delay="200">
                     <div class="col-md-8 text-center">
                         <span class="alcim text-uppercase fw-bolder">Modèle conceptuel des données — RoomBooking</span>
-                        <!--
-                            Le schéma a évolué depuis cette version du MCD : ajout de l'entité pivot
-                            ReservationRoom (réservations multi-salles) et de l'entité AuditLog
-                            (journal de traçabilité). Remplacer l'image ci-dessous par le MCD à jour
-                            (voir modele_donnees_roombooking.pdf dans le dépôt GitHub).
-                        -->
                         <img src="assets/images/roombooking/MCD_RoomBooking.webp"
                             alt="Modèle conceptuel des données de l'application RoomBooking" class="img-fluid rounded-3 d-block mx-auto mt-5" id="mcd-roombooking">
                     </div>
@@ -498,47 +456,64 @@
                         <p>
                             L'application intègre un <span class="fst-italic roombooking">système d'authentification</span> permettant aux utilisateurs de se connecter et 
                             d'accéder aux fonctionnalités correspondant à leur rôle. <span class="fst-italic roombooking">Trois types d'utilisateurs</span> sont définis dans 
-                            l'application : <span class="fst-italic roombooking">un administrateur unique</span> chargé de l'administration globale, ainsi que <span class="fst-italic roombooking">des coordinateurs 
-                            et des étudiants</span>, chacun disposant de droits d'accès spécifiques.
+                            l'application : <span class="fst-italic roombooking">les administrateurs</span> chargés de l'administration globale (plusieurs comptes possibles,
+                            avec toujours au moins un administrateur actif), ainsi que <span class="fst-italic roombooking">des coordinateurs
+                            et des étudiants</span>, chacun disposant de droits d'accès spécifiques. Un compte créé par inscription reste
+                            en attente tant qu'un administrateur ne lui a pas attribué un rôle et une classe.
                         </p>
                         <div class="row justify-content-center">
                             <div class="col-md-11">
                                 <p class="mb-0 roombooking text-decoration-underline">
                                     Les fonctionnalités développées sont :
                                 </p>
+                                <p class="mb-0 mt-3 fst-italic roombooking"><strong>Salles et réservations</strong></p>
                                 <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
-                                    <li>◈ la gestion des salles (consultation, visualisation des équipements et de la capacité)</li>
-                                    <li>◈ la consultation des disponibilités des salles selon une date et un créneau horaire</li>
-                                    <li>◈ la création et l'annulation de réservations de salles, avec association à une classe</li>
-                                    <li>◈ la gestion des salles, des utilisateurs et des classes par l'administrateur</li>
-                                    <li>◈ la visualisation de l'ensemble des réservations de l'établissement par l'administrateur</li>
-                                    <li>◈ la gestion des étudiants au sein des classes par les coordinateurs</li>
-                                    <li>◈ la réinitialisation de mot de passe par email (lien sécurisé expirant après 15 minutes)</li>
-                                    <li>◈ la détection automatique des réservations passées via une tâche planifiée (cron horaire)</li>
-                                    <li>◈ la sauvegarde automatique de la base de données (cron hebdomadaire, rétention 7 jours)</li>
-                                    <li>◈ l'auto-validation nocturne des réservations étudiantes non ambiguës (salle libre, capacité et quota respectés), les demandes concurrentes restant en attente d'un arbitrage par l'administrateur</li>
-                                    <li>◈ un rappel automatique par email 24h avant le début d'une réservation confirmée</li>
-                                    <li>◈ la visualisation en temps réel du statut d'occupation des salles (occupée, demande en attente, disponible) sur les tableaux de bord</li>
-                                    <li>◈ un export des données personnelles et une anonymisation des comptes utilisateurs, dans une logique de conformité RGPD</li>
-                                    <li>◈ la pagination des listes d'utilisateurs et de réservations, améliorant la lisibilité et les performances lorsque le volume de données augmente</li>
-                                    <li>◈ une vue calendrier mensuelle des réservations, en complément de la vue liste, filtrable par salle, date et statut</li>
-                                    <li>◈ la création de réservations récurrentes (plusieurs occurrences hebdomadaires sur une période donnée), avec exclusion automatique des jours fériés légaux</li>
-                                    <li>◈ l'export PDF du planning des réservations sur une période donnée, filtrable par salle et par statut</li>
+                                    <li>◈ la gestion des salles (capacité, nombre de prises électriques, équipements) ; une salle possédant un historique de réservations ne peut pas être supprimée</li>
+                                    <li>◈ la visualisation en temps réel du statut d'occupation des salles (occupée, demande en attente, disponible) et la recherche des salles libres sur un créneau</li>
+                                    <li>◈ la création et l'annulation de réservations, associées à une classe, par créneaux de 30 minutes entre 8h et 20h</li>
+                                    <li>◈ la réservation de plusieurs salles simultanément (administrateur) et les réservations récurrentes hebdomadaires, avec exclusion automatique des jours fériés</li>
+                                    <li>◈ le contrôle des règles métier : absence de chevauchement, capacité cumulée des salles suffisante pour l'effectif de la classe, quota hebdomadaire d'heures par classe</li>
+                                    <li>◈ un circuit de validation : les réservations des étudiants restent en attente, celles des coordinateurs et administrateurs sont confirmées immédiatement</li>
+                                    <li>◈ une vue liste et une vue calendrier mensuelle, avec une recherche (date, salle, statut) portant sur tous les mois</li>
+                                    <li>◈ l'export CSV et PDF des réservations (période libre, année scolaire, résultats de la recherche ou mois affiché), pour l'administrateur et pour le coordinateur sur ses propres classes</li>
+                                </ul>
+                                <p class="mb-0 mt-3 fst-italic roombooking"><strong>Utilisateurs et classes</strong></p>
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
+                                    <li>◈ la validation ou le refus des inscriptions en attente, avec attribution du rôle et de la ou des classes</li>
+                                    <li>◈ la gestion des utilisateurs : création par invitation email, import CSV en masse, changement de rôle, suspension et réactivation</li>
+                                    <li>◈ la gestion des classes (effectif maximum, quota hebdomadaire) et des étudiants au sein des classes par les coordinateurs</li>
+                                    <li>◈ un système de tickets de support : les coordinateurs et les étudiants signalent un problème, les administrateurs sont prévenus par email et suivent l'historique (ouvert / résolu)</li>
+                                    <li>◈ la pagination des listes d'utilisateurs et de réservations</li>
+                                </ul>
+                                <p class="mb-0 mt-3 fst-italic roombooking"><strong>Automatisation</strong></p>
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
+                                    <li>◈ l'auto-validation nocturne des réservations étudiantes sans concurrence (salle libre, capacité et quota respectés), les demandes concurrentes restant en attente d'un arbitrage par l'administrateur</li>
+                                    <li>◈ la détection automatique des réservations passées (tâche planifiée horaire)</li>
+                                    <li>◈ un rappel automatique par email la veille d'une réservation confirmée</li>
+                                    <li>◈ la sauvegarde automatique complète (base de données, volumes Docker, configuration, code) chaque semaine, avec vérification d'intégrité et rétention de 21 jours</li>
+                                </ul>
+                                <p class="mb-0 mt-3 fst-italic roombooking"><strong>Sécurité et RGPD</strong></p>
+                                <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5 ">
+                                    <li>◈ la réinitialisation de mot de passe par email (lien à usage unique expirant après 15 minutes)</li>
+                                    <li>◈ une politique de mot de passe renforcée et un historique empêchant de réutiliser les 5 derniers mots de passe</li>
+                                    <li>◈ une session limitée à 30 minutes et des jetons CSRF sur toutes les actions sensibles</li>
+                                    <li>◈ un journal d'audit des actions sensibles (acteur, cible, adresse IP, date)</li>
+                                    <li>◈ l'export des données personnelles et l'anonymisation des comptes supprimés, dans une logique de conformité RGPD</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="row justify-content-center">
                             <div class="col-md-11">
                                 <p>
-                                    L'application vérifie automatiquement les conflits de réservation, afin d'<span class="fst-italic roombooking">éviter les doubles 
+                                    L'application vérifie automatiquement les conflits de réservation, afin d'<span class="fst-italic roombooking">éviter les doubles
                                     réservations</span> pour une même salle et un même créneau horaire.
                                     <br>
                                     Le développement du projet a été réalisé dans un environnement conteneurisé avec <span class="fst-italic roombooking">Docker</span>,
-                                    facilitant la mise en place de l'environnement de développement et l'exécution de l'application.
+                                    facilitant la mise en place de l'environnement de développement et le déploiement sur le serveur de l'école.
                                     <br>
-                                    La fiabilité de l'application est vérifiée par une <span class="fst-italic roombooking">suite de tests automatisés (PHPUnit)</span>,
+                                    La fiabilité de l'application est vérifiée par une <span class="fst-italic roombooking">suite de 269 tests automatisés (PHPUnit)</span>,
                                     exécutée automatiquement à chaque modification du code grâce à une <span class="fst-italic roombooking">chaîne d'intégration continue (GitHub Actions)</span>,
-                                    qui a notamment permis de détecter et corriger plusieurs anomalies (protection CSRF, gestion des rôles) avant leur mise en production.
+                                    qui a notamment permis de détecter et corriger plusieurs anomalies (protection CSRF, gestion des rôles, dates d'export invalides) avant leur mise en production.
                                 </p>
                             </div>
                         </div>
@@ -590,6 +565,16 @@
                                 du code. Cette démarche m'a sensibilisée à l'importance de la fiabilité applicative et de la sécurité
                                 dans un contexte proche de la production.
                             </p>
+                            <p>
+                                Enfin, j'ai assuré la <span class="fst-italic roombooking">maintenance de l'application en production</span> sur le serveur de
+                                l'école : redéploiement complet avec Docker Compose, migrations de données (nouvelles classes de l'année
+                                2026-2027, nombre de prises électriques des salles), sauvegarde vérifiée avant et après chaque intervention,
+                                et <span class="fst-italic roombooking">correction d'une faille de sécurité critique de PHP</span> (« PHP2Shell », CVE-2026-109618 et
+                                CVE-2026-109619) en mettant à jour l'image Docker vers PHP 8.3.36. J'ai également retiré du serveur un
+                                service devenu inutile (runner GitHub Actions disposant d'un accès étendu à Docker) afin de réduire la
+                                surface d'attaque. Ce runner servait uniquement à l'analyse Semgrep et Hadolint, désormais désactivée ;
+                                la CI principale (linting et tests) tourne sur les runners hébergés par GitHub et reste active.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -638,16 +623,14 @@
                             </li>
                             <li class="roombooking">◈ Dépôt GitHub du projet : 
                                 <small class="text-white fst-italic lien-extern">
-                                    Le code source est versionné et accessible en ligne afin de faciliter sa consultation 
+                                    Le code source est versionné sur GitHub dans un dépôt privé ; l'accès peut être accordé sur demande.
                                     <!-- <a class="text-white" href="https://github.com/juklau/RoomBooking.git" target="_blank"><strong class=" fst-italic fw-medium">en cliquant sur ce lien</strong></a>. -->
-                                    <a class="text-white" href="page-error.html" target="_blank"><strong class=" fst-italic fw-medium">en cliquant sur ce lien</strong></a>.
                                 </small>
                             </li>
                             <li class="roombooking">◈ Documentation du projet : 
                                 <small class="text-white fst-italic lien-extern">
-                                    l'ensemble des documents (cahier des charges, guides utilisateur et administrateur, MCD, etc.) est disponible dans le dossier dédié du dépôt GitHub :
+                                    l'ensemble des documents (cahier des charges, guides utilisateur et administrateur, MCD, etc.) est regroupé dans un dossier dédié du dépôt privé.
                                     <!-- <a class="text-white" href="https://github.com/juklau/RoomBooking/tree/main/ressources_fournies" target="_blank"><strong class=" fst-italic fw-medium">en cliquant sur ce lien</strong></a>. -->
-                                    <a class="text-white" href="page-error.html" target="_blank"><strong class=" fst-italic fw-medium">en cliquant sur ce lien</strong></a>.
                                 </small>
                             </li>
                             <li class="roombooking">◈ Captures d'écran de l'application : 
@@ -659,16 +642,20 @@
                             <li class="roombooking">◈ Documentation technique : 
                                 <small class="lien-extern text-white fst-italic">
                                     <!-- <a class="text-white" href="https://github.com/juklau/RoomBooking.git" target="_blank"><strong class="fw-medium fst-italic">README</strong></a>  -->
-                                    <a class="text-white" href="page-error.html" target="_blank"><strong class="fw-medium fst-italic">README</strong></a> 
-                                    décrivant la structure du projet, les technologies utilisées, l'installation de l'application et son fonctionnement général.
+                                    README (dans le dépôt privé) décrivant la structure du projet, les technologies utilisées, l'installation de l'application et son fonctionnement général.
                                 </small>
                             </li>
-                            <!-- <li class="roombooking">◈ Accessibilité de l'application : 
-                                <small class="lien-extern text-white fst-italic">
-                                    L'application RoomBooking est accessible en ligne à l'adresse suivante : <a class="text-white" href="https://room-klaudia.iris.a3n.fr:4433/login" target="_blank"><strong class="fw-medium fst-italic">https://room-klaudia.iris.a3n.fr:4433/login</strong></a> 
-
+                            <li class="roombooking">◈ Scripts de sauvegarde et de restauration :
+                                <small class="text-white fst-italic">
+                                    scripts Bash de sauvegarde, de restauration en production et de restauration isolée,
+                                    accompagnés de leur documentation (local et serveur).
                                 </small>
-                            </li> -->
+                            </li>
+                            <li class="roombooking">◈ Accessibilité de l'application :
+                                <small class="lien-extern text-white fst-italic">
+                                    L'application RoomBooking est accessible en ligne à l'adresse suivante : <a class="text-white" href="https://room-klaudia.iris.a3n.fr:4433/login" target="_blank"><strong class="fw-medium fst-italic">https://room-klaudia.iris.a3n.fr:4433/login</strong></a>
+                                </small>
+                            </li>
                         </ul>
                         <p>
                             Ces documents permettent de faciliter la compréhension du fonctionnement de l'application et de 
@@ -680,7 +667,7 @@
 
                 <div class="py-4 row justify-content-center">
                     <div class="col-md-12" data-aos="fade-up-left" data-aos-delay="200">
-                        <span class="alcim text-upperdcase fw-bolder">Perspectives</span>
+                        <span class="alcim text-uppercase fw-bolder">Perspectives</span>
                         <p class="mt-4">
                             Bien que l'application RoomBooking réponde aux besoins principaux de gestion des réservations 
                             de salles au sein de IRIS MediaSchool Nice, plusieurs améliorations pourraient être 
@@ -696,6 +683,12 @@
                                 <ul class="list-unstyled  ms-2 ms-sm-3 ms-md-5">
                                     <li>◈ le renforcement de la configuration de production (fichier <span class="roombooking fst-italic">.env.prod</span> dédié et
                                         garde-fous de démarrage empêchant tout démarrage accidentel en configuration de test)
+                                    </li>
+                                    <li>◈ la réactivation de l'analyse de sécurité (Semgrep et Hadolint) sur les runners hébergés par GitHub, sans dépendre
+                                        d'un runner installé sur le serveur
+                                    </li>
+                                    <li>◈ une veille et une procédure de mise à jour régulière des images Docker (PHP, MySQL, Nginx), à la suite
+                                        de la faille PHP2Shell
                                     </li>
                                 </ul>
                             </div>
@@ -744,24 +737,45 @@
                                     sensibles (suppression, annulation, validation), en centralisant son contrôle dans une méthode
                                     unique afin qu'une mauvaise configuration ne puisse plus la désactiver silencieusement.
                                 </small>
+                                <br>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">
+                                    J'ai complété ces habilitations par un circuit de validation des comptes (rôle attribué par un
+                                    administrateur), un journal d'audit des actions sensibles, un historique des mots de passe et une
+                                    session limitée à 30 minutes.
+                                </small>
                             <li>1.5. Gérer des sauvegardes</li>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">
                                     J'ai mis en place trois scripts Bash (backup_serveur.sh, restore_serveur.sh, 
                                     restore_serveur_isoled.sh) assurant la sauvegarde de la base de données MySQL, des volumes 
-                                    Docker et du code source, avec vérification d'intégrité SHA256 et rétention de 7 jours. 
-                                    Une tâche cron automatise le backup chaque vendredi à 18h, et le script de restauration 
-                                    isolée permet de valider une sauvegarde sans toucher à la production.
+                                    Docker, de la configuration et du code source, avec vérification d'intégrité SHA256 et
+                                    rétention de 21 jours. Une tâche cron automatise le backup chaque vendredi à 18h, et le
+                                    script de restauration isolée permet de valider une sauvegarde sans toucher à la production.
+                                    Avant chaque redéploiement, je contrôle le contenu de la sauvegarde (tables et données présentes
+                                    dans le dump).
                                 </small>
                         </ul>
                     </div>
                     <div data-aos="fade-left" data-aos-delay="210">
-                        <p class="fst-italic LinkStream">2. Répondre aux incidents et aux demandes d'assistance et d'évolution</p>
+                        <p class="fst-italic RoomBooking">2. Répondre aux incidents et aux demandes d'assistance et d'évolution</p>
                         <ul class="list-unstyled lh-lg ps-4">
                             <li>2.1. Collecter, suivre et orienter des demandes</li>
-                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai collecté les besoins fonctionnels à partir du cahier des charges, 
-                                    notamment concernant la gestion des salles, des utilisateurs, des classes et des réservations. J'ai 
-                                    ensuite suivi ces demandes tout au long du projet afin d'orienter le développement des fonctionnalités 
+                                <small class="ps-md-3 ps-lg-5 fst-italic">J'ai collecté les besoins fonctionnels à partir du cahier des charges,
+                                    notamment concernant la gestion des salles, des utilisateurs, des classes et des réservations. J'ai
+                                    ensuite suivi ces demandes tout au long du projet afin d'orienter le développement des fonctionnalités
                                     en cohérence avec les priorités de l'établissement.
+                                </small>
+                                <br>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">
+                                    J'ai également intégré à l'application un système de tickets permettant aux coordinateurs et aux
+                                    étudiants de signaler un problème : chaque ticket est enregistré, transmis par email aux
+                                    administrateurs et suivi jusqu'à sa résolution.
+                                </small>
+                            <li>2.3. Traiter des demandes concernant les applications</li>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">
+                                    J'ai fait évoluer l'application en production à partir de nouvelles demandes (classes de l'année
+                                    2026-2027, nombre de prises électriques par salle) au moyen de migrations Doctrine, et j'ai traité
+                                    une alerte de sécurité sur PHP (CVE-2026-109618 / 109619) en corrigeant d'abord en local, puis en
+                                    déployant la version corrigée sur le serveur.
                                 </small>
                         </ul>
                     </div>
@@ -787,14 +801,15 @@
                                 <small class="ps-md-3 ps-lg-5 fst-italic">
                                    J'ai suivi l'avancement du projet RoomBooking à l'aide de plusieurs indicateurs.
 
-                                   J'ai notamment utilisé un diagramme de Gantt pour planifier et visualiser les différentes 
-                                   phases du projet (analyse, conception, développement, tests, documentation), ce qui m'a permis 
-                                   de suivre l'état d'avancement global et d'anticiper les retards.
+                                   Pour la première version, livrée en février 2026, j'ai utilisé un diagramme de Gantt afin de
+                                   planifier et visualiser les différentes phases du projet (analyse, conception, développement,
+                                   tests, documentation), ce qui m'a permis de suivre l'état d'avancement global et d'anticiper
+                                   les retards. Ce planning initial ne couvre pas les évolutions réalisées les mois suivants.
                                 </small>
                                 <br>
                                 <small class="ps-md-3 ps-lg-5 fst-italic">
-                                    En complément, j'ai utilisé GitHub pour versionner mon code avec des commits réguliers et 
-                                    structurés, permettant de suivre l'évolution des fonctionnalités, de mesurer la progression 
+                                    Pour ces évolutions, j'ai suivi l'avancement avec GitHub en versionnant mon code avec des commits
+                                    réguliers et structurés, permettant de suivre l'évolution des fonctionnalités, de mesurer la progression
                                     du projet et de revenir sur des versions antérieures si nécessaire.
                                 </small>
                         </ul>
@@ -824,13 +839,20 @@
                                     MySQL, Nginx).
                                 </small>
                                 <br>
-                                <!-- <small class="ps-md-3 ps-lg-5 fst-italic lien-extern">
-                                    Cette collaboration entre les spécialités SLAM et SISR m'a permis de mettre en service 
-                                    l'application sur un serveur accessible en ligne à l'adresse 
-                                     <a class="text-white" href="https://room-klaudia.iris.a3n.fr:4433/login" target="_blank"><strong class="fw-medium fst-italic">https://room-klaudia.iris.a3n.fr:4433/login</strong></a>, 
-                                     dans un environnement proche de la production, tout en assurant l'isolation 
+                                <small class="ps-md-3 ps-lg-5 fst-italic lien-extern">
+                                    Cette collaboration entre les spécialités SLAM et SISR m'a permis de mettre en service
+                                    l'application sur un serveur accessible en ligne à l'adresse
+                                     <a class="text-white" href="https://room-klaudia.iris.a3n.fr:4433/login" target="_blank"><strong class="fw-medium fst-italic">https://room-klaudia.iris.a3n.fr:4433/login</strong></a>,
+                                     dans un environnement proche de la production, tout en assurant l'isolation
                                      des composants, la reproductibilité de l'environnement et l'accessibilité du service.
-                                </small> -->
+                                </small>
+                                <br>
+                                <small class="ps-md-3 ps-lg-5 fst-italic">
+                                    J'ai ensuite réalisé seule les redéploiements suivants, selon une procédure documentée : sauvegarde,
+                                    récupération du code depuis GitHub, reconstruction des conteneurs, installation des dépendances,
+                                    migrations, création du premier administrateur, puis nouvelle sauvegarde et vérification des tâches
+                                    planifiées.
+                                </small>
                         </ul>
                     </div>
                     <div data-aos="fade-left" data-aos-delay="260">
@@ -852,11 +874,97 @@
                 </div>
             </section>
 
-            <div class="d-flex justify-content-center mt-5 pt-4" data-aos="zoom-in" data-aos-delay="200">
+            <!-- <div class="d-flex justify-content-center mt-5 pt-4" data-aos="zoom-in" data-aos-delay="200"> -->
                 <!-- <a href="assets/documents/RP_2_RoomBooking_JUHASZ.pdf" target="_blank" class="btn btn-outline-secondary border border-2 rounded portfolio-btn" id="fiche-RoomBooking-btn">Fiche descriptive</a> -->
-                <a href="page-error.html" target="_blank" class="btn btn-outline-secondary border border-2 rounded portfolio-btn" id="fiche-RoomBooking-btn">Fiche descriptive</a>
-            </div>
+                <!-- <a href="page-error.html" target="_blank" class="btn btn-outline-secondary border border-2 rounded portfolio-btn" id="fiche-RoomBooking-btn">Fiche descriptive</a>
+            </div> -->
         </main>
+
+        <!-- Footer -->
+        <footer class="footer container-fluid text-center text-white bg-dark p-0 pt-5" >
+            <div class="container-fluid border-top border-secondary">
+                 <section class="pt-3">
+
+                    <!-- Première row -->
+                    <div class="row g-0 pt-3 col-12 justify-content-center">
+                        <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
+                            <div class="col-12 col-md-auto pt-1 footer-menu">
+                                <h6 class="font-weight-bold mx-2">
+                                    <a href="index.html" class="text-white text-decoration-none">Accueil</a>
+                                </h6>
+                            </div>
+                            <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                                <h6 class="font-weight-bold mx-2">
+                                    <a href="stages.html" class="text-white text-decoration-none">Stages</a>
+                                </h6>
+                            </div>
+                            <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                                <h6 class=" font-weight-bold mx-2">
+                                    <a href="projets.html" class="text-white text-decoration-none">Projets</a>
+                                </h6>
+                            </div>
+                            <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                                <h6 class=" font-weight-bold mx-2">
+                                    <a href="veille.html" class="text-white text-decoration-none">La veille</a>
+                                </h6>
+                            </div>
+                            <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                                <h6 class="font-weight-bold mx-2">
+                                    <a href="synthese.html" class="text-white text-decoration-none">Synthèse</a>
+                                </h6>
+                            </div>
+                            <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                                <h6 class="font-weight-bold mx-2">
+                                    <a href="CV.html" class="text-white text-decoration-none">CV</a>
+                                </h6>
+                            </div>
+                            <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                                <h6 class=" font-weight-bold mx-2">
+                                    <a href="contact.html" class="text-white text-decoration-none">Contact</a>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Deuxième row -->
+                    <div class="row g-0 py-3 col-12 justify-content-center">
+                         <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
+                            <div class="col-12 col-md-auto pt-1 footer-menu">
+                                <h6 class="font-weight-bold mx-2">
+                                    <a href="mentions-legales.html" class="text-white text-decoration-none">Mentions légales</a>
+                                </h6>
+                            </div>
+                            <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
+                                <h6 class="font-weight-bold mx-2">
+                                    <a href="plan-du-site.html" class="text-white text-decoration-none">Plan du site</a>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+                <hr class="my-2" />
+
+                <section class="py-3">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-8">
+                            <p><strong>Designed by Klaudia Juhasz</strong></p>
+                        </div>
+                    </div>
+                </section>
+        
+                <section class="container-fluid text-center pb-3">
+                    <a href="https://www.linkedin.com/in/klaudia-juhasz-a165002bb/" class="text-white me-4" target="_blank" title="Lien vers mon profil LinkedIn"><i class="fab fa-linkedin fa-2xl"></i></a>
+                    <a href="https://www.figma.com/design/QMpU6uu0tGXpdInYixZ798/Mon_portfolio?node-id=1-2&p=f&t=4kfGd9vv8Z0PAOW0-0" class="text-white me-4" target="_blank" title="Lien vers mon compte Figma"><img src="assets/images/figma-logo.webp" class="rounded-circle" id="figma-logo" alt="logo Figma"></a>
+                    <a href="https://github.com/juklau" class="text-white me-4" target="_blank" title="Lien vers mon GitHub"><i class="fab fa-github fa-2xl"></i></a>
+                </section>
+            </div>
+            <div class="text-center py-3 bg-black"> © 2026 Copyright</div>
+
+            <!-- Scroll Top -->
+            <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+        </footer>
 
          <!-- script de AOS -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -868,92 +976,5 @@
 
         <!-- script de Bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-    
     </body>
-
-    <!-- Footer -->
-    <footer class="footer container-fluid text-center text-white bg-dark p-0 pt-5" >
-        <div class="container-fluid border-top border-secondary">
-             <section class="pt-3">
-
-                <!-- Première row -->
-                <div class="row g-0 pt-3 col-12 justify-content-center">
-                    <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
-                        <div class="col-12 col-md-auto pt-1 footer-menu">
-                            <h6 class="font-weight-bold mx-2">
-                                <a href="index.html" class="text-white text-decoration-none">Accueil</a>
-                            </h6>
-                        </div>
-                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
-                            <h6 class="font-weight-bold mx-2">
-                                <a href="stages.html" class="text-white text-decoration-none">Stages</a>
-                            </h6>
-                        </div>
-                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
-                            <h6 class=" font-weight-bold mx-2">
-                                <a href="projets.html" class="text-white text-decoration-none">Projets</a>
-                            </h6>
-                        </div>
-                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
-                            <h6 class=" font-weight-bold mx-2">
-                                <a href="veille.html" class="text-white text-decoration-none">La veille</a>
-                            </h6>
-                        </div>
-                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
-                            <h6 class="font-weight-bold mx-2">
-                                <a href="synthese.html" class="text-white text-decoration-none">Synthèse</a>
-                            </h6>
-                        </div>
-                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
-                            <h6 class="font-weight-bold mx-2">
-                                <a href="CV.html" class="text-white text-decoration-none">CV</a>
-                            </h6>
-                        </div>
-                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
-                            <h6 class=" font-weight-bold mx-2">
-                                <a href="contact.html" class="text-white text-decoration-none">Contact</a>
-                            </h6>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Deuxième row -->
-                <div class="row g-0 py-3 col-12 justify-content-center">
-                     <div class="col-6 col-md-12 d-flex flex-column flex-md-row justify-content-center">
-                        <div class="col-12 col-md-auto pt-1 footer-menu">
-                            <h6 class="font-weight-bold mx-2">
-                                <a href="mentions-legales.html" class="text-white text-decoration-none">Mentions légales</a>
-                            </h6>
-                        </div>
-                        <div class="col-12 col-md-auto py-1 pt-1 footer-menu">
-                            <h6 class="font-weight-bold mx-2">
-                                <a href="plan-du-site.html" class="text-white text-decoration-none">Plan du site</a>
-                            </h6>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        
-            <hr class="my-2" />
-
-            <section class="py-3">
-                <div class="row d-flex justify-content-center">
-                    <div class="col-lg-8">
-                        <p><strong>Designed by Klaudia Juhasz</strong></p>
-                    </div>
-                </div>
-            </section>
-        
-            <section class="container-fluid text-center pb-3">
-                <a href="https://www.linkedin.com/in/klaudia-juhasz-a165002bb/" class="text-white me-4" target="_blank" title="Lien vers mon profil LinkedIn"><i class="fab fa-linkedin fa-2xl"></i></a>
-                <a href="https://www.figma.com/design/QMpU6uu0tGXpdInYixZ798/Mon_portfolio?node-id=1-2&p=f&t=4kfGd9vv8Z0PAOW0-0" class="text-white me-4" target="_blank" title="Lien vers mon compte Figma"><img src="assets/images/figma-logo.webp" class="rounded-circle" id="figma-logo" alt="logo Figma"></a>
-                <a href="https://github.com/juklau" class="text-white me-4" target="_blank" title="Lien vers mon GitHub"><i class="fab fa-github fa-2xl"></i></a>
-            </section>
-        </div>
-        <div class="text-center py-3 bg-black"> © 2026 Copyright</div>
-
-        <!-- Scroll Top -->
-        <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-    </footer>
 </html>
