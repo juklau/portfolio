@@ -33,12 +33,31 @@
 }
 
 [data-theme="light"] {
-    --bg-primary: #e0e0e0;
-    --bg-secondary: #f4f0f0;
-    --bg-card: #d4d4d4;
+    /* fond des pages : gris clair au lieu du blanc rosé (meme gris qu'acubic) */
+    --bg-secondary: #eef0f3;
+    
+    /* zones plus foncees que la page : bas du footer, lien actif, cadre du CV */
+    --bg-primary: #e2e5ea;
+
+    /* cartes : plus claires que la page, pour qu'elles se detachent */
+    --bg-card: #f7f8fa;
     --text-primary: rgb(20, 20, 20);
     --text-muted: rgba(20, 20, 20, 0.75);
-    --accordion-bg: #e8e8e8;
+    --accordion-bg: #e2e5ea;
+
+     /* jaune plus fonce en theme clair : texte lisible sur fond clair (contraste > 4.5:1) */
+    --main-color: #8f5f00;
+    --nav-hover-color: #8f5f00;
+}
+
+/* Les cartes Bootstrap "bg-dark" (stages, recto des flip cards...) prenaient la couleur de la page
+   via la regle .bg-dark ci-dessous : en theme clair, on leur donne la couleur des cartes */
+[data-theme="light"] .card.bg-dark {
+    background-color: var(--bg-card) !important;
+}
+
+[data-theme="light"] .timeline-content {
+    background: var(--bg-card);
 }
 
 /* Overrides des classes Bootstrap hardcodees en mode clair */
@@ -952,64 +971,52 @@ html {
 }
 
 /*********************************************************************************************
-                                        Page Contact
+                         Page Contact : validation Bootstrap aux couleurs du portfolio
 **********************************************************************************************/
-#remplir p,
-/* pouar valider si le text entrée est megfelelö */
-.text-success{
-    color: var(--main-color);
-}
-.costum-check:hover a{ /* majd megnezni hogy összevonhato-e!!! */
-    color: var(--main-color) !important;
-}
-input, textarea {
-    text-shadow: 0px 2px 5px var(--gray-color);
-}
-.text-danger{
-    color: var(--danger-color);
-}
-.megfelelo{
-    outline: 0.2rem solid var(--main-color);
-    outline-offset: 0.2rem;
-}
-.nem-megfelelo{
-    outline: 0.2rem solid var(--danger-color);
-    outline-offset: 0.2rem;
-}
-.hidden{
-    display: none;
-}
-.visible{
-    display: block;
-    color: var(--succes-color);
-}
-/******************************************** Checkbox *******************************************/
 
-.costum-check label {
-    line-height: 1.2;
-    min-width: 300px;
-}
-#egyetertes + label::before{
-    content: "";
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 1.2rem; /* 8px */
-    height: 1.2rem;
-    background-color: var(--white-color);
-    margin-right: 1rem;
-    font-weight: 700;
-     /* il ne faut pas border, car le background exterieur est noir! */
-}
-#egyetertes:checked + label::before{
-    content: "X";
-    color: var(--black-color);
-    outline: 0.2rem solid var(--main-color);
-    outline-offset: 0.2rem;
+/* Couleurs de validation : jaune pour "correct" (a la place du vert Bootstrap),
+   rouge clair en theme sombre (lisible sur fond fonce), rouge Bootstrap en theme clair.
+   Bootstrap lit ces variables pour les bordures et les messages is-valid / is-invalid. */
+:root {
+    --bs-form-valid-color: var(--main-color);
+    --bs-form-valid-border-color: var(--main-color);
+    --bs-form-invalid-color: #ea868f;
+    --bs-form-invalid-border-color: #ea868f;
 }
 
-.costum-check label:last-child{
-    margin-left: 20px;
+[data-theme="light"] {
+    --bs-form-invalid-color: #dc3545;
+    --bs-form-invalid-border-color: #dc3545;
+}
+
+/* Icone "coche" des champs valides : meme dessin que Bootstrap, mais en jaune (%23e3a127 = #e3a127) */
+.form-control.is-valid {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23e3a127' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+}
+
+/* Halo de focus jaune (au lieu du bleu Bootstrap) ; les champs en erreur gardent leur halo rouge */
+.form-control:focus,
+.form-control.is-valid:focus {
+    border-color: var(--main-color);
+    box-shadow: 0 0 0 0.25rem rgba(227, 161, 39, 0.25);
+}
+
+/* Case a cocher : jaune une fois cochee, halo jaune au focus */
+.form-check-input:checked {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.form-check-input:focus {
+    border-color: var(--main-color);
+    box-shadow: 0 0 0 0.25rem rgba(227, 161, 39, 0.25);
+}
+
+/* Message de succes sous le bouton, aux couleurs du portfolio */
+.alert-portfolio {
+    color: var(--text-primary);
+    background-color: rgba(227, 161, 39, 0.12);
+    border: 1px solid var(--main-color);
 }
 
 /*********************************************************************************************
