@@ -147,7 +147,7 @@
         const year = new Date().getFullYear();
 
         return `
-            <div class="container-fluid border-top border-secondary">
+            <div class="container-fluid border-top border-secondary text-center">
                 <section class="pt-3">
                     ${renderFooterRow(NAV_ITEMS, "pt-3")}
                     ${renderFooterRow(FOOTER_LEGAL, "py-3")}
@@ -166,13 +166,13 @@
                 <section class="container-fluid text-center pb-3">
                     <a href="${LINKEDIN_URL}" class="text-white me-4" target="_blank" rel="noopener noreferrer" title="Lien vers mon profil LinkedIn"><i class="fab fa-linkedin fa-2xl"></i></a>
                     <a href="${FIGMA_URL}" class="text-white me-4" target="_blank" rel="noopener noreferrer" title="Lien vers mon compte Figma"><img src="assets/images/figma-logo.webp" class="rounded-circle" id="figma-logo" alt="logo Figma"></a>
-                    <a href="${GITHUB_URL}" class="text-white me-4" target="_blank" rel="noopener noreferrer" title="Lien vers mon GitHub"><i class="fab fa-github fa-2xl"></i></a>
+                    <a href="${GITHUB_URL}" class="text-white me-4" target="_blank" rel="noopener noreferrer" title="Lien vers mon GitHub"><i class="fab fa-github fa-2xl" ></i></a>
                 </section>
             </div>
             <div class="text-center py-3 bg-black">© ${year} Copyright</div>
 
             <!-- Scroll Top (gere par portfolio.js) -->
-            <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Revenir en haut de la page"><i class="bi bi-arrow-up-short"></i></a>`;
+            <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Revenir en haut de la page"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></a>`;
     }
 
      // ------------------------------------------------------------------------
