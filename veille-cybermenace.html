@@ -17,6 +17,10 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <script>(function(){var t=localStorage.getItem("portfolio-theme")||"dark";document.documentElement.setAttribute("data-theme",t);})();</script>
+        
+        <link rel="icon" href="favicon.svg" type="image/svg+xml">
+        <link rel="icon" href="assets/images/favicon-32.png" sizes="32x32" type="image/png">
+        <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
         <link rel="stylesheet" href="style.css">
     </head> 
     <body class="overflow-x-hidden bg-dark">
@@ -306,17 +310,17 @@
                             <tbody>
                                 <tr class="align-middle"><th scope="row"></th><td class="d-none d-sm-table-cell"></td><td></td></tr>
                                 <tr class="align-middle lien-extern">
-                                    <th scope="row"><a class="text-white fst-italic" href="https://www.manageengine.com/fr/blog/general/analyse-de-lattaque-de-la-chaine-dapprovisionnement-dokta-en-2023.html" target="_blank">Okta (2023)</a></th>
+                                    <th scope="row"><a class="text-white fst-italic" href="https://www.manageengine.com/fr/blog/general/analyse-de-lattaque-de-la-chaine-dapprovisionnement-dokta-en-2023.html" target="_blank" rel="noopener noreferrer">Okta (2023)</a></th>
                                     <td class="d-none d-sm-table-cell">SaaS / Navigateur</td>
                                     <td>Cookie de session volé → accès à Cloudflare, 1Password, BeyondTrust. <br><strong>134 clients impactés.</strong> Okta gère +17 000 entreprises.</td>
                                 </tr>
                                 <tr class="align-middle lien-extern">
-                                    <th scope="row"><a class="text-white fst-italic" href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-012/" target="_blank">CitrixBleed CVE-2023-4966</a></th>
+                                    <th scope="row"><a class="text-white fst-italic" href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-012/" target="_blank" rel="noopener noreferrer">CitrixBleed CVE-2023-4966</a></th>
                                     <td class="d-none d-sm-table-cell">VDI / Client léger</td>
                                     <td>Fuite mémoire → vol de tokens actifs. Contourne le MFA. Exploité par LockBit, Medusa. <br> <strong>+10 000 serveurs exposés.</strong> Boeing, ICBC victimes.</td>
                                 </tr>
                                 <tr class="align-middle lien-extern">
-                                    <th scope="row"><a class="text-white fst-italic" href="https://sansec.io/" target="_blank">Magecart / Magento (2024)</a></th>
+                                    <th scope="row"><a class="text-white fst-italic" href="https://sansec.io/" target="_blank" rel="noopener noreferrer">Magecart / Magento (2024)</a></th>
                                     <td class="d-none d-sm-table-cell">App web PHP</td>
                                     <td>JS malveillant injecté dans pages de paiement PHP. <br>CosmicSting : 75 % des plateformes touchées. <strong>70 000+ boutiques, 380 000 clients British Airways.</strong></td>
                                 </tr>
@@ -378,17 +382,17 @@
                             <tbody>
                                 <tr class="align-middle"><th scope="row"></th><td class="d-none d-sm-table-cell"></td><td></td></tr>
                                 <tr class="align-middle lien-extern">
-                                    <th scope="row"><a class="text-white fst-italic" href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-005/" target="_blank">MOVEit CVE-2023-34362</a></th>
+                                    <th scope="row"><a class="text-white fst-italic" href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-005/" target="_blank" rel="noopener noreferrer">MOVEit CVE-2023-34362</a></th>
                                     <td class="d-none d-sm-table-cell">Logiciel installé</td>
                                     <td>Injection SQL → accès sans authentification. Patch disponible le jour J. <br> <strong>+2 500 organisations touchés, 62 M personnes exposées, +10 Md$.</strong> BBC, Shell, gouvernement Canada.</td>
                                 </tr>
                                 <tr class="align-middle lien-extern">
-                                    <th scope="row"><a class="text-white fst-italic" href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-003/" target="_blank">3CX Supply Chain (2023)</a></th>
+                                    <th scope="row"><a class="text-white fst-italic" href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-003/" target="_blank" rel="noopener noreferrer">3CX Supply Chain (2023)</a></th>
                                     <td class="d-none d-sm-table-cell">Mise à jour compromise</td>
                                     <td>Lazarus Group compromet le build officiel de 3CX. La mise à jour contenait un malware. <br> <strong>600 000 entreprises potentiellement exposées.</strong></td>
                                 </tr>
                                 <tr class="align-middle lien-extern">
-                                    <th scope="row"><a class="text-white fst-italic" href="https://logging.apache.org/log4j/2.x/index.html" target="_blank">Log4Shell CVE-2021-44228</a></th>
+                                    <th scope="row"><a class="text-white fst-italic" href="https://logging.apache.org/log4j/2.x/index.html" target="_blank" rel="noopener noreferrer">Log4Shell CVE-2021-44228</a></th>
                                     <td class="d-none d-sm-table-cell">Java client lourd</td>
                                     <td>CVSS 10/10. App Java avec Log4j 2.14 → prise de contrôle complète. <br> <strong>En 2024 : 37 % des téléchargements Log4j = version vulnérable.</strong> Apple, Amazon, Tesla touchés.</td>
                                 </tr>
@@ -692,30 +696,30 @@
                                 <div class="accordion-body text-white p-0">
                                     <p class="fw-bold mb-1 cybermenace text-decoration-underline">Alertes et CVE officielles</p>
                                     <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5">
-                                        <li>◈ CERTFR-2023-ALE-012 – Vulnérabilité CitrixBleed (CVE-2023-4966). <a href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-012/" target="_blank">URL</a></li>
-                                        <li>◈ CERTFR-2023-ALE-005 – Vulnérabilités MOVEit Transfer. <a href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-005/" target="_blank">URL</a></li>
-                                        <li>◈ CERTFR-2023-ALE-003 – Vulnérabilités 3CX Desktop App. <a href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-003/" target="_blank">URL</a></li>
-                                        <li>◈ CISA – Cybersecurity and Infrastructure Security Agency. <a href="https://www.cisa.gov/" target="_blank">URL</a></li>
-                                        <li>◈ MITRE – Base officielle des CVE. <a href="https://cve.mitre.org/" target="_blank">URL</a></li>
-                                        <li>◈ NVD – National Vulnerability Database. <a href="https://nvd.nist.gov/" target="_blank">URL</a></li>
+                                        <li>◈ CERTFR-2023-ALE-012 – Vulnérabilité CitrixBleed (CVE-2023-4966). <a href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-012/" target="_blank" rel="noopener noreferrer">URL</a></li>
+                                        <li>◈ CERTFR-2023-ALE-005 – Vulnérabilités MOVEit Transfer. <a href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-005/" target="_blank" rel="noopener noreferrer">URL</a></li>
+                                        <li>◈ CERTFR-2023-ALE-003 – Vulnérabilités 3CX Desktop App. <a href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2023-ALE-003/" target="_blank" rel="noopener noreferrer">URL</a></li>
+                                        <li>◈ CISA – Cybersecurity and Infrastructure Security Agency. <a href="https://www.cisa.gov/" target="_blank" rel="noopener noreferrer">URL</a></li>
+                                        <li>◈ MITRE – Base officielle des CVE. <a href="https://cve.mitre.org/" target="_blank" rel="noopener noreferrer">URL</a></li>
+                                        <li>◈ NVD – National Vulnerability Database. <a href="https://nvd.nist.gov/" target="_blank" rel="noopener noreferrer">URL</a></li>
                                     </ul>
 
                                     <p class="fw-bold mb-1 mt-4 cybermenace text-decoration-underline">Attaques et analyses</p>
                                     <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5">
-                                        <li>◈ Ransomware LockBit et faille CitrixBleed. <a href="https://www.it-connect.fr/ransomware-lockbit-faille-citrix-bleed-cve-2023-4966/" target="_blank">URL</a></li>
-                                        <li>◈ Analyse de l'attaque Okta 2023. <a href="https://www.manageengine.com/fr/blog/general/analyse-de-lattaque-de-la-chaine-dapprovisionnement-dokta-en-2023.html" target="_blank">URL</a></li>
-                                        <li>◈ Log4Shell – Sophos. <a href="https://www.sophos.com/fr-fr/blog/log4shell-java-vulnerability-how-to-safeguard-your-servers" target="_blank">URL</a></li>
-                                        <li>◈ Sansec (sécurité e-commerce / Magecart). <a href="https://sansec.io/" target="_blank">URL</a></li>
-                                        <li>◈ Emsisoft – Rapport MOVEit. <a href="https://www.emsisoft.com/" target="_blank">URL</a></li>
+                                        <li>◈ Ransomware LockBit et faille CitrixBleed. <a href="https://www.it-connect.fr/ransomware-lockbit-faille-citrix-bleed-cve-2023-4966/" target="_blank" rel="noopener noreferrer">URL</a></li>
+                                        <li>◈ Analyse de l'attaque Okta 2023. <a href="https://www.manageengine.com/fr/blog/general/analyse-de-lattaque-de-la-chaine-dapprovisionnement-dokta-en-2023.html" target="_blank" rel="noopener noreferrer">URL</a></li>
+                                        <li>◈ Log4Shell – Sophos. <a href="https://www.sophos.com/fr-fr/blog/log4shell-java-vulnerability-how-to-safeguard-your-servers" target="_blank" rel="noopener noreferrer">URL</a></li>
+                                        <li>◈ Sansec (sécurité e-commerce / Magecart). <a href="https://sansec.io/" target="_blank" rel="noopener noreferrer">URL</a></li>
+                                        <li>◈ Emsisoft – Rapport MOVEit. <a href="https://www.emsisoft.com/" target="_blank" rel="noopener noreferrer">URL</a></li>
                                     </ul>
 
                                     <p class="fw-bold mb-1 mt-4 cybermenace text-decoration-underline">Documentation officielle</p>
                                     <ul class="list-unstyled ms-2 ms-sm-3 ms-md-5">
-                                        <li>◈ Apache Software Foundation : Log4j Security Vulnerabilities. <a href="https://logging.apache.org/log4j/2.x/index.html" target="_blank">URL</a></li>
-                                        <li>◈ Spring Boot : Documentation officielle Actuator. <a href="https://spring.io/projects/spring-boot" target="_blank">URL</a></li>
-                                        <li>◈ Magento / Adobe Commerce. <a href="https://business.adobe.com/products/magento/magento-commerce.html" target="_blank">URL</a></li>
-                                        <li>◈ OWASP (vulnérabilités XSS, CSRF, etc.). <a href="https://owasp.org/" target="_blank">URL</a></li>
-                                        <li>◈ Cloudflare Radar (statistiques attaques web). <a href="https://radar.cloudflare.com/" target="_blank">URL</a></li>
+                                        <li>◈ Apache Software Foundation : Log4j Security Vulnerabilities. <a href="https://logging.apache.org/log4j/2.x/index.html" target="_blank" rel="noopener noreferrer">URL</a></li>
+                                        <li>◈ Spring Boot : Documentation officielle Actuator. <a href="https://spring.io/projects/spring-boot" target="_blank" rel="noopener noreferrer">URL</a></li>
+                                        <li>◈ Magento / Adobe Commerce. <a href="https://business.adobe.com/products/magento/magento-commerce.html" target="_blank" rel="noopener noreferrer">URL</a></li>
+                                        <li>◈ OWASP (vulnérabilités XSS, CSRF, etc.). <a href="https://owasp.org/" target="_blank" rel="noopener noreferrer">URL</a></li>
+                                        <li>◈ Cloudflare Radar (statistiques attaques web). <a href="https://radar.cloudflare.com/" target="_blank" rel="noopener noreferrer">URL</a></li>
                                     </ul>
                                 </div>
                             </div>
