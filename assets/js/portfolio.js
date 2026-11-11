@@ -159,15 +159,18 @@ window.addEventListener('load', revealOnScroll);
 /*                          Activation du bouton "scroll top"*/
 /* ======================================================================================== */
 
-window.addEventListener("scroll", function(){
-    let scrollTopBtn = document.getElementById("scroll-top");
+function updateScrollTopButton() {
+    const scrollTopBtn = document.getElementById("scroll-top");
+    // protection : si une page n'a pas de pied de page, pas d'erreur
+    if (!scrollTopBtn) return;
 
-    if(window.scrollY > 200){
-        scrollTopBtn.classList.add("active");
-    }else{
-        scrollTopBtn.classList.remove("active");
-    }
-});
+    scrollTopBtn.classList.toggle("active", window.scrollY > 200);
+}
+
+window.addEventListener("scroll", updateScrollTopButton);
+
+// au chargement : la page peut s'ouvrir deja defilee (bouton Retour, lien vers une section)
+window.addEventListener("load", updateScrollTopButton);
 
 /* ======================================================================================== */
 /*                          Activation "flip" des cards 
@@ -343,11 +346,21 @@ if (lienMCD) {
 }
 
 
-//éviter que url change en cliquant sur un ID (LinkStream, MediaStock)
+//éviter que url change en cliquant sur un ID (LinkStream, MediaStock)ou sur le scroll-top
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+
+        const href = this.getAttribute('href');
+
+        // href="#" seul (bouton scroll-top) : ce n'est pas un selecteur valide,
+        // querySelector("#") planterait => on remonte simplement en haut de la page
+        if (href === "#") {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            return;
+        }
+
+        const target = document.querySelector(href);
         if (target) {
             target.scrollIntoView({ behavior: 'smooth' });
         }
