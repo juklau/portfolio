@@ -990,6 +990,24 @@ html {
     --bs-form-invalid-border-color: #dc3545;
 }
 
+/* Theme sombre : champs du formulaire sombres, comme le reste de la page.
+   Bootstrap ne connait pas notre attribut data-theme, il faut donc le lui dire nous-memes. */
+[data-theme="dark"] .form-control {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .form-control::placeholder {
+    color: var(--text-muted);
+}
+
+/* La case non cochee : sombre aussi (cochee, elle reste jaune grace a la regle existante) */
+[data-theme="dark"] .form-check-input:not(:checked) {
+    background-color: var(--bg-card);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
 /* Icone "coche" des champs valides : meme dessin que Bootstrap, mais en jaune (%23e3a127 = #e3a127) */
 .form-control.is-valid {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23e3a127' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
