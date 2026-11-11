@@ -201,6 +201,9 @@
     max-width: 27%;
     max-height: 27%;
 }
+.portfolio-acronym{
+    color: var(--main-color);
+}
 .introduce{
     color: var(--main-color) !important;
 }
@@ -996,7 +999,7 @@ html {
 .form-control:focus,
 .form-control.is-valid:focus {
     border-color: var(--main-color);
-    box-shadow: 0 0 0 0.25rem rgba(227, 161, 39, 0.25);
+    box-shadow: 0 0 0 0.15rem rgba(227, 161, 39, 0.614);
 }
 
 /* Case a cocher : jaune une fois cochee, halo jaune au focus */
@@ -1007,7 +1010,7 @@ html {
 
 .form-check-input:focus {
     border-color: var(--main-color);
-    box-shadow: 0 0 0 0.25rem rgba(227, 161, 39, 0.25);
+    box-shadow: 0 0 0 0.15rem rgba(227, 161, 39, 0.614);
 }
 
 /* Message de succes sous le bouton, aux couleurs du portfolio */
@@ -1069,7 +1072,8 @@ html {
 **********************************************************************************************/
 
 .container-a a:hover,
-.mentions.h4{
+.mentions.h4, 
+.mentions.fst-italic{
     color: var(--main-color) !important;
 }
 
